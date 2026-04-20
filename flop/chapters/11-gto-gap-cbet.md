@@ -3,7 +3,7 @@
 本書のCBet統合式は、フロップの判断を「数字で再現」するための道具です。
 しかし、その式はGTOソルバーが出す最適解とは構造的に異なります。
 本章では「どこで、どのように外れるのか」を具体的に示したうえで、「それでも初級者にとっては十分な理由」を説明します。
-GTO を知ったうえでシンプルにするのと、知らずにシンプルにするのでは、結果に大きな差が生まれます。
+GTOを知ったうえでシンプルにするのと、知らずにシンプルにするのでは、結果に大きな差が生まれます。
 
 ---
 
@@ -13,7 +13,7 @@ CBet統合式（`HandScore + (BoardScore − 5) + ポジション係数`）は�
 近似には必ずズレが生じます。
 大切なのは「ズレがどの方向にあるか」を理解しておくことです。
 
-GTO ソルバーは3つのことを同時に行います。
+GTOソルバーは3つのことを同時に行います。
 
 1. 相手のレンジ全体を評価し、レンジアドバンテージを計算する
 2. 混合戦略（ベット○%、チェック○%）でバランスを取る
@@ -28,9 +28,9 @@ GTO ソルバーは3つのことを同時に行います。
 
 最初に最も重要なズレを予告しておきます。
 本書の式はヘッズアップ（1対1）を前提に設計されています。
-マルチウェイ（3人以上）では、同じ HandScore・BoardScore でもベットの採算が大きく変わります。
+マルチウェイ（3人以上）では、同じHandScore・BoardScoreでもベットの採算が大きく変わります。
 
-GTO Wizard は「マルチウェイポット 10 のヒント」でこう述べています。
+GTO Wizardは「マルチウェイポット10のヒント」でこう述べています。
 
 > "Stop rangebetting. Give up more often with trash.
 > Tighten your value betting thresholds."
@@ -46,7 +46,7 @@ GTO Wizard は「マルチウェイポット 10 のヒント」でこう述べ�
 
 ## 11-2　モノトーンの逆説：危険だからこそ小さく打つ
 
-モノトーンフロップ（3枚が同じマーク、例：K♠8♠3♠）は、本書の BoardScore では「フラッシュ要素 −5」が加算され、スコアが大きく下がります。
+モノトーンフロップ（3枚が同じマーク、例：K♠8♠3♠）は、本書のBoardScoreでは「フラッシュ要素 −5」が加算され、スコアが大きく下がります。
 スコアが低ければ「チェック」判定になりやすい設計です。
 
 ところがGTOソルバーの分析では、モノトーンフロップはむしろ「小サイズで高頻度ベット」が最適とされます。
@@ -70,9 +70,9 @@ GTOは「危険だからこそ小サイズで高頻度ベット」、本書は�
 
 ## 11-3　ペアードボードの逆説：本書が保守的すぎる場面
 
-ペアードフロップ（例：K♥K♣3♠、A♠A♦7♣）は、本書の BoardScore では「ペアボード +1」の補正が入りますが、それでもスコアは中程度に留まります。
+ペアードフロップ（例：K♥K♣3♠、A♠A♦7♣）は、本書のBoardScoreでは「ペアボード +1」の補正が入りますが、それでもスコアは中程度に留まります。
 
-GTO ソルバーの実際の CBet 頻度は、ペアードボードで非常に高くなります。
+GTOソルバーの実際のCBet頻度は、ペアードボードで非常に高くなります。
 
 | ボード | GTO CBet 頻度（IP） |
 |--------|-------------------|
@@ -82,12 +82,12 @@ GTO ソルバーの実際の CBet 頻度は、ペアードボードで非常に�
 | JJ-X | 約70% |
 | TT-X | 約50〜60% |
 
-なぜこれほど高頻度なのかというと、相手（BB など）がトリップスを持っている確率が非常に低いからです。
+なぜこれほど高頻度なのかというと、相手（BBなど）がトリップスを持っている確率が非常に低いからです。
 ペアードボードではレイザー側のレンジアドバンテージが絶大になり、「レンジ全体で小さく打ち続ける」のが最適になります。
 
 **本書との乖離まとめ：**
-本書式ではペアードボードでも HandScore が低いハンドはチェックバックします。
-しかしGTOでは AA-X や KK-X のような高いペアードボードでは、弱いハンドも含めてレンジベットするのが正しい選択です。
+本書式ではペアードボードでもHandScoreが低いハンドはチェックバックします。
+しかしGTOではAA-XやKK-Xのような高いペアードボードでは、弱いハンドも含めてレンジベットするのが正しい選択です。
 この場面での保守性は「稼ぎ損ね」に相当しますが、初級者が過剰なCBetでトラブルに巻き込まれるリスクを下げる効果もあります。
 
 ---
@@ -100,10 +100,10 @@ GTOでは「同じハンドをAという場面でベット60%・チェック40%�
 本書の式は純粋戦略（決定論）です。
 HandScoreが閾値以上なら必ずベット、未満なら必ずチェックと決まります。
 
-この違いによる EV の損失はどの程度でしょうか。
+この違いによるEVの損失はどの程度でしょうか。
 
 **Run It Once の研究によると、対称的な逸脱（あるハンドを予定より多くベットし、別のハンドを同量少なくベット）はトイゲームでEV損失がゼロ**です。
-実際のマルチストリートゲームでは累積的な損失が生じますが、GTO Wizard の原則研究では、混合ノードで発生する2つのアクションのEV差は多くの場合0.5〜2bb程度にとどまります。
+実際のマルチストリートゲームでは累積的な損失が生じますが、GTO Wizardの原則研究では、混合ノードで発生する2つのアクションのEV差は多くの場合0.5〜2bb程度にとどまります。
 
 また、人間が混合戦略を「正確に」実装するのは困難です。
 「なんとなく60:40」で混ぜようとすると、感覚頼りになり「なんとなく混合」という最悪のパターンに陥ります。
@@ -117,7 +117,7 @@ HandScoreが閾値以上なら必ずベット、未満なら必ずチェック�
 
 ## 11-5　プリフロップレンジ優先、テクスチャは従：本書は逆
 
-GTO Wizard の研究は、CBet戦略の主ドライバーについてこう結論づけています。
+GTO Wizardの研究は、CBet戦略の主ドライバーについてこう結論づけています。
 
 > "Pre-flop range dynamics, not board texture, are the primary drivers of continuation betting strategy."
 > — GTO Wizard, Flop Heuristics: IP C-Betting in Cash Games
@@ -125,15 +125,15 @@ GTO Wizard の研究は、CBet戦略の主ドライバーについてこう結�
 GTOの視点では、CBet**頻度**はレンジアドバンテージ（レンジ全体での形勢）が決定し、CBet**サイズ**はナッツアドバンテージ（強いハンドの偏り）が決定します。
 ボードテクスチャは「プリフロップで確立されたアドバンテージを拡大または縮小する」補助的な役割です。
 
-しかし本書の構造では BoardScore（テクスチャ評価）が式の中核に置かれています。
+しかし本書の構造ではBoardScore（テクスチャ評価）が式の中核に置かれています。
 プリフロップレンジとの相互作用は明示的にモデル化されておらず、テクスチャを主ドライバーとして扱っています。
 
 **乖離が顕在化する典型例：**
 
-BTN vs BB でフロップが T♦9♣8♠（ウェット）のとき、BoardScoreは低くチェックが推奨されやすくなります。
+BTN vs BBでフロップがT♦9♣8♠（ウェット）のとき、BoardScoreは低くチェックが推奨されやすくなります。
 しかしBTNのオープンレンジはBBより幅広く、GTOでは中程度の頻度でCBetを継続します。
 
-逆にUTG vs BB でK♥7♣2♦（ドライ）のときは、UTGのレンジアドバンテージが大きく本書式とGTOの結論が一致します。
+逆にUTG vs BBでK♥7♣2♦（ドライ）のときは、UTGのレンジアドバンテージが大きく本書式とGTOの結論が一致します。
 
 **本書との乖離まとめ：**
 テクスチャを主に見る本書式は、レンジアドバンテージが大きいポジション（UTG等）の「ドライボード」では正確に機能します。
@@ -150,7 +150,7 @@ BTN vs BB でフロップが T♦9♣8♠（ウェット）のとき、BoardScor
 **GTO Wizard 自身が「シンプル化」の方向に舵を切っています。**
 
 2025年にリリースされた**Single Size Solutions（シングルサイズ・ソリューション）**では、ライブラリを50倍以上に拡大しながらも、各スポットで「最高EVの1サイズのみ」を提示する方針を採用しました。
-GTO Wizard はその設計思想をこう説明しています。
+GTO Wizardはその設計思想をこう説明しています。
 
 > "Taking out mixed frequencies and multiple bet sizes will result in a drop in EV, but it will make the strategy much easier to implement, giving you an advantage at the tables."
 > — GTO Wizard, Single Size Solutions Are Live（2025年）
@@ -158,11 +158,11 @@ GTO Wizard はその設計思想をこう説明しています。
 複数サイズより1サイズのほうが実テーブルでの実装精度が上がり、トータルEVが向上するというのが実証的な立場です。
 さらに「2サイズ対3サイズ」でEV差は最小化されると示しており、シンプル化の損失は理論上の最適から小さいことが確認されています。
 
-本書の式が「閾値で判定する純粋戦略」を採用する姿勢は、GTO Wizard の「Simplified Solutions」の思想と同じ方向です。
-GTO を完全実装するよりも、「確実に実行できるシンプルなルール」のほうが実戦で勝てるという考え方です。
+本書の式が「閾値で判定する純粋戦略」を採用する姿勢は、GTO Wizardの「Simplified Solutions」の思想と同じ方向です。
+GTOを完全実装するよりも、「確実に実行できるシンプルなルール」のほうが実戦で勝てるという考え方です。
 
 **もう一つの根拠：相手も GTO を実装していない。**
-GTO からの逸脱が大きなEV損失を生むのは、相手が完璧なGTOを実行している場合のみです。
+GTOからの逸脱が大きなEV損失を生むのは、相手が完璧なGTOを実行している場合のみです。
 初級〜中級のゲームでは相手も非最適なプレイをしており、シンプルな決定論的戦略でも正の期待値を確保できます。
 
 ### GTO との乖離マップ（まとめ）
@@ -179,29 +179,29 @@ GTO からの逸脱が大きなEV損失を生むのは、相手が完璧なGTO�
 
 ## まとめ
 
-- 本書の CBet 統合式はヘッズアップを前提とした決定論的な近似である
-- GTO との主な乖離ポイントは「マルチウェイ」「モノトーン」「ハイペアード」の3つ
-- マルチウェイは第18章で対処。他の2つは「稼ぎ損ね」だが大きなミスではない
-- 混合戦略の欠如による EV 損失は小さく、人間の実装エラーより小さい
+- 本書のCBet統合式はヘッズアップを前提とした決定論的な近似である
+- GTOとの主な乖離ポイントは「マルチウェイ」「モノトーン」「ハイペアード」の3つ
+- マルチウェイは第18章で対処。ほかの2つは「稼ぎ損ね」だが大きなミスではない
+- 混合戦略の欠如によるEV損失は小さく、人間の実装エラーより小さい
 - プリフロップレンジを主ドライバーにするGTOと、テクスチャを主ドライバーにする本書とは構造的に異なるが、多くの場面で結論は重なる
-- GTO Wizard 自身が2025年にシンプル化（Single Size Solutions）を推奨しており、本書の方向性は支持されている
-- 「GTO を知ったうえでシンプルにしている」と「知らずにシンプルにしている」は、上達の速度と限界の意識において大きく異なる
+- GTO Wizard自身が2025年にシンプル化（Single Size Solutions）を推奨しており、本書の方向性は支持されている
+- 「GTOを知ったうえでシンプルにしている」と「知らずにシンプルにしている」は、上達の速度と限界の意識において大きく異なる
 
 ---
 
 ## ミニクイズ
 
-**Q1.** BTN vs BB で、フロップが A♠A♦7♣（エースペアード）のとき、GTOはどのような戦略を取るでしょうか？本書式と比較してください。
+**Q1.** BTN vs BBで、フロップがA♠A♦7♣（エースペアード）のとき、GTOはどのような戦略を取るでしょうか？本書式と比較してください。
 
-**解答：** GTOはこのボードでBTNから約100%の高頻度でCBetします（小サイズ、ポットの約1/3）。BBがエースを持っている確率が低く、BTNのレンジアドバンテージが絶大だからです。本書式では HandScore が低いハンド（例：ポケットペア中程度）はチェックバックになります。この場面では本書式のほうがチェック頻度が高く、稼ぎ損ねが生じます。
+**解答：** GTOはこのボードでBTNから約100%の高頻度でCBetします（小サイズ、ポットの約1/3）。BBがエースを持っている確率が低く、BTNのレンジアドバンテージが絶大だからです。本書式ではHandScoreが低いハンド（例：ポケットペア中程度）はチェックバックになります。この場面では本書式のほうがチェック頻度が高く、稼ぎ損ねが生じます。
 
 **Q2.** モノトーンフロップで「チェックよりも小さくベットする」のが正しい理由を説明してください。
 
 **解答：** フロップ時点でフラッシュが完成している確率は5〜6%程度にすぎません。大半の相手はフラッシュドローを持っているか、フラッシュ無関係の役だけです。したがって、フラッシュ未完成の強いハンドでバリューを取る機会があります。危険なボードだからこそ「相手を大きく釣ることはせず、小さいサイズで広く打ち続ける」のがGTOの考え方です。本書は初級者の安全を優先してチェック寄りにしていますが、将来的には小サイズCBetを覚えることが成長への道です。
 
-**Q3.** 本書式が決定論（純粋戦略）を採用している理由を、GTO Wizard の姿勢と関連づけて説明してください。
+**Q3.** 本書式が決定論（純粋戦略）を採用している理由を、GTO Wizardの姿勢と関連づけて説明してください。
 
-**解答：** GTO Wizard は2025年にSingle Size Solutionsを導入し「混合頻度と複数サイズを取り除くとEVはわずかに下がるが、実テーブルでの実装精度が上がりトータルEVが向上する」と説明しています。本書の決定論的な閾値判定も同じ発想です。混合戦略を不完全に実行するEV損失より、シンプルなルールを完全に実行するほうがトータルで有利だという実証的な立場に基づいています。
+**解答：** GTO Wizardは2025年にSingle Size Solutionsを導入し「混合頻度と複数サイズを取り除くとEVはわずかに下がるが、実テーブルでの実装精度が上がりトータルEVが向上する」と説明しています。本書の決定論的な閾値判定も同じ発想です。混合戦略を不完全に実行するEV損失より、シンプルなルールを完全に実行するほうがトータルで有利だという実証的な立場に基づいています。
 
 ---
 
@@ -209,13 +209,13 @@ GTO からの逸脱が大きなEV損失を生むのは、相手が完璧なGTO�
 
 ## 出典
 
-- GTO Wizard, "Flop Heuristics: IP C-Betting in Cash Games", https://blog.gtowizard.com/flop-heuristics-ip-c-betting-in-cash-games/
-- GTO Wizard, "Aggregate Flop Strategy: SB C-Betting in SRP", https://blog.gtowizard.com/aggregate-flop-strategy-sb-c-betting-in-srp/
-- GTO Wizard, "Maximizing Value on Monotone Flops", https://blog.gtowizard.com/maximizing-value-on-monotone-flops/
-- GTO Wizard, "10 Tips for Multiway Pots in Poker", https://blog.gtowizard.com/10-tips-multiway-pots-in-poker/
-- GTO Wizard, "Single Size Solutions Are Live", https://blog.gtowizard.com/single-size-solutions-are-live-new-pricing-50x-more-solutions/（2025年）
-- GTO Wizard, "Principles of GTO", https://blog.gtowizard.com/principles-of-gto/
-- GTO Wizard, "Exploitative Dynamics", https://blog.gtowizard.com/exploitative-dynamics/
-- Upswing Poker, "10 Spots to Continuation Bet 100%", https://upswingpoker.com/when-to-c-bet-everything/（2024年）
-- PokerCoaching.com, "C-Betting On Paired Boards", https://pokercoaching.com/blog/c-betting-on-paired-boards/
-- Run It Once, "Theory: Symmetrical Deviations from Mixed Betting Frequencies", https://www.runitonce.com/nlhe/theory-do-symmetrical-deviations-from-mixed-betting-frequencies-lose-ev-in-gto/
+- GTO Wizard, "Flop Heuristics: IP C-Betting in Cash Games", <https://blog.gtowizard.com/flop-heuristics-ip-c-betting-in-cash-games/>
+- GTO Wizard, "Aggregate Flop Strategy: SB C-Betting in SRP", <https://blog.gtowizard.com/aggregate-flop-strategy-sb-c-betting-in-srp/>
+- GTO Wizard, "Maximizing Value on Monotone Flops", <https://blog.gtowizard.com/maximizing-value-on-monotone-flops/>
+- GTO Wizard, "10 Tips for Multiway Pots in Poker", <https://blog.gtowizard.com/10-tips-multiway-pots-in-poker/>
+- GTO Wizard, "Single Size Solutions Are Live", <https://blog.gtowizard.com/single-size-solutions-are-live-new-pricing-50x-more-solutions/（2025年）>
+- GTO Wizard, "Principles of GTO", <https://blog.gtowizard.com/principles-of-gto/>
+- GTO Wizard, "Exploitative Dynamics", <https://blog.gtowizard.com/exploitative-dynamics/>
+- Upswing Poker, "10 Spots to Continuation Bet 100%", <https://upswingpoker.com/when-to-c-bet-everything/（2024年）>
+- PokerCoaching.com, "C-Betting On Paired Boards", <https://pokercoaching.com/blog/c-betting-on-paired-boards/>
+- Run It Once, "Theory: Symmetrical Deviations from Mixed Betting Frequencies", <https://www.runitonce.com/nlhe/theory-do-symmetrical-deviations-from-mixed-betting-frequencies-lose-ev-in-gto/>

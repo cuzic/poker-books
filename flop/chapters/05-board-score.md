@@ -6,33 +6,33 @@
 
 ## 導入　―― ボードを数字で語る理由
 
-フロップが配られると、経験豊富なプレイヤーは瞬時に「このボードは CBet しやすい」「ここは慎重に」と判断します。その判断は直感に見えますが、じつは **コネクティビティ（繋がり）** と **スーテッドネス（同スート性）** という2つの軸で測れる構造的な評価です。
+フロップが配られると、経験豊富なプレイヤーは瞬時に「このボードはCBetしやすい」「ここは慎重に」と判断します。その判断は直感に見えますが、じつは **コネクティビティ（繋がり）** と **スーテッドネス（同スート性）** という2つの軸で測れる構造的な評価です。
 
-本章ではその評価を **BoardScore** という0〜10点のスコアとして数値化します。BoardScore は本書3式の最初の式であり、フロップ判断の出発点となります。スコアを計算すれば「なぜ CBet するのか、しないのか」を感覚ではなく根拠で説明できるようになります。
+本章ではその評価を **BoardScore** という0〜10点のスコアとして数値化します。BoardScoreは本書3式の最初の式であり、フロップ判断の出発点となります。スコアを計算すれば「なぜCBetするのか、しないのか」を感覚ではなく根拠で説明できるようになります。
 
-なお、フロップの組み合わせはスートの等価性を考慮すると **1,755 通り** に絞られます。22,100 通りのように見える膨大な場面も、パターンを分類すれば十分に学習可能な数に収まります。この事実がボードテクスチャ研究の出発点です。
+なお、フロップの組み合わせはスートの等価性を考慮すると **1,755 通り** に絞られます。22,100通りのように見える膨大な場面も、パターンを分類すれば十分に学習可能な数に収まります。この事実がボードテクスチャ研究の出発点です。
 
 ---
 
 ## 5-1　BoardScore の式
 
-本書独自の BoardScore 式は次のとおりです。
+本書独自のBoardScore式は次のとおりです。
 
 ```
 BoardScore = 10 − ストレート要素 − フラッシュ要素 − ハイボードリスク
 ```
 
-各要素は後続のセクションで詳しく定義します。スコアが高いほどボードはドライ（乾燥）で、CBet が通りやすい状態を表します。スコアが低いほどウェット（湿潤）で、相手がドローを多く持ちやすい状態です。
+各要素は後続のセクションで詳しく定義します。スコアが高いほどボードはドライ（乾燥）で、CBetが通りやすい状態を表します。スコアが低いほどウェット（湿潤）で、相手がドローを多く持ちやすい状態です。
 
-式の構造はシンプルです。ベースとなる 10 点から、ストレートドローの危険度・フラッシュドローの危険度・ハイカードによるレンジ構造の複雑さをそれぞれ差し引きます。ペアボードだけは例外的に +1 の加算があります。
+式の構造はシンプルです。ベースとなる10点から、ストレートドローの危険度・フラッシュドローの危険度・ハイカードによるレンジ構造の複雑さをそれぞれ差し引きます。ペアボードだけは例外的に +1の加算があります。
 
-スコアの上限は **10**（ペアボードで 11 になる場合もキャップされます）、下限は理論上マイナスになる場合もあります（例：A♥K♥Q♥ では −1）。
+スコアの上限は **10**（ペアボードで11になる場合もキャップされます）、下限は理論上マイナスになる場合もあります（例：A♥K♥Q♥ では −1）。
 
 ---
 
 ## 5-2　ストレート要素
 
-ストレート要素は、相手がストレートドロー（OESD やガットショット）を持ちやすいかどうかを評価します。3枚のランクが密集しているほど差し引き幅が大きくなります。
+ストレート要素は、相手がストレートドロー（OESDやガットショット）を持ちやすいかどうかを評価します。3枚のランクが密集しているほど差し引き幅が大きくなります。
 
 | ランク構成 | 差し引き | 例 |
 |---|---|---|
@@ -41,11 +41,11 @@ BoardScore = 10 − ストレート要素 − フラッシュ要素 − ハイ�
 | 1〜2ギャップ（最大ランク差が2〜3） | −2 | K-J（間にQ）、K-T（間にJ・Q）、J-8（間に9・10）、9-7（間に8） |
 | 完全バラバラ | 0 | K-7-2、A-8-3 |
 
-「連続2枚＋ギャップ1以内」の判定は少し迷いやすいので補足します。これは3枚のうち2枚が連続していて、残り1枚が2つのランク以内に収まる場合です。K♠Q♣8♦ であれば KQ が連続していて 8 は独立しているため、この式では「1ギャップ」扱いではなく「連続2枚＋ギャップ」と判断します。
+「連続2枚＋ギャップ1以内」の判定は少し迷いやすいので補足します。これは3枚のうち2枚が連続していて、残り1枚が2つのランク以内に収まる場合です。K♠Q♣8♦ であればKQが連続していて8は独立しているため、この式では「1ギャップ」扱いではなく「連続2枚＋ギャップ」と判断します。
 
 ### なぜ連続3枚は −5 なのか
 
-9-8-7 のようなボードでは、T-6（OESD）・J-T（OESD）・6-5（OESD）という形で、相手がオープンエンドストレートドローを持てるハンドのコンボ数が合計で **48 コンボ以上** に達します。OESD は8アウトを持ち、フロップからリバーまでの完成率は約 31.5% です。これだけ多くの相手がドローを持つ状況では、大きな CBet は意味をなしません。
+9-8-7のようなボードでは、T-6（OESD）・J-T（OESD）・6-5（OESD）という形で、相手がオープンエンドストレートドローを持てるハンドのコンボ数が合計で **48 コンボ以上** に達します。OESDは8アウトを持ち、フロップからリバーまでの完成率は約31.5% です。これだけ多くの相手がドローを持つ状況では、大きなCBetは意味をなしません。
 
 ---
 
@@ -61,7 +61,7 @@ BoardScore = 10 − ストレート要素 − フラッシュ要素 − ハイ�
 
 ### スート分布の実態
 
-実際のフロップ分布は次のとおりです（1,755 通りベース）。
+実際のフロップ分布は次のとおりです（1,755通りベース）。
 
 | スート構成 | 割合 |
 |---|---|
@@ -69,9 +69,9 @@ BoardScore = 10 − ストレート要素 − フラッシュ要素 − ハイ�
 | ツートーン | 約 56% |
 | モノトーン | 約 5% |
 
-ツートーンボードが **過半数** を占めることが重要です。日常的に遭遇するフロップの大半にフラッシュドローの可能性があります。ツートーンのフロップでは、残り同スートが 11 枚あるため、相手が保有できるフラッシュドローのコンボは理論上 55 コンボ（実質約 30 コンボ）になります。
+ツートーンボードが **過半数** を占めることが重要です。日常的に遭遇するフロップの大半にフラッシュドローの可能性があります。ツートーンのフロップでは、残り同スートが11枚あるため、相手が保有できるフラッシュドローのコンボは理論上55コンボ（実質約30コンボ）になります。
 
-モノトーンは全フロップの約 5% にすぎませんが、戦略的インパクトは大きく特別扱いが必要です。モノトーンでは相手が既にフラッシュを完成させている確率が 5〜8% あり、さらに 25〜30% の相手がフラッシュドローを保有します。
+モノトーンは全フロップの約5% にすぎませんが、戦略的インパクトは大きく特別扱いが必要です。モノトーンでは相手が既にフラッシュを完成させている確率が5〜8% あり、さらに25〜30% の相手がフラッシュドローを保有します。
 
 ---
 
@@ -84,15 +84,15 @@ BoardScore = 10 − ストレート要素 − フラッシュ要素 − ハイ�
 | Broadway 2枚以上（KQ9、AJ8 など） | −1 |
 | ペアボード（77K など） | **+1**（ドライ化） |
 
-Broadway カードが2枚以上あるとき、相手のプリフロップレンジにフィットしやすいハンドが増えます。BB はプリフロップでKJo・KTo・QJo などを広く守備するため、ハイボードでのレンジアドバンテージが縮小します。
+Broadwayカードが2枚以上あるとき、相手のプリフロップレンジにフィットしやすいハンドが増えます。BBはプリフロップでKJo・KTo・QJoなどを広く守備するため、ハイボードでのレンジアドバンテージが縮小します。
 
-一方、ペアボードは逆の効果をもたらします。ペアのランクが2枚使われているため、そのランクを軸にするストレートドローのコンボが大幅に減少します。また、相手がトリップスを持てるのはそのランクのホールカード2枚分のみで、大きなハンドが入りにくい構造になります。この「静的化」効果を +1 として表現します。
+一方、ペアボードは逆の効果をもたらします。ペアのランクが2枚使われているため、そのランクを軸にするストレートドローのコンボが大幅に減少します。また、相手がトリップスを持てるのはそのランクのホールカード2枚分のみで、大きなハンドが入りにくい構造になります。この「静的化」効果を +1として表現します。
 
 ---
 
 ## 5-5　ドライ・セミウェット・ウェットの判定しきい値
 
-BoardScore の計算後、次のしきい値でボードの性質を判定します。
+BoardScoreの計算後、次のしきい値でボードの性質を判定します。
 
 | スコア | 判定 | CBet の基本方針 |
 |---|---|---|
@@ -100,7 +100,7 @@ BoardScore の計算後、次のしきい値でボードの性質を判定しま
 | **4〜6** | **セミウェット** | 選択的に 50〜75% サイズで CBet |
 | **≤ 3** | **ウェット** | 基本はチェック。超強ハンドのみ大きく CBet |
 
-このしきい値は GTO Wizard のデータと整合しています。ドライボードでは CBet 頻度が高く、超ウェットボードでは CBet 頻度が下がります。詳細は後述の【GTOとのズレ】コラムを参照してください。
+このしきい値はGTO Wizardのデータと整合しています。ドライボードではCBet頻度が高く、超ウェットボードではCBet頻度が下がります。詳細は後述の【GTOとのズレ】コラムを参照してください。
 
 ---
 
@@ -118,7 +118,7 @@ BoardScore の計算後、次のしきい値でボードの性質を判定しま
 BoardScore = 10 − 0 − 0 − 0 = 10
 ```
 
-判定：**ドライ**。理想的な CBet ボードです。相手にドローがほぼなく、プリフロップアグレッサーがレンジ優位を最大限に活かせます。
+判定：**ドライ**。理想的なCBetボードです。相手にドローがほぼなく、プリフロップアグレッサーがレンジ優位を最大限に活かせます。
 
 ---
 
@@ -132,7 +132,7 @@ BoardScore = 10 − 0 − 0 − 0 = 10
 BoardScore = 10 − 0 − 2 − 0 = 8
 ```
 
-判定：**ドライ**。A の存在でプリフロップレイザーのレンジ優位は大きく、ツートーンでも頻繁に CBet できます。
+判定：**ドライ**。Aの存在でプリフロップレイザーのレンジ優位は大きく、ツートーンでも頻繁にCBetできます。
 
 ---
 
@@ -174,7 +174,7 @@ BoardScore = 10 − 2 − 2 − 0 = 6
 BoardScore = 10 − 3 − 0 − 1 = 6
 ```
 
-判定：**セミウェット**。K-T（OESD）や T-8（ガットショット）など多くのドローが存在します。
+判定：**セミウェット**。K-T（OESD）やT-8（ガットショット）など多くのドローが存在します。
 
 ---
 
@@ -188,7 +188,7 @@ BoardScore = 10 − 3 − 0 − 1 = 6
 BoardScore = 10 − 5 − 2 − 0 = 3
 ```
 
-判定：**ウェット（境界）**。相手に OESD が多数あり、さらにフラッシュドローも絡む難しいボードです。
+判定：**ウェット（境界）**。相手にOESDが多数あり、さらにフラッシュドローも絡む難しいボードです。
 
 ---
 
@@ -202,7 +202,7 @@ BoardScore = 10 − 5 − 2 − 0 = 3
 BoardScore = 10 − 5 − 2 − 1 = 2
 ```
 
-判定：**ウェット**。ストレートドロー・フラッシュドロー・Broadway カードの三重苦です。
+判定：**ウェット**。ストレートドロー・フラッシュドロー・Broadwayカードの三重苦です。
 
 ---
 
@@ -216,7 +216,7 @@ BoardScore = 10 − 5 − 2 − 1 = 2
 BoardScore = 10 − 5 − 5 − 1 = −1
 ```
 
-判定：**超ウェット（マイナス）**。フラッシュ完成・ストレート完成・Broadway の三重ヒット。このボードで CBet できる役はロイヤルフラッシュか最上位のフルハウスのみです。
+判定：**超ウェット（マイナス）**。フラッシュ完成・ストレート完成・Broadwayの三重ヒット。このボードでCBetできる役はロイヤルフラッシュか最上位のフルハウスのみです。
 
 ---
 
@@ -230,7 +230,7 @@ BoardScore = 10 − 5 − 5 − 1 = −1
 BoardScore = 10 − 0 − 0 + 1 = 11 → キャップにより 10
 ```
 
-判定：**ドライ（上限 10）**。ペアボードは計算上 11 になることがありますが、スコアは 10 でキャップします。
+判定：**ドライ（上限 10）**。ペアボードは計算上11になることがありますが、スコアは10でキャップします。
 
 ---
 
@@ -267,11 +267,11 @@ BoardScore = 10 − 5 − 0 − 0 = 5
 
 ## 【GTOとのズレ】コラム
 
-BoardScore は GTO ソルバーの出力を簡略化した近似です。実際の GTO と比べると、いくつかのズレが存在します。
+BoardScoreはGTOソルバーの出力を簡略化した近似です。実際のGTOと比べると、いくつかのズレが存在します。
 
-### CBet サイズは「放物線」を描く
+### CBet サイズは「放もの線」を描く
 
-GTO Wizard のデータによると、CBet サイズはボードのウェット度に対して放物線（パラボラ）を描きます。
+GTO Wizardのデータによると、CBetサイズはボードのウェット度に対して放もの線（パラボラ）を描きます。
 
 ```
 ドライ（Score 7〜10）→ 小サイズ（33%ポット）高頻度
@@ -279,11 +279,11 @@ GTO Wizard のデータによると、CBet サイズはボードのウェット�
 超ウェット（≤ 3）  → 小サイズ（33%ポット）低頻度
 ```
 
-超ウェットボードで再び「小サイズ」になる点が直感と異なります。超ウェットでは相手のコールレンジの約 29% がストレート・フラッシュ（60% 以上のエクイティ）で構成されるため、大きなベットは逆効果です。
+超ウェットボードで再び「小サイズ」になる点が直感と異なります。超ウェットでは相手のコールレンジの約29% がストレート・フラッシュ（60% 以上のエクイティ）で構成されるため、大きなベットは逆効果です。
 
 ### SplitSuit の 12 カテゴリーとの対応
 
-Gareth James（SplitSuit Poker）は 1,755 通りを 12 カテゴリーに分類しています。頻度上位5カテゴリーは次のとおりです。
+Gareth James（SplitSuit Poker）は1,755通りを12カテゴリーに分類しています。頻度上位5カテゴリーは次のとおりです。
 
 | カテゴリー | 頻度 | BoardScore の傾向 |
 |---|---|---|
@@ -293,11 +293,11 @@ Gareth James（SplitSuit Poker）は 1,755 通りを 12 カテゴリーに分類
 | J/T+ローカード2枚 | 13.61% | セミウェット |
 | A+Broadway+ローカード | 9.27% | セミウェット〜ドライ |
 
-上位5カテゴリーで全フロップの約 70% を占めます。この 5 種類で BoardScore の運用を練習すれば、大部分の実戦に対応できます。
+上位5カテゴリーで全フロップの約70% を占めます。この5種類でBoardScoreの運用を練習すれば、大部分の実戦に対応できます。
 
 ### Upswing Poker の6分類との対応
 
-Upswing Poker は「レインボー×ディスコネクテッド」「ペアボード」「ツートーン×コネクテッド」などの6分類を提示しています。BoardScore との対応関係は次のとおりです。
+Upswing Pokerは「レインボー×ディスコネクテッド」「ペアボード」「ツートーン×コネクテッド」などの6分類を提示しています。BoardScoreとの対応関係は次のとおりです。
 
 | Upswing 分類 | 代表 BoardScore |
 |---|---|
@@ -310,14 +310,14 @@ Upswing Poker は「レインボー×ディスコネクテッド」「ペアボ�
 
 ### BoardScore が捉えられないもの
 
-BoardScore はボードの形（テクスチャ）だけを評価します。次の要素は考慮されていません。
+BoardScoreはボードの形（テクスチャ）だけを評価します。次の要素は考慮されていません。
 
 1. **レンジアドバンテージ**：どちらのプレイヤーのレンジがより強くフィットするか
-2. **ポジション**：IP と OOP では同じボードでも最適アクションが異なる
+2. **ポジション**：IPとOOPでは同じボードでも最適アクションが異なる
 3. **SPR（スタックポットレシオ）**：スタックの深さによる戦略変化
 4. **ナッツアドバンテージ**：最強ハンドの所持率の非対称性
 
-これらの要素は第9章の CBet 統合式で組み込まれます。BoardScore はあくまで「ボードの形だけ」を測る最初のレンズです。
+これらの要素は第9章のCBet統合式で組み込まれます。BoardScoreはあくまで「ボードの形だけ」を測る最初のレンズです。
 
 ---
 
@@ -327,10 +327,10 @@ BoardScore はボードの形（テクスチャ）だけを評価します。次
 - ストレート要素：連続3枚 −5 ／ 連続2枚＋ギャップ1以内 −3 ／ 1ギャップ −2
 - フラッシュ要素：モノトーン −5 ／ ツートーン −2 ／ レインボー 0
 - ハイボードリスク：Broadway 2枚以上 −1 ／ ペアボード +1
-- スコア ≥ 7 でドライ、4〜6 でセミウェット、≤ 3 でウェット
-- ツートーンは全フロップの約 56% を占め、最も頻繁に登場するスート構成です
-- GTO では超ウェットボードで CBet サイズが再び小さくなる「パラボラ」が観察されます
-- BoardScore はボード形状のみを評価します。レンジ・ポジション・SPR は後続の式で補完します
+- スコア ≥ 7でドライ、4〜6でセミウェット、≤ 3でウェット
+- ツートーンは全フロップの約56% を占め、最も頻繁に登場するスート構成です
+- GTOでは超ウェットボードでCBetサイズが再び小さくなる「パラボラ」が観察されます
+- BoardScoreはボード形状のみを評価します。レンジ・ポジション・SPRは後続の式で補完します
 
 ---
 
@@ -340,7 +340,7 @@ BoardScore はボードの形（テクスチャ）だけを評価します。次
 
 **フロップ：Q♥J♥8♣**
 
-各要素を計算し、BoardScore と判定を答えてください。
+各要素を計算し、BoardScoreと判定を答えてください。
 
 <details>
 <summary>解答</summary>
@@ -354,7 +354,7 @@ BoardScore = 10 − 3 − 2 − 1 = 4
 判定：セミウェット
 ```
 
-T-9（OESD）・K-T（OESD）・9-7（ガットショット）などのドローと、フラッシュドローが複合するボードです。CBet は選択的に、サイズは 50〜75% が目安です。
+T-9（OESD）・K-T（OESD）・9-7（ガットショット）などのドローと、フラッシュドローが複合するボードです。CBetは選択的に、サイズは50〜75% が目安です。
 
 </details>
 
@@ -364,7 +364,7 @@ T-9（OESD）・K-T（OESD）・9-7（ガットショット）などのドロー
 
 **フロップ：8♠8♣3♦**
 
-各要素を計算し、BoardScore と判定を答えてください。
+各要素を計算し、BoardScoreと判定を答えてください。
 
 <details>
 <summary>解答</summary>
@@ -378,7 +378,7 @@ BoardScore = 10 − 0 − 0 + 1 = 11 → キャップにより 10
 判定：ドライ
 ```
 
-ペアボードはドロー激減・ナッツ構造の単純化により高頻度 CBet が有効です。33% ポットの小サイズで幅広く継続します。
+ペアボードはドロー激減・ナッツ構造の単純化により高頻度CBetが有効です。33% ポットの小サイズで幅広く継続します。
 
 </details>
 
@@ -388,7 +388,7 @@ BoardScore = 10 − 0 − 0 + 1 = 11 → キャップにより 10
 
 **フロップ：6♥5♥4♦**
 
-各要素を計算し、BoardScore と判定を答えてください。
+各要素を計算し、BoardScoreと判定を答えてください。
 
 <details>
 <summary>解答</summary>
@@ -402,7 +402,7 @@ BoardScore = 10 − 5 − 2 − 0 = 3
 判定：ウェット（境界）
 ```
 
-7-3（OESD）・8-7（OESD）・3-2（OESD）など多数の OESD が存在し、さらにフラッシュドローが絡む典型的なウェットボードです。基本はチェックで、セットやフラッシュ完成のような超強ハンドのみ大きく CBet します。
+7-3（OESD）・8-7（OESD）・3-2（OESD）など多数のOESDが存在し、さらにフラッシュドローが絡む典型的なウェットボードです。基本はチェックで、セットやフラッシュ完成のような超強ハンドのみ大きくCBetします。
 
 </details>
 
@@ -410,15 +410,15 @@ BoardScore = 10 − 5 − 2 − 0 = 3
 
 ## 出典
 
-- GTO Wizard: *The Mechanics of C-Bet Sizing* (https://blog.gtowizard.com/the-mechanics-of-c-bet-sizing/)
-- GTO Wizard: *Flop Heuristics: IP C-Betting in Cash Games* (https://blog.gtowizard.com/flop-heuristics-ip-c-betting-in-cash-games/)
-- GTO Wizard: *Maximizing Value on Monotone Flops* (https://blog.gtowizard.com/maximizing-value-on-monotone-flops/)
-- Upswing Poker: *10 Fundamental Tips for The Most Common Types of Flops* (https://upswingpoker.com/board-texture-tips/)
-- Upswing Poker: *GTO C-Bet Frequency Quiz Answers* (https://upswingpoker.com/gto-c-bet-quiz-answers/)
-- Upswing Poker: *What Are The Odds of Hitting a Draw in Poker?* (https://upswingpoker.com/odds-hitting-draw-in-poker/)
-- PokerListings: *Poker Math by Gareth James: Types of Flop Texture* (https://www.pokerlistings.com/poker-strategies/poker-math-by-gareth-james-types-of-flop-texture)
-- MTP Poker School: *The Top 5 Flop Textures to Optimise Your Poker Study* (https://www.mttpokerschool.com/single-post/otb-048-the-top-5-flop-textures-to-optimise-your-poker-study)
-- 888 Poker: *Poker Board Textures* (https://www.888poker.com/magazine/poker-board-textures)
-- Red Chip Poker: *A Quick Way To Think About Flop Texture* (https://redchippoker.com/how-to-think-about-flop-texture/)
-- PokerRailbird: *Straight Draws & Suited Connectors in Poker* (https://pokerrailbird.com/straight-draws-suited-connectors-in-poker/)
-- Tournament Poker Edge: *Static and Dynamic Board Textures* (https://www.tournamentpokeredge.com/static-and-dynamic-board-textures-in-poker/)
+- GTO Wizard: *The Mechanics of C-Bet Sizing* (<https://blog.gtowizard.com/the-mechanics-of-c-bet-sizing/>)
+- GTO Wizard: *Flop Heuristics: IP C-Betting in Cash Games* (<https://blog.gtowizard.com/flop-heuristics-ip-c-betting-in-cash-games/>)
+- GTO Wizard: *Maximizing Value on Monotone Flops* (<https://blog.gtowizard.com/maximizing-value-on-monotone-flops/>)
+- Upswing Poker: *10 Fundamental Tips for The Most Common Types of Flops* (<https://upswingpoker.com/board-texture-tips/>)
+- Upswing Poker: *GTO C-Bet Frequency Quiz Answers* (<https://upswingpoker.com/gto-c-bet-quiz-answers/>)
+- Upswing Poker: *What Are The Odds of Hitting a Draw in Poker?* (<https://upswingpoker.com/odds-hitting-draw-in-poker/>)
+- PokerListings: *Poker Math by Gareth James: Types of Flop Texture* (<https://www.pokerlistings.com/poker-strategies/poker-math-by-gareth-james-types-of-flop-texture>)
+- MTP Poker School: *The Top 5 Flop Textures to Optimise Your Poker Study* (<https://www.mttpokerschool.com/single-post/otb-048-the-top-5-flop-textures-to-optimise-your-poker-study>)
+- 888 Poker: *Poker Board Textures* (<https://www.888poker.com/magazine/poker-board-textures>)
+- Red Chip Poker: *A Quick Way To Think About Flop Texture* (<https://redchippoker.com/how-to-think-about-flop-texture/>)
+- PokerRailbird: *Straight Draws & Suited Connectors in Poker* (<https://pokerrailbird.com/straight-draws-suited-connectors-in-poker/>)
+- Tournament Poker Edge: *Static and Dynamic Board Textures* (<https://www.tournamentpokeredge.com/static-and-dynamic-board-textures-in-poker/>)
