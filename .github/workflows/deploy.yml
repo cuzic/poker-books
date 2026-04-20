@@ -22,23 +22,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install pandoc
-        run: sudo apt-get update && sudo apt-get install -y pandoc
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
 
-      - name: Build both books
-        run: |
-          # ビルドスクリプトは $ROOT を /home/cuzic/poker-books 固定で参照しているため
-          # CI 環境に合わせてリポジトリルートに差し替えて実行する
-          sed "s|^ROOT=.*|ROOT=\"$GITHUB_WORKSPACE\"|" scripts/build.sh > scripts/build.ci.sh
-          chmod +x scripts/build.ci.sh
-          bash scripts/build.ci.sh all
+      - name: Install dependencies
+        run: bun install
 
-      - name: Assemble site
-        run: |
-          mkdir -p site
-          cp dist/preflop/book.html site/preflop.html
-          cp dist/flop/book.html site/flop.html
-          cp scripts/index.html site/index.html
+      - name: Build all formats for both books
+        run: bun run build:site
+
+      - name: Upload EPUB artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: epub-files
+          path: |
+            dist/preflop/book.epub
+            dist/flop/book.epub
+          retention-days: 90
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -46,7 +48,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site
+          path: './dist/site'
 
   deploy:
     environment:
