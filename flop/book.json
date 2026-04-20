@@ -1,0 +1,48 @@
+{
+  "title": "フロップは構造で勝つ",
+  "subtitle": "ボードを読み、式で判断する",
+  "author": "川西智也",
+  "language": "ja",
+  "identifier": "urn:uuid:c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+  "publisher": "川西智也",
+  "description": "前作『プリフロップは計算で勝つ』の姉妹編。プリフロップの計算式をマスターした初級者を対象に、フロップ判断を3つの数式で再現するアプローチを提案します。\n\nボードテクスチャを0〜10点で数値化する『BoardScore』、フロップでの手の強さをアウツ数ベースで評価する『HandScore』、両者とポジションを統合する『CBet統合式』の3つで、フロップの主要判断を暗算で処理できるように設計しました。\n\n各部末には『この式がGTOとどこで外れるか』を専用章で解説。全章末に『GTOとのズレ』コラムを配置し、簡易式の限界と上級者への学習ロードマップまで示します。全23章＋付録6本（境界状況15ケースを含む）で、フロップ判断の入口から上級への橋渡しまでをカバーします。",
+  "cover": "src/chapters/images/cover.jpg",
+  "kdp": {
+    "keywords": [
+      "テキサスホールデム フロップ",
+      "ポーカー CBet",
+      "ポーカー ボードテクスチャ",
+      "ポーカー 計算式",
+      "GTO フロップ",
+      "SPR ポーカー",
+      "ポストフロップ 初心者"
+    ],
+    "categories": [
+      "Kindle Store > 趣味・実用 > ゲーム",
+      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム",
+      "Kindle Store > ノンフィクション > 科学・テクノロジー"
+    ],
+    "bisac": [
+      "GAM004000",
+      "GAM002000",
+      "SPO047000"
+    ],
+    "bisacLabels": [
+      "GAMES & ACTIVITIES / Card Games / Poker",
+      "GAMES & ACTIVITIES / Card Games / General",
+      "SPORTS & RECREATION / Gambling"
+    ],
+    "targetAudience": "前作『プリフロップは計算で勝つ』を読了した初級者〜中級者手前",
+    "pageReadDirection": "ltr",
+    "aiContentDisclosure": {
+      "textAssisted": true,
+      "imageGenerated": true,
+      "note": "Claude Code（Anthropic）を執筆補助ツールとして使用。Geminiで図解画像を生成。最終的な編集・監修は著者が実施。"
+    },
+    "pricing": {
+      "currency": "JPY",
+      "listPrice": 980,
+      "kdpSelect": true
+    }
+  }
+}
