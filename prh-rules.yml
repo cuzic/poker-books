@@ -1,0 +1,225 @@
+# prh (proofreading-helper) 表記ゆれルール
+# 書籍固有のルールはこのファイルに追加する
+#
+# 使い方:
+#   expected: 正しい表記
+#   patterns: 修正対象のパターン（正規表現可）
+#   specs: テストケース（オプション）
+#
+# 参考: https://github.com/prh/prh
+
+version: 1
+
+rules:
+  # ============================================================
+  # 技術用語の統一
+  # ============================================================
+
+  # プログラミング言語・ツール
+  - expected: JavaScript
+    patterns:
+      - Javascript
+      - javascript
+      - JAVASCRIPT
+
+  - expected: TypeScript
+    patterns:
+      - Typescript
+      - typescript
+
+  - expected: Python
+    patterns:
+      - python
+      - PYTHON
+
+  - expected: GitHub
+    patterns:
+      - Github
+      - github
+      - GITHUB
+
+  - expected: VS Code
+    patterns:
+      - VSCode
+      - vscode
+      - VS code
+
+  # AI関連
+  - expected: AI
+    patterns:
+      - A.I.
+      - Ai
+    specs:
+      - from: "Ai技術"
+        to: "AI技術"
+
+  - expected: LLM
+    patterns:
+      - llm
+      - Llm
+
+  - expected: API
+    patterns:
+      - Api
+      - api
+    specs:
+      - from: "api呼び出し"
+        to: "API呼び出し"
+
+  # SaaS関連
+  - expected: SaaS
+    patterns:
+      - Saas
+      - saas
+      - SAAS
+
+  - expected: PaaS
+    patterns:
+      - Paas
+      - paas
+
+  - expected: IaaS
+    patterns:
+      - Iaas
+      - iaas
+
+  # ============================================================
+  # ひらがな表記の統一（漢字→ひらがな）
+  # ============================================================
+
+  - expected: できる
+    patterns:
+      - 出来る
+    specs:
+      - from: "実装出来る"
+        to: "実装できる"
+
+  - expected: ため
+    pattern: /(?<!行|所|人|作|無|有)為(?!替)/
+    specs:
+      - from: "効率化の為"
+        to: "効率化のため"
+
+  - expected: こと
+    pattern: /(?<!記|刑|人|工|知|幹|火|大|返|食|当|無|軍|行|従|家|民|商|領|参|理|検|判|主|有|万|百|何|仕|見|故|祭|炊|雑|私|往|些|国|世|好|凶|吉|叙|用|俗)事(?!業|前|実|例|件|故|情|態|項|務|象|由|変|柄)/
+    specs:
+      - from: "理解する事"
+        to: "理解すること"
+
+  - expected: もの
+    pattern: /(?<!貨|動|植|建|産|人|生|怪|鉱|穀|荷|着|織|食|獲|遺|代|禁|名|本|偽|作|刃|見|買|事|万|博|実|果|薬|供|宝|反|化|廃|異|汚|乗|飲|履|読|持|書|贈|編|置|漬|煮|焼|縫|揚)物(?!理|価|流|質|体|騒|色|議|語|件|資|産|販|納|購)/
+    specs:
+      - from: "必要な物"
+        to: "必要なもの"
+
+  # 「所」は複合語が多いため、ルールを無効化
+  # 場所、住所、裁判所、事務所、研究所など除外が困難
+  # - expected: ところ
+  #   pattern: ...
+  #   specs:
+  #     - from: "面白い所"
+  #       to: "面白いところ"
+
+  - expected: わかる
+    patterns:
+      - 分かる
+      - 判る
+      - 解る
+
+  - expected: ほか
+    pattern: /(?<!利|排|自)他(?!社|人|方|国|者|力|意|界|動|称|薦|流|言|見|念|聞|日|派|行|出|生|殺|郷|山|律|家|愛)/
+    specs:
+      - from: "その他にも"
+        to: "そのほかにも"
+
+  - expected: さらに
+    pattern: /(?<!変)更に/
+
+  - expected: すべて
+    pattern: /(?<!安|完|健|万|不)全て/
+
+  - expected: および
+    patterns:
+      - 及び
+
+  - expected: または
+    patterns:
+      - 又は
+
+  - expected: あらかじめ
+    patterns:
+      - 予め
+
+  - expected: いただく
+    patterns:
+      - 頂く
+    specs:
+      - from: "ご確認頂く"
+        to: "ご確認いただく"
+
+  - expected: ください
+    patterns:
+      - 下さい
+    specs:
+      - from: "ご覧下さい"
+        to: "ご覧ください"
+
+  # ============================================================
+  # 送り仮名の統一
+  # ============================================================
+
+  - expected: 行う
+    patterns:
+      - 行なう
+
+  - expected: 表す
+    patterns:
+      - 表わす
+
+  # ============================================================
+  # カタカナ表記の統一
+  # ============================================================
+
+  - expected: インターフェース
+    patterns:
+      - インターフェイス
+      - インタフェース
+      - インタフェイス
+
+  - expected: ユーザー
+    pattern: /ユーザ(?!ー)/
+
+  - expected: サーバー
+    pattern: /サーバ(?!ー)/
+
+  - expected: コンピューター
+    pattern: /コンピュータ(?!ー)/
+
+  - expected: ブラウザー
+    pattern: /ブラウザ(?!ー)/
+
+  - expected: フォルダー
+    pattern: /フォルダ(?!ー)/
+
+  # ============================================================
+  # 句読点・記号
+  # ============================================================
+
+  # 全角括弧→半角括弧（コード以外）
+  # ※ 必要に応じてコメントアウト
+  # - expected: "("
+  #   patterns:
+  #     - "（"
+  # - expected: ")"
+  #   patterns:
+  #     - "）"
+
+  # ============================================================
+  # 書籍固有のルール（テンプレート使用時に追加）
+  # ============================================================
+
+  # 例: 書籍タイトルや固有名詞
+  # - expected: 『書籍タイトル』
+  #   patterns:
+  #     - 「書籍タイトル」
+  #     - 書籍タイトル

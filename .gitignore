@@ -1,4 +1,29 @@
-dist/
-*.log
-.DS_Store
+# Dependencies
 node_modules/
+bun.lockb
+
+# Build output
+dist/
+.temp-epub/
+
+# Tools
+.tools/
+
+# Environment
+.env
+.env.local
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug
+*.log
+npm-debug.log*

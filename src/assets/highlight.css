@@ -1,0 +1,64 @@
+/* highlight.js - Catppuccin Mocha theme */
+.hljs {
+  color: #cdd6f4;
+  background: #1e1e2e;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-name,
+.hljs-strong {
+  color: #cba6f7;
+  font-weight: bold;
+}
+
+.hljs-comment {
+  color: #6c7086;
+}
+
+.hljs-string,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_,
+.hljs-attr,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-code,
+.hljs-addition,
+.hljs-template-tag,
+.hljs-link {
+  color: #a6e3a1;
+}
+
+.hljs-built_in,
+.hljs-quote,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-template-variable,
+.hljs-variable,
+.hljs-attribute {
+  color: #89b4fa;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta {
+  color: #fab387;
+}
+
+.hljs-regexp,
+.hljs-subst,
+.hljs-deletion {
+  color: #f38ba8;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
