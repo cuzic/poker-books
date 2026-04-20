@@ -44,17 +44,9 @@ build_book() {
     author=""
   fi
 
-  # Front matter
-  cat > "$merged_md" <<EOF
----
-title: "$title"
-subtitle: "$subtitle"
-author: "$author"
-date: "$(date +%Y-%m-%d)"
-lang: ja
----
-
-EOF
+  # Reset merged file. Metadata は pandoc の -M で渡すため、yaml frontmatter は書かない。
+  # 本文中の `---` 水平線が yaml_metadata_block と誤認されるのを避けるのが目的。
+  : > "$merged_md"
 
   # Optional preface from $id/preface.md
   if [ -f "$ROOT/$id/preface.md" ]; then
@@ -71,13 +63,17 @@ EOF
 
   # Run pandoc
   pandoc "$merged_md" \
-    --from markdown+yaml_metadata_block+table_captions+pipe_tables \
+    --from markdown-yaml_metadata_block+table_captions+pipe_tables \
     --to html5 \
     --standalone \
     --toc \
     --toc-depth=2 \
     --self-contained \
     --metadata title="$title" \
+    --metadata subtitle="$subtitle" \
+    --metadata author="$author" \
+    --metadata date="$(date +%Y-%m-%d)" \
+    --metadata lang="ja" \
     --css <(cat <<'CSS'
 :root {
   --fg: #222;
