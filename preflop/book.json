@@ -1,0 +1,48 @@
+{
+  "title": "プリフロップは計算で勝つ",
+  "subtitle": "レンジ暗記に頼らない、簡易計算式で覚えるポーカー入門",
+  "author": "川西智也",
+  "language": "ja",
+  "identifier": "urn:uuid:b2c3d4e5-6f7a-8b9c-0d1e-f2a3b4c5d6e7",
+  "publisher": "川西智也",
+  "description": "169ハンド × 6ポジションのレンジ表を丸暗記するのは、初心者にとって非現実的です。本書は、ハンドを数値化し、ポジションで補正し、しきい値と比較するだけでプリフロップ判断を再現する『簡易計算式』を提案します。\n\nオープンレイズ、ポットオッズ、実現率、セットマイニング、3ベットまで、プリフロップで出会うすべての分岐を統一的な式で捌けるように設計しました。各部末には『この式がGTOとどこで外れるか』を専用章で解説。全章末に『GTOとのズレ』コラムを配置し、簡易式の限界と上級者への学習ロードマップまで示します。\n\n20問の実戦ドリルと1枚チートシートで、式を『5秒で回せる』段階まで定着させる構成です。",
+  "cover": "src/chapters/images/cover.jpg",
+  "kdp": {
+    "keywords": [
+      "テキサスホールデム プリフロップ",
+      "ポーカー レンジ表",
+      "ポーカー 計算式",
+      "ポーカー 初心者",
+      "GTO プリフロップ",
+      "ハンド評価 Chen",
+      "ポジション ポーカー"
+    ],
+    "categories": [
+      "Kindle Store > 趣味・実用 > ゲーム",
+      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム",
+      "Kindle Store > ノンフィクション > 科学・テクノロジー"
+    ],
+    "bisac": [
+      "GAM004000",
+      "GAM002000",
+      "SPO047000"
+    ],
+    "bisacLabels": [
+      "GAMES & ACTIVITIES / Card Games / Poker",
+      "GAMES & ACTIVITIES / Card Games / General",
+      "SPORTS & RECREATION / Gambling"
+    ],
+    "targetAudience": "ポーカー初心者〜中級者手前、レンジ表の暗記で挫折した経験のある人",
+    "pageReadDirection": "ltr",
+    "aiContentDisclosure": {
+      "textAssisted": true,
+      "imageGenerated": true,
+      "note": "Claude Code（Anthropic）を執筆補助ツールとして使用。Geminiで図解画像を生成。最終的な編集・監修は著者が実施。"
+    },
+    "pricing": {
+      "currency": "JPY",
+      "listPrice": 780,
+      "kdpSelect": true
+    }
+  }
+}
