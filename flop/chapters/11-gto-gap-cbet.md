@@ -205,6 +205,8 @@ GTO からの逸脱が大きなEV損失を生むのは、相手が完璧なGTO�
 
 ---
 
+> **補足（第27章への接続）**: 本章で列挙したGTOとのズレのうち、「境界CBetの決定論的な扱い」「サイズパターンの固定化」「チェックレンジの弱さ」の3点は、第27章のR1〜R4を適用することで部分的に縮まります。残る乖離（レンジ全体の同時最適化など）は第27章27-11節で引き続き整理しています。
+
 ## 出典
 
 - GTO Wizard, "Flop Heuristics: IP C-Betting in Cash Games", https://blog.gtowizard.com/flop-heuristics-ip-c-betting-in-cash-games/
