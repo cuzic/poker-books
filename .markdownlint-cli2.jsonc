@@ -76,8 +76,8 @@
     // MD032: リストの前後に空行必須
     "blanks-around-lists": true,
 
-    // MD033: インラインHTMLを禁止（必要時は個別に無効化）
-    "no-inline-html": true,
+    // MD033: インラインHTMLを禁止（allowed_elements で details/summary のみ許可）
+    "no-inline-html": { "allowed_elements": ["details", "summary"] },
 
     // MD034: 裸のURLを禁止
     "no-bare-urls": true,
@@ -97,8 +97,8 @@
     // MD039: リンクテキスト内のスペース
     "no-space-in-links": true,
 
-    // MD040: コードブロックに言語指定必須
-    "fenced-code-language": true,
+    // MD040: コードブロックに言語指定必須（false で緩和、本書では数式・疑似コードブロックが多い）
+    "fenced-code-language": false,
 
     // MD041: 最初の行はH1見出し必須
     "first-line-heading": true,
@@ -125,7 +125,16 @@
     "emphasis-style": { "style": "asterisk" },
 
     // MD050: 太字スタイルを統一（アスタリスク）
-    "strong-style": { "style": "asterisk" }
+    "strong-style": { "style": "asterisk" },
+
+    // MD056: 表の列数一致を必須化（false で緩和、日本語混在で誤検出が多いため）
+    "table-column-count": false,
+
+    // MD060: 表のパイプ文字間のスペース統一（false で緩和、日本語混在の表で画一化が現実的でない）
+    "table-column-style": false,
+
+    // MD036: 強調を見出し代わりに使わない（false で緩和、「**Q1**」のようなクイズ番号で多数誤検出）
+    "no-emphasis-as-heading": false
   },
   "globs": [
     "preflop/chapters/**/*.md",

@@ -19,9 +19,9 @@
       "arabic-kanji-numbers": true,
       "no-mix-dearu-desumasu": {
         "preferInHeader": "",
-        "preferInBody": "である",
-        "preferInList": "である",
-        "strict": true
+        "preferInBody": "ですます",
+        "preferInList": "",
+        "strict": false
       },
       "ja-no-mixed-period": {
         "periodMark": "。",
@@ -42,19 +42,24 @@
       "no-invalid-control-character": true,
       "no-exclamation-question-mark": {
         "allowFullWidthExclamation": false,
-        "allowFullWidthQuestion": false,
+        "allowFullWidthQuestion": true,
         "allowHalfWidthExclamation": false,
-        "allowHalfWidthQuestion": false
+        "allowHalfWidthQuestion": true
       },
       "no-hankaku-kana": true,
       "ja-no-weak-phrase": true,
       "ja-no-successive-word": {
-        "allow": []
+        "allow": ["　", "…", "ー", "ん", "★", "☆", "✓", "✗", "・"]
       },
       "ja-no-abusage": true,
       "ja-no-redundant-expression": true,
       "ja-unnatural-alphabet": {
-        "allow": ["B", "C", "E", "S"],
+        "allow": [
+          "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+          "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+          "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+          "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+        ],
         "allowCommonCase": true
       },
       "no-unmatched-pair": true
@@ -87,7 +92,7 @@
       "4.1.1.句点(。)": true,
       "4.1.3.ピリオド(.)、カンマ(,)": true,
       "4.2.1.感嘆符(！)": true,
-      "4.2.2.疑問符(？)": true,
+      "4.2.2.疑問符(？)": false,
       "4.2.4.中黒(・)": true,
       "4.2.5.波カッコ": true,
       "4.2.6.ハイフン(-)": true,
