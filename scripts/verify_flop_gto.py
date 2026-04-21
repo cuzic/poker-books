@@ -15,7 +15,10 @@
   2. 代表的なハンド × ボード × ポジション の CBet 判定の本書 vs GTO
 """
 from __future__ import annotations
+import sys
 from statistics import correlation, linear_regression
+
+USE_ADVANCED = "--advanced" in sys.argv
 
 # ---------------------------------------------------------------------------
 # Board 表記 → BoardScore
@@ -69,6 +72,33 @@ def parse_board(spec: str) -> tuple[list[int], list[str], bool]:
     ranks_sorted = sorted(ranks, reverse=True)
     suits_effective = suits
     return ranks_sorted, suits_effective, len(set(ranks)) < len(ranks)
+
+
+def board_score_advanced(ranks: list[int], suits: list[str], paired: bool) -> int:
+    """上級版 BoardScore: 基本 + レンジアドバンテージ補正。
+
+    追加補正:
+      1. レンジアドバンテージ補正: トップカードに応じて wetness を調整
+         - トップ A/K: +0（PFA 強い、基本式通り）
+         - トップ Q:   +1（やや弱い）
+         - トップ J:   +2（mid range、wetness 寄りに扱う）
+         - トップ T:   +2
+         - トップ 9 以下: 既に straight element で captured
+
+      2. ハイペアボード補正: AAx, KKx, QQx など high kicker paired
+         - トップ A/K/Q が含まれるペアボード: BoardScore -1（追加のドライ寄与）
+    """
+    base = board_score(ranks, suits, paired)
+    h = max(ranks)
+    # レンジアドバンテージ補正
+    if h == 12:  # Q
+        base += 1
+    elif h in (11, 10):  # J, T
+        base += 2
+    # ハイペアボード補正（AAx, KKx, QQx）
+    if paired and h >= 12:
+        base -= 1
+    return base
 
 
 def board_score(ranks: list[int], suits: list[str], paired: bool) -> int:
@@ -228,7 +258,8 @@ CBET_SPOTS = [
 
 
 def main() -> None:
-    print("# flop 編 BoardScore / CBet 式 vs GTO 検証")
+    mode = "Level 2（上級補正適用）" if USE_ADVANCED else "Level 1（基本式のみ）"
+    print(f"# flop 編 BoardScore / CBet 式 vs GTO 検証 — {mode}")
     print()
     print("## Part 1：BoardScore 分類と GTO CBet 頻度の一致")
     print()
@@ -243,7 +274,7 @@ def main() -> None:
     details = []
     for board, freq, _size, _source in GTO_BOARD_DATA:
         ranks, suits, paired = parse_board(board)
-        bs = board_score(ranks, suits, paired)
+        bs = board_score_advanced(ranks, suits, paired) if USE_ADVANCED else board_score(ranks, suits, paired)
         book_class = classify_boardscore(bs)
         gto_tier = gto_freq_tier(freq)
         # 定性的一致判定
@@ -294,7 +325,8 @@ def main() -> None:
     freqs = []
     for board, freq, _size, _source in GTO_BOARD_DATA:
         ranks, suits, paired = parse_board(board)
-        scores.append(board_score(ranks, suits, paired))
+        bs = board_score_advanced(ranks, suits, paired) if USE_ADVANCED else board_score(ranks, suits, paired)
+        scores.append(bs)
         freqs.append(freq)
     r = correlation(scores, freqs)
     slope, intercept = linear_regression(scores, freqs)
