@@ -9,6 +9,10 @@
 
 ---
 
+<figure><img src="images/p04-fig1-three-common-mistakes.jpg" alt="Axo過信・ギャップ好き・ポジション無視の3大プリフロップ失敗を列挙した縦型図" /><figcaption>Axo過信・ギャップ好き・ポジション無視の3大プリフロップ失敗を列挙した縦型図</figcaption></figure>
+
+<figure><img src="images/p04-fig2-a9o-ev-loss.jpg" alt="A9oをUTG/MP/CO/BTN/SBでプレイした場合のEV損失を棒グラフで示す" /><figcaption>A9oをUTG/MP/CO/BTN/SBでプレイした場合のEV損失を棒グラフで示す</figcaption></figure>
+
 ## 4-1 リンプ：最大級の赤字行動
 
 ### どんな状況で起きるか

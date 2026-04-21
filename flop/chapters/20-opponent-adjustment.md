@@ -9,6 +9,8 @@
 
 ---
 
+<figure><img src="images/f20-fig1-four-player-type-icons.jpg" alt="ニット・TAG・LAG・コールステーションの4タイプ特性とエクスプロイト戦略グリッド図" /><figcaption>ニット・TAG・LAG・コールステーションの4タイプ特性とエクスプロイト戦略グリッド図</figcaption></figure>
+
 ## 20-1　相手タイプ4分類
 
 ポーカーの相手を分類する最もシンプルな指標が、VPIP（自発的にポットへ参加した割合）とPFR（プリフロップでレイズした割合）の2つです。

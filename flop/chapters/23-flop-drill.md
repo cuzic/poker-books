@@ -14,6 +14,8 @@
 
 ---
 
+<figure><img src="images/f23-fig1-drill-overview.jpg" alt="BoardScore・HandScore・CBetScore・総合問題の4セクション35問ドリル全体像" /><figcaption>BoardScore・HandScore・CBetScore・総合問題の4セクション35問ドリル全体像</figcaption></figure>
+
 ## 使用する公式のおさらい
 
 ```text

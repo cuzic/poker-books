@@ -14,6 +14,8 @@
 
 ---
 
+<figure><img src="images/p17-fig1-multiway-range-contraction.jpg" alt="2-way/3-way/4-wayのプレイヤー数増加に応じたプレイ可能レンジの収縮を棒グラフで示す" /><figcaption>2-way/3-way/4-wayのプレイヤー数増加に応じたプレイ可能レンジの収縮を棒グラフで示す</figcaption></figure>
+
 ## 17-1 マルチウェイポット（3人以上）
 
 ### マルチウェイで起きる変化

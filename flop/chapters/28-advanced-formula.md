@@ -9,6 +9,14 @@
 
 ---
 
+<figure><img src="images/f28-fig1-integrated-formula.jpg" alt="Hand-Board+Pos+R3+M+SPR+E+3bPの8要素完全統合フロップCBet式" /><figcaption>Hand-Board+Pos+R3+M+SPR+E+3bPの8要素完全統合フロップCBet式</figcaption></figure>
+
+<figure><img src="images/f28-fig2-m-correction-multiway.jpg" alt="2-way:0 / 3-way:-3 / 4-way:-6のマルチウェイM補正値棒グラフ" /><figcaption>2-way:0 / 3-way:-3 / 4-way:-6のマルチウェイM補正値棒グラフ</figcaption></figure>
+
+<figure><img src="images/f28-fig3-spr-correction-zones.jpg" alt="SPR 0-3:+3 / 3-6:+1 / 6-15:0 / 15+:-2のSPR補正4帯域図" /><figcaption>SPR 0-3:+3 / 3-6:+1 / 6-15:0 / 15+:-2のSPR補正4帯域図</figcaption></figure>
+
+<figure><img src="images/f28-fig4-e-correction-player-types.jpg" alt="ニット+3 / TAG:0 / LAG:-2 / コールステーション-3の相手タイプ別E補正テーブル" /><figcaption>ニット+3 / TAG:0 / LAG:-2 / コールステーション-3の相手タイプ別E補正テーブル</figcaption></figure>
+
 ## 28-1　なぜ「完全版」が必要か
 
 ### 基本式（第9章）の限界再整理

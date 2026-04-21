@@ -16,6 +16,10 @@
 
 ---
 
+<figure><img src="images/f03-fig1-range-propagation.jpg" alt="プリフロップレンジがフロップのHandScore計算→アクション判断へ伝搬するフロー図" /><figcaption>プリフロップレンジがフロップのHandScore計算→アクション判断へ伝搬するフロー図</figcaption></figure>
+
+<figure><img src="images/f03-fig2-position-handscore-bars.jpg" alt="UTG〜BB各ポジションのフロップ平均HandScore比較棒グラフ" /><figcaption>UTG〜BB各ポジションのフロップ平均HandScore比較棒グラフ</figcaption></figure>
+
 ## 3-1　ポジション別オープンレンジ——前作の閾値から逆算する
 
 6-max NLキャッシュゲーム、100BBスタックでの標準的なオープンレンジを確認します。これはGTOソルバーが示す解であり、前作の「スコア式で開けるハンドの集合」とほぼ一致します。

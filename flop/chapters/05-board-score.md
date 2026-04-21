@@ -7,6 +7,18 @@
 
 ---
 
+<figure><img src="images/f05-fig1-boardscore-formula-structure.jpg" alt="BoardScore = S + F + Hの式構造と各要素の説明図" /><figcaption>BoardScore = S + F + Hの式構造と各要素の説明図</figcaption></figure>
+
+<figure><img src="images/f05-fig2-straight-element-table.jpg" alt="S要素4カテゴリー（バラバラ0〜フルコネクト4）のBoardScore点数テーブル" /><figcaption>S要素4カテゴリー（バラバラ0〜フルコネクト4）のBoardScore点数テーブル</figcaption></figure>
+
+<figure><img src="images/f05-fig3-flush-element-table.jpg" alt="F要素3カテゴリー（レインボー0 / 2スーツ2 / モノトーン4）のBoardScore点数テーブル" /><figcaption>F要素3カテゴリー（レインボー0 / 2スーツ2 / モノトーン4）のBoardScore点数テーブル</figcaption></figure>
+
+<figure><img src="images/f05-fig4-highboard-element.jpg" alt="H要素（Broadway枚数による0〜+2点）の判定条件と例を示す図" /><figcaption>H要素（Broadway枚数による0〜+2点）の判定条件と例を示す図</figcaption></figure>
+
+<figure><img src="images/f05-fig5-boardscore-10-examples.jpg" alt="10種類のフロップボードのS/F/H別BoardScore計算例一覧テーブル" /><figcaption>10種類のフロップボードのS/F/H別BoardScore計算例一覧テーブル</figcaption></figure>
+
+<figure><img src="images/f05-fig6-boardscore-classification-zones.jpg" alt="BoardScore 0-2ドライ / 3-5セミ / 6-8ウェット / 9-10超ウェットの判定帯図" /><figcaption>BoardScore 0-2ドライ / 3-5セミ / 6-8ウェット / 9-10超ウェットの判定帯図</figcaption></figure>
+
 ## 導入　―― ボードを数字で語る理由
 
 フロップが配られると、経験豊富なプレイヤーは瞬時に「このボードはCBetしやすい」「ここは慎重に」と判断します。その判断は直感に見えますが、じつは **コネクティビティ（繋がり）** と **スーテッドネス（同スート性）** という2つの軸で測れる構造的な評価です。

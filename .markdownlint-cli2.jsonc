@@ -76,8 +76,10 @@
     // MD032: リストの前後に空行必須
     "blanks-around-lists": true,
 
-    // MD033: インラインHTMLを禁止（厳格。必要時は各ファイル先頭で <!-- markdownlint-disable MD033 --> ）
-    "no-inline-html": true,
+    // MD033: インラインHTMLを禁止（厳格。figure/img/figcaption/details/summary は図解・クイズで使用）
+    "no-inline-html": {
+      "allowed_elements": ["figure", "img", "figcaption", "details", "summary"]
+    },
 
     // MD034: 裸のURLを禁止
     "no-bare-urls": true,

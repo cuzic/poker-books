@@ -11,6 +11,8 @@ GTOを知ったうえでシンプルにするのと、知らずにシンプル�
 
 ---
 
+<figure><img src="images/f11-fig1-gto-two-axes.jpg" alt="GTO2軸（ポラリゼーション・NutsAdv・RangeAdv）と本書式の対応テーブル" /><figcaption>GTO2軸（ポラリゼーション・NutsAdv・RangeAdv）と本書式の対応テーブル</figcaption></figure>
+
 ## 導入：CBet 式は GTO の近似、完璧ではない
 
 CBet統合式（`HandScore − BoardScore + ポジション係数`）は、GTOソルバーの膨大な出力から「初級者が実行できる形」に圧縮した近似です。

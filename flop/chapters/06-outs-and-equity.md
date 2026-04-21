@@ -19,6 +19,12 @@
 
 ---
 
+<figure><img src="images/f06-fig1-draw-outs-bars.jpg" alt="フラッシュドロー9 / OESD8 / ガットショット4のアウツ数比較横棒グラフ" /><figcaption>フラッシュドロー9 / OESD8 / ガットショット4のアウツ数比較横棒グラフ</figcaption></figure>
+
+<figure><img src="images/f06-fig2-rule-of-2-and-4.jpg" alt="アウツ×2%（ターン）/ アウツ×4%（2枚合計）のRule of 2 and 4を図解" /><figcaption>アウツ×2%（ターン）/ アウツ×4%（2枚合計）のRule of 2 and 4を図解</figcaption></figure>
+
+<figure><img src="images/f06-fig3-draw-completion-table.jpg" alt="FD/OESD/GS等の主要ドローのターン・リバー・2枚合計完成率早見表" /><figcaption>FD/OESD/GS等の主要ドローのターン・リバー・2枚合計完成率早見表</figcaption></figure>
+
 ## 6-1　アウツとは何か
 
 **アウツ（Outs）** とは、現在の弱い手を完成させてくれるデッキ内の残りカードの枚数です。

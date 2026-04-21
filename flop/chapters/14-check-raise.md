@@ -8,6 +8,10 @@ OOP（アウトオブポジション）でのプレイは常に苦しいもの�
 
 ---
 
+<figure><img src="images/f14-fig1-check-raise-three-types.jpg" alt="バリューCR（セット）/ セミブラフCR（OESD/FD）/ ブラフCRの3種チェックレイズ比較" /><figcaption>バリューCR（セット）/ セミブラフCR（OESD/FD）/ ブラフCRの3種チェックレイズ比較</figcaption></figure>
+
+<figure><img src="images/f14-fig2-cr-size-rationale.jpg" alt="バリュー/セミブラフ/ブラフ別チェックレイズサイズ（2.5〜4倍）根拠テーブル" /><figcaption>バリュー/セミブラフ/ブラフ別チェックレイズサイズ（2.5〜4倍）根拠テーブル</figcaption></figure>
+
 ## 14-1　チェックレイズとは何か
 
 チェックレイズとは、フロップでチェックしたあと、相手のCベットに対してレイズを返すアクションです。

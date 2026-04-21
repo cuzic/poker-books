@@ -8,6 +8,8 @@
 
 ---
 
+<figure><img src="images/f24-fig1-flop-cheatsheet.jpg" alt="BoardScore・HandScore・CBetScore・サイズ・MDF全要素を1枚に凝縮したフロップチートシート" /><figcaption>BoardScore・HandScore・CBetScore・サイズ・MDF全要素を1枚に凝縮したフロップチートシート</figcaption></figure>
+
 ## 24-1 1枚チートシート（本書の全エッセンス）
 
 ```text

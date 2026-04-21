@@ -9,6 +9,10 @@
 
 ---
 
+<figure><img src="images/p00b-fig1-hand-notation.jpg" alt="AKs・AKo・AAの3種類のハンド表記法を視覚的に対比する図" /><figcaption>AKs・AKo・AAの3種類のハンド表記法を視覚的に対比する図</figcaption></figure>
+
+<figure><img src="images/p00b-fig2-hand-rankings.jpg" alt="ハンドランキング10段階を強い順に並べた縦型ラダー図" /><figcaption>ハンドランキング10段階を強い順に並べた縦型ラダー図</figcaption></figure>
+
 ## 0-1 テキサスホールデムの基本的な流れ
 
 **テキサスホールデム**は、各プレイヤーに2枚のカード（**ホールカード**）が配られ、5枚の共通カード（**ボード**）を順に開きながら、最強の役を競うゲームです。賭け合いは4段階あります。

@@ -8,6 +8,12 @@
 
 ---
 
+<figure><img src="images/f29-fig1-integrated-cbet-quick-table.jpg" alt="ボードタイプ×ポジション×3バンドの組み合わせ別アクション早見テーブル" /><figcaption>ボードタイプ×ポジション×3バンドの組み合わせ別アクション早見テーブル</figcaption></figure>
+
+<figure><img src="images/f29-fig2-r4-size-flowchart.jpg" alt="NutsAdv→BoardScore→マルチウェイの3問でCBetサイズ（33% or 75%）を決定するフローチャート" /><figcaption>NutsAdv→BoardScore→マルチウェイの3問でCBetサイズ（33% or 75%）を決定するフローチャート</figcaption></figure>
+
+<figure><img src="images/f29-fig3-chapter27-cheatsheet.jpg" alt="R1〜R6の全ルールを1枚に凝縮した第27章フロップ判断チートシート" /><figcaption>R1〜R6の全ルールを1枚に凝縮した第27章フロップ判断チートシート</figcaption></figure>
+
 ## 付録0　参考文献（References）
 
 本書の執筆・設計にあたり参照した主要な文献・ツール・ウェブ記事を分野別に列挙します。

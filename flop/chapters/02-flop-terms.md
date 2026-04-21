@@ -8,6 +8,14 @@
 
 ---
 
+<figure><img src="images/f02-fig1-spr-four-zones.jpg" alt="SPR 0-3 / 3-6 / 6-15 / 15+の4帯域と各ストラテジー解説縦型帯図" /><figcaption>SPR 0-3 / 3-6 / 6-15 / 15+の4帯域と各ストラテジー解説縦型帯図</figcaption></figure>
+
+<figure><img src="images/f02-fig2-mdf-quick-reference.jpg" alt="1/4ポット〜2ポットの各ベットサイズに対応するMDF値の早見表" /><figcaption>1/4ポット〜2ポットの各ベットサイズに対応するMDF値の早見表</figcaption></figure>
+
+<figure><img src="images/f02-fig3-pair-position-types.jpg" alt="K-J-2ボードを例にTP/MP/BP/OP/2Pの分類を示すペア位置関係図" /><figcaption>K-J-2ボードを例にTP/MP/BP/OP/2Pの分類を示すペア位置関係図</figcaption></figure>
+
+<figure><img src="images/f02-fig4-board-texture-three-types.jpg" alt="ドライ（K72r）/ セミウェット（T85r）/ ウェット（J98s）の3種類ボードテクスチャ比較" /><figcaption>ドライ（K72r）/ セミウェット（T85r）/ ウェット（J98s）の3種類ボードテクスチャ比較</figcaption></figure>
+
 ## はじめに：この章はリファレンスハブです
 
 本章は、本書全体を通じて繰り返し登場する用語を一括して整理するリファレンスハブです。

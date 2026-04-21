@@ -19,6 +19,10 @@
 
 ---
 
+<figure><img src="images/p06-fig1-suited-ev-table.jpg" alt="スーテッドハンドのフラッシュ完成率11%とEV上乗せ3-5%を示すテーブル" /><figcaption>スーテッドハンドのフラッシュ完成率11%とEV上乗せ3-5%を示すテーブル</figcaption></figure>
+
+<figure><img src="images/p06-fig2-gap-oesd-probability.jpg" alt="コネクター9.6% → 1gap 7.5% → 2gap 4.5% のOESD確率減衰を横棒グラフで示す" /><figcaption>コネクター9.6% → 1gap 7.5% → 2gap 4.5% のOESD確率減衰を横棒グラフで示す</figcaption></figure>
+
 ## 6-1 ペア +10 の根拠
 
 ### セットが入る確率は約11.8%

@@ -18,6 +18,10 @@ CBetはポストフロップの意思決定の中でも最も頻繁に訪れる�
 
 ---
 
+<figure><img src="images/f07-fig1-cbet-three-purposes.jpg" alt="CBetのバリュー・フォールドエクイティ・エクイティ保護の3目的トライアングル図" /><figcaption>CBetのバリュー・フォールドエクイティ・エクイティ保護の3目的トライアングル図</figcaption></figure>
+
+<figure><img src="images/f07-fig2-equity-denial-effect.jpg" alt="CBetによるエクイティデナイアル効果（チェック vs ハーフポットベットの比較）" /><figcaption>CBetによるエクイティデナイアル効果（チェック vs ハーフポットベットの比較）</figcaption></figure>
+
 ## 7-1　CBet の定義と位置づけ
 
 CBetとは、**プリフロップレイザーがフロップで最初にベットするアクション**のことです。自分のハンドがフロップで改善しているかどうかに関わらず実行されます。

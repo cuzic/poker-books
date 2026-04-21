@@ -9,6 +9,12 @@
 
 ---
 
+<figure><img src="images/f09-fig1-cbet-score-formula.jpg" alt="CBetScore = HandScore - BoardScore + Pos の式構造と各要素説明" /><figcaption>CBetScore = HandScore - BoardScore + Pos の式構造と各要素説明</figcaption></figure>
+
+<figure><img src="images/f09-fig2-cbet-four-zones.jpg" alt="CBetスコア≥15/8-14/2-7/<2の4段階判定帯縦型図" /><figcaption>CBetスコア≥15/8-14/2-7/<2の4段階判定帯縦型図</figcaption></figure>
+
+<figure><img src="images/f09-fig3-cbet-five-examples.jpg" alt="5種類のボード×ハンド組み合わせのCBetスコア計算例一覧表" /><figcaption>5種類のボード×ハンド組み合わせのCBetスコア計算例一覧表</figcaption></figure>
+
 ## 導入　―― 3式が1本に結合するとき
 
 第5章でBoardScoreを学びました。ボードのウェット度を数値化し、相手のドロー頻度とCBetの通りにくさを測る式です。スコアが高いほどウェット（CBetが通りにくい）、低いほどドライ（CBetが通りやすい）です。

@@ -12,6 +12,18 @@
 
 ---
 
+<figure><img src="images/f27-fig1-r1-3band-cbet.jpg" alt="フロップCBetScore ≥15（バンドA）/ 8-14（バンドB）/ <8（バンドC）の3バンド分類図" /><figcaption>フロップCBetScore ≥15（バンドA）/ 8-14（バンドB）/ <8（バンドC）の3バンド分類図</figcaption></figure>
+
+<figure><img src="images/f27-fig2-r2-suit-judgment-flop.jpg" alt="フロップFDあり（サイズ大/チェック）vs FDなし（レンジベット可）のスーツ判定比較" /><figcaption>フロップFDあり（サイズ大/チェック）vs FDなし（レンジベット可）のスーツ判定比較</figcaption></figure>
+
+<figure><img src="images/f27-fig3-r3-flop-range-adv-matrix.jpg" alt="フロップのポジション×ボードタイプ別RangeAdv補正マトリクス（符号反転ロジック付き）" /><figcaption>フロップのポジション×ボードタイプ別RangeAdv補正マトリクス（符号反転ロジック付き）</figcaption></figure>
+
+<figure><img src="images/f27-fig4-r4-size-two-choices.jpg" alt="33%（ドライ/レンジベット）vs 75%（ウェット/NutsAdv）のCBetサイズ2択システム" /><figcaption>33%（ドライ/レンジベット）vs 75%（ウェット/NutsAdv）のCBetサイズ2択システム</figcaption></figure>
+
+<figure><img src="images/f27-fig5-r5-flop-trap-flow.jpg" alt="フロップIPチェックバック→ターン誘引→リバービッグベットのトラップ進行フロー" /><figcaption>フロップIPチェックバック→ターン誘引→リバービッグベットのトラップ進行フロー</figcaption></figure>
+
+<figure><img src="images/f27-fig6-r6-mdf-flop-version.jpg" alt="相手CBet頻度に応じたフロップMDF ±10%調整スライダー図" /><figcaption>相手CBet頻度に応じたフロップMDF ±10%調整スライダー図</figcaption></figure>
+
 ## 27-1　なぜフロップこそ揺らすべきか
 
 ### CBet が機械化しやすい場所

@@ -11,6 +11,10 @@
 
 ---
 
+<figure><img src="images/p09-fig1-pot-odds-formula.jpg" alt="ポットオッズから必要勝率を計算するステップ式図解" /><figcaption>ポットオッズから必要勝率を計算するステップ式図解</figcaption></figure>
+
+<figure><img src="images/p09-fig2-bet-size-required-equity.jpg" alt="1/3ポット〜2倍ポットの各ベットサイズと対応する必要勝率の早見表" /><figcaption>1/3ポット〜2倍ポットの各ベットサイズと対応する必要勝率の早見表</figcaption></figure>
+
 ## 9-1 ポットオッズの基本公式
 
 ### 必要勝率はシンプルな式で出る

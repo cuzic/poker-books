@@ -10,6 +10,10 @@
 
 ---
 
+<figure><img src="images/p16-fig1-4bet-structure.jpg" alt="4betレンジのバリュー（60-70%）とブラフ（30-40%）の二重構造図" /><figcaption>4betレンジのバリュー（60-70%）とブラフ（30-40%）の二重構造図</figcaption></figure>
+
+<figure><img src="images/p16-fig2-allin-required-equity.jpg" alt="コール額とポット別のオールイン必要エクイティ早見表" /><figcaption>コール額とポット別のオールイン必要エクイティ早見表</figcaption></figure>
+
 ## 16-1 4ベットの目的とレンジ
 
 ### 4ベット = 3ベットへのリレイズ

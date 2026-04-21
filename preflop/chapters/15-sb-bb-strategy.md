@@ -10,6 +10,10 @@ SBとBBは、本書のほかのポジションと構造が違います。**強�
 
 ---
 
+<figure><img src="images/p15-fig1-sb-bb-decision-tree.jpg" alt="SBとBBのプリフロップ判断ツリー（オープン・3bet・コール・フォールドの分岐）" /><figcaption>SBとBBのプリフロップ判断ツリー（オープン・3bet・コール・フォールドの分岐）</figcaption></figure>
+
+<figure><img src="images/p15-fig2-bb-defense-frequency.jpg" alt="オープンサイズ別BBのポットオッズとMDF（最低防御頻度）早見表" /><figcaption>オープンサイズ別BBのポットオッズとMDF（最低防御頻度）早見表</figcaption></figure>
+
 ## 15-1 SB戦略：3ベットかフォールドが基本
 
 ### 3つの構造的理由

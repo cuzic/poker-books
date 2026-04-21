@@ -15,6 +15,8 @@
 
 ---
 
+<figure><img src="images/p14-fig1-threshold-adjustment.jpg" alt="相手タイプ別のしきい値±2調整テーブル（タイト/ルース/アグレッシブ/パッシブ/ショート）" /><figcaption>相手タイプ別のしきい値±2調整テーブル（タイト/ルース/アグレッシブ/パッシブ/ショート）</figcaption></figure>
+
 ## 14-1 相手のタイプを見極める
 
 ### VPIP / PFR を使う

@@ -9,6 +9,8 @@
 
 ---
 
+<figure><img src="images/f00-fig1-dual-book-learning-path.jpg" alt="プリフロップ編→フロップ編→実戦統合の3段階学習パス図" /><figcaption>プリフロップ編→フロップ編→実戦統合の3段階学習パス図</figcaption></figure>
+
 ## 学習パス診断
 
 以下5問に答えてください。あなたに最適なエントリーポイントを診断します。

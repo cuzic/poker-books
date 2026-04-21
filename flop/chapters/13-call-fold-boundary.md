@@ -10,6 +10,10 @@
 
 ---
 
+<figure><img src="images/f13-fig1-mdf-calculation-diagram.jpg" alt="MDF = ポット÷(ポット+ベット)の計算過程を視覚的に図解した図" /><figcaption>MDF = ポット÷(ポット+ベット)の計算過程を視覚的に図解した図</figcaption></figure>
+
+<figure><img src="images/f13-fig2-borderline-hand-list.jpg" alt="コール境界・状況依存・フォールド推奨の3区分境界ハンドリスト" /><figcaption>コール境界・状況依存・フォールド推奨の3区分境界ハンドリスト</figcaption></figure>
+
 ## 13-1　必要エクイティの基本式
 
 コールが採算に合うかどうかは、**必要エクイティ**と**自分のエクイティ**の比較で決まります。

@@ -23,6 +23,8 @@
 
 ---
 
+<figure><img src="images/f16-fig1-defense-gto-deviation.jpg" alt="大ベット過剰フォールド・小ベット過剰コールの2大ディフェンスGTOズレ領域図" /><figcaption>大ベット過剰フォールド・小ベット過剰コールの2大ディフェンスGTOズレ領域図</figcaption></figure>
+
 ## 16-1　レンジ全体のディフェンス設計
 
 ### GTO はハンド単位で判断しない

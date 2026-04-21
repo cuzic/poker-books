@@ -10,6 +10,8 @@
 
 ---
 
+<figure><img src="images/p03-fig1-range-memorize-vs-formula.jpg" alt="レンジの丸暗記と計算式アプローチのBefore/After対比図" /><figcaption>レンジの丸暗記と計算式アプローチのBefore/After対比図</figcaption></figure>
+
 ## 3-1 EVはすべてのポーカー判断の基礎
 
 ### 期待値の式

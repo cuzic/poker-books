@@ -13,6 +13,14 @@
 
 ---
 
+<figure><img src="images/p05-fig1-score-formula-structure.jpg" alt="Score = H + L + ボーナス - ペナルティ の式構造と各変数の説明図" /><figcaption>Score = H + L + ボーナス - ペナルティ の式構造と各変数の説明図</figcaption></figure>
+
+<figure><img src="images/p05-fig2-bonus-table.jpg" alt="ペア+10・スーテッド+2・コネクター+1のボーナス加点テーブル" /><figcaption>ペア+10・スーテッド+2・コネクター+1のボーナス加点テーブル</figcaption></figure>
+
+<figure><img src="images/p05-fig3-penalty-table.jpg" alt="ギャップ・低カードによるペナルティ減点テーブル（1gap -1 〜 3gap以上 -4）" /><figcaption>ギャップ・低カードによるペナルティ減点テーブル（1gap -1 〜 3gap以上 -4）</figcaption></figure>
+
+<figure><img src="images/p05-fig4-threshold-ladder.jpg" alt="UTG 24 / MP 22 / CO 20 / BTN 18 / SB 20 のポジション別プレイしきい値ラダー" /><figcaption>UTG 24 / MP 22 / CO 20 / BTN 18 / SB 20 のポジション別プレイしきい値ラダー</figcaption></figure>
+
 ## 5-1 スコア式の全体像
 
 ### 1行で表すと

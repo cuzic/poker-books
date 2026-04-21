@@ -11,6 +11,8 @@
 
 ---
 
+<figure><img src="images/p20-fig1-learning-loop.jpg" alt="本書→ソルバー→実戦復習の3ステップ学習ループ図" /><figcaption>本書→ソルバー→実戦復習の3ステップ学習ループ図</figcaption></figure>
+
 ## 20-1 GTO Wizardから始める
 
 ### なぜ GTO Wizard か

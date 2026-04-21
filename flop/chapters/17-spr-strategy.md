@@ -10,6 +10,10 @@ SPRを把握することで、「トップペアでオールインすべきか�
 
 ---
 
+<figure><img src="images/f17-fig1-spr-handscore-map.jpg" alt="SPRとHandScoreを2軸にした4象限判断マップ（低SPR×高スコア=最強アクション）" /><figcaption>SPRとHandScoreを2軸にした4象限判断マップ（低SPR×高スコア=最強アクション）</figcaption></figure>
+
+<figure><img src="images/f17-fig2-spr-four-zones-detail.jpg" alt="SPR 0-3 / 3-6 / 6-15 / 15+の4帯域と各詳細戦略の縦型図" /><figcaption>SPR 0-3 / 3-6 / 6-15 / 15+の4帯域と各詳細戦略の縦型図</figcaption></figure>
+
 ## 17-1　SPR の定義と計算
 
 ### SPR とは何か

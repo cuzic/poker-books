@@ -13,6 +13,14 @@
 
 ---
 
+<figure><img src="images/f08-fig1-handscore-formula.jpg" alt="HandScore = 役スコア + ドロー加点 + ブロッカー補正の式構造図" /><figcaption>HandScore = 役スコア + ドロー加点 + ブロッカー補正の式構造図</figcaption></figure>
+
+<figure><img src="images/f08-fig2-hand-rank-score-table.jpg" alt="セット30・TPTK18・TPWK14等の役スコア早見テーブル" /><figcaption>セット30・TPTK18・TPWK14等の役スコア早見テーブル</figcaption></figure>
+
+<figure><img src="images/f08-fig3-draw-bonus-table.jpg" alt="OESD +12 / FD +9 / GS +4のドロー加点一覧テーブル" /><figcaption>OESD +12 / FD +9 / GS +4のドロー加点一覧テーブル</figcaption></figure>
+
+<figure><img src="images/f08-fig4-blocker-effect-visual.jpg" alt="ブロッカー保有時の相手ナッツコンボ減少とHandScore+3補正の視覚化" /><figcaption>ブロッカー保有時の相手ナッツコンボ減少とHandScore+3補正の視覚化</figcaption></figure>
+
 ## ボードだけでは判断できない
 
 第5章でK♥7♦2♣ のBoardScoreを計算すると、0点のドライボードになります。

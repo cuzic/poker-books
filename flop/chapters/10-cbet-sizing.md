@@ -16,6 +16,12 @@
 
 ---
 
+<figure><img src="images/f10-fig1-wetness-parabola.jpg" alt="ドライ75% / 中65% / ウェット40% / 超ウェット25%のCBet頻度とボードテクスチャの関係曲線" /><figcaption>ドライ75% / 中65% / ウェット40% / 超ウェット25%のCBet頻度とボードテクスチャの関係曲線</figcaption></figure>
+
+<figure><img src="images/f10-fig2-size-decision-flow.jpg" alt="NutsAdv有無によるCBetサイズ（大75%〜 vs 小33-50%）決定フローチャート" /><figcaption>NutsAdv有無によるCBetサイズ（大75%〜 vs 小33-50%）決定フローチャート</figcaption></figure>
+
+<figure><img src="images/f10-fig3-quick-math-sizes.jpg" alt="33%=÷3 / 75%=÷2+÷4 のCBetサイズ暗算法図解" /><figcaption>33%=÷3 / 75%=÷2+÷4 のCBetサイズ暗算法図解</figcaption></figure>
+
 ## 10-1　サイズ選択の2軸原則
 
 GTO Wizardの分析によれば、CBetサイズを決める主なドライバーは2つです。

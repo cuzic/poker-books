@@ -10,6 +10,10 @@
 
 ---
 
+<figure><img src="images/p07-fig1-position-range-pyramid.jpg" alt="UTG（最も狭い）からBTN（最も広い）へのレンジ幅ピラミッド図" /><figcaption>UTG（最も狭い）からBTN（最も広い）へのレンジ幅ピラミッド図</figcaption></figure>
+
+<figure><img src="images/p07-fig2-hand-matrix.jpg" alt="169ハンドをポジション別しきい値で色分けしたマトリクス図" /><figcaption>169ハンドをポジション別しきい値で色分けしたマトリクス図</figcaption></figure>
+
 ## 7-1 しきい値とGTOレンジの対応
 
 ### 本書のしきい値（再掲）

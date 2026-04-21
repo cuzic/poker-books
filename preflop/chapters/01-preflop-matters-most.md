@@ -12,6 +12,10 @@
 
 ---
 
+<figure><img src="images/p01-fig1-preflop-dominoes.jpg" alt="プリフロップの失敗が連鎖的にフロップ・ターン・リバーへ影響する因果連鎖図" /><figcaption>プリフロップの失敗が連鎖的にフロップ・ターン・リバーへ影響する因果連鎖図</figcaption></figure>
+
+<figure><img src="images/p01-fig2-vpip-distribution.jpg" alt="勝ち組と負け組のVPIP分布を比較する棒グラフ（勝ち組は18-22%台に集中）" /><figcaption>勝ち組と負け組のVPIP分布を比較する棒グラフ（勝ち組は18-22%台に集中）</figcaption></figure>
+
 ## 1-1 判断の8割はプリフロップで決まる
 
 ### 勝ち組は75%以上のハンドを降ろす

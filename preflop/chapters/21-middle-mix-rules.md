@@ -13,6 +13,16 @@
 
 ---
 
+<figure><img src="images/p21-fig1-r1-3band.jpg" alt="スコア≥26（バンドA）/ 20-25（バンドB）/ <20（バンドC）の3バンド分類図" /><figcaption>スコア≥26（バンドA）/ 20-25（バンドB）/ <20（バンドC）の3バンド分類図</figcaption></figure>
+
+<figure><img src="images/p21-fig2-r2-suit-judgment.jpg" alt="♠♥（メジャー）vs ♣♦（マイナー）のスーツ補正比較図" /><figcaption>♠♥（メジャー）vs ♣♦（マイナー）のスーツ補正比較図</figcaption></figure>
+
+<figure><img src="images/p21-fig3-r3-range-adv-matrix.jpg" alt="ポジションマッチアップ別RangeAdv補正値マトリクス（+2〜-2）" /><figcaption>ポジションマッチアップ別RangeAdv補正値マトリクス（+2〜-2）</figcaption></figure>
+
+<figure><img src="images/p21-fig4-r5-ako-trap-flow.jpg" alt="AKoでのトラップ進行（プリフロップコール→フロップチェック→ターンバリュー）フロー図" /><figcaption>AKoでのトラップ進行（プリフロップコール→フロップチェック→ターンバリュー）フロー図</figcaption></figure>
+
+<figure><img src="images/p21-fig5-r6-mdf-movement.jpg" alt="相手のアグレッシブ度に応じたMDF ±10%調整範囲スライダー図" /><figcaption>相手のアグレッシブ度に応じたMDF ±10%調整範囲スライダー図</figcaption></figure>
+
 ## 21-1 なぜ境界で混合するのか
 
 ### 決定論が読まれる構造

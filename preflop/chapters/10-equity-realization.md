@@ -13,6 +13,10 @@
 
 ---
 
+<figure><img src="images/p10-fig1-equity-vs-realized-equity.jpg" alt="IP vs OOPの生エクイティと実現エクイティの差異を並べた棒グラフ" /><figcaption>IP vs OOPの生エクイティと実現エクイティの差異を並べた棒グラフ</figcaption></figure>
+
+<figure><img src="images/p10-fig2-eqr-ip-oop.jpg" alt="IP（EQR 105-115%）とOOP（85-95%）のエクイティ実現率差異テーブル" /><figcaption>IP（EQR 105-115%）とOOP（85-95%）のエクイティ実現率差異テーブル</figcaption></figure>
+
 ## 10-1 実現率とは何か
 
 ### 生エクイティ vs 実効勝率

@@ -18,6 +18,12 @@
 
 ---
 
+<figure><img src="images/f04-fig1-four-flop-mistakes.jpg" alt="TPWK過信・オーバーペア病・ドロー追いすぎ・OOP CBetの4大フロップ失敗縦型図" /><figcaption>TPWK過信・オーバーペア病・ドロー追いすぎ・OOP CBetの4大フロップ失敗縦型図</figcaption></figure>
+
+<figure><img src="images/f04-fig2-tpwk-overcommit-loss.jpg" alt="TPWK（K4でKボード）でのチェックバック vs ハーフポット vs フルポットEV比較" /><figcaption>TPWK（K4でKボード）でのチェックバック vs ハーフポット vs フルポットEV比較</figcaption></figure>
+
+<figure><img src="images/f04-fig3-overpair-bias.jpg" alt="QQをウェットボードで過信する認知バイアスと正しい思考の対比図" /><figcaption>QQをウェットボードで過信する認知バイアスと正しい思考の対比図</figcaption></figure>
+
 ## ミス1：全フロップでCBetを撃ち続ける
 
 ### どんな状況で起きるか

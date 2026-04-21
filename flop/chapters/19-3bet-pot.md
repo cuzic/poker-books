@@ -14,6 +14,8 @@
 
 ---
 
+<figure><img src="images/f19-fig1-3bet-pot-low-spr.jpg" alt="3betポットのSPR計算例（91÷18=5.1）と低SPR特性による戦略インプリケーション図" /><figcaption>3betポットのSPR計算例（91÷18=5.1）と低SPR特性による戦略インプリケーション図</figcaption></figure>
+
 ## 19-1 SRP と 3ベットポットの構造差
 
 ### SPR の違い

@@ -8,6 +8,10 @@
 
 ---
 
+<figure><img src="images/f22-fig1-range-advantage-concept.jpg" alt="BTN vs BBの平均HandScore差（+4）をバランス天秤で示すレンジアドバンテージ概念図" /><figcaption>BTN vs BBの平均HandScore差（+4）をバランス天秤で示すレンジアドバンテージ概念図</figcaption></figure>
+
+<figure><img src="images/f22-fig2-board-range-advantage-table.jpg" alt="ハイドライ・ミドル・ローコネクト・ペア・モノトーン別のレンジアドバンテージ傾向テーブル" /><figcaption>ハイドライ・ミドル・ローコネクト・ペア・モノトーン別のレンジアドバンテージ傾向テーブル</figcaption></figure>
+
 ## 22-1　レンジアドバンテージとは
 
 レンジアドバンテージとは、特定のフロップ上で、自分のレンジ全体が相手レンジより高い平均エクイティを持つ状態を指します。個別ハンドの強さではなく、**レンジ全体のエクイティ分布**を比較する概念です。

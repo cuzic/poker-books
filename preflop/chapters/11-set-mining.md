@@ -13,6 +13,10 @@
 
 ---
 
+<figure><img src="images/p11-fig1-15x-rule.jpg" alt="スタック÷レイズ額≥15のセット狙いコール基準を式と例で示す図" /><figcaption>スタック÷レイズ額≥15のセット狙いコール基準を式と例で示す図</figcaption></figure>
+
+<figure><img src="images/p11-fig2-set-probability-pie.jpg" alt="ポケットペアのフロップセット確率12%を示すパイチャート" /><figcaption>ポケットペアのフロップセット確率12%を示すパイチャート</figcaption></figure>
+
 ## 11-1 セットマイニングの数学
 
 ### セットが入る確率は約 12%

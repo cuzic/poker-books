@@ -12,6 +12,12 @@
 
 ---
 
+<figure><img src="images/f01-fig1-info-revealed-pie.jpg" alt="プリフロップ28%→フロップ71%の情報公開率をパイチャートで比較" /><figcaption>プリフロップ28%→フロップ71%の情報公開率をパイチャートで比較</figcaption></figure>
+
+<figure><img src="images/f01-fig2-ako-flop-hit-pie.jpg" alt="AKoのフロップヒット分岐（Aヒット32% / Kヒット26% / ミス23%等）パイチャート" /><figcaption>AKoのフロップヒット分岐（Aヒット32% / Kヒット26% / ミス23%等）パイチャート</figcaption></figure>
+
+<figure><img src="images/f01-fig3-board-ev-variance.jpg" alt="ドライ・ミドル・ウェット・モノトーン各ボードのEV振れ幅比較バーチャート" /><figcaption>ドライ・ミドル・ウェット・モノトーン各ボードのEV振れ幅比較バーチャート</figcaption></figure>
+
 ## 1-1. フロップで情報の71%が一気に明かされる
 
 前作『プリフロップは計算で勝つ』でマスターしたプリフロップ判断は、「手持ちの2枚」をもとに行うものでした。

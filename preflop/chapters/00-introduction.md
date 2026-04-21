@@ -9,6 +9,10 @@
 
 ---
 
+<figure><img src="images/p00-fig1-learning-path-flowchart.jpg" alt="Q1〜Q4のYes/No分岐でLevel 1/2/3への学習パスを診断するフローチャート" /><figcaption>Q1〜Q4のYes/No分岐でLevel 1/2/3への学習パスを診断するフローチャート</figcaption></figure>
+
+<figure><img src="images/p00-fig2-level-pyramid.jpg" alt="Level 1（入門）/ Level 2（中級）/ Level 3（上級）の3段階ピラミッド図" /><figcaption>Level 1（入門）/ Level 2（中級）/ Level 3（上級）の3段階ピラミッド図</figcaption></figure>
+
 ## 本書の位置づけ
 
 本書は**プリフロップに特化した入門書**です。テキサスホールデムでのプリフロップ判断（オープンレイズ、3bet、コール、フォールド）を、暗算可能な計算式に落とし込みました。

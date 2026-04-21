@@ -11,6 +11,8 @@
 
 ---
 
+<figure><img src="images/p13-fig1-polarized-vs-linear.jpg" alt="ポーラライズレンジ（バリュー+ブラフ二極化）とリニアレンジ（連続型）の対比図" /><figcaption>ポーラライズレンジ（バリュー+ブラフ二極化）とリニアレンジ（連続型）の対比図</figcaption></figure>
+
 ## 13-1 ポーラライズとリニアの切り替えを本書は扱わない
 
 ### GTOは状況で使い分ける

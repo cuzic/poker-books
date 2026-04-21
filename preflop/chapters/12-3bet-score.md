@@ -12,6 +12,12 @@
 
 ---
 
+<figure><img src="images/p12-fig1-3bet-score-formula.jpg" alt="3betスコア式の構造と各コンポーネントの説明図" /><figcaption>3betスコア式の構造と各コンポーネントの説明図</figcaption></figure>
+
+<figure><img src="images/p12-fig2-3bet-threshold-ladder.jpg" alt="対UTG〜対SBオープン者別の3betしきい値ラダー（26 → 20）" /><figcaption>対UTG〜対SBオープン者別の3betしきい値ラダー（26 → 20）</figcaption></figure>
+
+<figure><img src="images/p12-fig3-blocker-effect.jpg" alt="AK保有時に相手のAA/KK/AKコンボが16→12に減少するブロッカー効果の視覚化" /><figcaption>AK保有時に相手のAA/KK/AKコンボが16→12に減少するブロッカー効果の視覚化</figcaption></figure>
+
 ## 12-1 3ベットの目的はバリューとブラフの2種類
 
 ### バリュー3ベット

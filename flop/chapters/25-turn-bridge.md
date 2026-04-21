@@ -8,6 +8,8 @@
 
 ---
 
+<figure><img src="images/f25-fig1-flop-to-turn-transition.jpg" alt="フロップの3ステップ判断からターンへの転換（ボード再評価・バレル判断）フロー図" /><figcaption>フロップの3ステップ判断からターンへの転換（ボード再評価・バレル判断）フロー図</figcaption></figure>
+
 ## 25-1 Delayed CBet（遅延 CBet）
 
 ### 概念

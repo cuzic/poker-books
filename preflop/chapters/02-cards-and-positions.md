@@ -9,6 +9,12 @@
 
 ---
 
+<figure><img src="images/p02-fig1-6max-table-positions.jpg" alt="6-maxテーブルの俯瞰図にUTG/MP/CO/BTN/SB/BBの各ポジションをラベルで示す図" /><figcaption>6-maxテーブルの俯瞰図にUTG/MP/CO/BTN/SB/BBの各ポジションをラベルで示す図</figcaption></figure>
+
+<figure><img src="images/p02-fig2-position-value-bars.jpg" alt="UTG -2 〜 BTN +2 の各ポジション補正値を横棒グラフで視覚化" /><figcaption>UTG -2 〜 BTN +2 の各ポジション補正値を横棒グラフで視覚化</figcaption></figure>
+
+<figure><img src="images/p02-fig3-card-value-ladder.jpg" alt="A=14からQ=2までのカードランク数値一覧ラダー（スコア計算の基礎）" /><figcaption>A=14からQ=2までのカードランク数値一覧ラダー（スコア計算の基礎）</figcaption></figure>
+
 ## 2-1 カードを数値化する
 
 ### A=14、K=13、…、2=2

@@ -22,6 +22,10 @@ MDF（Minimum Defense Frequency）の計算式を暗記する必要はありま�
 
 ---
 
+<figure><img src="images/f12-fig1-size-required-equity-bars.jpg" alt="1/4〜1ポットの各ベットサイズに対するディフェンダーの必要勝率（20%〜50%）棒グラフ" /><figcaption>1/4〜1ポットの各ベットサイズに対するディフェンダーの必要勝率（20%〜50%）棒グラフ</figcaption></figure>
+
+<figure><img src="images/f12-fig2-mdf-table.jpg" alt="フロップのベットサイズ別MDF（最低防御頻度）早見テーブル" /><figcaption>フロップのベットサイズ別MDF（最低防御頻度）早見テーブル</figcaption></figure>
+
 ## 12-1　CBet に対する3つの基本的な応答
 
 フロップで相手がCBetを打ってきたとき、あなたの選択肢は3つです。

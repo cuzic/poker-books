@@ -13,6 +13,8 @@
 
 ---
 
+<figure><img src="images/p08-fig1-gto-overlap-venn.jpg" alt="本書のスコア式レンジとGTOレンジのベン図（約80%重複）" /><figcaption>本書のスコア式レンジとGTOレンジのベン図（約80%重複）</figcaption></figure>
+
 ## 8-1 ミックス戦略：本書にない重要概念
 
 ### GTOは「境界ハンドは確率で動かす」

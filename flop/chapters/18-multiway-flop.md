@@ -11,6 +11,10 @@
 
 ---
 
+<figure><img src="images/f18-fig1-multiway-cbet-frequency.jpg" alt="2-way 65% / 3-way 42% / 4-way 28%のCBet頻度低下を示す棒グラフ" /><figcaption>2-way 65% / 3-way 42% / 4-way 28%のCBet頻度低下を示す棒グラフ</figcaption></figure>
+
+<figure><img src="images/f18-fig2-multiway-range-contraction.jpg" alt="2-way〜5-way以上のプレイヤー数別推奨HandScoreしきい値テーブル" /><figcaption>2-way〜5-way以上のプレイヤー数別推奨HandScoreしきい値テーブル</figcaption></figure>
+
 ## 18-1 マルチウェイで起きる4つの変化
 
 プレイヤーが増えると、フロップ戦略は以下の4点で変わります。

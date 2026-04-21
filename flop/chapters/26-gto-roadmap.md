@@ -8,6 +8,8 @@
 
 ---
 
+<figure><img src="images/f26-fig1-gto-learning-roadmap.jpg" alt="本書マスター→ソルバー入門→スポットスタディ→HHレビュー→GTO統合の5段階学習ロードマップ" /><figcaption>本書マスター→ソルバー入門→スポットスタディ→HHレビュー→GTO統合の5段階学習ロードマップ</figcaption></figure>
+
 ## 26-1 まず触るべきツール：GTO Wizard
 
 ### なぜ GTO Wizard か
