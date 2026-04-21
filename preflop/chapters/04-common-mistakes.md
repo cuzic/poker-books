@@ -41,7 +41,7 @@
 
 ### なぜ間違いか
 
-ポーカーの基本原則は**「良いポジションほど広く、悪いポジションほど狭く」**です。これを逆に実践すると、ポジションの価値（第2章で見た57.4% vs 42.6% の差）を自ら放棄することになります。
+ポーカーの基本原則は**「良いポジションは広く、悪いポジションほど狭く」**です。これを逆に実践すると、ポジションの価値（第2章で見た57.4% vs 42.6% の差）を自ら放棄することになります。
 
 GTO推奨のオープン頻度を再掲します。
 
@@ -250,6 +250,6 @@ UTGから「Aがついているから」と開くと、本書の推奨から外�
 - Upswing Poker『How to Play King-X Suited Hands』（2024）
 - Upswing Poker『Set Mining』／『Effective Stack Size』（2024）
 - GTO Wizard『Preflop Range Morphology』／『The Curious Case of Open-Limping Buttons』（2024）
-- GTO Wizard『Heads up! Exploiting SB's Preflop Mistakes』（2024）
+- GTO Wizard『Heads up - Exploiting SB's Preflop Mistakes』（2024）
 - SplitSuit Poker『Hands To Play UTG in Live Poker』（2025）
 - Mike Fowlds, Medium『Poker: limping in early position』
