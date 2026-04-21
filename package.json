@@ -12,7 +12,16 @@
     "lint:text": "textlint \"{preflop,flop}/chapters/**/*.md\"",
     "lint:fix": "bun run lint:md:fix && bun run lint:text:fix",
     "lint:md:fix": "markdownlint-cli2 --fix",
-    "lint:text:fix": "textlint --fix \"{preflop,flop}/chapters/**/*.md\""
+    "lint:text:fix": "textlint --fix \"{preflop,flop}/chapters/**/*.md\"",
+    "batch-improve": "./scripts/batch-improve.sh",
+    "check:epub": "bun run scripts/check-epub.ts",
+    "check:epub:preflop": "bun run scripts/check-epub.ts --book preflop",
+    "check:epub:flop": "bun run scripts/check-epub.ts --book flop",
+    "kdp:metadata": "bun run scripts/generate-kdp-metadata.ts",
+    "images:prompts": "bun run scripts/generate-image-batch.ts",
+    "images:submit": "bun run scripts/submit-image-batch.ts",
+    "images:status": "python3 scripts/check-batch-status.py",
+    "images:download": "python3 scripts/download-images.py"
   },
   "dependencies": {
     "@google/generative-ai": "^0.21",

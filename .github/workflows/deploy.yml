@@ -60,3 +60,76 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  upload-to-dropbox:
+    runs-on: ubuntu-latest
+    needs: build
+    if: ${{ github.event_name == 'push' }}
+    steps:
+      - name: Download EPUB artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: epub-files
+          path: ./epub
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Dropbox SDK
+        run: pip install dropbox
+
+      - name: Upload to Dropbox
+        env:
+          DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+          DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
+          DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+          DROPBOX_FOLDER: '/poker-books-epub'
+        run: |
+          # Dropbox secrets が未設定ならスキップ
+          if [ -z "$DROPBOX_APP_KEY" ] || [ -z "$DROPBOX_REFRESH_TOKEN" ]; then
+            echo "Dropbox secrets not configured; skipping upload."
+            exit 0
+          fi
+          python << 'PYTHON_EOF'
+          import os
+          import dropbox
+          from dropbox.files import WriteMode
+
+          app_key = os.environ['DROPBOX_APP_KEY']
+          app_secret = os.environ['DROPBOX_APP_SECRET']
+          refresh_token = os.environ['DROPBOX_REFRESH_TOKEN']
+          folder = os.environ['DROPBOX_FOLDER']
+
+          dbx = dropbox.Dropbox(
+              app_key=app_key,
+              app_secret=app_secret,
+              oauth2_refresh_token=refresh_token
+          )
+
+          epub_dir = './epub'
+          uploaded_count = 0
+          for root, dirs, files in os.walk(epub_dir):
+              for filename in files:
+                  if filename.endswith('.epub'):
+                      filepath = os.path.join(root, filename)
+                      # サブディレクトリ名（preflop / flop）を prefix にする
+                      rel = os.path.relpath(filepath, epub_dir)
+                      book_prefix = os.path.dirname(rel).replace(os.sep, '-')
+                      dropbox_name = f"{book_prefix}-{filename}" if book_prefix else filename
+                      dropbox_path = f"{folder}/{dropbox_name}"
+
+                      with open(filepath, 'rb') as f:
+                          data = f.read()
+
+                      try:
+                          dbx.files_upload(data, dropbox_path, mode=WriteMode.overwrite)
+                          print(f"Uploaded: {dropbox_name}")
+                          uploaded_count += 1
+                      except Exception as e:
+                          print(f"Error uploading {dropbox_name}: {e}")
+                          raise
+
+          print(f"Upload complete! ({uploaded_count} files)")
+          PYTHON_EOF

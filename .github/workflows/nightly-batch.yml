@@ -1,0 +1,100 @@
+name: Nightly Batch Improve
+
+on:
+  # 毎日 JST 3:00 (UTC 18:00) に実行
+  schedule:
+    - cron: '0 18 * * *'
+  # 手動実行も可能
+  workflow_dispatch:
+    inputs:
+      max_iterations:
+        description: '最大繰り返し回数'
+        required: false
+        default: '5'
+
+jobs:
+  batch-improve:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Check for lint errors
+        id: lint-check
+        run: |
+          if bun run lint 2>&1; then
+            echo "has_errors=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_errors=true" >> $GITHUB_OUTPUT
+          fi
+        continue-on-error: true
+
+      - name: Setup Claude CLI
+        if: steps.lint-check.outputs.has_errors == 'true'
+        run: npm install -g @anthropic-ai/claude-code
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Run batch improve
+        if: steps.lint-check.outputs.has_errors == 'true'
+        run: |
+          MAX_ITERATIONS=${{ github.event.inputs.max_iterations || '5' }}
+
+          for i in $(seq 1 $MAX_ITERATIONS); do
+            echo "--- イテレーション $i/$MAX_ITERATIONS ---"
+
+            # 自動修正を試みる
+            bun run lint:fix || true
+
+            # Claude で手動修正が必要なものを修正
+            claude --print "
+          以下のタスクを実行してください：
+
+          1. bun run lint を実行してエラーを確認
+          2. 手動修正が必要なエラーを修正：
+             - textlint エラー：文を書き換え
+             - markdownlint エラー：フォーマットを修正
+          3. 修正内容を簡潔に報告
+
+          対象: preflop/chapters/*.md, flop/chapters/*.md のみ
+          toc.md や README は対象外
+          "
+
+            # 再チェック
+            if bun run lint 2>&1; then
+              echo "✅ lint エラー解消"
+              break
+            fi
+          done
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Commit changes
+        if: steps.lint-check.outputs.has_errors == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if ! git diff --quiet preflop/chapters/ flop/chapters/; then
+            git add preflop/chapters/ flop/chapters/
+            git commit -m "fix: 夜間バッチ処理による lint 修正
+
+          Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
+            git push
+            echo "✅ 変更をプッシュしました"
+          else
+            echo "変更なし"
+          fi
+
+      - name: Final lint check
+        run: bun run lint
