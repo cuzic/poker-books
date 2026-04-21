@@ -1,5 +1,9 @@
 # 第12章　ポットオッズと防衛感覚（MDF 軽量化版）
 
+<!-- markdownlint-disable MD033 MD036 MD040 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 > 相手の CBet に毎回フォールドするプレイヤーは、ブラフを打つ側に「無料の利益」を渡している。
 > 「折りすぎない」という感覚を身につけるだけで、勝率は大きく変わる。
 

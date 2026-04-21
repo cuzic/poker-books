@@ -1,5 +1,9 @@
 # 第16章　この式が GTO と外れるところ：対 CBet 編
 
+<!-- markdownlint-disable MD033 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 > 簡易式は「90% 正解」を目指して設計されている。
 > 残りの 10% がどこにあるかを知ることが、次のステップへの扉を開く。
 

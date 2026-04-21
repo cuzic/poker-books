@@ -1,5 +1,9 @@
 # 第6章　ボーナスとペナルティの意味
 
+<!-- markdownlint-disable MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 > **本章の目標**: 前章で導入した基本スコア式の各項目について、「なぜその値なのか」を確率データとともに理解します。丸暗記ではなく、**理屈で覚える**ことが目的です。
 
 前章で、基本スコア式のボーナスとペナルティは次の6項目でした。

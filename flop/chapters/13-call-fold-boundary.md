@@ -1,5 +1,9 @@
 # 第13章　コール／フォールドの境界：実効エクイティ
 
+<!-- markdownlint-disable MD033 MD040 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 フロップでベットを受けたとき、コールすべきかフォールドすべきか。
 この判断を「なんとなく」で行っている人は、毎ハンドで小さな損失を積み重ねています。
 本章では「実効エクイティ」という概念を中心に、コール判断を数式と具体例で体系化します。

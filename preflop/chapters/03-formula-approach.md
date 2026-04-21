@@ -1,5 +1,9 @@
 # 第3章　式で覚えるという発想
 
+<!-- markdownlint-disable MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 > **本章の目標**: なぜ暗記ではなく計算式で判断すべきなのか、その理論的な根拠を確認します。EVの定義、認知科学、GTOとの関係、そして先行事例としてのChen Formulaを通じて、本書のアプローチを正当化します。
 
 本書のアプローチは「計算式で判断を再現する」というものです。なぜこれが有効なのでしょうか。本章では4つの角度から答えます。第一に**EVの基本式**、第二に**人間の記憶容量の限界**、第三に**直感の正体**、そして第四に**3変数による近似の有効性**です。

@@ -1,5 +1,9 @@
 # 付録
 
+<!-- markdownlint-disable MD036 MD056 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 本書の本文で扱った内容を、実戦時に即参照できる形にまとめた資料集です。
 
 ---

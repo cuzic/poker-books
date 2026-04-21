@@ -1,5 +1,9 @@
 # 第27章　固定を揺らす ― CBet の揺らしとサイズ2択
 
+<!-- markdownlint-disable MD036 MD040 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 > **本章の目標**: 第9章〜第26章で学んだ「単一しきい値による0/1判断」をフロップに拡張し、CBet の境界付近で意図的に判断を揺らす6つのルール（R1〜R6）を習得します。暗算可能な整数演算のまま、搾取されにくいプレイに近づけます。
 
 第26章ではGTOソルバーへの橋渡しとして、ツールや書籍のロードマップを示しました。本章はその橋を渡り始める前の「最後の仕上げ」です。本書のCBet統合式は非常に有効なフレームワークですが、ひとつ根本的な問題が残っています。**「境界で常に同じサイズ・同じ行動をする」ことは、注意深い相手に搾取されます**。

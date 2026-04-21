@@ -1,6 +1,8 @@
 {
   "plugins": {},
-  "filters": {},
+  "filters": {
+    "comments": true
+  },
   "rules": {
     "preset-ja-technical-writing": {
       "sentence-length": {
@@ -20,8 +22,8 @@
       "no-mix-dearu-desumasu": {
         "preferInHeader": "",
         "preferInBody": "ですます",
-        "preferInList": "",
-        "strict": false
+        "preferInList": "ですます",
+        "strict": true
       },
       "ja-no-mixed-period": {
         "periodMark": "。",
@@ -42,9 +44,9 @@
       "no-invalid-control-character": true,
       "no-exclamation-question-mark": {
         "allowFullWidthExclamation": false,
-        "allowFullWidthQuestion": true,
+        "allowFullWidthQuestion": false,
         "allowHalfWidthExclamation": false,
-        "allowHalfWidthQuestion": true
+        "allowHalfWidthQuestion": false
       },
       "no-hankaku-kana": true,
       "ja-no-weak-phrase": true,
@@ -92,20 +94,20 @@
       "4.1.1.句点(。)": true,
       "4.1.3.ピリオド(.)、カンマ(,)": true,
       "4.2.1.感嘆符(！)": true,
-      "4.2.2.疑問符(？)": false,
+      "4.2.2.疑問符(？)": true,
       "4.2.4.中黒(・)": true,
       "4.2.5.波線(〜)": true,
       "4.2.6.ハイフン(-)": true,
       "4.2.7.コロン(：)": true,
       "4.2.8.セミコロン(;)": true,
-      "4.2.9.ダッシュ(-)": false,
+      "4.2.9.ダッシュ(-)": true,
       "4.3.1.丸かっこ（）": true,
       "4.3.2.大かっこ［］": true,
       "4.3.3.かぎかっこ「」": true,
       "4.3.4.二重かぎかっこ『』": true,
       "4.3.5.二重引用符": true,
       "4.3.6.中かっこ{ }": true,
-      "4.3.7.山かっこ<>": false,
+      "4.3.7.山かっこ<>": true,
       "4.3.8.一重引用符": true
     }
   }

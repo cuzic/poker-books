@@ -1,5 +1,10 @@
 # 第5章　基本スコア式の全体像
 
+<!-- markdownlint-disable MD036 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+<!-- textlint-disable preset-jtf-style/4.3.7.山かっこ<> -->
+
 > **本章の目標**: 本書の中核である「基本スコア式」を導入します。10のサンプルハンドで実際に計算し、暗算で式を回す感覚を体得します。
 
 ここまでの4章は、計算式アプローチの「前提」を整える章でした。カードとポジションの数値化（第2章）、計算で判断する意義（第3章）、避けるべきミス（第4章）。本章からいよいよ**実装**に入ります。

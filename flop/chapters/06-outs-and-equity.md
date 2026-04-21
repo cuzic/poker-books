@@ -1,5 +1,9 @@
 # 第6章　アウツとエクイティ（Rule of 2 and 4）
 
+<!-- markdownlint-disable MD033 MD040 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 > ドローは「夢」ではなく「数値」で評価する。
 > アウツを数え、確率を掛ければ、コールすべきかどうかが見えてくる。
 

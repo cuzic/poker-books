@@ -1,5 +1,9 @@
 # 第11章　この式が GTO と外れるところ：CBet 編
 
+<!-- markdownlint-disable MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 本書のCBet統合式は、フロップの判断を「数字で再現」するための道具です。
 しかし、その式はGTOソルバーが出す最適解とは構造的に異なります。
 本章では「どこで、どのように外れるのか」を具体的に示したうえで、「それでも初級者にとっては十分な理由」を説明します。

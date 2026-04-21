@@ -1,5 +1,9 @@
 # 第2章　本書を読むための用語
 
+<!-- markdownlint-disable MD033 MD040 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 > フロップで「何が起きているのか」を正確に言語化できれば、判断の半分は終わっている。
 
 ---

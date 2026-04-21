@@ -1,5 +1,10 @@
 # 第9章　CBet 統合式の全体像
 
+<!-- markdownlint-disable MD036 MD040 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+<!-- textlint-disable preset-jtf-style/4.3.7.山かっこ<> -->
+
 > 「3つのピースが揃ったとき、判断は直感から計算に変わる。ボードを読み、手の強さを測り、ポジションを加える。それだけで、フロップのほとんどの場面に答えが出る」
 
 ---

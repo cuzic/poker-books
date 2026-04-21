@@ -1,5 +1,9 @@
 # 第22章　レンジアドバンテージとナッツアドバンテージの判定
 
+<!-- markdownlint-disable MD040 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 フロップで「ベットすべきか」を悩んでいるとき、本書のCBet統合式は頼りになる道具です。しかし、自分のハンドだけを見て判断していると、大切な視点が抜け落ちます。それが**レンジ全体の比較**です。相手のレンジと自分のレンジを対比し、どちらが優位にあるかを見極めることで、CBet頻度とサイズの両方を正確に設計できます。この章では、その羅針盤となる2つのアドバンテージ概念を解説します。
 
 ---

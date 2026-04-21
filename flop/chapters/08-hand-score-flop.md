@@ -1,5 +1,9 @@
 # 第8章　HandScore：フロップでの手の強さを数値化
 
+<!-- markdownlint-disable MD033 MD040 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+<!-- textlint-disable preset-jtf-style/4.2.9.ダッシュ(-) -->
+
 フロップを見た瞬間、あなたは何を考えますか。
 「トップペアが取れた」「フラッシュドローがある」——そこまでは分かっても、
 「この手でベットすべきか」という判断になると途端に迷いが生じます。

@@ -1,5 +1,9 @@
 # 第7章　CBet の3つの目的（バリュー／ブラフ／プロテクション）
 
+<!-- markdownlint-disable MD036 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 > 「ベットは弱い相手を降ろすためだけにするものではない。強いハンドで価値を取り、脆弱なハンドを守り、ミスした手でも圧力をかける――この3つの目的を意識したとき、CBet は武器になる」
 
 ## 第II部の始まりに

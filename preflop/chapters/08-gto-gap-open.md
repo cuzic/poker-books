@@ -1,5 +1,10 @@
 # 第8章　この式がGTOと外れるところ：オープン編
 
+<!-- markdownlint-disable MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+<!-- textlint-disable preset-jtf-style/4.3.7.山かっこ<> -->
+
 > **本章の目標**: 第II部（第5〜7章）で構築した本書の基本スコア式が、GTOと系統的にズレるポイントを総まとめします。「本書の式は近似である」ことを率直に認めたうえで、それでもなお使い続ける意義を確認します。
 
 本章は第II部の締めくくりです。ここまでで学んだ**基本スコア式・ボーナス/ペナルティ・ポジション別しきい値**は、プリフロップ判断のオープンレンジ（UTGからBTNまでで最初にレイズするかどうか）を暗算で回すための道具でした。

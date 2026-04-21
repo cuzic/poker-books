@@ -31,6 +31,7 @@
     "@types/bun": "latest",
     "markdownlint-cli2": "^0.20.0",
     "textlint": "^15.5.1",
+    "textlint-filter-rule-comments": "^1.3.0",
     "textlint-rule-preset-ja-technical-writing": "^12.0.2",
     "textlint-rule-preset-jtf-style": "^3.0.3",
     "textlint-rule-prh": "^6.1.0",

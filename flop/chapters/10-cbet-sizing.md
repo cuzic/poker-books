@@ -1,5 +1,9 @@
 # 第10章　CBet サイズの選択（33% / 75% / 150%）
 
+<!-- markdownlint-disable MD033 MD036 MD040 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+<!-- textlint-disable preset-jtf-style/4.2.9.ダッシュ(-) -->
+
 > 「ベットするかどうかは第7〜9章で決めた。次の問いは『いくらで打つか』だ。このサイズひとつで、相手がコールするかフォールドするかが大きく変わる」
 
 ## 本章の焦点

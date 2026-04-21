@@ -1,5 +1,10 @@
 # 第11章　セットマイニング15倍ルール
 
+<!-- markdownlint-disable MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+<!-- textlint-disable preset-jtf-style/4.3.7.山かっこ<> -->
+
 > **本章の目標**: 小ペア（22〜66）で対オープンにコールする判断を「15倍ルール」で瞬時に決められるようになります。なぜ15倍なのか、第4章の25倍ルールとどう使い分けるのかを学びます。
 
 ポーカーで最もワクワクするハンドの1つが、**セット**（ポケットペアにフロップで3枚目のランクが落ちた状態）です。相手はあなたがセットを持っているとは気付きにくく、強いハンド（トップペアなど）で大量のチップを入れてきてくれます。

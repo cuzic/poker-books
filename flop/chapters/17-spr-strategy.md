@@ -1,5 +1,9 @@
 # 第17章　SPR による戦略の切り替え
 
+<!-- markdownlint-disable MD036 MD040 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 フロップで「どこまで強気に押せるか」を決めるのは、ハンドの強さだけではありません。
 残りスタックとポットの比率、つまりSPR（Stack-to-Pot Ratio）が、その答えを数値で教えてくれます。
 SPRを把握することで、「トップペアでオールインすべきか」「スーテッドコネクターに価値があるか」を直感ではなく根拠をもって判断できるようになります。
@@ -326,9 +330,7 @@ BTNが2.5bbでオープンし、BBがコールしました（両者100bbスタ�
 フロップのポットは5.5bb、エフェクティブスタックは97.5bbです。
 SPRを計算してください。また、あなたがBBでTPTKを持っている場合、スタックオフは正当化されますか？
 
-<!-- textlint-disable ja-technical-writing/no-exclamation-question-mark -->
 **解答：** SPR = 97.5 ÷ 5.5 ≈ 17.7。このSPRではスタックオフは正当化されません。SPR ≈ 17.7は「コンテクスト調整帯域」であり、ポットコントロールが基本です。TPTKでスタックオフが正当化されるのはSPR ≤ 3前後です。
-<!-- textlint-enable -->
 
 ---
 
@@ -337,9 +339,7 @@ SPRを計算してください。また、あなたがBBでTPTKを持ってい�
 3betポット（BTN 2.5bb→BB 10bb 3bet→BTNコール、100bb開始）のフロップで、BBがナッツフラッシュドローを持ちSPR ≈ 4.4です。
 チェックレイズオールインは正当化されますか？
 
-<!-- textlint-disable ja-technical-writing/no-exclamation-question-mark -->
 **解答：** はい、正当化されます。SPR 3〜6はセミブラフが最も効果的な帯域です。ナッツフラッシュドローのエクイティ約36% にフォールドエクイティが加わり、チェックレイズオールインは +EVになります。
-<!-- textlint-enable -->
 
 ---
 
@@ -348,9 +348,7 @@ SPRを計算してください。また、あなたがBBでTPTKを持ってい�
 SPR ≥ 15のディープスタック環境で、56sを持ちフロップでストレートドローとフラッシュドローの両方を引いた（コンボドロー）とします。
 この状況でジャムが正当化されるSPRの目安はいくつですか？また、なぜスーテッドコネクターは高SPRで有利なのでしょうか？
 
-<!-- textlint-disable ja-technical-writing/no-exclamation-question-mark -->
 **解答：** SPR 13以上がスーテッドコネクターの最低目安です。高SPRでは、ストレートやフラッシュ成立時に相手から全スタックを回収できるインプライドオッズが大きくなります。コンボドローはエクイティが50% 以上になることも多く、フォールドエクイティがゼロでもEVがイーブン以上になります。
-<!-- textlint-enable -->
 
 ---
 

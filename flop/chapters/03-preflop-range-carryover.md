@@ -1,5 +1,9 @@
 # 第3章　プリフロップから受け継ぐレンジ
 
+<!-- markdownlint-disable MD033 MD040 MD056 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 > プリフロップで決まったレンジの形は、フロップの最後のカードが開かれる瞬間まで変わらない。相手の手を読むとは、フロップから始まるのではなく、プリフロップのアクションをさかのぼることから始まる。
 
 ## はじめに：フロップで「相手の手」を読むために

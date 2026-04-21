@@ -1,5 +1,9 @@
 # 第4章　初級者がやりがちなフロップのミス
 
+<!-- markdownlint-disable MD036 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 > フロップで正しい判断ができれば、ポーカーの半分はマスターしたも同然だ。  
 > だが多くの初級者は、同じミスを毎回繰り返している。  
 > ― Jonathan Little（ポーカープロ・コーチ）

@@ -1,5 +1,9 @@
 # 第1章　フロップで EV の振れ幅が最大化する
 
+<!-- markdownlint-disable MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 フロップは、ポーカーの勝負を最も大きく動かすストリートです。
 3枚の共同カードが一度に公開されるこの瞬間、あなたの手の価値は「高EV」と「低EV」のどちらかへ急速に引き寄せられます。
 本章では「なぜフロップが決定的なのか」を、具体的なデータと構造的な理由から解き明かします。

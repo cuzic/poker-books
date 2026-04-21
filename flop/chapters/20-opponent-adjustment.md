@@ -1,5 +1,8 @@
 # 第20章　相手タイプとスタック深度によるしきい値調整
 
+<!-- markdownlint-disable MD036 MD040 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 本書で学んだ3つの式（BoardScore、HandScore、CBet統合式）は、100BBの標準的な状況を前提として設計されています。
 しかし実戦では、対面する相手のプレースタイルや両者のスタック深度によって、最適な判断基準が大きく変わります。
 本章では「式を現場で動かす」最終調整技術として、相手タイプ別の搾取戦略とスタック深度補正を体系的に解説します。

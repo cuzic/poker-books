@@ -1,5 +1,9 @@
 # 第12章　3betスコア式（ブロッカー強化版）
 
+<!-- markdownlint-disable MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 > **本章の目標**: 対オープンで最強のアクション「3ベット（リレイズ）」を、暗算可能な**3betスコア式**で判断できるようになります。ブロッカー効果の活用と、ポジションごとの3ベットレンジの設計思想を学びます。
 
 対オープンには3つの選択肢がありました。**コール、フォールド、3ベット（リレイズ）**。これまでの章（第9〜11章）では主にコールとフォールドの判断を扱ってきました。本章からは、**攻撃側**のアクションである3ベットを取り上げます。

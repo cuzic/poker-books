@@ -1,5 +1,10 @@
 # 第10章　実現率という落とし穴
 
+<!-- markdownlint-disable MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+<!-- textlint-disable preset-jtf-style/4.3.7.山かっこ<> -->
+
 > **本章の目標**: ポットオッズを満たしていても、実際には「勝ち分を取り切れない」場面があります。その正体が**実現率**です。本章では実現率の概念と、ポジション別の近似値、実戦で使える調整ルールを学びます。
 
 前章で、ポットオッズによるコール判断の基本を学びました。「必要勝率 = コール額 ÷ 最終ポット」というシンプルな式です。

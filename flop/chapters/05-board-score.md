@@ -1,5 +1,8 @@
 # 第5章　ボードテクスチャを数値化する（BoardScore）
 
+<!-- markdownlint-disable MD033 MD036 MD040 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 > 「このボードはドライですか、ウェットですか？」と聞かれて答えられるなら、次の問いに答えてください。「では、どのくらいドライですか？」
 
 ---

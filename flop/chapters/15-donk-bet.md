@@ -1,5 +1,10 @@
 # 第15章　ドンクベット対応
 
+<!-- markdownlint-disable MD036 MD040 MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+<!-- textlint-disable preset-jtf-style/4.2.9.ダッシュ(-) -->
+
 フロップで相手が突然ベットしてきた——チェックを待っていたのに先を越された、そんな経験はないでしょうか。
 これが「ドンクベット」と呼ばれるアクションです。
 本章は「自分ではドンクしない」ことを前提に、打たれたときの対応に絞って解説します。

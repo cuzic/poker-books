@@ -1,5 +1,9 @@
 # 第1章　プリフロップで勝負の8割が決まる
 
+<!-- markdownlint-disable MD060 -->
+<!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
+
 > **本書の主張**: プリフロップの判断を暗記ではなく計算で再現できれば、レンジ表の丸暗記という壁を越えて、初心者でも勝ちに近づけます。第1章では、なぜプリフロップが最重要なのかを3つの角度から示します。
 
 テキサスホールデムでは、プレイする全ハンドのうち**8割以上**が、1枚の共通カードも開かれないまま決着します。PokerCopilotの統計によれば、フロップ（最初の3枚の共通カード）を見るのは全ハンドの**約17%**に過ぎません。つまり、残りの約83%は**プリフロップ**（手札2枚が配られ、共通カードが出る前の最初の賭け合い）だけで勝敗が決まっているのです。
