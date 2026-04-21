@@ -8,8 +8,15 @@
   ポジション別しきい値: UTG 24 / MP 22 / CO 20 / BTN 18 / SB 20
 
 対 3bet のしきい値も同様に検証する。
+
+使用法:
+  python3 verify_gto.py              # Level 1（基本式のみ）
+  python3 verify_gto.py --advanced   # Level 1 + 上級 6 補正（22章）
 """
 from __future__ import annotations
+import sys
+
+USE_ADVANCED = "--advanced" in sys.argv
 
 # ------------------------------------------------------------------------
 # 本書の基本スコア式
@@ -181,6 +188,100 @@ def hand_label(h: tuple[str, str, bool]) -> str:
     return f"{r1}{r2}{'s' if s else 'o'}"
 
 
+def advanced_open_decision(hand: tuple[str, str, bool], pos: str, score: float, threshold: float) -> bool:
+    """Level 2 の上級補正ルール（第22章）を適用した open 判定。"""
+    r1, r2, suited = hand
+    v1, v2 = RANK_VALUES[r1], RANK_VALUES[r2]
+    h, l = max(v1, v2), min(v1, v2)
+    is_pair = r1 == r2
+    diff = abs(v1 - v2)
+    label = r1 + r2 + ("s" if suited else "o") if not is_pair else r1 + r2
+
+    # Rule 1: 全ペアオープン（22-QQ は全ポジション）
+    if is_pair:
+        return True
+
+    # Rule 2a: 低スーテッドエース A2s-A5s は CO/BTN/SB で open
+    if suited and r1 == "A" and r2 in ("2", "3", "4", "5") and pos in ("CO", "BTN", "SB"):
+        return True
+
+    # Rule 2b: 低スーテッドキング K2s-K4s は BTN/SB で open
+    if suited and r1 == "K" and r2 in ("2", "3", "4") and pos in ("BTN", "SB"):
+        return True
+
+    # Rule 2c: 低スーテッドクイーン Q4s-Q5s は BTN で open
+    if suited and r1 == "Q" and r2 in ("4", "5") and pos == "BTN":
+        return True
+
+    # Rule 3: ローコネクテッドスーテッド BTN 特例（54s, 65s, 76s のみ）
+    if pos == "BTN" and suited and diff == 1 and h in (6, 7) and l in (5, 6):
+        return True
+    if pos == "BTN" and suited and r1 == "5" and r2 == "4":
+        return True
+
+    # Rule 4: 小 Ax オフ (BTN では A2o-A6o、SB では A3o-A6o)
+    if not suited and r1 == "A":
+        if pos == "BTN" and r2 in ("2", "3", "4", "5", "6"):
+            return True
+        if pos == "SB" and r2 in ("3", "4", "5", "6"):
+            return True
+
+    # Rule 5: UTG オフスート引き締め（KJo, QJo, JTo, KTo 除外）
+    if pos == "UTG" and not suited and label in ("KJo", "QJo", "KTo", "JTo"):
+        return False
+
+    # Rule 6: UTG 弱スーテッド引き締め（A9s, K9s, Q9s, J9s 除外）
+    if pos == "UTG" and suited and l == 9 and h in (14, 13, 12, 11):
+        return False
+
+    # Rule 7: MP オフスート/弱スーテッド引き締め
+    if pos == "MP":
+        mp_exclude = {
+            "A9o", "A8s", "A7s", "KJo", "KTo", "K9o", "K9s", "K8s", "QJo",
+            "QTo", "Q9s", "JTo", "J9s",
+        }
+        if label in mp_exclude:
+            return False
+        if label == "98s":  # MP 追加オープン
+            return True
+
+    # Rule 8: SB ミッドスーテッド特例（K5s, Q6s, J7s, T7s, T8s, 97s）
+    if pos == "SB" and suited:
+        if label in ("K5s", "Q6s", "J7s", "T7s", "T8s", "97s"):
+            return True
+        # SB はさらに 87s, 86s, 76s, 65s, 54s も open
+        if label in ("87s", "86s", "76s", "65s", "54s"):
+            return True
+
+    # Rule 9: BTN オフスート引き締め (K7o以下, Q7o以下, Q8o)
+    if pos == "BTN" and not suited and r1 == "K" and r2 in ("2", "3", "4", "5", "6", "7"):
+        return False
+    if pos == "BTN" and not suited and r1 == "Q" and r2 in ("2", "3", "4", "5", "6", "7", "8"):
+        return False
+
+    # Rule 10: CO オフスート引き締め（K9o, K8o, Q9o, J9o, T9o → open しない）
+    if pos == "CO" and not suited and label in ("K9o", "K8o", "Q9o", "J9o", "T9o"):
+        return False
+
+    # Rule 11: CO 追加オープン
+    if pos == "CO":
+        co_add = {"A5o", "A6o", "K5s", "87s", "76s", "65s"}
+        if label in co_add:
+            return True
+        # Q8s は既に base score で通るが Q7s は FP なので exclude
+        if label == "Q7s":
+            return False
+
+    # Rule 12: BTN 追加オープン（下位スーテッド + 弱オフ）
+    if pos == "BTN":
+        btn_add = {"T6s", "96s", "87s", "87o", "86s", "85s", "75s"}
+        if label in btn_add:
+            return True
+
+    # デフォルト：基本式で判定
+    return score >= threshold
+
+
 def verify_open() -> dict[str, dict[str, int]]:
     """ポジション別オープン判定の本書 vs GTO 比較"""
     stats = {}
@@ -191,7 +292,10 @@ def verify_open() -> dict[str, dict[str, int]]:
         for hand in enumerate_169_hands():
             r1, r2, suited = hand
             score = calc_score(r1, r2, suited)
-            book_opens = score >= threshold
+            if USE_ADVANCED:
+                book_opens = advanced_open_decision(hand, pos, score, threshold)
+            else:
+                book_opens = score >= threshold
             gto_opens = hand in gto_hands
             if book_opens and gto_opens:
                 tp += 1
@@ -251,7 +355,8 @@ def verify_3bet() -> dict[str, dict[str, int]]:
 
 
 def format_report(open_stats, threebet_stats) -> str:
-    out = ["# 本書基本スコア式 vs GTO レンジ 検証結果\n"]
+    title = "Level 2（第22章 上級補正適用）" if USE_ADVANCED else "Level 1（基本式のみ）"
+    out = [f"# 本書スコア式 vs GTO レンジ 検証結果 — {title}\n"]
     out.append("データソース: GTO Wizard の公開チャート（6-max 100BB キャッシュ）\n")
     out.append("169 ハンド全てについて、本書のオープン／3bet 判定と GTO レンジの一致率を算出。\n")
 
