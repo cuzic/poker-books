@@ -128,7 +128,7 @@ AQo、KQo、KJoといった**オフスーツブロードウェイは、マルチ
 
 ```text
 マルチウェイ CBet スコア = HandScore
-                       + (BoardScore − 5)
+                       − BoardScore
                        + ポジション係数（IP +3、OOP 0）
                        − プレイヤー増加補正
 
