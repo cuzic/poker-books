@@ -153,7 +153,7 @@ R3 補正値：
 修正後のCBetスコア：。
 
 ```
-CBet スコア（修正）= HandScore + (BoardScore − 5) + ポジション係数 + R3
+CBet スコア（修正）= HandScore − BoardScore + ポジション係数 + R3
 ```
 
 ### 符号が反転する理由
