@@ -1,1 +1,378 @@
-[]
+[
+  {
+    "name": "p00-fig1-learning-path-flowchart",
+    "prompt": "Flowchart showing a self-diagnosis learning path for a poker strategy book. Display a vertical decision tree with Japanese labels:\n  - Title at top: 「学習パス診断」\n  - Start node: 「スタート」\n  - Q1: 「ポーカー歴 6か月以上？」 → Yes/No branches\n  - Q2 (Yes branch): 「VPIP 30以下？」 → Yes/No branches\n  - Q3 (No from Q2): 「3betを打てる？」 → Yes/No branches\n  - Q4 (Yes from Q1 No): 「基礎ルール理解済み？」 → Yes/No branches\n  - Terminal nodes with level badges: 「→ Level 1（入門）」「→ Level 2（中級）」「→ Level 3（上級）」\nLayout: vertical flowchart with diamond decision nodes in navy, rectangular terminal nodes in green, arrows labeled 「Yes」「No」.\nAspect ratio 9:16.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "9:16",
+    "chapter": "はじめに",
+    "section": "学習パス診断",
+    "description": "Q1〜Q4のYes/No分岐でLevel 1/2/3への学習パスを診断するフローチャート"
+  },
+  {
+    "name": "p00-fig2-level-pyramid",
+    "prompt": "Pyramid infographic showing three learning levels for poker strategy. Display a tall pyramid divided into three horizontal bands with Japanese labels:\n  - Title at top: 「習熟レベル ピラミッド」\n  - Top band (narrow): 「Level 3」「上級：GTO・搾取統合」\n  - Middle band: 「Level 2」「中級：レンジ思考・ベットサイズ」\n  - Bottom band (wide): 「Level 1」「入門：ハンド選択・ポジション」\n  - Left side label: 「難易度 ↑」\n  - Right side label: 「プレイヤー数 ↓」\nLayout: classic pyramid shape, each band in a distinct shade of navy blue (darker at top), text inside each band.\nAspect ratio 3:4.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "3:4",
+    "chapter": "はじめに",
+    "section": "学習レベル",
+    "description": "Level 1（入門）/ Level 2（中級）/ Level 3（上級）の3段階ピラミッド図"
+  },
+  {
+    "name": "p00b-fig1-hand-notation",
+    "prompt": "Visual comparison infographic showing three types of poker hand notation. Display three side-by-side panels with Japanese labels:\n  - Title at top: 「ハンド表記法の基本」\n  - Left panel header: 「AKs（スーテッド）」, content: two card icons (A♠ K♠) both same suit, label: 「同スート → フラッシュ狙い可」\n  - Center panel header: 「AKo（オフスーツ）」, content: two card icons (A♠ K♥) different suits, label: 「異スート → フラッシュなし」\n  - Right panel header: 「AA（ペア）」, content: two card icons (A♠ A♥), label: 「同ランク → ポケットペア」\n  - Bottom note: 「s = suited（同色）　o = offsuit（異色）」\nLayout: three equal columns with flat card illustrations, differences highlighted with colored borders.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第0章 用語",
+    "section": "カード表記法",
+    "description": "AKs・AKo・AAの3種類のハンド表記法を視覚的に対比する図"
+  },
+  {
+    "name": "p00b-fig2-hand-rankings",
+    "prompt": "Vertical ladder infographic showing 10 poker hand rankings from highest to lowest. Display a numbered list with Japanese labels:\n  - Title at top: 「ハンドランキング 10段階」\n  - 1: 「ロイヤルフラッシュ」 + card icons: A♠ K♠ Q♠ J♠ 10♠\n  - 2: 「ストレートフラッシュ」 + card icons: 9♠ 8♠ 7♠ 6♠ 5♠\n  - 3: 「フォーカーズ（4枚同種）」\n  - 4: 「フルハウス」\n  - 5: 「フラッシュ」\n  - 6: 「ストレート」\n  - 7: 「スリーカーズ」\n  - 8: 「ツーペア」\n  - 9: 「ワンペア」\n  - 10: 「ハイカード」\n  - Left axis label: 「強 ↑」at top, 「弱 ↓」at bottom\nLayout: vertical numbered list, top ranks in gold/green, bottom ranks in gray.\nAspect ratio 9:16.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "9:16",
+    "chapter": "第0章 用語",
+    "section": "ハンドランキング",
+    "description": "ハンドランキング10段階を強い順に並べた縦型ラダー図"
+  },
+  {
+    "name": "p01-fig1-preflop-dominoes",
+    "prompt": "Domino-effect infographic showing how preflop mistakes cascade to later streets. Display a horizontal sequence of falling domino tiles with Japanese labels:\n  - Title at top: 「プリフロップミスが全てに波及」\n  - Domino 1 (falling): 「悪いハンド選択」\n  - Arrow →\n  - Domino 2 (falling): 「フロップで劣勢」\n  - Arrow →\n  - Domino 3 (falling): 「ターンで窮地」\n  - Arrow →\n  - Domino 4 (fallen): 「リバーで損失」\n  - Bottom note: 「最初の1手が全ての起点」\nLayout: wide horizontal domino chain, each tile in navy blue with white text, arrows in accent green.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第1章",
+    "section": "プリフロップの重要性",
+    "description": "プリフロップの失敗が連鎖的にフロップ・ターン・リバーへ影響する因果連鎖図"
+  },
+  {
+    "name": "p01-fig2-vpip-distribution",
+    "prompt": "Bar chart infographic comparing VPIP distribution between winning and losing players. Display two grouped bars with Japanese labels:\n  - Title at top: 「VPIP 分布：勝ち組 vs 負け組」\n  - X-axis: VPIP ranges 「〜15%」「16-20%」「21-25%」「26-30%」「31-40%」「41%〜」\n  - Y-axis: 「プレイヤー割合」\n  - Green bars: 「勝ち組」 (tall bars in 16-25% range)\n  - Red bars: 「負け組」 (tall bars in 26-40% range)\n  - Annotation arrow pointing to 「勝ち組 ピーク: 約18-22%」\n  - Bottom note: 「VPIP = Voluntarily Put money In Pot」\nLayout: grouped bar chart, green and red bars side by side per range.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第1章",
+    "section": "VPIP",
+    "description": "勝ち組と負け組のVPIP分布を比較する棒グラフ（勝ち組は18-22%台に集中）"
+  },
+  {
+    "name": "p02-fig1-6max-table-positions",
+    "prompt": "Overhead view of a 6-max poker table showing seat positions with labels. Display an oval table with 6 seats and Japanese labels:\n  - Title at top: 「6-max テーブル ポジション配置」\n  - Dealer button icon (D) at bottom-right seat\n  - Seat labels clockwise from dealer: 「BTN (D)」「SB」「BB」「UTG」「MP」「CO」\n  - Each seat shows position abbreviation in a circle\n  - Arrow showing play direction: 「プレイ順 →」\n  - Color coding: BTN/CO/MP in green (late/good), UTG in red (early/bad), SB/BB in gray\n  - Bottom note: 「BTN = 最強ポジション」\nLayout: circular table diagram, seats evenly spaced, dealer chip visible.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第2章",
+    "section": "ポジション配置",
+    "description": "6-maxテーブルの俯瞰図にUTG/MP/CO/BTN/SB/BBの各ポジションをラベルで示す図"
+  },
+  {
+    "name": "p02-fig2-position-value-bars",
+    "prompt": "Horizontal bar chart showing position advantage values for each seat in 6-max poker. Display bars with Japanese labels:\n  - Title at top: 「ポジション補正値」\n  - Y-axis seat labels from top: 「UTG」「MP」「CO」「BTN」「SB」「BB」\n  - X-axis: range from 「-2」 to 「+2」, zero line center\n  - Bars: UTG: -2 (red), MP: -1 (red), CO: +1 (green), BTN: +2 (green), SB: -1 (red), BB: 0 (gray)\n  - Each bar shows its value number at end tip\n  - Bottom note: 「BTN が唯一の +2 最強ポジション」\nLayout: horizontal bar chart, negative bars extend left in red, positive bars extend right in green.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第2章",
+    "section": "ポジション補正値",
+    "description": "UTG -2 〜 BTN +2 の各ポジション補正値を横棒グラフで視覚化"
+  },
+  {
+    "name": "p02-fig3-card-value-ladder",
+    "prompt": "Vertical ladder infographic showing numerical values assigned to each poker card rank. Display a top-to-bottom ranking with Japanese labels:\n  - Title at top: 「カード価値 数値」\n  - Each row shows card rank and its numeric value:\n  - 「A」= 「14」\n  - 「K」= 「13」\n  - 「Q」= 「12」\n  - 「J」= 「11」\n  - 「10」= 「10」\n  - 「9」= 「9」\n  - 「8〜3」= 「8〜3」\n  - 「2」= 「2」\n  - Left side label: 「高 ↑」at top, 「低 ↓」at bottom\n  - Right side label: 「スコア計算に使用」\nLayout: narrow vertical ladder with rank on left, value on right, separated by dashes.\nAspect ratio 3:4.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "3:4",
+    "chapter": "第2章",
+    "section": "カード数値",
+    "description": "A=14からQ=2までのカードランク数値一覧ラダー（スコア計算の基礎）"
+  },
+  {
+    "name": "p03-fig1-range-memorize-vs-formula",
+    "prompt": "Before/After comparison infographic contrasting rote memorization vs formula-based range learning. Display two panels side by side with Japanese labels:\n  - Title at top: 「レンジ習得：暗記 vs 計算式」\n  - Left panel header (red X): 「Before: 丸暗記」\n    - Content list: 「UTG: AA KK QQ JJ TT 99 AK AQ AJ KQ」「MP: 上記+88 77 AT KJ…」「CO: さらに追加」\n    - Bottom label: 「忘れやすい・更新困難」\n  - Right panel header (green check): 「After: スコア式」\n    - Content: 「Score = H + L + ボーナス - ペナルティ」「しきい値以上 → プレイ」\n    - Bottom label: 「再現可能・応用可能」\nLayout: two-panel split with red left panel and green right panel.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第3章",
+    "section": "レンジ思考",
+    "description": "レンジの丸暗記と計算式アプローチのBefore/After対比図"
+  },
+  {
+    "name": "p04-fig1-three-common-mistakes",
+    "prompt": "Vertical infographic listing three major preflop mistakes with icons and Japanese labels:\n  - Title at top: 「プリフロップ 3大失敗」\n  - Failure 1 (red warning icon): 「Axo 過信」\n    - Sub-label: 「A2o〜A9o を何でもプレイ」\n    - Impact: 「EV: -0.3〜-0.5 bb/手」\n  - Failure 2 (red warning icon): 「ギャップ好き」\n    - Sub-label: 「Q9o J8o など中途半端なコネクター」\n    - Impact: 「アウツ減少 → 負けやすい」\n  - Failure 3 (red warning icon): 「ポジション無視」\n    - Sub-label: 「UTG から広いレンジでオープン」\n    - Impact: 「アクションする前に不利確定」\n  - Bottom note: 「この3つを直すだけで大幅改善」\nLayout: vertical list of three items, each in a bordered red card.\nAspect ratio 9:16.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "9:16",
+    "chapter": "第4章",
+    "section": "よくある失敗",
+    "description": "Axo過信・ギャップ好き・ポジション無視の3大プリフロップ失敗を列挙した縦型図"
+  },
+  {
+    "name": "p04-fig2-a9o-ev-loss",
+    "prompt": "Bar chart showing EV loss from playing A9o in wrong positions. Display comparison bars with Japanese labels:\n  - Title at top: 「A9o の EV 損失：ポジション別」\n  - Y-axis: 「期待値 (bb/手)」 ranging from -0.6 to +0.3\n  - X-axis bars: 「UTG」「MP」「CO」「BTN」「SB」\n  - UTG bar: -0.49 (red, large negative)\n  - MP bar: -0.32 (red, moderate negative)\n  - CO bar: -0.08 (light red, small negative)\n  - BTN bar: +0.18 (green, positive)\n  - SB bar: -0.15 (red, negative)\n  - Annotation on UTG bar: 「-0.49 bb/手」\n  - Bottom note: 「BTN 以外での A9o は損失」\nLayout: vertical bar chart, negative bars in red below zero line, positive bars in green above.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第4章",
+    "section": "A9o の EV",
+    "description": "A9oをUTG/MP/CO/BTN/SBでプレイした場合のEV損失を棒グラフで示す"
+  },
+  {
+    "name": "p05-fig1-score-formula-structure",
+    "prompt": "Formula structure diagram showing the poker hand scoring formula. Display a clear equation breakdown with Japanese labels:\n  - Title at top: 「ハンドスコア計算式」\n  - Large central formula: 「Score = H + L + ボーナス - ペナルティ」\n  - Below formula, four labeled boxes connected to formula parts:\n    - 「H」→ 「高位カード価値（A=14, K=13...）」\n    - 「L」→ 「低位カード価値（第2枚）」\n    - 「ボーナス」→ 「ペア/スーテッド/コネクター加点」\n    - 「ペナルティ」→ 「ギャップ/低カード減点」\n  - Bottom note: 「しきい値以上ならプレイ」\nLayout: formula at center-top, four explanation boxes below connected by arrows, square format.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第5章",
+    "section": "スコア式",
+    "description": "Score = H + L + ボーナス - ペナルティ の式構造と各変数の説明図"
+  },
+  {
+    "name": "p05-fig2-bonus-table",
+    "prompt": "Table infographic showing bonus points added to the hand score formula. Display a structured table with Japanese labels:\n  - Title at top: 「スコア ボーナス加点一覧」\n  - Table with columns: 「条件」「加点」「例」\n  - Row 1: 「ポケットペア」「+10」「AA, KK, 22」\n  - Row 2: 「スーテッド」「+2」「AKs, 76s」\n  - Row 3: 「コネクター（ギャップ0）」「+1」「KQo, 87o」\n  - Row 4: 「コネクター（1gap）」「+0.5」「KJo, 86o」\n  - Footer note: 「ボーナスは重複適用可」\nLayout: clean 3-column table with alternating row shading, bonus values in green.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第5章",
+    "section": "ボーナス加点",
+    "description": "ペア+10・スーテッド+2・コネクター+1のボーナス加点テーブル"
+  },
+  {
+    "name": "p05-fig3-penalty-table",
+    "prompt": "Table infographic showing penalty deductions in the hand score formula. Display a structured table with Japanese labels:\n  - Title at top: 「スコア ペナルティ減点一覧」\n  - Table with columns: 「条件」「減点」「例」\n  - Row 1: 「1gap（1枚飛び）」「-1」「QTo, 85o」\n  - Row 2: 「2gap（2枚飛び）」「-2」「Q9o, 74o」\n  - Row 3: 「3gap以上」「-4」「Q8o, 63o」\n  - Row 4: 「低位カード 7以下」「-1」「27o, 34s」\n  - Row 5: 「両カード 5以下」「-2」「45o, 23s」\n  - Footer note: 「複数ペナルティは累積」\nLayout: clean 3-column table, penalty values in red.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第5章",
+    "section": "ペナルティ減点",
+    "description": "ギャップ・低カードによるペナルティ減点テーブル（1gap -1 〜 3gap以上 -4）"
+  },
+  {
+    "name": "p05-fig4-threshold-ladder",
+    "prompt": "Vertical threshold ladder showing minimum hand scores required per position. Display a top-to-bottom reference with Japanese labels:\n  - Title at top: 「ポジション別 プレイしきい値」\n  - Each row shows position and threshold:\n  - 「UTG」→ 「しきい値: 24」\n  - 「MP」→ 「しきい値: 22」\n  - 「CO」→ 「しきい値: 20」\n  - 「BTN」→ 「しきい値: 18」\n  - 「SB」→ 「しきい値: 20」\n  - 「BB」→ 「ディフェンスのみ」\n  - Right side bar: color gradient from red (top/tight) to green (bottom/loose)\n  - Bottom note: 「BTN が最も広いレンジ」\nLayout: vertical ladder with position name left, threshold value right, colored bar showing range width.\nAspect ratio 3:4.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "3:4",
+    "chapter": "第5章",
+    "section": "しきい値",
+    "description": "UTG 24 / MP 22 / CO 20 / BTN 18 / SB 20 のポジション別プレイしきい値ラダー"
+  },
+  {
+    "name": "p06-fig1-suited-ev-table",
+    "prompt": "Table infographic showing the EV advantage of suited hands over offsuit hands. Display a structured comparison table with Japanese labels:\n  - Title at top: 「スーテッドの期待値上乗せ」\n  - Table with columns: 「要素」「数値」「説明」\n  - Row 1: 「フラッシュ完成率」「約11%」「5枚中3枚以上同色の確率」\n  - Row 2: 「EV 上乗せ」「+3〜5%」「同ランクのオフスーツ比」\n  - Row 3: 「スコアボーナス」「+2点」「式への直接加点」\n  - Row 4: 「フラッシュドロー価値」「9アウツ」「ターン時の枚数」\n  - Bottom note: 「AKs vs AKo: 約3bb/100手の差」\nLayout: clean table with alternating rows, numeric values in green.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第6章",
+    "section": "スーテッドの価値",
+    "description": "スーテッドハンドのフラッシュ完成率11%とEV上乗せ3-5%を示すテーブル"
+  },
+  {
+    "name": "p06-fig2-gap-oesd-probability",
+    "prompt": "Horizontal bar chart showing how OESD probability decreases as gap size increases. Display bars with Japanese labels:\n  - Title at top: 「ギャップ別 OESD 確率」\n  - Y-axis labels from top: 「コネクター（0gap）」「1gap」「2gap」「3gap」\n  - X-axis: 「確率 (%)」 0 to 12\n  - Bars: コネクター: 9.6% (green, longest), 1gap: 7.5% (light green), 2gap: 4.5% (orange), 3gap: 1.2% (red, shortest)\n  - Each bar shows its percentage value at end\n  - Annotation: 「2gap以上は急激に低下」\n  - Bottom note: 「OESD = 両面ストレートドロー」\nLayout: horizontal bar chart, bars decrease in length from top to bottom.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第6章",
+    "section": "ギャップの影響",
+    "description": "コネクター9.6% → 1gap 7.5% → 2gap 4.5% のOESD確率減衰を横棒グラフで示す"
+  },
+  {
+    "name": "p07-fig1-position-range-pyramid",
+    "prompt": "Upward-expanding pyramid showing range width increasing by position. Display a tall pyramid from narrow top to wide base with Japanese labels:\n  - Title at top: 「ポジション別 レンジ幅」\n  - Pyramid from top (narrow) to bottom (wide):\n  - Top tier: 「UTG」「最も狭い」「〜15%」\n  - 2nd tier: 「MP」「〜19%」\n  - 3rd tier: 「CO」「〜25%」\n  - 4th tier: 「BTN」「最も広い」「〜40%」\n  - Bottom: 「BB」「ディフェンス専用」\n  - Right side annotation: 「プレイ頻度 ↑（下へ）」\nLayout: inverted pyramid (wide at bottom), each tier in progressively lighter navy blue shading.\nAspect ratio 3:4.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "3:4",
+    "chapter": "第7章",
+    "section": "ポジション別レンジ",
+    "description": "UTG（最も狭い）からBTN（最も広い）へのレンジ幅ピラミッド図"
+  },
+  {
+    "name": "p07-fig2-hand-matrix",
+    "prompt": "13x13 hand matrix grid showing playable hands colored by position threshold. Display a matrix of poker hand combinations with Japanese labels:\n  - Title at top: 「169ハンド プレイ判定マトリクス」\n  - Top-left diagonal: pocket pairs (AA to 22)\n  - Upper-right triangle: suited hands (AKs etc)\n  - Lower-left triangle: offsuit hands (AKo etc)\n  - Color zones:\n    - Dark navy: 「全ポジション可」(AA KK QQ JJ TT AK AQ)\n    - Medium navy: 「CO/BTN 可」(99 88 AJ KQ 76s)\n    - Light blue: 「BTN のみ」(22-55 A2s-A5s 65s)\n    - Gray: 「フォールド」\n  - Axis labels: rank A K Q J T 9 8 7 6 5 4 3 2\n  - Bottom legend: four color boxes with labels\nLayout: 13x13 grid with color zones.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第7章",
+    "section": "レンジマトリクス",
+    "description": "169ハンドをポジション別しきい値で色分けしたマトリクス図"
+  },
+  {
+    "name": "p08-fig1-gto-overlap-venn",
+    "prompt": "Venn diagram showing overlap between this book's range and GTO range. Display two overlapping circles with Japanese labels:\n  - Title at top: 「本書レンジ vs GTO レンジ」\n  - Left circle label: 「本書レンジ（スコア式）」\n  - Right circle label: 「GTO レンジ」\n  - Left-only zone: 「本書のみ: 一部コネクター系」\n  - Center overlap zone: 「共通: AA KK QQ AK AQ プレミア帯」「重複率: 約80%」\n  - Right-only zone: 「GTO のみ: 混合戦略の細かい調整」\n  - Bottom note: 「80%の重複 → 実用上ほぼ同等」\nLayout: classic Venn diagram with two large overlapping circles, labels in each region.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第8章",
+    "section": "GTOとの比較",
+    "description": "本書のスコア式レンジとGTOレンジのベン図（約80%重複）"
+  },
+  {
+    "name": "p09-fig1-pot-odds-formula",
+    "prompt": "Formula diagram showing how to calculate pot odds and required winning rate. Display a structured formula breakdown with Japanese labels:\n  - Title at top: 「ポットオッズ 必要勝率の計算」\n  - Step 1: 「ポットオッズ = コール額 ÷ (ポット + コール額)」\n  - Step 2 example: 「コール 10bb / ポット 30bb」\n  - Step 3 calculation: 「10 ÷ (30 + 10) = 10 ÷ 40 = 25%」\n  - Conclusion box: 「勝率 25% 以上なら コールが正解」\n  - Bottom note: 「これ以下ならフォールドが最適」\nLayout: vertical step-by-step calculation with each step in a numbered box.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第9章",
+    "section": "ポットオッズ",
+    "description": "ポットオッズから必要勝率を計算するステップ式図解"
+  },
+  {
+    "name": "p09-fig2-bet-size-required-equity",
+    "prompt": "Table infographic mapping common bet sizes to their required winning percentages. Display a reference table with Japanese labels:\n  - Title at top: 「ベットサイズ別 必要勝率」\n  - Table with columns: 「ベットサイズ」「ポット比率」「必要勝率」\n  - Row 1: 「1/3ポット」「33%」「25%」\n  - Row 2: 「1/2ポット」「50%」「33%」\n  - Row 3: 「3/4ポット」「75%」「43%」\n  - Row 4: 「ポット（1倍）」「100%」「50%」\n  - Row 5: 「2倍ポット」「200%」「67%」\n  - Color coding: green rows below 40%, red rows above 50%\n  - Bottom note: 「ハーフポット → 33%以上で損益分岐」\nLayout: 3-column table with alternating row shading.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第9章",
+    "section": "必要勝率テーブル",
+    "description": "1/3ポット〜2倍ポットの各ベットサイズと対応する必要勝率の早見表"
+  },
+  {
+    "name": "p10-fig1-equity-vs-realized-equity",
+    "prompt": "Side-by-side bar comparison showing raw equity versus realized equity for IP and OOP players. Display grouped bars with Japanese labels:\n  - Title at top: 「生エクイティ vs 実現エクイティ」\n  - X-axis: two groups 「IP（有利ポジション）」 and 「OOP（不利ポジション）」\n  - For each group, two bars: 「生エクイティ」(blue) and 「実現エクイティ」(green/red)\n  - IP values: 生50% vs 実現55%（差: +5%）\n  - OOP values: 生50% vs 実現45%（差: -5%）\n  - Annotations: 「+5%」above IP realized bar, 「-5%」below OOP realized bar\n  - Bottom note: 「ポジションが実現エクイティに直結」\nLayout: grouped bar chart with two clusters, y-axis shows percentage 0-60%.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第10章",
+    "section": "実現エクイティ",
+    "description": "IP vs OOPの生エクイティと実現エクイティの差異を並べた棒グラフ"
+  },
+  {
+    "name": "p10-fig2-eqr-ip-oop",
+    "prompt": "Comparison table showing EQR (Equity Realization Rate) differences between IP and OOP positions. Display a structured comparison with Japanese labels:\n  - Title at top: 「EQR：IP vs OOP 差異」\n  - Table with columns: 「ポジション」「EQR 目安」「主な要因」\n  - Row 1: 「IP（後ろから行動）」「105〜115%」「チェック誘引・バリューベット優位」\n  - Row 2: 「OOP（先行動）」「85〜95%」「フォールドプレッシャー・見切り」\n  - Row 3: 「BTN（最高）」「110〜120%」「全ストリート最後の行動」\n  - Formula row: 「実現EV = 生エクイティ × EQR」\n  - Bottom note: 「BTN は生エクイティを超えた価値を生む」\nLayout: 3-column comparison table.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第10章",
+    "section": "EQR",
+    "description": "IP（EQR 105-115%）とOOP（85-95%）のエクイティ実現率差異テーブル"
+  },
+  {
+    "name": "p11-fig1-15x-rule",
+    "prompt": "Visual formula diagram showing the 15x rule for calling raises with pocket pairs. Display a centered calculation diagram with Japanese labels:\n  - Title at top: 「15倍ルール：セット狙いの基準」\n  - Large central formula: 「スタック ÷ レイズ額 ≥ 15」\n  - Example calculation:\n    - 「スタック: 150bb」\n    - 「レイズ額: 10bb」\n    - 「150 ÷ 10 = 15 ✓ コール可」\n  - Counter-example:\n    - 「スタック: 80bb」\n    - 「レイズ額: 8bb」\n    - 「80 ÷ 8 = 10 ✗ フォールド」\n  - Bottom note: 「セット確率約12%を考慮したしきい値」\nLayout: large formula centered, two examples below in green (OK) and red (NG) boxes.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第11章",
+    "section": "15倍ルール",
+    "description": "スタック÷レイズ額≥15のセット狙いコール基準を式と例で示す図"
+  },
+  {
+    "name": "p11-fig2-set-probability-pie",
+    "prompt": "Pie chart showing the probability of hitting a set by the flop with a pocket pair. Display a large pie chart with Japanese labels:\n  - Title at top: 「ポケットペア フロップセット確率」\n  - Large pie chart divided into:\n    - Main slice (88%): 「セットなし」in gray\n    - Small slice (12%): 「セット完成」in green\n  - Center or nearby: large number 「12%」\n  - Supplementary stats below:\n    - 「ターンまでに: 約22%」\n    - 「フロップのみ: 約12%」\n  - Bottom note: 「3回に1回は必ずヒットする感覚で」\nLayout: large donut/pie chart with percentage labels.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第11章",
+    "section": "セット確率",
+    "description": "ポケットペアのフロップセット確率12%を示すパイチャート"
+  },
+  {
+    "name": "p12-fig1-3bet-score-formula",
+    "prompt": "Formula structure diagram for the 3-bet scoring formula. Display a centered equation with component boxes with Japanese labels:\n  - Title at top: 「3bet スコア計算式」\n  - Large formula: 「3betScore = H + L + ボーナス - ペナルティ + ポジション補正」\n  - Component breakdown boxes:\n    - 「H + L」→ 「カード強度（基本値）」\n    - 「ボーナス」→ 「ペア+10 / スーテッド+2」\n    - 「ペナルティ」→ 「ギャップ-1〜-4」\n    - 「ポジション補正」→ 「BTN+2 / SB+1 / UTG-2」\n  - Conclusion: 「しきい値以上 → 3bet 可」\nLayout: central formula with four connecting component boxes below.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第12章",
+    "section": "3betスコア",
+    "description": "3betスコア式の構造と各コンポーネントの説明図"
+  },
+  {
+    "name": "p12-fig2-3bet-threshold-ladder",
+    "prompt": "Vertical ladder showing 3-bet thresholds against different opener positions. Display a reference list with Japanese labels:\n  - Title at top: 「3bet しきい値：オープン者別」\n  - Each row shows opener position and the 3-bet threshold:\n  - 「vs UTG オープン」→ 「しきい値: 26」\n  - 「vs MP オープン」→ 「しきい値: 24」\n  - 「vs CO オープン」→ 「しきい値: 22」\n  - 「vs BTN オープン」→ 「しきい値: 20」\n  - 「vs SB オープン」→ 「しきい値: 21」\n  - Right side gradient: red at top (tight = high threshold), green at bottom (loose = low threshold)\n  - Bottom note: 「UTG は強いハンドのみ 3bet」\nLayout: vertical table-ladder with opener position left, threshold right.\nAspect ratio 3:4.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "3:4",
+    "chapter": "第12章",
+    "section": "3betしきい値",
+    "description": "対UTG〜対SBオープン者別の3betしきい値ラダー（26 → 20）"
+  },
+  {
+    "name": "p12-fig3-blocker-effect",
+    "prompt": "Visual diagram showing how holding AK reduces opponent's strong hand combinations. Display a combination counting diagram with Japanese labels:\n  - Title at top: 「ブロッカー効果：AK 保有時」\n  - Left panel: 「AK 非保有時」\n    - 「AA コンボ数: 6」\n    - 「KK コンボ数: 6」\n    - 「AK コンボ数: 16」\n    - 「合計: 28コンボ」\n  - Right panel: 「AK 保有時（自分がAKs）」\n    - 「AA コンボ数: 3」（A が1枚ブロック）\n    - 「KK コンボ数: 3」（K が1枚ブロック）\n    - 「AK コンボ数: 12」（A/K 両方ブロック）\n    - 「合計: 18コンボ」\n  - Center arrow: 「AK 保有で 28→18 コンボに減少」\n  - Bottom note: 「相手の強いレンジが約35%縮小」\nLayout: two-panel comparison with combo counts, center arrow showing reduction.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第12章",
+    "section": "ブロッカー効果",
+    "description": "AK保有時に相手のAA/KK/AKコンボが16→12に減少するブロッカー効果の視覚化"
+  },
+  {
+    "name": "p13-fig1-polarized-vs-linear",
+    "prompt": "Side-by-side comparison infographic contrasting polarized range vs linear range strategies. Display two panels with Japanese labels:\n  - Title at top: 「ポーラライズ vs リニア レンジ」\n  - Left panel: 「ポーラライズ（二極化）」\n    - Top section (green): 「バリューハンド: AA KK QQ AK」\n    - Empty middle zone: 「中間ハンドなし」\n    - Bottom section (orange): 「ブラフハンド: A5s A4s 低スーテッド」\n    - Use case: 「3bet・大きなレイズ時」\n  - Right panel: 「リニア（連続型）」\n    - Descending list: 「AA KK QQ JJ TT 99 AK AQ AJ…」（連続したハンド群）\n    - Use case: 「オープン・コール時」\n  - Bottom note: 「場面によってレンジ構成を切り替える」\nLayout: two-column panels with distinct hand type distributions.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第13章",
+    "section": "レンジ構成",
+    "description": "ポーラライズレンジ（バリュー+ブラフ二極化）とリニアレンジ（連続型）の対比図"
+  },
+  {
+    "name": "p14-fig1-threshold-adjustment",
+    "prompt": "Adjustment table showing how to modify hand score thresholds based on opponent type. Display a structured reference with Japanese labels:\n  - Title at top: 「しきい値 ±2 調整」\n  - Table with columns: 「相手タイプ」「調整」「理由」\n  - Row 1: 「タイトプレイヤー（VPIP<15）」「+2 に引き上げ」「コールで損」\n  - Row 2: 「ルースプレイヤー（VPIP>30）」「-2 に引き下げ」「広いレンジで搾取」\n  - Row 3: 「アグレッシブ（PFR高）」「+1〜+2」「3betリスク増」\n  - Row 4: 「パッシブ（PFR低）」「-1〜-2」「コールが多い→バリューが出る」\n  - Row 5: 「ショートスタック（<30bb）」「+3〜+5」「オールイン対応のみ」\n  - Bottom note: 「基本しきい値に補正を乗せる」\nLayout: 3-column table with adjustment values in green (+) or red (-).\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第14章",
+    "section": "しきい値調整",
+    "description": "相手タイプ別のしきい値±2調整テーブル（タイト/ルース/アグレッシブ/パッシブ/ショート）"
+  },
+  {
+    "name": "p15-fig1-sb-bb-decision-tree",
+    "prompt": "Decision tree for SB and BB preflop play. Display a vertical branching flowchart with Japanese labels:\n  - Title at top: 「SB / BB プリフロップ判断ツリー」\n  - SB branch (left):\n    - 「SB がオープン →」\n    - 「スコア ≥ 22 → オープン 2.5bb」\n    - 「スコア ≥ 26 → 3bet 検討」\n    - 「スコア < 22 → フォールド」\n  - BB branch (right):\n    - 「BB が直面 →」\n    - 「オープン vs 3bet？」\n    - 「スコア ≥ 20 → 3bet or コール」\n    - 「ポットオッズ ≥ 25% → コール」\n    - 「その他 → フォールド」\n  - Bottom note: 「SB は高リスク、BB はポットオッズ優先」\nLayout: two parallel vertical decision trees for SB and BB.\nAspect ratio 9:16.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "9:16",
+    "chapter": "第15章",
+    "section": "SB/BB戦略",
+    "description": "SBとBBのプリフロップ判断ツリー（オープン・3bet・コール・フォールドの分岐）"
+  },
+  {
+    "name": "p15-fig2-bb-defense-frequency",
+    "prompt": "Table showing BB defense frequency against various open sizes. Display a reference table with Japanese labels:\n  - Title at top: 「BB ディフェンス頻度表」\n  - Table with columns: 「オープンサイズ」「ポットオッズ」「MDF（最低防御頻度）」「推奨アクション」\n  - Row 1: 「2bb（ミニレイズ）」「33%」「50%」「積極コール」\n  - Row 2: 「2.5bb」「36%」「44%」「コール重視」\n  - Row 3: 「3bb」「40%」「38%」「セレクティブ」\n  - Row 4: 「4bb」「44%」「30%」「プレミアのみ」\n  - MDF formula at bottom: 「MDF = 1 - ベット ÷ (ポット + ベット)」\nLayout: 4-column table with MDF values highlighted in navy.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第15章",
+    "section": "BB ディフェンス",
+    "description": "オープンサイズ別BBのポットオッズとMDF（最低防御頻度）早見表"
+  },
+  {
+    "name": "p16-fig1-4bet-structure",
+    "prompt": "Structural diagram showing the composition of a 4-bet range with value and bluff components. Display a two-component diagram with Japanese labels:\n  - Title at top: 「4bet レンジ構成」\n  - Left block: 「バリュー 4bet」\n    - 「AA KK QQ」\n    - 「AK（一部）」\n    - 「割合: 約60〜70%」\n  - Right block: 「ブラフ 4bet」\n    - 「AXs（A5s A4s）」\n    - 「KXs（ブロッカー系）」\n    - 「割合: 約30〜40%」\n  - Center: 「4bet = バリュー ＋ ブラフ の組み合わせ」\n  - Bottom note: 「ブラフ比率が低いと搾取される」\n  - Arrow from center pointing to: 「バランスが重要」\nLayout: wide two-panel layout with connecting center annotation.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第16章",
+    "section": "4bet構成",
+    "description": "4betレンジのバリュー（60-70%）とブラフ（30-40%）の二重構造図"
+  },
+  {
+    "name": "p16-fig2-allin-required-equity",
+    "prompt": "Table showing required equity to call an all-in based on stack and pot size ratios. Display a reference table with Japanese labels:\n  - Title at top: 「オールイン コール 必要エクイティ」\n  - Table with columns: 「コール額」「ポット」「必要エクイティ」\n  - Row 1: 「50bb」「100bb」「33%」\n  - Row 2: 「75bb」「100bb」「43%」\n  - Row 3: 「100bb（ポットサイズ）」「100bb」「50%」\n  - Row 4: 「20bb（3bet ポット）」「50bb」「29%」\n  - Row 5: 「40bb（4bet ポット）」「80bb」「33%」\n  - Bottom note: 「エクイティ計算は必須スキル」\nLayout: 3-column table with required equity values in navy bold.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第16章",
+    "section": "オールイン必要エクイティ",
+    "description": "コール額とポット別のオールイン必要エクイティ早見表"
+  },
+  {
+    "name": "p17-fig1-multiway-range-contraction",
+    "prompt": "Horizontal bar chart showing how playable range contracts as more players enter the pot. Display bars with Japanese labels:\n  - Title at top: 「プレイヤー数別 レンジ収縮」\n  - Y-axis labels: 「2-way（1vs1）」「3-way（3人）」「4-way（4人）」\n  - X-axis: 「プレイ可能ハンド割合 (%)」 0 to 100\n  - Bars: 2-way: 40% (green, longest), 3-way: 25% (light green), 4-way: 18% (red, shortest)\n  - Values shown at end of each bar\n  - Annotation: 「1人増えるたびに約35%縮小」\n  - Bottom note: 「マルチウェイ → プレミアハンドのみ推奨」\nLayout: horizontal bar chart, bars decrease from top to bottom.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第17章",
+    "section": "マルチウェイ",
+    "description": "2-way/3-way/4-wayのプレイヤー数増加に応じたプレイ可能レンジの収縮を棒グラフで示す"
+  },
+  {
+    "name": "p19-fig1-cheatsheet-overview",
+    "prompt": "Compact one-page cheatsheet overview for preflop play. Display a structured reference card with Japanese labels:\n  - Title at top: 「プリフロップ チートシート」\n  - Section 1: 「スコア式」「Score = H + L + ボーナス - ペナルティ」\n  - Section 2 table: 「ポジション」「しきい値」 — UTG:24 / MP:22 / CO:20 / BTN:18\n  - Section 3: 「ボーナス」「ペア +10 / スーテッド +2 / コネクター +1」\n  - Section 4: 「ペナルティ」「1gap -1 / 2gap -2 / 3gap -4」\n  - Section 5: 「3bet 加点」「BTN +2 / SB +1 / UTG -2」\n  - Bottom note: 「全ての判断はこのシートから」\nLayout: compact reference card with 5 labeled sections, small font, dense information.\nAspect ratio 3:4.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "3:4",
+    "chapter": "第19章",
+    "section": "チートシート",
+    "description": "スコア式・しきい値・ボーナス・ペナルティを1枚にまとめたプリフロップチートシート"
+  },
+  {
+    "name": "p20-fig1-learning-loop",
+    "prompt": "Circular learning loop diagram showing the study cycle for poker improvement. Display a circular flow with Japanese labels:\n  - Title at top: 「学習サイクル」\n  - Three nodes in a circle connected by arrows:\n    - Node 1 (top): 「本書で基礎習得」「スコア式・レンジ表」\n    - Node 2 (right): 「ソルバーで検証」「GTO 解との比較」\n    - Node 3 (bottom-left): 「実戦で復習」「ハンドレビュー」\n  - Arrows between nodes showing cycle direction\n  - Center circle: 「継続的改善」\n  - Bottom note: 「3ステップで螺旋的に成長」\nLayout: circular flow diagram with three main nodes and connecting arrows.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第20章",
+    "section": "学習サイクル",
+    "description": "本書→ソルバー→実戦復習の3ステップ学習ループ図"
+  },
+  {
+    "name": "p21-fig1-r1-3band",
+    "prompt": "Vertical diagram showing the R1 three-band classification system for hand scores. Display a banded range diagram with Japanese labels:\n  - Title at top: 「R1：スコア 3バンド化」\n  - Three horizontal bands from top to bottom:\n    - Top band (green, narrow): 「バンド A」「スコア ≥ 26」「3bet / オールイン推奨」\n    - Middle band (navy): 「バンド B」「スコア 20〜25」「オープン標準」\n    - Bottom band (red, narrow): 「バンド C」「スコア < 20」「フォールド」\n  - Left axis: 「強 ↑」at top, 「弱 ↓」at bottom\n  - Threshold lines labeled: 「T=26」and 「T=20」\n  - Bottom note: 「バンドで即座に判断」\nLayout: vertical three-band classification with threshold horizontal lines.\nAspect ratio 9:16.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "9:16",
+    "chapter": "第21章",
+    "section": "R1 3バンド化",
+    "description": "スコア≥26（バンドA）/ 20-25（バンドB）/ <20（バンドC）の3バンド分類図"
+  },
+  {
+    "name": "p21-fig2-r2-suit-judgment",
+    "prompt": "Visual diagram showing the R2 suit adjustment between major and minor suits. Display a comparison with Japanese labels:\n  - Title at top: 「R2：スーツ判定」\n  - Two panels side by side:\n  - Left panel: 「メジャースーツ（♠♥）」\n    - Two spade icons and two heart icons\n    - Label: 「スーツ補正: 0（標準）」\n    - Example: 「A♠K♠: ボーナス +2」\n  - Right panel: 「マイナースーツ（♣♦）」\n    - Two club icons and two diamond icons\n    - Label: 「スーツ補正: -0.5」\n    - Example: 「A♣K♣: ボーナス +1.5」\n  - Bottom note: 「スーツ差は細かい調整に使う」\nLayout: two-panel comparison with suit symbols prominently shown.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第21章",
+    "section": "R2 スーツ判定",
+    "description": "♠♥（メジャー）vs ♣♦（マイナー）のスーツ補正比較図"
+  },
+  {
+    "name": "p21-fig3-r3-range-adv-matrix",
+    "prompt": "Matrix table showing R3 RangeAdv adjustment values by position matchup. Display a grid with Japanese labels:\n  - Title at top: 「R3：RangeAdv 補正マトリクス」\n  - Table with rows as your position (UTG/MP/CO/BTN/SB/BB) and columns as opponent position\n  - Key cells showing adjustment values:\n    - BTN vs UTG: 「+R = +2」\n    - UTG vs BTN: 「+R = -2」\n    - CO vs MP: 「+R = +1」\n    - BB vs BTN: 「+R = -1」\n  - Color coding: positive values in green, negative in red, zero in gray\n  - Footer: 「レンジアドバンテージが有利なら加点」\nLayout: matrix/grid table with position labels on both axes.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第21章",
+    "section": "R3 RangeAdv",
+    "description": "ポジションマッチアップ別RangeAdv補正値マトリクス（+2〜-2）"
+  },
+  {
+    "name": "p21-fig4-r5-ako-trap-flow",
+    "prompt": "Horizontal flowchart showing the AKo trap progression strategy. Display a wide flow diagram with Japanese labels:\n  - Title at top: 「R5：AKo トラップ進行フロー」\n  - Step-by-step flow:\n    - Step 1: 「AKo 保有」→「プリフロップ: コール（トラップ）」\n    - Step 2: 「フロップ: A or K ヒット」→「チェック or スモールベット」\n    - Step 3: 「相手がベット継続」→「コール or レイズ」\n    - Step 4: 「ターン: ポット拡大」→「バリュー抽出」\n  - Alternative branch at Step 2: 「ミス → チェックバック」\n  - Bottom note: 「トラップは IP 時に有効」\nLayout: wide horizontal flowchart with numbered steps and branch points.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第21章",
+    "section": "R5 トラップ",
+    "description": "AKoでのトラップ進行（プリフロップコール→フロップチェック→ターンバリュー）フロー図"
+  },
+  {
+    "name": "p21-fig5-r6-mdf-movement",
+    "prompt": "Diagram showing how MDF shifts ±10% based on player behavior adjustments. Display a range slider diagram with Japanese labels:\n  - Title at top: 「R6：MDF ±10% 動き」\n  - Central reference line: 「基準 MDF」\n  - Left section (tighter): 「-10%（MDF 引き下げ）」\n    - Trigger: 「相手がタイト → ブラフ少ない」\n    - Action: 「より多くフォールド可」\n  - Right section (looser): 「+10%（MDF 引き上げ）」\n    - Trigger: 「相手がアグレッシブ → ブラフ多い」\n    - Action: 「より多くディフェンス必要」\n  - Center value example: 「標準 MDF = 60%」「範囲: 50%〜70%」\n  - Bottom note: 「相手のブラフ頻度で MDF を調整」\nLayout: horizontal slider diagram with center reference and ±10% zones.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第21章",
+    "section": "R6 MDF調整",
+    "description": "相手のアグレッシブ度に応じたMDF ±10%調整範囲スライダー図"
+  },
+  {
+    "name": "p22-fig1-utg-range-chart",
+    "prompt": "13x13 hand matrix showing the UTG (Under the Gun) opening range highlighted on the grid. Display a colored matrix with Japanese labels:\n  - Title at top: 「UTG オープンレンジ」\n  - 13x13 grid with rank labels A K Q J T 9 8 7 6 5 4 3 2 on both axes\n  - Highlighted cells (navy/green): AA KK QQ JJ TT 99 AKs AKo AQs AQo AJs KQs\n  - Gray cells: all other hands (フォールド)\n  - Counter at bottom: 「プレイ可能: 約15ハンド / 全体の9%」\n  - Legend: green = 「プレイ」, gray = 「フォールド」\n  - Threshold note: 「しきい値 24 以上のみ」\nLayout: colored 13x13 grid matrix.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "付録",
+    "section": "UTGレンジ",
+    "description": "しきい値24基準のUTGオープンレンジを色分けした13×13マトリクスチャート"
+  },
+  {
+    "name": "p22-fig2-btn-range-chart",
+    "prompt": "13x13 hand matrix showing the BTN (Button) opening range highlighted on the grid. Display a colored matrix with Japanese labels:\n  - Title at top: 「BTN オープンレンジ」\n  - 13x13 grid with rank labels A K Q J T 9 8 7 6 5 4 3 2 on both axes\n  - Highlighted cells (green): large portion of the matrix including all pocket pairs, most suited hands, broadway hands, and many suited connectors\n  - Light blue cells: marginal hands\n  - Gray cells: 2x-3x only hands (fold)\n  - Counter at bottom: 「プレイ可能: 約70ハンド / 全体の41%」\n  - Legend: dark green = 「積極プレイ」, light green = 「条件付プレイ」, gray = 「フォールド」\n  - Threshold note: 「しきい値 18 以上」\nLayout: colored 13x13 grid matrix with wider range highlighted than UTG.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "付録",
+    "section": "BTNレンジ",
+    "description": "しきい値18基準のBTNオープンレンジを色分けした13×13マトリクスチャート（全体の41%）"
+  },
+  {
+    "name": "p22-fig3-hand-score-heatmap",
+    "prompt": "13x13 heatmap matrix showing hand score values for all 169 poker hand types. Display a color-gradient matrix with Japanese labels:\n  - Title at top: 「169ハンド スコアヒートマップ」\n  - 13x13 grid with rank labels A K Q J T 9 8 7 6 5 4 3 2 on both axes\n  - Color gradient from dark navy (high score) to light gray (low score)\n  - Key score labels on representative cells:\n    - AA cell: 「38」\n    - KK cell: 「36」\n    - AKs cell: 「29」\n    - AKo cell: 「27」\n    - 72o cell: 「9」\n  - Legend bar at bottom: 「低←スコア→高」with gradient\n  - Footer: 「上三角=スーテッド / 下三角=オフスーツ / 対角=ペア」\nLayout: heatmap matrix with color gradient and sample score annotations.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "付録",
+    "section": "スコアヒートマップ",
+    "description": "169ハンドのスコア値を濃淡で示すヒートマップマトリクス（AA=38〜72o=9）"
+  }
+]

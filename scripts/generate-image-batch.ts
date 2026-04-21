@@ -37,7 +37,7 @@ type BatchRequest = z.infer<typeof BatchRequestSchema>;
 const ImageDefinitionSchema = z.object({
   name: z.string().min(1),
   prompt: z.string().min(1),
-  aspectRatio: z.enum(["3:4", "1:1", "4:3"]),
+  aspectRatio: z.enum(["16:9", "4:3", "1:1", "3:4", "9:16"]),
   chapter: z.string().min(1),
   section: z.string().min(1),
   description: z.string().min(1),

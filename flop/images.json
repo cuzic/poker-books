@@ -1,1 +1,554 @@
-[]
+[
+  {
+    "name": "f00-fig1-dual-book-learning-path",
+    "prompt": "Vertical flowchart showing the learning path connecting the preflop book and the flop book. Display a top-to-bottom flow with Japanese labels:\n  - Title at top: 「両書籍 学習パス」\n  - Top node: 「プリフロップ編（第1巻）」「スコア式・ポジション・レンジ選択」\n  - Arrow down: 「完了後」\n  - Middle node: 「フロップ編（第2巻）」「ボードテクスチャ・HandScore・CBet」\n  - Arrow down: 「統合」\n  - Bottom node: 「実戦統合」「プリフロップ → フロップ → ターン 一貫判断」\n  - Right side annotations per level: 「Level 1」「Level 2」「Level 3」\n  - Bottom note: 「2冊で完全な判断フローを習得」\nLayout: vertical three-node flowchart with connecting arrows.\nAspect ratio 9:16.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "9:16",
+    "chapter": "はじめに",
+    "section": "両書籍学習パス",
+    "description": "プリフロップ編→フロップ編→実戦統合の3段階学習パス図"
+  },
+  {
+    "name": "f01-fig1-info-revealed-pie",
+    "prompt": "Pie chart showing what percentage of hand information is revealed at each street. Display two pie charts side by side with Japanese labels:\n  - Title at top: 「情報公開率：ストリート別」\n  - Left pie: 「プリフロップ後」\n    - Revealed slice (28%): 「公開済 28%」in navy\n    - Hidden slice (72%): 「未公開 72%」in gray\n  - Right pie: 「フロップ後」\n    - Revealed slice (71%): 「公開済 71%」in green\n    - Hidden slice (29%): 「未公開 29%」in light gray\n  - Bottom note: 「フロップで71%の情報が出る」\nLayout: two pie charts side by side with percentage labels.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第1章",
+    "section": "情報公開率",
+    "description": "プリフロップ28%→フロップ71%の情報公開率をパイチャートで比較"
+  },
+  {
+    "name": "f01-fig2-ako-flop-hit-pie",
+    "prompt": "Pie chart breaking down AKo flop hit percentages by hit type. Display a segmented pie chart with Japanese labels:\n  - Title at top: 「AKo フロップ ヒット分岐」\n  - Pie segments:\n    - 「Aヒット（トップペア以上）」32%\n    - 「Kヒット（トップペア）」26%\n    - 「AK 両方ヒット（2ペア以上）」4%\n    - 「ドローのみ」15%\n    - 「完全ミス」23%\n  - Labels on each segment showing percentage\n  - Bottom note: 「約40%はフロップで苦戦」\nLayout: pie chart with labeled segments, percentages clearly shown.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第1章",
+    "section": "AKoフロップヒット",
+    "description": "AKoのフロップヒット分岐（Aヒット32% / Kヒット26% / ミス23%等）パイチャート"
+  },
+  {
+    "name": "f01-fig3-board-ev-variance",
+    "prompt": "Horizontal bar chart showing EV variance by board texture type. Display bars with Japanese labels:\n  - Title at top: 「ボード別 EV 振れ幅」\n  - Y-axis: board texture types 「ドライ（K72r）」「ミドル（T85r）」「ウェット（J98s）」「モノトーン（KJTss）」\n  - X-axis: EV range from -5 to +5 bb\n  - Each entry shows a range bar (not single bar) spanning from min to max EV:\n    - ドライ: narrow range -1 to +2\n    - ミドル: medium range -2 to +3\n    - ウェット: wide range -4 to +5\n    - モノトーン: widest range -5 to +5\n  - Annotations showing range width values\n  - Bottom note: 「ウェット → EV 振れ幅が大きい」\nLayout: horizontal range bar chart.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第1章",
+    "section": "EV振れ幅",
+    "description": "ドライ・ミドル・ウェット・モノトーン各ボードのEV振れ幅比較バーチャート"
+  },
+  {
+    "name": "f02-fig1-spr-four-zones",
+    "prompt": "Vertical zone diagram showing four SPR ranges with corresponding strategies. Display four horizontal bands with Japanese labels:\n  - Title at top: 「SPR 4 帯域とストラテジー」\n  - Band 1 (top, red): 「SPR 0〜3」「低 SPR」「オールイン戦略 / セット・2ペア必須」\n  - Band 2: 「SPR 3〜6」「中低 SPR」「TP 強め / ドローは積極的」\n  - Band 3 (navy): 「SPR 6〜15」「中高 SPR」「標準プレイ / 役構成に注意」\n  - Band 4 (bottom, green): 「SPR 15+」「高 SPR」「ナッツドロー重視 / TP 注意」\n  - Left axis: 「SPR ↑（スタック深い）」\n  - Right axis: 「推奨ハンド強度」\n  - Bottom note: 「SPR = スタック ÷ ポット」\nLayout: vertical four-band diagram with SPR ranges.\nAspect ratio 9:16.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "9:16",
+    "chapter": "第2章",
+    "section": "SPR帯域",
+    "description": "SPR 0-3 / 3-6 / 6-15 / 15+の4帯域と各ストラテジー解説縦型帯図"
+  },
+  {
+    "name": "f02-fig2-mdf-quick-reference",
+    "prompt": "Quick reference table showing MDF (Minimum Defense Frequency) for various bet sizes. Display a wide reference table with Japanese labels:\n  - Title at top: 「MDF 早見表」\n  - Table with columns: 「ベットサイズ（ポット比率）」「MDF」「ディフェンスすべき割合」\n  - Row 1: 「1/4ポット（25%）」「80%」「相手の5回ブラフに4回対応」\n  - Row 2: 「1/3ポット（33%）」「75%」「4回に3回ディフェンス」\n  - Row 3: 「1/2ポット（50%）」「67%」「3回に2回」\n  - Row 4: 「3/4ポット（75%）」「57%」「約6割ディフェンス」\n  - Row 5: 「1ポット（100%）」「50%」「半分ディフェンス」\n  - Row 6: 「2ポット（200%）」「33%」「3回に1回で十分」\n  - Footer formula: 「MDF = ポット ÷ (ポット + ベット)」\nLayout: wide 3-column reference table.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第2章",
+    "section": "MDF早見表",
+    "description": "1/4ポット〜2ポットの各ベットサイズに対応するMDF値の早見表"
+  },
+  {
+    "name": "f02-fig3-pair-position-types",
+    "prompt": "Diagram showing types of pair based on board card positions. Display a structured classification with Japanese labels:\n  - Title at top: 「ペア位置関係の分類」\n  - Example board: 「K♠ J♥ 2♣」displayed as flat card icons\n  - Classification table with columns: 「名称」「条件」「例」\n  - Row 1: 「トップペア（TP）」「最高位カードとペア」「K+ 任意カード」\n  - Row 2: 「セカンドペア（MP）」「中位カードとペア」「J+ 任意カード」\n  - Row 3: 「ボトムペア（BP）」「最低位カードとペア」「2+ 任意カード」\n  - Row 4: 「オーバーペア（OP）」「ボード最高より高いポケットペア」「AA/QQ で K-J-2」\n  - Row 5: 「ツーペア（2P）」「2組ペア」「KJ, K2, J2 等」\n  - Bottom note: 「TP 以上がバリューの基準」\nLayout: example board at top, classification table below.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第2章",
+    "section": "ペア位置関係",
+    "description": "K-J-2ボードを例にTP/MP/BP/OP/2Pの分類を示すペア位置関係図"
+  },
+  {
+    "name": "f02-fig4-board-texture-three-types",
+    "prompt": "Wide comparison showing three board texture types with representative flop examples. Display three panels side by side with Japanese labels:\n  - Title at top: 「ボードテクスチャ 3分類」\n  - Left panel: 「ドライ」\n    - Card icons: K♠ 7♦ 2♣\n    - Labels: 「レインボー」「ローボード」\n    - CBet推奨: 「頻度高 / サイズ小」\n  - Center panel: 「セミウェット」\n    - Card icons: T♥ 8♦ 5♠\n    - Labels: 「コネクター系」「2スーツ可」\n    - CBet推奨: 「中頻度 / 中サイズ」\n  - Right panel: 「ウェット」\n    - Card icons: J♥ 9♥ 8♦\n    - Labels: 「コネクター」「フラッシュドロー」\n    - CBet推奨: 「頻度低 / サイズ大」\n  - Bottom note: 「テクスチャでCBet戦略が変わる」\nLayout: three equal columns with card illustrations and stats.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第2章",
+    "section": "ボードテクスチャ",
+    "description": "ドライ（K72r）/ セミウェット（T85r）/ ウェット（J98s）の3種類ボードテクスチャ比較"
+  },
+  {
+    "name": "f03-fig1-range-propagation",
+    "prompt": "Wide flow diagram showing how preflop range propagates to flop decisions. Display a horizontal flow with Japanese labels:\n  - Title at top: 「レンジ伝搬：プリフロップ → フロップ」\n  - Step 1 (left): 「プリフロップ レンジ」「例: BTN オープン 40%」\n  - Arrow →\n  - Step 2: 「フロップ ヒット率」「各ハンドタイプの分布」\n  - Arrow →\n  - Step 3: 「HandScore 計算」「各ハンドに数値付与」\n  - Arrow →\n  - Step 4 (right): 「アクション判断」「Bet / Check / Fold」\n  - Below flow, example split: 「AA: score 30 → Bet」「A8: score 15 → Check」「72: score 2 → Fold」\n  - Bottom note: 「プリフロップの選択がフロップ分布を決める」\nLayout: wide horizontal four-step flow with example outcomes below.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第3章",
+    "section": "レンジ伝搬",
+    "description": "プリフロップレンジがフロップのHandScore計算→アクション判断へ伝搬するフロー図"
+  },
+  {
+    "name": "f03-fig2-position-handscore-bars",
+    "prompt": "Bar chart showing average HandScore by position on the flop. Display grouped bars with Japanese labels:\n  - Title at top: 「ポジション別 平均 HandScore（フロップ）」\n  - X-axis: positions 「UTG」「MP」「CO」「BTN」「SB」「BB」\n  - Y-axis: 「平均 HandScore」 0 to 25\n  - Bars showing approximate values: UTG: 22, MP: 20, CO: 19, BTN: 17, SB: 18, BB: 15\n  - Color: earlier positions in green (higher average = stronger range), later in navy\n  - Annotation: 「UTG は強いレンジのみ → 平均スコア高」\n  - Bottom note: 「BTN はレンジが広いため平均スコアは低め」\nLayout: vertical bar chart with 6 bars.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第3章",
+    "section": "ポジション別HandScore",
+    "description": "UTG〜BB各ポジションのフロップ平均HandScore比較棒グラフ"
+  },
+  {
+    "name": "f04-fig1-four-flop-mistakes",
+    "prompt": "Vertical infographic listing four major flop mistakes with icons and Japanese labels:\n  - Title at top: 「フロップ 4大失敗」\n  - Failure 1: 「TPWK オーバーコミット」\n    - Sub: 「トップペア弱キッカーで大きく賭けすぎ」\n  - Failure 2: 「オーバーペア病」\n    - Sub: 「QQ/JJ でウェットボードを過信」\n  - Failure 3: 「ドロー追いすぎ」\n    - Sub: 「ポットオッズ無視でコール継続」\n  - Failure 4: 「ポジション無視 CBet」\n    - Sub: 「OOP から高頻度でベット」\n  - Each failure in a red warning card with number badge\n  - Bottom note: 「フロップの失敗は全ストリートに影響」\nLayout: vertical list of four red warning cards.\nAspect ratio 9:16.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "9:16",
+    "chapter": "第4章",
+    "section": "フロップの失敗",
+    "description": "TPWK過信・オーバーペア病・ドロー追いすぎ・OOP CBetの4大フロップ失敗縦型図"
+  },
+  {
+    "name": "f04-fig2-tpwk-overcommit-loss",
+    "prompt": "Bar chart showing EV loss from overcommitting with TPWK (Top Pair Weak Kicker). Display comparison bars with Japanese labels:\n  - Title at top: 「TPWK オーバーコミット 損失」\n  - Scenario: ボード K♠ 7♦ 2♣、保有 K♣ 4♠\n  - Three action comparison:\n    - 「チェックバック（標準）」EV: +2.1 bb (green bar)\n    - 「ハーフポットベット」EV: +0.8 bb (light green bar)\n    - 「フルポットベット（オーバーコミット）」EV: -1.4 bb (red bar)\n  - Annotation: 「フルポット → EV -1.4bb の損失」\n  - Bottom note: 「TPWK は守る価値より攻める損が大きい」\nLayout: vertical bar chart with three bars showing EV comparison.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第4章",
+    "section": "TPWK損失",
+    "description": "TPWK（K4でKボード）でのチェックバック vs ハーフポット vs フルポットEV比較"
+  },
+  {
+    "name": "f04-fig3-overpair-bias",
+    "prompt": "Before/After comparison showing cognitive bias with overpairs on wet boards. Display two panels with Japanese labels:\n  - Title at top: 「オーバーペア病：認知バイアス対比」\n  - Left panel (red): 「陥りやすい思考」\n    - 「QQ 保有 → 強い！」\n    - 「ボード: J♥ 9♥ 8♦」\n    - 「→ 大きくベット継続」\n    - 「実際のエクイティ: 45%」（when called）\n  - Right panel (green): 「正しい思考」\n    - 「QQ 保有 → ボードを確認」\n    - 「J98 ウェット → ドロー豊富」\n    - 「→ スモールベット or チェック」\n    - 「相手コールレンジに注意」\n  - Bottom note: 「ボードテクスチャ > 手持ちの強さ」\nLayout: two-panel comparison with red left and green right.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第4章",
+    "section": "オーバーペア病",
+    "description": "QQをウェットボードで過信する認知バイアスと正しい思考の対比図"
+  },
+  {
+    "name": "f05-fig1-boardscore-formula-structure",
+    "prompt": "Formula structure diagram for the BoardScore calculation. Display a centered equation with Japanese labels:\n  - Title at top: 「BoardScore 計算式」\n  - Central formula: 「BoardScore = S + F + H」\n  - Three component boxes:\n    - 「S（ストレート要素）」→ 「コネクト度合い 0〜4点」\n    - 「F（フラッシュ要素）」→ 「スーツ集中 0〜4点」\n    - 「H（ハイボード要素）」→ 「Broadway密度 0〜2点」\n  - Result zones: 「0〜2: ドライ」「3〜5: セミウェット」「6+: ウェット」\n  - Bottom note: 「高いほど複雑なボード」\nLayout: formula at top, three boxes below connected by arrows, result zones at bottom.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第5章",
+    "section": "BoardScore式",
+    "description": "BoardScore = S + F + Hの式構造と各要素の説明図"
+  },
+  {
+    "name": "f05-fig2-straight-element-table",
+    "prompt": "Table showing four straight-draw categories and their BoardScore points. Display a structured table with Japanese labels:\n  - Title at top: 「S（ストレート要素）スコア表」\n  - Table with columns: 「カテゴリー」「条件」「点数」「例」\n  - Row 1: 「バラバラ」「連続なし」「0」「K72」\n  - Row 2: 「1コネクト」「2枚連続または1gap」「1」「KJ2, QT5」\n  - Row 3: 「2コネクト」「3枚連続またはコネクター2組」「2〜3」「JT8, 987」\n  - Row 4: 「フルコネクト」「3枚全て連続」「4」「JT9, 876」\n  - Bottom note: 「連続度が高いほどストレート可能性↑」\nLayout: 4-column table with point values in navy bold.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第5章",
+    "section": "ストレート要素",
+    "description": "S要素4カテゴリー（バラバラ0〜フルコネクト4）のBoardScore点数テーブル"
+  },
+  {
+    "name": "f05-fig3-flush-element-table",
+    "prompt": "Table showing three flush-draw categories and their BoardScore points. Display a structured table with Japanese labels:\n  - Title at top: 「F（フラッシュ要素）スコア表」\n  - Table with columns: 「カテゴリー」「条件」「点数」「例」\n  - Row 1: 「レインボー」「3スーツ全て異なる」「0」「K♠7♦2♣」\n  - Row 2: 「2スーツ（FDあり）」「2枚が同スーツ」「2」「K♠7♠2♣」\n  - Row 3: 「モノトーン」「3枚全て同スーツ」「4」「K♠7♠2♠」\n  - Color annotation: Rainbow in white background, 2-suit in light blue, Monotone in dark blue\n  - Bottom note: 「モノトーン → フラッシュドロー豊富」\nLayout: 4-column table with suit-colored visual indicators.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第5章",
+    "section": "フラッシュ要素",
+    "description": "F要素3カテゴリー（レインボー0 / 2スーツ2 / モノトーン4）のBoardScore点数テーブル"
+  },
+  {
+    "name": "f05-fig4-highboard-element",
+    "prompt": "Diagram showing the two conditions for high board (H) element in BoardScore. Display a simple two-condition layout with Japanese labels:\n  - Title at top: 「H（ハイボード要素）判定」\n  - Condition 1 box: 「Broadway カード（AKQJT）が2枚以上」\n    - Example: 「A♠K♥2♣ → Broadway 2枚 → +2点」\n    - Example: 「K♠7♦2♣ → Broadway 1枚 → +1点」\n    - Example: 「7♦5♠2♣ → Broadway 0枚 → 0点」\n  - Condition 2 box: 「ハイカード密度が高い → 相手レンジに有利ハンド多い」\n  - Score guide: 「0 = ローボード / +1 = 中 / +2 = ハイボード」\n  - Bottom note: 「H 高いとき → IP（後ろの人）が有利」\nLayout: two condition boxes stacked vertically with examples.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第5章",
+    "section": "ハイボード要素",
+    "description": "H要素（Broadway枚数による0〜+2点）の判定条件と例を示す図"
+  },
+  {
+    "name": "f05-fig5-boardscore-10-examples",
+    "prompt": "Wide table showing BoardScore calculations for 10 example flop boards. Display a reference table with Japanese labels:\n  - Title at top: 「BoardScore 計算例 10選」\n  - Table with columns: 「ボード」「S」「F」「H」「合計」「分類」\n  - Row 1: 「K♠7♦2♣」0 0 1 1 「ドライ」\n  - Row 2: 「A♠A♥2♣」0 0 2 2 「ドライ」\n  - Row 3: 「T♠8♦5♣」2 0 0 2 「ドライ」\n  - Row 4: 「K♠J♥5♣」1 0 2 3 「セミ」\n  - Row 5: 「T♠9♦8♣」4 0 0 4 「セミ」\n  - Row 6: 「Q♠J♥T♣」4 0 2 6 「ウェット」\n  - Row 7: 「J♠9♠8♣」3 2 0 5 「セミ」\n  - Row 8: 「K♠Q♠J♠」3 4 2 9 「超ウェット」\n  - Row 9: 「7♠6♠5♣」4 2 0 6 「ウェット」\n  - Row 10: 「A♠K♠Q♠」3 4 2 9 「超ウェット」\n  - Classification colors: ドライ=gray, セミ=light blue, ウェット=navy, 超ウェット=dark red\nLayout: wide multi-column reference table.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第5章",
+    "section": "BoardScore例",
+    "description": "10種類のフロップボードのS/F/H別BoardScore計算例一覧テーブル"
+  },
+  {
+    "name": "f05-fig6-boardscore-classification-zones",
+    "prompt": "Wide classification band diagram showing BoardScore ranges and their categories. Display a horizontal banded diagram with Japanese labels:\n  - Title at top: 「BoardScore 判定帯」\n  - Horizontal number line from 0 to 10\n  - Four colored zones on the number line:\n    - Zone 0〜2 (light gray): 「ドライ」「CBet 高頻度・小サイズ」\n    - Zone 3〜5 (light blue): 「セミウェット」「CBet 中頻度・中サイズ」\n    - Zone 6〜8 (navy): 「ウェット」「CBet 低頻度・大サイズ」\n    - Zone 9〜10 (dark red): 「超ウェット」「レンジベットまたはチェック」\n  - Representative board examples below each zone\n  - Bottom note: 「スコアで即分類 → 戦略選択」\nLayout: horizontal band diagram with four colored zones and number line.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第5章",
+    "section": "BoardScore分類帯",
+    "description": "BoardScore 0-2ドライ / 3-5セミ / 6-8ウェット / 9-10超ウェットの判定帯図"
+  },
+  {
+    "name": "f06-fig1-draw-outs-bars",
+    "prompt": "Bar chart showing the number of outs for major draw types. Display horizontal bars with Japanese labels:\n  - Title at top: 「主要ドロー アウツ数」\n  - Y-axis (draw types): 「フラッシュドロー（FD）」「両面ストレート（OESD）」「ガットショット（GS）」「フラッシュ+ガット」「バックドアFD」\n  - X-axis: 「アウツ数」 0 to 15\n  - Bars: FD: 9 (green), OESD: 8 (green), GS: 4 (orange), FD+GS: 12 (dark green), バックドアFD: 1.5 (gray)\n  - Values at end of each bar\n  - Bottom note: 「アウツ × 2 = ターンでの完成確率（概算）」\nLayout: horizontal bar chart.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第6章",
+    "section": "アウツ数",
+    "description": "フラッシュドロー9 / OESD8 / ガットショット4のアウツ数比較横棒グラフ"
+  },
+  {
+    "name": "f06-fig2-rule-of-2-and-4",
+    "prompt": "Formula diagram explaining the Rule of 2 and 4 for poker draw calculations. Display a structured formula with Japanese labels:\n  - Title at top: 「2と4のルール」\n  - Two formula boxes:\n    - Top box: 「フロップ → ターン（1枚）」「完成確率 ≈ アウツ × 2%」\n    - Bottom box: 「フロップ → リバー（2枚）」「完成確率 ≈ アウツ × 4%」\n  - Example calculations:\n    - 「FD（9アウツ）× 2% = 18%（ターン）」\n    - 「FD（9アウツ）× 4% = 36%（2枚合計）」\n    - 「OESD（8アウツ）× 4% = 32%（2枚合計）」\n  - Bottom note: 「暗算のための近似値」\nLayout: two formula boxes stacked, examples to the right.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第6章",
+    "section": "2と4のルール",
+    "description": "アウツ×2%（ターン）/ アウツ×4%（2枚合計）のRule of 2 and 4を図解"
+  },
+  {
+    "name": "f06-fig3-draw-completion-table",
+    "prompt": "Table showing draw completion probabilities for major draw types. Display a reference table with Japanese labels:\n  - Title at top: 「ドロー完成率 早見表」\n  - Table with columns: 「ドロータイプ」「アウツ」「ターン完成」「リバー完成」「2枚合計」\n  - Row 1: 「フラッシュドロー」「9」「19%」「17%」「35%」\n  - Row 2: 「OESD（両面）」「8」「17%」「16%」「32%」\n  - Row 3: 「ガットショット」「4」「9%」「8%」「17%」\n  - Row 4: 「FD + GS」「12」「26%」「22%」「45%」\n  - Row 5: 「2ペア → フルハウス」「4」「9%」「8%」「17%」\n  - Bottom note: 「完成率がポットオッズを超えるかで判断」\nLayout: 5-column reference table with alternating row shading.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第6章",
+    "section": "ドロー完成率",
+    "description": "FD/OESD/GS等の主要ドローのターン・リバー・2枚合計完成率早見表"
+  },
+  {
+    "name": "f07-fig1-cbet-three-purposes",
+    "prompt": "Triangle diagram showing three purposes of continuation betting. Display an equilateral triangle with Japanese labels:\n  - Title at top: 「CBet 3つの目的」\n  - Triangle with three corners:\n    - Top corner: 「バリュー」「強い手で相手から取る」\n    - Bottom-left corner: 「フォールドエクイティ」「弱い手を降ろす」\n    - Bottom-right corner: 「エクイティ保護」「ドローを高く払わせる」\n  - Center: 「CBet = 3目的の組み合わせ」\n  - Arrows between corners showing interactions\n  - Bottom note: 「バランスよく持つことが重要」\nLayout: equilateral triangle with labeled corners and center.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第7章",
+    "section": "CBetの目的",
+    "description": "CBetのバリュー・フォールドエクイティ・エクイティ保護の3目的トライアングル図"
+  },
+  {
+    "name": "f07-fig2-equity-denial-effect",
+    "prompt": "Comparison diagram showing equity denial effect of continuation betting. Display a before/after comparison with Japanese labels:\n  - Title at top: 「エクイティデナイアル効果」\n  - Left panel: 「チェックした場合」\n    - 「相手のドロー完成率: 35%（FD）」\n    - 「相手はタダで次を見られる」\n    - 「こちらのEV 損失: 大」\n  - Right panel: 「CBet した場合（ハーフポット）」\n    - 「相手の必要勝率: 33%」\n    - 「FD のエクイティ35% > 33%」\n    - 「→ コールが正当化される」\n    - 「→ でもフォールドも誘発可能」\n  - Center formula: 「エクイティデナイアル = 相手に正しいオッズを与えない」\n  - Bottom note: 「ベットしないと相手に無料でエクイティを与える」\nLayout: two-panel before/after with center formula.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第7章",
+    "section": "エクイティデナイアル",
+    "description": "CBetによるエクイティデナイアル効果（チェック vs ハーフポットベットの比較）"
+  },
+  {
+    "name": "f08-fig1-handscore-formula",
+    "prompt": "Formula structure diagram for the flop HandScore calculation. Display a central formula with component boxes with Japanese labels:\n  - Title at top: 「HandScore 計算式」\n  - Central formula: 「HandScore = 役スコア + ドロー加点 + ブロッカー補正」\n  - Three component boxes:\n    - 「役スコア」→ 「メイドハンドの基本点（セット30等）」\n    - 「ドロー加点」→ 「フラッシュドロー+9、OESD+12等」\n    - 「ブロッカー補正」→ 「ナッツブロック +2〜+4」\n  - Result zones: 「≥20: ベット推奨」「10-19: 状況判断」「<10: チェック」\n  - Bottom note: 「高いほど強いアクション可」\nLayout: formula at top, three boxes below, result zones at bottom.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第8章",
+    "section": "HandScore式",
+    "description": "HandScore = 役スコア + ドロー加点 + ブロッカー補正の式構造図"
+  },
+  {
+    "name": "f08-fig2-hand-rank-score-table",
+    "prompt": "Quick reference table showing HandScore base values for made hand types. Display a compact table with Japanese labels:\n  - Title at top: 「役スコア 早見表」\n  - Table with columns: 「役」「スコア」「強さ目安」\n  - Row 1: 「ロイヤル/ストレートフラッシュ」「50」「最強」\n  - Row 2: 「フォーカーズ」「45」\n  - Row 3: 「フルハウス」「40」\n  - Row 4: 「フラッシュ」「35」\n  - Row 5: 「セット（スリーカーズ）」「30」「標準バリュー」\n  - Row 6: 「ストレート」「28」\n  - Row 7: 「ツーペア（トップ）」「22」\n  - Row 8: 「トップペア 強キッカー（TPTK）」「18」\n  - Row 9: 「トップペア 弱キッカー（TPWK）」「14」\n  - Row 10: 「ミドル/ボトムペア」「8〜10」\n  - Row 11: 「ハイカード」「2〜5」\nLayout: 3-column table with score values in navy bold.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第8章",
+    "section": "役スコア",
+    "description": "セット30・TPTK18・TPWK14等の役スコア早見テーブル"
+  },
+  {
+    "name": "f08-fig3-draw-bonus-table",
+    "prompt": "Table showing bonus points added to HandScore for draw holdings. Display a structured table with Japanese labels:\n  - Title at top: 「ドロー加点 一覧」\n  - Table with columns: 「ドロータイプ」「加点」「備考」\n  - Row 1: 「OESD（両面ストレートドロー）」「+12」「最強ドロー」\n  - Row 2: 「フラッシュドロー（FD）」「+9」「9アウツ」\n  - Row 3: 「ガットショット（GS）」「+4」「4アウツ」\n  - Row 4: 「バックドアFD」「+2」「2枚後の可能性」\n  - Row 5: 「バックドアSD」「+1」「補助的加点」\n  - Row 6: 「FD + OESD 複合」「+18（上限あり）」「強力な複合ドロー」\n  - Footer: 「複合ドローは加算（上限30まで）」\nLayout: 3-column table with bonus values in green.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第8章",
+    "section": "ドロー加点",
+    "description": "OESD +12 / FD +9 / GS +4のドロー加点一覧テーブル"
+  },
+  {
+    "name": "f08-fig4-blocker-effect-visual",
+    "prompt": "Wide diagram showing how blockers affect opponent range and HandScore. Display a visual comparison with Japanese labels:\n  - Title at top: 「ブロッカー効果の視覚化」\n  - Left section: 「ブロッカーなし」\n    - Opponent nuts combos: 「AA: 6コンボ」「KK: 6コンボ」\n    - HandScore modifier: 「+0」\n  - Right section: 「A を保有（ブロッカー）」\n    - Opponent nuts combos: 「AA: 3コンボ（-50%）」「AK: 減少」\n    - HandScore modifier: 「+3」\n  - Arrow showing reduction between sections\n  - Bottom note: 「ブロッカー保有 → ナッツ相手の確率が低下」\nLayout: wide two-section diagram with combo counts and score modifiers.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第8章",
+    "section": "ブロッカー効果",
+    "description": "ブロッカー保有時の相手ナッツコンボ減少とHandScore+3補正の視覚化"
+  },
+  {
+    "name": "f09-fig1-cbet-score-formula",
+    "prompt": "Formula diagram showing the CBet decision score formula. Display a structured formula breakdown with Japanese labels:\n  - Title at top: 「CBet スコア計算式」\n  - Central formula: 「CBetScore = HandScore − BoardScore + Pos」\n  - Three component boxes:\n    - 「HandScore」→ 「自分のハンド強度（役+ドロー+ブロッカー）」\n    - 「BoardScore」→ 「ボードの複雑度（S+F+H）」\n    - 「Pos（ポジション補正）」→ 「IP: +2 / OOP: -2」\n  - Result: 「スコア高いほど CBet を推奨」\n  - Bottom note: 「HandScore が高くてもBoardScore が高いと相殺」\nLayout: formula at top, three boxes below, result at bottom.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第9章",
+    "section": "CBetスコア式",
+    "description": "CBetScore = HandScore - BoardScore + Pos の式構造と各要素説明"
+  },
+  {
+    "name": "f09-fig2-cbet-four-zones",
+    "prompt": "Vertical zone ladder showing four CBet decision zones based on score. Display a banded vertical diagram with Japanese labels:\n  - Title at top: 「CBet 4段階 判定帯」\n  - Zone 1 (top, dark green): 「スコア ≥ 15」「フルベット推奨」「バリュー確定」\n  - Zone 2 (light green): 「スコア 8〜14」「小〜中ベット推奨」「バリュー/ブラフ混合」\n  - Zone 3 (orange): 「スコア 2〜7」「チェック推奨」「状況次第でブラフ」\n  - Zone 4 (bottom, red): 「スコア < 2」「チェックフォールド」「あきらめ」\n  - Left axis: 「スコア ↑（強い）」\n  - Threshold lines: 「T=15」「T=8」「T=2」\n  - Bottom note: 「スコアで4段階即判断」\nLayout: vertical four-zone classification with threshold lines.\nAspect ratio 9:16.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "9:16",
+    "chapter": "第9章",
+    "section": "CBet判定帯",
+    "description": "CBetスコア≥15/8-14/2-7/<2の4段階判定帯縦型図"
+  },
+  {
+    "name": "f09-fig3-cbet-five-examples",
+    "prompt": "Wide comparison table showing CBet score calculations for five example scenarios. Display a reference table with Japanese labels:\n  - Title at top: 「CBet スコア 5例題」\n  - Table with columns: 「ボード」「ハンド」「HandScore」「BoardScore」「Pos」「合計」「判定」\n  - Row 1: 「K72r」「AK」「18」「1」「+2(IP)」「19」「ベット推奨」\n  - Row 2: 「J98s」「QQ」「16」「7」「+2(IP)」「11」「小ベット」\n  - Row 3: 「T85r」「76s（OESD）」「12」「3」「-2(OOP)」「7」「チェック」\n  - Row 4: 「KQJs」「A4s（FD）」「9」「8」「+2(IP)」「3」「チェック/小ブラフ」\n  - Row 5: 「987s」「22（ポケット）」「8」「9」「-2(OOP)」「-3」「チェックフォールド」\n  - Color coding: positive totals in green, negative in red\nLayout: wide 7-column calculation table.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第9章",
+    "section": "CBet例題",
+    "description": "5種類のボード×ハンド組み合わせのCBetスコア計算例一覧表"
+  },
+  {
+    "name": "f10-fig1-wetness-parabola",
+    "prompt": "Wide parabola chart showing CBet frequency vs board wetness. Display a curve diagram with Japanese labels:\n  - Title at top: 「ウェットネスと CBet 頻度の関係」\n  - X-axis: 「ボードのウェットネス（BoardScore）」 0 to 10\n  - Y-axis: 「CBet 推奨頻度 (%)」 0 to 100\n  - Curve shape: starts at 75% (dry boards), rises slightly then falls sharply\n  - Key data points labeled:\n    - 「ドライ（0-2）: 75%」\n    - 「中程度（3-5）: 65%」\n    - 「ウェット（6-8）: 40%」\n    - 「超ウェット（9+）: 25%」\n  - Annotation: 「ウェットになるほど頻度を落とす」\n  - Bottom note: 「ドライ→ 高頻度スモール / ウェット→ 低頻度ビッグ」\nLayout: line/curve chart with labeled data points.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第10章",
+    "section": "CBet頻度カーブ",
+    "description": "ドライ75% / 中65% / ウェット40% / 超ウェット25%のCBet頻度とボードテクスチャの関係曲線"
+  },
+  {
+    "name": "f10-fig2-size-decision-flow",
+    "prompt": "Vertical flowchart for determining CBet size based on NutsAdv check. Display a decision flow with Japanese labels:\n  - Title at top: 「CBet サイズ決定フロー」\n  - Start: 「CBet を打つと決定」\n  - Decision diamond: 「NutsAdv（ナッツアドバンテージ）あり？」\n  - Yes branch: 「大きいサイズ（75%〜）」→ 「ナッツと弱いハンドの二極化」\n  - No branch: 「小さいサイズ（33%〜50%）」→ 「レンジベット戦略」\n  - Under Yes: 「条件: セット/2ペア以上でウェット」\n  - Under No: 「条件: ドライボード / レンジ有利」\n  - Bottom note: 「NutsAdv = 自分だけナッツに到達できる」\nLayout: vertical flowchart with diamond decision node.\nAspect ratio 9:16.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "9:16",
+    "chapter": "第10章",
+    "section": "CBetサイズ決定",
+    "description": "NutsAdv有無によるCBetサイズ（大75%〜 vs 小33-50%）決定フローチャート"
+  },
+  {
+    "name": "f10-fig3-quick-math-sizes",
+    "prompt": "Visual formula diagram showing quick mental math for common bet sizes. Display a centered calculation diagram with Japanese labels:\n  - Title at top: 「CBet サイズ 暗算法」\n  - Two formula boxes:\n    - Left box: 「33% ≈ ポット ÷ 3」\n      - Example: 「ポット 60bb → 60 ÷ 3 = 20bb」\n    - Right box: 「75% ≈ ポット ÷ 2 ＋ ポット ÷ 4」\n      - Example: 「ポット 60bb → 30 + 15 = 45bb」\n  - Bottom formula: 「100% = ポットそのまま」\n  - Quick reference: 「33% / 50% / 75% / 100%」の4択\n  - Bottom note: 「÷3 と ÷2 の組み合わせで素早く計算」\nLayout: two side-by-side formula boxes with examples, compact square format.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第10章",
+    "section": "サイズ暗算",
+    "description": "33%=÷3 / 75%=÷2+÷4 のCBetサイズ暗算法図解"
+  },
+  {
+    "name": "f11-fig1-gto-two-axes",
+    "prompt": "Comparison table showing the relationship between GTO two axes and this book's formula approach. Display a structured mapping with Japanese labels:\n  - Title at top: 「GTO 2軸 と 本書式の対応」\n  - Table with columns: 「GTO 概念」「本書の式」「実用ポイント」\n  - Row 1: 「ポラリゼーション（二極化）」「HandScore ≥ 20 or < 5」「バリューとブラフを分ける」\n  - Row 2: 「ナッツアドバンテージ」「NutsAdv判定」「自分だけ強い役に到達」\n  - Row 3: 「レンジアドバンテージ」「RangeAdv補正 (+R)」「平均スコアの優劣」\n  - Row 4: 「ベットサイズ最適化」「33% / 75% 2択」「暗算で即決定」\n  - Bottom note: 「GTO を近似する実用公式」\nLayout: 3-column table mapping GTO concepts to formula equivalents.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第11章",
+    "section": "GTO対応",
+    "description": "GTO2軸（ポラリゼーション・NutsAdv・RangeAdv）と本書式の対応テーブル"
+  },
+  {
+    "name": "f12-fig1-size-required-equity-bars",
+    "prompt": "Horizontal bar chart showing required equity for each bet size as a defender. Display bars with Japanese labels:\n  - Title at top: 「サイズ別 必要勝率（ディフェンダー視点）」\n  - Y-axis: bet sizes 「1/4ポット」「1/3ポット」「1/2ポット」「3/4ポット」「1ポット」\n  - X-axis: 「必要勝率 (%)」 0 to 60\n  - Bars: 1/4: 20%, 1/3: 25%, 1/2: 33%, 3/4: 43%, 1ポット: 50%\n  - Threshold line at 50%: 「コインフリップ」\n  - Each bar shows percentage value at end\n  - Bottom note: 「サイズ大きいほど必要勝率が上がる」\nLayout: horizontal bar chart.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第12章",
+    "section": "必要勝率",
+    "description": "1/4〜1ポットの各ベットサイズに対するディフェンダーの必要勝率（20%〜50%）棒グラフ"
+  },
+  {
+    "name": "f12-fig2-mdf-table",
+    "prompt": "Reference table showing MDF (Minimum Defense Frequency) values for flop play. Display a 4-column table with Japanese labels:\n  - Title at top: 「フロップ MDF 早見表」\n  - Table with columns: 「ベットサイズ」「ポットオッズ（コール者）」「MDF」「折れる上限」\n  - Row 1: 「1/3ポット」「25%」「75%」「25%まで折れてOK」\n  - Row 2: 「1/2ポット」「33%」「67%」「33%まで折れてOK」\n  - Row 3: 「3/4ポット」「43%」「57%」「43%まで折れてOK」\n  - Row 4: 「1ポット」「50%」「50%」「半分折れてOK」\n  - Footer: 「MDF 以上ディフェンスしないと搾取される」\nLayout: 4-column reference table.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第12章",
+    "section": "MDF早見表",
+    "description": "フロップのベットサイズ別MDF（最低防御頻度）早見テーブル"
+  },
+  {
+    "name": "f13-fig1-mdf-calculation-diagram",
+    "prompt": "Diagram visually explaining the MDF calculation with step-by-step math. Display a formula illustration with Japanese labels:\n  - Title at top: 「MDF 計算の図解」\n  - Main formula: 「MDF = ポット ÷ (ポット + ベット)」\n  - Visual: pot represented as a stack of chips labeled 「ポット: 100bb」\n  - Bet represented below: 「ベット: 50bb（ハーフポット）」\n  - Calculation shown: 「100 ÷ (100 + 50) = 100 ÷ 150 = 67%」\n  - Interpretation: 「67% = ディフェンス最低ライン」\n  - If below MDF: 「ブラフが常に利益 → 搾取される」\n  - Bottom note: 「MDF を下回ると相手にブラフを推奨してしまう」\nLayout: formula with visual chip representation and step-by-step calculation.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第13章",
+    "section": "MDF計算",
+    "description": "MDF = ポット÷(ポット+ベット)の計算過程を視覚的に図解した図"
+  },
+  {
+    "name": "f13-fig2-borderline-hand-list",
+    "prompt": "Vertical reference list of borderline hands for calling or folding decisions. Display a structured hand list with Japanese labels:\n  - Title at top: 「境界ハンドリスト（コール vs フォールド）」\n  - Section 1 (green top): 「コール境界（MDF 上位）」\n    - 「TPWK（弱キッカートップペア）: ハーフまでコール」\n    - 「中程度FD: 1/2ポットまでコール」\n    - 「OESD（ドライボード）: 3/4まで可」\n  - Section 2 (orange middle): 「状況依存」\n    - 「セカンドペア+弱キッカー」\n    - 「バックドアドロー+ハイカード」\n  - Section 3 (red bottom): 「フォールド推奨」\n    - 「ボトムペアのみ（ウェット）」\n    - 「ハイカードのみ（フルポット）」\n  - Bottom note: 「境界ハンドはベットサイズで変わる」\nLayout: vertical three-section list with color bands.\nAspect ratio 3:4.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "3:4",
+    "chapter": "第13章",
+    "section": "境界ハンド",
+    "description": "コール境界・状況依存・フォールド推奨の3区分境界ハンドリスト"
+  },
+  {
+    "name": "f14-fig1-check-raise-three-types",
+    "prompt": "Wide comparison showing three types of check-raise with different purposes. Display three panels with Japanese labels:\n  - Title at top: 「チェックレイズ 3種類」\n  - Left panel: 「バリュー CR」\n    - 「ハンド: セット・2ペア」\n    - 「目的: ポット拡大」\n    - 「サイズ: 3〜4倍」\n    - 「頻度: 高（毎回）」\n  - Center panel: 「セミブラフ CR」\n    - 「ハンド: OESD/FD」\n    - 「目的: フォールドEV + ドロー」\n    - 「サイズ: 3倍」\n    - 「頻度: 中（エクイティ次第）」\n  - Right panel: 「ブラフ CR」\n    - 「ハンド: ブロッカー系」\n    - 「目的: フォールドEV のみ」\n    - 「サイズ: 2.5倍」\n    - 「頻度: 低（厳選）」\n  - Bottom note: 「3種類のバランスが相手を惑わす」\nLayout: three equal columns with labeled panels.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第14章",
+    "section": "チェックレイズ",
+    "description": "バリューCR（セット）/ セミブラフCR（OESD/FD）/ ブラフCRの3種チェックレイズ比較"
+  },
+  {
+    "name": "f14-fig2-cr-size-rationale",
+    "prompt": "Table showing check-raise size rationale and common sizing recommendations. Display a reference table with Japanese labels:\n  - Title at top: 「CR サイズ 根拠表」\n  - Table with columns: 「状況」「推奨サイズ（ベット額の倍率）」「理由」\n  - Row 1: 「バリュー（ドライ）」「3倍」「相手をコールさせたい」\n  - Row 2: 「バリュー（ウェット）」「3.5〜4倍」「ドロー払い出し」\n  - Row 3: 「セミブラフ FD」「3倍」「FE + エクイティ両立」\n  - Row 4: 「ブラフ（薄い）」「2.5倍」「リスク低減」\n  - Row 5: 「vs ビッグベット（3/4以上）」「2.5倍（最低額）」「コミットメント注意」\n  - Footer: 「サイズはCRの目的で変える」\nLayout: 3-column table with size recommendations in navy bold.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第14章",
+    "section": "CRサイズ",
+    "description": "バリュー/セミブラフ/ブラフ別チェックレイズサイズ（2.5〜4倍）根拠テーブル"
+  },
+  {
+    "name": "f15-fig1-donk-classical-vs-modern",
+    "prompt": "Wide comparison showing classical vs modern evaluation of donk betting. Display two panels with Japanese labels:\n  - Title at top: 「ドンクベット：古典 vs 現代評価」\n  - Left panel: 「古典的見方（×）」\n    - 「ドンクベット = 弱い」\n    - 「'弱い人がやるもの'」\n    - 「すぐレイズで対抗」\n    - 「理由: 主導権を奪われるから」\n  - Right panel: 「現代GTO的見方（○）」\n    - 「ドンクベット = 戦略的選択肢」\n    - 「特定ボードでOOP が有利な場合」\n    - 「例: ローボードで2ペア保有時」\n    - 「レンジ有利 × ハンド有利」\n  - Bottom note: 「使い所を絞れば有効な武器」\nLayout: two-panel before/after comparison.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第15章",
+    "section": "ドンクベット",
+    "description": "ドンクベットを「弱い手」と見る古典的評価と「戦略的選択肢」とする現代GTO評価の対比"
+  },
+  {
+    "name": "f16-fig1-defense-gto-deviation",
+    "prompt": "Diagram showing where common defense patterns deviate from GTO solutions. Display a comparison chart with Japanese labels:\n  - Title at top: 「ディフェンス GTO ズレ領域」\n  - Two-axis grid: X-axis 「ベットサイズ（小→大）」, Y-axis 「ディフェンス頻度（低→高）」\n  - GTO line: diagonal showing correct defense curve\n  - Common player zone (red oval): 「過剰フォールドゾーン」（高サイズで折りすぎ）\n  - Another zone (orange): 「過剰コールゾーン」（小サイズでコールしすぎ）\n  - GTO correct zone (green): 「最適ゾーン」\n  - Annotations: 「大ベットに折れすぎ」「小ベットにコールしすぎ」\n  - Bottom note: 「MDF を基準に調整する」\nLayout: two-axis scatter/zone diagram with labeled regions.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第16章",
+    "section": "ディフェンスGTOズレ",
+    "description": "大ベット過剰フォールド・小ベット過剰コールの2大ディフェンスGTOズレ領域図"
+  },
+  {
+    "name": "f17-fig1-spr-handscore-map",
+    "prompt": "Two-dimensional decision map plotting SPR against HandScore. Display a grid map with Japanese labels:\n  - Title at top: 「SPR × HandScore 判断マップ」\n  - X-axis: 「HandScore」 0 to 35 (low to high)\n  - Y-axis: 「SPR」 0 to 20 (low to high)\n  - Four quadrant zones:\n    - Top-left (red): 「高SPR × 低HandScore」「チェック/フォールド」\n    - Top-right (yellow): 「高SPR × 高HandScore」「コール/慎重ベット」\n    - Bottom-left (orange): 「低SPR × 低HandScore」「チェック推奨」\n    - Bottom-right (green): 「低SPR × 高HandScore」「ベット/オールイン推奨」\n  - Diagonal threshold line\n  - Bottom note: 「SPR低 × スコア高 = 最も強いアクション」\nLayout: two-dimensional quadrant map with colored zones.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第17章",
+    "section": "SPR×HandScoreマップ",
+    "description": "SPRとHandScoreを2軸にした4象限判断マップ（低SPR×高スコア=最強アクション）"
+  },
+  {
+    "name": "f17-fig2-spr-four-zones-detail",
+    "prompt": "Detailed vertical zone diagram of SPR four bands with strategies. Display a four-band vertical diagram with Japanese labels:\n  - Title at top: 「SPR 4帯域 詳細戦略」\n  - Band 1 (top, red): 「SPR 15+（超高SPR）」\n    - 「推奨ハンド: ナッツドロー・セット以上」\n    - 「戦略: 価値手のみコミット」\n    - 「TPWK/2ペア: 慎重に」\n  - Band 2 (orange): 「SPR 6〜15（中高SPR）」\n    - 「推奨: セット/TPTK以上でベット」\n    - 「戦略: 標準プレイ」\n  - Band 3 (light blue): 「SPR 3〜6（中低SPR）」\n    - 「推奨: 2ペア以上でコミット検討」\n    - 「戦略: アグレッシブ可」\n  - Band 4 (bottom, green): 「SPR 0〜3（低SPR）」\n    - 「推奨: オールイン戦略」\n    - 「TP以上で全額コミット可」\n  - Bottom note: 「SPR を先に確認する習慣を作る」\nLayout: vertical four-band classification diagram.\nAspect ratio 9:16.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "9:16",
+    "chapter": "第17章",
+    "section": "SPR帯域詳細",
+    "description": "SPR 0-3 / 3-6 / 6-15 / 15+の4帯域と各詳細戦略の縦型図"
+  },
+  {
+    "name": "f18-fig1-multiway-cbet-frequency",
+    "prompt": "Bar chart showing how CBet frequency decreases as more players enter the pot. Display bars with Japanese labels:\n  - Title at top: 「マルチウェイ CBet 頻度低下」\n  - X-axis: player count 「2-way」「3-way」「4-way」\n  - Y-axis: 「CBet 推奨頻度 (%)」 0 to 80\n  - Bars: 2-way: 65% (green), 3-way: 42% (orange), 4-way: 28% (red)\n  - Annotation arrows showing decrease: 「-35%」「-33%」\n  - Bottom note: 「1人増えるたびに約1/3削減」\n  - Secondary note: 「マルチウェイはプレミアハンドのみ CBet」\nLayout: vertical bar chart with three bars and decrease annotations.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第18章",
+    "section": "マルチウェイCBet",
+    "description": "2-way 65% / 3-way 42% / 4-way 28%のCBet頻度低下を示す棒グラフ"
+  },
+  {
+    "name": "f18-fig2-multiway-range-contraction",
+    "prompt": "Table showing range contraction requirements for multiway pots. Display a reference table with Japanese labels:\n  - Title at top: 「マルチウェイ レンジ収縮表」\n  - Table with columns: 「プレイヤー数」「推奨最低HandScore」「推奨ハンドタイプ」\n  - Row 1: 「2-way（HU）」「10以上」「TP以上 + 強いドロー」\n  - Row 2: 「3-way」「18以上」「TPTK / 2ペア / セット / 強FD」\n  - Row 3: 「4-way」「25以上」「セット/2ペア以上 + ナッツドロー」\n  - Row 4: 「5-way以上」「30以上」「セット以上のみ」\n  - Footer note: 「プレイヤー1人増 = HandScore 要求+5〜8」\nLayout: 3-column table with HandScore thresholds in navy bold.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第18章",
+    "section": "マルチウェイレンジ",
+    "description": "2-way〜5-way以上のプレイヤー数別推奨HandScoreしきい値テーブル"
+  },
+  {
+    "name": "f19-fig1-3bet-pot-low-spr",
+    "prompt": "Diagram showing the characteristics of a 3-bet pot and its typically low SPR. Display a structured analysis with Japanese labels:\n  - Title at top: 「3bet ポット 低 SPR 特性」\n  - Example scenario: 「BTN 3bet 9bb / BB コール → ポット 18bb」\n  - SPR calculation: 「スタック残: 91bb / ポット 18bb」「SPR = 91 ÷ 18 = 5.1」\n  - Zone label: 「低〜中SPR ゾーン（SPR 3〜6）」\n  - Strategic implications:\n    - 「TP以上でコミット視野」\n    - 「オーバーペアは概ねコミット」\n    - 「フラッシュドローも強く打てる」\n  - Bottom note: 「3betポット = SPR が低い → アグレッシブに」\nLayout: scenario at top, SPR calculation in center, implications at bottom.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第19章",
+    "section": "3betポット",
+    "description": "3betポットのSPR計算例（91÷18=5.1）と低SPR特性による戦略インプリケーション図"
+  },
+  {
+    "name": "f20-fig1-four-player-type-icons",
+    "prompt": "Wide icon grid showing four player type archetypes with labels and characteristics. Display four panels with Japanese labels:\n  - Title at top: 「4タイプ プレイヤー 分類」\n  - Panel 1: 「ニット（Nit）」\n    - Icon: turtle emoji-style flat icon\n    - Stats: 「VPIP < 15%」「PFR < 10%」\n    - Exploit: 「広いレンジで搾取 / ブラフ有効」\n  - Panel 2: 「TAG（タイト・アグレッシブ）」\n    - Icon: chess king flat icon\n    - Stats: 「VPIP 15-25%」「PFR 12-20%」\n    - Exploit: 「最も手強い / GTO 寄り」\n  - Panel 3: 「LAG（ルース・アグレッシブ）」\n    - Icon: lion flat icon\n    - Stats: 「VPIP 25-35%」「PFR 20-28%」\n    - Exploit: 「価値手で大きくコール」\n  - Panel 4: 「コールステーション」\n    - Icon: calling phone flat icon\n    - Stats: 「VPIP > 35%」「低PFR」\n    - Exploit: 「ブラフ禁止 / バリューのみ」\n  - Bottom note: 「タイプを見抜いて戦略を変える」\nLayout: 2x2 grid of four player type panels.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第20章",
+    "section": "プレイヤータイプ",
+    "description": "ニット・TAG・LAG・コールステーションの4タイプ特性とエクスプロイト戦略グリッド図"
+  },
+  {
+    "name": "f21-fig1-street-range-change",
+    "prompt": "Wide timeline showing how ranges evolve from preflop through flop. Display a horizontal street-by-street progression with Japanese labels:\n  - Title at top: 「ストリート間 レンジ変化」\n  - Three stages connected by arrows:\n    - Stage 1: 「プリフロップ」「全169ハンド」「BTN: 40%、UTG: 9%」\n    - Arrow → 「フロップ公開」\n    - Stage 2: 「フロップ後」「HandScore 計算」「ベット/チェック/フォールドに分岐」\n    - Arrow → 「アクション後」\n    - Stage 3: 「ターン開始時」「残存レンジ」「強化または絞り込み」\n  - Below each stage, example range width: 「40% → 25% → 15%（継続者）」\n  - Bottom note: 「フォールドするたびにレンジが絞られる」\nLayout: wide horizontal three-stage progression.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第21章",
+    "section": "レンジ変化",
+    "description": "プリフロップ→フロップ→ターンのストリート間レンジ変化（40%→25%→15%）図"
+  },
+  {
+    "name": "f22-fig1-range-advantage-concept",
+    "prompt": "Conceptual diagram showing range advantage between two players on a flop. Display a visual comparison with Japanese labels:\n  - Title at top: 「レンジアドバンテージ 概念図」\n  - Two player stacks:\n    - Left: 「BTN レンジ」「平均HandScore: 18」\n    - Right: 「BB レンジ」「平均HandScore: 14」\n  - Balance scale between them: BTN side heavier\n  - Center label: 「RangeAdv = +4（BTN 有利）」\n  - Below: examples of each player's hand distribution\n    - BTN: 「強い役: 25%、ドロー: 20%、ミス: 55%」\n    - BB: 「強い役: 18%、ドロー: 22%、ミス: 60%」\n  - Bottom note: 「RangeAdv が高い側がベット主導を取る」\nLayout: two-player comparison with balance scale in center.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第22章",
+    "section": "レンジアドバンテージ",
+    "description": "BTN vs BBの平均HandScore差（+4）をバランス天秤で示すレンジアドバンテージ概念図"
+  },
+  {
+    "name": "f22-fig2-board-range-advantage-table",
+    "prompt": "Table showing typical range advantage by board type for different position matchups. Display a reference table with Japanese labels:\n  - Title at top: 「ボード別 レンジアドバンテージ傾向」\n  - Table with columns: 「ボードタイプ」「PFR 有利度」「代表例」「備考」\n  - Row 1: 「ハイドライ（A/K高い）」「PFR大（+5〜+8）」「A72r」「3bet者が有利」\n  - Row 2: 「ミドル（8〜T中心）」「中程度（+2〜+4）」「T85r」「コンテスト」\n  - Row 3: 「ローコネクト」「PFR小（0〜+2）」「765s」「コール者のレンジも有利」\n  - Row 4: 「ペアボード」「PFR有利（+3〜+6）」「AA2r」「ペア系はPFR強い」\n  - Row 5: 「モノトーン」「均衡（±2）」「QJTs」「両者ドロー有」\n  - Footer: 「ボードによってRangeAdvは変動する」\nLayout: 4-column reference table.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第22章",
+    "section": "ボード別RangeAdv",
+    "description": "ハイドライ・ミドル・ローコネクト・ペア・モノトーン別のレンジアドバンテージ傾向テーブル"
+  },
+  {
+    "name": "f23-fig1-drill-overview",
+    "prompt": "Vertical overview diagram showing the structure of the drill chapter. Display a structured plan with Japanese labels:\n  - Title at top: 「ドリル 全体像」\n  - Section 1: 「BoardScore ドリル」「10問 → 即答目標」\n  - Section 2: 「HandScore ドリル」「10問 → 30秒以内」\n  - Section 3: 「CBetScore ドリル」「10問 → 判断訓練」\n  - Section 4: 「総合問題」「5問 → 実戦形式」\n  - Total: 「計35問」\n  - Progress bar at bottom showing difficulty: 「易→難」\n  - Bottom note: 「毎日5問で2週間完成」\nLayout: vertical four-section plan with numbered drills.\nAspect ratio 3:4.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "3:4",
+    "chapter": "第23章",
+    "section": "ドリル全体像",
+    "description": "BoardScore・HandScore・CBetScore・総合問題の4セクション35問ドリル全体像"
+  },
+  {
+    "name": "f24-fig1-flop-cheatsheet",
+    "prompt": "Compact one-page cheatsheet for flop decisions. Display a dense reference card with Japanese labels:\n  - Title at top: 「フロップ チートシート」\n  - Section 1: 「BoardScore」「S + F + H」「0-2: ドライ / 3-5: セミ / 6+: ウェット」\n  - Section 2: 「HandScore」「役スコア + ドロー加点 + ブロッカー」\n  - Section 3: 「CBetScore」「Hand − Board + Pos（IP+2/OOP-2）」\n  - Section 4 table: 「スコア ≥15: ベット」「8-14: 小ベット」「<8: チェック」\n  - Section 5: 「サイズ」「ドライ: 33% / ウェット: 75%」\n  - Section 6: 「MDF」「33%ベット→75% / 50%ベット→67%」\n  - Bottom: 「全判断はこの6ステップ」\nLayout: compact six-section reference card.\nAspect ratio 3:4.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "3:4",
+    "chapter": "第24章",
+    "section": "チートシート",
+    "description": "BoardScore・HandScore・CBetScore・サイズ・MDF全要素を1枚に凝縮したフロップチートシート"
+  },
+  {
+    "name": "f25-fig1-flop-to-turn-transition",
+    "prompt": "Wide transition diagram showing how flop play shifts to turn strategy. Display a horizontal transition flow with Japanese labels:\n  - Title at top: 「フロップ → ターン の転換点」\n  - Left section: 「フロップ判断（確認事項）」\n    - 「BoardScore 確認」\n    - 「HandScore 計算」\n    - 「CBetScore → アクション」\n  - Center arrow: 「ターンカード公開」\n    - Sub-label: 「ボード変化を再評価」\n  - Right section: 「ターン調整（変更点）」\n    - 「BoardScore 再計算（ターン追加）」\n    - 「ドロー完成 or 悪化を確認」\n    - 「バレル or チェックバック判断」\n  - Bottom note: 「フロップで決めたことをターンで修正する」\nLayout: wide horizontal left→center→right transition flow.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第25章",
+    "section": "フロップからターンへ",
+    "description": "フロップの3ステップ判断からターンへの転換（ボード再評価・バレル判断）フロー図"
+  },
+  {
+    "name": "f26-fig1-gto-learning-roadmap",
+    "prompt": "Vertical learning roadmap showing the progression from this book to GTO mastery. Display a top-to-bottom roadmap with Japanese labels:\n  - Title at top: 「GTO 学習ロードマップ」\n  - Stage 1: 「本書マスター」「スコア式で直感を鍛える」「目標: 判断速度 10秒以内」\n  - Arrow down\n  - Stage 2: 「ソルバー入門」「GTO+ / PioSolver 使用」「フロップ解を確認」\n  - Arrow down\n  - Stage 3: 「スポットスタディ」「頻出ボードの深掘り」「ブラフ頻度・レンジ構成」\n  - Arrow down\n  - Stage 4: 「リアルタイム適用」「HH レビュー × ソルバー」「弱点特定と修正」\n  - Stage 5 (top): 「GTO 統合」「本書式とGTOを融合」「一貫した戦略体系」\n  - Bottom note: 「本書は段階1の最速ルート」\nLayout: vertical five-stage roadmap with connecting arrows.\nAspect ratio 9:16.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "9:16",
+    "chapter": "第26章",
+    "section": "GTO学習ロードマップ",
+    "description": "本書マスター→ソルバー入門→スポットスタディ→HHレビュー→GTO統合の5段階学習ロードマップ"
+  },
+  {
+    "name": "f27-fig1-r1-3band-cbet",
+    "prompt": "Vertical three-band diagram for R1 CBet decision using flop score thresholds. Display a banded vertical diagram with Japanese labels:\n  - Title at top: 「R1：CBetScore 3バンド化」\n  - Band A (top, green): 「スコア ≥ 15（バンドA）」「フルベット（75%〜）推奨」\n  - Threshold line: 「T = 15」\n  - Band B (middle, navy): 「スコア 8〜14（バンドB）」「スモールベット（33%）またはチェック」\n  - Threshold line: 「T = 8」\n  - Band C (bottom, red): 「スコア < 8（バンドC）」「チェック or チェックフォールド」\n  - Right side examples per band:\n    - Band A: 「セット on ドライ: 30-1+2=31 → A」\n    - Band B: 「TPTK on セミ: 18-4+2=16 → A/B境界」\n    - Band C: 「ミス on ウェット: 5-7-2=-4 → C」\nLayout: vertical three-band diagram with threshold lines.\nAspect ratio 9:16.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "9:16",
+    "chapter": "第27章",
+    "section": "R1 3バンドCBet",
+    "description": "フロップCBetScore ≥15（バンドA）/ 8-14（バンドB）/ <8（バンドC）の3バンド分類図"
+  },
+  {
+    "name": "f27-fig2-r2-suit-judgment-flop",
+    "prompt": "Comparison diagram showing R2 suit adjustment applied to flop boards. Display a two-panel comparison with Japanese labels:\n  - Title at top: 「R2：フロップ スーツ判定」\n  - Left panel: 「FD あり（2スーツ/モノトーン）」\n    - Example: 「K♠7♠2♣ → FDあり」\n    - Adjustment: 「BoardScore +2（F補正）」\n    -「CBetScore 補正 -2（難度↑）」\n    - Recommend: 「サイズ大きめ or チェック」\n  - Right panel: 「FD なし（レインボー）」\n    - Example: 「K♠7♦2♣ → FDなし」\n    - Adjustment: 「BoardScore +0」\n    - 「CBetScore 補正 0（標準）」\n    - Recommend: 「レンジベット可（高頻度小サイズ）」\n  - Bottom note: 「FD の有無がサイズ戦略を変える」\nLayout: two-panel comparison.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第27章",
+    "section": "R2 フロップスーツ",
+    "description": "フロップFDあり（サイズ大/チェック）vs FDなし（レンジベット可）のスーツ判定比較"
+  },
+  {
+    "name": "f27-fig3-r3-flop-range-adv-matrix",
+    "prompt": "Matrix table showing R3 RangeAdv adjustment for flop with sign inversion logic. Display a grid with Japanese labels:\n  - Title at top: 「R3：フロップ RangeAdv 補正 (+R)」\n  - Table: rows = your position (BTN/BB/SB), columns = board type\n  - Key cells:\n    - BTN vs ハイボード: 「+R = +3」\n    - BB vs ハイボード: 「+R = -3」\n    - BTN vs ローコネクト: 「+R = +1」\n    - BB vs ローコネクト: 「+R = +1（均衡）」\n  - Note: 「BBはハイボードで不利（レンジ差大）」\n  - Sign rule box: 「ポジション有利 → 正値 / 不利 → 負値」\n  - Footer: 「符号反転: プリフロップとは逆の場合あり」\nLayout: matrix/grid table with position and board type axes.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第27章",
+    "section": "R3 フロップRangeAdv",
+    "description": "フロップのポジション×ボードタイプ別RangeAdv補正マトリクス（符号反転ロジック付き）"
+  },
+  {
+    "name": "f27-fig4-r4-size-two-choices",
+    "prompt": "Wide comparison diagram showing the two-choice CBet sizing system. Display a clear two-option layout with Japanese labels:\n  - Title at top: 「R4：サイズ 2択システム」\n  - Left option (large panel): 「33% ポット（スモール）」\n    - Condition: 「ドライボード / レンジ優位 / バリューレンジベット」\n    - Examples: 「K72r、A52r」\n    - Math: 「ポット 60bb → ベット 20bb」\n  - Right option (large panel): 「75% ポット（ビッグ）」\n    - Condition: 「ウェットボード / NutsAdv / ポーラライズ戦略」\n    - Examples: 「J98s、KQTs」\n    - Math: 「ポット 60bb → ベット 45bb」\n  - Center: 「どちらかを選ぶ」\n  - Bottom note: 「50%は中途半端 → 2択に絞る」\nLayout: two-option side-by-side comparison with clear dividing line.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第27章",
+    "section": "R4 サイズ2択",
+    "description": "33%（ドライ/レンジベット）vs 75%（ウェット/NutsAdv）のCBetサイズ2択システム"
+  },
+  {
+    "name": "f27-fig5-r5-flop-trap-flow",
+    "prompt": "Horizontal flowchart showing the trap play progression on the flop. Display a wide flow diagram with Japanese labels:\n  - Title at top: 「R5：フロップ トラップ進行フロー」\n  - Step 1: 「強いハンド（セット/2ペア）」→ 「IP でチェックバック選択」\n  - Step 2: 「相手がターンにベット」→ 「コール or チェックレイズ」\n  - Step 3: 「リバーでバリュー抽出」→ 「ビッグベット」\n  - Alternative: Step 1 「OOP の場合」→ 「スモールベット（トラップにくい）」\n  - Bottom note: 「IPトラップ = チェックバック → ターン誘引 → リバー大きく」\nLayout: wide horizontal flowchart with numbered steps.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第27章",
+    "section": "R5 フロップトラップ",
+    "description": "フロップIPチェックバック→ターン誘引→リバービッグベットのトラップ進行フロー"
+  },
+  {
+    "name": "f27-fig6-r6-mdf-flop-version",
+    "prompt": "Wide slider diagram showing MDF adjustment based on opponent aggression on the flop. Display a horizontal adjustment diagram with Japanese labels:\n  - Title at top: 「R6：MDF ±10% フロップ版」\n  - Center baseline: 「標準 MDF（ベットサイズに依存）」\n  - Left zone (-10%): 「MDF 引き下げ」\n    - Trigger: 「相手のCBet率 < 40%（タイト）」\n    - Action: 「少し多くフォールド可」\n  - Right zone (+10%): 「MDF 引き上げ」\n    - Trigger: 「相手のCBet率 > 70%（高頻度）」\n    - Action: 「より多くディフェンス必要」\n  - Example center: 「ハーフポットベット → 標準MDF 67%」「範囲: 57%〜77%」\n  - Bottom note: 「CBet 頻度が低い相手に折れすぎない」\nLayout: horizontal slider diagram with left/right ±10% zones.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第27章",
+    "section": "R6 フロップMDF",
+    "description": "相手CBet頻度に応じたフロップMDF ±10%調整スライダー図"
+  },
+  {
+    "name": "f28-fig1-integrated-formula",
+    "prompt": "Complete integrated formula diagram showing all components of the unified flop decision formula. Display a central formula with all component boxes with Japanese labels:\n  - Title at top: 「完全統合式」\n  - Formula: 「CBetScore = Hand − Board + Pos + R3 + M + SPR + E + 3bP」\n  - Eight component boxes around the formula:\n    - 「Hand」= 「HandScore（役+ドロー+ブロッカー）」\n    - 「Board」= 「BoardScore（S+F+H）」\n    - 「Pos」= 「IP+2 / OOP-2」\n    - 「R3」= 「RangeAdv補正」\n    - 「M」= 「マルチウェイ補正（3way:-3 等）」\n    - 「SPR」= 「SPR補正（低SPR加点）」\n    - 「E」= 「相手タイプ補正」\n    - 「3bP」= 「3betポット補正 +2」\n  - Bottom note: 「全要素を足し合わせて判断」\nLayout: central formula with eight surrounding labeled boxes.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "1:1",
+    "chapter": "第28章",
+    "section": "完全統合式",
+    "description": "Hand-Board+Pos+R3+M+SPR+E+3bPの8要素完全統合フロップCBet式"
+  },
+  {
+    "name": "f28-fig2-m-correction-multiway",
+    "prompt": "Wide bar chart showing M (multiway) correction values for different player counts. Display bars with Japanese labels:\n  - Title at top: 「M補正：プレイヤー数別」\n  - X-axis: player count 「2-way（HU）」「3-way」「4-way以上」\n  - Y-axis: 「M補正値」 ranging from -6 to 0\n  - Bars:\n    - 2-way: 0（補正なし）green\n    - 3-way: -3（orange）\n    - 4-way以上: -6（red）\n  - Annotation: 「1人増えるたびに -3」\n  - Secondary implication below: 「CBetScore が6下がる = 判定帯が1段下がる」\n  - Bottom note: 「マルチウェイではプレミアハンドのみ推奨」\nLayout: vertical bar chart with three bars and annotation.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第28章",
+    "section": "M補正",
+    "description": "2-way:0 / 3-way:-3 / 4-way:-6のマルチウェイM補正値棒グラフ"
+  },
+  {
+    "name": "f28-fig3-spr-correction-zones",
+    "prompt": "Wide diagram showing SPR correction values for four SPR bands. Display a horizontal band diagram with Japanese labels:\n  - Title at top: 「SPR補正 4帯域」\n  - Four horizontal zones from left to right:\n    - Zone 1 (SPR 0-3, green): 「低SPR補正: +3」「強いアクション推奨」\n    - Zone 2 (SPR 3-6, light green): 「中低SPR補正: +1」「やや積極的」\n    - Zone 3 (SPR 6-15, gray): 「中高SPR補正: 0」「標準」\n    - Zone 4 (SPR 15+, red): 「高SPR補正: -2」「慎重に」\n  - X-axis: 「SPR 値」\n  - Below each zone: example scenario\n  - Bottom note: 「SPR低いほど積極的なアクションが正当化される」\nLayout: horizontal four-zone band diagram.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "第28章",
+    "section": "SPR補正帯域",
+    "description": "SPR 0-3:+3 / 3-6:+1 / 6-15:0 / 15+:-2のSPR補正4帯域図"
+  },
+  {
+    "name": "f28-fig4-e-correction-player-types",
+    "prompt": "Table showing E (exploit) correction values based on opponent player type. Display a reference table with Japanese labels:\n  - Title at top: 「E補正：相手タイプ別」\n  - Table with columns: 「相手タイプ」「E補正値」「根拠」\n  - Row 1: 「ニット（VPIP<15）」「+3」「フォールドが多い → ブラフ有利」\n  - Row 2: 「TAG（標準）」「0（補正なし）」「基準となるプレイヤー」\n  - Row 3: 「LAG（ルースアグレ）」「-2」「コールが多い → ブラフ禁止」\n  - Row 4: 「コールステーション」「-3」「絶対コール → バリューのみ」\n  - Row 5: 「マニアック（超ルース）」「+1〜+2」「過コール → バリュー強調」\n  - Footer: 「相手タイプを見てEを補正する」\nLayout: 3-column table with E values in bold.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "4:3",
+    "chapter": "第28章",
+    "section": "E補正",
+    "description": "ニット+3 / TAG:0 / LAG:-2 / コールステーション-3の相手タイプ別E補正テーブル"
+  },
+  {
+    "name": "f29-fig1-integrated-cbet-quick-table",
+    "prompt": "Wide quick reference table for the integrated 3-band CBet system. Display a comprehensive reference table with Japanese labels:\n  - Title at top: 「統合 CBet 早見表（3バンド版）」\n  - Table columns: 「状況」「Band A (≥15)」「Band B (8-14)」「Band C (<8)」\n  - Row 1: 「ドライボード IP」「75% ベット」「33% ベット」「チェックバック」\n  - Row 2: 「ドライボード OOP」「50% ベット」「チェック」「チェックフォールド」\n  - Row 3: 「ウェットボード IP」「75% ベット」「チェック」「チェックバック」\n  - Row 4: 「ウェットボード OOP」「50% ベット」「チェック」「チェックフォールド」\n  - Row 5: 「マルチウェイ（3way）」「50% ベット（高スコアのみ）」「チェック」「フォールド」\n  - Footer: 「まず Band を決め、次にサイズを決める」\nLayout: wide 4-column table.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "16:9",
+    "chapter": "付録H/I/J",
+    "section": "統合CBet早見表",
+    "description": "ボードタイプ×ポジション×3バンドの組み合わせ別アクション早見テーブル"
+  },
+  {
+    "name": "f29-fig2-r4-size-flowchart",
+    "prompt": "Vertical flowchart for the R4 CBet size selection process. Display a decision flow with Japanese labels:\n  - Title at top: 「R4 サイズ決定 フローチャート」\n  - Start: 「CBet を打つと決定（Band A/B）」\n  - Decision 1: 「NutsAdv あり？」\n    - Yes → 「75%（ポーラライズ）」\n    - No → 次の判断へ\n  - Decision 2: 「BoardScore ≥ 6（ウェット）？」\n    - Yes → 「75%（ドロー払い出し）」\n    - No → 次の判断へ\n  - Decision 3: 「マルチウェイ（3人以上）？」\n    - Yes → 「33%〜50%（安全）」\n    - No → 「33%（レンジベット）」\n  - Bottom note: 「3問で即サイズ決定」\nLayout: vertical decision flowchart with three diamond nodes.\nAspect ratio 9:16.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "9:16",
+    "chapter": "付録H/I/J",
+    "section": "R4サイズフロー",
+    "description": "NutsAdv→BoardScore→マルチウェイの3問でCBetサイズ（33% or 75%）を決定するフローチャート"
+  },
+  {
+    "name": "f29-fig3-chapter27-cheatsheet",
+    "prompt": "Compact one-page cheatsheet summarizing Chapter 27 rules for flop play. Display a dense reference card with Japanese labels:\n  - Title at top: 「第27章 チートシート」\n  - R1 section: 「3バンド: ≥15→ベット / 8-14→状況 / <8→チェック」\n  - R2 section: 「FDあり → サイズ大 or チェック / FDなし → レンジベット可」\n  - R3 section: 「RangeAdv: IP有利+R / OOP不利-R」\n  - R4 section: 「NutsAdv or ウェット → 75% / その他 → 33%」\n  - R5 section: 「IP × 強手 → チェックバック トラップ」\n  - R6 section: 「MDF ±10%: アグレ相手+10% / タイト相手-10%」\n  - Footer: 「R1→R2→R3→R4→R5→R6 の順に確認」\nLayout: compact six-row reference card.\nAspect ratio 3:4.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "aspectRatio": "3:4",
+    "chapter": "付録H/I/J",
+    "section": "第27章チートシート",
+    "description": "R1〜R6の全ルールを1枚に凝縮した第27章フロップ判断チートシート"
+  }
+]
