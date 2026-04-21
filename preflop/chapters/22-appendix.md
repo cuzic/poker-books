@@ -899,7 +899,7 @@ R6 確認（ベットを受けたとき）
 
 ## 付録K　本書で引用した数値の出典一覧
 
-本書は式の設計にあたり、GTO Wizard・Upswing Poker・ICMIZERなどの公開データを参照しました。各数値の再現性を担保するため、出典を一括して示します。
+本書は式の設計にあたり、GTO Wizard・Upswing Pokerなどの公開データを参照しました。各数値の再現性を担保するため、出典を一括して示します。
 
 ### GTO Wizard データ
 
@@ -920,7 +920,6 @@ R6 確認（ベットを受けたとき）
 | Sklansky *The Theory of Poker* (1999) | 第3章 | ポーカーの基本定理（相手がミスをするほどEVが上がる） |
 | Miller *Professional No-Limit Hold'em* (2007) | 第10章 | 実現率（EQR）の概念的基礎 |
 | Upswing Poker | 第11章 | セットマイニング回収率の目安（スタックの60%以上が必要） |
-| ICMIZER（icmizer.com） | 第17章 | ICM プレッシャーの数値（バブル時スタック別分析） |
 
 ### 再現性について
 
@@ -966,7 +965,6 @@ R6 確認（ベットを受けたとき）
 | マルチウェイでの AQo 判断 | −0.15 bb/hand | −0.08 bb/hand | −0.03 bb/hand | マルチウェイ補正 −2 |
 | BTN で小ペア vs 4bet オールイン | −0.12 bb/hand | −0.06 bb/hand | −0.02 bb/hand | 第16章の簡易 EV 式 |
 | SB vs BTN AJs（コール vs 3bet） | −0.09 bb/hand | −0.04 bb/hand | −0.02 bb/hand | SB レンジバランス |
-| ICM バブル近辺のしきい値調整 | −0.20 bb/hand | −0.10 bb/hand | −0.04 bb/hand | 本書範囲外（参考値） |
 
 ### 全体平均の推定
 
