@@ -2,7 +2,7 @@ import { join } from "node:path";
 import { mkdir } from "node:fs/promises";
 
 const BASE_URL = "https://generativelanguage.googleapis.com";
-const MODEL = "gemini-3.1-flash-image-preview";
+const MODEL = "gemini-3-pro-image-preview";
 const ROOT = join(import.meta.dir, "..");
 const BOOKS = ["preflop", "flop"] as const;
 type BookId = (typeof BOOKS)[number];
