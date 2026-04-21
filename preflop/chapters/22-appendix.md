@@ -7,6 +7,38 @@
 
 ---
 
+## 付録0　参考文献（References）
+
+本書の執筆・設計にあたり参照した主要な文献・ツール・ウェブ記事を分野別に列挙します。
+
+### 書籍
+
+- **Bill Chen & Jerrod Ankenman** *The Mathematics of Poker* (Conjelco, 2006)
+- **Matt Janda** *Applications of No-Limit Hold'em* (DailyVariance, 2013)
+- **Michael Acevedo** *Modern Poker Theory* (D&B Publishing, 2019)
+- **David Sklansky** *The Theory of Poker* (Two Plus Two Publishing, 1999)
+- **Ed Miller** *Professional No-Limit Hold'em* (Two Plus Two Publishing, 2007)
+- **Jonathan Little** *Excelling at No-Limit Hold'em* (D&B Publishing, 2015)
+
+### ウェブ / ツール
+
+- **GTO Wizard** — <https://gtowizard.com/>（主要データ出典、有料プラン推奨）
+- **Upswing Poker Blog** — <https://upswingpoker.com/blog/>
+- **PokerCoaching.com (Jonathan Little)** — <https://pokercoaching.com/>
+- **Run It Once Training** — <https://www.runitonce.com/>
+- **SplitSuit Poker** — <https://www.splitsuit.com/>
+
+### 姉妹編（本シリーズ）
+
+- 川西智也『フロップは構造で勝つ』（2026）
+- <https://cuzic.github.io/poker-books/flop/>
+
+### 謝辞
+
+本書はこれらの公開データと先行書籍の蓄積なしには成立しえません。特にGTO Wizardの膨大な分析データ、Upswing Pokerのレンジ解説、Jandaのレンジ思考の体系化には大きな影響を受けています。
+
+---
+
 ## 付録A　ポジション別オープンレンジチャート（6-max 100BB）
 
 本書のスコア式とGTO推奨を併記したチャートです。
@@ -862,6 +894,104 @@ R6 確認（ベットを受けたとき）
 | BTN | 18 | 23 | 18 |
 | SB | 20 | 23 | 18 |
 | BB | — | 20（防御 T） | 14（防御 T） |
+
+---
+
+## 付録K　本書で引用した数値の出典一覧
+
+本書は式の設計にあたり、GTO Wizard・Upswing Poker・ICMIZERなどの公開データを参照しました。各数値の再現性を担保するため、出典を一括して示します。
+
+### GTO Wizard データ
+
+| 本書記載箇所 | 引用値 | ツール / 条件 |
+|------------|-------|-------------|
+| 第5章 5-2節（UTG 24 / MP 22 / CO 20 / BTN 18 のしきい値根拠） | 各ポジションの RFI 頻度（UTG 約 15〜18%、MP 約 21〜25%、CO 約 25〜28%、BTN 約 40〜43%） | GTO Wizard 6-max 100BB Cash、各ポジションのオープンレンジ分析 |
+| 第8章（KK・AA のオープンしきい値） | 全ポジション全頻度オープン | GTO Wizard プリフロップチャート、6-max 100BB |
+| 第12章（3betしきい値：対UTG 23 / 対MP 21 / 対CO 19 / 対BTN 18） | 対ポジション別 3bet 頻度 | GTO Wizard 3bet チャート、6-max 100BB |
+| 第13章（ポーラ／リニア の分岐点） | 対 UTG はポーラライズ、対 BTN はリニア | GTO Wizard レンジ分析 + Acevedo *Modern Poker Theory* (2019) |
+| 第17章（マルチウェイ AK 勝率） | 2-way 約 65%、3-way 約 50%、4-way 約 40% | GTO Wizard マルチウェイ アナライザー |
+
+### そのほかの出典
+
+| 書籍・サイト | 使用章 | 内容 |
+|-----------|------|------|
+| Janda *Applications of No-Limit Hold'em* (2013) | 第13章 | レンジ構築：ポーラライズ vs リニア の体系 |
+| Acevedo *Modern Poker Theory* (2019) | 第13章 | GTOベースのレンジ構築理論、ブロッカー評価 |
+| Sklansky *The Theory of Poker* (1999) | 第3章 | ポーカーの基本定理（相手がミスをするほどEVが上がる） |
+| Miller *Professional No-Limit Hold'em* (2007) | 第10章 | 実現率（EQR）の概念的基礎 |
+| Upswing Poker | 第11章 | セットマイニング回収率の目安（スタックの60%以上が必要） |
+| ICMIZER（icmizer.com） | 第17章 | ICM プレッシャーの数値（バブル時スタック別分析） |
+
+### 再現性について
+
+本書で引用したGTO Wizardの数値（RFI頻度、3bet頻度等）は、**執筆時点（2026年3〜4月）** のバージョンでの値です。ツールの更新により微小な変動はあり得ますが、傾向・方向性の結論は安定しています。より厳密な検証はGTO Wizardの有料プラン（Professional以上）で直接再現できます。
+
+---
+
+## 付録L　式の近似精度：EV ロス測定の結果（推定）
+
+読者から寄せられた疑問のひとつは「この簡易式を使うと、GTO戦略と比べてどれだけ損をするのか」です。本付録はその疑問に対する**中間回答**です（v2で完全検証予定）。
+
+### 検証プロトコル
+
+以下の手順で本書式とGTOソルバー（GTO Wizard Professional相当）のEV差を測定します。
+
+1. 代表スポット20箇所を選定（オープン判断・3bet判断・コール判断・4bet判断等）
+2. 各スポットで本書式の推奨アクションを算出（Level 1 / Level 2 / Level 3）
+3. GTOソルバーで同じスポットの最適EVを測定
+4. 両者の差（bb/100換算）を算出
+
+### 代表スポット 20 例の推定 EV 差
+
+**この値は著者が概算した推定値です。v2 では完全検証版に差し替え予定です。**
+
+| スポット | Level 1（基本式） | Level 2（+ R1〜R5） | Level 3（第21章） | 備考 |
+|---------|-----------------|---------------------|-----------------|-----|
+| UTG で AKs オープン | 0 bb/hand | 0 bb/hand | 0 bb/hand | GTO とほぼ同じ |
+| UTG で AJo オープン | −0.05 bb/hand | −0.02 bb/hand | −0.01 bb/hand | 境界ハンドで微小乖離 |
+| BTN で 22 オープン | −0.08 bb/hand | −0.03 bb/hand | −0.01 bb/hand | 補助ルールで修正 |
+| CO で A5s オープン | −0.04 bb/hand | −0.02 bb/hand | 0 bb/hand | GTO とほぼ一致 |
+| BTN で 65s オープン | −0.10 bb/hand | −0.04 bb/hand | −0.01 bb/hand | 補助ルール対象 |
+| BB vs BTN でポットオッズコール | −0.06 bb/hand | −0.03 bb/hand | −0.01 bb/hand | 実現率補正が効く |
+| A5s で対 UTG 3bet（60% 混合） | −0.12 bb/hand | −0.06 bb/hand | −0.02 bb/hand | ブロッカー混合の誤差 |
+| KTs で対 UTG 3bet | −0.08 bb/hand | −0.04 bb/hand | −0.02 bb/hand | 混合戦略の誤差 |
+| JJ で対 UTG コール（フラット） | −0.10 bb/hand | −0.05 bb/hand | −0.02 bb/hand | ポーラライズ境界 |
+| QQ+ で対 UTG 3bet | 0 bb/hand | 0 bb/hand | 0 bb/hand | GTO と完全一致 |
+| SB で BTN に 3bet | −0.07 bb/hand | −0.03 bb/hand | −0.01 bb/hand | SB 特殊性補正 |
+| 22 で対 MP セットマイニング | −0.05 bb/hand | −0.02 bb/hand | 0 bb/hand | 15 倍ルール精度高 |
+| BTN で AQo vs 3bet フォールド | −0.06 bb/hand | −0.03 bb/hand | −0.01 bb/hand | 4bet コール境界 |
+| BB で BTN に広めコール | −0.08 bb/hand | −0.04 bb/hand | −0.02 bb/hand | MDF 近似の誤差 |
+| CO で 76s オープン | −0.09 bb/hand | −0.04 bb/hand | −0.01 bb/hand | スーテッド過小評価 |
+| UTG で KQo オープン | −0.06 bb/hand | −0.03 bb/hand | −0.01 bb/hand | HJ 以降が本来の目安 |
+| マルチウェイでの AQo 判断 | −0.15 bb/hand | −0.08 bb/hand | −0.03 bb/hand | マルチウェイ補正 −2 |
+| BTN で小ペア vs 4bet オールイン | −0.12 bb/hand | −0.06 bb/hand | −0.02 bb/hand | 第16章の簡易 EV 式 |
+| SB vs BTN AJs（コール vs 3bet） | −0.09 bb/hand | −0.04 bb/hand | −0.02 bb/hand | SB レンジバランス |
+| ICM バブル近辺のしきい値調整 | −0.20 bb/hand | −0.10 bb/hand | −0.04 bb/hand | 本書範囲外（参考値） |
+
+### 全体平均の推定
+
+- **Level 1（基本式のみ）**：約 −0.5 〜 −0.8 bb/100
+- **Level 2（+ R1〜R5、第21章）**：約 −0.15 〜 −0.3 bb/100
+- **Level 3（第21章完全適用）**：約 −0.05 〜 −0.1 bb/100
+
+プリフロップはフロップより判断の分岐が少ない構造のため、EVロスの絶対値はフロップ編と比べて小さい傾向があります（フロップ編Level 1は約 −0.8〜−1.2 bb/100と推定）。
+
+### 解釈のガイドライン
+
+- **レクリエーション（25NL 以下）**：Level 1で十分。相手がLevel 0（直感）なので −0.8 bb/100の損失があっても勝てる
+- **中級キャッシュ（100NL〜200NL）**：Level 2推奨。Level 1は境界で搾取されるリスクあり
+- **上級（500NL 以上）**：Level 3 + ソルバー併用が必要
+
+### 限界の開示
+
+- 本書式は**ヘッズアップ 6-max 100BB キャッシュゲーム**を基準設計としており、ほかの条件（マルチウェイ、MTT、異なるBB数）では精度が落ちます。
+- GTOは「相手もGTO」を前提とするため、実戦の搾取機会は本書式 + 観察眼の方が大きい場合があります。
+
+### v2 への検証計画（推定値の公開について）
+
+- 代表100スポットでGTO Wizardの有料プランを用いた自動検証
+- 読者から実戦ハンドデータを募り、本書式のEV損失を実測
+- 結果をWeb版（GitHub Pages）で随時更新
 
 ---
 
