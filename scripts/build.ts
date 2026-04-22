@@ -28,13 +28,14 @@ interface Chapter {
 }
 
 type OutputFormat = "html" | "xhtml" | "epub" | "site" | "all";
-type BookId = "preflop" | "flop";
+type BookId = "preflop" | "flop" | "flop-advanced";
 
 const ROOT = join(import.meta.dir, "..");
-const BOOKS: BookId[] = ["preflop", "flop"];
+const BOOKS: BookId[] = ["preflop", "flop", "flop-advanced"];
 const BOOK_LABELS: Record<BookId, string> = {
   preflop: "第1巻　プリフロップは計算で勝つ",
   flop: "第2巻　フロップは構造で勝つ",
+  "flop-advanced": "第3巻　フロップは読み合いで勝つ",
 };
 
 async function loadBookConfig(bookId: BookId): Promise<BookConfig> {
