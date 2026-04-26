@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_KK9_Ac",
+  "board_label": "KK9",
+  "board": [
+    "Kc",
+    "Kd",
+    "9s",
+    "Ac"
+  ],
+  "turn_card": "Ac",
+  "category": "overcard",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 97.9,
+  "exploitability_pct": 0.329,
+  "elapsed_sec": 16.9,
+  "status": "ok"
+}

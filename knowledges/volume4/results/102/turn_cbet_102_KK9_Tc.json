@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_KK9_Tc",
+  "board_label": "KK9",
+  "board": [
+    "Kc",
+    "Kd",
+    "9s",
+    "Tc"
+  ],
+  "turn_card": "Tc",
+  "category": "connector",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 100.0,
+  "exploitability_pct": 0.401,
+  "elapsed_sec": 18.3,
+  "status": "ok"
+}

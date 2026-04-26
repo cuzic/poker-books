@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_KQTss_Jh",
+  "board_label": "KQTss",
+  "board": [
+    "Ks",
+    "Qs",
+    "Th",
+    "Jh"
+  ],
+  "turn_card": "Jh",
+  "category": "connector",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 41.1,
+  "exploitability_pct": 0.235,
+  "elapsed_sec": 17.8,
+  "status": "ok"
+}

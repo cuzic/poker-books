@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_K72r_Qs",
+  "board_label": "K72r",
+  "board": [
+    "Kc",
+    "7d",
+    "2s",
+    "Qs"
+  ],
+  "turn_card": "Qs",
+  "category": "blank",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 78.3,
+  "exploitability_pct": 0.405,
+  "elapsed_sec": 57.6,
+  "status": "ok"
+}

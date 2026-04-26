@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_AT7ss_Kh",
+  "board_label": "AT7ss",
+  "board": [
+    "As",
+    "Ts",
+    "7h",
+    "Kh"
+  ],
+  "turn_card": "Kh",
+  "category": "connector",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 91.4,
+  "exploitability_pct": 0.335,
+  "elapsed_sec": 17.6,
+  "status": "ok"
+}

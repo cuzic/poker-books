@@ -1,0 +1,23 @@
+{
+  "scenario_id": "probe_987mono_baseline",
+  "description": "H3/H4 切り分け baseline: 987mono を SolverEngineConfig::default() + seed=42 で再現 (max_raises=1, timeout=5s, no iter limit)",
+  "street_to_solve": "flop",
+  "board": [
+    "9h",
+    "8h",
+    "7h"
+  ],
+  "pot_bb": 7,
+  "effective_stack_bb": 97,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "rng_seed": 42
+  }
+}

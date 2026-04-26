@@ -1,0 +1,28 @@
+{
+  "label": "K72r_blank",
+  "board": [
+    "Kc",
+    "7d",
+    "2s",
+    "3c"
+  ],
+  "board_label": [
+    "Kc",
+    "7d",
+    "2s"
+  ],
+  "turn_card": "3c",
+  "turn_category": "blank",
+  "description": "ドライ板 + ブランクターン",
+  "turn_cbet_pct": 65.44201802923071,
+  "bet_size_distribution": {
+    "BET 3.000000": 56.4,
+    "BET 5.000000": 22.0,
+    "BET 8.000000": 13.0,
+    "BET 15.000000": 8.6,
+    "BET 92.000000": 0.0
+  },
+  "exploitability_pct": 0.38747996,
+  "elapsed_sec": 38.6,
+  "status": "ok"
+}

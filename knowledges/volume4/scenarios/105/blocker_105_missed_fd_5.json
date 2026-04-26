@@ -1,0 +1,34 @@
+{
+  "scenario_id": "blocker_105_missed_fd_5",
+  "description": "[ミスド FD ブラフ] Kh5h3c + Qh + 2d (ターン 3h 完成候補, FD missed の河)",
+  "street_to_solve": "river",
+  "board": [
+    "Kh",
+    "5h",
+    "3c",
+    "Qh",
+    "2d"
+  ],
+  "pot_bb": 20,
+  "effective_stack_bb": 80,
+  "hero_position": "BTN",
+  "hero_range": {
+    "expr": "AsJs,AcTc"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.33,
+    0.5,
+    0.75,
+    1.5
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 8000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

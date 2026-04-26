@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_K83r_Jd",
+  "board_label": "K83r",
+  "board": [
+    "Kc",
+    "8d",
+    "3s",
+    "Jd"
+  ],
+  "turn_card": "Jd",
+  "category": "blank",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 70.4,
+  "exploitability_pct": 0.377,
+  "elapsed_sec": 73.3,
+  "status": "ok"
+}

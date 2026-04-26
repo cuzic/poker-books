@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_987ss_6s",
+  "board_label": "987ss",
+  "board": [
+    "9s",
+    "8s",
+    "7h",
+    "6s"
+  ],
+  "turn_card": "6s",
+  "category": "flush",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 64.6,
+  "exploitability_pct": 0.362,
+  "elapsed_sec": 18.2,
+  "status": "ok"
+}

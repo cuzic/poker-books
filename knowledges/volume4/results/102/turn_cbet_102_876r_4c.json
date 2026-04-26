@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_876r_4c",
+  "board_label": "876r",
+  "board": [
+    "8c",
+    "7d",
+    "6s",
+    "4c"
+  ],
+  "turn_card": "4c",
+  "category": "connector",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 66.9,
+  "exploitability_pct": 0.312,
+  "elapsed_sec": 19.0,
+  "status": "ok"
+}

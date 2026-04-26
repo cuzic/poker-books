@@ -1,0 +1,31 @@
+{
+  "scenario_id": "river_vb_103_Ifullhouse_alpha555",
+  "description": "Ifullhouse (full_house_possible) / bet 0.555 pot / alpha_theory=0.3569",
+  "street_to_solve": "river",
+  "board": [
+    "Ac",
+    "Ah",
+    "5d",
+    "5h",
+    "Kc"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.555
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 5000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

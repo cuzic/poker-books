@@ -1,0 +1,28 @@
+{
+  "label": "J75r_pair",
+  "board": [
+    "Jh",
+    "7s",
+    "5d",
+    "Jc"
+  ],
+  "board_label": [
+    "Jh",
+    "7s",
+    "5d"
+  ],
+  "turn_card": "Jc",
+  "turn_category": "pair",
+  "description": "セミ板 + ペアターン",
+  "turn_cbet_pct": 99.98031878338078,
+  "bet_size_distribution": {
+    "BET 3.000000": 46.9,
+    "BET 5.000000": 29.6,
+    "BET 8.000000": 17.8,
+    "BET 15.000000": 5.7,
+    "BET 92.000000": 0.0
+  },
+  "exploitability_pct": 0.46316683,
+  "elapsed_sec": 52.6,
+  "status": "ok"
+}

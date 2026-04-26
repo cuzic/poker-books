@@ -1,0 +1,470 @@
+{
+  "task": "103",
+  "title": "リバー V:B 比の実測",
+  "total": 30,
+  "boards": 10,
+  "sizes": [
+    0.25,
+    0.43,
+    0.555
+  ],
+  "alpha_theory": {
+    "0.25": 0.2,
+    "0.43": 0.3007,
+    "0.555": 0.3569
+  },
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "scenarios": [
+    {
+      "scenario_id": "river_vb_103_Adry1_alpha25",
+      "board_label": "Adry1",
+      "category": "dry_A_high",
+      "board": [
+        "As",
+        "Kh",
+        "7d",
+        "4c",
+        "2s"
+      ],
+      "bet_size": 0.25,
+      "alpha_theory": 0.2,
+      "file": "river_vb_103_Adry1_alpha25.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Adry1_alpha43",
+      "board_label": "Adry1",
+      "category": "dry_A_high",
+      "board": [
+        "As",
+        "Kh",
+        "7d",
+        "4c",
+        "2s"
+      ],
+      "bet_size": 0.43,
+      "alpha_theory": 0.3007,
+      "file": "river_vb_103_Adry1_alpha43.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Adry1_alpha555",
+      "board_label": "Adry1",
+      "category": "dry_A_high",
+      "board": [
+        "As",
+        "Kh",
+        "7d",
+        "4c",
+        "2s"
+      ],
+      "bet_size": 0.555,
+      "alpha_theory": 0.3569,
+      "file": "river_vb_103_Adry1_alpha555.json"
+    },
+    {
+      "scenario_id": "river_vb_103_BdryK_alpha25",
+      "board_label": "BdryK",
+      "category": "dry_K_high",
+      "board": [
+        "Kc",
+        "8h",
+        "3d",
+        "2s",
+        "Qc"
+      ],
+      "bet_size": 0.25,
+      "alpha_theory": 0.2,
+      "file": "river_vb_103_BdryK_alpha25.json"
+    },
+    {
+      "scenario_id": "river_vb_103_BdryK_alpha43",
+      "board_label": "BdryK",
+      "category": "dry_K_high",
+      "board": [
+        "Kc",
+        "8h",
+        "3d",
+        "2s",
+        "Qc"
+      ],
+      "bet_size": 0.43,
+      "alpha_theory": 0.3007,
+      "file": "river_vb_103_BdryK_alpha43.json"
+    },
+    {
+      "scenario_id": "river_vb_103_BdryK_alpha555",
+      "board_label": "BdryK",
+      "category": "dry_K_high",
+      "board": [
+        "Kc",
+        "8h",
+        "3d",
+        "2s",
+        "Qc"
+      ],
+      "bet_size": 0.555,
+      "alpha_theory": 0.3569,
+      "file": "river_vb_103_BdryK_alpha555.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Cpaired_alpha25",
+      "board_label": "Cpaired",
+      "category": "paired",
+      "board": [
+        "Kc",
+        "7d",
+        "2s",
+        "7h",
+        "Ac"
+      ],
+      "bet_size": 0.25,
+      "alpha_theory": 0.2,
+      "file": "river_vb_103_Cpaired_alpha25.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Cpaired_alpha43",
+      "board_label": "Cpaired",
+      "category": "paired",
+      "board": [
+        "Kc",
+        "7d",
+        "2s",
+        "7h",
+        "Ac"
+      ],
+      "bet_size": 0.43,
+      "alpha_theory": 0.3007,
+      "file": "river_vb_103_Cpaired_alpha43.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Cpaired_alpha555",
+      "board_label": "Cpaired",
+      "category": "paired",
+      "board": [
+        "Kc",
+        "7d",
+        "2s",
+        "7h",
+        "Ac"
+      ],
+      "bet_size": 0.555,
+      "alpha_theory": 0.3569,
+      "file": "river_vb_103_Cpaired_alpha555.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Dtrips_alpha25",
+      "board_label": "Dtrips",
+      "category": "trips",
+      "board": [
+        "9c",
+        "9h",
+        "4s",
+        "9d",
+        "2h"
+      ],
+      "bet_size": 0.25,
+      "alpha_theory": 0.2,
+      "file": "river_vb_103_Dtrips_alpha25.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Dtrips_alpha43",
+      "board_label": "Dtrips",
+      "category": "trips",
+      "board": [
+        "9c",
+        "9h",
+        "4s",
+        "9d",
+        "2h"
+      ],
+      "bet_size": 0.43,
+      "alpha_theory": 0.3007,
+      "file": "river_vb_103_Dtrips_alpha43.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Dtrips_alpha555",
+      "board_label": "Dtrips",
+      "category": "trips",
+      "board": [
+        "9c",
+        "9h",
+        "4s",
+        "9d",
+        "2h"
+      ],
+      "bet_size": 0.555,
+      "alpha_theory": 0.3569,
+      "file": "river_vb_103_Dtrips_alpha555.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Estraight_alpha25",
+      "board_label": "Estraight",
+      "category": "straight_complete",
+      "board": [
+        "9c",
+        "8h",
+        "7d",
+        "6s",
+        "Jc"
+      ],
+      "bet_size": 0.25,
+      "alpha_theory": 0.2,
+      "file": "river_vb_103_Estraight_alpha25.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Estraight_alpha43",
+      "board_label": "Estraight",
+      "category": "straight_complete",
+      "board": [
+        "9c",
+        "8h",
+        "7d",
+        "6s",
+        "Jc"
+      ],
+      "bet_size": 0.43,
+      "alpha_theory": 0.3007,
+      "file": "river_vb_103_Estraight_alpha43.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Estraight_alpha555",
+      "board_label": "Estraight",
+      "category": "straight_complete",
+      "board": [
+        "9c",
+        "8h",
+        "7d",
+        "6s",
+        "Jc"
+      ],
+      "bet_size": 0.555,
+      "alpha_theory": 0.3569,
+      "file": "river_vb_103_Estraight_alpha555.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Fflush_alpha25",
+      "board_label": "Fflush",
+      "category": "flush_complete",
+      "board": [
+        "As",
+        "Ks",
+        "7s",
+        "2s",
+        "4c"
+      ],
+      "bet_size": 0.25,
+      "alpha_theory": 0.2,
+      "file": "river_vb_103_Fflush_alpha25.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Fflush_alpha43",
+      "board_label": "Fflush",
+      "category": "flush_complete",
+      "board": [
+        "As",
+        "Ks",
+        "7s",
+        "2s",
+        "4c"
+      ],
+      "bet_size": 0.43,
+      "alpha_theory": 0.3007,
+      "file": "river_vb_103_Fflush_alpha43.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Fflush_alpha555",
+      "board_label": "Fflush",
+      "category": "flush_complete",
+      "board": [
+        "As",
+        "Ks",
+        "7s",
+        "2s",
+        "4c"
+      ],
+      "bet_size": 0.555,
+      "alpha_theory": 0.3569,
+      "file": "river_vb_103_Fflush_alpha555.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Gmono_alpha25",
+      "board_label": "Gmono",
+      "category": "monotone_no_change",
+      "board": [
+        "Ah",
+        "Kh",
+        "Qh",
+        "3s",
+        "2d"
+      ],
+      "bet_size": 0.25,
+      "alpha_theory": 0.2,
+      "file": "river_vb_103_Gmono_alpha25.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Gmono_alpha43",
+      "board_label": "Gmono",
+      "category": "monotone_no_change",
+      "board": [
+        "Ah",
+        "Kh",
+        "Qh",
+        "3s",
+        "2d"
+      ],
+      "bet_size": 0.43,
+      "alpha_theory": 0.3007,
+      "file": "river_vb_103_Gmono_alpha43.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Gmono_alpha555",
+      "board_label": "Gmono",
+      "category": "monotone_no_change",
+      "board": [
+        "Ah",
+        "Kh",
+        "Qh",
+        "3s",
+        "2d"
+      ],
+      "bet_size": 0.555,
+      "alpha_theory": 0.3569,
+      "file": "river_vb_103_Gmono_alpha555.json"
+    },
+    {
+      "scenario_id": "river_vb_103_H4straight_alpha25",
+      "board_label": "H4straight",
+      "category": "four_card_straight",
+      "board": [
+        "6s",
+        "7h",
+        "8d",
+        "9c",
+        "3s"
+      ],
+      "bet_size": 0.25,
+      "alpha_theory": 0.2,
+      "file": "river_vb_103_H4straight_alpha25.json"
+    },
+    {
+      "scenario_id": "river_vb_103_H4straight_alpha43",
+      "board_label": "H4straight",
+      "category": "four_card_straight",
+      "board": [
+        "6s",
+        "7h",
+        "8d",
+        "9c",
+        "3s"
+      ],
+      "bet_size": 0.43,
+      "alpha_theory": 0.3007,
+      "file": "river_vb_103_H4straight_alpha43.json"
+    },
+    {
+      "scenario_id": "river_vb_103_H4straight_alpha555",
+      "board_label": "H4straight",
+      "category": "four_card_straight",
+      "board": [
+        "6s",
+        "7h",
+        "8d",
+        "9c",
+        "3s"
+      ],
+      "bet_size": 0.555,
+      "alpha_theory": 0.3569,
+      "file": "river_vb_103_H4straight_alpha555.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Ifullhouse_alpha25",
+      "board_label": "Ifullhouse",
+      "category": "full_house_possible",
+      "board": [
+        "Ac",
+        "Ah",
+        "5d",
+        "5h",
+        "Kc"
+      ],
+      "bet_size": 0.25,
+      "alpha_theory": 0.2,
+      "file": "river_vb_103_Ifullhouse_alpha25.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Ifullhouse_alpha43",
+      "board_label": "Ifullhouse",
+      "category": "full_house_possible",
+      "board": [
+        "Ac",
+        "Ah",
+        "5d",
+        "5h",
+        "Kc"
+      ],
+      "bet_size": 0.43,
+      "alpha_theory": 0.3007,
+      "file": "river_vb_103_Ifullhouse_alpha43.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Ifullhouse_alpha555",
+      "board_label": "Ifullhouse",
+      "category": "full_house_possible",
+      "board": [
+        "Ac",
+        "Ah",
+        "5d",
+        "5h",
+        "Kc"
+      ],
+      "bet_size": 0.555,
+      "alpha_theory": 0.3569,
+      "file": "river_vb_103_Ifullhouse_alpha555.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Jlow_alpha25",
+      "board_label": "Jlow",
+      "category": "low_straight",
+      "board": [
+        "7s",
+        "5d",
+        "3c",
+        "2h",
+        "4s"
+      ],
+      "bet_size": 0.25,
+      "alpha_theory": 0.2,
+      "file": "river_vb_103_Jlow_alpha25.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Jlow_alpha43",
+      "board_label": "Jlow",
+      "category": "low_straight",
+      "board": [
+        "7s",
+        "5d",
+        "3c",
+        "2h",
+        "4s"
+      ],
+      "bet_size": 0.43,
+      "alpha_theory": 0.3007,
+      "file": "river_vb_103_Jlow_alpha43.json"
+    },
+    {
+      "scenario_id": "river_vb_103_Jlow_alpha555",
+      "board_label": "Jlow",
+      "category": "low_straight",
+      "board": [
+        "7s",
+        "5d",
+        "3c",
+        "2h",
+        "4s"
+      ],
+      "bet_size": 0.555,
+      "alpha_theory": 0.3569,
+      "file": "river_vb_103_Jlow_alpha555.json"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "scenario_id": "flop_acc30_T98r",
+  "description": "T98r フロップ精度検証 (GTO Wizard 40%)",
+  "street_to_solve": "flop",
+  "board": [
+    "Tc",
+    "9d",
+    "8s"
+  ],
+  "pot_bb": 7,
+  "effective_stack_bb": 97,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.33
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 5000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

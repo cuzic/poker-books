@@ -1,0 +1,703 @@
+{
+  "task": "108",
+  "title": "フック 6 論点の具体値",
+  "total": 30,
+  "topics": {
+    "ten_vs_ace": 5,
+    "paired_board": 5,
+    "monotone_small": 5,
+    "ahigh_check": 5,
+    "overbet_bluff": 5,
+    "bb3bet_defense": 5
+  },
+  "topic_titles": {
+    "ten_vs_ace": "テンがエースより有利",
+    "paired_board": "ペアボードは弱者に強い",
+    "monotone_small": "モノトーンは控えめに",
+    "ahigh_check": "A-high は check で稼ぐ",
+    "overbet_bluff": "リバー過剰 Bet はブラフのみ",
+    "bb3bet_defense": "BB 3bet 戦は SB/BTN が降りると得"
+  },
+  "scenarios": [
+    {
+      "scenario_id": "hook_108_ten_vs_ace_1",
+      "topic": "ten_vs_ace",
+      "topic_title": "テンがエースより有利",
+      "index": 1,
+      "street": "flop",
+      "board": [
+        "Tc",
+        "7d",
+        "5s"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "T75r (rainbow, dry)",
+      "file": "hook_108_ten_vs_ace_1.json"
+    },
+    {
+      "scenario_id": "hook_108_ten_vs_ace_2",
+      "topic": "ten_vs_ace",
+      "topic_title": "テンがエースより有利",
+      "index": 2,
+      "street": "flop",
+      "board": [
+        "Td",
+        "5c",
+        "4s"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "T54r (rainbow, low-connected)",
+      "file": "hook_108_ten_vs_ace_2.json"
+    },
+    {
+      "scenario_id": "hook_108_ten_vs_ace_3",
+      "topic": "ten_vs_ace",
+      "topic_title": "テンがエースより有利",
+      "index": 3,
+      "street": "flop",
+      "board": [
+        "Th",
+        "9c",
+        "2d"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "T92r (rainbow, blank low)",
+      "file": "hook_108_ten_vs_ace_3.json"
+    },
+    {
+      "scenario_id": "hook_108_ten_vs_ace_4",
+      "topic": "ten_vs_ace",
+      "topic_title": "テンがエースより有利",
+      "index": 4,
+      "street": "flop",
+      "board": [
+        "Ts",
+        "8s",
+        "6h"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "T86ss (two-tone, gutshot)",
+      "file": "hook_108_ten_vs_ace_4.json"
+    },
+    {
+      "scenario_id": "hook_108_ten_vs_ace_5",
+      "topic": "ten_vs_ace",
+      "topic_title": "テンがエースより有利",
+      "index": 5,
+      "street": "flop",
+      "board": [
+        "Ts",
+        "6s",
+        "3s"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "T63mono (monotone)",
+      "file": "hook_108_ten_vs_ace_5.json"
+    },
+    {
+      "scenario_id": "hook_108_paired_board_1",
+      "topic": "paired_board",
+      "topic_title": "ペアボードは弱者に強い",
+      "index": 1,
+      "street": "turn",
+      "board": [
+        "7c",
+        "7d",
+        "4s",
+        "2h"
+      ],
+      "pot_bb": 20,
+      "effective_stack_bb": 85,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "77 paired, low turn blank",
+      "file": "hook_108_paired_board_1.json"
+    },
+    {
+      "scenario_id": "hook_108_paired_board_2",
+      "topic": "paired_board",
+      "topic_title": "ペアボードは弱者に強い",
+      "index": 2,
+      "street": "turn",
+      "board": [
+        "4c",
+        "4d",
+        "9s",
+        "2h"
+      ],
+      "pot_bb": 20,
+      "effective_stack_bb": 85,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "44 paired, mid turn",
+      "file": "hook_108_paired_board_2.json"
+    },
+    {
+      "scenario_id": "hook_108_paired_board_3",
+      "topic": "paired_board",
+      "topic_title": "ペアボードは弱者に強い",
+      "index": 3,
+      "street": "turn",
+      "board": [
+        "9c",
+        "9d",
+        "5s",
+        "3h"
+      ],
+      "pot_bb": 20,
+      "effective_stack_bb": 85,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "99 paired, low turn",
+      "file": "hook_108_paired_board_3.json"
+    },
+    {
+      "scenario_id": "hook_108_paired_board_4",
+      "topic": "paired_board",
+      "topic_title": "ペアボードは弱者に強い",
+      "index": 4,
+      "street": "turn",
+      "board": [
+        "Jc",
+        "Jd",
+        "6s",
+        "2h"
+      ],
+      "pot_bb": 20,
+      "effective_stack_bb": 85,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "JJ paired, low turn",
+      "file": "hook_108_paired_board_4.json"
+    },
+    {
+      "scenario_id": "hook_108_paired_board_5",
+      "topic": "paired_board",
+      "topic_title": "ペアボードは弱者に強い",
+      "index": 5,
+      "street": "turn",
+      "board": [
+        "6c",
+        "6d",
+        "2s",
+        "9h"
+      ],
+      "pot_bb": 20,
+      "effective_stack_bb": 85,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "66 paired, turn overcard 9",
+      "file": "hook_108_paired_board_5.json"
+    },
+    {
+      "scenario_id": "hook_108_monotone_small_1",
+      "topic": "monotone_small",
+      "topic_title": "モノトーンは控えめに",
+      "index": 1,
+      "street": "flop",
+      "board": [
+        "As",
+        "Ks",
+        "Qs"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.5,
+        0.75,
+        1.0,
+        1.5
+      ],
+      "note": "AKQmono (high monotone)",
+      "file": "hook_108_monotone_small_1.json"
+    },
+    {
+      "scenario_id": "hook_108_monotone_small_2",
+      "topic": "monotone_small",
+      "topic_title": "モノトーンは控えめに",
+      "index": 2,
+      "street": "flop",
+      "board": [
+        "Jh",
+        "9h",
+        "7h"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.5,
+        0.75,
+        1.0,
+        1.5
+      ],
+      "note": "J97mono (mid connected)",
+      "file": "hook_108_monotone_small_2.json"
+    },
+    {
+      "scenario_id": "hook_108_monotone_small_3",
+      "topic": "monotone_small",
+      "topic_title": "モノトーンは控えめに",
+      "index": 3,
+      "street": "flop",
+      "board": [
+        "Tc",
+        "8c",
+        "3c"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.5,
+        0.75,
+        1.0,
+        1.5
+      ],
+      "note": "T83mono (mid-low)",
+      "file": "hook_108_monotone_small_3.json"
+    },
+    {
+      "scenario_id": "hook_108_monotone_small_4",
+      "topic": "monotone_small",
+      "topic_title": "モノトーンは控えめに",
+      "index": 4,
+      "street": "flop",
+      "board": [
+        "Kd",
+        "7d",
+        "2d"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.5,
+        0.75,
+        1.0,
+        1.5
+      ],
+      "note": "K72mono (dry high)",
+      "file": "hook_108_monotone_small_4.json"
+    },
+    {
+      "scenario_id": "hook_108_monotone_small_5",
+      "topic": "monotone_small",
+      "topic_title": "モノトーンは控えめに",
+      "index": 5,
+      "street": "flop",
+      "board": [
+        "9s",
+        "6s",
+        "4s"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.5,
+        0.75,
+        1.0,
+        1.5
+      ],
+      "note": "964mono (low connected)",
+      "file": "hook_108_monotone_small_5.json"
+    },
+    {
+      "scenario_id": "hook_108_ahigh_check_1",
+      "topic": "ahigh_check",
+      "topic_title": "A-high は check で稼ぐ",
+      "index": 1,
+      "street": "flop",
+      "board": [
+        "Ac",
+        "7d",
+        "4s"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "A74r (dry, low blank)",
+      "file": "hook_108_ahigh_check_1.json"
+    },
+    {
+      "scenario_id": "hook_108_ahigh_check_2",
+      "topic": "ahigh_check",
+      "topic_title": "A-high は check で稼ぐ",
+      "index": 2,
+      "street": "flop",
+      "board": [
+        "Ad",
+        "5c",
+        "2s"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "A52r (dry, wheel)",
+      "file": "hook_108_ahigh_check_2.json"
+    },
+    {
+      "scenario_id": "hook_108_ahigh_check_3",
+      "topic": "ahigh_check",
+      "topic_title": "A-high は check で稼ぐ",
+      "index": 3,
+      "street": "flop",
+      "board": [
+        "Ah",
+        "8c",
+        "3d"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "A83r (dry, disconnect)",
+      "file": "hook_108_ahigh_check_3.json"
+    },
+    {
+      "scenario_id": "hook_108_ahigh_check_4",
+      "topic": "ahigh_check",
+      "topic_title": "A-high は check で稼ぐ",
+      "index": 4,
+      "street": "flop",
+      "board": [
+        "As",
+        "9d",
+        "5c"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "A95r (dry, gap)",
+      "file": "hook_108_ahigh_check_4.json"
+    },
+    {
+      "scenario_id": "hook_108_ahigh_check_5",
+      "topic": "ahigh_check",
+      "topic_title": "A-high は check で稼ぐ",
+      "index": 5,
+      "street": "flop",
+      "board": [
+        "Ad",
+        "8h",
+        "2c"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "A82r (dry, low disconnect)",
+      "file": "hook_108_ahigh_check_5.json"
+    },
+    {
+      "scenario_id": "hook_108_overbet_bluff_1",
+      "topic": "overbet_bluff",
+      "topic_title": "リバー過剰 Bet はブラフのみ",
+      "index": 1,
+      "street": "river",
+      "board": [
+        "Kc",
+        "8d",
+        "3s",
+        "2h",
+        "Qc"
+      ],
+      "pot_bb": 30,
+      "effective_stack_bb": 70,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.5,
+        1.5
+      ],
+      "note": "K83r + 2h + Qc (Q completes turn-river runouts)",
+      "file": "hook_108_overbet_bluff_1.json"
+    },
+    {
+      "scenario_id": "hook_108_overbet_bluff_2",
+      "topic": "overbet_bluff",
+      "topic_title": "リバー過剰 Bet はブラフのみ",
+      "index": 2,
+      "street": "river",
+      "board": [
+        "Ac",
+        "7d",
+        "4s",
+        "2h",
+        "Jc"
+      ],
+      "pot_bb": 30,
+      "effective_stack_bb": 70,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.5,
+        1.5
+      ],
+      "note": "A74r + 2h + Jc (A-high with J river brick)",
+      "file": "hook_108_overbet_bluff_2.json"
+    },
+    {
+      "scenario_id": "hook_108_overbet_bluff_3",
+      "topic": "overbet_bluff",
+      "topic_title": "リバー過剰 Bet はブラフのみ",
+      "index": 3,
+      "street": "river",
+      "board": [
+        "Jd",
+        "8c",
+        "5s",
+        "3h",
+        "Kc"
+      ],
+      "pot_bb": 30,
+      "effective_stack_bb": 70,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.5,
+        1.5
+      ],
+      "note": "J85r + 3h + Kc (K overcard river)",
+      "file": "hook_108_overbet_bluff_3.json"
+    },
+    {
+      "scenario_id": "hook_108_overbet_bluff_4",
+      "topic": "overbet_bluff",
+      "topic_title": "リバー過剰 Bet はブラフのみ",
+      "index": 4,
+      "street": "river",
+      "board": [
+        "Qs",
+        "9d",
+        "4c",
+        "2h",
+        "7s"
+      ],
+      "pot_bb": 30,
+      "effective_stack_bb": 70,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.5,
+        1.5
+      ],
+      "note": "Q94r + 2h + 7s (low river blank)",
+      "file": "hook_108_overbet_bluff_4.json"
+    },
+    {
+      "scenario_id": "hook_108_overbet_bluff_5",
+      "topic": "overbet_bluff",
+      "topic_title": "リバー過剰 Bet はブラフのみ",
+      "index": 5,
+      "street": "river",
+      "board": [
+        "Th",
+        "7d",
+        "3c",
+        "8s",
+        "Ad"
+      ],
+      "pot_bb": 30,
+      "effective_stack_bb": 70,
+      "hero_position": "BTN",
+      "bet_sizes_to_evaluate": [
+        0.5,
+        1.5
+      ],
+      "note": "T73r + 8s + Ad (A river overcard)",
+      "file": "hook_108_overbet_bluff_5.json"
+    },
+    {
+      "scenario_id": "hook_108_bb3bet_defense_1",
+      "topic": "bb3bet_defense",
+      "topic_title": "BB 3bet 戦は SB/BTN が降りると得",
+      "index": 1,
+      "street": "flop",
+      "board": [
+        "Kh",
+        "7c",
+        "2d"
+      ],
+      "pot_bb": 15,
+      "effective_stack_bb": 85,
+      "hero_position": "BB",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "K72r (hero BB 3bet vs BTN call)",
+      "file": "hook_108_bb3bet_defense_1.json"
+    },
+    {
+      "scenario_id": "hook_108_bb3bet_defense_2",
+      "topic": "bb3bet_defense",
+      "topic_title": "BB 3bet 戦は SB/BTN が降りると得",
+      "index": 2,
+      "street": "flop",
+      "board": [
+        "Ac",
+        "8d",
+        "3h"
+      ],
+      "pot_bb": 15,
+      "effective_stack_bb": 85,
+      "hero_position": "BB",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "A83r (hero BB 3bet, A-high)",
+      "file": "hook_108_bb3bet_defense_2.json"
+    },
+    {
+      "scenario_id": "hook_108_bb3bet_defense_3",
+      "topic": "bb3bet_defense",
+      "topic_title": "BB 3bet 戦は SB/BTN が降りると得",
+      "index": 3,
+      "street": "flop",
+      "board": [
+        "Qs",
+        "Js",
+        "4h"
+      ],
+      "pot_bb": 15,
+      "effective_stack_bb": 85,
+      "hero_position": "BB",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "QJ4ss (hero BB 3bet, semi-wet)",
+      "file": "hook_108_bb3bet_defense_3.json"
+    },
+    {
+      "scenario_id": "hook_108_bb3bet_defense_4",
+      "topic": "bb3bet_defense",
+      "topic_title": "BB 3bet 戦は SB/BTN が降りると得",
+      "index": 4,
+      "street": "flop",
+      "board": [
+        "9c",
+        "8c",
+        "5d"
+      ],
+      "pot_bb": 15,
+      "effective_stack_bb": 85,
+      "hero_position": "BB",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "985ss (hero BB 3bet, wet)",
+      "file": "hook_108_bb3bet_defense_4.json"
+    },
+    {
+      "scenario_id": "hook_108_bb3bet_defense_5",
+      "topic": "bb3bet_defense",
+      "topic_title": "BB 3bet 戦は SB/BTN が降りると得",
+      "index": 5,
+      "street": "flop",
+      "board": [
+        "Td",
+        "6d",
+        "2s"
+      ],
+      "pot_bb": 15,
+      "effective_stack_bb": 85,
+      "hero_position": "BB",
+      "bet_sizes_to_evaluate": [
+        0.33,
+        0.75,
+        1.5
+      ],
+      "note": "T62ss (hero BB 3bet, dry mid)",
+      "file": "hook_108_bb3bet_defense_5.json"
+    }
+  ]
+}

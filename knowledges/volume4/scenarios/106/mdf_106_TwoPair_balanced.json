@@ -1,0 +1,31 @@
+{
+  "scenario_id": "mdf_106_TwoPair_balanced",
+  "description": "[リバー MDF / villain_type: balanced] 2 ペア完成 (K 7 2 7 A) (pot=27bb, bet=0.75x pot, MDF_theory=0.5714)",
+  "street_to_solve": "river",
+  "board": [
+    "Kc",
+    "7d",
+    "2s",
+    "7h",
+    "Ac"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.75
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 8000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

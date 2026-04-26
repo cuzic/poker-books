@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_K95r_Ac",
+  "board_label": "K95r",
+  "board": [
+    "Kc",
+    "9d",
+    "5s",
+    "Ac"
+  ],
+  "turn_card": "Ac",
+  "category": "overcard",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 87.3,
+  "exploitability_pct": 0.548,
+  "elapsed_sec": 60.7,
+  "status": "ok"
+}

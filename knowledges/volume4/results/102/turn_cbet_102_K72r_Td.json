@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_K72r_Td",
+  "board_label": "K72r",
+  "board": [
+    "Kc",
+    "7d",
+    "2s",
+    "Td"
+  ],
+  "turn_card": "Td",
+  "category": "blank",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 80.0,
+  "exploitability_pct": 0.366,
+  "elapsed_sec": 65.2,
+  "status": "ok"
+}

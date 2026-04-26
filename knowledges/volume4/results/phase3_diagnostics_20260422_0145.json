@@ -1,0 +1,1320 @@
+{
+  "task": "Phase 3 diagnostics (#50 S-1 + #51 S-2 + #52 S-3 + #53 B-2)",
+  "generated_at": "2026-04-22T01:45:05.479190",
+  "source_files": {
+    "volume2_accuracy": "phase3_volume2_accuracy.json",
+    "tree_stats": "phase3_tree_stats.json",
+    "k72r_convergence": "phase3_k72r_convergence.json",
+    "strategy_by_hand": "phase3_strategy_by_hand.json"
+  },
+  "volume2_accuracy_with_metadata": {
+    "metadata": {
+      "effective_stack": 97,
+      "hero_position": "IP",
+      "hero_range_preset": "BtnOpen100bb",
+      "pot_size": 7,
+      "street": "Flop",
+      "villain_range_preset": "BbDefendVsBtn"
+    },
+    "results": [
+      {
+        "abs_error": 3.0,
+        "actual_iterations": 158542,
+        "board": "K72r",
+        "computation_time_secs": 5.000029124,
+        "error": -3.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 91,
+        "rng_seed": null,
+        "solver_cbet_pct": 88.0
+      },
+      {
+        "abs_error": 7.0,
+        "actual_iterations": 182096,
+        "board": "A72r",
+        "computation_time_secs": 5.000031358,
+        "error": 7.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 90,
+        "rng_seed": null,
+        "solver_cbet_pct": 97.0
+      },
+      {
+        "abs_error": 41.0,
+        "actual_iterations": 146450,
+        "board": "K44",
+        "computation_time_secs": 5.00001241,
+        "error": 41.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 43,
+        "rng_seed": null,
+        "solver_cbet_pct": 84.0
+      },
+      {
+        "abs_error": 3.0,
+        "actual_iterations": 159622,
+        "board": "Q53r",
+        "computation_time_secs": 5.000026071,
+        "error": -3.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 85,
+        "rng_seed": null,
+        "solver_cbet_pct": 82.0
+      },
+      {
+        "abs_error": 9.0,
+        "actual_iterations": 178819,
+        "board": "A82r",
+        "computation_time_secs": 5.000029374,
+        "error": 9.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 88,
+        "rng_seed": null,
+        "solver_cbet_pct": 97.0
+      },
+      {
+        "abs_error": 2.0,
+        "actual_iterations": 159014,
+        "board": "K83r",
+        "computation_time_secs": 5.000004943,
+        "error": 2.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 87,
+        "rng_seed": null,
+        "solver_cbet_pct": 89.0
+      },
+      {
+        "abs_error": 8.0,
+        "actual_iterations": 176850,
+        "board": "A52r",
+        "computation_time_secs": 5.000018891,
+        "error": 8.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 89,
+        "rng_seed": null,
+        "solver_cbet_pct": 97.0
+      },
+      {
+        "abs_error": 2.0,
+        "actual_iterations": 156619,
+        "board": "K95r",
+        "computation_time_secs": 5.000027838,
+        "error": 2.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 80,
+        "rng_seed": null,
+        "solver_cbet_pct": 82.0
+      },
+      {
+        "abs_error": 19.0,
+        "actual_iterations": 153955,
+        "board": "KT5r",
+        "computation_time_secs": 5.000151491,
+        "error": 19.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 70,
+        "rng_seed": null,
+        "solver_cbet_pct": 89.0
+      },
+      {
+        "abs_error": 45.0,
+        "actual_iterations": 157469,
+        "board": "J75r",
+        "computation_time_secs": 5.000009708,
+        "error": 45.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 40,
+        "rng_seed": null,
+        "solver_cbet_pct": 85.0
+      },
+      {
+        "abs_error": 32.0,
+        "actual_iterations": 166889,
+        "board": "Q83ss",
+        "computation_time_secs": 5.000050814,
+        "error": 32.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 55,
+        "rng_seed": null,
+        "solver_cbet_pct": 87.0
+      },
+      {
+        "abs_error": 32.0,
+        "actual_iterations": 171867,
+        "board": "AT7ss",
+        "computation_time_secs": 5.000057136,
+        "error": 32.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 60,
+        "rng_seed": null,
+        "solver_cbet_pct": 92.0
+      },
+      {
+        "abs_error": 38.0,
+        "actual_iterations": 161219,
+        "board": "J84ss",
+        "computation_time_secs": 5.000017666,
+        "error": 38.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 50,
+        "rng_seed": null,
+        "solver_cbet_pct": 88.0
+      },
+      {
+        "abs_error": 41.0,
+        "actual_iterations": 179364,
+        "board": "QJ9r",
+        "computation_time_secs": 5.000009493,
+        "error": 41.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 50,
+        "rng_seed": null,
+        "solver_cbet_pct": 91.0
+      },
+      {
+        "abs_error": 43.0,
+        "actual_iterations": 171185,
+        "board": "T87r",
+        "computation_time_secs": 5.000026662,
+        "error": 43.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 45,
+        "rng_seed": null,
+        "solver_cbet_pct": 88.0
+      },
+      {
+        "abs_error": 37.0,
+        "actual_iterations": 158783,
+        "board": "876r",
+        "computation_time_secs": 5.000029069,
+        "error": 37.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 42,
+        "rng_seed": null,
+        "solver_cbet_pct": 79.0
+      },
+      {
+        "abs_error": 49.0,
+        "actual_iterations": 155302,
+        "board": "987ss",
+        "computation_time_secs": 5.00000872,
+        "error": 49.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 30,
+        "rng_seed": null,
+        "solver_cbet_pct": 79.0
+      },
+      {
+        "abs_error": 58.0,
+        "actual_iterations": 165858,
+        "board": "JT9ss",
+        "computation_time_secs": 5.000000388,
+        "error": 58.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 25,
+        "rng_seed": null,
+        "solver_cbet_pct": 83.0
+      },
+      {
+        "abs_error": 60.0,
+        "actual_iterations": 149266,
+        "board": "987mono",
+        "computation_time_secs": 5.000022492,
+        "error": 60.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 20,
+        "rng_seed": null,
+        "solver_cbet_pct": 80.0
+      },
+      {
+        "abs_error": 53.0,
+        "actual_iterations": 169978,
+        "board": "KQTss",
+        "computation_time_secs": 5.000022467,
+        "error": 53.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 35,
+        "rng_seed": null,
+        "solver_cbet_pct": 88.0
+      },
+      {
+        "abs_error": 72.0,
+        "actual_iterations": 154739,
+        "board": "AKQmono",
+        "computation_time_secs": 5.000014587,
+        "error": 72.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 15,
+        "rng_seed": null,
+        "solver_cbet_pct": 87.0
+      },
+      {
+        "abs_error": 57.0,
+        "actual_iterations": 171658,
+        "board": "JT8ss",
+        "computation_time_secs": 5.000027365,
+        "error": 57.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 30,
+        "rng_seed": null,
+        "solver_cbet_pct": 87.0
+      },
+      {
+        "abs_error": 43.0,
+        "actual_iterations": 167971,
+        "board": "T98r",
+        "computation_time_secs": 5.000014494,
+        "error": 43.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 40,
+        "rng_seed": null,
+        "solver_cbet_pct": 83.0
+      },
+      {
+        "abs_error": 48.0,
+        "actual_iterations": 161750,
+        "board": "T98ss",
+        "computation_time_secs": 5.000021205,
+        "error": 48.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 35,
+        "rng_seed": null,
+        "solver_cbet_pct": 83.0
+      },
+      {
+        "abs_error": 15.0,
+        "actual_iterations": 157233,
+        "board": "772",
+        "computation_time_secs": 5.000002963,
+        "error": 15.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 70,
+        "rng_seed": null,
+        "solver_cbet_pct": 85.0
+      },
+      {
+        "abs_error": 3.0,
+        "actual_iterations": 180970,
+        "board": "AAK",
+        "computation_time_secs": 5.00001339,
+        "error": -3.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 85,
+        "rng_seed": null,
+        "solver_cbet_pct": 82.0
+      },
+      {
+        "abs_error": 5.0,
+        "actual_iterations": 154077,
+        "board": "KK9",
+        "computation_time_secs": 5.000014574,
+        "error": 5.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 80,
+        "rng_seed": null,
+        "solver_cbet_pct": 85.0
+      },
+      {
+        "abs_error": 20.0,
+        "actual_iterations": 161012,
+        "board": "965r",
+        "computation_time_secs": 5.000012394,
+        "error": 20.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 60,
+        "rng_seed": null,
+        "solver_cbet_pct": 80.0
+      },
+      {
+        "abs_error": 14.0,
+        "actual_iterations": 161109,
+        "board": "632r",
+        "computation_time_secs": 5.000022283,
+        "error": 14.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 62,
+        "rng_seed": null,
+        "solver_cbet_pct": 76.0
+      },
+      {
+        "abs_error": 18.0,
+        "actual_iterations": 185172,
+        "board": "A99",
+        "computation_time_secs": 5.000013988,
+        "error": 18.0,
+        "exploitability_bb": null,
+        "reference_cbet_pct": 78,
+        "rng_seed": null,
+        "solver_cbet_pct": 96.0
+      }
+    ],
+    "summary": {
+      "avg_abs_error_pct": 29.233333333333334,
+      "count": 30,
+      "expected_count": 30,
+      "max_abs_error_pct": 72.0
+    }
+  },
+  "tree_stats": {
+    "entries": [
+      {
+        "chance_nodes": 0,
+        "decision_nodes": 1100,
+        "decision_nodes_by_street": {
+          "flop": 1100,
+          "river": 0,
+          "turn": 0
+        },
+        "label": "K72r_multistreet=false",
+        "max_depth": 6,
+        "terminal_fold_nodes": 1098,
+        "terminal_showdown_nodes": 1099,
+        "total_nodes": 3297
+      },
+      {
+        "chance_nodes": 15076,
+        "decision_nodes": 93420,
+        "decision_nodes_by_street": {
+          "flop": 1100,
+          "river": 77244,
+          "turn": 15076
+        },
+        "label": "K72r_multistreet=true",
+        "max_depth": 15,
+        "terminal_fold_nodes": 63266,
+        "terminal_showdown_nodes": 63267,
+        "total_nodes": 235029
+      },
+      {
+        "chance_nodes": 0,
+        "decision_nodes": 1100,
+        "decision_nodes_by_street": {
+          "flop": 1100,
+          "river": 0,
+          "turn": 0
+        },
+        "label": "987mono_multistreet=false",
+        "max_depth": 6,
+        "terminal_fold_nodes": 1098,
+        "terminal_showdown_nodes": 1099,
+        "total_nodes": 3297
+      },
+      {
+        "chance_nodes": 15076,
+        "decision_nodes": 93420,
+        "decision_nodes_by_street": {
+          "flop": 1100,
+          "river": 77244,
+          "turn": 15076
+        },
+        "label": "987mono_multistreet=true",
+        "max_depth": 15,
+        "terminal_fold_nodes": 63266,
+        "terminal_showdown_nodes": 63267,
+        "total_nodes": 235029
+      }
+    ],
+    "metadata": {
+      "bet_sizes": [
+        0.33,
+        0.5,
+        0.75,
+        1.0,
+        1.5
+      ],
+      "effective_stack": 97,
+      "hero_range_preset": "BtnOpen100bb",
+      "max_raises": 3,
+      "pot_size": 7,
+      "street": "Flop",
+      "villain_range_preset": "BbDefendVsBtn"
+    },
+    "task": "#51 S-2 tree statistics"
+  },
+  "k72r_convergence": {
+    "metadata": {
+      "bet_sizes": [
+        0.33,
+        0.5,
+        0.75,
+        1.0,
+        1.5
+      ],
+      "board": "K72r",
+      "effective_stack": 97,
+      "hero_range_preset": "BtnOpen100bb",
+      "iteration_steps": [
+        100,
+        1000,
+        5000,
+        50000
+      ],
+      "pot_size": 7,
+      "reference_cbet_pct": 91,
+      "rng_seed": 42,
+      "villain_range_preset": "BbDefendVsBtn"
+    },
+    "results": [
+      {
+        "actual_iterations": 100,
+        "bet_by_size": [
+          {
+            "probability": 0.1570637922859889,
+            "size": "0.33"
+          },
+          {
+            "probability": 0.1458305684461299,
+            "size": "0.5"
+          },
+          {
+            "probability": 0.15481216962285466,
+            "size": "0.75"
+          },
+          {
+            "probability": 0.15861531162662418,
+            "size": "1"
+          },
+          {
+            "probability": 0.17714821692338306,
+            "size": "1.5"
+          }
+        ],
+        "call_freq": 0.0,
+        "cbet_pct": 79.34700589049814,
+        "check_freq": 0.2065299410950185,
+        "computation_time_secs": 0.00454726,
+        "fold_freq": 0.0,
+        "multistreet": false,
+        "raise_by_size_total": -0.0,
+        "range_ev_bb": 0.8634004339882122,
+        "rng_seed": 42,
+        "target_iterations": 100
+      },
+      {
+        "actual_iterations": 1000,
+        "bet_by_size": [
+          {
+            "probability": 0.15589963147488536,
+            "size": "0.33"
+          },
+          {
+            "probability": 0.11201398279152774,
+            "size": "0.5"
+          },
+          {
+            "probability": 0.1501137448419825,
+            "size": "0.75"
+          },
+          {
+            "probability": 0.13792173106316397,
+            "size": "1"
+          },
+          {
+            "probability": 0.22624996597247932,
+            "size": "1.5"
+          }
+        ],
+        "call_freq": 0.0,
+        "cbet_pct": 78.2199056144039,
+        "check_freq": 0.21780094385596088,
+        "computation_time_secs": 0.03446696,
+        "fold_freq": 0.0,
+        "multistreet": false,
+        "raise_by_size_total": -0.0,
+        "range_ev_bb": -0.16322343028469874,
+        "rng_seed": 42,
+        "target_iterations": 1000
+      },
+      {
+        "actual_iterations": 5000,
+        "bet_by_size": [
+          {
+            "probability": 0.28177945117829495,
+            "size": "0.33"
+          },
+          {
+            "probability": 0.10338961480429062,
+            "size": "0.5"
+          },
+          {
+            "probability": 0.10734684693204012,
+            "size": "0.75"
+          },
+          {
+            "probability": 0.09731038017691056,
+            "size": "1"
+          },
+          {
+            "probability": 0.2193929813134433,
+            "size": "1.5"
+          }
+        ],
+        "call_freq": 0.0,
+        "cbet_pct": 80.92192744049797,
+        "check_freq": 0.19078072559502038,
+        "computation_time_secs": 0.155515172,
+        "fold_freq": 0.0,
+        "multistreet": false,
+        "raise_by_size_total": -0.0,
+        "range_ev_bb": -0.2612717124058268,
+        "rng_seed": 42,
+        "target_iterations": 5000
+      },
+      {
+        "actual_iterations": 50000,
+        "bet_by_size": [
+          {
+            "probability": 0.5572668630464422,
+            "size": "0.33"
+          },
+          {
+            "probability": 0.042903561702605515,
+            "size": "0.5"
+          },
+          {
+            "probability": 0.02901422202528492,
+            "size": "0.75"
+          },
+          {
+            "probability": 0.02681730693359876,
+            "size": "1"
+          },
+          {
+            "probability": 0.19821533075169817,
+            "size": "1.5"
+          }
+        ],
+        "call_freq": 0.0,
+        "cbet_pct": 85.42172844596297,
+        "check_freq": 0.14578271554037042,
+        "computation_time_secs": 1.449960248,
+        "fold_freq": 0.0,
+        "multistreet": false,
+        "raise_by_size_total": -0.0,
+        "range_ev_bb": -0.2005763851948586,
+        "rng_seed": 42,
+        "target_iterations": 50000
+      },
+      {
+        "actual_iterations": 100,
+        "bet_by_size": [
+          {
+            "probability": 0.14409185929254745,
+            "size": "0.33"
+          },
+          {
+            "probability": 0.1476711229105461,
+            "size": "0.5"
+          },
+          {
+            "probability": 0.18962315965478813,
+            "size": "0.75"
+          },
+          {
+            "probability": 0.17549947067022156,
+            "size": "1"
+          },
+          {
+            "probability": 0.16661917775057133,
+            "size": "1.5"
+          }
+        ],
+        "call_freq": 0.0,
+        "cbet_pct": 82.35047902786754,
+        "check_freq": 0.17649520972132468,
+        "computation_time_secs": 0.086928388,
+        "fold_freq": 0.0,
+        "multistreet": true,
+        "raise_by_size_total": -0.0,
+        "range_ev_bb": 7.074297192597085,
+        "rng_seed": 42,
+        "target_iterations": 100
+      },
+      {
+        "actual_iterations": 1000,
+        "bet_by_size": [
+          {
+            "probability": 0.13144339552193926,
+            "size": "0.33"
+          },
+          {
+            "probability": 0.15998404584281126,
+            "size": "0.5"
+          },
+          {
+            "probability": 0.1629897053187925,
+            "size": "0.75"
+          },
+          {
+            "probability": 0.15923671593590338,
+            "size": "1"
+          },
+          {
+            "probability": 0.16772750172373424,
+            "size": "1.5"
+          }
+        ],
+        "call_freq": 0.0,
+        "cbet_pct": 78.13813643431807,
+        "check_freq": 0.21861863565681924,
+        "computation_time_secs": 0.906221859,
+        "fold_freq": 0.0,
+        "multistreet": true,
+        "raise_by_size_total": -0.0,
+        "range_ev_bb": 4.992735159819664,
+        "rng_seed": 42,
+        "target_iterations": 1000
+      },
+      {
+        "actual_iterations": 5000,
+        "bet_by_size": [
+          {
+            "probability": 0.12615930743333256,
+            "size": "0.33"
+          },
+          {
+            "probability": 0.14151169734660854,
+            "size": "0.5"
+          },
+          {
+            "probability": 0.1599948470255749,
+            "size": "0.75"
+          },
+          {
+            "probability": 0.1452611071732872,
+            "size": "1"
+          },
+          {
+            "probability": 0.1689542965307735,
+            "size": "1.5"
+          }
+        ],
+        "call_freq": 0.0,
+        "cbet_pct": 74.18812555095768,
+        "check_freq": 0.25811874449042327,
+        "computation_time_secs": 4.898493977,
+        "fold_freq": 0.0,
+        "multistreet": true,
+        "raise_by_size_total": -0.0,
+        "range_ev_bb": 1.759682025234792,
+        "rng_seed": 42,
+        "target_iterations": 5000
+      },
+      {
+        "actual_iterations": 50000,
+        "bet_by_size": [
+          {
+            "probability": 0.1323280304110677,
+            "size": "0.33"
+          },
+          {
+            "probability": 0.0604565299178862,
+            "size": "0.5"
+          },
+          {
+            "probability": 0.07421917080231756,
+            "size": "0.75"
+          },
+          {
+            "probability": 0.08882254985087563,
+            "size": "1"
+          },
+          {
+            "probability": 0.13699196513557937,
+            "size": "1.5"
+          }
+        ],
+        "call_freq": 0.0,
+        "cbet_pct": 49.28182461177266,
+        "check_freq": 0.5071817538822734,
+        "computation_time_secs": 49.136492228,
+        "fold_freq": 0.0,
+        "multistreet": true,
+        "raise_by_size_total": -0.0,
+        "range_ev_bb": -0.13755000466847264,
+        "rng_seed": 42,
+        "target_iterations": 50000
+      }
+    ],
+    "task": "#52 S-3 K72r iteration sweep"
+  },
+  "strategy_by_hand": {
+    "comparison_table": [
+      {
+        "hand": "AA",
+        "summary": {
+          "bet_by_size": [
+            {
+              "probability": 0.017350924677995587,
+              "size": "0.33"
+            },
+            {
+              "probability": 0.021729791195324893,
+              "size": "0.5"
+            },
+            {
+              "probability": 0.0256738684478016,
+              "size": "0.75"
+            },
+            {
+              "probability": 0.002445176965813949,
+              "size": "1"
+            },
+            {
+              "probability": 0.9301882847217025,
+              "size": "1.5"
+            }
+          ],
+          "bet_total": 0.9973880460086385,
+          "check": 0.0026119539913615265
+        }
+      },
+      {
+        "hand": "KK",
+        "summary": {
+          "bet_by_size": [
+            {
+              "probability": 0.007498651548778902,
+              "size": "0.33"
+            },
+            {
+              "probability": 0.00650495450080368,
+              "size": "0.5"
+            },
+            {
+              "probability": 0.0035243751908486504,
+              "size": "0.75"
+            },
+            {
+              "probability": 0.34289597188151133,
+              "size": "1"
+            },
+            {
+              "probability": 0.6181416688553787,
+              "size": "1.5"
+            }
+          ],
+          "bet_total": 0.9785656219773213,
+          "check": 0.02143437802267875
+        }
+      },
+      {
+        "hand": "QQ",
+        "summary": {
+          "bet_by_size": [
+            {
+              "probability": 0.0012722646310432567,
+              "size": "0.33"
+            },
+            {
+              "probability": 0.047716654259462477,
+              "size": "0.5"
+            },
+            {
+              "probability": 0.003886572176682748,
+              "size": "0.75"
+            },
+            {
+              "probability": 0.017893674141764584,
+              "size": "1"
+            },
+            {
+              "probability": 0.3174567513719709,
+              "size": "1.5"
+            }
+          ],
+          "bet_total": 0.388225916580924,
+          "check": 0.611774083419076
+        }
+      },
+      {
+        "hand": "88",
+        "summary": {
+          "bet_by_size": [
+            {
+              "probability": 0.021563289662866244,
+              "size": "0.33"
+            },
+            {
+              "probability": 0.0028735632183908046,
+              "size": "0.5"
+            },
+            {
+              "probability": 0.00587044353917339,
+              "size": "0.75"
+            },
+            {
+              "probability": 0.12273860721711383,
+              "size": "1"
+            },
+            {
+              "probability": 0.6738117723001203,
+              "size": "1.5"
+            }
+          ],
+          "bet_total": 0.8268576759376647,
+          "check": 0.17314232406233543
+        }
+      },
+      {
+        "hand": "22",
+        "summary": {
+          "bet_by_size": [
+            {
+              "probability": 0.6384231232806457,
+              "size": "0.33"
+            },
+            {
+              "probability": 0.10995650046048504,
+              "size": "0.5"
+            },
+            {
+              "probability": 0.11020774525466114,
+              "size": "0.75"
+            },
+            {
+              "probability": 0.04596662826303308,
+              "size": "1"
+            },
+            {
+              "probability": 0.029492043066407063,
+              "size": "1.5"
+            }
+          ],
+          "bet_total": 0.934046040325232,
+          "check": 0.065953959674768
+        }
+      },
+      {
+        "hand": "AKs",
+        "summary": {
+          "bet_by_size": [
+            {
+              "probability": 0.10406505580100302,
+              "size": "0.33"
+            },
+            {
+              "probability": 0.0029239766081871343,
+              "size": "0.5"
+            },
+            {
+              "probability": 0.7178036471442134,
+              "size": "0.75"
+            },
+            {
+              "probability": 0.048463590739602914,
+              "size": "1"
+            },
+            {
+              "probability": 0.0029239766081871343,
+              "size": "1.5"
+            }
+          ],
+          "bet_total": 0.8761802469011936,
+          "check": 0.12381975309880641
+        }
+      },
+      {
+        "hand": "AKo",
+        "summary": {
+          "bet_by_size": [
+            {
+              "probability": 0.43942535575432445,
+              "size": "0.33"
+            },
+            {
+              "probability": 0.07473633863915004,
+              "size": "0.5"
+            },
+            {
+              "probability": 0.16407701632959634,
+              "size": "0.75"
+            },
+            {
+              "probability": 0.07296365865205903,
+              "size": "1"
+            },
+            {
+              "probability": 0.019245950936213223,
+              "size": "1.5"
+            }
+          ],
+          "bet_total": 0.770448320311343,
+          "check": 0.229551679688657
+        }
+      },
+      {
+        "hand": "72o",
+        "note": "not in hero range",
+        "summary": null
+      }
+    ],
+    "hand_table": [
+      {
+        "hand": "AA",
+        "strategy": {
+          "actions": [
+            {
+              "action": "check",
+              "ev_bb": null,
+              "probability": 0.0026119539913615265,
+              "size": null
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.017350924677995587,
+              "size": 0.33
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.021729791195324893,
+              "size": 0.5
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.0256738684478016,
+              "size": 0.75
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.002445176965813949,
+              "size": 1.0
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.9301882847217025,
+              "size": 1.5
+            }
+          ]
+        }
+      },
+      {
+        "hand": "KK",
+        "strategy": {
+          "actions": [
+            {
+              "action": "check",
+              "ev_bb": null,
+              "probability": 0.02143437802267875,
+              "size": null
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.007498651548778902,
+              "size": 0.33
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.00650495450080368,
+              "size": 0.5
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.0035243751908486504,
+              "size": 0.75
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.34289597188151133,
+              "size": 1.0
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.6181416688553787,
+              "size": 1.5
+            }
+          ]
+        }
+      },
+      {
+        "hand": "QQ",
+        "strategy": {
+          "actions": [
+            {
+              "action": "check",
+              "ev_bb": null,
+              "probability": 0.611774083419076,
+              "size": null
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.0012722646310432567,
+              "size": 0.33
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.047716654259462477,
+              "size": 0.5
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.003886572176682748,
+              "size": 0.75
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.017893674141764584,
+              "size": 1.0
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.3174567513719709,
+              "size": 1.5
+            }
+          ]
+        }
+      },
+      {
+        "hand": "88",
+        "strategy": {
+          "actions": [
+            {
+              "action": "check",
+              "ev_bb": null,
+              "probability": 0.17314232406233543,
+              "size": null
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.021563289662866244,
+              "size": 0.33
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.0028735632183908046,
+              "size": 0.5
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.00587044353917339,
+              "size": 0.75
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.12273860721711383,
+              "size": 1.0
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.6738117723001203,
+              "size": 1.5
+            }
+          ]
+        }
+      },
+      {
+        "hand": "22",
+        "strategy": {
+          "actions": [
+            {
+              "action": "check",
+              "ev_bb": null,
+              "probability": 0.065953959674768,
+              "size": null
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.6384231232806457,
+              "size": 0.33
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.10995650046048504,
+              "size": 0.5
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.11020774525466114,
+              "size": 0.75
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.04596662826303308,
+              "size": 1.0
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.029492043066407063,
+              "size": 1.5
+            }
+          ]
+        }
+      },
+      {
+        "hand": "AKs",
+        "strategy": {
+          "actions": [
+            {
+              "action": "check",
+              "ev_bb": null,
+              "probability": 0.12381975309880641,
+              "size": null
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.10406505580100302,
+              "size": 0.33
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.0029239766081871343,
+              "size": 0.5
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.7178036471442134,
+              "size": 0.75
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.048463590739602914,
+              "size": 1.0
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.0029239766081871343,
+              "size": 1.5
+            }
+          ]
+        }
+      },
+      {
+        "hand": "AKo",
+        "strategy": {
+          "actions": [
+            {
+              "action": "check",
+              "ev_bb": null,
+              "probability": 0.229551679688657,
+              "size": null
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.43942535575432445,
+              "size": 0.33
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.07473633863915004,
+              "size": 0.5
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.16407701632959634,
+              "size": 0.75
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.07296365865205903,
+              "size": 1.0
+            },
+            {
+              "action": "bet",
+              "ev_bb": null,
+              "probability": 0.019245950936213223,
+              "size": 1.5
+            }
+          ]
+        }
+      },
+      {
+        "hand": "72o",
+        "note": "not in hero range",
+        "strategy": null
+      }
+    ],
+    "metadata": {
+      "bet_sizes": [
+        0.33,
+        0.5,
+        0.75,
+        1.0,
+        1.5
+      ],
+      "board": "987mono (9h 8h 7h)",
+      "effective_stack": 97,
+      "hero_range_preset": "BtnOpen100bb",
+      "max_iterations": 10000,
+      "pot_size": 7,
+      "reference_cbet_pct": 20,
+      "rng_seed": 42,
+      "villain_range_preset": "BbDefendVsBtn"
+    },
+    "solver_summary": {
+      "actual_iterations": 10000,
+      "aggregate_bet_by_size": [
+        {
+          "probability": 0.2428374629823464,
+          "size": "0.33"
+        },
+        {
+          "probability": 0.13566009450209154,
+          "size": "0.5"
+        },
+        {
+          "probability": 0.13389661923955087,
+          "size": "0.75"
+        },
+        {
+          "probability": 0.12104568253455067,
+          "size": "1"
+        },
+        {
+          "probability": 0.1889268219509118,
+          "size": "1.5"
+        }
+      ],
+      "aggregate_bet_total": 0.8223666812094513,
+      "aggregate_check": 0.17763331879054872,
+      "computation_time_secs": 0.357887152,
+      "range_ev_bb": -0.22240270206298807,
+      "rng_seed": 42
+    },
+    "task": "#53 B-2 AA vs 22 strategy dump (987mono)"
+  },
+  "key_findings": {
+    "convergence": "Phase A (single-street) converges toward 85% CBet, Phase B (multistreet) DIVERGES to 49% at 50k iter",
+    "tree_stats": "K72r and 987mono have identical tree structures (total=235029 nodes for multistreet). Board has no impact on tree shape.",
+    "strategy_by_hand": "AA and 22 are DIFFERENTIATED (AA 99.7% bet 1.5x / 22 93.4% bet 0.33x). Info-set design works. But 22 93% bet on 987mono is pathological (expected near 0% check from QQ only).",
+    "primary_suspect": "External Sampling MCCFR regret computation (candidate 4). Tree construction and info-set design are OK."
+  },
+  "next_actions": [
+    "Priority 1: Verify External Sampling MCCFR at 500k / 1M iter. If still diverging, CFR implementation bug confirmed.",
+    "Priority 2: Dump 22 regret values for 987mono info-set to locate bias.",
+    "Reference: Reduce tree size (max_raises=1, fewer bet_sizes) to improve iteration-per-infoset."
+  ]
+}

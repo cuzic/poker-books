@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_J75r_Qc",
+  "board_label": "J75r",
+  "board": [
+    "Jc",
+    "7d",
+    "5s",
+    "Qc"
+  ],
+  "turn_card": "Qc",
+  "category": "overcard",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 53.2,
+  "exploitability_pct": 0.349,
+  "elapsed_sec": 17.3,
+  "status": "ok"
+}

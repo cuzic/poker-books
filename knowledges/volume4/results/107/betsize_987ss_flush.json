@@ -1,0 +1,28 @@
+{
+  "label": "987ss_flush",
+  "board": [
+    "9s",
+    "8s",
+    "7h",
+    "6s"
+  ],
+  "board_label": [
+    "9s",
+    "8s",
+    "7h"
+  ],
+  "turn_card": "6s",
+  "turn_category": "flush",
+  "description": "スーテッド板 + フラッシュターン",
+  "turn_cbet_pct": 80.23156928777665,
+  "bet_size_distribution": {
+    "BET 3.000000": 71.5,
+    "BET 5.000000": 22.7,
+    "BET 8.000000": 3.4,
+    "BET 15.000000": 2.4,
+    "BET 92.000000": 0.0
+  },
+  "exploitability_pct": 0.3339061,
+  "elapsed_sec": 75.3,
+  "status": "ok"
+}

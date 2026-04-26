@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_K44_Ac",
+  "board_label": "K44",
+  "board": [
+    "Kc",
+    "4d",
+    "4s",
+    "Ac"
+  ],
+  "turn_card": "Ac",
+  "category": "overcard",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 77.4,
+  "exploitability_pct": 0.477,
+  "elapsed_sec": 118.9,
+  "status": "ok"
+}

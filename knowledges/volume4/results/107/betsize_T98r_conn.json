@@ -1,0 +1,28 @@
+{
+  "label": "T98r_conn",
+  "board": [
+    "Th",
+    "9s",
+    "8d",
+    "6c"
+  ],
+  "board_label": [
+    "Th",
+    "9s",
+    "8d"
+  ],
+  "turn_card": "6c",
+  "turn_category": "connector",
+  "description": "コネクテッド板 + コネクターターン",
+  "turn_cbet_pct": 82.32297911532062,
+  "bet_size_distribution": {
+    "BET 3.000000": 36.8,
+    "BET 5.000000": 34.6,
+    "BET 8.000000": 28.3,
+    "BET 15.000000": 0.3,
+    "BET 92.000000": 0.0
+  },
+  "exploitability_pct": 0.3796041,
+  "elapsed_sec": 78.2,
+  "status": "ok"
+}

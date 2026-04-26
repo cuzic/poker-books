@@ -1,0 +1,34 @@
+{
+  "scenario_id": "blocker_105_AA_vs_88_4",
+  "description": "[AA<88 サイズ逆転] 9s6h3d + 2s + 7c (スモールボード, AA/99 サイズ逆転)",
+  "street_to_solve": "river",
+  "board": [
+    "9s",
+    "6h",
+    "3d",
+    "2s",
+    "7c"
+  ],
+  "pot_bb": 22,
+  "effective_stack_bb": 78,
+  "hero_position": "BTN",
+  "hero_range": {
+    "expr": "AA,99"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.33,
+    0.5,
+    0.75,
+    1.5
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 8000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

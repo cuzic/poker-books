@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_T98r_Jc",
+  "board_label": "T98r",
+  "board": [
+    "Tc",
+    "9d",
+    "8s",
+    "Jc"
+  ],
+  "turn_card": "Jc",
+  "category": "overcard",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 56.3,
+  "exploitability_pct": 0.337,
+  "elapsed_sec": 17.8,
+  "status": "ok"
+}

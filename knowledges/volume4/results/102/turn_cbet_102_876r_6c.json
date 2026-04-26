@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_876r_6c",
+  "board_label": "876r",
+  "board": [
+    "8c",
+    "7d",
+    "6s",
+    "6c"
+  ],
+  "turn_card": "6c",
+  "category": "pair",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 83.5,
+  "exploitability_pct": 0.311,
+  "elapsed_sec": 19.3,
+  "status": "ok"
+}

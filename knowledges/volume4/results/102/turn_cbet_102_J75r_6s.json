@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_J75r_6s",
+  "board_label": "J75r",
+  "board": [
+    "Jc",
+    "7d",
+    "5s",
+    "6s"
+  ],
+  "turn_card": "6s",
+  "category": "blank",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 64.1,
+  "exploitability_pct": 0.306,
+  "elapsed_sec": 19.5,
+  "status": "ok"
+}

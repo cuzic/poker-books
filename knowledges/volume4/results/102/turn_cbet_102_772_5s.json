@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_772_5s",
+  "board_label": "772",
+  "board": [
+    "7c",
+    "7d",
+    "2s",
+    "5s"
+  ],
+  "turn_card": "5s",
+  "category": "connector",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 92.2,
+  "exploitability_pct": 0.53,
+  "elapsed_sec": 19.8,
+  "status": "ok"
+}

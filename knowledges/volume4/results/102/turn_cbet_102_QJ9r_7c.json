@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_QJ9r_7c",
+  "board_label": "QJ9r",
+  "board": [
+    "Qc",
+    "Jd",
+    "9s",
+    "7c"
+  ],
+  "turn_card": "7c",
+  "category": "connector",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 51.6,
+  "exploitability_pct": 0.367,
+  "elapsed_sec": 17.4,
+  "status": "ok"
+}

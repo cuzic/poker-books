@@ -1,0 +1,569 @@
+{
+  "task": "106",
+  "title": "リバー MDF の実測",
+  "total": 20,
+  "boards": 10,
+  "villain_types": [
+    "tight",
+    "balanced"
+  ],
+  "villain_type_notes": {
+    "tight": "villain_range = {expr: 'AA,KK,QQ,AKs,AKo,JJ,TT'}. プリセット追加後は {preset: 'TightCall'} 相当に差し替え可能。",
+    "balanced": "villain_range = {preset: 'BbDefendVsBtn'}. 相手タイプ別バランスプリセット追加後は {preset: 'BalancedCall'} に差し替え可能。"
+  },
+  "mdf_theory": {
+    "0.75": 0.5714
+  },
+  "mdf_theory_description": "MDF = pot / (pot + bet) = 1 / (1 + bet_ratio). bet = 0.75 * pot の場合、MDF ≈ 0.5714 (57.1%)。",
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "bet_sizes_to_evaluate": [
+    0.75
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "mdf_106_Adry_tight",
+      "board_label": "Adry",
+      "board": [
+        "As",
+        "Kh",
+        "7d",
+        "4c",
+        "2s"
+      ],
+      "villain_type": "tight",
+      "villain_title": "タイト (上位 value のみ)",
+      "villain_range": {
+        "expr": "AA,KK,QQ,AKs,AKo,JJ,TT"
+      },
+      "expected_mdf_range": [
+        0.1,
+        0.2
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "A-high dry (A K 7 4 2 rainbow)",
+      "file": "mdf_106_Adry_tight.json"
+    },
+    {
+      "scenario_id": "mdf_106_Adry_balanced",
+      "board_label": "Adry",
+      "board": [
+        "As",
+        "Kh",
+        "7d",
+        "4c",
+        "2s"
+      ],
+      "villain_type": "balanced",
+      "villain_title": "バランス (BbDefendVsBtn プリセット)",
+      "villain_range": {
+        "preset": "BbDefendVsBtn"
+      },
+      "expected_mdf_range": [
+        0.5,
+        0.65
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "A-high dry (A K 7 4 2 rainbow)",
+      "file": "mdf_106_Adry_balanced.json"
+    },
+    {
+      "scenario_id": "mdf_106_Kdry_tight",
+      "board_label": "Kdry",
+      "board": [
+        "Kc",
+        "8h",
+        "3d",
+        "2s",
+        "Qc"
+      ],
+      "villain_type": "tight",
+      "villain_title": "タイト (上位 value のみ)",
+      "villain_range": {
+        "expr": "AA,KK,QQ,AKs,AKo,JJ,TT"
+      },
+      "expected_mdf_range": [
+        0.1,
+        0.2
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "K-high dry + Q river (K 8 3 2 + Q)",
+      "file": "mdf_106_Kdry_tight.json"
+    },
+    {
+      "scenario_id": "mdf_106_Kdry_balanced",
+      "board_label": "Kdry",
+      "board": [
+        "Kc",
+        "8h",
+        "3d",
+        "2s",
+        "Qc"
+      ],
+      "villain_type": "balanced",
+      "villain_title": "バランス (BbDefendVsBtn プリセット)",
+      "villain_range": {
+        "preset": "BbDefendVsBtn"
+      },
+      "expected_mdf_range": [
+        0.5,
+        0.65
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "K-high dry + Q river (K 8 3 2 + Q)",
+      "file": "mdf_106_Kdry_balanced.json"
+    },
+    {
+      "scenario_id": "mdf_106_TwoPair_tight",
+      "board_label": "TwoPair",
+      "board": [
+        "Kc",
+        "7d",
+        "2s",
+        "7h",
+        "Ac"
+      ],
+      "villain_type": "tight",
+      "villain_title": "タイト (上位 value のみ)",
+      "villain_range": {
+        "expr": "AA,KK,QQ,AKs,AKo,JJ,TT"
+      },
+      "expected_mdf_range": [
+        0.1,
+        0.2
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "2 ペア完成 (K 7 2 7 A)",
+      "file": "mdf_106_TwoPair_tight.json"
+    },
+    {
+      "scenario_id": "mdf_106_TwoPair_balanced",
+      "board_label": "TwoPair",
+      "board": [
+        "Kc",
+        "7d",
+        "2s",
+        "7h",
+        "Ac"
+      ],
+      "villain_type": "balanced",
+      "villain_title": "バランス (BbDefendVsBtn プリセット)",
+      "villain_range": {
+        "preset": "BbDefendVsBtn"
+      },
+      "expected_mdf_range": [
+        0.5,
+        0.65
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "2 ペア完成 (K 7 2 7 A)",
+      "file": "mdf_106_TwoPair_balanced.json"
+    },
+    {
+      "scenario_id": "mdf_106_BoardTrips_tight",
+      "board_label": "BoardTrips",
+      "board": [
+        "9c",
+        "9h",
+        "4s",
+        "9d",
+        "2h"
+      ],
+      "villain_type": "tight",
+      "villain_title": "タイト (上位 value のみ)",
+      "villain_range": {
+        "expr": "AA,KK,QQ,AKs,AKo,JJ,TT"
+      },
+      "expected_mdf_range": [
+        0.1,
+        0.2
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "ボード・トリップス (9 9 4 9 2)",
+      "file": "mdf_106_BoardTrips_tight.json"
+    },
+    {
+      "scenario_id": "mdf_106_BoardTrips_balanced",
+      "board_label": "BoardTrips",
+      "board": [
+        "9c",
+        "9h",
+        "4s",
+        "9d",
+        "2h"
+      ],
+      "villain_type": "balanced",
+      "villain_title": "バランス (BbDefendVsBtn プリセット)",
+      "villain_range": {
+        "preset": "BbDefendVsBtn"
+      },
+      "expected_mdf_range": [
+        0.5,
+        0.65
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "ボード・トリップス (9 9 4 9 2)",
+      "file": "mdf_106_BoardTrips_balanced.json"
+    },
+    {
+      "scenario_id": "mdf_106_StraightDone_tight",
+      "board_label": "StraightDone",
+      "board": [
+        "9c",
+        "8h",
+        "7d",
+        "6s",
+        "Jc"
+      ],
+      "villain_type": "tight",
+      "villain_title": "タイト (上位 value のみ)",
+      "villain_range": {
+        "expr": "AA,KK,QQ,AKs,AKo,JJ,TT"
+      },
+      "expected_mdf_range": [
+        0.1,
+        0.2
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "ストレート完成 (9 8 7 6 + J)",
+      "file": "mdf_106_StraightDone_tight.json"
+    },
+    {
+      "scenario_id": "mdf_106_StraightDone_balanced",
+      "board_label": "StraightDone",
+      "board": [
+        "9c",
+        "8h",
+        "7d",
+        "6s",
+        "Jc"
+      ],
+      "villain_type": "balanced",
+      "villain_title": "バランス (BbDefendVsBtn プリセット)",
+      "villain_range": {
+        "preset": "BbDefendVsBtn"
+      },
+      "expected_mdf_range": [
+        0.5,
+        0.65
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "ストレート完成 (9 8 7 6 + J)",
+      "file": "mdf_106_StraightDone_balanced.json"
+    },
+    {
+      "scenario_id": "mdf_106_FlushDone_tight",
+      "board_label": "FlushDone",
+      "board": [
+        "As",
+        "Ks",
+        "7s",
+        "2s",
+        "4c"
+      ],
+      "villain_type": "tight",
+      "villain_title": "タイト (上位 value のみ)",
+      "villain_range": {
+        "expr": "AA,KK,QQ,AKs,AKo,JJ,TT"
+      },
+      "expected_mdf_range": [
+        0.1,
+        0.2
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "フラッシュ完成 (A K 7 2 spades + 4c)",
+      "file": "mdf_106_FlushDone_tight.json"
+    },
+    {
+      "scenario_id": "mdf_106_FlushDone_balanced",
+      "board_label": "FlushDone",
+      "board": [
+        "As",
+        "Ks",
+        "7s",
+        "2s",
+        "4c"
+      ],
+      "villain_type": "balanced",
+      "villain_title": "バランス (BbDefendVsBtn プリセット)",
+      "villain_range": {
+        "preset": "BbDefendVsBtn"
+      },
+      "expected_mdf_range": [
+        0.5,
+        0.65
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "フラッシュ完成 (A K 7 2 spades + 4c)",
+      "file": "mdf_106_FlushDone_balanced.json"
+    },
+    {
+      "scenario_id": "mdf_106_Monotone_tight",
+      "board_label": "Monotone",
+      "board": [
+        "Ah",
+        "Kh",
+        "Qh",
+        "3s",
+        "2d"
+      ],
+      "villain_type": "tight",
+      "villain_title": "タイト (上位 value のみ)",
+      "villain_range": {
+        "expr": "AA,KK,QQ,AKs,AKo,JJ,TT"
+      },
+      "expected_mdf_range": [
+        0.1,
+        0.2
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "モノトーン (A K Q hearts + 3 2 offsuit)",
+      "file": "mdf_106_Monotone_tight.json"
+    },
+    {
+      "scenario_id": "mdf_106_Monotone_balanced",
+      "board_label": "Monotone",
+      "board": [
+        "Ah",
+        "Kh",
+        "Qh",
+        "3s",
+        "2d"
+      ],
+      "villain_type": "balanced",
+      "villain_title": "バランス (BbDefendVsBtn プリセット)",
+      "villain_range": {
+        "preset": "BbDefendVsBtn"
+      },
+      "expected_mdf_range": [
+        0.5,
+        0.65
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "モノトーン (A K Q hearts + 3 2 offsuit)",
+      "file": "mdf_106_Monotone_balanced.json"
+    },
+    {
+      "scenario_id": "mdf_106_FourStraight_tight",
+      "board_label": "FourStraight",
+      "board": [
+        "6s",
+        "7h",
+        "8d",
+        "9c",
+        "3s"
+      ],
+      "villain_type": "tight",
+      "villain_title": "タイト (上位 value のみ)",
+      "villain_range": {
+        "expr": "AA,KK,QQ,AKs,AKo,JJ,TT"
+      },
+      "expected_mdf_range": [
+        0.1,
+        0.2
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "4 枚ストレート (6 7 8 9 + 3)",
+      "file": "mdf_106_FourStraight_tight.json"
+    },
+    {
+      "scenario_id": "mdf_106_FourStraight_balanced",
+      "board_label": "FourStraight",
+      "board": [
+        "6s",
+        "7h",
+        "8d",
+        "9c",
+        "3s"
+      ],
+      "villain_type": "balanced",
+      "villain_title": "バランス (BbDefendVsBtn プリセット)",
+      "villain_range": {
+        "preset": "BbDefendVsBtn"
+      },
+      "expected_mdf_range": [
+        0.5,
+        0.65
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "4 枚ストレート (6 7 8 9 + 3)",
+      "file": "mdf_106_FourStraight_balanced.json"
+    },
+    {
+      "scenario_id": "mdf_106_FullHouseable_tight",
+      "board_label": "FullHouseable",
+      "board": [
+        "Ac",
+        "Ah",
+        "5d",
+        "5h",
+        "Kc"
+      ],
+      "villain_type": "tight",
+      "villain_title": "タイト (上位 value のみ)",
+      "villain_range": {
+        "expr": "AA,KK,QQ,AKs,AKo,JJ,TT"
+      },
+      "expected_mdf_range": [
+        0.1,
+        0.2
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "フルハウス可能 (A A 5 5 K)",
+      "file": "mdf_106_FullHouseable_tight.json"
+    },
+    {
+      "scenario_id": "mdf_106_FullHouseable_balanced",
+      "board_label": "FullHouseable",
+      "board": [
+        "Ac",
+        "Ah",
+        "5d",
+        "5h",
+        "Kc"
+      ],
+      "villain_type": "balanced",
+      "villain_title": "バランス (BbDefendVsBtn プリセット)",
+      "villain_range": {
+        "preset": "BbDefendVsBtn"
+      },
+      "expected_mdf_range": [
+        0.5,
+        0.65
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "フルハウス可能 (A A 5 5 K)",
+      "file": "mdf_106_FullHouseable_balanced.json"
+    },
+    {
+      "scenario_id": "mdf_106_LowStraight_tight",
+      "board_label": "LowStraight",
+      "board": [
+        "7s",
+        "5d",
+        "3c",
+        "2h",
+        "4s"
+      ],
+      "villain_type": "tight",
+      "villain_title": "タイト (上位 value のみ)",
+      "villain_range": {
+        "expr": "AA,KK,QQ,AKs,AKo,JJ,TT"
+      },
+      "expected_mdf_range": [
+        0.1,
+        0.2
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "Low ストレート (7 5 3 2 4)",
+      "file": "mdf_106_LowStraight_tight.json"
+    },
+    {
+      "scenario_id": "mdf_106_LowStraight_balanced",
+      "board_label": "LowStraight",
+      "board": [
+        "7s",
+        "5d",
+        "3c",
+        "2h",
+        "4s"
+      ],
+      "villain_type": "balanced",
+      "villain_title": "バランス (BbDefendVsBtn プリセット)",
+      "villain_range": {
+        "preset": "BbDefendVsBtn"
+      },
+      "expected_mdf_range": [
+        0.5,
+        0.65
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "bet_sizes_to_evaluate": [
+        0.75
+      ],
+      "note": "Low ストレート (7 5 3 2 4)",
+      "file": "mdf_106_LowStraight_balanced.json"
+    }
+  ]
+}

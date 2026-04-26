@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_AKQmono_3c",
+  "board_label": "AKQmono",
+  "board": [
+    "As",
+    "Ks",
+    "Qs",
+    "3c"
+  ],
+  "turn_card": "3c",
+  "category": "blank",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 82.7,
+  "exploitability_pct": 0.452,
+  "elapsed_sec": 17.9,
+  "status": "ok"
+}

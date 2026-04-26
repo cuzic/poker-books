@@ -1,0 +1,32 @@
+{
+  "scenario_id": "multistreet_104_A72r_planA",
+  "description": "[A72r (A-high, AQo TP + Q ブロッカー局面)] プラン A (フロップ cbet で BB fold 想定) — A-high で villain call 域薄い。プラン A でチェックバック気味の検証",
+  "street_to_solve": "flop",
+  "board": [
+    "Ac",
+    "7d",
+    "2s"
+  ],
+  "pot_bb": 7.0,
+  "effective_stack_bb": 92.0,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.33,
+    0.5,
+    0.75,
+    1.5
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 5000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

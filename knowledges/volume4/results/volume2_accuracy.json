@@ -1,0 +1,228 @@
+{
+  "metadata": {
+    "effective_stack": 97,
+    "hero_position": "IP",
+    "hero_range_preset": "BtnOpen100bb",
+    "pot_size": 7,
+    "street": "Flop",
+    "villain_range_preset": "BbDefendVsBtn"
+  },
+  "results": [
+    {
+      "abs_error": 13.0,
+      "board": "K72r",
+      "error": -13.0,
+      "reference_cbet_pct": 91,
+      "solver_cbet_pct": 78.0
+    },
+    {
+      "abs_error": 7.0,
+      "board": "A72r",
+      "error": 7.0,
+      "reference_cbet_pct": 90,
+      "solver_cbet_pct": 97.0
+    },
+    {
+      "abs_error": 33.0,
+      "board": "K44",
+      "error": 33.0,
+      "reference_cbet_pct": 43,
+      "solver_cbet_pct": 76.0
+    },
+    {
+      "abs_error": 11.0,
+      "board": "Q53r",
+      "error": -11.0,
+      "reference_cbet_pct": 85,
+      "solver_cbet_pct": 74.0
+    },
+    {
+      "abs_error": 7.0,
+      "board": "A82r",
+      "error": 7.0,
+      "reference_cbet_pct": 88,
+      "solver_cbet_pct": 95.0
+    },
+    {
+      "abs_error": 1.0,
+      "board": "K83r",
+      "error": 1.0,
+      "reference_cbet_pct": 87,
+      "solver_cbet_pct": 88.0
+    },
+    {
+      "abs_error": 5.0,
+      "board": "A52r",
+      "error": 5.0,
+      "reference_cbet_pct": 89,
+      "solver_cbet_pct": 94.0
+    },
+    {
+      "abs_error": 6.0,
+      "board": "K95r",
+      "error": -6.0,
+      "reference_cbet_pct": 80,
+      "solver_cbet_pct": 74.0
+    },
+    {
+      "abs_error": 9.0,
+      "board": "KT5r",
+      "error": 9.0,
+      "reference_cbet_pct": 70,
+      "solver_cbet_pct": 79.0
+    },
+    {
+      "abs_error": 41.0,
+      "board": "J75r",
+      "error": 41.0,
+      "reference_cbet_pct": 40,
+      "solver_cbet_pct": 81.0
+    },
+    {
+      "abs_error": 29.0,
+      "board": "Q83ss",
+      "error": 29.0,
+      "reference_cbet_pct": 55,
+      "solver_cbet_pct": 84.0
+    },
+    {
+      "abs_error": 19.0,
+      "board": "AT7ss",
+      "error": 19.0,
+      "reference_cbet_pct": 60,
+      "solver_cbet_pct": 79.0
+    },
+    {
+      "abs_error": 34.0,
+      "board": "J84ss",
+      "error": 34.0,
+      "reference_cbet_pct": 50,
+      "solver_cbet_pct": 84.0
+    },
+    {
+      "abs_error": 40.0,
+      "board": "QJ9r",
+      "error": 40.0,
+      "reference_cbet_pct": 50,
+      "solver_cbet_pct": 90.0
+    },
+    {
+      "abs_error": 43.0,
+      "board": "T87r",
+      "error": 43.0,
+      "reference_cbet_pct": 45,
+      "solver_cbet_pct": 88.0
+    },
+    {
+      "abs_error": 47.0,
+      "board": "876r",
+      "error": 47.0,
+      "reference_cbet_pct": 42,
+      "solver_cbet_pct": 89.0
+    },
+    {
+      "abs_error": 55.0,
+      "board": "987ss",
+      "error": 55.0,
+      "reference_cbet_pct": 30,
+      "solver_cbet_pct": 85.0
+    },
+    {
+      "abs_error": 56.0,
+      "board": "JT9ss",
+      "error": 56.0,
+      "reference_cbet_pct": 25,
+      "solver_cbet_pct": 81.0
+    },
+    {
+      "abs_error": 68.0,
+      "board": "987mono",
+      "error": 68.0,
+      "reference_cbet_pct": 20,
+      "solver_cbet_pct": 88.0
+    },
+    {
+      "abs_error": 40.0,
+      "board": "KQTss",
+      "error": 40.0,
+      "reference_cbet_pct": 35,
+      "solver_cbet_pct": 75.0
+    },
+    {
+      "abs_error": 55.0,
+      "board": "AKQmono",
+      "error": 55.0,
+      "reference_cbet_pct": 15,
+      "solver_cbet_pct": 70.0
+    },
+    {
+      "abs_error": 55.0,
+      "board": "JT8ss",
+      "error": 55.0,
+      "reference_cbet_pct": 30,
+      "solver_cbet_pct": 85.0
+    },
+    {
+      "abs_error": 43.0,
+      "board": "T98r",
+      "error": 43.0,
+      "reference_cbet_pct": 40,
+      "solver_cbet_pct": 83.0
+    },
+    {
+      "abs_error": 45.0,
+      "board": "T98ss",
+      "error": 45.0,
+      "reference_cbet_pct": 35,
+      "solver_cbet_pct": 80.0
+    },
+    {
+      "abs_error": 6.0,
+      "board": "772",
+      "error": 6.0,
+      "reference_cbet_pct": 70,
+      "solver_cbet_pct": 76.0
+    },
+    {
+      "abs_error": 12.0,
+      "board": "AAK",
+      "error": -12.0,
+      "reference_cbet_pct": 85,
+      "solver_cbet_pct": 73.0
+    },
+    {
+      "abs_error": 7.0,
+      "board": "KK9",
+      "error": -7.0,
+      "reference_cbet_pct": 80,
+      "solver_cbet_pct": 73.0
+    },
+    {
+      "abs_error": 30.0,
+      "board": "965r",
+      "error": 30.0,
+      "reference_cbet_pct": 60,
+      "solver_cbet_pct": 90.0
+    },
+    {
+      "abs_error": 14.0,
+      "board": "632r",
+      "error": 14.0,
+      "reference_cbet_pct": 62,
+      "solver_cbet_pct": 76.0
+    },
+    {
+      "abs_error": 17.0,
+      "board": "A99",
+      "error": 17.0,
+      "reference_cbet_pct": 78,
+      "solver_cbet_pct": 95.0
+    }
+  ],
+  "summary": {
+    "avg_abs_error_pct": 28.266666666666666,
+    "count": 30,
+    "expected_count": 30,
+    "max_abs_error_pct": 68.0
+  }
+}

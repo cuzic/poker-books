@@ -1,0 +1,34 @@
+{
+  "scenario_id": "blocker_105_reverse_block_2",
+  "description": "[逆ブロッカー] As8d3c + 6h + 2s (TP + weak kicker, reverse block で thin value)",
+  "street_to_solve": "river",
+  "board": [
+    "As",
+    "8d",
+    "3c",
+    "6h",
+    "2s"
+  ],
+  "pot_bb": 18,
+  "effective_stack_bb": 82,
+  "hero_position": "BTN",
+  "hero_range": {
+    "expr": "AcTd,AcJd"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.33,
+    0.5,
+    0.75,
+    1.5
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 8000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

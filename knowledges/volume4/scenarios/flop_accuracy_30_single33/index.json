@@ -1,0 +1,405 @@
+{
+  "task": "flop_accuracy_30_single33",
+  "title": "30 ボード精度検証 初期バイアス説決着: bet_sizes=[0.33] 単一サイズ",
+  "total": 30,
+  "hero_range": "BtnOpen100bb",
+  "villain_range": "BbDefendVsBtn",
+  "pot_bb": 7,
+  "effective_stack_bb": 97,
+  "scenarios": [
+    {
+      "scenario_id": "flop_acc30_K72r",
+      "board_label": "K72r",
+      "board_cards": [
+        "Kc",
+        "7d",
+        "2s"
+      ],
+      "gto_wizard_bet_freq": 91,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "GTO Wizard Blog: IP CB in cash",
+      "file": "flop_acc30_K72r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_A72r",
+      "board_label": "A72r",
+      "board_cards": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "gto_wizard_bet_freq": 90,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "published by GTO Wizard",
+      "file": "flop_acc30_A72r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_K44",
+      "board_label": "K44",
+      "board_cards": [
+        "Kc",
+        "4d",
+        "4s"
+      ],
+      "gto_wizard_bet_freq": 43,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "GTO Wizard K44 analysis",
+      "file": "flop_acc30_K44.json"
+    },
+    {
+      "scenario_id": "flop_acc30_Q53r",
+      "board_label": "Q53r",
+      "board_cards": [
+        "Qc",
+        "5d",
+        "3s"
+      ],
+      "gto_wizard_bet_freq": 85,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "similar to K72r class",
+      "file": "flop_acc30_Q53r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_A82r",
+      "board_label": "A82r",
+      "board_cards": [
+        "Ac",
+        "8d",
+        "2s"
+      ],
+      "gto_wizard_bet_freq": 88,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "",
+      "file": "flop_acc30_A82r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_K83r",
+      "board_label": "K83r",
+      "board_cards": [
+        "Kc",
+        "8d",
+        "3s"
+      ],
+      "gto_wizard_bet_freq": 87,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "",
+      "file": "flop_acc30_K83r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_A52r",
+      "board_label": "A52r",
+      "board_cards": [
+        "Ac",
+        "5d",
+        "2s"
+      ],
+      "gto_wizard_bet_freq": 89,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "",
+      "file": "flop_acc30_A52r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_K95r",
+      "board_label": "K95r",
+      "board_cards": [
+        "Kc",
+        "9d",
+        "5s"
+      ],
+      "gto_wizard_bet_freq": 80,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "",
+      "file": "flop_acc30_K95r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_KT5r",
+      "board_label": "KT5r",
+      "board_cards": [
+        "Kc",
+        "Td",
+        "5s"
+      ],
+      "gto_wizard_bet_freq": 70,
+      "gto_wizard_size_note": "mixed",
+      "source_note": "Broadway + 1gap",
+      "file": "flop_acc30_KT5r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_J75r",
+      "board_label": "J75r",
+      "board_cards": [
+        "Jc",
+        "7d",
+        "5s"
+      ],
+      "gto_wizard_bet_freq": 40,
+      "gto_wizard_size_note": "mixed",
+      "source_note": "J75r analysis",
+      "file": "flop_acc30_J75r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_Q83ss",
+      "board_label": "Q83ss",
+      "board_cards": [
+        "Qs",
+        "8s",
+        "3h"
+      ],
+      "gto_wizard_bet_freq": 55,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "Q高 + two-tone",
+      "file": "flop_acc30_Q83ss.json"
+    },
+    {
+      "scenario_id": "flop_acc30_AT7ss",
+      "board_label": "AT7ss",
+      "board_cards": [
+        "As",
+        "Ts",
+        "7h"
+      ],
+      "gto_wizard_bet_freq": 60,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "A高 + two-tone",
+      "file": "flop_acc30_AT7ss.json"
+    },
+    {
+      "scenario_id": "flop_acc30_J84ss",
+      "board_label": "J84ss",
+      "board_cards": [
+        "Js",
+        "8s",
+        "4h"
+      ],
+      "gto_wizard_bet_freq": 50,
+      "gto_wizard_size_note": "mixed-66",
+      "source_note": "flop chapter example",
+      "file": "flop_acc30_J84ss.json"
+    },
+    {
+      "scenario_id": "flop_acc30_QJ9r",
+      "board_label": "QJ9r",
+      "board_cards": [
+        "Qc",
+        "Jd",
+        "9s"
+      ],
+      "gto_wizard_bet_freq": 50,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "connected high + rainbow",
+      "file": "flop_acc30_QJ9r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_T87r",
+      "board_label": "T87r",
+      "board_cards": [
+        "Tc",
+        "8d",
+        "7s"
+      ],
+      "gto_wizard_bet_freq": 45,
+      "gto_wizard_size_note": "medium",
+      "source_note": "connected mid + rainbow",
+      "file": "flop_acc30_T87r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_876r",
+      "board_label": "876r",
+      "board_cards": [
+        "8c",
+        "7d",
+        "6s"
+      ],
+      "gto_wizard_bet_freq": 42,
+      "gto_wizard_size_note": "medium",
+      "source_note": "connected low + rainbow",
+      "file": "flop_acc30_876r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_987ss",
+      "board_label": "987ss",
+      "board_cards": [
+        "9s",
+        "8s",
+        "7h"
+      ],
+      "gto_wizard_bet_freq": 30,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "wet connected two-tone",
+      "file": "flop_acc30_987ss.json"
+    },
+    {
+      "scenario_id": "flop_acc30_JT9ss",
+      "board_label": "JT9ss",
+      "board_cards": [
+        "Js",
+        "Ts",
+        "9h"
+      ],
+      "gto_wizard_bet_freq": 25,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "wet broadway two-tone",
+      "file": "flop_acc30_JT9ss.json"
+    },
+    {
+      "scenario_id": "flop_acc30_987mono",
+      "board_label": "987mono",
+      "board_cards": [
+        "9s",
+        "8s",
+        "7s"
+      ],
+      "gto_wizard_bet_freq": 20,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "monotone connected",
+      "file": "flop_acc30_987mono.json"
+    },
+    {
+      "scenario_id": "flop_acc30_KQTss",
+      "board_label": "KQTss",
+      "board_cards": [
+        "Ks",
+        "Qs",
+        "Th"
+      ],
+      "gto_wizard_bet_freq": 35,
+      "gto_wizard_size_note": "polarized",
+      "source_note": "flushy broadway",
+      "file": "flop_acc30_KQTss.json"
+    },
+    {
+      "scenario_id": "flop_acc30_AKQmono",
+      "board_label": "AKQmono",
+      "board_cards": [
+        "As",
+        "Ks",
+        "Qs"
+      ],
+      "gto_wizard_bet_freq": 15,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "monotone broadway",
+      "file": "flop_acc30_AKQmono.json"
+    },
+    {
+      "scenario_id": "flop_acc30_JT8ss",
+      "board_label": "JT8ss",
+      "board_cards": [
+        "Js",
+        "Ts",
+        "8h"
+      ],
+      "gto_wizard_bet_freq": 30,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "wet broadway",
+      "file": "flop_acc30_JT8ss.json"
+    },
+    {
+      "scenario_id": "flop_acc30_T98r",
+      "board_label": "T98r",
+      "board_cards": [
+        "Tc",
+        "9d",
+        "8s"
+      ],
+      "gto_wizard_bet_freq": 40,
+      "gto_wizard_size_note": "medium-66",
+      "source_note": "connected high rainbow",
+      "file": "flop_acc30_T98r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_T98ss",
+      "board_label": "T98ss",
+      "board_cards": [
+        "Ts",
+        "9s",
+        "8h"
+      ],
+      "gto_wizard_bet_freq": 35,
+      "gto_wizard_size_note": "medium-71",
+      "source_note": "本書 10-4節、GTO 71% size",
+      "file": "flop_acc30_T98ss.json"
+    },
+    {
+      "scenario_id": "flop_acc30_772",
+      "board_label": "772",
+      "board_cards": [
+        "7c",
+        "7d",
+        "2s"
+      ],
+      "gto_wizard_bet_freq": 70,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "ペアボード low",
+      "file": "flop_acc30_772.json"
+    },
+    {
+      "scenario_id": "flop_acc30_AAK",
+      "board_label": "AAK",
+      "board_cards": [
+        "Ac",
+        "Ad",
+        "Ks"
+      ],
+      "gto_wizard_bet_freq": 85,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "ペアボード high",
+      "file": "flop_acc30_AAK.json"
+    },
+    {
+      "scenario_id": "flop_acc30_KK9",
+      "board_label": "KK9",
+      "board_cards": [
+        "Kc",
+        "Kd",
+        "9s"
+      ],
+      "gto_wizard_bet_freq": 80,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "ペアボード high",
+      "file": "flop_acc30_KK9.json"
+    },
+    {
+      "scenario_id": "flop_acc30_965r",
+      "board_label": "965r",
+      "board_cards": [
+        "9c",
+        "6d",
+        "5s"
+      ],
+      "gto_wizard_bet_freq": 60,
+      "gto_wizard_size_note": "mixed",
+      "source_note": "mid connected",
+      "file": "flop_acc30_965r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_632r",
+      "board_label": "632r",
+      "board_cards": [
+        "6c",
+        "3d",
+        "2s"
+      ],
+      "gto_wizard_bet_freq": 62,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "付録K で 62.5% 明示",
+      "file": "flop_acc30_632r.json"
+    },
+    {
+      "scenario_id": "flop_acc30_A99",
+      "board_label": "A99",
+      "board_cards": [
+        "Ac",
+        "9d",
+        "9s"
+      ],
+      "gto_wizard_bet_freq": 78,
+      "gto_wizard_size_note": "small-33",
+      "source_note": "ペアボード A",
+      "file": "flop_acc30_A99.json"
+    }
+  ],
+  "bet_sizes": [
+    0.33
+  ],
+  "note": "uniform 初期化による bet bias を切り分けるため、bet_sizes を [0.33, 0.5, 0.75, 1.5] の 4 択から [0.33] の単独に縮退。初期 bet 頻度は 1/2 = 50% となるため、学習結果がそこに近づけば初期バイアスが主因、75% 以上のままなら engine 側の歪みが主因。"
+}

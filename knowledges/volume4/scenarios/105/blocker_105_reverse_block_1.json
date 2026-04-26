@@ -1,0 +1,34 @@
+{
+  "scenario_id": "blocker_105_reverse_block_1",
+  "description": "[逆ブロッカー] Ad9s4c + 7h + 2s (A 絡み wo FD, top pair thin value)",
+  "street_to_solve": "river",
+  "board": [
+    "Ad",
+    "9s",
+    "4c",
+    "7h",
+    "2s"
+  ],
+  "pot_bb": 20,
+  "effective_stack_bb": 80,
+  "hero_position": "BTN",
+  "hero_range": {
+    "expr": "AhQd,AhJd"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.33,
+    0.5,
+    0.75,
+    1.5
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 8000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

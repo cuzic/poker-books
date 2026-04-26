@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_Q53r_3c",
+  "board_label": "Q53r",
+  "board": [
+    "Qc",
+    "5d",
+    "3s",
+    "3c"
+  ],
+  "turn_card": "3c",
+  "category": "pair",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 83.4,
+  "exploitability_pct": 0.43,
+  "elapsed_sec": 127.5,
+  "status": "ok"
+}

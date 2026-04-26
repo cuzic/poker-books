@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_JT9ss_7c",
+  "board_label": "JT9ss",
+  "board": [
+    "Js",
+    "Ts",
+    "9h",
+    "7c"
+  ],
+  "turn_card": "7c",
+  "category": "connector",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 50.5,
+  "exploitability_pct": 0.357,
+  "elapsed_sec": 18.0,
+  "status": "ok"
+}

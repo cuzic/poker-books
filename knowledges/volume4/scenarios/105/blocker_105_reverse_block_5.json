@@ -1,0 +1,34 @@
+{
+  "scenario_id": "blocker_105_reverse_block_5",
+  "description": "[逆ブロッカー] Jh8c4d + 5s + 2h (TP wo draws, 薄 value 比較)",
+  "street_to_solve": "river",
+  "board": [
+    "Jh",
+    "8c",
+    "4d",
+    "5s",
+    "2h"
+  ],
+  "pot_bb": 18,
+  "effective_stack_bb": 82,
+  "hero_position": "BTN",
+  "hero_range": {
+    "expr": "JdTc,JdQc"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.33,
+    0.5,
+    0.75,
+    1.5
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 8000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

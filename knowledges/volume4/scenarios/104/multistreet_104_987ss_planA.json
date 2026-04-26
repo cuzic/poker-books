@@ -1,0 +1,32 @@
+{
+  "scenario_id": "multistreet_104_987ss_planA",
+  "description": "[987ss (wet, QQ overpair 局面)] プラン A (フロップ cbet で BB fold 想定) — wet ボードで FD/SD が濃い。プラン B (turn check で pot 制御) が魅力",
+  "street_to_solve": "flop",
+  "board": [
+    "9s",
+    "8s",
+    "7d"
+  ],
+  "pot_bb": 7.0,
+  "effective_stack_bb": 92.0,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.33,
+    0.5,
+    0.75,
+    1.5
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 5000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

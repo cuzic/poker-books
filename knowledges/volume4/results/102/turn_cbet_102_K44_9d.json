@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_K44_9d",
+  "board_label": "K44",
+  "board": [
+    "Kc",
+    "4d",
+    "4s",
+    "9d"
+  ],
+  "turn_card": "9d",
+  "category": "blank",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 96.2,
+  "exploitability_pct": 0.634,
+  "elapsed_sec": 133.4,
+  "status": "ok"
+}

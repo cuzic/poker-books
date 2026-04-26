@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_K83r_Ac",
+  "board_label": "K83r",
+  "board": [
+    "Kc",
+    "8d",
+    "3s",
+    "Ac"
+  ],
+  "turn_card": "Ac",
+  "category": "overcard",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 80.0,
+  "exploitability_pct": 0.414,
+  "elapsed_sec": 75.0,
+  "status": "ok"
+}

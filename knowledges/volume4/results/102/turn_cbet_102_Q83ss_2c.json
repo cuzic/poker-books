@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_Q83ss_2c",
+  "board_label": "Q83ss",
+  "board": [
+    "Qs",
+    "8s",
+    "3h",
+    "2c"
+  ],
+  "turn_card": "2c",
+  "category": "blank",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 75.5,
+  "exploitability_pct": 0.32,
+  "elapsed_sec": 18.2,
+  "status": "ok"
+}

@@ -1,0 +1,33 @@
+{
+  "scenario_id": "flop_acc30_QJ9r_bs_a",
+  "description": "QJ9r フロップ精度検証 (GTO Wizard 50%)",
+  "street_to_solve": "flop",
+  "board": [
+    "Qc",
+    "Jd",
+    "9s"
+  ],
+  "pot_bb": 7,
+  "effective_stack_bb": 97,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.33,
+    0.5,
+    0.75,
+    1.5
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 5000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05,
+    "max_raises": 1
+  }
+}

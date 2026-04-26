@@ -1,0 +1,251 @@
+{
+  "experiment": "single_size_experiment (bet_sizes=[0.33])",
+  "date": "2026-04-21",
+  "config": {
+    "bet_sizes": [
+      0.33
+    ],
+    "iterations": 5000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "pot_bb": 7,
+    "effective_stack_bb": 97,
+    "hero_range": "BtnOpen100bb",
+    "villain_range": "BbDefendVsBtn",
+    "multistreet": false
+  },
+  "per_board": [
+    {
+      "board": "K72r",
+      "gto_pct": 91,
+      "measured_1size_pct": 55.89515221668081,
+      "error_pct": 35.10484778331919
+    },
+    {
+      "board": "A72r",
+      "gto_pct": 90,
+      "measured_1size_pct": 48.9209890033317,
+      "error_pct": 41.0790109966683
+    },
+    {
+      "board": "K44",
+      "gto_pct": 43,
+      "measured_1size_pct": 49.57618040695521,
+      "error_pct": 6.57618040695521
+    },
+    {
+      "board": "Q53r",
+      "gto_pct": 85,
+      "measured_1size_pct": 55.28242943300761,
+      "error_pct": 29.717570566992393
+    },
+    {
+      "board": "A82r",
+      "gto_pct": 88,
+      "measured_1size_pct": 59.327509534666575,
+      "error_pct": 28.672490465333425
+    },
+    {
+      "board": "K83r",
+      "gto_pct": 87,
+      "measured_1size_pct": 57.574378469820644,
+      "error_pct": 29.425621530179356
+    },
+    {
+      "board": "A52r",
+      "gto_pct": 89,
+      "measured_1size_pct": 50.6128311775667,
+      "error_pct": 38.3871688224333
+    },
+    {
+      "board": "K95r",
+      "gto_pct": 80,
+      "measured_1size_pct": 52.3019716551297,
+      "error_pct": 27.698028344870302
+    },
+    {
+      "board": "KT5r",
+      "gto_pct": 70,
+      "measured_1size_pct": 52.1272949642777,
+      "error_pct": 17.872705035722298
+    },
+    {
+      "board": "J75r",
+      "gto_pct": 40,
+      "measured_1size_pct": 60.4841855691909,
+      "error_pct": 20.4841855691909
+    },
+    {
+      "board": "Q83ss",
+      "gto_pct": 55,
+      "measured_1size_pct": 56.546311333563224,
+      "error_pct": 1.5463113335632244
+    },
+    {
+      "board": "AT7ss",
+      "gto_pct": 60,
+      "measured_1size_pct": 54.643729878134074,
+      "error_pct": 5.356270121865926
+    },
+    {
+      "board": "J84ss",
+      "gto_pct": 50,
+      "measured_1size_pct": 63.57531285349186,
+      "error_pct": 13.575312853491859
+    },
+    {
+      "board": "QJ9r",
+      "gto_pct": 50,
+      "measured_1size_pct": 60.28794100993632,
+      "error_pct": 10.287941009936318
+    },
+    {
+      "board": "T87r",
+      "gto_pct": 45,
+      "measured_1size_pct": 60.59232784407321,
+      "error_pct": 15.59232784407321
+    },
+    {
+      "board": "876r",
+      "gto_pct": 42,
+      "measured_1size_pct": 63.379126894298196,
+      "error_pct": 21.379126894298196
+    },
+    {
+      "board": "987ss",
+      "gto_pct": 30,
+      "measured_1size_pct": 61.89713935491628,
+      "error_pct": 31.897139354916277
+    },
+    {
+      "board": "JT9ss",
+      "gto_pct": 25,
+      "measured_1size_pct": 61.16854846164528,
+      "error_pct": 36.16854846164528
+    },
+    {
+      "board": "987mono",
+      "gto_pct": 20,
+      "measured_1size_pct": 65.19897634543912,
+      "error_pct": 45.19897634543912
+    },
+    {
+      "board": "KQTss",
+      "gto_pct": 35,
+      "measured_1size_pct": 53.258089940316125,
+      "error_pct": 18.258089940316125
+    },
+    {
+      "board": "AKQmono",
+      "gto_pct": 15,
+      "measured_1size_pct": 51.273334869911245,
+      "error_pct": 36.273334869911245
+    },
+    {
+      "board": "JT8ss",
+      "gto_pct": 30,
+      "measured_1size_pct": 58.798518495483755,
+      "error_pct": 28.798518495483755
+    },
+    {
+      "board": "T98r",
+      "gto_pct": 40,
+      "measured_1size_pct": 53.84813160352081,
+      "error_pct": 13.848131603520812
+    },
+    {
+      "board": "T98ss",
+      "gto_pct": 35,
+      "measured_1size_pct": 58.16166848903406,
+      "error_pct": 23.161668489034057
+    },
+    {
+      "board": "772",
+      "gto_pct": 70,
+      "measured_1size_pct": 52.21894578672698,
+      "error_pct": 17.781054213273023
+    },
+    {
+      "board": "AAK",
+      "gto_pct": 85,
+      "measured_1size_pct": 51.9090822141824,
+      "error_pct": 33.0909177858176
+    },
+    {
+      "board": "KK9",
+      "gto_pct": 80,
+      "measured_1size_pct": 46.08137312023934,
+      "error_pct": 33.91862687976066
+    },
+    {
+      "board": "965r",
+      "gto_pct": 60,
+      "measured_1size_pct": 57.922812134813825,
+      "error_pct": 2.0771878651861755
+    },
+    {
+      "board": "632r",
+      "gto_pct": 62,
+      "measured_1size_pct": 52.58304233798113,
+      "error_pct": 9.416957662018874
+    },
+    {
+      "board": "A99",
+      "gto_pct": 78,
+      "measured_1size_pct": 53.96930123905926,
+      "error_pct": 24.030698760940737
+    }
+  ],
+  "overall": {
+    "4sizes_baseline": {
+      "avg": 25.214774757502095,
+      "max": 61.623190860386,
+      "max_board": "AKQmono"
+    },
+    "3sizes_bs_c": {
+      "avg": 25.33796921003542,
+      "max": 58.536048654634385,
+      "max_board": "AKQmono"
+    },
+    "1size_single33": {
+      "avg": 23.22249834353857,
+      "max": 45.19897634543912,
+      "max_board": "987mono"
+    }
+  },
+  "category_avg_err_pct": {
+    "dry_13": {
+      "4sizes": 11.4727258796531,
+      "3sizes": 12.764164811989618,
+      "1size": 27.299936478350954
+    },
+    "semi_7": {
+      "4sizes": 27.20089318717483,
+      "3sizes": 27.265028877628957,
+      "1size": 14.505943688846843
+    },
+    "wet_two_tone_8": {
+      "4sizes": 37.042988626333454,
+      "3sizes": 35.87887955417376,
+      "1size": 19.845232381289563
+    },
+    "monotone_2": {
+      "4sizes": 60.27382248434056,
+      "3sizes": 58.159347584202436,
+      "1size": 40.73615560767519
+    }
+  },
+  "comparison_987mono": {
+    "4sizes_baseline_pct": 78.92445410829512,
+    "3sizes_bs_c_pct": 77.78264651377049,
+    "1size_single33_pct": 65.19897634543912,
+    "gto_wizard_pct": 20
+  },
+  "comparison_AKQmono": {
+    "4sizes_baseline_pct": 76.623190860386,
+    "3sizes_bs_c_pct": 73.53604865463439,
+    "1size_single33_pct": 51.273334869911245,
+    "gto_wizard_pct": 15
+  },
+  "verdict": "partial: 初期バイアスは主因の一つだが単独原因ではない (987mono 65.2%、閾値 75% 未満 & 50-55% 未満)"
+}

@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_T87r_9s",
+  "board_label": "T87r",
+  "board": [
+    "Tc",
+    "8d",
+    "7s",
+    "9s"
+  ],
+  "turn_card": "9s",
+  "category": "connector",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 61.6,
+  "exploitability_pct": 0.329,
+  "elapsed_sec": 17.6,
+  "status": "ok"
+}

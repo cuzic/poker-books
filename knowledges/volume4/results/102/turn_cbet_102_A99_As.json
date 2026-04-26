@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_A99_As",
+  "board_label": "A99",
+  "board": [
+    "Ac",
+    "9d",
+    "9s",
+    "As"
+  ],
+  "turn_card": "As",
+  "category": "pair",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 97.8,
+  "exploitability_pct": 0.493,
+  "elapsed_sec": 17.1,
+  "status": "ok"
+}

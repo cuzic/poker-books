@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_987ss_7c",
+  "board_label": "987ss",
+  "board": [
+    "9s",
+    "8s",
+    "7h",
+    "7c"
+  ],
+  "turn_card": "7c",
+  "category": "pair",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 90.3,
+  "exploitability_pct": 0.438,
+  "elapsed_sec": 17.9,
+  "status": "ok"
+}

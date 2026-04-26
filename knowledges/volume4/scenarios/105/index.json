@@ -1,0 +1,352 @@
+{
+  "task": "105",
+  "title": "ブロッカー論",
+  "total": 20,
+  "topics": {
+    "AA_vs_88": 5,
+    "missed_fd": 5,
+    "straight_block": 5,
+    "reverse_block": 5
+  },
+  "scenarios": [
+    {
+      "scenario_id": "blocker_105_AA_vs_88_1",
+      "topic": "AA_vs_88",
+      "topic_title": "AA<88 サイズ逆転",
+      "index": 1,
+      "street": "river",
+      "board": [
+        "6s",
+        "5d",
+        "2c",
+        "8h",
+        "4s"
+      ],
+      "hero_expr": "AA,88",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_AA_vs_88_1.json"
+    },
+    {
+      "scenario_id": "blocker_105_AA_vs_88_2",
+      "topic": "AA_vs_88",
+      "topic_title": "AA<88 サイズ逆転",
+      "index": 2,
+      "street": "river",
+      "board": [
+        "7c",
+        "6d",
+        "2s",
+        "9h",
+        "3c"
+      ],
+      "hero_expr": "AA,99",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_AA_vs_88_2.json"
+    },
+    {
+      "scenario_id": "blocker_105_AA_vs_88_3",
+      "topic": "AA_vs_88",
+      "topic_title": "AA<88 サイズ逆転",
+      "index": 3,
+      "street": "river",
+      "board": [
+        "8d",
+        "5c",
+        "3h",
+        "Td",
+        "2c"
+      ],
+      "hero_expr": "AA,TT",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_AA_vs_88_3.json"
+    },
+    {
+      "scenario_id": "blocker_105_AA_vs_88_4",
+      "topic": "AA_vs_88",
+      "topic_title": "AA<88 サイズ逆転",
+      "index": 4,
+      "street": "river",
+      "board": [
+        "9s",
+        "6h",
+        "3d",
+        "2s",
+        "7c"
+      ],
+      "hero_expr": "AA,99",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_AA_vs_88_4.json"
+    },
+    {
+      "scenario_id": "blocker_105_AA_vs_88_5",
+      "topic": "AA_vs_88",
+      "topic_title": "AA<88 サイズ逆転",
+      "index": 5,
+      "street": "river",
+      "board": [
+        "7h",
+        "5s",
+        "4d",
+        "8c",
+        "2h"
+      ],
+      "hero_expr": "AA,88",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_AA_vs_88_5.json"
+    },
+    {
+      "scenario_id": "blocker_105_missed_fd_1",
+      "topic": "missed_fd",
+      "topic_title": "ミスド FD ブラフ",
+      "index": 1,
+      "street": "river",
+      "board": [
+        "Kh",
+        "7h",
+        "2c",
+        "4h",
+        "2s"
+      ],
+      "hero_expr": "AsQs,AsJs",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_missed_fd_1.json"
+    },
+    {
+      "scenario_id": "blocker_105_missed_fd_2",
+      "topic": "missed_fd",
+      "topic_title": "ミスド FD ブラフ",
+      "index": 2,
+      "street": "river",
+      "board": [
+        "Qd",
+        "8d",
+        "3s",
+        "5d",
+        "7c"
+      ],
+      "hero_expr": "AsKs,AhKh",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_missed_fd_2.json"
+    },
+    {
+      "scenario_id": "blocker_105_missed_fd_3",
+      "topic": "missed_fd",
+      "topic_title": "ミスド FD ブラフ",
+      "index": 3,
+      "street": "river",
+      "board": [
+        "Jc",
+        "9c",
+        "4h",
+        "2c",
+        "3h"
+      ],
+      "hero_expr": "AhTh,AhQh",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_missed_fd_3.json"
+    },
+    {
+      "scenario_id": "blocker_105_missed_fd_4",
+      "topic": "missed_fd",
+      "topic_title": "ミスド FD ブラフ",
+      "index": 4,
+      "street": "river",
+      "board": [
+        "Ts",
+        "7s",
+        "2d",
+        "5s",
+        "6c"
+      ],
+      "hero_expr": "AhJh,AdQd",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_missed_fd_4.json"
+    },
+    {
+      "scenario_id": "blocker_105_missed_fd_5",
+      "topic": "missed_fd",
+      "topic_title": "ミスド FD ブラフ",
+      "index": 5,
+      "street": "river",
+      "board": [
+        "Kh",
+        "5h",
+        "3c",
+        "Qh",
+        "2d"
+      ],
+      "hero_expr": "AsJs,AcTc",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_missed_fd_5.json"
+    },
+    {
+      "scenario_id": "blocker_105_straight_block_1",
+      "topic": "straight_block",
+      "topic_title": "ストレートブロッカー",
+      "index": 1,
+      "street": "river",
+      "board": [
+        "9c",
+        "8h",
+        "7d",
+        "2s",
+        "3c"
+      ],
+      "hero_expr": "KK,TT,99",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_straight_block_1.json"
+    },
+    {
+      "scenario_id": "blocker_105_straight_block_2",
+      "topic": "straight_block",
+      "topic_title": "ストレートブロッカー",
+      "index": 2,
+      "street": "river",
+      "board": [
+        "Qc",
+        "6s",
+        "5h",
+        "4d",
+        "3s"
+      ],
+      "hero_expr": "KK,TT",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_straight_block_2.json"
+    },
+    {
+      "scenario_id": "blocker_105_straight_block_3",
+      "topic": "straight_block",
+      "topic_title": "ストレートブロッカー",
+      "index": 3,
+      "street": "river",
+      "board": [
+        "Jd",
+        "9c",
+        "8h",
+        "Th",
+        "2c"
+      ],
+      "hero_expr": "AA,KK",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_straight_block_3.json"
+    },
+    {
+      "scenario_id": "blocker_105_straight_block_4",
+      "topic": "straight_block",
+      "topic_title": "ストレートブロッカー",
+      "index": 4,
+      "street": "river",
+      "board": [
+        "Th",
+        "9d",
+        "8c",
+        "7s",
+        "2h"
+      ],
+      "hero_expr": "AA,QQ,JJ",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_straight_block_4.json"
+    },
+    {
+      "scenario_id": "blocker_105_straight_block_5",
+      "topic": "straight_block",
+      "topic_title": "ストレートブロッカー",
+      "index": 5,
+      "street": "river",
+      "board": [
+        "8s",
+        "7c",
+        "6d",
+        "5h",
+        "2s"
+      ],
+      "hero_expr": "TT,99",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_straight_block_5.json"
+    },
+    {
+      "scenario_id": "blocker_105_reverse_block_1",
+      "topic": "reverse_block",
+      "topic_title": "逆ブロッカー",
+      "index": 1,
+      "street": "river",
+      "board": [
+        "Ad",
+        "9s",
+        "4c",
+        "7h",
+        "2s"
+      ],
+      "hero_expr": "AhQd,AhJd",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_reverse_block_1.json"
+    },
+    {
+      "scenario_id": "blocker_105_reverse_block_2",
+      "topic": "reverse_block",
+      "topic_title": "逆ブロッカー",
+      "index": 2,
+      "street": "river",
+      "board": [
+        "As",
+        "8d",
+        "3c",
+        "6h",
+        "2s"
+      ],
+      "hero_expr": "AcTd,AcJd",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_reverse_block_2.json"
+    },
+    {
+      "scenario_id": "blocker_105_reverse_block_3",
+      "topic": "reverse_block",
+      "topic_title": "逆ブロッカー",
+      "index": 3,
+      "street": "turn",
+      "board": [
+        "Kh",
+        "7d",
+        "4c",
+        "9s"
+      ],
+      "hero_expr": "KdTc,KdJc",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_reverse_block_3.json"
+    },
+    {
+      "scenario_id": "blocker_105_reverse_block_4",
+      "topic": "reverse_block",
+      "topic_title": "逆ブロッカー",
+      "index": 4,
+      "street": "river",
+      "board": [
+        "Qc",
+        "9h",
+        "5d",
+        "3s",
+        "2c"
+      ],
+      "hero_expr": "QdJc,QdTc",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_reverse_block_4.json"
+    },
+    {
+      "scenario_id": "blocker_105_reverse_block_5",
+      "topic": "reverse_block",
+      "topic_title": "逆ブロッカー",
+      "index": 5,
+      "street": "river",
+      "board": [
+        "Jh",
+        "8c",
+        "4d",
+        "5s",
+        "2h"
+      ],
+      "hero_expr": "JdTc,JdQc",
+      "villain_preset": "BbDefendVsBtn",
+      "file": "blocker_105_reverse_block_5.json"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_AAK_As",
+  "board_label": "AAK",
+  "board": [
+    "Ac",
+    "Ad",
+    "Ks",
+    "As"
+  ],
+  "turn_card": "As",
+  "category": "pair",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 100.0,
+  "exploitability_pct": 0.625,
+  "elapsed_sec": 19.4,
+  "status": "ok"
+}

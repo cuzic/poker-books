@@ -1,0 +1,32 @@
+{
+  "scenario_id": "hook_108_overbet_bluff_2",
+  "description": "[リバー過剰 Bet はブラフのみ] A74r + 2h + Jc (A-high with J river brick) (street=river, pot=30bb)",
+  "street_to_solve": "river",
+  "board": [
+    "Ac",
+    "7d",
+    "4s",
+    "2h",
+    "Jc"
+  ],
+  "pot_bb": 30,
+  "effective_stack_bb": 70,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.5,
+    1.5
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 5000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

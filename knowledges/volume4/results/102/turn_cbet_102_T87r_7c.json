@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_T87r_7c",
+  "board_label": "T87r",
+  "board": [
+    "Tc",
+    "8d",
+    "7s",
+    "7c"
+  ],
+  "turn_card": "7c",
+  "category": "pair",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 84.1,
+  "exploitability_pct": 0.356,
+  "elapsed_sec": 17.8,
+  "status": "ok"
+}

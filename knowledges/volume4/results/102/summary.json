@@ -1,0 +1,12 @@
+{
+  "count_total": 270,
+  "count_ok": 270,
+  "category_avg_cbet_pct": {
+    "pair": 90.8,
+    "connector": 69.9,
+    "overcard": 76.3,
+    "blank": 74.6,
+    "flush": 68.5
+  },
+  "generated_at": "2026-04-23T04:20:37"
+}

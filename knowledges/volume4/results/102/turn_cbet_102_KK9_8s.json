@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_KK9_8s",
+  "board_label": "KK9",
+  "board": [
+    "Kc",
+    "Kd",
+    "9s",
+    "8s"
+  ],
+  "turn_card": "8s",
+  "category": "blank",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 100.0,
+  "exploitability_pct": 0.489,
+  "elapsed_sec": 16.1,
+  "status": "ok"
+}

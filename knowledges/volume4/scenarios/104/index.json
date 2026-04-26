@@ -1,0 +1,300 @@
+{
+  "task": "104",
+  "title": "A/B/C プラン 3 ストリート EV 比較",
+  "approximation_note": "各プランの最終ストリートを単ストリート解で近似する形式。真のマルチストリート通し EV は poker-gto #35 / #30 完了後に再実行。",
+  "total": 15,
+  "scenes": 5,
+  "plans_per_scene": 3,
+  "plan_counts": {
+    "A": 5,
+    "B": 5,
+    "C": 5
+  },
+  "scenes_detail": [
+    {
+      "scene": "K72r",
+      "title_ja": "K72r (dry, AKo TPTK 局面)",
+      "flop": [
+        "Kc",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "Ah",
+      "river_card": "3c",
+      "note": "dry ボードで BDSD/FD がほぼ無い。プラン A の即 fold が強い局面",
+      "plans": [
+        {
+          "plan": "A",
+          "scenario_id": "multistreet_104_K72r_planA",
+          "street": "flop",
+          "board": [
+            "Kc",
+            "7d",
+            "2s"
+          ],
+          "pot_bb": 7.0,
+          "effective_stack_bb": 92.0,
+          "file": "multistreet_104_K72r_planA.json"
+        },
+        {
+          "plan": "B",
+          "scenario_id": "multistreet_104_K72r_planB",
+          "street": "river",
+          "board": [
+            "Kc",
+            "7d",
+            "2s",
+            "Ah",
+            "3c"
+          ],
+          "pot_bb": 11.0,
+          "effective_stack_bb": 84.0,
+          "file": "multistreet_104_K72r_planB.json"
+        },
+        {
+          "plan": "C",
+          "scenario_id": "multistreet_104_K72r_planC",
+          "street": "river",
+          "board": [
+            "Kc",
+            "7d",
+            "2s",
+            "Ah",
+            "3c"
+          ],
+          "pot_bb": 27.0,
+          "effective_stack_bb": 67.0,
+          "file": "multistreet_104_K72r_planC.json"
+        }
+      ]
+    },
+    {
+      "scene": "987ss",
+      "title_ja": "987ss (wet, QQ overpair 局面)",
+      "flop": [
+        "9s",
+        "8s",
+        "7d"
+      ],
+      "turn_card": "Jc",
+      "river_card": "2d",
+      "note": "wet ボードで FD/SD が濃い。プラン B (turn check で pot 制御) が魅力",
+      "plans": [
+        {
+          "plan": "A",
+          "scenario_id": "multistreet_104_987ss_planA",
+          "street": "flop",
+          "board": [
+            "9s",
+            "8s",
+            "7d"
+          ],
+          "pot_bb": 7.0,
+          "effective_stack_bb": 92.0,
+          "file": "multistreet_104_987ss_planA.json"
+        },
+        {
+          "plan": "B",
+          "scenario_id": "multistreet_104_987ss_planB",
+          "street": "river",
+          "board": [
+            "9s",
+            "8s",
+            "7d",
+            "Jc",
+            "2d"
+          ],
+          "pot_bb": 11.0,
+          "effective_stack_bb": 84.0,
+          "file": "multistreet_104_987ss_planB.json"
+        },
+        {
+          "plan": "C",
+          "scenario_id": "multistreet_104_987ss_planC",
+          "street": "river",
+          "board": [
+            "9s",
+            "8s",
+            "7d",
+            "Jc",
+            "2d"
+          ],
+          "pot_bb": 27.0,
+          "effective_stack_bb": 67.0,
+          "file": "multistreet_104_987ss_planC.json"
+        }
+      ]
+    },
+    {
+      "scene": "AKQmono",
+      "title_ja": "AKQmono (完全 flush 完成、KK 第 2 オーバーペア局面)",
+      "flop": [
+        "As",
+        "Ks",
+        "Qs"
+      ],
+      "turn_card": "2d",
+      "river_card": "5h",
+      "note": "既にフラッシュ完成。KK では薄い。プラン A (小サイズで諦め) 正解候補",
+      "plans": [
+        {
+          "plan": "A",
+          "scenario_id": "multistreet_104_AKQmono_planA",
+          "street": "flop",
+          "board": [
+            "As",
+            "Ks",
+            "Qs"
+          ],
+          "pot_bb": 7.0,
+          "effective_stack_bb": 92.0,
+          "file": "multistreet_104_AKQmono_planA.json"
+        },
+        {
+          "plan": "B",
+          "scenario_id": "multistreet_104_AKQmono_planB",
+          "street": "river",
+          "board": [
+            "As",
+            "Ks",
+            "Qs",
+            "2d",
+            "5h"
+          ],
+          "pot_bb": 11.0,
+          "effective_stack_bb": 84.0,
+          "file": "multistreet_104_AKQmono_planB.json"
+        },
+        {
+          "plan": "C",
+          "scenario_id": "multistreet_104_AKQmono_planC",
+          "street": "river",
+          "board": [
+            "As",
+            "Ks",
+            "Qs",
+            "2d",
+            "5h"
+          ],
+          "pot_bb": 27.0,
+          "effective_stack_bb": 67.0,
+          "file": "multistreet_104_AKQmono_planC.json"
+        }
+      ]
+    },
+    {
+      "scene": "T75r",
+      "title_ja": "T75r (mid dry, AK オーバーカード局面)",
+      "flop": [
+        "Tc",
+        "7d",
+        "5s"
+      ],
+      "turn_card": "Jc",
+      "river_card": "2h",
+      "note": "AK オーバー + gutshot ライン。プラン C で三発打ちの検証対象",
+      "plans": [
+        {
+          "plan": "A",
+          "scenario_id": "multistreet_104_T75r_planA",
+          "street": "flop",
+          "board": [
+            "Tc",
+            "7d",
+            "5s"
+          ],
+          "pot_bb": 7.0,
+          "effective_stack_bb": 92.0,
+          "file": "multistreet_104_T75r_planA.json"
+        },
+        {
+          "plan": "B",
+          "scenario_id": "multistreet_104_T75r_planB",
+          "street": "river",
+          "board": [
+            "Tc",
+            "7d",
+            "5s",
+            "Jc",
+            "2h"
+          ],
+          "pot_bb": 11.0,
+          "effective_stack_bb": 84.0,
+          "file": "multistreet_104_T75r_planB.json"
+        },
+        {
+          "plan": "C",
+          "scenario_id": "multistreet_104_T75r_planC",
+          "street": "river",
+          "board": [
+            "Tc",
+            "7d",
+            "5s",
+            "Jc",
+            "2h"
+          ],
+          "pot_bb": 27.0,
+          "effective_stack_bb": 67.0,
+          "file": "multistreet_104_T75r_planC.json"
+        }
+      ]
+    },
+    {
+      "scene": "A72r",
+      "title_ja": "A72r (A-high, AQo TP + Q ブロッカー局面)",
+      "flop": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "4c",
+      "river_card": "9h",
+      "note": "A-high で villain call 域薄い。プラン A でチェックバック気味の検証",
+      "plans": [
+        {
+          "plan": "A",
+          "scenario_id": "multistreet_104_A72r_planA",
+          "street": "flop",
+          "board": [
+            "Ac",
+            "7d",
+            "2s"
+          ],
+          "pot_bb": 7.0,
+          "effective_stack_bb": 92.0,
+          "file": "multistreet_104_A72r_planA.json"
+        },
+        {
+          "plan": "B",
+          "scenario_id": "multistreet_104_A72r_planB",
+          "street": "river",
+          "board": [
+            "Ac",
+            "7d",
+            "2s",
+            "4c",
+            "9h"
+          ],
+          "pot_bb": 11.0,
+          "effective_stack_bb": 84.0,
+          "file": "multistreet_104_A72r_planB.json"
+        },
+        {
+          "plan": "C",
+          "scenario_id": "multistreet_104_A72r_planC",
+          "street": "river",
+          "board": [
+            "Ac",
+            "7d",
+            "2s",
+            "4c",
+            "9h"
+          ],
+          "pot_bb": 27.0,
+          "effective_stack_bb": 67.0,
+          "file": "multistreet_104_A72r_planC.json"
+        }
+      ]
+    }
+  ]
+}

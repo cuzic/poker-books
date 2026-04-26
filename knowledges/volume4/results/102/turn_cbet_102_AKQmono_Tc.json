@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_AKQmono_Tc",
+  "board_label": "AKQmono",
+  "board": [
+    "As",
+    "Ks",
+    "Qs",
+    "Tc"
+  ],
+  "turn_card": "Tc",
+  "category": "connector",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 69.8,
+  "exploitability_pct": 0.332,
+  "elapsed_sec": 16.8,
+  "status": "ok"
+}

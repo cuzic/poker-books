@@ -1,0 +1,26 @@
+{
+  "scenario_id": "probe_987mono_h3_mr4_long",
+  "description": "H3 追試: max_raises=4 を iterations=200000 + timeout=60 で収束確認",
+  "street_to_solve": "flop",
+  "board": [
+    "9h",
+    "8h",
+    "7h"
+  ],
+  "pot_bb": 7,
+  "effective_stack_bb": 97,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 200000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "max_raises": 4
+  }
+}

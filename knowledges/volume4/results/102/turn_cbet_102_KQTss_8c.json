@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_KQTss_8c",
+  "board_label": "KQTss",
+  "board": [
+    "Ks",
+    "Qs",
+    "Th",
+    "8c"
+  ],
+  "turn_card": "8c",
+  "category": "connector",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 70.3,
+  "exploitability_pct": 0.819,
+  "elapsed_sec": 18.8,
+  "status": "ok"
+}

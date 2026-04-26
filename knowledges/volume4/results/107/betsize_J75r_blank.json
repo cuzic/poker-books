@@ -1,0 +1,28 @@
+{
+  "label": "J75r_blank",
+  "board": [
+    "Jh",
+    "7s",
+    "5d",
+    "2c"
+  ],
+  "board_label": [
+    "Jh",
+    "7s",
+    "5d"
+  ],
+  "turn_card": "2c",
+  "turn_category": "blank",
+  "description": "セミ板 + ブランクターン",
+  "turn_cbet_pct": 96.47514627279877,
+  "bet_size_distribution": {
+    "BET 3.000000": 47.9,
+    "BET 5.000000": 21.1,
+    "BET 8.000000": 19.3,
+    "BET 15.000000": 11.6,
+    "BET 92.000000": 0.0
+  },
+  "exploitability_pct": 0.47895136,
+  "elapsed_sec": 61.3,
+  "status": "ok"
+}

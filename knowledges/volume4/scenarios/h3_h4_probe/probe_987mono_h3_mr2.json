@@ -1,0 +1,24 @@
+{
+  "scenario_id": "probe_987mono_h3_mr2",
+  "description": "H3 検証 (max_raises=2): 987mono を seed=42 baseline iter/timeout で実行",
+  "street_to_solve": "flop",
+  "board": [
+    "9h",
+    "8h",
+    "7h"
+  ],
+  "pot_bb": 7,
+  "effective_stack_bb": 97,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "rng_seed": 42,
+    "max_raises": 2
+  }
+}

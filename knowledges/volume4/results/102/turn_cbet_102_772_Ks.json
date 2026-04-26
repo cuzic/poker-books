@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_772_Ks",
+  "board_label": "772",
+  "board": [
+    "7c",
+    "7d",
+    "2s",
+    "Ks"
+  ],
+  "turn_card": "Ks",
+  "category": "overcard",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 86.6,
+  "exploitability_pct": 0.544,
+  "elapsed_sec": 21.1,
+  "status": "ok"
+}

@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_A52r_Tc",
+  "board_label": "A52r",
+  "board": [
+    "Ac",
+    "5d",
+    "2s",
+    "Tc"
+  ],
+  "turn_card": "Tc",
+  "category": "blank",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 58.0,
+  "exploitability_pct": 2.157,
+  "elapsed_sec": 60.7,
+  "status": "ok"
+}

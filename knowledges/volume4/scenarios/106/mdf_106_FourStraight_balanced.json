@@ -1,0 +1,31 @@
+{
+  "scenario_id": "mdf_106_FourStraight_balanced",
+  "description": "[リバー MDF / villain_type: balanced] 4 枚ストレート (6 7 8 9 + 3) (pot=27bb, bet=0.75x pot, MDF_theory=0.5714)",
+  "street_to_solve": "river",
+  "board": [
+    "6s",
+    "7h",
+    "8d",
+    "9c",
+    "3s"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.75
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 8000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

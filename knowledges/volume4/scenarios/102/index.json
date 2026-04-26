@@ -1,0 +1,3256 @@
+{
+  "task": "102",
+  "title": "ターン CBet 頻度モデル (BDM_turn)",
+  "total": 270,
+  "flops": 30,
+  "turns_per_flop": 9,
+  "categories": {
+    "overcard": 53,
+    "blank": 105,
+    "pair": 60,
+    "connector": 42,
+    "flush": 10
+  },
+  "scenarios": [
+    {
+      "scenario_id": "turn_cbet_102_K72r_As",
+      "board_label": "K72r",
+      "flop_cards": [
+        "Kc",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_K72r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K72r_Qs",
+      "board_label": "K72r",
+      "flop_cards": [
+        "Kc",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "Qs",
+      "category": "blank",
+      "file": "turn_cbet_102_K72r_Qs.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K72r_Ks",
+      "board_label": "K72r",
+      "flop_cards": [
+        "Kc",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "Ks",
+      "category": "pair",
+      "file": "turn_cbet_102_K72r_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K72r_Ac",
+      "board_label": "K72r",
+      "flop_cards": [
+        "Kc",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "Ac",
+      "category": "overcard",
+      "file": "turn_cbet_102_K72r_Ac.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K72r_3c",
+      "board_label": "K72r",
+      "flop_cards": [
+        "Kc",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "3c",
+      "category": "blank",
+      "file": "turn_cbet_102_K72r_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K72r_2c",
+      "board_label": "K72r",
+      "flop_cards": [
+        "Kc",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "2c",
+      "category": "pair",
+      "file": "turn_cbet_102_K72r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K72r_Ts",
+      "board_label": "K72r",
+      "flop_cards": [
+        "Kc",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "Ts",
+      "category": "blank",
+      "file": "turn_cbet_102_K72r_Ts.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K72r_Th",
+      "board_label": "K72r",
+      "flop_cards": [
+        "Kc",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "Th",
+      "category": "blank",
+      "file": "turn_cbet_102_K72r_Th.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K72r_Td",
+      "board_label": "K72r",
+      "flop_cards": [
+        "Kc",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "Td",
+      "category": "blank",
+      "file": "turn_cbet_102_K72r_Td.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A72r_Ks",
+      "board_label": "A72r",
+      "flop_cards": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "Ks",
+      "category": "blank",
+      "file": "turn_cbet_102_A72r_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A72r_As",
+      "board_label": "A72r",
+      "flop_cards": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "As",
+      "category": "pair",
+      "file": "turn_cbet_102_A72r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A72r_3c",
+      "board_label": "A72r",
+      "flop_cards": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "3c",
+      "category": "blank",
+      "file": "turn_cbet_102_A72r_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A72r_2c",
+      "board_label": "A72r",
+      "flop_cards": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "2c",
+      "category": "pair",
+      "file": "turn_cbet_102_A72r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A72r_Js",
+      "board_label": "A72r",
+      "flop_cards": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "Js",
+      "category": "blank",
+      "file": "turn_cbet_102_A72r_Js.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A72r_Jh",
+      "board_label": "A72r",
+      "flop_cards": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "Jh",
+      "category": "blank",
+      "file": "turn_cbet_102_A72r_Jh.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A72r_Jd",
+      "board_label": "A72r",
+      "flop_cards": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "Jd",
+      "category": "blank",
+      "file": "turn_cbet_102_A72r_Jd.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A72r_Jc",
+      "board_label": "A72r",
+      "flop_cards": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "Jc",
+      "category": "blank",
+      "file": "turn_cbet_102_A72r_Jc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A72r_Ts",
+      "board_label": "A72r",
+      "flop_cards": [
+        "Ac",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "Ts",
+      "category": "blank",
+      "file": "turn_cbet_102_A72r_Ts.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K44_As",
+      "board_label": "K44",
+      "flop_cards": [
+        "Kc",
+        "4d",
+        "4s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_K44_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K44_Qs",
+      "board_label": "K44",
+      "flop_cards": [
+        "Kc",
+        "4d",
+        "4s"
+      ],
+      "turn_card": "Qs",
+      "category": "blank",
+      "file": "turn_cbet_102_K44_Qs.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K44_Ks",
+      "board_label": "K44",
+      "flop_cards": [
+        "Kc",
+        "4d",
+        "4s"
+      ],
+      "turn_card": "Ks",
+      "category": "pair",
+      "file": "turn_cbet_102_K44_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K44_Ac",
+      "board_label": "K44",
+      "flop_cards": [
+        "Kc",
+        "4d",
+        "4s"
+      ],
+      "turn_card": "Ac",
+      "category": "overcard",
+      "file": "turn_cbet_102_K44_Ac.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K44_2c",
+      "board_label": "K44",
+      "flop_cards": [
+        "Kc",
+        "4d",
+        "4s"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_K44_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K44_4c",
+      "board_label": "K44",
+      "flop_cards": [
+        "Kc",
+        "4d",
+        "4s"
+      ],
+      "turn_card": "4c",
+      "category": "pair",
+      "file": "turn_cbet_102_K44_4c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K44_9s",
+      "board_label": "K44",
+      "flop_cards": [
+        "Kc",
+        "4d",
+        "4s"
+      ],
+      "turn_card": "9s",
+      "category": "blank",
+      "file": "turn_cbet_102_K44_9s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K44_9h",
+      "board_label": "K44",
+      "flop_cards": [
+        "Kc",
+        "4d",
+        "4s"
+      ],
+      "turn_card": "9h",
+      "category": "blank",
+      "file": "turn_cbet_102_K44_9h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K44_9d",
+      "board_label": "K44",
+      "flop_cards": [
+        "Kc",
+        "4d",
+        "4s"
+      ],
+      "turn_card": "9d",
+      "category": "blank",
+      "file": "turn_cbet_102_K44_9d.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q53r_As",
+      "board_label": "Q53r",
+      "flop_cards": [
+        "Qc",
+        "5d",
+        "3s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_Q53r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q53r_Js",
+      "board_label": "Q53r",
+      "flop_cards": [
+        "Qc",
+        "5d",
+        "3s"
+      ],
+      "turn_card": "Js",
+      "category": "blank",
+      "file": "turn_cbet_102_Q53r_Js.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q53r_Qs",
+      "board_label": "Q53r",
+      "flop_cards": [
+        "Qc",
+        "5d",
+        "3s"
+      ],
+      "turn_card": "Qs",
+      "category": "pair",
+      "file": "turn_cbet_102_Q53r_Qs.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q53r_Kc",
+      "board_label": "Q53r",
+      "flop_cards": [
+        "Qc",
+        "5d",
+        "3s"
+      ],
+      "turn_card": "Kc",
+      "category": "overcard",
+      "file": "turn_cbet_102_Q53r_Kc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q53r_2c",
+      "board_label": "Q53r",
+      "flop_cards": [
+        "Qc",
+        "5d",
+        "3s"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_Q53r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q53r_3c",
+      "board_label": "Q53r",
+      "flop_cards": [
+        "Qc",
+        "5d",
+        "3s"
+      ],
+      "turn_card": "3c",
+      "category": "pair",
+      "file": "turn_cbet_102_Q53r_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q53r_9s",
+      "board_label": "Q53r",
+      "flop_cards": [
+        "Qc",
+        "5d",
+        "3s"
+      ],
+      "turn_card": "9s",
+      "category": "blank",
+      "file": "turn_cbet_102_Q53r_9s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q53r_9h",
+      "board_label": "Q53r",
+      "flop_cards": [
+        "Qc",
+        "5d",
+        "3s"
+      ],
+      "turn_card": "9h",
+      "category": "blank",
+      "file": "turn_cbet_102_Q53r_9h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q53r_9d",
+      "board_label": "Q53r",
+      "flop_cards": [
+        "Qc",
+        "5d",
+        "3s"
+      ],
+      "turn_card": "9d",
+      "category": "blank",
+      "file": "turn_cbet_102_Q53r_9d.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A82r_Ks",
+      "board_label": "A82r",
+      "flop_cards": [
+        "Ac",
+        "8d",
+        "2s"
+      ],
+      "turn_card": "Ks",
+      "category": "blank",
+      "file": "turn_cbet_102_A82r_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A82r_As",
+      "board_label": "A82r",
+      "flop_cards": [
+        "Ac",
+        "8d",
+        "2s"
+      ],
+      "turn_card": "As",
+      "category": "pair",
+      "file": "turn_cbet_102_A82r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A82r_3c",
+      "board_label": "A82r",
+      "flop_cards": [
+        "Ac",
+        "8d",
+        "2s"
+      ],
+      "turn_card": "3c",
+      "category": "blank",
+      "file": "turn_cbet_102_A82r_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A82r_2c",
+      "board_label": "A82r",
+      "flop_cards": [
+        "Ac",
+        "8d",
+        "2s"
+      ],
+      "turn_card": "2c",
+      "category": "pair",
+      "file": "turn_cbet_102_A82r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A82r_Js",
+      "board_label": "A82r",
+      "flop_cards": [
+        "Ac",
+        "8d",
+        "2s"
+      ],
+      "turn_card": "Js",
+      "category": "blank",
+      "file": "turn_cbet_102_A82r_Js.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A82r_5c",
+      "board_label": "A82r",
+      "flop_cards": [
+        "Ac",
+        "8d",
+        "2s"
+      ],
+      "turn_card": "5c",
+      "category": "blank",
+      "file": "turn_cbet_102_A82r_5c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A82r_Jh",
+      "board_label": "A82r",
+      "flop_cards": [
+        "Ac",
+        "8d",
+        "2s"
+      ],
+      "turn_card": "Jh",
+      "category": "blank",
+      "file": "turn_cbet_102_A82r_Jh.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A82r_5d",
+      "board_label": "A82r",
+      "flop_cards": [
+        "Ac",
+        "8d",
+        "2s"
+      ],
+      "turn_card": "5d",
+      "category": "blank",
+      "file": "turn_cbet_102_A82r_5d.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A82r_Jd",
+      "board_label": "A82r",
+      "flop_cards": [
+        "Ac",
+        "8d",
+        "2s"
+      ],
+      "turn_card": "Jd",
+      "category": "blank",
+      "file": "turn_cbet_102_A82r_Jd.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K83r_As",
+      "board_label": "K83r",
+      "flop_cards": [
+        "Kc",
+        "8d",
+        "3s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_K83r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K83r_Qs",
+      "board_label": "K83r",
+      "flop_cards": [
+        "Kc",
+        "8d",
+        "3s"
+      ],
+      "turn_card": "Qs",
+      "category": "blank",
+      "file": "turn_cbet_102_K83r_Qs.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K83r_Ks",
+      "board_label": "K83r",
+      "flop_cards": [
+        "Kc",
+        "8d",
+        "3s"
+      ],
+      "turn_card": "Ks",
+      "category": "pair",
+      "file": "turn_cbet_102_K83r_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K83r_Ac",
+      "board_label": "K83r",
+      "flop_cards": [
+        "Kc",
+        "8d",
+        "3s"
+      ],
+      "turn_card": "Ac",
+      "category": "overcard",
+      "file": "turn_cbet_102_K83r_Ac.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K83r_2c",
+      "board_label": "K83r",
+      "flop_cards": [
+        "Kc",
+        "8d",
+        "3s"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_K83r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K83r_3c",
+      "board_label": "K83r",
+      "flop_cards": [
+        "Kc",
+        "8d",
+        "3s"
+      ],
+      "turn_card": "3c",
+      "category": "pair",
+      "file": "turn_cbet_102_K83r_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K83r_Js",
+      "board_label": "K83r",
+      "flop_cards": [
+        "Kc",
+        "8d",
+        "3s"
+      ],
+      "turn_card": "Js",
+      "category": "blank",
+      "file": "turn_cbet_102_K83r_Js.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K83r_Jh",
+      "board_label": "K83r",
+      "flop_cards": [
+        "Kc",
+        "8d",
+        "3s"
+      ],
+      "turn_card": "Jh",
+      "category": "blank",
+      "file": "turn_cbet_102_K83r_Jh.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K83r_Jd",
+      "board_label": "K83r",
+      "flop_cards": [
+        "Kc",
+        "8d",
+        "3s"
+      ],
+      "turn_card": "Jd",
+      "category": "blank",
+      "file": "turn_cbet_102_K83r_Jd.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A52r_Ks",
+      "board_label": "A52r",
+      "flop_cards": [
+        "Ac",
+        "5d",
+        "2s"
+      ],
+      "turn_card": "Ks",
+      "category": "blank",
+      "file": "turn_cbet_102_A52r_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A52r_As",
+      "board_label": "A52r",
+      "flop_cards": [
+        "Ac",
+        "5d",
+        "2s"
+      ],
+      "turn_card": "As",
+      "category": "pair",
+      "file": "turn_cbet_102_A52r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A52r_3c",
+      "board_label": "A52r",
+      "flop_cards": [
+        "Ac",
+        "5d",
+        "2s"
+      ],
+      "turn_card": "3c",
+      "category": "blank",
+      "file": "turn_cbet_102_A52r_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A52r_2c",
+      "board_label": "A52r",
+      "flop_cards": [
+        "Ac",
+        "5d",
+        "2s"
+      ],
+      "turn_card": "2c",
+      "category": "pair",
+      "file": "turn_cbet_102_A52r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A52r_Ts",
+      "board_label": "A52r",
+      "flop_cards": [
+        "Ac",
+        "5d",
+        "2s"
+      ],
+      "turn_card": "Ts",
+      "category": "blank",
+      "file": "turn_cbet_102_A52r_Ts.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A52r_Th",
+      "board_label": "A52r",
+      "flop_cards": [
+        "Ac",
+        "5d",
+        "2s"
+      ],
+      "turn_card": "Th",
+      "category": "blank",
+      "file": "turn_cbet_102_A52r_Th.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A52r_Td",
+      "board_label": "A52r",
+      "flop_cards": [
+        "Ac",
+        "5d",
+        "2s"
+      ],
+      "turn_card": "Td",
+      "category": "blank",
+      "file": "turn_cbet_102_A52r_Td.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A52r_Tc",
+      "board_label": "A52r",
+      "flop_cards": [
+        "Ac",
+        "5d",
+        "2s"
+      ],
+      "turn_card": "Tc",
+      "category": "blank",
+      "file": "turn_cbet_102_A52r_Tc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A52r_9s",
+      "board_label": "A52r",
+      "flop_cards": [
+        "Ac",
+        "5d",
+        "2s"
+      ],
+      "turn_card": "9s",
+      "category": "blank",
+      "file": "turn_cbet_102_A52r_9s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K95r_As",
+      "board_label": "K95r",
+      "flop_cards": [
+        "Kc",
+        "9d",
+        "5s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_K95r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K95r_Qs",
+      "board_label": "K95r",
+      "flop_cards": [
+        "Kc",
+        "9d",
+        "5s"
+      ],
+      "turn_card": "Qs",
+      "category": "blank",
+      "file": "turn_cbet_102_K95r_Qs.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K95r_Ks",
+      "board_label": "K95r",
+      "flop_cards": [
+        "Kc",
+        "9d",
+        "5s"
+      ],
+      "turn_card": "Ks",
+      "category": "pair",
+      "file": "turn_cbet_102_K95r_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K95r_Ac",
+      "board_label": "K95r",
+      "flop_cards": [
+        "Kc",
+        "9d",
+        "5s"
+      ],
+      "turn_card": "Ac",
+      "category": "overcard",
+      "file": "turn_cbet_102_K95r_Ac.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K95r_2c",
+      "board_label": "K95r",
+      "flop_cards": [
+        "Kc",
+        "9d",
+        "5s"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_K95r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K95r_5c",
+      "board_label": "K95r",
+      "flop_cards": [
+        "Kc",
+        "9d",
+        "5s"
+      ],
+      "turn_card": "5c",
+      "category": "pair",
+      "file": "turn_cbet_102_K95r_5c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K95r_Js",
+      "board_label": "K95r",
+      "flop_cards": [
+        "Kc",
+        "9d",
+        "5s"
+      ],
+      "turn_card": "Js",
+      "category": "blank",
+      "file": "turn_cbet_102_K95r_Js.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K95r_3c",
+      "board_label": "K95r",
+      "flop_cards": [
+        "Kc",
+        "9d",
+        "5s"
+      ],
+      "turn_card": "3c",
+      "category": "blank",
+      "file": "turn_cbet_102_K95r_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_K95r_Jh",
+      "board_label": "K95r",
+      "flop_cards": [
+        "Kc",
+        "9d",
+        "5s"
+      ],
+      "turn_card": "Jh",
+      "category": "blank",
+      "file": "turn_cbet_102_K95r_Jh.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KT5r_As",
+      "board_label": "KT5r",
+      "flop_cards": [
+        "Kc",
+        "Td",
+        "5s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_KT5r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KT5r_Qs",
+      "board_label": "KT5r",
+      "flop_cards": [
+        "Kc",
+        "Td",
+        "5s"
+      ],
+      "turn_card": "Qs",
+      "category": "blank",
+      "file": "turn_cbet_102_KT5r_Qs.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KT5r_Ks",
+      "board_label": "KT5r",
+      "flop_cards": [
+        "Kc",
+        "Td",
+        "5s"
+      ],
+      "turn_card": "Ks",
+      "category": "pair",
+      "file": "turn_cbet_102_KT5r_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KT5r_8s",
+      "board_label": "KT5r",
+      "flop_cards": [
+        "Kc",
+        "Td",
+        "5s"
+      ],
+      "turn_card": "8s",
+      "category": "connector",
+      "file": "turn_cbet_102_KT5r_8s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KT5r_Ac",
+      "board_label": "KT5r",
+      "flop_cards": [
+        "Kc",
+        "Td",
+        "5s"
+      ],
+      "turn_card": "Ac",
+      "category": "overcard",
+      "file": "turn_cbet_102_KT5r_Ac.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KT5r_2c",
+      "board_label": "KT5r",
+      "flop_cards": [
+        "Kc",
+        "Td",
+        "5s"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_KT5r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KT5r_5c",
+      "board_label": "KT5r",
+      "flop_cards": [
+        "Kc",
+        "Td",
+        "5s"
+      ],
+      "turn_card": "5c",
+      "category": "pair",
+      "file": "turn_cbet_102_KT5r_5c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KT5r_7c",
+      "board_label": "KT5r",
+      "flop_cards": [
+        "Kc",
+        "Td",
+        "5s"
+      ],
+      "turn_card": "7c",
+      "category": "connector",
+      "file": "turn_cbet_102_KT5r_7c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KT5r_3c",
+      "board_label": "KT5r",
+      "flop_cards": [
+        "Kc",
+        "Td",
+        "5s"
+      ],
+      "turn_card": "3c",
+      "category": "blank",
+      "file": "turn_cbet_102_KT5r_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J75r_As",
+      "board_label": "J75r",
+      "flop_cards": [
+        "Jc",
+        "7d",
+        "5s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_J75r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J75r_6s",
+      "board_label": "J75r",
+      "flop_cards": [
+        "Jc",
+        "7d",
+        "5s"
+      ],
+      "turn_card": "6s",
+      "category": "blank",
+      "file": "turn_cbet_102_J75r_6s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J75r_Js",
+      "board_label": "J75r",
+      "flop_cards": [
+        "Jc",
+        "7d",
+        "5s"
+      ],
+      "turn_card": "Js",
+      "category": "pair",
+      "file": "turn_cbet_102_J75r_Js.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J75r_Ts",
+      "board_label": "J75r",
+      "flop_cards": [
+        "Jc",
+        "7d",
+        "5s"
+      ],
+      "turn_card": "Ts",
+      "category": "connector",
+      "file": "turn_cbet_102_J75r_Ts.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J75r_Qc",
+      "board_label": "J75r",
+      "flop_cards": [
+        "Jc",
+        "7d",
+        "5s"
+      ],
+      "turn_card": "Qc",
+      "category": "overcard",
+      "file": "turn_cbet_102_J75r_Qc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J75r_2c",
+      "board_label": "J75r",
+      "flop_cards": [
+        "Jc",
+        "7d",
+        "5s"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_J75r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J75r_5c",
+      "board_label": "J75r",
+      "flop_cards": [
+        "Jc",
+        "7d",
+        "5s"
+      ],
+      "turn_card": "5c",
+      "category": "pair",
+      "file": "turn_cbet_102_J75r_5c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J75r_8c",
+      "board_label": "J75r",
+      "flop_cards": [
+        "Jc",
+        "7d",
+        "5s"
+      ],
+      "turn_card": "8c",
+      "category": "connector",
+      "file": "turn_cbet_102_J75r_8c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J75r_Ks",
+      "board_label": "J75r",
+      "flop_cards": [
+        "Jc",
+        "7d",
+        "5s"
+      ],
+      "turn_card": "Ks",
+      "category": "overcard",
+      "file": "turn_cbet_102_J75r_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q83ss_As",
+      "board_label": "Q83ss",
+      "flop_cards": [
+        "Qs",
+        "8s",
+        "3h"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_Q83ss_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q83ss_Jh",
+      "board_label": "Q83ss",
+      "flop_cards": [
+        "Qs",
+        "8s",
+        "3h"
+      ],
+      "turn_card": "Jh",
+      "category": "blank",
+      "file": "turn_cbet_102_Q83ss_Jh.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q83ss_Qh",
+      "board_label": "Q83ss",
+      "flop_cards": [
+        "Qs",
+        "8s",
+        "3h"
+      ],
+      "turn_card": "Qh",
+      "category": "pair",
+      "file": "turn_cbet_102_Q83ss_Qh.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q83ss_Js",
+      "board_label": "Q83ss",
+      "flop_cards": [
+        "Qs",
+        "8s",
+        "3h"
+      ],
+      "turn_card": "Js",
+      "category": "flush",
+      "file": "turn_cbet_102_Q83ss_Js.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q83ss_Kc",
+      "board_label": "Q83ss",
+      "flop_cards": [
+        "Qs",
+        "8s",
+        "3h"
+      ],
+      "turn_card": "Kc",
+      "category": "overcard",
+      "file": "turn_cbet_102_Q83ss_Kc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q83ss_2c",
+      "board_label": "Q83ss",
+      "flop_cards": [
+        "Qs",
+        "8s",
+        "3h"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_Q83ss_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q83ss_3c",
+      "board_label": "Q83ss",
+      "flop_cards": [
+        "Qs",
+        "8s",
+        "3h"
+      ],
+      "turn_card": "3c",
+      "category": "pair",
+      "file": "turn_cbet_102_Q83ss_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q83ss_Th",
+      "board_label": "Q83ss",
+      "flop_cards": [
+        "Qs",
+        "8s",
+        "3h"
+      ],
+      "turn_card": "Th",
+      "category": "blank",
+      "file": "turn_cbet_102_Q83ss_Th.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_Q83ss_Td",
+      "board_label": "Q83ss",
+      "flop_cards": [
+        "Qs",
+        "8s",
+        "3h"
+      ],
+      "turn_card": "Td",
+      "category": "blank",
+      "file": "turn_cbet_102_Q83ss_Td.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AT7ss_9h",
+      "board_label": "AT7ss",
+      "flop_cards": [
+        "As",
+        "Ts",
+        "7h"
+      ],
+      "turn_card": "9h",
+      "category": "blank",
+      "file": "turn_cbet_102_AT7ss_9h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AT7ss_Ah",
+      "board_label": "AT7ss",
+      "flop_cards": [
+        "As",
+        "Ts",
+        "7h"
+      ],
+      "turn_card": "Ah",
+      "category": "pair",
+      "file": "turn_cbet_102_AT7ss_Ah.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AT7ss_Ks",
+      "board_label": "AT7ss",
+      "flop_cards": [
+        "As",
+        "Ts",
+        "7h"
+      ],
+      "turn_card": "Ks",
+      "category": "flush",
+      "file": "turn_cbet_102_AT7ss_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AT7ss_Kh",
+      "board_label": "AT7ss",
+      "flop_cards": [
+        "As",
+        "Ts",
+        "7h"
+      ],
+      "turn_card": "Kh",
+      "category": "connector",
+      "file": "turn_cbet_102_AT7ss_Kh.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AT7ss_2c",
+      "board_label": "AT7ss",
+      "flop_cards": [
+        "As",
+        "Ts",
+        "7h"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_AT7ss_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AT7ss_7c",
+      "board_label": "AT7ss",
+      "flop_cards": [
+        "As",
+        "Ts",
+        "7h"
+      ],
+      "turn_card": "7c",
+      "category": "pair",
+      "file": "turn_cbet_102_AT7ss_7c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AT7ss_Jc",
+      "board_label": "AT7ss",
+      "flop_cards": [
+        "As",
+        "Ts",
+        "7h"
+      ],
+      "turn_card": "Jc",
+      "category": "connector",
+      "file": "turn_cbet_102_AT7ss_Jc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AT7ss_3c",
+      "board_label": "AT7ss",
+      "flop_cards": [
+        "As",
+        "Ts",
+        "7h"
+      ],
+      "turn_card": "3c",
+      "category": "blank",
+      "file": "turn_cbet_102_AT7ss_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AT7ss_3d",
+      "board_label": "AT7ss",
+      "flop_cards": [
+        "As",
+        "Ts",
+        "7h"
+      ],
+      "turn_card": "3d",
+      "category": "blank",
+      "file": "turn_cbet_102_AT7ss_3d.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J84ss_As",
+      "board_label": "J84ss",
+      "flop_cards": [
+        "Js",
+        "8s",
+        "4h"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_J84ss_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J84ss_Th",
+      "board_label": "J84ss",
+      "flop_cards": [
+        "Js",
+        "8s",
+        "4h"
+      ],
+      "turn_card": "Th",
+      "category": "blank",
+      "file": "turn_cbet_102_J84ss_Th.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J84ss_Jh",
+      "board_label": "J84ss",
+      "flop_cards": [
+        "Js",
+        "8s",
+        "4h"
+      ],
+      "turn_card": "Jh",
+      "category": "pair",
+      "file": "turn_cbet_102_J84ss_Jh.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J84ss_Ts",
+      "board_label": "J84ss",
+      "flop_cards": [
+        "Js",
+        "8s",
+        "4h"
+      ],
+      "turn_card": "Ts",
+      "category": "flush",
+      "file": "turn_cbet_102_J84ss_Ts.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J84ss_7h",
+      "board_label": "J84ss",
+      "flop_cards": [
+        "Js",
+        "8s",
+        "4h"
+      ],
+      "turn_card": "7h",
+      "category": "connector",
+      "file": "turn_cbet_102_J84ss_7h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J84ss_Qc",
+      "board_label": "J84ss",
+      "flop_cards": [
+        "Js",
+        "8s",
+        "4h"
+      ],
+      "turn_card": "Qc",
+      "category": "overcard",
+      "file": "turn_cbet_102_J84ss_Qc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J84ss_2c",
+      "board_label": "J84ss",
+      "flop_cards": [
+        "Js",
+        "8s",
+        "4h"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_J84ss_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J84ss_4c",
+      "board_label": "J84ss",
+      "flop_cards": [
+        "Js",
+        "8s",
+        "4h"
+      ],
+      "turn_card": "4c",
+      "category": "pair",
+      "file": "turn_cbet_102_J84ss_4c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_J84ss_5c",
+      "board_label": "J84ss",
+      "flop_cards": [
+        "Js",
+        "8s",
+        "4h"
+      ],
+      "turn_card": "5c",
+      "category": "connector",
+      "file": "turn_cbet_102_J84ss_5c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_QJ9r_As",
+      "board_label": "QJ9r",
+      "flop_cards": [
+        "Qc",
+        "Jd",
+        "9s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_QJ9r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_QJ9r_6s",
+      "board_label": "QJ9r",
+      "flop_cards": [
+        "Qc",
+        "Jd",
+        "9s"
+      ],
+      "turn_card": "6s",
+      "category": "blank",
+      "file": "turn_cbet_102_QJ9r_6s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_QJ9r_Qs",
+      "board_label": "QJ9r",
+      "flop_cards": [
+        "Qc",
+        "Jd",
+        "9s"
+      ],
+      "turn_card": "Qs",
+      "category": "pair",
+      "file": "turn_cbet_102_QJ9r_Qs.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_QJ9r_Ts",
+      "board_label": "QJ9r",
+      "flop_cards": [
+        "Qc",
+        "Jd",
+        "9s"
+      ],
+      "turn_card": "Ts",
+      "category": "connector",
+      "file": "turn_cbet_102_QJ9r_Ts.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_QJ9r_Kc",
+      "board_label": "QJ9r",
+      "flop_cards": [
+        "Qc",
+        "Jd",
+        "9s"
+      ],
+      "turn_card": "Kc",
+      "category": "overcard",
+      "file": "turn_cbet_102_QJ9r_Kc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_QJ9r_2c",
+      "board_label": "QJ9r",
+      "flop_cards": [
+        "Qc",
+        "Jd",
+        "9s"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_QJ9r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_QJ9r_9c",
+      "board_label": "QJ9r",
+      "flop_cards": [
+        "Qc",
+        "Jd",
+        "9s"
+      ],
+      "turn_card": "9c",
+      "category": "pair",
+      "file": "turn_cbet_102_QJ9r_9c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_QJ9r_7c",
+      "board_label": "QJ9r",
+      "flop_cards": [
+        "Qc",
+        "Jd",
+        "9s"
+      ],
+      "turn_card": "7c",
+      "category": "connector",
+      "file": "turn_cbet_102_QJ9r_7c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_QJ9r_3c",
+      "board_label": "QJ9r",
+      "flop_cards": [
+        "Qc",
+        "Jd",
+        "9s"
+      ],
+      "turn_card": "3c",
+      "category": "blank",
+      "file": "turn_cbet_102_QJ9r_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T87r_As",
+      "board_label": "T87r",
+      "flop_cards": [
+        "Tc",
+        "8d",
+        "7s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_T87r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T87r_4s",
+      "board_label": "T87r",
+      "flop_cards": [
+        "Tc",
+        "8d",
+        "7s"
+      ],
+      "turn_card": "4s",
+      "category": "blank",
+      "file": "turn_cbet_102_T87r_4s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T87r_Ts",
+      "board_label": "T87r",
+      "flop_cards": [
+        "Tc",
+        "8d",
+        "7s"
+      ],
+      "turn_card": "Ts",
+      "category": "pair",
+      "file": "turn_cbet_102_T87r_Ts.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T87r_9s",
+      "board_label": "T87r",
+      "flop_cards": [
+        "Tc",
+        "8d",
+        "7s"
+      ],
+      "turn_card": "9s",
+      "category": "connector",
+      "file": "turn_cbet_102_T87r_9s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T87r_Jc",
+      "board_label": "T87r",
+      "flop_cards": [
+        "Tc",
+        "8d",
+        "7s"
+      ],
+      "turn_card": "Jc",
+      "category": "overcard",
+      "file": "turn_cbet_102_T87r_Jc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T87r_2c",
+      "board_label": "T87r",
+      "flop_cards": [
+        "Tc",
+        "8d",
+        "7s"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_T87r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T87r_7c",
+      "board_label": "T87r",
+      "flop_cards": [
+        "Tc",
+        "8d",
+        "7s"
+      ],
+      "turn_card": "7c",
+      "category": "pair",
+      "file": "turn_cbet_102_T87r_7c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T87r_5c",
+      "board_label": "T87r",
+      "flop_cards": [
+        "Tc",
+        "8d",
+        "7s"
+      ],
+      "turn_card": "5c",
+      "category": "connector",
+      "file": "turn_cbet_102_T87r_5c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T87r_3s",
+      "board_label": "T87r",
+      "flop_cards": [
+        "Tc",
+        "8d",
+        "7s"
+      ],
+      "turn_card": "3s",
+      "category": "blank",
+      "file": "turn_cbet_102_T87r_3s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_876r_As",
+      "board_label": "876r",
+      "flop_cards": [
+        "8c",
+        "7d",
+        "6s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_876r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_876r_3s",
+      "board_label": "876r",
+      "flop_cards": [
+        "8c",
+        "7d",
+        "6s"
+      ],
+      "turn_card": "3s",
+      "category": "blank",
+      "file": "turn_cbet_102_876r_3s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_876r_8s",
+      "board_label": "876r",
+      "flop_cards": [
+        "8c",
+        "7d",
+        "6s"
+      ],
+      "turn_card": "8s",
+      "category": "pair",
+      "file": "turn_cbet_102_876r_8s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_876r_5s",
+      "board_label": "876r",
+      "flop_cards": [
+        "8c",
+        "7d",
+        "6s"
+      ],
+      "turn_card": "5s",
+      "category": "connector",
+      "file": "turn_cbet_102_876r_5s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_876r_9c",
+      "board_label": "876r",
+      "flop_cards": [
+        "8c",
+        "7d",
+        "6s"
+      ],
+      "turn_card": "9c",
+      "category": "overcard",
+      "file": "turn_cbet_102_876r_9c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_876r_2c",
+      "board_label": "876r",
+      "flop_cards": [
+        "8c",
+        "7d",
+        "6s"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_876r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_876r_6c",
+      "board_label": "876r",
+      "flop_cards": [
+        "8c",
+        "7d",
+        "6s"
+      ],
+      "turn_card": "6c",
+      "category": "pair",
+      "file": "turn_cbet_102_876r_6c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_876r_4c",
+      "board_label": "876r",
+      "flop_cards": [
+        "8c",
+        "7d",
+        "6s"
+      ],
+      "turn_card": "4c",
+      "category": "connector",
+      "file": "turn_cbet_102_876r_4c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_876r_Ks",
+      "board_label": "876r",
+      "flop_cards": [
+        "8c",
+        "7d",
+        "6s"
+      ],
+      "turn_card": "Ks",
+      "category": "overcard",
+      "file": "turn_cbet_102_876r_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987ss_As",
+      "board_label": "987ss",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7h"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_987ss_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987ss_4h",
+      "board_label": "987ss",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7h"
+      ],
+      "turn_card": "4h",
+      "category": "blank",
+      "file": "turn_cbet_102_987ss_4h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987ss_9h",
+      "board_label": "987ss",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7h"
+      ],
+      "turn_card": "9h",
+      "category": "pair",
+      "file": "turn_cbet_102_987ss_9h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987ss_6s",
+      "board_label": "987ss",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7h"
+      ],
+      "turn_card": "6s",
+      "category": "flush",
+      "file": "turn_cbet_102_987ss_6s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987ss_6h",
+      "board_label": "987ss",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7h"
+      ],
+      "turn_card": "6h",
+      "category": "connector",
+      "file": "turn_cbet_102_987ss_6h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987ss_Tc",
+      "board_label": "987ss",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7h"
+      ],
+      "turn_card": "Tc",
+      "category": "overcard",
+      "file": "turn_cbet_102_987ss_Tc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987ss_2c",
+      "board_label": "987ss",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7h"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_987ss_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987ss_7c",
+      "board_label": "987ss",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7h"
+      ],
+      "turn_card": "7c",
+      "category": "pair",
+      "file": "turn_cbet_102_987ss_7c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987ss_5c",
+      "board_label": "987ss",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7h"
+      ],
+      "turn_card": "5c",
+      "category": "connector",
+      "file": "turn_cbet_102_987ss_5c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT9ss_As",
+      "board_label": "JT9ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "9h"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_JT9ss_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT9ss_6h",
+      "board_label": "JT9ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "9h"
+      ],
+      "turn_card": "6h",
+      "category": "blank",
+      "file": "turn_cbet_102_JT9ss_6h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT9ss_Jh",
+      "board_label": "JT9ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "9h"
+      ],
+      "turn_card": "Jh",
+      "category": "pair",
+      "file": "turn_cbet_102_JT9ss_Jh.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT9ss_8s",
+      "board_label": "JT9ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "9h"
+      ],
+      "turn_card": "8s",
+      "category": "flush",
+      "file": "turn_cbet_102_JT9ss_8s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT9ss_8h",
+      "board_label": "JT9ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "9h"
+      ],
+      "turn_card": "8h",
+      "category": "connector",
+      "file": "turn_cbet_102_JT9ss_8h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT9ss_Qc",
+      "board_label": "JT9ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "9h"
+      ],
+      "turn_card": "Qc",
+      "category": "overcard",
+      "file": "turn_cbet_102_JT9ss_Qc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT9ss_2c",
+      "board_label": "JT9ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "9h"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_JT9ss_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT9ss_9c",
+      "board_label": "JT9ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "9h"
+      ],
+      "turn_card": "9c",
+      "category": "pair",
+      "file": "turn_cbet_102_JT9ss_9c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT9ss_7c",
+      "board_label": "JT9ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "9h"
+      ],
+      "turn_card": "7c",
+      "category": "connector",
+      "file": "turn_cbet_102_JT9ss_7c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987mono_As",
+      "board_label": "987mono",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_987mono_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987mono_4h",
+      "board_label": "987mono",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7s"
+      ],
+      "turn_card": "4h",
+      "category": "blank",
+      "file": "turn_cbet_102_987mono_4h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987mono_9h",
+      "board_label": "987mono",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7s"
+      ],
+      "turn_card": "9h",
+      "category": "pair",
+      "file": "turn_cbet_102_987mono_9h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987mono_6s",
+      "board_label": "987mono",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7s"
+      ],
+      "turn_card": "6s",
+      "category": "flush",
+      "file": "turn_cbet_102_987mono_6s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987mono_6h",
+      "board_label": "987mono",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7s"
+      ],
+      "turn_card": "6h",
+      "category": "connector",
+      "file": "turn_cbet_102_987mono_6h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987mono_Tc",
+      "board_label": "987mono",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7s"
+      ],
+      "turn_card": "Tc",
+      "category": "overcard",
+      "file": "turn_cbet_102_987mono_Tc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987mono_2c",
+      "board_label": "987mono",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7s"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_987mono_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987mono_7c",
+      "board_label": "987mono",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7s"
+      ],
+      "turn_card": "7c",
+      "category": "pair",
+      "file": "turn_cbet_102_987mono_7c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_987mono_5c",
+      "board_label": "987mono",
+      "flop_cards": [
+        "9s",
+        "8s",
+        "7s"
+      ],
+      "turn_card": "5c",
+      "category": "connector",
+      "file": "turn_cbet_102_987mono_5c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KQTss_As",
+      "board_label": "KQTss",
+      "flop_cards": [
+        "Ks",
+        "Qs",
+        "Th"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_KQTss_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KQTss_7h",
+      "board_label": "KQTss",
+      "flop_cards": [
+        "Ks",
+        "Qs",
+        "Th"
+      ],
+      "turn_card": "7h",
+      "category": "blank",
+      "file": "turn_cbet_102_KQTss_7h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KQTss_Kh",
+      "board_label": "KQTss",
+      "flop_cards": [
+        "Ks",
+        "Qs",
+        "Th"
+      ],
+      "turn_card": "Kh",
+      "category": "pair",
+      "file": "turn_cbet_102_KQTss_Kh.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KQTss_Js",
+      "board_label": "KQTss",
+      "flop_cards": [
+        "Ks",
+        "Qs",
+        "Th"
+      ],
+      "turn_card": "Js",
+      "category": "flush",
+      "file": "turn_cbet_102_KQTss_Js.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KQTss_Jh",
+      "board_label": "KQTss",
+      "flop_cards": [
+        "Ks",
+        "Qs",
+        "Th"
+      ],
+      "turn_card": "Jh",
+      "category": "connector",
+      "file": "turn_cbet_102_KQTss_Jh.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KQTss_Ac",
+      "board_label": "KQTss",
+      "flop_cards": [
+        "Ks",
+        "Qs",
+        "Th"
+      ],
+      "turn_card": "Ac",
+      "category": "overcard",
+      "file": "turn_cbet_102_KQTss_Ac.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KQTss_2c",
+      "board_label": "KQTss",
+      "flop_cards": [
+        "Ks",
+        "Qs",
+        "Th"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_KQTss_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KQTss_Tc",
+      "board_label": "KQTss",
+      "flop_cards": [
+        "Ks",
+        "Qs",
+        "Th"
+      ],
+      "turn_card": "Tc",
+      "category": "pair",
+      "file": "turn_cbet_102_KQTss_Tc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KQTss_8c",
+      "board_label": "KQTss",
+      "flop_cards": [
+        "Ks",
+        "Qs",
+        "Th"
+      ],
+      "turn_card": "8c",
+      "category": "connector",
+      "file": "turn_cbet_102_KQTss_8c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AKQmono_9h",
+      "board_label": "AKQmono",
+      "flop_cards": [
+        "As",
+        "Ks",
+        "Qs"
+      ],
+      "turn_card": "9h",
+      "category": "blank",
+      "file": "turn_cbet_102_AKQmono_9h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AKQmono_Ah",
+      "board_label": "AKQmono",
+      "flop_cards": [
+        "As",
+        "Ks",
+        "Qs"
+      ],
+      "turn_card": "Ah",
+      "category": "pair",
+      "file": "turn_cbet_102_AKQmono_Ah.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AKQmono_Js",
+      "board_label": "AKQmono",
+      "flop_cards": [
+        "As",
+        "Ks",
+        "Qs"
+      ],
+      "turn_card": "Js",
+      "category": "flush",
+      "file": "turn_cbet_102_AKQmono_Js.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AKQmono_Jh",
+      "board_label": "AKQmono",
+      "flop_cards": [
+        "As",
+        "Ks",
+        "Qs"
+      ],
+      "turn_card": "Jh",
+      "category": "connector",
+      "file": "turn_cbet_102_AKQmono_Jh.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AKQmono_2c",
+      "board_label": "AKQmono",
+      "flop_cards": [
+        "As",
+        "Ks",
+        "Qs"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_AKQmono_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AKQmono_Qc",
+      "board_label": "AKQmono",
+      "flop_cards": [
+        "As",
+        "Ks",
+        "Qs"
+      ],
+      "turn_card": "Qc",
+      "category": "pair",
+      "file": "turn_cbet_102_AKQmono_Qc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AKQmono_Tc",
+      "board_label": "AKQmono",
+      "flop_cards": [
+        "As",
+        "Ks",
+        "Qs"
+      ],
+      "turn_card": "Tc",
+      "category": "connector",
+      "file": "turn_cbet_102_AKQmono_Tc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AKQmono_3c",
+      "board_label": "AKQmono",
+      "flop_cards": [
+        "As",
+        "Ks",
+        "Qs"
+      ],
+      "turn_card": "3c",
+      "category": "blank",
+      "file": "turn_cbet_102_AKQmono_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AKQmono_3d",
+      "board_label": "AKQmono",
+      "flop_cards": [
+        "As",
+        "Ks",
+        "Qs"
+      ],
+      "turn_card": "3d",
+      "category": "blank",
+      "file": "turn_cbet_102_AKQmono_3d.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT8ss_As",
+      "board_label": "JT8ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "8h"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_JT8ss_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT8ss_5h",
+      "board_label": "JT8ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "8h"
+      ],
+      "turn_card": "5h",
+      "category": "blank",
+      "file": "turn_cbet_102_JT8ss_5h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT8ss_Jh",
+      "board_label": "JT8ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "8h"
+      ],
+      "turn_card": "Jh",
+      "category": "pair",
+      "file": "turn_cbet_102_JT8ss_Jh.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT8ss_9s",
+      "board_label": "JT8ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "8h"
+      ],
+      "turn_card": "9s",
+      "category": "flush",
+      "file": "turn_cbet_102_JT8ss_9s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT8ss_9h",
+      "board_label": "JT8ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "8h"
+      ],
+      "turn_card": "9h",
+      "category": "connector",
+      "file": "turn_cbet_102_JT8ss_9h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT8ss_Qc",
+      "board_label": "JT8ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "8h"
+      ],
+      "turn_card": "Qc",
+      "category": "overcard",
+      "file": "turn_cbet_102_JT8ss_Qc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT8ss_2c",
+      "board_label": "JT8ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "8h"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_JT8ss_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT8ss_8c",
+      "board_label": "JT8ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "8h"
+      ],
+      "turn_card": "8c",
+      "category": "pair",
+      "file": "turn_cbet_102_JT8ss_8c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_JT8ss_6c",
+      "board_label": "JT8ss",
+      "flop_cards": [
+        "Js",
+        "Ts",
+        "8h"
+      ],
+      "turn_card": "6c",
+      "category": "connector",
+      "file": "turn_cbet_102_JT8ss_6c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98r_As",
+      "board_label": "T98r",
+      "flop_cards": [
+        "Tc",
+        "9d",
+        "8s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_T98r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98r_5s",
+      "board_label": "T98r",
+      "flop_cards": [
+        "Tc",
+        "9d",
+        "8s"
+      ],
+      "turn_card": "5s",
+      "category": "blank",
+      "file": "turn_cbet_102_T98r_5s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98r_Ts",
+      "board_label": "T98r",
+      "flop_cards": [
+        "Tc",
+        "9d",
+        "8s"
+      ],
+      "turn_card": "Ts",
+      "category": "pair",
+      "file": "turn_cbet_102_T98r_Ts.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98r_7s",
+      "board_label": "T98r",
+      "flop_cards": [
+        "Tc",
+        "9d",
+        "8s"
+      ],
+      "turn_card": "7s",
+      "category": "connector",
+      "file": "turn_cbet_102_T98r_7s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98r_Jc",
+      "board_label": "T98r",
+      "flop_cards": [
+        "Tc",
+        "9d",
+        "8s"
+      ],
+      "turn_card": "Jc",
+      "category": "overcard",
+      "file": "turn_cbet_102_T98r_Jc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98r_2c",
+      "board_label": "T98r",
+      "flop_cards": [
+        "Tc",
+        "9d",
+        "8s"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_T98r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98r_8c",
+      "board_label": "T98r",
+      "flop_cards": [
+        "Tc",
+        "9d",
+        "8s"
+      ],
+      "turn_card": "8c",
+      "category": "pair",
+      "file": "turn_cbet_102_T98r_8c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98r_6c",
+      "board_label": "T98r",
+      "flop_cards": [
+        "Tc",
+        "9d",
+        "8s"
+      ],
+      "turn_card": "6c",
+      "category": "connector",
+      "file": "turn_cbet_102_T98r_6c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98r_3c",
+      "board_label": "T98r",
+      "flop_cards": [
+        "Tc",
+        "9d",
+        "8s"
+      ],
+      "turn_card": "3c",
+      "category": "blank",
+      "file": "turn_cbet_102_T98r_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98ss_As",
+      "board_label": "T98ss",
+      "flop_cards": [
+        "Ts",
+        "9s",
+        "8h"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_T98ss_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98ss_5h",
+      "board_label": "T98ss",
+      "flop_cards": [
+        "Ts",
+        "9s",
+        "8h"
+      ],
+      "turn_card": "5h",
+      "category": "blank",
+      "file": "turn_cbet_102_T98ss_5h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98ss_Th",
+      "board_label": "T98ss",
+      "flop_cards": [
+        "Ts",
+        "9s",
+        "8h"
+      ],
+      "turn_card": "Th",
+      "category": "pair",
+      "file": "turn_cbet_102_T98ss_Th.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98ss_7s",
+      "board_label": "T98ss",
+      "flop_cards": [
+        "Ts",
+        "9s",
+        "8h"
+      ],
+      "turn_card": "7s",
+      "category": "flush",
+      "file": "turn_cbet_102_T98ss_7s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98ss_7h",
+      "board_label": "T98ss",
+      "flop_cards": [
+        "Ts",
+        "9s",
+        "8h"
+      ],
+      "turn_card": "7h",
+      "category": "connector",
+      "file": "turn_cbet_102_T98ss_7h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98ss_Jc",
+      "board_label": "T98ss",
+      "flop_cards": [
+        "Ts",
+        "9s",
+        "8h"
+      ],
+      "turn_card": "Jc",
+      "category": "overcard",
+      "file": "turn_cbet_102_T98ss_Jc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98ss_2c",
+      "board_label": "T98ss",
+      "flop_cards": [
+        "Ts",
+        "9s",
+        "8h"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_T98ss_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98ss_8c",
+      "board_label": "T98ss",
+      "flop_cards": [
+        "Ts",
+        "9s",
+        "8h"
+      ],
+      "turn_card": "8c",
+      "category": "pair",
+      "file": "turn_cbet_102_T98ss_8c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_T98ss_6c",
+      "board_label": "T98ss",
+      "flop_cards": [
+        "Ts",
+        "9s",
+        "8h"
+      ],
+      "turn_card": "6c",
+      "category": "connector",
+      "file": "turn_cbet_102_T98ss_6c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_772_As",
+      "board_label": "772",
+      "flop_cards": [
+        "7c",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_772_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_772_6s",
+      "board_label": "772",
+      "flop_cards": [
+        "7c",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "6s",
+      "category": "blank",
+      "file": "turn_cbet_102_772_6s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_772_7s",
+      "board_label": "772",
+      "flop_cards": [
+        "7c",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "7s",
+      "category": "pair",
+      "file": "turn_cbet_102_772_7s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_772_5s",
+      "board_label": "772",
+      "flop_cards": [
+        "7c",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "5s",
+      "category": "connector",
+      "file": "turn_cbet_102_772_5s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_772_8c",
+      "board_label": "772",
+      "flop_cards": [
+        "7c",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "8c",
+      "category": "overcard",
+      "file": "turn_cbet_102_772_8c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_772_3c",
+      "board_label": "772",
+      "flop_cards": [
+        "7c",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "3c",
+      "category": "blank",
+      "file": "turn_cbet_102_772_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_772_2c",
+      "board_label": "772",
+      "flop_cards": [
+        "7c",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "2c",
+      "category": "pair",
+      "file": "turn_cbet_102_772_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_772_4c",
+      "board_label": "772",
+      "flop_cards": [
+        "7c",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "4c",
+      "category": "connector",
+      "file": "turn_cbet_102_772_4c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_772_Ks",
+      "board_label": "772",
+      "flop_cards": [
+        "7c",
+        "7d",
+        "2s"
+      ],
+      "turn_card": "Ks",
+      "category": "overcard",
+      "file": "turn_cbet_102_772_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AAK_Ts",
+      "board_label": "AAK",
+      "flop_cards": [
+        "Ac",
+        "Ad",
+        "Ks"
+      ],
+      "turn_card": "Ts",
+      "category": "blank",
+      "file": "turn_cbet_102_AAK_Ts.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AAK_As",
+      "board_label": "AAK",
+      "flop_cards": [
+        "Ac",
+        "Ad",
+        "Ks"
+      ],
+      "turn_card": "As",
+      "category": "pair",
+      "file": "turn_cbet_102_AAK_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AAK_Qs",
+      "board_label": "AAK",
+      "flop_cards": [
+        "Ac",
+        "Ad",
+        "Ks"
+      ],
+      "turn_card": "Qs",
+      "category": "connector",
+      "file": "turn_cbet_102_AAK_Qs.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AAK_2c",
+      "board_label": "AAK",
+      "flop_cards": [
+        "Ac",
+        "Ad",
+        "Ks"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_AAK_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AAK_Kc",
+      "board_label": "AAK",
+      "flop_cards": [
+        "Ac",
+        "Ad",
+        "Ks"
+      ],
+      "turn_card": "Kc",
+      "category": "pair",
+      "file": "turn_cbet_102_AAK_Kc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AAK_Jc",
+      "board_label": "AAK",
+      "flop_cards": [
+        "Ac",
+        "Ad",
+        "Ks"
+      ],
+      "turn_card": "Jc",
+      "category": "connector",
+      "file": "turn_cbet_102_AAK_Jc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AAK_3c",
+      "board_label": "AAK",
+      "flop_cards": [
+        "Ac",
+        "Ad",
+        "Ks"
+      ],
+      "turn_card": "3c",
+      "category": "blank",
+      "file": "turn_cbet_102_AAK_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AAK_3d",
+      "board_label": "AAK",
+      "flop_cards": [
+        "Ac",
+        "Ad",
+        "Ks"
+      ],
+      "turn_card": "3d",
+      "category": "blank",
+      "file": "turn_cbet_102_AAK_3d.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_AAK_3h",
+      "board_label": "AAK",
+      "flop_cards": [
+        "Ac",
+        "Ad",
+        "Ks"
+      ],
+      "turn_card": "3h",
+      "category": "blank",
+      "file": "turn_cbet_102_AAK_3h.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KK9_As",
+      "board_label": "KK9",
+      "flop_cards": [
+        "Kc",
+        "Kd",
+        "9s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_KK9_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KK9_8s",
+      "board_label": "KK9",
+      "flop_cards": [
+        "Kc",
+        "Kd",
+        "9s"
+      ],
+      "turn_card": "8s",
+      "category": "blank",
+      "file": "turn_cbet_102_KK9_8s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KK9_Ks",
+      "board_label": "KK9",
+      "flop_cards": [
+        "Kc",
+        "Kd",
+        "9s"
+      ],
+      "turn_card": "Ks",
+      "category": "pair",
+      "file": "turn_cbet_102_KK9_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KK9_Qs",
+      "board_label": "KK9",
+      "flop_cards": [
+        "Kc",
+        "Kd",
+        "9s"
+      ],
+      "turn_card": "Qs",
+      "category": "connector",
+      "file": "turn_cbet_102_KK9_Qs.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KK9_Ac",
+      "board_label": "KK9",
+      "flop_cards": [
+        "Kc",
+        "Kd",
+        "9s"
+      ],
+      "turn_card": "Ac",
+      "category": "overcard",
+      "file": "turn_cbet_102_KK9_Ac.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KK9_2c",
+      "board_label": "KK9",
+      "flop_cards": [
+        "Kc",
+        "Kd",
+        "9s"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_KK9_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KK9_9c",
+      "board_label": "KK9",
+      "flop_cards": [
+        "Kc",
+        "Kd",
+        "9s"
+      ],
+      "turn_card": "9c",
+      "category": "pair",
+      "file": "turn_cbet_102_KK9_9c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KK9_Tc",
+      "board_label": "KK9",
+      "flop_cards": [
+        "Kc",
+        "Kd",
+        "9s"
+      ],
+      "turn_card": "Tc",
+      "category": "connector",
+      "file": "turn_cbet_102_KK9_Tc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_KK9_3c",
+      "board_label": "KK9",
+      "flop_cards": [
+        "Kc",
+        "Kd",
+        "9s"
+      ],
+      "turn_card": "3c",
+      "category": "blank",
+      "file": "turn_cbet_102_KK9_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_965r_As",
+      "board_label": "965r",
+      "flop_cards": [
+        "9c",
+        "6d",
+        "5s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_965r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_965r_2s",
+      "board_label": "965r",
+      "flop_cards": [
+        "9c",
+        "6d",
+        "5s"
+      ],
+      "turn_card": "2s",
+      "category": "blank",
+      "file": "turn_cbet_102_965r_2s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_965r_9s",
+      "board_label": "965r",
+      "flop_cards": [
+        "9c",
+        "6d",
+        "5s"
+      ],
+      "turn_card": "9s",
+      "category": "pair",
+      "file": "turn_cbet_102_965r_9s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_965r_8s",
+      "board_label": "965r",
+      "flop_cards": [
+        "9c",
+        "6d",
+        "5s"
+      ],
+      "turn_card": "8s",
+      "category": "connector",
+      "file": "turn_cbet_102_965r_8s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_965r_Tc",
+      "board_label": "965r",
+      "flop_cards": [
+        "9c",
+        "6d",
+        "5s"
+      ],
+      "turn_card": "Tc",
+      "category": "overcard",
+      "file": "turn_cbet_102_965r_Tc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_965r_2c",
+      "board_label": "965r",
+      "flop_cards": [
+        "9c",
+        "6d",
+        "5s"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_965r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_965r_5c",
+      "board_label": "965r",
+      "flop_cards": [
+        "9c",
+        "6d",
+        "5s"
+      ],
+      "turn_card": "5c",
+      "category": "pair",
+      "file": "turn_cbet_102_965r_5c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_965r_3c",
+      "board_label": "965r",
+      "flop_cards": [
+        "9c",
+        "6d",
+        "5s"
+      ],
+      "turn_card": "3c",
+      "category": "connector",
+      "file": "turn_cbet_102_965r_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_965r_Ks",
+      "board_label": "965r",
+      "flop_cards": [
+        "9c",
+        "6d",
+        "5s"
+      ],
+      "turn_card": "Ks",
+      "category": "overcard",
+      "file": "turn_cbet_102_965r_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_632r_As",
+      "board_label": "632r",
+      "flop_cards": [
+        "6c",
+        "3d",
+        "2s"
+      ],
+      "turn_card": "As",
+      "category": "overcard",
+      "file": "turn_cbet_102_632r_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_632r_6s",
+      "board_label": "632r",
+      "flop_cards": [
+        "6c",
+        "3d",
+        "2s"
+      ],
+      "turn_card": "6s",
+      "category": "pair",
+      "file": "turn_cbet_102_632r_6s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_632r_5s",
+      "board_label": "632r",
+      "flop_cards": [
+        "6c",
+        "3d",
+        "2s"
+      ],
+      "turn_card": "5s",
+      "category": "connector",
+      "file": "turn_cbet_102_632r_5s.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_632r_7c",
+      "board_label": "632r",
+      "flop_cards": [
+        "6c",
+        "3d",
+        "2s"
+      ],
+      "turn_card": "7c",
+      "category": "overcard",
+      "file": "turn_cbet_102_632r_7c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_632r_2c",
+      "board_label": "632r",
+      "flop_cards": [
+        "6c",
+        "3d",
+        "2s"
+      ],
+      "turn_card": "2c",
+      "category": "pair",
+      "file": "turn_cbet_102_632r_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_632r_4c",
+      "board_label": "632r",
+      "flop_cards": [
+        "6c",
+        "3d",
+        "2s"
+      ],
+      "turn_card": "4c",
+      "category": "connector",
+      "file": "turn_cbet_102_632r_4c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_632r_Ks",
+      "board_label": "632r",
+      "flop_cards": [
+        "6c",
+        "3d",
+        "2s"
+      ],
+      "turn_card": "Ks",
+      "category": "overcard",
+      "file": "turn_cbet_102_632r_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_632r_Kh",
+      "board_label": "632r",
+      "flop_cards": [
+        "6c",
+        "3d",
+        "2s"
+      ],
+      "turn_card": "Kh",
+      "category": "overcard",
+      "file": "turn_cbet_102_632r_Kh.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_632r_Kd",
+      "board_label": "632r",
+      "flop_cards": [
+        "6c",
+        "3d",
+        "2s"
+      ],
+      "turn_card": "Kd",
+      "category": "overcard",
+      "file": "turn_cbet_102_632r_Kd.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A99_Ks",
+      "board_label": "A99",
+      "flop_cards": [
+        "Ac",
+        "9d",
+        "9s"
+      ],
+      "turn_card": "Ks",
+      "category": "blank",
+      "file": "turn_cbet_102_A99_Ks.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A99_As",
+      "board_label": "A99",
+      "flop_cards": [
+        "Ac",
+        "9d",
+        "9s"
+      ],
+      "turn_card": "As",
+      "category": "pair",
+      "file": "turn_cbet_102_A99_As.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A99_Qs",
+      "board_label": "A99",
+      "flop_cards": [
+        "Ac",
+        "9d",
+        "9s"
+      ],
+      "turn_card": "Qs",
+      "category": "connector",
+      "file": "turn_cbet_102_A99_Qs.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A99_2c",
+      "board_label": "A99",
+      "flop_cards": [
+        "Ac",
+        "9d",
+        "9s"
+      ],
+      "turn_card": "2c",
+      "category": "blank",
+      "file": "turn_cbet_102_A99_2c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A99_9c",
+      "board_label": "A99",
+      "flop_cards": [
+        "Ac",
+        "9d",
+        "9s"
+      ],
+      "turn_card": "9c",
+      "category": "pair",
+      "file": "turn_cbet_102_A99_9c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A99_Jc",
+      "board_label": "A99",
+      "flop_cards": [
+        "Ac",
+        "9d",
+        "9s"
+      ],
+      "turn_card": "Jc",
+      "category": "connector",
+      "file": "turn_cbet_102_A99_Jc.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A99_3c",
+      "board_label": "A99",
+      "flop_cards": [
+        "Ac",
+        "9d",
+        "9s"
+      ],
+      "turn_card": "3c",
+      "category": "blank",
+      "file": "turn_cbet_102_A99_3c.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A99_3d",
+      "board_label": "A99",
+      "flop_cards": [
+        "Ac",
+        "9d",
+        "9s"
+      ],
+      "turn_card": "3d",
+      "category": "blank",
+      "file": "turn_cbet_102_A99_3d.json"
+    },
+    {
+      "scenario_id": "turn_cbet_102_A99_3h",
+      "board_label": "A99",
+      "flop_cards": [
+        "Ac",
+        "9d",
+        "9s"
+      ],
+      "turn_card": "3h",
+      "category": "blank",
+      "file": "turn_cbet_102_A99_3h.json"
+    }
+  ]
+}

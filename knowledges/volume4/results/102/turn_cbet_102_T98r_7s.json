@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_T98r_7s",
+  "board_label": "T98r",
+  "board": [
+    "Tc",
+    "9d",
+    "8s",
+    "7s"
+  ],
+  "turn_card": "7s",
+  "category": "connector",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 61.7,
+  "exploitability_pct": 0.294,
+  "elapsed_sec": 17.4,
+  "status": "ok"
+}

@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_T98r_2c",
+  "board_label": "T98r",
+  "board": [
+    "Tc",
+    "9d",
+    "8s",
+    "2c"
+  ],
+  "turn_card": "2c",
+  "category": "blank",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 70.2,
+  "exploitability_pct": 0.333,
+  "elapsed_sec": 18.4,
+  "status": "ok"
+}

@@ -1,0 +1,28 @@
+{
+  "label": "K72r_pair",
+  "board": [
+    "Kc",
+    "7d",
+    "2s",
+    "Ks"
+  ],
+  "board_label": [
+    "Kc",
+    "7d",
+    "2s"
+  ],
+  "turn_card": "Ks",
+  "turn_category": "pair",
+  "description": "ドライ板 + ペアターン",
+  "turn_cbet_pct": 97.10548381910354,
+  "bet_size_distribution": {
+    "BET 3.000000": 57.4,
+    "BET 5.000000": 26.4,
+    "BET 8.000000": 15.3,
+    "BET 15.000000": 1.0,
+    "BET 92.000000": 0.0
+  },
+  "exploitability_pct": 0.6951785,
+  "elapsed_sec": 56.5,
+  "status": "ok"
+}

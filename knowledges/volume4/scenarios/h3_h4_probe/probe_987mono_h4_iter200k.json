@@ -1,0 +1,25 @@
+{
+  "scenario_id": "probe_987mono_h4_iter200k",
+  "description": "H4 追試: 987mono を iterations=200000 + timeout_sec=60 で再実行 (より長い収束確認)",
+  "street_to_solve": "flop",
+  "board": [
+    "9h",
+    "8h",
+    "7h"
+  ],
+  "pot_bb": 7,
+  "effective_stack_bb": 97,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 200000,
+    "timeout_sec": 60,
+    "rng_seed": 42
+  }
+}

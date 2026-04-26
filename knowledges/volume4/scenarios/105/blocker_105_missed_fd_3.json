@@ -1,0 +1,34 @@
+{
+  "scenario_id": "blocker_105_missed_fd_3",
+  "description": "[ミスド FD ブラフ] Jc9c4h + 2c + 3h (4 子クラブ完成なし, Ad spade FD)",
+  "street_to_solve": "river",
+  "board": [
+    "Jc",
+    "9c",
+    "4h",
+    "2c",
+    "3h"
+  ],
+  "pot_bb": 18,
+  "effective_stack_bb": 82,
+  "hero_position": "BTN",
+  "hero_range": {
+    "expr": "AhTh,AhQh"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.33,
+    0.5,
+    0.75,
+    1.5
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 8000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

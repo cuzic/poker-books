@@ -1,0 +1,348 @@
+{
+  "metadata": {
+    "effective_stack": 97,
+    "hero_position": "IP",
+    "hero_range_preset": "BtnOpen100bb",
+    "pot_size": 7,
+    "street": "Flop",
+    "villain_range_preset": "BbDefendVsBtn"
+  },
+  "results": [
+    {
+      "abs_error": 39.0,
+      "actual_iterations": 125398,
+      "board": "K72r",
+      "computation_time_secs": 5.000010081,
+      "error": -39.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 91,
+      "rng_seed": null,
+      "solver_cbet_pct": 52.0
+    },
+    {
+      "abs_error": 29.0,
+      "actual_iterations": 134521,
+      "board": "A72r",
+      "computation_time_secs": 5.000020107,
+      "error": -29.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 90,
+      "rng_seed": null,
+      "solver_cbet_pct": 61.0
+    },
+    {
+      "abs_error": 11.0,
+      "actual_iterations": 115064,
+      "board": "K44",
+      "computation_time_secs": 5.000020168,
+      "error": 11.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 43,
+      "rng_seed": null,
+      "solver_cbet_pct": 54.0
+    },
+    {
+      "abs_error": 33.0,
+      "actual_iterations": 119407,
+      "board": "Q53r",
+      "computation_time_secs": 5.000017675,
+      "error": -33.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 85,
+      "rng_seed": null,
+      "solver_cbet_pct": 52.0
+    },
+    {
+      "abs_error": 25.0,
+      "actual_iterations": 124472,
+      "board": "A82r",
+      "computation_time_secs": 5.000056249,
+      "error": -25.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 88,
+      "rng_seed": null,
+      "solver_cbet_pct": 63.0
+    },
+    {
+      "abs_error": 35.0,
+      "actual_iterations": 122162,
+      "board": "K83r",
+      "computation_time_secs": 5.000010756,
+      "error": -35.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 87,
+      "rng_seed": null,
+      "solver_cbet_pct": 52.0
+    },
+    {
+      "abs_error": 33.0,
+      "actual_iterations": 124642,
+      "board": "A52r",
+      "computation_time_secs": 5.000037834,
+      "error": -33.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 89,
+      "rng_seed": null,
+      "solver_cbet_pct": 56.0
+    },
+    {
+      "abs_error": 29.0,
+      "actual_iterations": 125004,
+      "board": "K95r",
+      "computation_time_secs": 5.000015814,
+      "error": -29.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 80,
+      "rng_seed": null,
+      "solver_cbet_pct": 51.0
+    },
+    {
+      "abs_error": 17.0,
+      "actual_iterations": 124328,
+      "board": "KT5r",
+      "computation_time_secs": 5.000000283,
+      "error": -17.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 70,
+      "rng_seed": null,
+      "solver_cbet_pct": 53.0
+    },
+    {
+      "abs_error": 10.0,
+      "actual_iterations": 123293,
+      "board": "J75r",
+      "computation_time_secs": 5.000013087,
+      "error": 10.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 40,
+      "rng_seed": null,
+      "solver_cbet_pct": 50.0
+    },
+    {
+      "abs_error": 8.0,
+      "actual_iterations": 112610,
+      "board": "Q83ss",
+      "computation_time_secs": 5.000002114,
+      "error": 8.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 55,
+      "rng_seed": null,
+      "solver_cbet_pct": 63.0
+    },
+    {
+      "abs_error": 5.0,
+      "actual_iterations": 113020,
+      "board": "AT7ss",
+      "computation_time_secs": 5.000009376,
+      "error": 5.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 60,
+      "rng_seed": null,
+      "solver_cbet_pct": 65.0
+    },
+    {
+      "abs_error": 13.0,
+      "actual_iterations": 108900,
+      "board": "J84ss",
+      "computation_time_secs": 5.000010816,
+      "error": 13.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 50,
+      "rng_seed": null,
+      "solver_cbet_pct": 63.0
+    },
+    {
+      "abs_error": 7.0,
+      "actual_iterations": 126615,
+      "board": "QJ9r",
+      "computation_time_secs": 5.000031606,
+      "error": 7.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 50,
+      "rng_seed": null,
+      "solver_cbet_pct": 57.0
+    },
+    {
+      "abs_error": 14.0,
+      "actual_iterations": 117178,
+      "board": "T87r",
+      "computation_time_secs": 5.000014024,
+      "error": 14.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 45,
+      "rng_seed": null,
+      "solver_cbet_pct": 59.0
+    },
+    {
+      "abs_error": 10.0,
+      "actual_iterations": 111638,
+      "board": "876r",
+      "computation_time_secs": 5.000033159,
+      "error": 10.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 42,
+      "rng_seed": null,
+      "solver_cbet_pct": 52.0
+    },
+    {
+      "abs_error": 30.0,
+      "actual_iterations": 103479,
+      "board": "987ss",
+      "computation_time_secs": 5.000040503,
+      "error": 30.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 30,
+      "rng_seed": null,
+      "solver_cbet_pct": 60.0
+    },
+    {
+      "abs_error": 38.0,
+      "actual_iterations": 111866,
+      "board": "JT9ss",
+      "computation_time_secs": 5.00004982,
+      "error": 38.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 25,
+      "rng_seed": null,
+      "solver_cbet_pct": 63.0
+    },
+    {
+      "abs_error": 33.0,
+      "actual_iterations": 120544,
+      "board": "987mono",
+      "computation_time_secs": 5.000001999,
+      "error": 33.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 20,
+      "rng_seed": null,
+      "solver_cbet_pct": 53.0
+    },
+    {
+      "abs_error": 23.0,
+      "actual_iterations": 113042,
+      "board": "KQTss",
+      "computation_time_secs": 5.000058143,
+      "error": 23.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 35,
+      "rng_seed": null,
+      "solver_cbet_pct": 58.0
+    },
+    {
+      "abs_error": 37.0,
+      "actual_iterations": 122991,
+      "board": "AKQmono",
+      "computation_time_secs": 5.00004874,
+      "error": 37.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 15,
+      "rng_seed": null,
+      "solver_cbet_pct": 52.0
+    },
+    {
+      "abs_error": 35.0,
+      "actual_iterations": 111187,
+      "board": "JT8ss",
+      "computation_time_secs": 5.000008088,
+      "error": 35.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 30,
+      "rng_seed": null,
+      "solver_cbet_pct": 65.0
+    },
+    {
+      "abs_error": 17.0,
+      "actual_iterations": 123077,
+      "board": "T98r",
+      "computation_time_secs": 5.000012502,
+      "error": 17.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 40,
+      "rng_seed": null,
+      "solver_cbet_pct": 57.0
+    },
+    {
+      "abs_error": 28.0,
+      "actual_iterations": 110789,
+      "board": "T98ss",
+      "computation_time_secs": 5.000043783,
+      "error": 28.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 35,
+      "rng_seed": null,
+      "solver_cbet_pct": 63.0
+    },
+    {
+      "abs_error": 11.0,
+      "actual_iterations": 114084,
+      "board": "772",
+      "computation_time_secs": 5.000077323,
+      "error": -11.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 70,
+      "rng_seed": null,
+      "solver_cbet_pct": 59.0
+    },
+    {
+      "abs_error": 26.0,
+      "actual_iterations": 128435,
+      "board": "AAK",
+      "computation_time_secs": 5.000020789,
+      "error": -26.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 85,
+      "rng_seed": null,
+      "solver_cbet_pct": 59.0
+    },
+    {
+      "abs_error": 25.0,
+      "actual_iterations": 118039,
+      "board": "KK9",
+      "computation_time_secs": 5.000014446,
+      "error": -25.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 80,
+      "rng_seed": null,
+      "solver_cbet_pct": 55.0
+    },
+    {
+      "abs_error": 7.0,
+      "actual_iterations": 119150,
+      "board": "965r",
+      "computation_time_secs": 5.000028346,
+      "error": -7.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 60,
+      "rng_seed": null,
+      "solver_cbet_pct": 53.0
+    },
+    {
+      "abs_error": 11.0,
+      "actual_iterations": 112192,
+      "board": "632r",
+      "computation_time_secs": 5.000027573,
+      "error": -11.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 62,
+      "rng_seed": null,
+      "solver_cbet_pct": 51.0
+    },
+    {
+      "abs_error": 8.0,
+      "actual_iterations": 128085,
+      "board": "A99",
+      "computation_time_secs": 5.000009255,
+      "error": -8.0,
+      "exploitability_bb": null,
+      "reference_cbet_pct": 78,
+      "rng_seed": null,
+      "solver_cbet_pct": 70.0
+    }
+  ],
+  "summary": {
+    "avg_abs_error_pct": 21.566666666666666,
+    "count": 30,
+    "expected_count": 30,
+    "max_abs_error_pct": 39.0
+  }
+}

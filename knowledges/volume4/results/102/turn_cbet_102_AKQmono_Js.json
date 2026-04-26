@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_AKQmono_Js",
+  "board_label": "AKQmono",
+  "board": [
+    "As",
+    "Ks",
+    "Qs",
+    "Js"
+  ],
+  "turn_card": "Js",
+  "category": "flush",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 84.2,
+  "exploitability_pct": 0.446,
+  "elapsed_sec": 17.0,
+  "status": "ok"
+}

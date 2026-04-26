@@ -1,0 +1,32 @@
+{
+  "scenario_id": "hook_108_paired_board_3",
+  "description": "[ペアボードは弱者に強い] 99 paired, low turn (street=turn, pot=20bb)",
+  "street_to_solve": "turn",
+  "board": [
+    "9c",
+    "9d",
+    "5s",
+    "3h"
+  ],
+  "pot_bb": 20,
+  "effective_stack_bb": 85,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.33,
+    0.75,
+    1.5
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 5000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

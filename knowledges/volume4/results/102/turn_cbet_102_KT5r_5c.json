@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_KT5r_5c",
+  "board_label": "KT5r",
+  "board": [
+    "Kc",
+    "Td",
+    "5s",
+    "5c"
+  ],
+  "turn_card": "5c",
+  "category": "pair",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 83.2,
+  "exploitability_pct": 0.528,
+  "elapsed_sec": 20.9,
+  "status": "ok"
+}

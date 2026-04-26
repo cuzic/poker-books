@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_J84ss_Jh",
+  "board_label": "J84ss",
+  "board": [
+    "Js",
+    "8s",
+    "4h",
+    "Jh"
+  ],
+  "turn_card": "Jh",
+  "category": "pair",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 94.3,
+  "exploitability_pct": 0.333,
+  "elapsed_sec": 18.5,
+  "status": "ok"
+}

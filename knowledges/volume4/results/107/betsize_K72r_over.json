@@ -1,0 +1,28 @@
+{
+  "label": "K72r_over",
+  "board": [
+    "Kc",
+    "7d",
+    "2s",
+    "As"
+  ],
+  "board_label": [
+    "Kc",
+    "7d",
+    "2s"
+  ],
+  "turn_card": "As",
+  "turn_category": "overcard",
+  "description": "ドライ板 + オーバーカードターン",
+  "turn_cbet_pct": 64.36344246160893,
+  "bet_size_distribution": {
+    "BET 3.000000": 38.5,
+    "BET 5.000000": 17.5,
+    "BET 8.000000": 24.6,
+    "BET 15.000000": 19.4,
+    "BET 92.000000": 0.0
+  },
+  "exploitability_pct": 0.38160652,
+  "elapsed_sec": 37.6,
+  "status": "ok"
+}

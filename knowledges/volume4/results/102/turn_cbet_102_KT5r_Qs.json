@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_KT5r_Qs",
+  "board_label": "KT5r",
+  "board": [
+    "Kc",
+    "Td",
+    "5s",
+    "Qs"
+  ],
+  "turn_card": "Qs",
+  "category": "blank",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 77.9,
+  "exploitability_pct": 0.617,
+  "elapsed_sec": 20.8,
+  "status": "ok"
+}

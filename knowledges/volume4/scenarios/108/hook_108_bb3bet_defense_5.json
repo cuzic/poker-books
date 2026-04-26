@@ -1,0 +1,31 @@
+{
+  "scenario_id": "hook_108_bb3bet_defense_5",
+  "description": "[BB 3bet 戦は SB/BTN が降りると得] T62ss (hero BB 3bet, dry mid) (street=flop, pot=15bb)",
+  "street_to_solve": "flop",
+  "board": [
+    "Td",
+    "6d",
+    "2s"
+  ],
+  "pot_bb": 15,
+  "effective_stack_bb": 85,
+  "hero_position": "BB",
+  "hero_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "villain_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "bet_sizes_to_evaluate": [
+    0.33,
+    0.75,
+    1.5
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 5000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

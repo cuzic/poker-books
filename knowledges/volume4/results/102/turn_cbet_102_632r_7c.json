@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_632r_7c",
+  "board_label": "632r",
+  "board": [
+    "6c",
+    "3d",
+    "2s",
+    "7c"
+  ],
+  "turn_card": "7c",
+  "category": "overcard",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 88.5,
+  "exploitability_pct": 0.341,
+  "elapsed_sec": 18.2,
+  "status": "ok"
+}

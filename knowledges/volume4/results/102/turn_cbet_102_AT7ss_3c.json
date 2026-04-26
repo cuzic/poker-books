@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_AT7ss_3c",
+  "board_label": "AT7ss",
+  "board": [
+    "As",
+    "Ts",
+    "7h",
+    "3c"
+  ],
+  "turn_card": "3c",
+  "category": "blank",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 71.8,
+  "exploitability_pct": 1.126,
+  "elapsed_sec": 19.6,
+  "status": "ok"
+}

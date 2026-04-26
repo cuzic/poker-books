@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_QJ9r_As",
+  "board_label": "QJ9r",
+  "board": [
+    "Qc",
+    "Jd",
+    "9s",
+    "As"
+  ],
+  "turn_card": "As",
+  "category": "overcard",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 54.5,
+  "exploitability_pct": 0.414,
+  "elapsed_sec": 17.3,
+  "status": "ok"
+}

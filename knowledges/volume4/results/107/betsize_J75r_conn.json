@@ -1,0 +1,28 @@
+{
+  "label": "J75r_conn",
+  "board": [
+    "Jh",
+    "7s",
+    "5d",
+    "Tc"
+  ],
+  "board_label": [
+    "Jh",
+    "7s",
+    "5d"
+  ],
+  "turn_card": "Tc",
+  "turn_category": "connector",
+  "description": "セミ板 + コネクターターン",
+  "turn_cbet_pct": 84.99138079108191,
+  "bet_size_distribution": {
+    "BET 3.000000": 36.1,
+    "BET 5.000000": 17.5,
+    "BET 8.000000": 36.8,
+    "BET 15.000000": 9.5,
+    "BET 92.000000": 0.0
+  },
+  "exploitability_pct": 0.55479765,
+  "elapsed_sec": 70.5,
+  "status": "ok"
+}

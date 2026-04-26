@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "effective_stack": 97,
+    "hero_position": "IP",
+    "hero_range_preset": "BtnOpen100bb",
+    "pot_size": 7,
+    "street": "Flop",
+    "villain_range_preset": "BbDefendVsBtn"
+  },
+  "results": [
+    {
+      "abs_error": 22.0,
+      "board": "K72r",
+      "error": -22.0,
+      "reference_cbet_pct": 91,
+      "solver_cbet_pct": 69.0
+    },
+    {
+      "abs_error": 51.0,
+      "board": "JT9ss",
+      "error": 51.0,
+      "reference_cbet_pct": 25,
+      "solver_cbet_pct": 76.0
+    },
+    {
+      "abs_error": 61.0,
+      "board": "987mono",
+      "error": 61.0,
+      "reference_cbet_pct": 20,
+      "solver_cbet_pct": 81.0
+    }
+  ],
+  "summary": {
+    "avg_abs_error_pct": 44.666666666666664,
+    "count": 3,
+    "expected_count": 3,
+    "max_abs_error_pct": 61.0
+  }
+}

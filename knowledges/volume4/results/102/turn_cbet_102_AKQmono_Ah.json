@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_AKQmono_Ah",
+  "board_label": "AKQmono",
+  "board": [
+    "As",
+    "Ks",
+    "Qs",
+    "Ah"
+  ],
+  "turn_card": "Ah",
+  "category": "pair",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 95.6,
+  "exploitability_pct": 0.497,
+  "elapsed_sec": 14.9,
+  "status": "ok"
+}

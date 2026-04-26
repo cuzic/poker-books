@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_JT8ss_Qc",
+  "board_label": "JT8ss",
+  "board": [
+    "Js",
+    "Ts",
+    "8h",
+    "Qc"
+  ],
+  "turn_card": "Qc",
+  "category": "overcard",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 89.3,
+  "exploitability_pct": 0.252,
+  "elapsed_sec": 17.2,
+  "status": "ok"
+}

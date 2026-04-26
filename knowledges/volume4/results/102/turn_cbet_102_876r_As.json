@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_876r_As",
+  "board_label": "876r",
+  "board": [
+    "8c",
+    "7d",
+    "6s",
+    "As"
+  ],
+  "turn_card": "As",
+  "category": "overcard",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 64.3,
+  "exploitability_pct": 0.353,
+  "elapsed_sec": 17.8,
+  "status": "ok"
+}

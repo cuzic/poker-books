@@ -1,0 +1,28 @@
+{
+  "label": "T98r_pair",
+  "board": [
+    "Th",
+    "9s",
+    "8d",
+    "Tc"
+  ],
+  "board_label": [
+    "Th",
+    "9s",
+    "8d"
+  ],
+  "turn_card": "Tc",
+  "turn_category": "pair",
+  "description": "コネクテッド板 + ペアターン",
+  "turn_cbet_pct": 99.92622766983659,
+  "bet_size_distribution": {
+    "BET 3.000000": 57.2,
+    "BET 5.000000": 33.3,
+    "BET 8.000000": 9.5,
+    "BET 15.000000": 0.0,
+    "BET 92.000000": 0.0
+  },
+  "exploitability_pct": 0.77124596,
+  "elapsed_sec": 77.6,
+  "status": "ok"
+}

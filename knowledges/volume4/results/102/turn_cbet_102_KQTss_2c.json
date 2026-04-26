@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_KQTss_2c",
+  "board_label": "KQTss",
+  "board": [
+    "Ks",
+    "Qs",
+    "Th",
+    "2c"
+  ],
+  "turn_card": "2c",
+  "category": "blank",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 77.8,
+  "exploitability_pct": 0.574,
+  "elapsed_sec": 20.0,
+  "status": "ok"
+}

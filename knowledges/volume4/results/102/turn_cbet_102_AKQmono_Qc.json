@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_AKQmono_Qc",
+  "board_label": "AKQmono",
+  "board": [
+    "As",
+    "Ks",
+    "Qs",
+    "Qc"
+  ],
+  "turn_card": "Qc",
+  "category": "pair",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 88.1,
+  "exploitability_pct": 0.334,
+  "elapsed_sec": 17.3,
+  "status": "ok"
+}

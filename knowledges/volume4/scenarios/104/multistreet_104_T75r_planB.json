@@ -1,0 +1,34 @@
+{
+  "scenario_id": "multistreet_104_T75r_planB",
+  "description": "[T75r (mid dry, AK オーバーカード局面)] プラン B (フロップ cbet → ターン check-check → リバー判断) — AK オーバー + gutshot ライン。プラン C で三発打ちの検証対象",
+  "street_to_solve": "river",
+  "board": [
+    "Tc",
+    "7d",
+    "5s",
+    "Jc",
+    "2h"
+  ],
+  "pot_bb": 11.0,
+  "effective_stack_bb": 84.0,
+  "hero_position": "BTN",
+  "hero_range": {
+    "preset": "BtnOpen100bb"
+  },
+  "villain_range": {
+    "preset": "BbDefendVsBtn"
+  },
+  "bet_sizes_to_evaluate": [
+    0.33,
+    0.5,
+    0.75,
+    1.5
+  ],
+  "solver_config": {
+    "algorithm": "ES_MCCFR",
+    "iterations": 5000,
+    "timeout_sec": 60,
+    "rng_seed": 42,
+    "exploitability_target_bb": 0.05
+  }
+}

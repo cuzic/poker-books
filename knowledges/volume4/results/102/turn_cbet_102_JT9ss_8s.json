@@ -1,0 +1,18 @@
+{
+  "scenario_id": "turn_cbet_102_JT9ss_8s",
+  "board_label": "JT9ss",
+  "board": [
+    "Js",
+    "Ts",
+    "9h",
+    "8s"
+  ],
+  "turn_card": "8s",
+  "category": "flush",
+  "pot_bb": 10,
+  "effective_stack_bb": 92,
+  "turn_cbet_pct": 56.7,
+  "exploitability_pct": 0.35,
+  "elapsed_sec": 17.9,
+  "status": "ok"
+}
