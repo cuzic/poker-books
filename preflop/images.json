@@ -265,11 +265,11 @@
   },
   {
     "name": "p15-fig2-bb-defense-frequency",
-    "prompt": "Table showing BB defense frequency against various open sizes. Display a reference table with Japanese labels:\n  - Title at top: 「BB ディフェンス頻度表」\n  - Table with columns: 「オープンサイズ」「ポットオッズ」「MDF（最低防御頻度）」「推奨アクション」\n  - Row 1: 「2bb（ミニレイズ）」「33%」「50%」「積極コール」\n  - Row 2: 「2.5bb」「36%」「44%」「コール重視」\n  - Row 3: 「3bb」「40%」「38%」「セレクティブ」\n  - Row 4: 「4bb」「44%」「30%」「プレミアのみ」\n  - MDF formula at bottom: 「MDF = 1 - ベット ÷ (ポット + ベット)」\nLayout: 4-column table with MDF values highlighted in navy.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "prompt": "Table showing BB defense frequency against various open sizes. Display a reference table with Japanese labels:\n  - Title at top: 「BB ディフェンス頻度表」\n  - Table with columns: 「オープンサイズ」「ポットオッズ」「後手下限ライン（最低防御頻度）」「推奨アクション」\n  - Row 1: 「2bb（ミニレイズ）」「33%」「50%」「積極コール」\n  - Row 2: 「2.5bb」「36%」「44%」「コール重視」\n  - Row 3: 「3bb」「40%」「38%」「セレクティブ」\n  - Row 4: 「4bb」「44%」「30%」「プレミアのみ」\n  - 後手下限確率 formula at bottom: 「後手下限確率 = 1 - ベット ÷ (ポット + ベット)」\nLayout: 4-column table with 後手下限ライン values highlighted in navy.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
     "aspectRatio": "4:3",
     "chapter": "第15章",
     "section": "BB ディフェンス",
-    "description": "オープンサイズ別BBのポットオッズとMDF（最低防御頻度）早見表"
+    "description": "オープンサイズ別BBのポットオッズと後手下限ライン早見表"
   },
   {
     "name": "p16-fig1-4bet-structure",
@@ -345,11 +345,11 @@
   },
   {
     "name": "p21-fig5-r6-mdf-movement",
-    "prompt": "Diagram showing how MDF shifts ±10% based on player behavior adjustments. Display a range slider diagram with Japanese labels:\n  - Title at top: 「R6：MDF ±10% 動き」\n  - Central reference line: 「基準 MDF」\n  - Left section (tighter): 「-10%（MDF 引き下げ）」\n    - Trigger: 「相手がタイト → ブラフ少ない」\n    - Action: 「より多くフォールド可」\n  - Right section (looser): 「+10%（MDF 引き上げ）」\n    - Trigger: 「相手がアグレッシブ → ブラフ多い」\n    - Action: 「より多くディフェンス必要」\n  - Center value example: 「標準 MDF = 60%」「範囲: 50%〜70%」\n  - Bottom note: 「相手のブラフ頻度で MDF を調整」\nLayout: horizontal slider diagram with center reference and ±10% zones.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "prompt": "Diagram showing how 後手下限確率 shifts ±10% based on player behavior adjustments. Display a range slider diagram with Japanese labels:\n  - Title at top: 「R6：後手下限確率 ±10% 動き」\n  - Central reference line: 「基準 後手下限確率」\n  - Left section (tighter): 「-10%（後手下限確率 引き下げ）」\n    - Trigger: 「相手がタイト → ブラフ少ない」\n    - Action: 「より多くフォールド可」\n  - Right section (looser): 「+10%（後手下限確率 引き上げ）」\n    - Trigger: 「相手がアグレッシブ → ブラフ多い」\n    - Action: 「より多くディフェンス必要」\n  - Center value example: 「標準 後手下限確率 = 60%」「範囲: 50%〜70%」\n  - Bottom note: 「相手のブラフ頻度で 後手下限確率 を調整」\nLayout: horizontal slider diagram with center reference and ±10% zones.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
     "aspectRatio": "16:9",
     "chapter": "第21章",
-    "section": "R6 MDF調整",
-    "description": "相手のアグレッシブ度に応じたMDF ±10%調整範囲スライダー図"
+    "section": "R6 後手下限確率調整",
+    "description": "相手のアグレッシブ度に応じた後手下限確率±10%調整範囲スライダー図"
   },
   {
     "name": "p22-fig1-utg-range-chart",
