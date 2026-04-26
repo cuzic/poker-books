@@ -121,9 +121,8 @@
 | トピック | 推奨リソース |
 |---------|-----------|
 | フロップ以降の判断 | 姉妹編『迷わないポーカー② フロップ[基礎]』 |
-| ターン・リバー戦略 | GTO Wizard + *Modern Poker Theory* (Acevedo) |
-| MTT 精密 ICM 解析 | ICMIZER（icmizer.com） |
-| Push/Fold チャート（15BB 以下） | Upswing Poker、PokerCoaching の Push/Fold 表 |
+| ターン・リバー戦略 | 姉妹編『迷わないポーカー④ ターン・リバー[基礎]』 |
+| トーナメント全般（ICM、Push/Fold、アンティ） | 姉妹編『迷わないポーカー⑥ トーナメント』 |
 | ソルバーの操作方法 | GTO Wizard 公式ドキュメント |
 | メンタル / ティルト管理 | Jared Tendler *The Mental Game of Poker* |
 
@@ -145,7 +144,7 @@
 
 ### 第 IV 部　補正と応用（第14〜17章）
 
-相手タイプとスタック深度、SB・BBの特殊性、4bet・オールイン、マルチウェイ・ICMを扱います。
+相手タイプとスタック深度、SB・BBの特殊性、4bet・オールイン、マルチウェイを扱います（ICMやPush/Foldなどトーナメント特有の話題は巻⑥）。
 
 ### 第 V 部　実戦定着と次への橋渡し（第18〜21章）
 

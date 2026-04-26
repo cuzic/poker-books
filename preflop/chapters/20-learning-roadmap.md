@@ -275,7 +275,6 @@ GTOを学んだ後、実戦でさらに勝率を上げるための最終段階�
 ## 出典
 
 - GTO Wizard公式サイト（gtowizard.com）
-- ICMIZER Suite（icmizer.com）
 - PokerTracker 4公式サイト
 - Hold'em Manager 3公式サイト
 - Dara O'Kearney & Barry Carter『GTO Poker Simplified』（2022）
