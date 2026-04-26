@@ -1,0 +1,48 @@
+{
+  "title": "迷わないポーカー⑤ ターン・リバー[応用]",
+  "subtitle": "3軸統合と backward induction でポストフロップを総合判断する",
+  "author": "川西智也",
+  "language": "ja",
+  "identifier": "urn:uuid:d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9c",
+  "publisher": "川西智也",
+  "description": "『迷わないポーカー』シリーズ第5巻、ターン・リバー応用編。巻4（基礎編）で4つの暗算式を習得した読者を対象に、3軸統合（過去レンジ × 現在のターンカード × リバー予測）と backward induction によるマルチストリート総合判断を体系化。ブロッカー実戦選択、オーバーベット（ターン・リバー）、リバーCR、ポットコミットメントなどの高度戦術を網羅。3-betポット・SB vs BB・マルチウェイの応用シナリオに加え、ソルバーによるハンドレビュー法と総合ドリル50問で実戦力を仕上げる。",
+  "cover": "src/chapters/images/cover.jpg",
+  "kdp": {
+    "keywords": [
+      "テキサスホールデム ターン",
+      "テキサスホールデム リバー",
+      "ポーカー ブロッカー",
+      "ポーカー オーバーベット",
+      "マルチストリート",
+      "ポットコミットメント",
+      "ポーカー 上級"
+    ],
+    "categories": [
+      "Kindle Store > 趣味・実用 > ゲーム",
+      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム",
+      "Kindle Store > ノンフィクション > 科学・テクノロジー"
+    ],
+    "bisac": [
+      "GAM004000",
+      "GAM002000",
+      "SPO047000"
+    ],
+    "bisacLabels": [
+      "GAMES & ACTIVITIES / Card Games / Poker",
+      "GAMES & ACTIVITIES / Card Games / General",
+      "SPORTS & RECREATION / Gambling"
+    ],
+    "targetAudience": "巻4（ターン・リバー基礎）読了済みの中級〜上級者。3軸統合・backward induction・高度戦術を習得したい人。",
+    "pageReadDirection": "ltr",
+    "aiContentDisclosure": {
+      "textAssisted": true,
+      "imageGenerated": true,
+      "note": "Claude Code（Anthropic）を執筆補助ツールとして使用。最終的な編集・監修は著者が実施。"
+    },
+    "pricing": {
+      "currency": "JPY",
+      "listPrice": 1500,
+      "kdpSelect": true
+    }
+  }
+}
