@@ -270,6 +270,10 @@ GTO WizardはA5sをBTN vs UTGのスポットで「**60%3ベット、40%コール
 
 この「スコア20〜22帯」というのが、GTOでミックス戦略が効く境界帯と一致します。
 
+<figure><img src="images/range-table-3bet-vs-utg.png" alt="3ベット vs UTG レンジ表。赤=バリュー3bet（QQ+/AKs/AKo/AQs）、オレンジ=ブラフ3bet（A5s〜A3s）、青=コール、灰=フォールド" /><figcaption>3ベット vs UTG（ポーラライズ型） — 赤がバリュー、オレンジがブロッカー付きブラフ、青がコール</figcaption></figure>
+
+<figure><img src="images/range-table-3bet-vs-btn.png" alt="3ベット vs BTN レンジ表。リニア型でバリュー範囲が広く（QQ+/JJ/TT/AQs/AJs含む）、コール範囲も広い" /><figcaption>3ベット vs BTN（リニア型） — vs UTGより広いバリュー範囲でオーバーオール3bet頻度が上がる</figcaption></figure>
+
 ---
 
 ## 章のまとめ

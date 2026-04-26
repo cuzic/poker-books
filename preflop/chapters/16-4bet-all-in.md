@@ -232,6 +232,8 @@ GTOの4ベットレンジには、バリュー（AA〜QQ、AK）のほかに**�
 
 ただし、これは**上級者の技**です。本書を読んでいる段階では手を出さないでください。
 
+<figure><img src="images/range-table-4bet.png" alt="4ベットレンジ表。紫=バリュー4bet（AA/KK/QQ/AKs/AKo）、オレンジ=ブラフ4bet（A5s〜A2s）、青=コール（JJ/TT/AQs）、灰=フォールド" /><figcaption>4ベットレンジ — 紫がバリュー、オレンジがブロッカー付きブラフ（A5s〜A2s）。JJ/TT/AQsはコールでフロップへ</figcaption></figure>
+
 ---
 
 ## 章のまとめ
