@@ -167,9 +167,9 @@ GTO_RANGES = {
 CURRENT_THRESHOLDS = {
     "UTG": 23,
     "MP": 22,
-    "CO": 21,
+    "CO": 20,
     "BTN": 18,
-    "SB": 20,
+    "SB": 22,
 }
 
 
