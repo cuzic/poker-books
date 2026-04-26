@@ -1,0 +1,48 @@
+{
+  "title": "迷わないポーカー ダイジェスト",
+  "subtitle": "全6巻を1冊で見渡す暗算式の地図",
+  "author": "川西智也",
+  "language": "ja",
+  "identifier": "urn:uuid:f6a7b8c9-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
+  "publisher": "川西智也",
+  "description": "『迷わないポーカー』シリーズ全6巻（約130万字）の暗算式エッセンスを1冊70,000字に圧縮した中級入門書。プリフロップの Score 式から、フロップの簡易レンジスコア・HandScore・後手スコア、ターンのバレルスコア、リバーの α 式、応用の3軸統合・backward induction、トーナメントの ICM equity・ICM 補正・M 値まで、シリーズで使う10以上の暗算式を網羅。各暗算式は係数と判定基準を厳密に保持し、深い解説は各原典巻へ誘導する『シリーズの地図』として機能する。基本ルールを知っていれば読める中級入門。",
+  "cover": "src/chapters/images/cover.jpg",
+  "kdp": {
+    "keywords": [
+      "テキサスホールデム",
+      "ポーカー 暗算",
+      "ポーカー 中級",
+      "ポーカー シリーズ",
+      "GTO ポーカー",
+      "迷わないポーカー",
+      "ポーカー 入門"
+    ],
+    "categories": [
+      "Kindle Store > 趣味・実用 > ゲーム",
+      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム",
+      "Kindle Store > ノンフィクション > 科学・テクノロジー"
+    ],
+    "bisac": [
+      "GAM004000",
+      "GAM002000",
+      "SPO047000"
+    ],
+    "bisacLabels": [
+      "GAMES & ACTIVITIES / Card Games / Poker",
+      "GAMES & ACTIVITIES / Card Games / General",
+      "SPORTS & RECREATION / Gambling"
+    ],
+    "targetAudience": "ポーカーのルール・役・ポジションを知る中級志向の読者。シリーズ全体を1冊で把握したい人、自分に必要な巻を選びたい人、既読者の復習用。",
+    "pageReadDirection": "ltr",
+    "aiContentDisclosure": {
+      "textAssisted": true,
+      "imageGenerated": true,
+      "note": "Claude Code（Anthropic）を執筆補助ツールとして使用。最終的な編集・監修は著者が実施。"
+    },
+    "pricing": {
+      "currency": "JPY",
+      "listPrice": 980,
+      "kdpSelect": true
+    }
+  }
+}

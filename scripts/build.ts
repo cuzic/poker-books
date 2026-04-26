@@ -28,10 +28,10 @@ interface Chapter {
 }
 
 type OutputFormat = "html" | "xhtml" | "epub" | "site" | "all";
-type BookId = "preflop" | "flop" | "flop-advanced" | "volume4" | "volume5" | "volume6";
+type BookId = "preflop" | "flop" | "flop-advanced" | "volume4" | "volume5" | "volume6" | "digest";
 
 const ROOT = join(import.meta.dir, "..");
-const BOOKS: BookId[] = ["preflop", "flop", "flop-advanced", "volume4", "volume5", "volume6"];
+const BOOKS: BookId[] = ["preflop", "flop", "flop-advanced", "volume4", "volume5", "volume6", "digest"];
 const BOOK_LABELS: Record<BookId, string> = {
   preflop: "迷わないポーカー① プリフロップ",
   flop: "迷わないポーカー② フロップ[基礎]",
@@ -39,6 +39,7 @@ const BOOK_LABELS: Record<BookId, string> = {
   volume4: "迷わないポーカー④ ターン・リバー[基礎]",
   volume5: "迷わないポーカー⑤ ターン・リバー[応用]",
   volume6: "迷わないポーカー⑥ トーナメント",
+  digest: "迷わないポーカー ダイジェスト",
 };
 
 // 各 book ID とディレクトリの対応（同名でない場合のみ記載）
@@ -51,6 +52,7 @@ const EPUB_FILENAMES: Record<BookId, string> = {
   volume4: "mayowanai-poker-04-turn-river-basic.epub",
   volume5: "mayowanai-poker-05-turn-river-advanced.epub",
   volume6: "mayowanai-poker-06-tournament.epub",
+  digest: "mayowanai-poker-digest.epub",
 };
 
 function bookDir(bookId: BookId): string {
@@ -458,7 +460,7 @@ async function main(): Promise<void> {
   const bookIndex = args.indexOf("--book");
   if (bookIndex !== -1 && args[bookIndex + 1]) {
     const requested = args[bookIndex + 1] as BookId | "all";
-    if (["preflop", "flop", "flop-advanced", "volume4", "volume5", "volume6", "all"].includes(requested)) {
+    if (["preflop", "flop", "flop-advanced", "volume4", "volume5", "volume6", "digest", "all"].includes(requested)) {
       bookArg = requested;
     }
   }
