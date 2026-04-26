@@ -12,7 +12,7 @@
 
 <figure><img src="images/p07-fig1-position-range-pyramid.jpg" alt="UTG（最も狭い）からBTN（最も広い）へのレンジ幅ピラミッド図" /><figcaption>UTG（最も狭い）からBTN（最も広い）へのレンジ幅ピラミッド図</figcaption></figure>
 
-<figure><img src="images/p07-fig2-hand-matrix.jpg" alt="169ハンドをポジション別しきい値で色分けしたマトリクス図" /><figcaption>169ハンドをポジション別しきい値で色分けしたマトリクス図</figcaption></figure>
+<figure><img src="images/range-table-rfi.png" alt="169ハンドをポジション別しきい値で色分けしたマトリクス図。UTG（青）からBTN（赤）まで6色でオープンレンジを可視化" /><figcaption>ポジション別RFIレンジ — UTG（青・最も狭い）からBTN（赤・最も広い）まで、しきい値でオープン可能なハンドを色分け</figcaption></figure>
 
 ## 7-1 しきい値とGTOレンジの対応
 

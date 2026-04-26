@@ -13,6 +13,10 @@
 
 <figure><img src="images/p13-fig1-polarized-vs-linear.jpg" alt="ポーラライズレンジ（バリュー+ブラフ二極化）とリニアレンジ（連続型）の対比図" /><figcaption>ポーラライズレンジ（バリュー+ブラフ二極化）とリニアレンジ（連続型）の対比図</figcaption></figure>
 
+<figure><img src="images/range-table-3bet-vs-utg.png" alt="3ベット vs UTG レンジ表（ポーラライズ型）。赤=バリュー（QQ+/AKs/AKo/AQs）、オレンジ=ブラフ（A5s〜A3s）、青=コール、灰=フォールド" /><figcaption>ポーラライズ型（vs UTG） — 最強ハンドとブロッカーブラフのみ3ベット、中堅はコール</figcaption></figure>
+
+<figure><img src="images/range-table-3bet-vs-btn.png" alt="3ベット vs BTN レンジ表（リニア型）。バリュー範囲が広く（QQ+/JJ/TT/AQs/AJs含む）、コール範囲も広い" /><figcaption>リニア型（vs BTN） — 中堅ハンドもバリュー3ベット対象に入り、全体的に広いレンジ</figcaption></figure>
+
 ## 13-1 ポーラライズとリニアの切り替えを本書は扱わない
 
 ### GTOは状況で使い分ける
