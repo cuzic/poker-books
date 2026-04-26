@@ -1,0 +1,48 @@
+{
+  "title": "迷わないポーカー④ ターン・リバー[基礎]",
+  "subtitle": "4つの暗算式でポストフロップ最終2ストリートを判断する",
+  "author": "川西智也",
+  "language": "ja",
+  "identifier": "urn:uuid:d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9b",
+  "publisher": "川西智也",
+  "description": "『迷わないポーカー』シリーズ第4巻、ターン・リバー基礎編。巻2-3 でフロップ判断の土台を築いた読者を対象に、ポストフロップ最終2ストリート（ターン・リバー）の基本概念と4つの暗算式を体系化した一冊。バレルスコア（ターン攻撃）、α式（リバー配分）、後手スコア（ターン版・リバー版）の4つの式と、ハンドの3層分類・ターンカード5分類・ブロッカー基礎を網羅。基本戦術と20問の基礎ドリルで実戦投入可能なレベルまで仕上げる。3軸統合・高度戦術・応用シナリオは『⑤ターン・リバー[応用]』で扱う。",
+  "cover": "src/chapters/images/cover.jpg",
+  "kdp": {
+    "keywords": [
+      "テキサスホールデム ターン",
+      "テキサスホールデム リバー",
+      "ポーカー ダブルバレル",
+      "バレルスコア",
+      "α式 アルファ",
+      "ポーカー 暗算",
+      "ポストフロップ 中級"
+    ],
+    "categories": [
+      "Kindle Store > 趣味・実用 > ゲーム",
+      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム",
+      "Kindle Store > ノンフィクション > 科学・テクノロジー"
+    ],
+    "bisac": [
+      "GAM004000",
+      "GAM002000",
+      "SPO047000"
+    ],
+    "bisacLabels": [
+      "GAMES & ACTIVITIES / Card Games / Poker",
+      "GAMES & ACTIVITIES / Card Games / General",
+      "SPORTS & RECREATION / Gambling"
+    ],
+    "targetAudience": "巻2（フロップ基礎）読了済みの中級者。ターン・リバーの基本概念と4つの暗算式を独立して習得したい人。",
+    "pageReadDirection": "ltr",
+    "aiContentDisclosure": {
+      "textAssisted": true,
+      "imageGenerated": true,
+      "note": "Claude Code（Anthropic）を執筆補助ツールとして使用。最終的な編集・監修は著者が実施。"
+    },
+    "pricing": {
+      "currency": "JPY",
+      "listPrice": 1500,
+      "kdpSelect": true
+    }
+  }
+}
