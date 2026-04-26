@@ -29,7 +29,7 @@
 
 ### 169 ハンド × 5 ポジション = 845 判定の全数検査
 
-本書の基本スコア式が GTO とどこで違うのかを正確に把握するため、169 種類のハンド × 5 ポジション（UTG/MP/CO/BTN/SB）= 845 判定を全数検査しました。検証には `scripts/refine_preflop_score.py` を使用し、poker-coaching の GTO チャート（6-max 100BB キャッシュ、UTG 17.0% / MP 21.4% / CO 27.8% / BTN 43.3% / SB 24.3% raise）との比較で次の結果が出ています。
+本書の基本スコア式が GTO とどこで違うのかを正確に把握するため、169 種類のハンド × 5 ポジション（UTG/MP/CO/BTN/SB）= 845 判定を全数検査しました。比較対象は poker-coaching の Implementable GTO Charts（6-max 100BB キャッシュ、UTG 17.0% / MP 21.4% / CO 27.8% / BTN 43.3% / SB 24.3% raise）で、結果は次の通りです。
 
 ```text
 Level 1（本書のしきい値適用、基本式のみ）
@@ -215,7 +215,7 @@ UTG はポジション劣位で後ろから 3bet される可能性が最も高�
 | SB | 22 | 94.0% | 約 96% |
 | **全体（平均）** | — | **92.9%** | **約 95%** |
 
-> **注記**: 上記は本書しきい値（UTG 24 / MP 22 / CO 21 / BTN 18 / SB 22）と poker-coaching の Implementable GTO Charts 準拠のレンジで検証した値です。`scripts/verify_preflop_score.py` で再現できます。
+> **注記**: 上記は本書しきい値（UTG 24 / MP 22 / CO 21 / BTN 18 / SB 22）を、poker-coaching の Implementable GTO Charts 準拠のレンジに対して全数検証した値です。
 
 **段階的な改善の推移（おおまか）**
 
@@ -533,8 +533,6 @@ SB しきい値が旧版の 20 から新版の 22 に引き上げられた理由
 
 - GTO Wizard『Preflop Range Morphology』（2024）
 - poker-coaching『6-max Online GTO Charts』（UTG 17.0% / MP 21.4% / CO 27.8% / BTN 43.3% / SB 24.3% raise、PDF 版）
-- scripts/refine_preflop_score.py（本書付属の精密化スクリプト）
-- scripts/verify_preflop_score.py（本書付属の検証スクリプト）
 - GipsyTeam『Why Do Poker Solvers Love Ace Five Suited?』（2024）
 - Upswing Poker『How to Play Small Pocket Pairs』（2024）
 - GTO Wizard『Simplified Solutions』（2023）

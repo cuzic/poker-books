@@ -1007,7 +1007,7 @@ R6 確認（ベットを受けたとき）
 
 GTO Wizardなどの公開チャートに基づく標準的な6-max 100BBキャッシュのプリフロップレンジと、本書の基本スコア式による判定を**169 ハンドすべてで一致率測定**しました。
 
-結果は 2026 年 4 月実測の値です。`scripts/verify_preflop_score.py` で再現できます。GTO レンジは poker-coaching の Implementable GTO Charts を画像から抽出した `knowledges/preflop/gto-charts.json` を使用。
+結果は 2026 年 4 月実測の値です。GTO レンジは poker-coaching の Implementable GTO Charts（Jonathan Little 監修、6-max 100BB Cash）を基準としています。
 
 #### オープン判定の一致率
 
@@ -1057,8 +1057,7 @@ GTO Wizardなどの公開チャートに基づく標準的な6-max 100BBキャ�
 - 低スーテッドの裾野拾いが不足するため、本書の式に加えて**補助ルール**（BTNでK2s〜K9sはすべてオープン、など）を知っていると一致率が95%+ まで上がります
 - 3betは基本スコアのみでは不十分で、第12章の3betスコア式でFPを絞り込む設計が正しい
 
-検証スクリプト：`scripts/verify_preflop_score.py`
-データソース：poker-coaching の **Implementable GTO Charts**（Jonathan Little 監修、6-max 100BB Cash）。`knowledges/preflop/gto-charts.json` および `knowledges/preflop/gto-charts.md` に再利用可能な形で整備済み。
+データソース：poker-coaching の **Implementable GTO Charts**（Jonathan Little 監修、6-max 100BB Cash）。本書では、このチャートを基準に 169 ハンド × 5 ポジション = 845 判定を全数比較しています。
 
 #### 5 ルール適用（Level 2）で 約 95%、例外表（Level 3）で 約 97%+
 
