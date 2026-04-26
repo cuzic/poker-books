@@ -49,8 +49,6 @@
 
 本書のスコア式とGTO推奨を併記したチャートです。
 
-<figure><img src="images/range-table-rfi.png" alt="プリフロップ RFI レンジテーブル - ポジション別 6-max オープンレンジマトリクス" /><figcaption>プリフロップ RFI レンジテーブル — ポジション別オープンレンジを13×13マトリクスで可視化</figcaption></figure>
-
 ### UTG（しきい値 24）
 
 **オープン対象**：
@@ -114,6 +112,8 @@ SBは「3ベットかフォールド」が基本（第15章参照）。オープ
 ### BB
 
 BBは**対オープンの対応のみ**（プリフロップでオープンの機会はない）。
+
+<figure><img src="images/range-table-rfi.png" alt="プリフロップ RFI レンジテーブル - ポジション別 6-max オープンレンジマトリクス" /><figcaption>プリフロップ RFI レンジテーブル — ポジション別オープンレンジを13×13マトリクスで可視化</figcaption></figure>
 
 ---
 
