@@ -309,4 +309,4 @@ Step1 NO、Step2 NO、Step3トップ8（ロー）、Step4 max_diff=3、2-toneな
 ## 出典
 
 - 本書著者のGTO Wizard実測データ（30ボード、2026年）
-- D3モデル仕様 (`knowledges/flop/99_bdm_model_spec.md`)
+- 簡易レンジスコアモデル仕様 (`knowledges/flop/99_bdm_model_spec.md`)
