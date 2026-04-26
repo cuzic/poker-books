@@ -150,10 +150,10 @@ function calcScore(r: number, c: number): number {
   const diff = loIdx - hiIdx;
   const isSuited = r < c;
   let score = hiRank + loRank;
-  if (isSuited) score += 2;
+  if (isSuited) score += 3;                   // スーテッド +3（章05テキストに合わせる）
   if (diff === 1) score += 1;
-  else if (diff === 2) score += 0.5;
-  else if (diff >= 4) score -= 1;
+  else if (diff === 2 || diff === 3) score += 0.5; // ギャップ2以内（差2または3）+0.5
+  else if (diff >= 5) score -= 1;             // 差5以上ペナルティ（ギャップ4以上）
   if (hiRank < 9 && loRank < 9) score -= 1;
   return score;
 }
@@ -235,7 +235,7 @@ function generateRFISVG(positions: Record<string, { hands: Set<string>; pct: str
 
 function generateScoreHeatmapSVG(): string {
   const titleH = 36;
-  const legendH = 50;
+  const legendH = 62; // UTGとMP/SBが近接するため2段表示分を確保
   const { tw, th } = gridDims(titleH, legendH);
   let s = svgOpen(tw, th);
   s += renderTitle(tw, "ハンドスコア ヒートマップ（AA=38 〜 72o=7）", PY + 21);
@@ -258,16 +258,17 @@ function generateScoreHeatmapSVG(): string {
     const bx = PX + (i * barW) / steps;
     s += `<rect x="${bx}" y="${barY}" width="${barW / steps + 1}" height="14" fill="${scoreToColor(score)}"/>`;
   }
-  // しきい値マーカー
-  for (const [score, label] of [
-    [24, "UTG≥24"],
-    [22, "HJ≥22"],
-    [20, "CO≥20"],
-    [18, "BTN≥18"],
-  ] as [number, string][]) {
+  // しきい値マーカー（UTGとMP/SBが近接するため交互2段表示）
+  for (const [score, label, row] of [
+    [23, "UTG≥23",   1],  // 下段（MP/SBと1点差のため段をずらす）
+    [22, "MP/SB≥22", 0],  // 上段
+    [20, "CO≥20",    0],  // 上段
+    [18, "BTN≥18",   0],  // 上段
+  ] as [number, string, number][]) {
     const bx = PX + ((score - 7) / 31) * barW;
     s += `<line x1="${bx}" y1="${barY - 2}" x2="${bx}" y2="${barY + 14}" stroke="#fff" stroke-width="2"/>`;
-    s += `<text x="${bx}" y="${barY + 32}" font-family="'Courier New',monospace" font-size="${FS_ANNOT}" font-weight="700" fill="#fff" text-anchor="middle">${label}</text>`;
+    const textY = row === 1 ? barY + 48 : barY + 32;
+    s += `<text x="${bx}" y="${textY}" font-family="'Courier New',monospace" font-size="${FS_ANNOT}" font-weight="700" fill="#fff" text-anchor="middle">${label}</text>`;
   }
   s += `<text x="${PX}" y="${barY + 32}" font-family="'Courier New',monospace" font-size="${FS_ANNOT}" fill="#fff">7</text>`;
   s += `<text x="${PX + barW}" y="${barY + 32}" font-family="'Courier New',monospace" font-size="${FS_ANNOT}" fill="#fff" text-anchor="end">38</text>`;
@@ -405,8 +406,8 @@ const bbDefVsBTN = [
 // ⑦ SB 3bet vs BTN（付録 ch15）
 const sbVsBTN = [
   { action: "value3bet", notation: "QQ+, AKs, AKo, JJ, TT, AQs" },
-  { action: "bluff3bet",  notation: "A5s, A4s, A3s, A2s, A8o, KTo" },
-  { action: "call",        notation: "AJs, KQs, KJs" },
+  { action: "bluff3bet",  notation: "A5s, A4s, A3s, A2s, A8o, KTo, Q9s, J8s" }, // Q9s/J8sを追加（ch15本文に明記）
+  { action: "call",        notation: "AJs, ATs, A9o, KQs, KJs" },                 // ATs/A9oを追加（準バリュー）
 ];
 
 // ⑨ 4betレンジ（付録 ch16）
