@@ -88,69 +88,87 @@ def hand_in_set(hand: str, range_set: set[str]) -> bool:
     return hand in range_set
 
 
-# UTG (~17%, ~225 combos)
+# 各ポジションの GTO RFI レンジを poker-coaching 6-max GTO チャートの
+# 公開頻度に合わせて構築。出典頻度は次の通り：
+#   UTG 17.0% / MP 21.4% / CO 27.8% / BTN 43.3% / SB raise-only 24.3%
+#
+# 旧版（〜35-55% 過大）からの再構築のため、ハンド選定はやや保守的。
+
+# UTG (17.0%, 226 combos = 17.0%)
 UTG_OPEN = {
-    # Pairs
+    # Pairs (78)
     "22", "33", "44", "55", "66", "77", "88", "99", "TT", "JJ", "QQ", "KK", "AA",
-    # Suited
+    # Suited As (48): 全 A2s-AKs（Wheel ブロッカーで A2s-A5s も含む）
     "AKs", "AQs", "AJs", "ATs", "A9s", "A8s", "A7s", "A6s", "A5s", "A4s", "A3s", "A2s",
-    "KQs", "KJs", "KTs", "K9s",
-    "QJs", "QTs", "Q9s",
-    "JTs", "J9s",
-    "T9s", "T8s",
-    "98s", "87s", "76s", "65s",
-    # Offsuit
+    # Suited broadway (12): KQs, KJs, KTs
+    "KQs", "KJs", "KTs",
+    # Suited Qs (8): QJs, QTs
+    "QJs", "QTs",
+    # Suited Js / Ts / SC (16)
+    "JTs", "T9s", "98s", "87s", "76s",
+    # Offsuit broadway (60): AKo, AQo, AJo, ATo, KQo
     "AKo", "AQo", "AJo", "ATo",
-    "KQo", "KJo",
-    "QJo",
+    "KQo",
 }
 
-# MP (~22%)
+# MP (21.9%, 290 combos)
 MP_OPEN = UTG_OPEN | {
-    # Already in UTG; MP slightly wider on suited and offsuit broadway
-    "A9o", "KTo", "QTo", "JTo",
-    "Q8s", "J8s", "T7s", "97s", "86s", "75s", "54s",
+    # Suited additions
+    "J9s", "T8s", "65s", "54s",
+    # Offsuit additions
+    "A9o", "KJo", "KTo", "QJo",
 }
 
-# CO (~28%)
+# CO (28.8%, 382 combos)
 CO_OPEN = MP_OPEN | {
-    "K8s", "K7s", "K6s", "K5s",
-    "Q7s", "Q6s",
-    "J7s",
-    "T6s",
-    "96s", "85s", "64s",
-    "K9o", "Q9o", "J9o", "T9o",
-    "A8o", "A7o",
+    # Suited
+    "K9s", "Q9s", "J8s", "T7s", "97s",
+    # Offsuit
+    "A8o", "A7o", "K9o", "Q9o", "J9o", "QTo",
 }
 
-# BTN (~45%)
+# BTN (44.2%, 586 combos)
 BTN_OPEN = CO_OPEN | {
-    "K4s", "K3s", "K2s",
-    "Q5s", "Q4s", "Q3s", "Q2s",
-    "J6s", "J5s", "J4s",
-    "T5s", "T4s",
-    "95s", "84s", "74s", "63s", "53s", "43s",
-    "K8o", "K7o", "K6o", "K5o",
-    "Q8o", "Q7o",
-    "J8o",
-    "T8o",
-    "98o", "87o", "76o", "65o",
+    # Suited Ks (28): K2s-K8s
+    "K8s", "K7s", "K6s", "K5s", "K4s", "K3s", "K2s",
+    # Suited Qs (20): Q4s-Q8s
+    "Q8s", "Q7s", "Q6s", "Q5s", "Q4s",
+    # Suited Js (8): J6s, J7s
+    "J7s", "J6s",
+    # Low suited (16): 86s, 75s, 64s, 53s
+    "86s", "75s", "64s", "53s",
+    # Offsuit Wheel (60): A2o-A6o
     "A6o", "A5o", "A4o", "A3o", "A2o",
+    # Offsuit broadway extensions (24): K8o, Q8o
+    "K8o", "Q8o",
+    # Offsuit Ts (12): T9o
+    "T9o",
+    # Low offsuit connectors (36): 98o, 87o, 76o
+    "98o", "87o", "76o",
 }
 
-# SB (~35%) - between CO and BTN, slightly tight due to OOP
-SB_OPEN = CO_OPEN | {
-    "K4s", "K3s", "K2s",
-    "Q5s", "Q4s",
-    "J6s",
-    "T5s",
-    "85s", "74s", "63s", "53s",
-    "K8o",
-    "Q8o",
-    "J8o",
-    "T8o",
-    "98o", "87o",
-    "A6o", "A5o", "A4o", "A3o", "A2o",
+# SB (~25%, raise-only) - poker-coaching の 6-max GTO チャートで raise=24.3%。
+# 本書は raise か fold のシンプル戦略なので limp 混合戦略の hands は含めない。
+# CO_OPEN を継承せず raise-only で再定義する。
+SB_OPEN = {
+    # Pairs (78 combos)
+    "22", "33", "44", "55", "66", "77", "88", "99", "TT", "JJ", "QQ", "KK", "AA",
+    # Suited As (48)
+    "AKs", "AQs", "AJs", "ATs", "A9s", "A8s", "A7s", "A6s", "A5s", "A4s", "A3s", "A2s",
+    # Suited Ks (20): KQs-K8s（K7s 以下は raise レンジ外）
+    "KQs", "KJs", "KTs", "K9s", "K8s",
+    # Suited Qs (16): QJs-Q8s
+    "QJs", "QTs", "Q9s", "Q8s",
+    # Suited Js (12): JTs, J9s, J8s
+    "JTs", "J9s", "J8s",
+    # Suited Ts (8): T9s, T8s
+    "T9s", "T8s",
+    # Low suited connectors (20): 98s〜54s
+    "98s", "87s", "76s", "65s", "54s",
+    # Offsuit As (60): AKo, AQo, AJo, ATo, A9o
+    "AKo", "AQo", "AJo", "ATo", "A9o",
+    # Offsuit broadway (72): KQo, KJo, KTo, QJo, QTo, JTo
+    "KQo", "KJo", "KTo", "QJo", "QTo", "JTo",
 }
 
 
@@ -165,9 +183,9 @@ GTO_RANGES = {
 
 # Current thresholds (digest / new preflop chapter 5)
 CURRENT_THRESHOLDS = {
-    "UTG": 23,
+    "UTG": 24,
     "MP": 22,
-    "CO": 20,
+    "CO": 21,
     "BTN": 18,
     "SB": 22,
 }

@@ -57,11 +57,11 @@
   },
   {
     "name": "p02-fig2-position-value-bars",
-    "prompt": "Horizontal bar chart showing the Score threshold needed to open from each seat in 6-max poker. Display bars with Japanese labels:\n  - Title at top: 「ポジション別しきい値」\n  - Y-axis seat labels from top: 「UTG」「MP」「CO」「BTN」「SB」\n  - X-axis: range from 「16」 to 「24」\n  - Bars: UTG: 23 (red, タイト), MP: 22 (orange), CO: 20 (yellow), BTN: 18 (green, 広い), SB: 22 (orange)\n  - Each bar shows its threshold number at end tip\n  - Bottom note: 「ポジションは Score を補正せず、しきい値だけが変わる」\nLayout: horizontal bar chart with thresholds, color-coded by tightness.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "prompt": "Horizontal bar chart showing the Score threshold needed to open from each seat in 6-max poker. Display bars with Japanese labels:\n  - Title at top: 「ポジション別しきい値」\n  - Y-axis seat labels from top: 「UTG」「MP」「CO」「BTN」「SB」\n  - X-axis: range from 「16」 to 「24」\n  - Bars: UTG: 24 (red, タイト), MP: 22 (orange), CO: 21 (yellow), BTN: 18 (green, 広い), SB: 22 (orange)\n  - Each bar shows its threshold number at end tip\n  - Bottom note: 「ポジションは Score を補正せず、しきい値だけが変わる」\nLayout: horizontal bar chart with thresholds, color-coded by tightness.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
     "aspectRatio": "16:9",
     "chapter": "第2章",
     "section": "ポジション別しきい値",
-    "description": "UTG 23 / MP 22 / CO 20 / BTN 18 / SB 22 の各ポジションのオープンしきい値を横棒グラフで視覚化"
+    "description": "UTG 24 / MP 22 / CO 21 / BTN 18 / SB 22 の各ポジションのオープンしきい値を横棒グラフで視覚化"
   },
   {
     "name": "p02-fig3-card-value-ladder",
@@ -121,11 +121,11 @@
   },
   {
     "name": "p05-fig4-threshold-ladder",
-    "prompt": "Vertical threshold ladder showing minimum hand scores required per position. Display a top-to-bottom reference with Japanese labels:\n  - Title at top: 「ポジション別 プレイしきい値」\n  - Each row shows position and threshold:\n  - 「UTG」→ 「しきい値: 24」\n  - 「MP」→ 「しきい値: 22」\n  - 「CO」→ 「しきい値: 20」\n  - 「BTN」→ 「しきい値: 18」\n  - 「SB」→ 「しきい値: 20」\n  - 「BB」→ 「ディフェンスのみ」\n  - Right side bar: color gradient from red (top/tight) to green (bottom/loose)\n  - Bottom note: 「BTN が最も広いレンジ」\nLayout: vertical ladder with position name left, threshold value right, colored bar showing range width.\nAspect ratio 3:4.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "prompt": "Vertical threshold ladder showing minimum hand scores required per position. Display a top-to-bottom reference with Japanese labels:\n  - Title at top: 「ポジション別 プレイしきい値」\n  - Each row shows position and threshold:\n  - 「UTG」→ 「しきい値: 24」\n  - 「MP」→ 「しきい値: 22」\n  - 「CO」→ 「しきい値: 21」\n  - 「BTN」→ 「しきい値: 18」\n  - 「SB」→ 「しきい値: 22」\n  - 「BB」→ 「ディフェンスのみ」\n  - Right side bar: color gradient from red (top/tight) to green (bottom/loose)\n  - Bottom note: 「BTN が最も広いレンジ」\nLayout: vertical ladder with position name left, threshold value right, colored bar showing range width.\nAspect ratio 3:4.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
     "aspectRatio": "3:4",
     "chapter": "第5章",
     "section": "しきい値",
-    "description": "UTG 24 / MP 22 / CO 20 / BTN 18 / SB 20 のポジション別プレイしきい値ラダー"
+    "description": "UTG 24 / MP 22 / CO 21 / BTN 18 / SB 22 のポジション別プレイしきい値ラダー"
   },
   {
     "name": "p06-fig1-suited-ev-table",
