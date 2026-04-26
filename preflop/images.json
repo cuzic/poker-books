@@ -57,11 +57,11 @@
   },
   {
     "name": "p02-fig2-position-value-bars",
-    "prompt": "Horizontal bar chart showing position advantage values for each seat in 6-max poker. Display bars with Japanese labels:\n  - Title at top: 「ポジション補正値」\n  - Y-axis seat labels from top: 「UTG」「MP」「CO」「BTN」「SB」「BB」\n  - X-axis: range from 「-2」 to 「+2」, zero line center\n  - Bars: UTG: -2 (red), MP: -1 (red), CO: +1 (green), BTN: +2 (green), SB: -1 (red), BB: 0 (gray)\n  - Each bar shows its value number at end tip\n  - Bottom note: 「BTN が唯一の +2 最強ポジション」\nLayout: horizontal bar chart, negative bars extend left in red, positive bars extend right in green.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "prompt": "Horizontal bar chart showing the Score threshold needed to open from each seat in 6-max poker. Display bars with Japanese labels:\n  - Title at top: 「ポジション別しきい値」\n  - Y-axis seat labels from top: 「UTG」「MP」「CO」「BTN」「SB」\n  - X-axis: range from 「16」 to 「24」\n  - Bars: UTG: 23 (red, タイト), MP: 22 (orange), CO: 20 (yellow), BTN: 18 (green, 広い), SB: 22 (orange)\n  - Each bar shows its threshold number at end tip\n  - Bottom note: 「ポジションは Score を補正せず、しきい値だけが変わる」\nLayout: horizontal bar chart with thresholds, color-coded by tightness.\nAspect ratio 16:9.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
     "aspectRatio": "16:9",
     "chapter": "第2章",
-    "section": "ポジション補正値",
-    "description": "UTG -2 〜 BTN +2 の各ポジション補正値を横棒グラフで視覚化"
+    "section": "ポジション別しきい値",
+    "description": "UTG 23 / MP 22 / CO 20 / BTN 18 / SB 22 の各ポジションのオープンしきい値を横棒グラフで視覚化"
   },
   {
     "name": "p02-fig3-card-value-ladder",
@@ -105,11 +105,11 @@
   },
   {
     "name": "p05-fig2-bonus-table",
-    "prompt": "Table infographic showing bonus points added to the hand score formula. Display a structured table with Japanese labels:\n  - Title at top: 「スコア ボーナス加点一覧」\n  - Table with columns: 「条件」「加点」「例」\n  - Row 1: 「ポケットペア」「+10」「AA, KK, 22」\n  - Row 2: 「スーテッド」「+2」「AKs, 76s」\n  - Row 3: 「コネクター（ギャップ0）」「+1」「KQo, 87o」\n  - Row 4: 「コネクター（1gap）」「+0.5」「KJo, 86o」\n  - Footer note: 「ボーナスは重複適用可」\nLayout: clean 3-column table with alternating row shading, bonus values in green.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "prompt": "Table infographic showing bonus points added to the hand score formula. Display a structured table with Japanese labels:\n  - Title at top: 「スコア ボーナス加点一覧」\n  - Table with columns: 「条件」「加点」「例」\n  - Row 1: 「ポケットペア」「+10」「AA, KK, 22」\n  - Row 2: 「スーテッド」「+3」「AKs, 76s」\n  - Row 3: 「コネクター（ギャップ0）」「+1」「KQo, 87o」\n  - Row 4: 「コネクター（1gap）」「+0.5」「KJo, 86o」\n  - Footer note: 「ボーナスは重複適用可」\nLayout: clean 3-column table with alternating row shading, bonus values in green.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
     "aspectRatio": "4:3",
     "chapter": "第5章",
     "section": "ボーナス加点",
-    "description": "ペア+10・スーテッド+2・コネクター+1のボーナス加点テーブル"
+    "description": "ペア+10・スーテッド+3・コネクター+1のボーナス加点テーブル"
   },
   {
     "name": "p05-fig3-penalty-table",
@@ -129,7 +129,7 @@
   },
   {
     "name": "p06-fig1-suited-ev-table",
-    "prompt": "Table infographic showing the EV advantage of suited hands over offsuit hands. Display a structured comparison table with Japanese labels:\n  - Title at top: 「スーテッドの期待値上乗せ」\n  - Table with columns: 「要素」「数値」「説明」\n  - Row 1: 「フラッシュ完成率」「約11%」「5枚中3枚以上同色の確率」\n  - Row 2: 「EV 上乗せ」「+3〜5%」「同ランクのオフスーツ比」\n  - Row 3: 「スコアボーナス」「+2点」「式への直接加点」\n  - Row 4: 「フラッシュドロー価値」「9アウツ」「ターン時の枚数」\n  - Bottom note: 「AKs vs AKo: 約3bb/100手の差」\nLayout: clean table with alternating rows, numeric values in green.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "prompt": "Table infographic showing the EV advantage of suited hands over offsuit hands. Display a structured comparison table with Japanese labels:\n  - Title at top: 「スーテッドの期待値上乗せ」\n  - Table with columns: 「要素」「数値」「説明」\n  - Row 1: 「フラッシュ完成率」「約11%」「5枚中3枚以上同色の確率」\n  - Row 2: 「EV 上乗せ」「+3〜5%」「同ランクのオフスーツ比」\n  - Row 3: 「スコアボーナス」「+3点」「式への直接加点」\n  - Row 4: 「フラッシュドロー価値」「9アウツ」「ターン時の枚数」\n  - Bottom note: 「AKs vs AKo: 約3bb/100手の差」\nLayout: clean table with alternating rows, numeric values in green.\nAspect ratio 4:3.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
     "aspectRatio": "4:3",
     "chapter": "第6章",
     "section": "スーテッドの価値",
@@ -217,7 +217,7 @@
   },
   {
     "name": "p12-fig1-3bet-score-formula",
-    "prompt": "Formula structure diagram for the 3-bet scoring formula. Display a centered equation with component boxes with Japanese labels:\n  - Title at top: 「3bet スコア計算式」\n  - Large formula: 「3betScore = H + L + ボーナス - ペナルティ + ポジション補正」\n  - Component breakdown boxes:\n    - 「H + L」→ 「カード強度（基本値）」\n    - 「ボーナス」→ 「ペア+10 / スーテッド+2」\n    - 「ペナルティ」→ 「ギャップ-1〜-4」\n    - 「ポジション補正」→ 「BTN+2 / SB+1 / UTG-2」\n  - Conclusion: 「しきい値以上 → 3bet 可」\nLayout: central formula with four connecting component boxes below.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "prompt": "Formula structure diagram for the 3-bet scoring formula. Display a centered equation with component boxes with Japanese labels:\n  - Title at top: 「3bet スコア計算式」\n  - Large formula: 「Score₃ = H + 0.5L + B + S + C - G - R」\n  - Component breakdown boxes:\n    - 「H + 0.5L」→ 「高カード重視（低カードは半分）」\n    - 「B（ブロッカー）」→ 「Aを含む+3 / Kを含む+2 / AK両方+4」\n    - 「S（スーテッド）」→ 「+2」\n    - 「C / G / R」→ 「コネクター・ギャップ・低カード補正」\n  - Conclusion: 「対UTG≥23 / 対MP≥21 / 対CO≥19 / 対BTN≥18」\nLayout: central formula with four connecting component boxes below.\nAspect ratio 1:1.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
     "aspectRatio": "1:1",
     "chapter": "第12章",
     "section": "3betスコア",
@@ -297,7 +297,7 @@
   },
   {
     "name": "p19-fig1-cheatsheet-overview",
-    "prompt": "Compact one-page cheatsheet overview for preflop play. Display a structured reference card with Japanese labels:\n  - Title at top: 「プリフロップ チートシート」\n  - Section 1: 「スコア式」「Score = H + L + ボーナス - ペナルティ」\n  - Section 2 table: 「ポジション」「しきい値」 — UTG:24 / MP:22 / CO:20 / BTN:18\n  - Section 3: 「ボーナス」「ペア +10 / スーテッド +2 / コネクター +1」\n  - Section 4: 「ペナルティ」「1gap -1 / 2gap -2 / 3gap -4」\n  - Section 5: 「3bet 加点」「BTN +2 / SB +1 / UTG -2」\n  - Bottom note: 「全ての判断はこのシートから」\nLayout: compact reference card with 5 labeled sections, small font, dense information.\nAspect ratio 3:4.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
+    "prompt": "Compact one-page cheatsheet overview for preflop play. Display a structured reference card with Japanese labels:\n  - Title at top: 「プリフロップ チートシート」\n  - Section 1: 「スコア式」「Score = H + L + ボーナス - ペナルティ」\n  - Section 2 table: 「ポジション」「しきい値」 — UTG:23 / MP:22 / CO:20 / BTN:18 / SB:22\n  - Section 3: 「ボーナス」「ペア +10 / スーテッド +3 / コネクター +1」\n  - Section 4: 「ペナルティ」「ギャップ4以上 -1 / 両方9未満 -1」\n  - Section 5: 「3bet ブロッカー」「Aを含む +3 / Kを含む +2 / AK両方 +4」\n  - Bottom note: 「全ての判断はこのシートから」\nLayout: compact reference card with 5 labeled sections, small font, dense information.\nAspect ratio 3:4.\nStyle: flat infographic with clean typography, educational book illustration, minimalist modern design. Color palette: primary navy blue #3b6ea8, accent green #28a745, warning red #dc3545, muted gray #666666 for body text, warm off-white #fafafa background. Use sans-serif fonts for all labels. Generous padding around elements. No photorealism, no 3D effects, no gradients. Professional Japanese book publication quality.",
     "aspectRatio": "3:4",
     "chapter": "第19章",
     "section": "チートシート",
