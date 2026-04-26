@@ -108,58 +108,60 @@ function handName(r: number, c: number): string {
 // ---- レンジテキスト定義 ----
 
 // プリフロップ RFI (Raise First In) レンジ
-// poker-book と同じ定義を使用
-const preflopRFIRange = `UTG（約10〜15%）
-ペア:     66+
-スーテッド: A9s+, A5s, KTs+, QTs+, JTs, T9s, 98s
-オフスート: AQo+
+// poker-books preflop/chapters/23-appendix.md の付録A より抽出
+// スコア式ベースのポジション別オープンレンジ
+const preflopRFIRange = `UTG（しきい値 24）
+ペア:     77+
+スーテッド: AKs, AQs, AJs, ATs, KQs, KJs, KTs, QJs, JTs, A9s
+オフスート: AKo, AQo, AJo
 
-HJ（約19〜22%）
+MP（しきい値 22）
+ペア:     66+
+スーテッド: A2s+, K9s+, QTs+, JTs, T9s, 98s, KQs, KJs, KTs, QJs, JTs, A9s, A8s
+オフスート: AKo, AQo, AJo, ATo, KQo
+
+CO（しきい値 20）
+ペア:     55+
+スーテッド: A2s+, K8s+, Q9s+, J9s+, T9s, 87s, 98s, A9s, A8s, A7s
+オフスート: A9o+, AJo+, KQo, KJo
+
+BTN（しきい値 18）
+ペア:     22+
+スーテッド: A2s+, K2s+, Q2s+, J2s+, T3s+, 94s+, 84s+, 74s+, 63s+, 53s+, 43s+
+オフスート: A2o+, K8o+, Q9o+, J9o+, T8o+, 98o
+
+SB（しきい値 20、特殊）
+ペア:     55+
+スーテッド: A2s+, K8s+, Q9s+, JTs, T9s
+オフスート: AJo+, KQo`;
+
+// フロップ プリフロップオープンレンジ
+// poker-books flop/chapters/02-who-leads.md より抽出
+// SRP（シングルレイズポット）でのポジション別オープンレンジ
+const flopCbetRange = `UTG（17〜18%）
+ペア:     TT+
+スーテッド: ATs+, A5s, KTs+, QTs+, JTs, T9s, 98s
+オフスート: AJo+, KQo
+
+MP/HJ（21〜22%）
 ペア:     55+
 スーテッド: A2s+, K6s+, Q9s+, J9s+, T9s, 98s, 87s, 76s
 オフスート: ATo+, KTo+, QTo+
 
-CO（約25〜30%）
+CO（27〜28%）
 ペア:     33+
 スーテッド: A2s+, K3s+, Q6s+, J8s+, T7s+, 97s+, 87s, 76s
 オフスート: A8o+, KTo+, QTo+, JTo
 
-BTN（約40〜48%）
-ペア:     33+（22も状況次第）
+BTN（43〜45%）
+ペア:     33+
 スーテッド: A2s+, K2s+, Q3s+, J4s+, T6s+, 96s+, 85s+, 75s+, 64s+, 53s+
 オフスート: A4o+, K8o+, Q9o+, J9o+, T8o+, 98o
 
-SB（約47〜62%）
-ペア:     22+
-スーテッド: A2s+, K2s+, Q2s+, J2s+, T3s+, 94s+, 84s+, 74s+, 63s+, 53s+, 43s
-オフスート: A2o+, K4o+, Q5o+, J7o+, T7o+, 96o+, 86o+, 76o`;
-
-// フロップ C-bet レンジ例
-// 弱いボード（A-high dry）での C-bet 戦略
-const flopCbetRange = `UTG（約 60〜70%）
-ペア:     TT+
-スーテッド: ATs+, KJs+, QJs, AJs
-オフスート: ATo+, KTo+, QTo+
-
-HJ（約 65〜75%）
-ペア:     99+
-スーテッド: A9s+, A5s, KQs, KTs+, QTs, JTs
-オフスート: ATo+, KTo+, QJo
-
-CO（約 70〜80%）
-ペア:     77+
-スーテッド: A2s+, K9s+, QTs+, JTs, T9s
-オフスート: A9o+, KTo+, QTo+, JTo
-
-BTN（約 75〜85%）
-ペア:     66+
-スーテッド: A2s+, K8s+, Q9s+, J9s+, T8s+, 98s, 87s
-オフスート: A8o+, K9o+, Q9o+, J9o+, T8o+
-
-SB（約 50〜60%）
-ペア:     TT+
-スーテッド: A9s+, A5s, KJs+, QTs+, JTs
-オフスート: AQo+`;
+SB（39〜47%）
+ペア:     55+
+スーテッド: A2s+, K8s+, Q9s+, J9s+, T9s, 98s, 87s, 76s
+オフスート: AJo+, KQo`;
 
 // ---- SVG生成関数 ----
 
