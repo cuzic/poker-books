@@ -193,9 +193,9 @@ GTOはSBでも7% 程度のコール頻度を持ちます。具体的には、次
 
 本書の「SBは3ベットかフォールドのみ」は、**初心者向けの強力な安全策**です。中〜上級者になったら、AJsやKQsでのSBコールを混ぜる選択肢を検討してください。
 
-<figure><img src="images/range-table-sb-3bet-vs-btn.png" alt="SB 3ベット vs BTN レンジ表。赤=バリュー（QQ+/JJ/TT/AQs+/AKo）、オレンジ=ブラフ（A5s〜A2s/A8o/KTo）、青=コールド・コール（AJs/KQs/KJs）" /><figcaption>SB 3ベット vs BTN — 基本は3ベットかフォールド。AJs・KQs・KJsのみコールド・コールの選択肢あり</figcaption></figure>
+<figure><img src="images/range-table-sb-3bet-vs-btn.png" alt="SB 3ベット vs BTN レンジ表。赤=バリュー（QQ+/JJ/TT/AQs+/AKo）、オレンジ=ブラフ（A5s〜A2s/A8o/KTo）、青=理論上の混合 cold-call 候補（AJs/KQs/KJs。実用 GTO は採用しない）" /><figcaption>SB 3ベット vs BTN — 実用 GTO は 3ベットかフォールドのみ。図中の青セルは理論上の混合戦略にだけ登場する候補で、本書は採用しない</figcaption></figure>
 
-<figure><img src="images/range-table-bb-defense-utg.png" alt="BBディフェンス vs UTG レンジ表。赤=3bet バリュー（QQ+/AKs/AKo/AQs）、オレンジ=3bet ブラフ（A5s〜A3s）、青=コール（約12〜15%）、灰=フォールド" /><figcaption>BBディフェンス vs UTG — フォールド約80%、コール約13%、3ベット約7%。弱いオフスートはほぼフォールド</figcaption></figure>
+<figure><img src="images/range-table-bb-defense-utg.png" alt="BBディフェンス vs UTG レンジ表。赤=3bet バリュー（QQ+/AKs/AKo/AQs）、オレンジ=3bet ブラフ（A5s〜A3s）、青=コール（約23%）、灰=フォールド" /><figcaption>BBディフェンス vs UTG — フォールド約71%、コール約23%、3ベット約6%（合計29%が守備）。弱いオフスートはほぼフォールド</figcaption></figure>
 
 <figure><img src="images/range-table-bb-defense-btn.png" alt="BBディフェンス vs BTN レンジ表。コール範囲が広く（約25〜30%）、3betブラフにKJs/QJsを追加。54s/65sまでコール" /><figcaption>BBディフェンス vs BTN — vs UTGより大幅に広いコール範囲。スーテッドコネクターや小ペアまで守備範囲に入る</figcaption></figure>
 
