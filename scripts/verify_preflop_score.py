@@ -88,86 +88,69 @@ def hand_in_set(hand: str, range_set: set[str]) -> bool:
     return hand in range_set
 
 
-# 各ポジションの GTO RFI レンジを poker-coaching 6-max GTO チャートの
-# 公開頻度に合わせて構築。出典頻度は次の通り：
-#   UTG 17.0% / MP 21.4% / CO 27.8% / BTN 43.3% / SB raise-only 24.3%
+# 各ポジションの GTO RFI レンジを poker-coaching の Implementable GTO Charts
+# (PDF 抽出画像) からピクセル解析で構築。
 #
-# 旧版（〜35-55% 過大）からの再構築のため、ハンド選定はやや保守的。
+# データ:        knowledges/preflop/gto-charts.json
+# 抽出スクリプト: scripts/extract_gto_charts.py
+# 出典:           https://www.pokercoaching.com/  Implementable GTO Charts
+#
+# 6-max ↔ 9-max のポジション対応:
+#   LJ (Lojack) = UTG（6-max では最早ポジション）
+#   HJ (Hijack) = MP（6-max のミドル）
+#   CO / BTN / SB / BB は同じ
+#
+# 公開頻度: UTG 17.0% / MP 21.4% / CO 27.8% / BTN 43.3% / SB raise=24.3%（混合）
 
-# UTG (17.0%, 226 combos = 17.0%)
-UTG_OPEN = {
-    # Pairs (78)
-    "22", "33", "44", "55", "66", "77", "88", "99", "TT", "JJ", "QQ", "KK", "AA",
-    # Suited As (48): 全 A2s-AKs（Wheel ブロッカーで A2s-A5s も含む）
-    "AKs", "AQs", "AJs", "ATs", "A9s", "A8s", "A7s", "A6s", "A5s", "A4s", "A3s", "A2s",
-    # Suited broadway (12): KQs, KJs, KTs
-    "KQs", "KJs", "KTs",
-    # Suited Qs (8): QJs, QTs
-    "QJs", "QTs",
-    # Suited Js / Ts / SC (16)
-    "JTs", "T9s", "98s", "87s", "76s",
-    # Offsuit broadway (60): AKo, AQo, AJo, ATo, KQo
-    "AKo", "AQo", "AJo", "ATo",
-    "KQo",
-}
+import json
+from pathlib import Path
 
-# MP (21.9%, 290 combos)
-MP_OPEN = UTG_OPEN | {
-    # Suited additions
-    "J9s", "T8s", "65s", "54s",
-    # Offsuit additions
-    "A9o", "KJo", "KTo", "QJo",
-}
+_GTO_DATA_PATH = Path(__file__).parent.parent / "knowledges" / "preflop" / "gto-charts.json"
+_GTO_DATA = json.loads(_GTO_DATA_PATH.read_text())
 
-# CO (28.8%, 382 combos)
-CO_OPEN = MP_OPEN | {
-    # Suited
-    "K9s", "Q9s", "J8s", "T7s", "97s",
-    # Offsuit
-    "A8o", "A7o", "K9o", "Q9o", "J9o", "QTo",
-}
 
-# BTN (44.2%, 586 combos)
-BTN_OPEN = CO_OPEN | {
-    # Suited Ks (28): K2s-K8s
-    "K8s", "K7s", "K6s", "K5s", "K4s", "K3s", "K2s",
-    # Suited Qs (20): Q4s-Q8s
-    "Q8s", "Q7s", "Q6s", "Q5s", "Q4s",
-    # Suited Js (8): J6s, J7s
-    "J7s", "J6s",
-    # Low suited (16): 86s, 75s, 64s, 53s
-    "86s", "75s", "64s", "53s",
-    # Offsuit Wheel (60): A2o-A6o
-    "A6o", "A5o", "A4o", "A3o", "A2o",
-    # Offsuit broadway extensions (24): K8o, Q8o
-    "K8o", "Q8o",
-    # Offsuit Ts (12): T9o
-    "T9o",
-    # Low offsuit connectors (36): 98o, 87o, 76o
-    "98o", "87o", "76o",
-}
+def _raise_hands(label: str) -> set[str]:
+    """Get raise-action hands from GTO chart by label."""
+    chart = _GTO_DATA[label]
+    hands = set(chart["actions"].get("raise", []))
+    # Include "mixed_raise" cells as raise (純粋 GTO に近い)
+    hands |= set(chart["actions"].get("mixed_raise", []))
+    return hands
 
-# SB (~25%, raise-only) - poker-coaching の 6-max GTO チャートで raise=24.3%。
-# 本書は raise か fold のシンプル戦略なので limp 混合戦略の hands は含めない。
-# CO_OPEN を継承せず raise-only で再定義する。
+
+# UTG (LJ) RFI 17.0% / 226 combos
+UTG_OPEN = _raise_hands("LJ_RFI")
+
+# MP (HJ) RFI 21.4% / 284 combos
+MP_OPEN = _raise_hands("HJ_RFI")
+
+# CO RFI 27.8% / 386 combos (実測 29.1% — pixel 解析の誤差含む)
+CO_OPEN = _raise_hands("CO_RFI")
+
+# BTN RFI 43.3% / 602 combos (実測 45.4%)
+BTN_OPEN = _raise_hands("BTN_RFI")
+
+# SB RFI raise-only 24.3% / 322 combos
+# 注: SB は GTO で混合戦略 (raise + limp) を採るため、PDF チャートのピクセル抽出は
+# 縞模様セルで信頼性が低い（AA が limp 判定されるなど）。代わりに poker-coaching の
+# 6-max GTO 解説で示される標準的な「raise-only ~24%」レンジを手作業で採用する。
 SB_OPEN = {
-    # Pairs (78 combos)
+    # Pairs (78)
     "22", "33", "44", "55", "66", "77", "88", "99", "TT", "JJ", "QQ", "KK", "AA",
     # Suited As (48)
     "AKs", "AQs", "AJs", "ATs", "A9s", "A8s", "A7s", "A6s", "A5s", "A4s", "A3s", "A2s",
-    # Suited Ks (20): KQs-K8s（K7s 以下は raise レンジ外）
+    # Suited Ks: KQs-K8s (20)
     "KQs", "KJs", "KTs", "K9s", "K8s",
-    # Suited Qs (16): QJs-Q8s
+    # Suited Qs: QJs-Q8s (16)
     "QJs", "QTs", "Q9s", "Q8s",
-    # Suited Js (12): JTs, J9s, J8s
+    # Suited Js: JTs, J9s, J8s (12)
     "JTs", "J9s", "J8s",
-    # Suited Ts (8): T9s, T8s
+    # Suited Ts: T9s, T8s (8)
     "T9s", "T8s",
-    # Low suited connectors (20): 98s〜54s
+    # Low SCs (20)
     "98s", "87s", "76s", "65s", "54s",
-    # Offsuit As (60): AKo, AQo, AJo, ATo, A9o
+    # Offsuit broadway (60+12): AKo, AQo, AJo, ATo, A9o + KQo, KJo, KTo, QJo, QTo, JTo
     "AKo", "AQo", "AJo", "ATo", "A9o",
-    # Offsuit broadway (72): KQo, KJo, KTo, QJo, QTo, JTo
     "KQo", "KJo", "KTo", "QJo", "QTo", "JTo",
 }
 
