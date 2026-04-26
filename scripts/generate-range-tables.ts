@@ -163,6 +163,25 @@ SB（39〜47%）
 スーテッド: A2s+, K8s+, Q9s+, J9s+, T9s, 98s, 87s, 76s
 オフスート: AJo+, KQo`;
 
+// ---- ハンドスコア計算（poker-book の式を参考） ----
+
+function calcHandScore(hand: string): number {
+  if (hand.length === 2) {
+    // ペア
+    const r = ri(hand[0]);
+    return 38 - r * 2;
+  }
+  const r1 = ri(hand[0]),
+    r2 = ri(hand[1]),
+    suited = hand[2] === "s";
+  const hc = Math.max(r1, r2);
+  const lc = Math.min(r1, r2);
+  let base = 30 - hc * 2;
+  if (hc - lc === 1) base += 2; // コネクター
+  if (suited) base += 1;
+  return Math.max(9, base);
+}
+
 // ---- SVG生成関数 ----
 
 function generateSVG(positions: Record<string, { hands: Set<string>; pct: string }>): string {
@@ -208,6 +227,84 @@ function generateSVG(positions: Record<string, { hands: Set<string>; pct: string
   return s;
 }
 
+// 単一ポジションのマトリックス生成
+function generateSinglePositionSVG(rangeText: string, positionName: string): string {
+  const positions = parseInput(rangeText);
+  const targetPos = positions[positionName];
+  if (!targetPos) throw new Error(`Position ${positionName} not found`);
+
+  const CW = 52,
+    CH = 52,
+    G = 2,
+    PX = 8,
+    PY = 8;
+  const tw = 13 * CW + 12 * G + PX * 2;
+  const legendH = 30;
+  const th = PY + 13 * CH + 12 * G + PY + legendH + PY;
+
+  let s = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${tw} ${th}" width="${tw}">`;
+  s += `<rect width="${tw}" height="${th}" rx="6" fill="#1a1a2e"/>`;
+
+  const color = DEF_COLORS[positionName as keyof typeof DEF_COLORS];
+  for (let r = 0; r < 13; r++) {
+    for (let c = 0; c < 13; c++) {
+      const h = handName(r, c);
+      const inRange = targetPos.hands.has(h);
+      const bg = inRange ? color : FOLD_COLOR;
+      const fg = inRange ? "#fff" : "#d0cec6";
+      const x = PX + c * (CW + G);
+      const y = PY + r * (CH + G);
+      s += `<rect x="${x}" y="${y}" width="${CW}" height="${CH}" rx="3" fill="${bg}"/>`;
+      s += `<text x="${x + CW / 2}" y="${y + CH / 2 + 6}" font-family="'Courier New', Courier, monospace" font-size="16" font-weight="700" fill="${fg}" text-anchor="middle" dominant-baseline="middle">${h}</text>`;
+    }
+  }
+
+  const legendY = PY + 13 * CH + 12 * G + PY + 6;
+  s += `<rect x="${PX}" y="${legendY}" width="14" height="14" rx="2" fill="${color}"/>`;
+  s += `<text x="${PX + 18}" y="${legendY + 11}" font-family="'Courier New', Courier, monospace" font-size="16" font-weight="700" fill="#fff">${positionName} Range ${targetPos.pct}</text>`;
+
+  s += `</svg>`;
+  return s;
+}
+
+// ハンドスコアヒートマップ生成
+function generateHandScoreHeatmapSVG(): string {
+  const CW = 52,
+    CH = 52,
+    G = 2,
+    PX = 8,
+    PY = 8;
+  const tw = 13 * CW + 12 * G + PX * 2;
+  const legendH = 30;
+  const th = PY + 13 * CH + 12 * G + PY + legendH + PY;
+
+  let s = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${tw} ${th}" width="${tw}">`;
+  s += `<rect width="${tw}" height="${th}" rx="6" fill="#1a1a2e"/>`;
+
+  for (let r = 0; r < 13; r++) {
+    for (let c = 0; c < 13; c++) {
+      const h = handName(r, c);
+      const score = calcHandScore(h);
+      // スコアを色にマッピング (9-38 → 濃い色から明るい色へ)
+      const normalized = (score - 9) / (38 - 9);
+      const hue = 200 - normalized * 100; // 青～赤系
+      const sat = 50 + normalized * 30;
+      const light = 30 + normalized * 30;
+      const bg = `hsl(${hue}, ${sat}%, ${light}%)`;
+      const x = PX + c * (CW + G);
+      const y = PY + r * (CH + G);
+      s += `<rect x="${x}" y="${y}" width="${CW}" height="${CH}" rx="3" fill="${bg}"/>`;
+      s += `<text x="${x + CW / 2}" y="${y + CH / 2 + 6}" font-family="'Courier New', Courier, monospace" font-size="16" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="middle">${h}</text>`;
+    }
+  }
+
+  const legendY = PY + 13 * CH + 12 * G + PY + 6;
+  s += `<text x="${PX}" y="${legendY + 11}" font-family="'Courier New', Courier, monospace" font-size="16" font-weight="700" fill="#fff">Hand Score: AA=38 ~ 72o=9</text>`;
+
+  s += `</svg>`;
+  return s;
+}
+
 async function generateImage(
   title: string,
   rangeText: string,
@@ -215,6 +312,35 @@ async function generateImage(
 ): Promise<void> {
   const positions = parseInput(rangeText);
   const svg = generateSVG(positions);
+  const resvg = new Resvg(svg, { fitTo: { mode: "original" } });
+  const pngBuffer = resvg.render().asPng();
+
+  await mkdir(outputPath.replace(/[/\\][^/\\]+$/, ""), { recursive: true });
+  await Bun.write(outputPath, pngBuffer);
+
+  console.log(`✓ ${title} 生成完了: ${outputPath}`);
+  console.log(`  ファイルサイズ: ${(pngBuffer.length / 1024).toFixed(1)} KB`);
+}
+
+async function generateSinglePositionImage(
+  title: string,
+  rangeText: string,
+  position: string,
+  outputPath: string
+): Promise<void> {
+  const svg = generateSinglePositionSVG(rangeText, position);
+  const resvg = new Resvg(svg, { fitTo: { mode: "original" } });
+  const pngBuffer = resvg.render().asPng();
+
+  await mkdir(outputPath.replace(/[/\\][^/\\]+$/, ""), { recursive: true });
+  await Bun.write(outputPath, pngBuffer);
+
+  console.log(`✓ ${title} 生成完了: ${outputPath}`);
+  console.log(`  ファイルサイズ: ${(pngBuffer.length / 1024).toFixed(1)} KB`);
+}
+
+async function generateHeatmapImage(title: string, outputPath: string): Promise<void> {
+  const svg = generateHandScoreHeatmapSVG();
   const resvg = new Resvg(svg, { fitTo: { mode: "original" } });
   const pngBuffer = resvg.render().asPng();
 
@@ -235,6 +361,51 @@ async function main(): Promise<void> {
   // フロップ C-bet レンジ表生成
   const flopPath = join(import.meta.dir, "..", "flop", "chapters", "images", "range-table-cbet.png");
   await generateImage("フロップ C-Bet", flopCbetRange, flopPath);
+
+  // --- 既存の付録画像をスタイル統一で再生成 ---
+  
+  // UTG レンジチャート
+  const utgChartPath = join(
+    import.meta.dir,
+    "..",
+    "preflop",
+    "chapters",
+    "images",
+    "p22-fig1-utg-range-chart.png"
+  );
+  await generateSinglePositionImage(
+    "UTG レンジチャート",
+    preflopRFIRange,
+    "UTG",
+    utgChartPath
+  );
+
+  // BTN レンジチャート
+  const btnChartPath = join(
+    import.meta.dir,
+    "..",
+    "preflop",
+    "chapters",
+    "images",
+    "p22-fig2-btn-range-chart.png"
+  );
+  await generateSinglePositionImage(
+    "BTN レンジチャート",
+    preflopRFIRange,
+    "BTN",
+    btnChartPath
+  );
+
+  // Hand Score ヒートマップ
+  const heatmapPath = join(
+    import.meta.dir,
+    "..",
+    "preflop",
+    "chapters",
+    "images",
+    "p22-fig3-hand-score-heatmap.png"
+  );
+  await generateHeatmapImage("Hand Score ヒートマップ", heatmapPath);
 
   console.log("\n✅ すべてのレンジテーブル生成が完了しました");
 }
