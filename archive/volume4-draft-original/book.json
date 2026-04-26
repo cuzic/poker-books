@@ -1,0 +1,48 @@
+{
+  "title": "迷わないポーカー④ ターン・リバー",
+  "subtitle": "連鎖で勝つ2ストリート判断",
+  "author": "川西智也",
+  "language": "ja",
+  "identifier": "urn:uuid:d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+  "publisher": "川西智也",
+  "description": "『迷わないポーカー② フロップ[基礎]』『③フロップ[応用]』の読者を対象に、ターン・リバーの判断を体系化した一冊。フロップで確立したBoardScore・HandScoreを軸に、ターンカードの5分類（オーバー/ブランク/ペア/フラッシュ/連結）とダブルバレル暗算式（TurnBarrelScore/TBS）を導入。リバーでは価値/ブラフ配分のAlpha式とブロッカー理論を解説。GTO ソルバー実測270+シナリオに基づく暗算フレームワーク。",
+  "cover": "src/chapters/images/cover.jpg",
+  "kdp": {
+    "keywords": [
+      "テキサスホールデム ターン リバー",
+      "ポーカー ダブルバレル",
+      "ポーカー ブロッカー",
+      "ポーカー バリューベット",
+      "GTO ターン",
+      "ポストフロップ 中級",
+      "ポーカー 暗算"
+    ],
+    "categories": [
+      "Kindle Store > 趣味・実用 > ゲーム",
+      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム",
+      "Kindle Store > ノンフィクション > 科学・テクノロジー"
+    ],
+    "bisac": [
+      "GAM004000",
+      "GAM002000",
+      "SPO047000"
+    ],
+    "bisacLabels": [
+      "GAMES & ACTIVITIES / Card Games / Poker",
+      "GAMES & ACTIVITIES / Card Games / General",
+      "SPORTS & RECREATION / Gambling"
+    ],
+    "targetAudience": "前作シリーズ②③を読了した中級者",
+    "pageReadDirection": "ltr",
+    "aiContentDisclosure": {
+      "textAssisted": true,
+      "imageGenerated": true,
+      "note": "Claude Code（Anthropic）を執筆補助ツールとして使用。最終的な編集・監修は著者が実施。"
+    },
+    "pricing": {
+      "currency": "JPY",
+      "listPrice": 1200,
+      "kdpSelect": true
+    }
+  }
+}

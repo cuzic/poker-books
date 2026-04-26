@@ -1,0 +1,48 @@
+{
+  "title": "迷わないポーカー④ ターン",
+  "subtitle": "リバーから逆算するターン総合判断",
+  "author": "川西智也",
+  "language": "ja",
+  "identifier": "urn:uuid:d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9b",
+  "publisher": "川西智也",
+  "description": "『迷わないポーカー② フロップ[基礎]』および『⑤リバー』の読者を対象に、ターン判断を「リバーからの逆算（backward induction）」で体系化した一冊。リバーで使う α 式・後手スコア・ブロッカー論を既出概念として活用し、ターンで「リバーの α 値の予測」「リバーで効くブロッカーをターンで残す」といった総合判断を可能にする。ターンカードの5分類（ペア/オーバーカード/ブランク/フラッシュ/コネクター）と暗算式『バレルスコア』を導入。GTOソルバー実測270シナリオに基づく17セル一致表を掲載。本書はシリーズで最も総合判断を要する『ポストフロップの最終総合書』として位置づけられる。",
+  "cover": "src/chapters/images/cover.jpg",
+  "kdp": {
+    "keywords": [
+      "テキサスホールデム ターン",
+      "ポーカー ダブルバレル",
+      "バレルスコア",
+      "ポーカー 暗算",
+      "GTO ターン",
+      "ポストフロップ 中級",
+      "ターンカード 5分類"
+    ],
+    "categories": [
+      "Kindle Store > 趣味・実用 > ゲーム",
+      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム",
+      "Kindle Store > ノンフィクション > 科学・テクノロジー"
+    ],
+    "bisac": [
+      "GAM004000",
+      "GAM002000",
+      "SPO047000"
+    ],
+    "bisacLabels": [
+      "GAMES & ACTIVITIES / Card Games / Poker",
+      "GAMES & ACTIVITIES / Card Games / General",
+      "SPORTS & RECREATION / Gambling"
+    ],
+    "targetAudience": "巻2（フロップ基礎）と巻5（リバー）を読了した中級〜上級者。リバーで使う α 式・後手スコア・ブロッカー論を既出として活用するため、巻5 を先に読むことを推奨する。",
+    "pageReadDirection": "ltr",
+    "aiContentDisclosure": {
+      "textAssisted": true,
+      "imageGenerated": true,
+      "note": "Claude Code（Anthropic）を執筆補助ツールとして使用。最終的な編集・監修は著者が実施。"
+    },
+    "pricing": {
+      "currency": "JPY",
+      "listPrice": 1500,
+      "kdpSelect": true
+    }
+  }
+}

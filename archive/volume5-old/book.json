@@ -1,0 +1,48 @@
+{
+  "title": "迷わないポーカー⑤ リバー",
+  "subtitle": "リバー判断の配分とコミット",
+  "author": "川西智也",
+  "language": "ja",
+  "identifier": "urn:uuid:d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9c",
+  "publisher": "川西智也",
+  "description": "『迷わないポーカー』シリーズ第5巻、リバー編。リバーの「確定ゲーム」特性に焦点を当て、α式によるバリュー/ブラフ配分とブロッカー論を実戦に展開。後手スコアのリバー版でコール/CR/フォールドを数値判断。ポットコミットメント、3betポット、SB vs BB、マルチウェイなど応用シナリオも網羅。本書は単独でも読めるよう、概念と暗算式を最初の8章で網羅し、後半でリバー特化の戦術を扱う。",
+  "cover": "src/chapters/images/cover.jpg",
+  "kdp": {
+    "keywords": [
+      "テキサスホールデム リバー",
+      "ポーカー バリューベット",
+      "ポーカー ブロッカー",
+      "ポーカー オーバーベット",
+      "α式 アルファ",
+      "ポットコミットメント",
+      "ポーカー 上級"
+    ],
+    "categories": [
+      "Kindle Store > 趣味・実用 > ゲーム",
+      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム",
+      "Kindle Store > ノンフィクション > 科学・テクノロジー"
+    ],
+    "bisac": [
+      "GAM004000",
+      "GAM002000",
+      "SPO047000"
+    ],
+    "bisacLabels": [
+      "GAMES & ACTIVITIES / Card Games / Poker",
+      "GAMES & ACTIVITIES / Card Games / General",
+      "SPORTS & RECREATION / Gambling"
+    ],
+    "targetAudience": "巻2/巻3 読了の中級者。巻4 を未読でも読めるよう独立した構成。",
+    "pageReadDirection": "ltr",
+    "aiContentDisclosure": {
+      "textAssisted": true,
+      "imageGenerated": true,
+      "note": "Claude Code（Anthropic）を執筆補助ツールとして使用。最終的な編集・監修は著者が実施。"
+    },
+    "pricing": {
+      "currency": "JPY",
+      "listPrice": 1500,
+      "kdpSelect": true
+    }
+  }
+}
