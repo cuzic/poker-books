@@ -28,23 +28,42 @@ interface Chapter {
 }
 
 type OutputFormat = "html" | "xhtml" | "epub" | "site" | "all";
-type BookId = "preflop" | "flop" | "flop-advanced";
+type BookId = "preflop" | "flop" | "flop-advanced" | "volume4" | "volume5" | "volume6";
 
 const ROOT = join(import.meta.dir, "..");
-const BOOKS: BookId[] = ["preflop", "flop", "flop-advanced"];
+const BOOKS: BookId[] = ["preflop", "flop", "flop-advanced", "volume4", "volume5", "volume6"];
 const BOOK_LABELS: Record<BookId, string> = {
-  preflop: "第1巻　プリフロップは計算で勝つ",
-  flop: "第2巻　フロップは構造で勝つ",
-  "flop-advanced": "第3巻　フロップは読み合いで勝つ",
+  preflop: "迷わないポーカー① プリフロップ",
+  flop: "迷わないポーカー② フロップ[基礎]",
+  "flop-advanced": "迷わないポーカー③ フロップ[応用]",
+  volume4: "迷わないポーカー④ ターン・リバー[基礎]",
+  volume5: "迷わないポーカー⑤ ターン・リバー[応用]",
+  volume6: "迷わないポーカー⑥ トーナメント",
 };
 
+// 各 book ID とディレクトリの対応（同名でない場合のみ記載）
+const BOOK_DIRS: Partial<Record<BookId, string>> = {};
+
+const EPUB_FILENAMES: Record<BookId, string> = {
+  preflop: "mayowanai-poker-01-preflop.epub",
+  flop: "mayowanai-poker-02-flop.epub",
+  "flop-advanced": "mayowanai-poker-03-flop-advanced.epub",
+  volume4: "mayowanai-poker-04-turn-river-basic.epub",
+  volume5: "mayowanai-poker-05-turn-river-advanced.epub",
+  volume6: "mayowanai-poker-06-tournament.epub",
+};
+
+function bookDir(bookId: BookId): string {
+  return BOOK_DIRS[bookId] ?? bookId;
+}
+
 async function loadBookConfig(bookId: BookId): Promise<BookConfig> {
-  const configPath = join(ROOT, bookId, "book.json");
+  const configPath = join(ROOT, bookDir(bookId), "book.json");
   return await Bun.file(configPath).json();
 }
 
 async function getChapterFiles(bookId: BookId): Promise<string[]> {
-  const chaptersDir = join(ROOT, bookId, "chapters");
+  const chaptersDir = join(ROOT, bookDir(bookId), "chapters");
   const files = await readdir(chaptersDir);
   return files
     .filter((f) => extname(f) === ".md")
@@ -182,7 +201,7 @@ async function buildXhtml(bookId: BookId): Promise<void> {
 }
 
 async function embedImages(bookId: BookId, content: string): Promise<string> {
-  const imagesDir = join(ROOT, bookId, "chapters", "images");
+  const imagesDir = join(ROOT, bookDir(bookId), "chapters", "images");
   const imgRegex = /src="images\/([^"]+)"/g;
   const matches = [...content.matchAll(imgRegex)];
   let result = content;
@@ -226,7 +245,7 @@ async function buildEpub(bookId: BookId, config: BookConfig): Promise<void> {
   let coverPath = "";
   let coverExists = false;
   if (config.cover) {
-    coverPath = join(ROOT, bookId, config.cover);
+    coverPath = join(ROOT, bookDir(bookId), config.cover);
     coverExists = await Bun.file(coverPath).exists();
   }
   const epubOptions: Parameters<typeof EPub>[0] = {
@@ -243,13 +262,13 @@ async function buildEpub(bookId: BookId, config: BookConfig): Promise<void> {
     epubOptions.cover = coverPath;
   }
   const epub = await EPub(epubOptions, epubChapters);
-  const outPath = join(outDir, "book.epub");
+  const outPath = join(outDir, EPUB_FILENAMES[bookId]);
   await Bun.write(outPath, epub);
   console.log(`[${bookId}] epub built → ${outPath}`);
 }
 
 async function copyImages(bookId: BookId, siteDir: string): Promise<void> {
-  const srcImagesDir = join(ROOT, bookId, "chapters", "images");
+  const srcImagesDir = join(ROOT, bookDir(bookId), "chapters", "images");
   const destImagesDir = join(siteDir, "images");
   const chapterImagesDir = join(siteDir, "chapters", "images");
   try {
@@ -336,7 +355,7 @@ async function buildSite(bookId: BookId, config: BookConfig): Promise<void> {
   </header>
   <nav class="book-nav">
     <a href="single.html" class="single-page-link">全章を1ページで読む</a>
-    <a href="book.epub" class="epub-link" download>EPUBをダウンロード</a>
+    <a href="${EPUB_FILENAMES[bookId]}" class="epub-link" download>EPUBをダウンロード</a>
     <a href="../index.html" class="toc">← シリーズ一覧へ</a>
   </nav>
   <main>
@@ -356,10 +375,11 @@ ${tocItems}
   await Bun.write(join(siteDir, "style.css"), css);
   await Bun.write(join(chaptersDir, "style.css"), css);
 
-  const epubSrc = join(ROOT, "dist", bookId, "book.epub");
+  const epubFilename = EPUB_FILENAMES[bookId];
+  const epubSrc = join(ROOT, "dist", bookId, epubFilename);
   const epubFile = Bun.file(epubSrc);
   if (await epubFile.exists()) {
-    await Bun.write(join(siteDir, "book.epub"), epubFile);
+    await Bun.write(join(siteDir, epubFilename), epubFile);
   }
 
   await copyImages(bookId, siteDir);
@@ -389,12 +409,12 @@ async function buildLanding(): Promise<void> {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>計算で勝つテキサスホールデム シリーズ</title>
+  <title>迷わないポーカー シリーズ</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="book-header">
-    <h1>計算で勝つテキサスホールデム</h1>
+    <h1>迷わないポーカー</h1>
     <p class="subtitle">暗算できる計算式で判断する、初級者〜中級者向けの書籍シリーズ</p>
   </header>
   <main class="landing">
@@ -438,7 +458,7 @@ async function main(): Promise<void> {
   const bookIndex = args.indexOf("--book");
   if (bookIndex !== -1 && args[bookIndex + 1]) {
     const requested = args[bookIndex + 1] as BookId | "all";
-    if (["preflop", "flop", "all"].includes(requested)) {
+    if (["preflop", "flop", "flop-advanced", "volume4", "volume5", "volume6", "all"].includes(requested)) {
       bookArg = requested;
     }
   }
