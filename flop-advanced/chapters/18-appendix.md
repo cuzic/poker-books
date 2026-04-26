@@ -53,18 +53,18 @@
 
 ### シリーズ本
 
-- 川西智也『プリフロップは計算で勝つ』（2026）— 巻1
-- 川西智也『フロップ編（仮題）』（2026）— 巻2
-- 川西智也『フロップ上級編（仮題）』（2026）— 本書 （巻3）
-- 川西智也『ターン・リバー編（仮題）』（執筆予定）— 巻4
+- 川西智也『迷わないポーカー① プリフロップ』（2026）— 巻1
+- 川西智也『迷わないポーカー② フロップ[基礎]』（2026）— 巻2
+- 川西智也『迷わないポーカー③ フロップ[応用]』（2026）— 本書 （巻3）
+- 川西智也『迷わないポーカー④ ターン・リバー』（執筆予定）— 巻4
 
 ### 謝辞
 
-本書はGTO Wizardの公開データ、古典ポーカー理論、そして巻2読者からのフィードバックなしには成立しませんでした。とくにBDM v5の設計には30ボードのGTO実測データが不可欠で、GTO Wizard Blogの記事群に深く感謝します。
+本書はGTO Wizardの公開データ、古典ポーカー理論、そして巻2読者からのフィードバックなしには成立しませんでした。とくに精密レンジスコアの設計には30ボードのGTO実測データが不可欠で、GTO Wizard Blogの記事群に深く感謝します。
 
 ---
 
-## 付録 B　BDM v5 完全係数表 (拡張版)
+## 付録 B　精密レンジスコア 完全係数表 (拡張版)
 
 巻2付録Dの係数表をそのまま踏襲しつつ、本書の第1章で扱った根拠データを付加した完全版。
 
@@ -113,24 +113,25 @@ CBet% = 90 − HighCardDeficit − TextureCost − SuitPenalty − Extra
 | E3 | top=A/K/Q + mid=T + 2-tone + low<T | -15 | AT7ss, KJ4ss |
 | E4 | top=Q かつ mid<T かつ 2-tone | -10 | Q83ss, Q72ss |
 
-### Pair Override 表 (7 パターン)
+### Pair Override 表 (8 パターン)
 
 | パターン | 頻度 | 根拠ボード |
 | --- | :---: | --- |
-| ハイペア (QQ+) + 高キッカー (≥8) | 82% | AAK, KK9, QQT |
-| ハイペア (QQ+) + 低キッカー (<8) | 50% | KK4, QQ3 |
+| AA ペア (AA-X) | 90% | AA7, AAK |
+| KK ペア (KK-X) | 85% | KK4, KK9, KKJ |
+| QQ ペア (QQ-X) | 80% | QQ3, QQT |
 | ミドルペア (TT-88) | 75% | TT5, 995, 883 |
 | ローペア (77 以下) | 68% | 772, 665, 553 |
-| A/K ハイ + ローペア (ペア ≤7) | 45% | K44, A33, K22 |
-| A/K ハイ + 中ペア (ペア 8-T) | 76% | A99, K88, A88 |
+| A/K ハイ + ローペア (ペア ≤5) | 45% | K44, A33, K22 |
+| A/K ハイ + 中ペア (ペア 6-T) | 76% | A99, K88, A88 |
 | Q/J ハイ + ローペア | 55% | Q33, J55 |
 
 ### Ablation 分析 (Python 再現)
 
 ```python
-# scripts/bdm.py 参照
+# scripts/range_score.py 参照
 # 30 ボードの検証結果:
-# 完全 BDM v5: R² = 0.914, MAE = 5.27
+# 完全 精密レンジスコア: R² = 0.914, MAE = 5.27
 # − SuitPenalty: R² = 0.651 (-0.263)
 # − Pair override: R² = 0.764 (-0.150)
 # − Extra: R² = 0.840 (-0.074)
@@ -141,7 +142,7 @@ CBet% = 90 − HighCardDeficit − TextureCost − SuitPenalty − Extra
 **965r のみ**（|残差| ≥ 15のボード）:。
 
 - GTO実測： 60%
-- BDM v5予測： 40%
+- 精密レンジスコア予測： 40%
 - 残差： +20%
 - 原因： 9-6-5のmiddle=6は通常のロー連続と異なる特殊ドライ
 
@@ -169,7 +170,9 @@ v6（次回改訂）で追加ルール検討予定。
 | 4d | J 以下 9- トップ + 連続 + rainbow | 876r, 965r, 632r | 48-62% |
 | 5a | 3 枚モノトーン + broadway | AKQmono | 15% |
 | 5b | 3 枚モノトーン + low | 987mono | 20% |
-| 6a | QQ+ ペア + キッカー ≥8 | AAK, KK9 | 82% |
+| 6a | AA ペア | AA7, AAK | 90% |
+| 6b | KK ペア | KK4, KK9 | 85% |
+| 6c | QQ ペア | QQ3, QQT | 80% |
 | 6d | 77 以下ペア | 772 | 70% |
 | 7a | A/K ハイ + ペア≤7 | K44 | 43% |
 | 7b | A/K ハイ + ペア 8-T | A99 | 78% |
@@ -260,8 +263,8 @@ TAGGY (境界): VPIP 17, VPIP 26-27 など
   3bet ブラフ: 5 → 10-15%
 
 ディフェンス:
-  相手の 33% CBet: MDF 通り (75%)
-  相手の 75% CBet: ほぼフォールド (MDF 無視)
+  相手の 33% CBet: 後手下限ライン 通り (75%)
+  相手の 75% CBet: ほぼフォールド (後手下限 無視)
   相手の オーバーベット: 完全フォールド (TPTK でも)
 
 サイズ:
@@ -279,7 +282,7 @@ TAGGY (境界): VPIP 17, VPIP 26-27 など
   3bet ブラフ: 標準 (5-8%)
 
 ディフェンス:
-  MDF 通り、サイズ別に計算
+  後手下限ライン 通り、サイズ別に計算
   境界ハンドで R2 適用
 
 サイズ:
@@ -296,8 +299,8 @@ TAGGY (境界): VPIP 17, VPIP 26-27 など
   3bet ブラフ: 5 → 3-5% (コールバックされる)
 
 ディフェンス:
-  相手の 33% CBet: 広くコール (MDF +10%)
-  相手の 75% CBet: MDF +10%、ブラフキャッチ積極
+  相手の 33% CBet: 広くコール (後手下限確率 +10%)
+  相手の 75% CBet: 後手下限確率 +10%、ブラフキャッチ積極
   相手のトリプルバレル: コールダウン
 
 サイズ:
@@ -362,7 +365,7 @@ TAGGY (境界): VPIP 17, VPIP 26-27 など
 
 ## 付録 G　よくある誤解 Q&A 上級編
 
-### Q1: BDM v5 の係数は全部覚えるべきか
+### Q1: 精密レンジスコア の係数は全部覚えるべきか
 
 **A**: 実戦では不要。5つの重要型（型2c、型2e、型4d、型7a、型7b）だけ覚えればR² 0.90相当の精度。残りは巻2の7型で近似可能。
 
@@ -394,7 +397,7 @@ TAGGY (境界): VPIP 17, VPIP 26-27 など
 
 **A**: 対プロ戦 (NL1000+) では必要。それ以下ではFPSのリスクが上回る。
 
-### Q9: 3bet ポットでも BDM v5 は使える
+### Q9: 3bet ポットでも 精密レンジスコア は使える
 
 **A**: 使えるが、SPRが低いため **+5% の補正** を加える。4betポットは別モデル（次巻で扱う）。
 
@@ -427,18 +430,18 @@ TAGGY (境界): VPIP 17, VPIP 26-27 など
 
 ### 再現スクリプト
 
-本書のモデル（BDM v5含む）はPythonスクリプトで実装。
+本書のモデル（精密レンジスコア含む）はPythonスクリプトで実装。
 
 ```bash
 cd poker-books/
-python3 scripts/bdm.py
+python3 scripts/range_score.py
 ```
 
 出力例：。
 
 ```
-D3    : R² = 0.873  MAE = 6.03  r = 0.938
-BDM v5: R² = 0.914  MAE = 5.27  r = 0.962
+簡易レンジスコア    : R² = 0.873  MAE = 6.03  r = 0.938
+精密レンジスコア: R² = 0.914  MAE = 5.27  r = 0.962
 ```
 
 ### 検証プロトコル
@@ -460,39 +463,39 @@ BDM v5: R² = 0.914  MAE = 5.27  r = 0.962
 
 ## 付録 I　検証スクリプト リファレンス
 
-### `scripts/bdm.py` の主要関数
+### `scripts/range_score.py` の主要関数
 
 ```python
-def d3(ranks: list[int], suits: list[str], paired: bool) -> int:
-    """D3 暗算モデル (4 ステップ、10 数字)"""
+def kantan_score(ranks: list[int], suits: list[str], paired: bool) -> int:
+    """簡易レンジスコア 暗算モデル (4 ステップ、10 数字)"""
     ...
 
-def bdm_v5(ranks: list[int], suits: list[str], paired: bool) -> int:
-    """BDM v5 精密モデル (4 項減算式 + Extra 4 ルール + Pair override)"""
+def seimitsu_score(ranks: list[int], suits: list[str], paired: bool) -> int:
+    """精密レンジスコア 精密モデル (4 項減算式 + Extra 4 ルール + Pair override)"""
     ...
 ```
 
 ### 使用例
 
 ```python
-from bdm import d3, bdm_v5
+from range_score import kantan_score, seimitsu_score
 from verify_flop_gto import parse_board
 
 ranks, suits, paired = parse_board("K72r")
-print(f"D3: {d3(ranks, suits, paired)}%")      # → 85%
-print(f"BDM v5: {bdm_v5(ranks, suits, paired)}%")  # → 90%
+print(f"簡易レンジスコア: {kantan_score(ranks, suits, paired)}%")      # → 85%
+print(f"精密レンジスコア: {seimitsu_score(ranks, suits, paired)}%")  # → 90%
 ```
 
 ### 拡張ポイント (巻4 に向けて)
 
 ```python
 # 巻4 でターン対応を追加する場合:
-def bdm_turn(flop_ranks, turn_card, flop_action, ...) -> int:
+def range_score_turn(flop_ranks, turn_card, flop_action, ...) -> int:
     """ターン CBet 頻度を予測"""
     ...
 
 # リバー対応:
-def bdm_river(flop_ranks, turn, river, history, ...) -> int:
+def range_score_river(flop_ranks, turn, river, history, ...) -> int:
     """リバー アクション頻度を予測"""
     ...
 ```
@@ -501,15 +504,15 @@ def bdm_river(flop_ranks, turn, river, history, ...) -> int:
 
 ```bash
 # 30 ボードの全予測値を出力
-python3 scripts/bdm.py
+python3 scripts/range_score.py
 
 # 特定ボードのモデル比較
 python3 -c "
-from scripts.bdm import d3, bdm_v5
+from scripts.range_score import kantan_score, seimitsu_score
 from scripts.verify_flop_gto import parse_board
 for board in ['K72r', 'A82r', '965r', 'KQTss']:
     r, s, p = parse_board(board)
-    print(f'{board}: D3={d3(r,s,p)}%, BDM v5={bdm_v5(r,s,p)}%')
+    print(f'{board}: 簡易レンジスコア={kantan_score(r,s,p)}%, 精密レンジスコア={seimitsu_score(r,s,p)}%')
 "
 ```
 
@@ -519,7 +522,7 @@ for board in ['K72r', 'A82r', '965r', 'KQTss']:
 
 本書（巻3）は、**エクスプロイト上級** と **レンジ推定** の体系化を試みました。巻2で培ったGTO基礎の上に、相手を読み、搾取し、メタゲームに持ち込む道具を提供します。
 
-次巻 **巻4『ターン・リバー編 (仮題)』** で、フロップ以降のストリート判断を扱います。本書のBDM v5 + レンジ推定 + 搾取戦略を、ターン・リバーの多ストリート思考に拡張していきます。
+次巻 **巻4『ターン・リバー編 (仮題)』** で、フロップ以降のストリート判断を扱います。本書の精密レンジスコア + レンジ推定 + 搾取戦略を、ターン・リバーの多ストリート思考に拡張していきます。
 
 お読みいただきありがとうございました。実戦での上達を願っています。
 
