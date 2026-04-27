@@ -1,0 +1,40 @@
+{
+  "scenario_id": "mdf_106_BoardTrips_tight",
+  "board": [
+    "9c",
+    "9h",
+    "4s",
+    "9d",
+    "2h"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "elapsed_sec": 12.6,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.3293,
+      "BET 20.000000": 0.67,
+      "BET 80.000000": 0.0007
+    },
+    "oop_response_to_bet": {
+      "BET 20.000000": {
+        "CALL": 0.1106,
+        "RAISE 80.000000": 0.0699,
+        "FOLD": 0.8196
+      },
+      "BET 80.000000": {
+        "CALL": 0.087,
+        "FOLD": 0.913
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.8676,
+      "BET 20.000000": 0.073,
+      "BET 80.000000": 0.0595
+    },
+    "mdf_measured": {
+      "BET 20.000000": 0.1804,
+      "BET 80.000000": 0.087
+    }
+  }
+}

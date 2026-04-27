@@ -1,0 +1,40 @@
+{
+  "scenario_id": "river_vb_103_Jlow_alpha43",
+  "board": [
+    "7s",
+    "5d",
+    "3c",
+    "2h",
+    "4s"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "elapsed_sec": 11.3,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.7579,
+      "BET 14.000000": 0.1618,
+      "BET 80.000000": 0.0803
+    },
+    "oop_response_to_bet": {
+      "BET 14.000000": {
+        "CALL": 0.5214,
+        "RAISE 80.000000": 0.1251,
+        "FOLD": 0.3535
+      },
+      "BET 80.000000": {
+        "CALL": 0.2379,
+        "FOLD": 0.7621
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.6373,
+      "BET 12.000000": 0.2215,
+      "BET 80.000000": 0.1412
+    },
+    "alpha_implied": {
+      "BET 14.000000": 0.3535,
+      "BET 80.000000": 0.7621
+    }
+  }
+}

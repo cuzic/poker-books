@@ -1,0 +1,40 @@
+{
+  "scenario_id": "mdf_106_StraightDone_tight",
+  "board": [
+    "9c",
+    "8h",
+    "7d",
+    "6s",
+    "Jc"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "elapsed_sec": 12.1,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.9966,
+      "BET 20.000000": 0.0033,
+      "BET 80.000000": 0.0001
+    },
+    "oop_response_to_bet": {
+      "BET 20.000000": {
+        "CALL": 0.3347,
+        "RAISE 80.000000": 0.183,
+        "FOLD": 0.4823
+      },
+      "BET 80.000000": {
+        "CALL": 0.2654,
+        "FOLD": 0.7346
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.4782,
+      "BET 20.000000": 0.4981,
+      "BET 80.000000": 0.0237
+    },
+    "mdf_measured": {
+      "BET 20.000000": 0.5177,
+      "BET 80.000000": 0.2654
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "scenario_id": "river_vb_103_Ifullhouse_alpha555",
+  "board": [
+    "Ac",
+    "Ah",
+    "5d",
+    "5h",
+    "Kc"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "elapsed_sec": 11.5,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.8886,
+      "BET 14.000000": 0.1113,
+      "BET 80.000000": 0.0001
+    },
+    "oop_response_to_bet": {
+      "BET 14.000000": {
+        "CALL": 0.4985,
+        "RAISE 80.000000": 0.2213,
+        "FOLD": 0.2802
+      },
+      "BET 80.000000": {
+        "CALL": 0.3138,
+        "FOLD": 0.6862
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.303,
+      "BET 15.000000": 0.67,
+      "BET 80.000000": 0.027
+    },
+    "alpha_implied": {
+      "BET 14.000000": 0.2802,
+      "BET 80.000000": 0.6862
+    }
+  }
+}

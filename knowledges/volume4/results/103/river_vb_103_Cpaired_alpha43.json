@@ -1,0 +1,40 @@
+{
+  "scenario_id": "river_vb_103_Cpaired_alpha43",
+  "board": [
+    "Kc",
+    "7d",
+    "2s",
+    "7h",
+    "Ac"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "elapsed_sec": 11.6,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.8311,
+      "BET 14.000000": 0.1441,
+      "BET 80.000000": 0.0248
+    },
+    "oop_response_to_bet": {
+      "BET 14.000000": {
+        "CALL": 0.4892,
+        "RAISE 80.000000": 0.1638,
+        "FOLD": 0.347
+      },
+      "BET 80.000000": {
+        "CALL": 0.2487,
+        "FOLD": 0.7513
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.4802,
+      "BET 12.000000": 0.4631,
+      "BET 80.000000": 0.0567
+    },
+    "alpha_implied": {
+      "BET 14.000000": 0.347,
+      "BET 80.000000": 0.7513
+    }
+  }
+}

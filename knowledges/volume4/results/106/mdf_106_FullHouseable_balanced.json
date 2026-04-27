@@ -1,0 +1,40 @@
+{
+  "scenario_id": "mdf_106_FullHouseable_balanced",
+  "board": [
+    "Ac",
+    "Ah",
+    "5d",
+    "5h",
+    "Kc"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "elapsed_sec": 11.6,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.9654,
+      "BET 20.000000": 0.0344,
+      "BET 80.000000": 0.0002
+    },
+    "oop_response_to_bet": {
+      "BET 20.000000": {
+        "CALL": 0.2913,
+        "RAISE 80.000000": 0.2336,
+        "FOLD": 0.4751
+      },
+      "BET 80.000000": {
+        "CALL": 0.2615,
+        "FOLD": 0.7385
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.4968,
+      "BET 20.000000": 0.4756,
+      "BET 80.000000": 0.0276
+    },
+    "mdf_measured": {
+      "BET 20.000000": 0.5249,
+      "BET 80.000000": 0.2615
+    }
+  }
+}

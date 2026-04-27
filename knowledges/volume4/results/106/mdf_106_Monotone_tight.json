@@ -1,0 +1,40 @@
+{
+  "scenario_id": "mdf_106_Monotone_tight",
+  "board": [
+    "Ah",
+    "Kh",
+    "Qh",
+    "3s",
+    "2d"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "elapsed_sec": 11.8,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.336,
+      "BET 20.000000": 0.6563,
+      "BET 80.000000": 0.0078
+    },
+    "oop_response_to_bet": {
+      "BET 20.000000": {
+        "CALL": 0.3097,
+        "RAISE 80.000000": 0.1732,
+        "FOLD": 0.5171
+      },
+      "BET 80.000000": {
+        "CALL": 0.2419,
+        "FOLD": 0.7581
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.6989,
+      "BET 20.000000": 0.1638,
+      "BET 80.000000": 0.1373
+    },
+    "mdf_measured": {
+      "BET 20.000000": 0.4829,
+      "BET 80.000000": 0.2419
+    }
+  }
+}

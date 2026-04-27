@@ -1,0 +1,43 @@
+{
+  "scenario_id": "blocker_105_AA_vs_88_5",
+  "board": [
+    "7h",
+    "5s",
+    "4d",
+    "8c",
+    "2h"
+  ],
+  "pot_bb": 25,
+  "effective_stack_bb": 75,
+  "elapsed_sec": 12.3,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.6228,
+      "BET 13.000000": 0.0016,
+      "BET 25.000000": 0.004,
+      "BET 75.000000": 0.3716
+    },
+    "oop_response_to_bet": {
+      "BET 13.000000": {
+        "CALL": 0.6851,
+        "RAISE 75.000000": 0.0774,
+        "FOLD": 0.2375
+      },
+      "BET 25.000000": {
+        "CALL": 0.6072,
+        "RAISE 75.000000": 0.0108,
+        "FOLD": 0.382
+      },
+      "BET 75.000000": {
+        "CALL": 0.2579,
+        "FOLD": 0.7421
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.8623,
+      "BET 8.000000": 0.126,
+      "BET 19.000000": 0.0097,
+      "BET 75.000000": 0.002
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "scenario_id": "mdf_106_LowStraight_balanced",
+  "board": [
+    "7s",
+    "5d",
+    "3c",
+    "2h",
+    "4s"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "elapsed_sec": 11.6,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.766,
+      "BET 20.000000": 0.1171,
+      "BET 80.000000": 0.1169
+    },
+    "oop_response_to_bet": {
+      "BET 20.000000": {
+        "CALL": 0.4609,
+        "RAISE 80.000000": 0.0956,
+        "FOLD": 0.4435
+      },
+      "BET 80.000000": {
+        "CALL": 0.2379,
+        "FOLD": 0.7621
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.7332,
+      "BET 20.000000": 0.0911,
+      "BET 80.000000": 0.1756
+    },
+    "mdf_measured": {
+      "BET 20.000000": 0.5565,
+      "BET 80.000000": 0.2379
+    }
+  }
+}

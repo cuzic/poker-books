@@ -1,0 +1,44 @@
+{
+  "scenario_id": "blocker_105_straight_block_3",
+  "board": [
+    "Jd",
+    "9c",
+    "8h",
+    "Th",
+    "2c"
+  ],
+  "pot_bb": 24,
+  "effective_stack_bb": 76,
+  "elapsed_sec": 12.1,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.1078,
+      "BET 12.000000": 0.0072,
+      "BET 24.000000": 0.0109,
+      "BET 76.000000": 0.8741
+    },
+    "oop_response_to_bet": {
+      "BET 12.000000": {
+        "CALL": 0.7379,
+        "RAISE 76.000000": 0.0004,
+        "FOLD": 0.2616
+      },
+      "BET 24.000000": {
+        "CALL": 0.4456,
+        "RAISE 76.000000": 0.0023,
+        "FOLD": 0.5521
+      },
+      "BET 76.000000": {
+        "CALL": 0.179,
+        "FOLD": 0.821
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.8527,
+      "BET 8.000000": 0.1432,
+      "BET 18.000000": 0.0037,
+      "BET 36.000000": 0.0004,
+      "BET 76.000000": 0.0001
+    }
+  }
+}

@@ -1,0 +1,807 @@
+{
+  "task": "106",
+  "n_scenarios": 20,
+  "total_elapsed_sec": 240.4,
+  "scenarios": [
+    {
+      "scenario_id": "mdf_106_Adry_balanced",
+      "board": [
+        "As",
+        "Kh",
+        "7d",
+        "4c",
+        "2s"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 12.0,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.9236,
+          "BET 20.000000": 0.0762,
+          "BET 80.000000": 0.0002
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.3945,
+            "RAISE 80.000000": 0.1662,
+            "FOLD": 0.4393
+          },
+          "BET 80.000000": {
+            "CALL": 0.2484,
+            "FOLD": 0.7516
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.573,
+          "BET 20.000000": 0.3381,
+          "BET 80.000000": 0.0889
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.5607,
+          "BET 80.000000": 0.2484
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_Adry_tight",
+      "board": [
+        "As",
+        "Kh",
+        "7d",
+        "4c",
+        "2s"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 12.8,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.4903,
+          "BET 20.000000": 0.0644,
+          "BET 80.000000": 0.4453
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.2999,
+            "RAISE 80.000000": 0.0718,
+            "FOLD": 0.6283
+          },
+          "BET 80.000000": {
+            "CALL": 0.1554,
+            "FOLD": 0.8446
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.7227,
+          "BET 20.000000": 0.2761,
+          "BET 80.000000": 0.0012
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.3717,
+          "BET 80.000000": 0.1554
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_BoardTrips_balanced",
+      "board": [
+        "9c",
+        "9h",
+        "4s",
+        "9d",
+        "2h"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 12.3,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.8112,
+          "BET 20.000000": 0.182,
+          "BET 80.000000": 0.0068
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.377,
+            "RAISE 80.000000": 0.1918,
+            "FOLD": 0.4312
+          },
+          "BET 80.000000": {
+            "CALL": 0.2628,
+            "FOLD": 0.7372
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.6108,
+          "BET 20.000000": 0.2252,
+          "BET 80.000000": 0.1641
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.5688,
+          "BET 80.000000": 0.2628
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_BoardTrips_tight",
+      "board": [
+        "9c",
+        "9h",
+        "4s",
+        "9d",
+        "2h"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 12.6,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.3293,
+          "BET 20.000000": 0.67,
+          "BET 80.000000": 0.0007
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.1106,
+            "RAISE 80.000000": 0.0699,
+            "FOLD": 0.8196
+          },
+          "BET 80.000000": {
+            "CALL": 0.087,
+            "FOLD": 0.913
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.8676,
+          "BET 20.000000": 0.073,
+          "BET 80.000000": 0.0595
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.1804,
+          "BET 80.000000": 0.087
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_FlushDone_balanced",
+      "board": [
+        "As",
+        "Ks",
+        "7s",
+        "2s",
+        "4c"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 12.7,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.6597,
+          "BET 20.000000": 0.3266,
+          "BET 80.000000": 0.0137
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.3896,
+            "RAISE 80.000000": 0.1581,
+            "FOLD": 0.4523
+          },
+          "BET 80.000000": {
+            "CALL": 0.2501,
+            "FOLD": 0.7499
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.6143,
+          "BET 20.000000": 0.2666,
+          "BET 80.000000": 0.1191
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.5477,
+          "BET 80.000000": 0.2501
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_FlushDone_tight",
+      "board": [
+        "As",
+        "Ks",
+        "7s",
+        "2s",
+        "4c"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 12.0,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.7185,
+          "BET 20.000000": 0.2256,
+          "BET 80.000000": 0.0559
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.3403,
+            "RAISE 80.000000": 0.1261,
+            "FOLD": 0.5336
+          },
+          "BET 80.000000": {
+            "CALL": 0.2027,
+            "FOLD": 0.7973
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.6492,
+          "BET 20.000000": 0.3024,
+          "BET 80.000000": 0.0484
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.4664,
+          "BET 80.000000": 0.2027
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_FourStraight_balanced",
+      "board": [
+        "6s",
+        "7h",
+        "8d",
+        "9c",
+        "3s"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 12.0,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.6182,
+          "BET 20.000000": 0.3799,
+          "BET 80.000000": 0.0019
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.3916,
+            "RAISE 80.000000": 0.1539,
+            "FOLD": 0.4545
+          },
+          "BET 80.000000": {
+            "CALL": 0.2658,
+            "FOLD": 0.7342
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.5436,
+          "BET 20.000000": 0.3603,
+          "BET 80.000000": 0.0962
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.5455,
+          "BET 80.000000": 0.2658
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_FourStraight_tight",
+      "board": [
+        "6s",
+        "7h",
+        "8d",
+        "9c",
+        "3s"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 11.5,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.9974,
+          "BET 20.000000": 0.0023,
+          "BET 80.000000": 0.0002
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.3201,
+            "RAISE 80.000000": 0.1948,
+            "FOLD": 0.4851
+          },
+          "BET 80.000000": {
+            "CALL": 0.2667,
+            "FOLD": 0.7333
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.4729,
+          "BET 20.000000": 0.5098,
+          "BET 80.000000": 0.0173
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.5149,
+          "BET 80.000000": 0.2667
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_FullHouseable_balanced",
+      "board": [
+        "Ac",
+        "Ah",
+        "5d",
+        "5h",
+        "Kc"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 11.6,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.9654,
+          "BET 20.000000": 0.0344,
+          "BET 80.000000": 0.0002
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.2913,
+            "RAISE 80.000000": 0.2336,
+            "FOLD": 0.4751
+          },
+          "BET 80.000000": {
+            "CALL": 0.2615,
+            "FOLD": 0.7385
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.4968,
+          "BET 20.000000": 0.4756,
+          "BET 80.000000": 0.0276
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.5249,
+          "BET 80.000000": 0.2615
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_FullHouseable_tight",
+      "board": [
+        "Ac",
+        "Ah",
+        "5d",
+        "5h",
+        "Kc"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 11.4,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.9786,
+          "BET 20.000000": 0.0201,
+          "BET 80.000000": 0.0013
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.3036,
+            "RAISE 80.000000": 0.0603,
+            "FOLD": 0.6361
+          },
+          "BET 80.000000": {
+            "CALL": 0.1659,
+            "FOLD": 0.8341
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.6478,
+          "BET 20.000000": 0.3506,
+          "BET 80.000000": 0.0016
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.3639,
+          "BET 80.000000": 0.1659
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_Kdry_balanced",
+      "board": [
+        "Kc",
+        "8h",
+        "3d",
+        "2s",
+        "Qc"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 11.8,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.989,
+          "BET 20.000000": 0.0109,
+          "BET 80.000000": 0.0001
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.3883,
+            "RAISE 80.000000": 0.184,
+            "FOLD": 0.4277
+          },
+          "BET 80.000000": {
+            "CALL": 0.2679,
+            "FOLD": 0.7321
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.545,
+          "BET 20.000000": 0.3461,
+          "BET 80.000000": 0.1089
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.5723,
+          "BET 80.000000": 0.2679
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_Kdry_tight",
+      "board": [
+        "Kc",
+        "8h",
+        "3d",
+        "2s",
+        "Qc"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 11.9,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.5618,
+          "BET 20.000000": 0.4206,
+          "BET 80.000000": 0.0177
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.1647,
+            "RAISE 80.000000": 0.0676,
+            "FOLD": 0.7676
+          },
+          "BET 80.000000": {
+            "CALL": 0.1078,
+            "FOLD": 0.8922
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.8388,
+          "BET 20.000000": 0.1367,
+          "BET 80.000000": 0.0245
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.2324,
+          "BET 80.000000": 0.1078
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_LowStraight_balanced",
+      "board": [
+        "7s",
+        "5d",
+        "3c",
+        "2h",
+        "4s"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 11.6,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.766,
+          "BET 20.000000": 0.1171,
+          "BET 80.000000": 0.1169
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.4609,
+            "RAISE 80.000000": 0.0956,
+            "FOLD": 0.4435
+          },
+          "BET 80.000000": {
+            "CALL": 0.2379,
+            "FOLD": 0.7621
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.7332,
+          "BET 20.000000": 0.0911,
+          "BET 80.000000": 0.1756
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.5565,
+          "BET 80.000000": 0.2379
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_LowStraight_tight",
+      "board": [
+        "7s",
+        "5d",
+        "3c",
+        "2h",
+        "4s"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 12.1,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.9986,
+          "BET 20.000000": 0.0014,
+          "BET 80.000000": 0.0
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.0498,
+            "RAISE 80.000000": 0.4496,
+            "FOLD": 0.5006
+          },
+          "BET 80.000000": {
+            "CALL": 0.4646,
+            "FOLD": 0.5354
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.4337,
+          "BET 20.000000": 0.1643,
+          "BET 80.000000": 0.402
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.4994,
+          "BET 80.000000": 0.4646
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_Monotone_balanced",
+      "board": [
+        "Ah",
+        "Kh",
+        "Qh",
+        "3s",
+        "2d"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 11.8,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.8805,
+          "BET 20.000000": 0.0888,
+          "BET 80.000000": 0.0307
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.4123,
+            "RAISE 80.000000": 0.1532,
+            "FOLD": 0.4346
+          },
+          "BET 80.000000": {
+            "CALL": 0.2571,
+            "FOLD": 0.7429
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.6235,
+          "BET 20.000000": 0.2696,
+          "BET 80.000000": 0.1069
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.5654,
+          "BET 80.000000": 0.2571
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_Monotone_tight",
+      "board": [
+        "Ah",
+        "Kh",
+        "Qh",
+        "3s",
+        "2d"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 11.8,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.336,
+          "BET 20.000000": 0.6563,
+          "BET 80.000000": 0.0078
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.3097,
+            "RAISE 80.000000": 0.1732,
+            "FOLD": 0.5171
+          },
+          "BET 80.000000": {
+            "CALL": 0.2419,
+            "FOLD": 0.7581
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.6989,
+          "BET 20.000000": 0.1638,
+          "BET 80.000000": 0.1373
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.4829,
+          "BET 80.000000": 0.2419
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_StraightDone_balanced",
+      "board": [
+        "9c",
+        "8h",
+        "7d",
+        "6s",
+        "Jc"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 12.4,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.619,
+          "BET 20.000000": 0.3787,
+          "BET 80.000000": 0.0023
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.3896,
+            "RAISE 80.000000": 0.1338,
+            "FOLD": 0.4766
+          },
+          "BET 80.000000": {
+            "CALL": 0.2606,
+            "FOLD": 0.7394
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.5545,
+          "BET 20.000000": 0.3618,
+          "BET 80.000000": 0.0838
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.5234,
+          "BET 80.000000": 0.2606
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_StraightDone_tight",
+      "board": [
+        "9c",
+        "8h",
+        "7d",
+        "6s",
+        "Jc"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 12.1,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.9966,
+          "BET 20.000000": 0.0033,
+          "BET 80.000000": 0.0001
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.3347,
+            "RAISE 80.000000": 0.183,
+            "FOLD": 0.4823
+          },
+          "BET 80.000000": {
+            "CALL": 0.2654,
+            "FOLD": 0.7346
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.4782,
+          "BET 20.000000": 0.4981,
+          "BET 80.000000": 0.0237
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.5177,
+          "BET 80.000000": 0.2654
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_TwoPair_balanced",
+      "board": [
+        "Kc",
+        "7d",
+        "2s",
+        "7h",
+        "Ac"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 12.0,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.9137,
+          "BET 20.000000": 0.0575,
+          "BET 80.000000": 0.0288
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.4483,
+            "RAISE 80.000000": 0.1179,
+            "FOLD": 0.4338
+          },
+          "BET 80.000000": {
+            "CALL": 0.2469,
+            "FOLD": 0.7531
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.6629,
+          "BET 20.000000": 0.2407,
+          "BET 80.000000": 0.0964
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.5662,
+          "BET 80.000000": 0.2469
+        }
+      }
+    },
+    {
+      "scenario_id": "mdf_106_TwoPair_tight",
+      "board": [
+        "Kc",
+        "7d",
+        "2s",
+        "7h",
+        "Ac"
+      ],
+      "pot_bb": 27,
+      "effective_stack_bb": 80,
+      "elapsed_sec": 12.0,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.5891,
+          "BET 20.000000": 0.3201,
+          "BET 80.000000": 0.0908
+        },
+        "oop_response_to_bet": {
+          "BET 20.000000": {
+            "CALL": 0.2899,
+            "RAISE 80.000000": 0.0893,
+            "FOLD": 0.6207
+          },
+          "BET 80.000000": {
+            "CALL": 0.1663,
+            "FOLD": 0.8337
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.7417,
+          "BET 20.000000": 0.2211,
+          "BET 80.000000": 0.0372
+        },
+        "mdf_measured": {
+          "BET 20.000000": 0.3793,
+          "BET 80.000000": 0.1663
+        }
+      }
+    }
+  ]
+}

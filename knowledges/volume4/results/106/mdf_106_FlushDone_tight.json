@@ -1,0 +1,40 @@
+{
+  "scenario_id": "mdf_106_FlushDone_tight",
+  "board": [
+    "As",
+    "Ks",
+    "7s",
+    "2s",
+    "4c"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "elapsed_sec": 12.0,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.7185,
+      "BET 20.000000": 0.2256,
+      "BET 80.000000": 0.0559
+    },
+    "oop_response_to_bet": {
+      "BET 20.000000": {
+        "CALL": 0.3403,
+        "RAISE 80.000000": 0.1261,
+        "FOLD": 0.5336
+      },
+      "BET 80.000000": {
+        "CALL": 0.2027,
+        "FOLD": 0.7973
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.6492,
+      "BET 20.000000": 0.3024,
+      "BET 80.000000": 0.0484
+    },
+    "mdf_measured": {
+      "BET 20.000000": 0.4664,
+      "BET 80.000000": 0.2027
+    }
+  }
+}

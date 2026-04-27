@@ -1,0 +1,40 @@
+{
+  "scenario_id": "river_vb_103_Fflush_alpha25",
+  "board": [
+    "As",
+    "Ks",
+    "7s",
+    "2s",
+    "4c"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "elapsed_sec": 12.8,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.6496,
+      "BET 14.000000": 0.3384,
+      "BET 80.000000": 0.012
+    },
+    "oop_response_to_bet": {
+      "BET 14.000000": {
+        "CALL": 0.4649,
+        "RAISE 80.000000": 0.1694,
+        "FOLD": 0.3657
+      },
+      "BET 80.000000": {
+        "CALL": 0.245,
+        "FOLD": 0.755
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.6288,
+      "BET 7.000000": 0.1811,
+      "BET 80.000000": 0.1902
+    },
+    "alpha_implied": {
+      "BET 14.000000": 0.3657,
+      "BET 80.000000": 0.755
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "scenario_id": "river_vb_103_Dtrips_alpha25",
+  "board": [
+    "9c",
+    "9h",
+    "4s",
+    "9d",
+    "2h"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "elapsed_sec": 12.4,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.7931,
+      "BET 14.000000": 0.1993,
+      "BET 80.000000": 0.0077
+    },
+    "oop_response_to_bet": {
+      "BET 14.000000": {
+        "CALL": 0.4424,
+        "RAISE 80.000000": 0.2051,
+        "FOLD": 0.3525
+      },
+      "BET 80.000000": {
+        "CALL": 0.2633,
+        "FOLD": 0.7367
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.612,
+      "BET 7.000000": 0.1577,
+      "BET 80.000000": 0.2303
+    },
+    "alpha_implied": {
+      "BET 14.000000": 0.3525,
+      "BET 80.000000": 0.7367
+    }
+  }
+}

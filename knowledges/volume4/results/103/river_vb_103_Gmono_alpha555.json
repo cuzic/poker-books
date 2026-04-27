@@ -1,0 +1,40 @@
+{
+  "scenario_id": "river_vb_103_Gmono_alpha555",
+  "board": [
+    "Ah",
+    "Kh",
+    "Qh",
+    "3s",
+    "2d"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "elapsed_sec": 12.0,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.849,
+      "BET 14.000000": 0.1172,
+      "BET 80.000000": 0.0338
+    },
+    "oop_response_to_bet": {
+      "BET 14.000000": {
+        "CALL": 0.4708,
+        "RAISE 80.000000": 0.1793,
+        "FOLD": 0.3499
+      },
+      "BET 80.000000": {
+        "CALL": 0.2581,
+        "FOLD": 0.7419
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.5999,
+      "BET 15.000000": 0.2772,
+      "BET 80.000000": 0.1229
+    },
+    "alpha_implied": {
+      "BET 14.000000": 0.3499,
+      "BET 80.000000": 0.7419
+    }
+  }
+}

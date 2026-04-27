@@ -1,0 +1,40 @@
+{
+  "scenario_id": "mdf_106_Kdry_tight",
+  "board": [
+    "Kc",
+    "8h",
+    "3d",
+    "2s",
+    "Qc"
+  ],
+  "pot_bb": 27,
+  "effective_stack_bb": 80,
+  "elapsed_sec": 11.9,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.5618,
+      "BET 20.000000": 0.4206,
+      "BET 80.000000": 0.0177
+    },
+    "oop_response_to_bet": {
+      "BET 20.000000": {
+        "CALL": 0.1647,
+        "RAISE 80.000000": 0.0676,
+        "FOLD": 0.7676
+      },
+      "BET 80.000000": {
+        "CALL": 0.1078,
+        "FOLD": 0.8922
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.8388,
+      "BET 20.000000": 0.1367,
+      "BET 80.000000": 0.0245
+    },
+    "mdf_measured": {
+      "BET 20.000000": 0.2324,
+      "BET 80.000000": 0.1078
+    }
+  }
+}
