@@ -1,20 +1,5 @@
 {
   "scenario_id": "hook_108_ahigh_check_1",
-  "board": [
-    "Ac",
-    "7d",
-    "4s"
-  ],
-  "pot_bb": 7,
-  "effective_stack_bb": 92,
-  "elapsed_sec": 114.3,
-  "summary": {
-    "ip_river_first_action_freq": {
-      "CHECK": 1.0
-    },
-    "oop_response_to_bet": {},
-    "oop_after_ip_check": {
-      "CHECK": 1.0
-    }
-  }
+  "error": "solver rc=-1",
+  "elapsed_sec": 180.5
 }

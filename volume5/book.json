@@ -5,7 +5,7 @@
   "language": "ja",
   "identifier": "urn:uuid:d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9c",
   "publisher": "川西智也",
-  "description": "『迷わないポーカー』シリーズ第5巻、ターン・リバー応用編。巻4（基礎編）で4つの暗算式を習得した読者を対象に、3軸統合（過去レンジ × 現在のターンカード × リバー予測）と backward induction によるマルチストリート総合判断を体系化。ブロッカー実戦選択、オーバーベット（ターン・リバー）、リバーCR、ポットコミットメントなどの高度戦術を網羅。3-betポット・SB vs BB・マルチウェイの応用シナリオに加え、ソルバーによるハンドレビュー法と総合ドリル50問で実戦力を仕上げる。",
+  "description": "『迷わないポーカー』シリーズ第�巻、ターン・リバー応用編。巻�（基礎編）で4つの暗算式を習得した読者を対象に、3軸統合（過去レンジ × 現在のターンカード × リバー予測）と backward induction によるマルチストリート総合判断を体系化。ブロッカー実戦選択、オーバーベット（ターン・リバー）、リバーCR、ポットコミットメントなどの高度戦術を網羅。3-betポット・SB vs BB・マルチウェイの応用シナリオに加え、ソルバーによるハンドレビュー法と総合ドリル50問で実戦力を仕上げる。",
   "cover": "src/chapters/images/cover.jpg",
   "kdp": {
     "keywords": [
@@ -32,7 +32,7 @@
       "GAMES & ACTIVITIES / Card Games / General",
       "SPORTS & RECREATION / Gambling"
     ],
-    "targetAudience": "巻4（ターン・リバー基礎）読了済みの中級〜上級者。3軸統合・backward induction・高度戦術を習得したい人。",
+    "targetAudience": "巻�（ターン・リバー基礎）読了済みの中級〜上級者。3軸統合・backward induction・高度戦術を習得したい人。",
     "pageReadDirection": "ltr",
     "aiContentDisclosure": {
       "textAssisted": true,
