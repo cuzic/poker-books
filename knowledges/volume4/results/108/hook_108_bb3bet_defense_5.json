@@ -1,0 +1,20 @@
+{
+  "scenario_id": "hook_108_bb3bet_defense_5",
+  "board": [
+    "Td",
+    "6d",
+    "2s"
+  ],
+  "pot_bb": 15,
+  "effective_stack_bb": 85,
+  "elapsed_sec": 89.3,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 1.0
+    },
+    "oop_response_to_bet": {},
+    "oop_after_ip_check": {
+      "CHECK": 1.0
+    }
+  }
+}

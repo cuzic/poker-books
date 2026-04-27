@@ -1,0 +1,727 @@
+{
+  "task": "108",
+  "n_scenarios": 30,
+  "total_elapsed_sec": 2045.4,
+  "scenarios": [
+    {
+      "scenario_id": "hook_108_ahigh_check_1",
+      "board": [
+        "Ac",
+        "7d",
+        "4s"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 114.3,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_ahigh_check_2",
+      "board": [
+        "Ad",
+        "5c",
+        "2s"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 114.1,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_ahigh_check_3",
+      "board": [
+        "Ah",
+        "8c",
+        "3d"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 111.0,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_ahigh_check_4",
+      "board": [
+        "As",
+        "9d",
+        "5c"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 110.8,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_ahigh_check_5",
+      "board": [
+        "Ad",
+        "8h",
+        "2c"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 108.5,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_bb3bet_defense_1",
+      "board": [
+        "Kh",
+        "7c",
+        "2d"
+      ],
+      "pot_bb": 15,
+      "effective_stack_bb": 85,
+      "elapsed_sec": 81.4,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_bb3bet_defense_2",
+      "board": [
+        "Ac",
+        "8d",
+        "3h"
+      ],
+      "pot_bb": 15,
+      "effective_stack_bb": 85,
+      "elapsed_sec": 76.1,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_bb3bet_defense_3",
+      "board": [
+        "Qs",
+        "Js",
+        "4h"
+      ],
+      "pot_bb": 15,
+      "effective_stack_bb": 85,
+      "elapsed_sec": 78.6,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_bb3bet_defense_4",
+      "board": [
+        "9c",
+        "8c",
+        "5d"
+      ],
+      "pot_bb": 15,
+      "effective_stack_bb": 85,
+      "elapsed_sec": 79.0,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_bb3bet_defense_5",
+      "board": [
+        "Td",
+        "6d",
+        "2s"
+      ],
+      "pot_bb": 15,
+      "effective_stack_bb": 85,
+      "elapsed_sec": 89.3,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_monotone_small_1",
+      "board": [
+        "As",
+        "Ks",
+        "Qs"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 102.8,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_monotone_small_2",
+      "board": [
+        "Jh",
+        "9h",
+        "7h"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 101.4,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_monotone_small_3",
+      "board": [
+        "Tc",
+        "8c",
+        "3c"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 116.2,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_monotone_small_4",
+      "board": [
+        "Kd",
+        "7d",
+        "2d"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 80.7,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_monotone_small_5",
+      "board": [
+        "9s",
+        "6s",
+        "4s"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 97.8,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_overbet_bluff_1",
+      "board": [
+        "Kc",
+        "8d",
+        "3s",
+        "2h",
+        "Qc"
+      ],
+      "pot_bb": 30,
+      "effective_stack_bb": 70,
+      "elapsed_sec": 11.9,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.9701,
+          "BET 15.000000": 0.0286,
+          "BET 30.000000": 0.0009,
+          "BET 70.000000": 0.0003
+        },
+        "oop_response_to_bet": {
+          "BET 15.000000": {
+            "CALL": 0.4178,
+            "RAISE 70.000000": 0.2446,
+            "FOLD": 0.3376
+          },
+          "BET 30.000000": {
+            "CALL": 0.2927,
+            "RAISE 70.000000": 0.2117,
+            "FOLD": 0.4956
+          },
+          "BET 70.000000": {
+            "CALL": 0.3455,
+            "FOLD": 0.6545
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.5252,
+          "BET 10.000000": 0.0538,
+          "BET 23.000000": 0.2554,
+          "BET 70.000000": 0.1656
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_overbet_bluff_2",
+      "board": [
+        "Ac",
+        "7d",
+        "4s",
+        "2h",
+        "Jc"
+      ],
+      "pot_bb": 30,
+      "effective_stack_bb": 70,
+      "elapsed_sec": 12.1,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.8006,
+          "BET 15.000000": 0.1432,
+          "BET 30.000000": 0.0348,
+          "BET 70.000000": 0.0214
+        },
+        "oop_response_to_bet": {
+          "BET 15.000000": {
+            "CALL": 0.4646,
+            "RAISE 70.000000": 0.1937,
+            "FOLD": 0.3417
+          },
+          "BET 30.000000": {
+            "CALL": 0.3421,
+            "RAISE 70.000000": 0.1483,
+            "FOLD": 0.5096
+          },
+          "BET 70.000000": {
+            "CALL": 0.2984,
+            "FOLD": 0.7016
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.5271,
+          "BET 10.000000": 0.1012,
+          "BET 23.000000": 0.297,
+          "BET 70.000000": 0.0747
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_overbet_bluff_3",
+      "board": [
+        "Jd",
+        "8c",
+        "5s",
+        "3h",
+        "Kc"
+      ],
+      "pot_bb": 30,
+      "effective_stack_bb": 70,
+      "elapsed_sec": 11.6,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.979,
+          "BET 15.000000": 0.0186,
+          "BET 30.000000": 0.0021,
+          "BET 70.000000": 0.0002
+        },
+        "oop_response_to_bet": {
+          "BET 15.000000": {
+            "CALL": 0.4202,
+            "RAISE 70.000000": 0.2408,
+            "FOLD": 0.339
+          },
+          "BET 30.000000": {
+            "CALL": 0.3008,
+            "RAISE 70.000000": 0.2006,
+            "FOLD": 0.4986
+          },
+          "BET 70.000000": {
+            "CALL": 0.3294,
+            "FOLD": 0.6706
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.5175,
+          "BET 10.000000": 0.0605,
+          "BET 23.000000": 0.2707,
+          "BET 70.000000": 0.1513
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_overbet_bluff_4",
+      "board": [
+        "Qs",
+        "9d",
+        "4c",
+        "2h",
+        "7s"
+      ],
+      "pot_bb": 30,
+      "effective_stack_bb": 70,
+      "elapsed_sec": 11.7,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.746,
+          "BET 15.000000": 0.1982,
+          "BET 30.000000": 0.0552,
+          "BET 70.000000": 0.0006
+        },
+        "oop_response_to_bet": {
+          "BET 15.000000": {
+            "CALL": 0.4118,
+            "RAISE 70.000000": 0.2334,
+            "FOLD": 0.3548
+          },
+          "BET 30.000000": {
+            "CALL": 0.2963,
+            "RAISE 70.000000": 0.1872,
+            "FOLD": 0.5166
+          },
+          "BET 70.000000": {
+            "CALL": 0.3063,
+            "FOLD": 0.6937
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.5723,
+          "BET 10.000000": 0.0437,
+          "BET 23.000000": 0.2178,
+          "BET 70.000000": 0.1663
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_overbet_bluff_5",
+      "board": [
+        "Th",
+        "7d",
+        "3c",
+        "8s",
+        "Ad"
+      ],
+      "pot_bb": 30,
+      "effective_stack_bb": 70,
+      "elapsed_sec": 11.8,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 0.7484,
+          "BET 15.000000": 0.1613,
+          "BET 30.000000": 0.0658,
+          "BET 70.000000": 0.0245
+        },
+        "oop_response_to_bet": {
+          "BET 15.000000": {
+            "CALL": 0.4514,
+            "RAISE 70.000000": 0.1958,
+            "FOLD": 0.3528
+          },
+          "BET 30.000000": {
+            "CALL": 0.3284,
+            "RAISE 70.000000": 0.157,
+            "FOLD": 0.5147
+          },
+          "BET 70.000000": {
+            "CALL": 0.2912,
+            "FOLD": 0.7088
+          }
+        },
+        "oop_after_ip_check": {
+          "CHECK": 0.5541,
+          "BET 10.000000": 0.1125,
+          "BET 23.000000": 0.2317,
+          "BET 70.000000": 0.1018
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_paired_board_1",
+      "board": [
+        "7c",
+        "7d",
+        "4s",
+        "2h"
+      ],
+      "pot_bb": 20,
+      "effective_stack_bb": 85,
+      "elapsed_sec": 13.4,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_paired_board_2",
+      "board": [
+        "4c",
+        "4d",
+        "9s",
+        "2h"
+      ],
+      "pot_bb": 20,
+      "effective_stack_bb": 85,
+      "elapsed_sec": 13.7,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_paired_board_3",
+      "board": [
+        "9c",
+        "9d",
+        "5s",
+        "3h"
+      ],
+      "pot_bb": 20,
+      "effective_stack_bb": 85,
+      "elapsed_sec": 13.1,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_paired_board_4",
+      "board": [
+        "Jc",
+        "Jd",
+        "6s",
+        "2h"
+      ],
+      "pot_bb": 20,
+      "effective_stack_bb": 85,
+      "elapsed_sec": 12.9,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_paired_board_5",
+      "board": [
+        "6c",
+        "6d",
+        "2s",
+        "9h"
+      ],
+      "pot_bb": 20,
+      "effective_stack_bb": 85,
+      "elapsed_sec": 13.4,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_ten_vs_ace_1",
+      "board": [
+        "Tc",
+        "7d",
+        "5s"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 98.3,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_ten_vs_ace_2",
+      "board": [
+        "Td",
+        "5c",
+        "4s"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 101.6,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_ten_vs_ace_3",
+      "board": [
+        "Th",
+        "9c",
+        "2d"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 94.8,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_ten_vs_ace_4",
+      "board": [
+        "Ts",
+        "8s",
+        "6h"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 94.2,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    },
+    {
+      "scenario_id": "hook_108_ten_vs_ace_5",
+      "board": [
+        "Ts",
+        "6s",
+        "3s"
+      ],
+      "pot_bb": 7,
+      "effective_stack_bb": 92,
+      "elapsed_sec": 68.9,
+      "summary": {
+        "ip_river_first_action_freq": {
+          "CHECK": 1.0
+        },
+        "oop_response_to_bet": {},
+        "oop_after_ip_check": {
+          "CHECK": 1.0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "scenario_id": "hook_108_overbet_bluff_5",
+  "board": [
+    "Th",
+    "7d",
+    "3c",
+    "8s",
+    "Ad"
+  ],
+  "pot_bb": 30,
+  "effective_stack_bb": 70,
+  "elapsed_sec": 11.8,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 0.7484,
+      "BET 15.000000": 0.1613,
+      "BET 30.000000": 0.0658,
+      "BET 70.000000": 0.0245
+    },
+    "oop_response_to_bet": {
+      "BET 15.000000": {
+        "CALL": 0.4514,
+        "RAISE 70.000000": 0.1958,
+        "FOLD": 0.3528
+      },
+      "BET 30.000000": {
+        "CALL": 0.3284,
+        "RAISE 70.000000": 0.157,
+        "FOLD": 0.5147
+      },
+      "BET 70.000000": {
+        "CALL": 0.2912,
+        "FOLD": 0.7088
+      }
+    },
+    "oop_after_ip_check": {
+      "CHECK": 0.5541,
+      "BET 10.000000": 0.1125,
+      "BET 23.000000": 0.2317,
+      "BET 70.000000": 0.1018
+    }
+  }
+}

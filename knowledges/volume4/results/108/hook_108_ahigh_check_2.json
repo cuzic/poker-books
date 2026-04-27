@@ -1,0 +1,20 @@
+{
+  "scenario_id": "hook_108_ahigh_check_2",
+  "board": [
+    "Ad",
+    "5c",
+    "2s"
+  ],
+  "pot_bb": 7,
+  "effective_stack_bb": 92,
+  "elapsed_sec": 114.1,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 1.0
+    },
+    "oop_response_to_bet": {},
+    "oop_after_ip_check": {
+      "CHECK": 1.0
+    }
+  }
+}

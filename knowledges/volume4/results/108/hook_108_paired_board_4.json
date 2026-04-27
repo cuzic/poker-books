@@ -1,0 +1,21 @@
+{
+  "scenario_id": "hook_108_paired_board_4",
+  "board": [
+    "Jc",
+    "Jd",
+    "6s",
+    "2h"
+  ],
+  "pot_bb": 20,
+  "effective_stack_bb": 85,
+  "elapsed_sec": 12.9,
+  "summary": {
+    "ip_river_first_action_freq": {
+      "CHECK": 1.0
+    },
+    "oop_response_to_bet": {},
+    "oop_after_ip_check": {
+      "CHECK": 1.0
+    }
+  }
+}
