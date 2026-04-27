@@ -1,0 +1,12 @@
+{
+  "task": "108",
+  "n_scenarios": 1,
+  "total_elapsed_sec": 0.0,
+  "scenarios": [
+    {
+      "scenario_id": "hook_108_ahigh_check_1",
+      "error": "solver rc=-1",
+      "elapsed_sec": 180.5
+    }
+  ]
+}
