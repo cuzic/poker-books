@@ -1,0 +1,74 @@
+{
+  "_meta": {
+    "description": "GTO Wizard 公式値が直接利用可能なボードのテーブル。ラッパーは TexasSolver 補正より優先してこの値を返す。",
+    "scenario": "BTN open vs BB call, 100bb effective, 6-max cash",
+    "source": "GTO Wizard 公式ブログ記事の本文・画像 OCR から抽出",
+    "license": "個人研究用途のみ。再配布は GTO Wizard 規約に従うこと。書籍引用は出典 URL を必ず明記。",
+    "extraction_date": "2026-04-27"
+  },
+  "entries": [
+    {
+      "board_id": "QQ6",
+      "board_aliases": ["QQ6r", "QQ6rr", "QcQs6d"],
+      "ip_cbet_pct": 81.9,
+      "dominant_size": "33% pot (74.5%)",
+      "size_distribution": {
+        "Bet 125%": 0.4,
+        "Bet 75%": 1.0,
+        "Bet 50%": 6.0,
+        "Bet 33%": 74.5,
+        "Check": 18.1
+      },
+      "source_url": "https://blog.gtowizard.com/the-mechanics-of-c-bet-sizing/",
+      "source_section": "Article 05, img09",
+      "type_code": "6c",
+      "notes": "ペアボード Q-Q-6。33% bet 主体で総 CBet 81.9%。"
+    },
+    {
+      "board_id": "KJ7",
+      "board_aliases": ["KJ7ss", "KhJh7c"],
+      "ip_cbet_pct": 49.3,
+      "dominant_size": "33% pot (44.7%)",
+      "size_distribution": {
+        "Bet 125%": 0.3,
+        "Bet 75%": 0.9,
+        "Bet 50%": 3.3,
+        "Bet 33%": 44.7,
+        "Check": 50.7
+      },
+      "source_url": "https://blog.gtowizard.com/the-mechanics-of-c-bet-sizing/",
+      "source_section": "Article 05, img03",
+      "type_code": "1c",
+      "notes": "K高ウェット中間ボード。33% bet 主体で総 CBet 49.3%。50% チェック。"
+    },
+    {
+      "board_id": "QJT",
+      "board_aliases": ["QJTss", "QcJcTd"],
+      "ip_cbet_pct": 47.3,
+      "dominant_size": "125% overbet (27.2%)",
+      "size_distribution": {
+        "Bet 125%": 27.2,
+        "Bet 75%": 12.7,
+        "Bet 50%": 4.7,
+        "Bet 33%": 2.7,
+        "Check": 52.7
+      },
+      "source_url": "https://blog.gtowizard.com/the-mechanics-of-c-bet-sizing/",
+      "source_section": "Article 05, img14",
+      "type_code": "2c",
+      "notes": "Broadway 連続 super-wet。125% overbet 主体（小サイズはほぼ使わない）。"
+    },
+    {
+      "board_id": "K44tt",
+      "board_aliases": ["KsKs4h4d", "K44 double-suited"],
+      "ip_cbet_pct": 47.4,
+      "dominant_size": null,
+      "size_distribution": null,
+      "source_url": "https://blog.gtowizard.com/exploiting-excessive-c-betting-by-ip/",
+      "source_section": "Article 11, 100bb stacks",
+      "type_code": "7a",
+      "notes": "K-4-4 で 4-4 同スート (double-suited)。BTN CBet 47.4%、BB donk 6%。30B の K44 (rainbow, 43%) より +4 高い。",
+      "caveat": "30B の K44 (43%, rainbow) と suit pattern が違うため別エントリ。"
+    }
+  ]
+}

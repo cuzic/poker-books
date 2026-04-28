@@ -1,0 +1,190 @@
+{
+  "_meta": {
+    "description": "GTO Wizard Starter 契約で手動収集する優先 17 ボード。型 N=1 を解消し、補正テーブル LOOCV MAE を改善するため。",
+    "scenario": "BTN open vs BB call, 100bb effective, 6-max cash",
+    "tier": "Starter (Multi Size Postflop)",
+    "instructions": [
+      "1. https://app.gtowizard.com/ で 6-max cash 100bb SRP, BTN open BB call, Multi Size を選択",
+      "2. 下記 17 ボードを順に開く",
+      "3. IP の Aggregate アクション分布から CBet 頻度を読み取る",
+      "4. ip_cbet_pct と sizing 分布を記入。注意: 手で書き写しのみ、スクリプトでアクセスしない"
+    ],
+    "estimated_time": "30-40 分"
+  },
+
+  "boards_to_collect": [
+    {
+      "type_code": "1a",
+      "type_name": "high-dry-2tone",
+      "board": "A92ss",
+      "cards": "Ah,9h,2c",
+      "ip_cbet_pct": null,
+      "size_distribution": {
+        "Bet 125%": null, "Bet 75%": null,
+        "Bet 50%": null, "Bet 33%": null, "Check": null
+      },
+      "priority": 1,
+      "notes": "型 1a 拡充用 (現状 Q83ss のみ)"
+    },
+    {
+      "type_code": "1c",
+      "type_name": "high-mid-rainbow",
+      "board": "Q84r",
+      "cards": "Qh,8d,4c",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 2,
+      "notes": "型 1c (現状 Phase 1 KJ7ss のみ、別 suit pattern)"
+    },
+    {
+      "type_code": "2c",
+      "type_name": "high-broadway-2tone",
+      "board": "AKJss",
+      "cards": "Ah,Kh,Jc",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 1,
+      "notes": "型 2c 内部分散の検証 (KQTss=35, QJT=47.3, AKJss=?)"
+    },
+    {
+      "type_code": "2c2",
+      "type_name": "high-close-2tone",
+      "board": "KJ9ss",
+      "cards": "Kh,Jh,9c",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 2,
+      "notes": "新規型カバー"
+    },
+    {
+      "type_code": "2e",
+      "type_name": "high-midT-rainbow",
+      "board": "AT4r",
+      "cards": "Ah,Td,4c",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 2,
+      "notes": "型 2e 拡充 (現状 KT5r=70 のみ)"
+    },
+    {
+      "type_code": "2f",
+      "type_name": "high-close-rainbow",
+      "board": "KJ8r",
+      "cards": "Kh,Jd,8c",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 2,
+      "notes": "型 2f 拡充 (現状 QJ9r=50 のみ)"
+    },
+    {
+      "type_code": "3c",
+      "type_name": "low-mid-2tone",
+      "board": "J52ss",
+      "cards": "Jh,5h,2c",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 1,
+      "notes": "新規型カバー (現状 N=0)"
+    },
+    {
+      "type_code": "3d",
+      "type_name": "low-mid-rainbow",
+      "board": "J62r",
+      "cards": "Jh,6d,2c",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 2,
+      "notes": "型 3d 拡充 (現状 J75r=40 のみ)"
+    },
+    {
+      "type_code": "4b",
+      "type_name": "low-sub9-2tone",
+      "board": "754ss",
+      "cards": "7h,5h,4c",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 2,
+      "notes": "型 4b 拡充 (現状 987ss=30 のみ)"
+    },
+    {
+      "type_code": "5a",
+      "type_name": "mono-broadway",
+      "board": "KQJmono",
+      "cards": "Kh,Qh,Jh",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 1,
+      "notes": "型 5a 拡充 (現状 AKQmono=15 のみ、補正 -53 と最大)"
+    },
+    {
+      "type_code": "5b",
+      "type_name": "mono-low",
+      "board": "865mono",
+      "cards": "8h,6h,5h",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 2,
+      "notes": "型 5b 拡充 (現状 987mono=20 のみ)"
+    },
+    {
+      "type_code": "6a",
+      "type_name": "paired-AA",
+      "board": "AA7",
+      "cards": "Ah,As,7d",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 2,
+      "notes": "型 6a 拡充 (現状 AAK=85 のみ)"
+    },
+    {
+      "type_code": "6b",
+      "type_name": "paired-KK",
+      "board": "KKT",
+      "cards": "Kh,Ks,Td",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 2,
+      "notes": "型 6b 拡充 (現状 KK9=80 のみ)"
+    },
+    {
+      "type_code": "6c",
+      "type_name": "paired-QQ",
+      "board": "QQT",
+      "cards": "Qh,Qs,Td",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 2,
+      "notes": "型 6c 拡充 (現状 QQ6=82 のみ)"
+    },
+    {
+      "type_code": "6d",
+      "type_name": "paired-low",
+      "board": "552",
+      "cards": "5h,5s,2d",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 2,
+      "notes": "型 6d 拡充 (現状 772=70 のみ)"
+    },
+    {
+      "type_code": "7a",
+      "type_name": "AK-high-lowpair",
+      "board": "A55",
+      "cards": "Ah,5d,5s",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 1,
+      "notes": "型 7a 拡充 (現状 K44=43 のみ、補正 -33 と大)"
+    },
+    {
+      "type_code": "7b",
+      "type_name": "AK-high-midpair",
+      "board": "K88",
+      "cards": "Kh,8d,8s",
+      "ip_cbet_pct": null,
+      "size_distribution": null,
+      "priority": 2,
+      "notes": "型 7b 拡充 (現状 A99=78 のみ)"
+    }
+  ]
+}

@@ -32,3 +32,11 @@ scripts/__pycache__/
 # Draft folders (executive work-in-progress, not part of published books)
 volume3-draft/
 volume4-draft/
+
+# Large external datasets (not for commit, generated/downloaded)
+data/pokerbench/
+knowledges/flop-advanced/external/gto_wizard_blog/images/
+knowledges/flop-advanced/external/gto_wizard_blog/html/
+
+# Local task lock
+.claude/scheduled_tasks.lock

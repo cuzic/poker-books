@@ -6,6 +6,9 @@
 <!-- textlint-disable preset-ja-technical-writing/no-doubled-joshi -->
 <!-- textlint-disable preset-ja-technical-writing/max-comma -->
 
+> 🗺️ **現在地**:巻② / **[II 部 基礎・連続派]** / ch8「簡易レンジスコア」（本書のコア道具 ★★★）
+> （本書全体の道具マップは「はじめに」末尾を参照）
+
 > 「このボードはドライですか、ウェットですか？」という問いは曖昧です。本書はこう問い直します。「このボードで、あなたはレンジ全体の何%をベットすべきか？」
 
 ---

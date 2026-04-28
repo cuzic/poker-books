@@ -1,0 +1,210 @@
+{
+  "_meta": {
+    "description": "GTO Wizard 公式ブログ画像 OCR の拡張データセット (v2)。v1 で取れた 9 画像に加え、aggregated チャート (paired card × position × stack) を追加 OCR。",
+    "extraction_date": "2026-04-27",
+    "extraction_method": "Read tool (multimodal vision OCR)",
+    "total_data_points": 500,
+    "license": "個人研究用途のみ。"
+  },
+
+  "v1_data": "ocr_data.json に保存済み (BTN aggregate sizing, QQ6/KJ7/QJT/paired hand class)",
+
+  "paired_flops_analysis": {
+    "_description": "ペアボードに関する集約データ。13 ランクすべて × ポジション (UTG/BTN) × スタック深度 (20/40/100bb)。",
+
+    "img14_ip_facing_55cr_20bb_srp": {
+      "scenario": "IP Facing 55% Check-Raise on Paired Flops, 20bb SRP",
+      "format": "[paired_rank][UTG / BTN] = {fold, call, raise}",
+      "data": {
+        "2": {"UTG": [23, 37, 40], "BTN": [27, 30, 43]},
+        "3": {"UTG": [23, 37, 40], "BTN": [24, 33, 43]},
+        "4": {"UTG": [23, 35, 42], "BTN": [24, 32, 44]},
+        "5": {"UTG": [24, 34, 42], "BTN": [23, 33, 44]},
+        "6": {"UTG": [27, 32, 41], "BTN": [24, 32, 44]},
+        "7": {"UTG": [26, 33, 41], "BTN": [26, 30, 44]},
+        "8": {"UTG": [30, 29, 41], "BTN": [28, 28, 44]},
+        "9": {"UTG": [30, 29, 41], "BTN": [28, 28, 44]},
+        "T": {"UTG": [30, 29, 41], "BTN": [26, 31, 43]},
+        "J": {"UTG": [28, 28, 44], "BTN": [21, 35, 44]},
+        "Q": {"UTG": [30, 35, 35], "BTN": [19, 37, 44]},
+        "K": {"UTG": [15, 44, 41], "BTN": [18, 39, 43]},
+        "A": {"UTG": [14, 46, 40], "BTN": [23, 35, 42]}
+      },
+      "notes": "Format: fold% / call% / raise%. 20bb は call/raise が活発。"
+    },
+
+    "img26_ip_facing_55cr_40bb_srp": {
+      "scenario": "IP Facing 55% Check-Raise on Paired Flops, 40bb SRP",
+      "data": {
+        "2": {"UTG": [9, 53, 38], "BTN": [7, 53, 40]},
+        "3": {"UTG": [9, 52, 39], "BTN": [7, 52, 41]},
+        "4": {"UTG": [9, 51, 40], "BTN": [6, 51, 43]},
+        "5": {"UTG": [10, 51, 39], "BTN": [7, 51, 42]},
+        "6": {"UTG": [9, 51, 40], "BTN": [6, 52, 42]},
+        "7": {"UTG": [9, 51, 40], "BTN": [7, 52, 41]},
+        "8": {"UTG": [6, 54, 40], "BTN": [7, 51, 42]},
+        "9": {"UTG": [4, 56, 40], "BTN": [5, 54, 41]},
+        "T": {"UTG": [4, 57, 39], "BTN": [5, 55, 40]},
+        "J": {"UTG": [3, 57, 40], "BTN": [4, 55, 41]},
+        "Q": {"UTG": [2, 58, 40], "BTN": [3, 55, 42]},
+        "K": {"UTG": [4, 55, 41], "BTN": [3, 55, 42]},
+        "A": {"UTG": [11, 46, 43], "BTN": [11, 46, 43]}
+      }
+    },
+
+    "img07_bb_xr_freq_100bb": {
+      "scenario": "BB Check-Raise Frequency vs IP 33% CBet on Paired Flops, 100bb",
+      "format": "[paired_rank][UTG / BTN] = {bb_xr_freq, ip_response_raise, ip_response_call, ip_response_fold}",
+      "data": {
+        "2": {"UTG": [18, 11, 49, 40], "BTN": [20, 8, 51, 41]},
+        "3": {"UTG": [19, 10, 50, 40], "BTN": [21, 5, 55, 40]},
+        "4": {"UTG": [20, 7, 53, 40], "BTN": [22, 4, 55, 41]},
+        "5": {"UTG": [22, 4, 55, 41], "BTN": [23, 5, 54, 41]},
+        "6": {"UTG": [22, 4, 55, 41], "BTN": [24, 5, 54, 41]},
+        "7": {"UTG": [23, 4, 55, 41], "BTN": [23, 8, 50, 42]},
+        "8": {"UTG": [24, 3, 56, 41], "BTN": [23, 9, 49, 42]},
+        "9": {"UTG": [23, 5, 54, 41], "BTN": [22, 9, 50, 41]},
+        "T": {"UTG": [22, 7, 52, 41], "BTN": [22, 8, 50, 42]},
+        "J": {"UTG": [19, 8, 50, 42], "BTN": [21, 7, 51, 42]},
+        "Q": {"UTG": [16, 8, 50, 42], "BTN": [21, 6, 51, 43]},
+        "K": {"UTG": [16, 9, 49, 42], "BTN": [21, 7, 50, 43]},
+        "A": {"UTG": [10, 12, 45, 43], "BTN": [12, 9, 47, 44]}
+      },
+      "averages": {"UTG": [20, 7, 52, 41], "BTN": [21, 7, 51, 42]},
+      "baselines": {"UTG": [15, 11, 51, 38], "BTN": [14, 7, 52, 41]},
+      "notes": "BB XR freq highest for mid-pair (5-8 = 22-24), lowest for A-pair (10-12)"
+    },
+
+    "img15_bb_xr_freq_20bb_utg": {
+      "scenario": "BB Check-Raise Frequency vs UTG 20% CBet on Paired Flops, 20bb",
+      "data": {
+        "2": [32, 7, 70, 23],
+        "3": [34, 7, 69, 24],
+        "4": [35, 8, 68, 24],
+        "5": [37, 8, 67, 25],
+        "6": [38, 9, 66, 25],
+        "7": [37, 9, 65, 26],
+        "8": [35, 9, 65, 26],
+        "9": [31, 9, 65, 26],
+        "T": [24, 10, 65, 25],
+        "J": [20, 7, 68, 25],
+        "Q": [23, 4, 70, 26],
+        "K": [23, 1, 72, 27],
+        "A": [15, 3, 69, 28]
+      },
+      "averages": [29, 7, 68, 25],
+      "baselines": [22, 9, 66, 25]
+    },
+
+    "img25_bb_xr_freq_40bb": {
+      "scenario": "BB CR Freq vs IP 33% CBet, 40bb",
+      "data": {
+        "2": {"UTG": [23, 9, 53, 38], "BTN": [26, 7, 53, 40]},
+        "3": {"UTG": [24, 9, 52, 39], "BTN": [26, 7, 52, 41]},
+        "4": {"UTG": [25, 9, 51, 40], "BTN": [26, 6, 51, 43]},
+        "5": {"UTG": [26, 10, 51, 39], "BTN": [26, 7, 51, 42]},
+        "6": {"UTG": [26, 9, 51, 40], "BTN": [27, 6, 52, 42]},
+        "7": {"UTG": [26, 9, 51, 40], "BTN": [27, 7, 52, 41]},
+        "8": {"UTG": [26, 6, 54, 40], "BTN": [26, 7, 51, 42]},
+        "9": {"UTG": [26, 4, 56, 40], "BTN": [26, 5, 54, 41]},
+        "T": {"UTG": [22, 4, 57, 39], "BTN": [25, 5, 55, 40]},
+        "J": {"UTG": [19, 3, 57, 40], "BTN": [24, 4, 55, 41]},
+        "Q": {"UTG": [20, 2, 58, 40], "BTN": [25, 3, 55, 42]},
+        "K": {"UTG": [15, 4, 55, 41], "BTN": [23, 3, 55, 42]},
+        "A": {"UTG": [12, 11, 46, 43], "BTN": [8, 11, 46, 43]}
+      },
+      "averages": {"UTG": [22, 7, 53, 40], "BTN": [24, 6, 54, 40]},
+      "baselines": {"UTG": [17, 9, 51, 40], "BTN": [18, 6, 53, 41]}
+    },
+
+    "img12_bb_strategy_facing_33cbet_40bb": {
+      "scenario": "BB Strategy Facing 33% CBet on Paired Flops, 40bb",
+      "format": "[paired_rank][UTG / BTN] = {raise%, call%, fold%}",
+      "data": {
+        "2": {"UTG": [23, 26, 51], "BTN": [26, 31, 43]},
+        "3": {"UTG": [24, 27, 49], "BTN": [26, 32, 42]},
+        "4": {"UTG": [25, 28, 47], "BTN": [26, 33, 41]},
+        "5": {"UTG": [26, 29, 45], "BTN": [26, 33, 41]},
+        "6": {"UTG": [26, 28, 46], "BTN": [27, 31, 42]},
+        "7": {"UTG": [26, 28, 46], "BTN": [27, 30, 43]},
+        "8": {"UTG": [26, 27, 47], "BTN": [26, 28, 46]},
+        "9": {"UTG": [26, 25, 49], "BTN": [26, 28, 46]},
+        "T": {"UTG": [22, 24, 54], "BTN": [25, 27, 48]},
+        "J": {"UTG": [19, 22, 59], "BTN": [24, 27, 49]},
+        "Q": {"UTG": [20, 22, 58], "BTN": [25, 28, 47]},
+        "K": {"UTG": [15, 23, 62], "BTN": [23, 28, 49]},
+        "A": {"UTG": [12, 25, 63], "BTN": [8, 33, 59]}
+      }
+    },
+
+    "img21_bb_vs_btn_filter_1pct": {
+      "scenario": "BB vs BTN, paired card filter 1.3% (visualization)",
+      "notes": "棒グラフ画像。色比率のみで数値ラベルなし。fold (青) ~50%、call (緑) ~30-50%、raise (赤) ~10-25% 相当に見える"
+    }
+  },
+
+  "donk_betting_data": {
+    "img11_15_donk_range_comparison": {
+      "scenario": "654r 20bb SRP - BB donk range (left, green) vs UTG facing-donk range (right, red)",
+      "data": {
+        "combos": {"BB_donk": 775, "UTG_facing": 222.4},
+        "EV": {"BB_donk": 3.01, "UTG_facing": 2.49,
+               "BB_share": "54.73%", "UTG_share": "45.27%"},
+        "equity": {"BB_donk": "49.8%", "UTG_facing": "50.2%"},
+        "EQR": {"BB_donk": "109.9%", "UTG_facing": "90.2%"},
+        "eq_buckets_simple": {
+          "Best hands": {"BB": "7.2%", "UTG": "4%"},
+          "Good hands": {"BB": "34.7%", "UTG": "29.4%"},
+          "Weak hands": {"BB": "36.8%", "UTG": "59.9%"},
+          "Trash hands": {"BB": "21.3%", "UTG": "6.7%"}
+        }
+      },
+      "interpretation": "654r で BB がドンクすると、自分のレンジは equity 49.8% と五分でも EQR 109.9% を実現 (相手が下がる効果)。UTG のフェイス側は EV 2.49 で EQR 90.2% に下がる。"
+    }
+  },
+
+  "monotone_data": {
+    "img17_09_bb_strategy_by_suit": {
+      "scenario": "BB vs BTN by suit pattern (filter 100%, K95mono context)",
+      "data_format": "棒比率のみ (数値ラベルなし)",
+      "approximate_distribution": {
+        "Rainbow":   {"fold": "~25%", "call": "~50%", "raise": "~25%"},
+        "Flush draw":{"fold": "~25%", "call": "~50%", "raise": "~25%"},
+        "Monotone":  {"fold": "~30%", "call": "~35%", "raise": "~35%"}
+      },
+      "notes": "monotone でレイズ頻度が増える (FD ブロッカー保有時)"
+    }
+  },
+
+  "key_findings_summary": {
+    "_purpose": "本書校正・引用に使える定量的事実",
+    "findings": [
+      {
+        "fact": "ペアボード上 IP 33% CBet に対する BB のチェックレイズ頻度は、ペア中間ランク (5-8) で最高 (22-24%)、A ペアで最低 (10-12%)",
+        "stack": "100bb",
+        "use_for_book": "巻③ 第13章 (チェックレイズ・ドンク) の根拠に"
+      },
+      {
+        "fact": "BB CR が UTG オープン時 (20bb) に 30%超で集中するのはミドル ペア (5-9)",
+        "stack": "20bb",
+        "use_for_book": "巻⑥ トーナメント編で利用"
+      },
+      {
+        "fact": "100bb 33% CBet で BB が BTN 相手に call/fold を半々でやる平均は call 31%, fold 41% (paired 2-9 平均)",
+        "use_for_book": "MDF 0.75 とそれほど離れていない (実測 ~0.59)"
+      },
+      {
+        "fact": "broadway 2-tone (QJTss) は IP 全 CBet 47.3% で 125% overbet が主流 (27.2%)",
+        "use_for_book": "巻③ 第4章 17 型 type 2c の根拠"
+      },
+      {
+        "fact": "QQ6 dry は IP 全 CBet 81.9% で 33% pot 主流 (74.5%)",
+        "use_for_book": "型 6c の代表値"
+      },
+      {
+        "fact": "KJ7 wet は IP 全 CBet 49.3% で 33% pot 主流 (44.7%)",
+        "use_for_book": "型 1c の代表値"
+      }
+    ]
+  }
+}

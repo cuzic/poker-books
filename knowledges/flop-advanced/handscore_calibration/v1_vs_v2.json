@@ -1,0 +1,139 @@
+{
+  "n_samples": 1456,
+  "v1": {
+    "monotonicity_violations": 3,
+    "best_threshold": 13,
+    "best_accuracy": 0.7514,
+    "spearman_correlation": 0.326,
+    "score_distribution": [
+      {
+        "v1_score": 2,
+        "n": 570,
+        "p_bet": 0.256140350877193
+      },
+      {
+        "v1_score": 5,
+        "n": 403,
+        "p_bet": 0.20595533498759305
+      },
+      {
+        "v1_score": 8,
+        "n": 97,
+        "p_bet": 0.5670103092783505
+      },
+      {
+        "v1_score": 10,
+        "n": 140,
+        "p_bet": 0.2857142857142857
+      },
+      {
+        "v1_score": 12,
+        "n": 43,
+        "p_bet": 0.32558139534883723
+      },
+      {
+        "v1_score": 15,
+        "n": 125,
+        "p_bet": 0.824
+      },
+      {
+        "v1_score": 18,
+        "n": 73,
+        "p_bet": 1.0
+      },
+      {
+        "v1_score": 20,
+        "n": 5,
+        "p_bet": 0.6
+      }
+    ]
+  },
+  "v2": {
+    "monotonicity_violations": 6,
+    "best_threshold": 10,
+    "best_accuracy": 0.8015,
+    "spearman_correlation": 0.4881,
+    "score_distribution": [
+      {
+        "v2_score": 2,
+        "n": 279,
+        "p_bet": 0.16845878136200718
+      },
+      {
+        "v2_score": 3,
+        "n": 84,
+        "p_bet": 0.03571428571428571
+      },
+      {
+        "v2_score": 4,
+        "n": 475,
+        "p_bet": 0.22105263157894736
+      },
+      {
+        "v2_score": 5,
+        "n": 42,
+        "p_bet": 0.35714285714285715
+      },
+      {
+        "v2_score": 6,
+        "n": 52,
+        "p_bet": 0.09615384615384616
+      },
+      {
+        "v2_score": 7,
+        "n": 13,
+        "p_bet": 0.0
+      },
+      {
+        "v2_score": 8,
+        "n": 67,
+        "p_bet": 0.208955223880597
+      },
+      {
+        "v2_score": 9,
+        "n": 46,
+        "p_bet": 0.32608695652173914
+      },
+      {
+        "v2_score": 10,
+        "n": 93,
+        "p_bet": 0.6344086021505376
+      },
+      {
+        "v2_score": 12,
+        "n": 55,
+        "p_bet": 0.5818181818181818
+      },
+      {
+        "v2_score": 14,
+        "n": 42,
+        "p_bet": 0.9047619047619048
+      },
+      {
+        "v2_score": 15,
+        "n": 125,
+        "p_bet": 0.824
+      },
+      {
+        "v2_score": 17,
+        "n": 5,
+        "p_bet": 1.0
+      },
+      {
+        "v2_score": 18,
+        "n": 73,
+        "p_bet": 1.0
+      },
+      {
+        "v2_score": 20,
+        "n": 5,
+        "p_bet": 0.6
+      }
+    ]
+  },
+  "improvement": {
+    "monotonicity_reduction": -3,
+    "accuracy_gain": 0.0501,
+    "correlation_gain": 0.1621
+  }
+}

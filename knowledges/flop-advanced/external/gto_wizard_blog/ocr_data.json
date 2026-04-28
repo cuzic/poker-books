@@ -1,0 +1,206 @@
+{
+  "_meta": {
+    "description": "GTO Wizard 公式ブログの画像から OCR で抽出した数値データ。Read tool で画像を読み取り、テキスト化された数値ラベルのみを採録。",
+    "extraction_date": "2026-04-27",
+    "extraction_method": "Read tool (multimodal vision OCR)",
+    "total_images_ocr_attempted": 20,
+    "total_images_with_extractable_numbers": 12,
+    "license": "個人研究用途。再配布・蒸留教師・商用利用は GTO Wizard 規約に従うこと"
+  },
+
+  "ocr_records": [
+    {
+      "article": "01_ip_cbet_cash",
+      "image": "img02 / img09 (同一)",
+      "scenario": "BTN aggregated CBet sizing across all 1755 flops (BTN vs BB SRP, 100bb)",
+      "data": {
+        "Allin (1773% pot)": "0%",
+        "Bet 130%": "8.1%",
+        "Bet 66%": "14%",
+        "Bet 33%": "31.2%",
+        "Check": "46.8%"
+      },
+      "derived": {
+        "total_cbet_freq": "53.2%",
+        "dominant_size": "33% pot"
+      }
+    },
+
+    {
+      "article": "01_ip_cbet_cash",
+      "image": "img08",
+      "scenario": "BTN EV across 1755 flops by suit pattern (BTN vs BB SRP)",
+      "data": {
+        "Rainbow": "EV 3.19",
+        "Flush draw (2-tone)": "EV 3.11",
+        "Monotone": "EV 2.97"
+      }
+    },
+
+    {
+      "article": "05_cbet_sizing_mechanics",
+      "image": "img02",
+      "scenario": "BB defending range composition before/after action vs 33% pot CBet on QQ6 (dry board)",
+      "data_format": "hand_class: red(fold) / green(continue)",
+      "data": {
+        "Set": "0.7% / 1.8%",
+        "Two pair": "2.4% / 3%",
+        "Overpair": "0% / 1.2%",
+        "Top pair": "11.1% / 14.4%",
+        "Underpair": "0% / 1.2%",
+        "Second pair": "13.1% / 12.8%",
+        "Third pair": "10.4% / 9.6%",
+        "Low pair": "8.6% / 6%",
+        "Ace high": "20% / 24.3%",
+        "No made hand": "33.7% / 25.7%"
+      }
+    },
+
+    {
+      "article": "05_cbet_sizing_mechanics",
+      "image": "img07",
+      "scenario": "BB range composition - KJ7 wet board",
+      "data": {
+        "Straight flush": "0.3% / 0.6%",
+        "Flush": "7.5% / 5.1%",
+        "Straight": "4.4% / 8.4%",
+        "Set": "0% / 1.8%",
+        "Two pair": "5.3% / 5.5%",
+        "Overpair": "0% / 2.4%",
+        "Top pair": "10.1% / 11.6%",
+        "Second pair": "11.2% / 11.2%",
+        "Third pair": "10.3% / 11.1%",
+        "Low pair": "11.9% / 9.8%",
+        "Ace high": "18.3% / 19.9%",
+        "King high": "6.1% / 6.6%",
+        "No made hand": "14.6% / 6.1%"
+      }
+    },
+
+    {
+      "article": "05_cbet_sizing_mechanics",
+      "image": "img11",
+      "scenario": "QJT super-wet board - BB equity bucket distribution",
+      "totals": {
+        "combos": 374.4,
+        "EV": 17.1,
+        "equity": "45.1%",
+        "EQR": "89%"
+      },
+      "equity_buckets": {
+        "90-100": "12.6%",
+        "80-90": "3.4%",
+        "70-80": "6.0%",
+        "60-70": "6.4%",
+        "50-60": "16.6%",
+        "25-50": "50.4%",
+        "0-25": "28.6%"
+      }
+    },
+
+    {
+      "article": "05_cbet_sizing_mechanics",
+      "image": "img14",
+      "scenario": "BTN CBet sizing distribution on QJT super-wet (vs BB) - pot 5.5",
+      "data": {
+        "Bet 6.9 (125%)": "27.2% (136.4 combos)",
+        "Bet 4.1 (75%)": "12.7% (63.45 combos)",
+        "Bet 2.75 (50%)": "4.7% (23.55 combos)",
+        "Bet 1.8 (33%)": "2.7% (13.37 combos)",
+        "Check": "52.7% (263.87 combos)"
+      },
+      "derived": {
+        "total_cbet_freq": "47.3%",
+        "dominant_size": "125% overbet (27.2%)",
+        "interpretation": "ウェットボードはオーバーベット主体、33%は使わない"
+      }
+    },
+
+    {
+      "article": "05_cbet_sizing_mechanics",
+      "image": "img09",
+      "scenario": "BTN CBet sizing on QQ6 dry (vs BB)",
+      "data": {
+        "Bet 6.9 (125%)": "0.4% (2.1 combos)",
+        "Bet 4.1 (75%)": "1% (4.97 combos)",
+        "Bet 2.75 (50%)": "6% (30.18 combos)",
+        "Bet 1.8 (33%)": "74.5% (374.42 combos)",
+        "Check": "18.1% (90.74 combos)"
+      },
+      "derived": {
+        "total_cbet_freq": "81.9%",
+        "dominant_size": "33% pot (74.5%)",
+        "interpretation": "ドライボードは小サイズ・高頻度押し"
+      }
+    },
+
+    {
+      "article": "05_cbet_sizing_mechanics",
+      "image": "img03",
+      "scenario": "BTN CBet sizing - 中間ボード (KJ7想定)",
+      "data": {
+        "Bet 6.9 (125%)": "0.3% (1.67 combos)",
+        "Bet 4.1 (75%)": "0.9% (4.43 combos)",
+        "Bet 2.75 (50%)": "3.3% (16.25 combos)",
+        "Bet 1.8 (33%)": "44.7% (220.1 combos)",
+        "Check": "50.7% (249.45 combos)"
+      },
+      "derived": {
+        "total_cbet_freq": "49.3%",
+        "dominant_size": "33% pot",
+        "interpretation": "中間ボードは33%中心、約半分チェック"
+      }
+    },
+
+    {
+      "article": "05_cbet_sizing_mechanics",
+      "image": "img13",
+      "scenario": "BB hand class - paired flop (Trips/Quads が出るのでペアボード)",
+      "data": {
+        "Quads": "0% / 0.2%",
+        "Fullhouse": "1.1% / 0.8%",
+        "Trips": "9.5% / 10.3%",
+        "Overpair": "0% / 2.4%",
+        "Underpair": "3.1% / 6%",
+        "Second pair": "8.4% / 7.2%",
+        "Third pair": "6.9% / 4.8%",
+        "Ace high": "23.2% / 27.4%",
+        "King high": "15.6% / 16.6%",
+        "No made hand": "32.2% / 24.3%"
+      }
+    }
+  ],
+
+  "summary_for_book_calibration": {
+    "description": "書籍プロジェクトの 簡易レンジスコア 校正に直接使えるデータポイント抽出",
+    "key_calibration_points": [
+      {
+        "board_class": "QQ6 (ハイ × ドライ × ペア)",
+        "ip_cbet_freq": "81.9%",
+        "dominant_size": "33% pot",
+        "source": "img09 of article 05"
+      },
+      {
+        "board_class": "QJT (ハイ × ウェット × broadway 連続)",
+        "ip_cbet_freq": "47.3%",
+        "dominant_size": "125% overbet",
+        "source": "img14 of article 05"
+      },
+      {
+        "board_class": "KJ7 (ハイ × ウェット × 中間)",
+        "ip_cbet_freq": "49.3%",
+        "dominant_size": "33% pot",
+        "source": "img03 of article 05"
+      },
+      {
+        "board_class": "全 1755 flops aggregate (BTN vs BB)",
+        "ip_cbet_freq": "53.2%",
+        "dominant_size": "33% pot (31.2%)",
+        "ev_rainbow": 3.19,
+        "ev_2tone": 3.11,
+        "ev_monotone": 2.97,
+        "source": "img02 + img08 of article 01"
+      }
+    ]
+  }
+}

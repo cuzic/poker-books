@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "count": 3,
+    "valid_count": 3,
+    "total_elapsed_sec": 391.9,
+    "generated_at": "2026-04-27T17:26:53"
+  },
+  "metadata": {
+    "solver": "TexasSolver",
+    "scenario": "BTN vs BB SRP 100bb cash 6-max",
+    "tree": "flop-only",
+    "ip_flop_bets": "33,50,75,150 + allin",
+    "oop_flop_bets": "60,100 + allin",
+    "source": "GTO Wizard 公式ブログ記事 05 (CBet Sizing Mechanics)"
+  },
+  "results": [
+    {
+      "board": "QQ6",
+      "board_cards": "Qc,Qs,6d",
+      "ref_cbet_pct": 82,
+      "solver_cbet_pct": 86.2,
+      "error": 4.2,
+      "abs_error": 4.2,
+      "exploitability_pct": 0.17006205,
+      "elapsed_sec": 156.0,
+      "status": "ok"
+    },
+    {
+      "board": "KJ7ss",
+      "board_cards": "Kh,Jh,7c",
+      "ref_cbet_pct": 49,
+      "solver_cbet_pct": 54.8,
+      "error": 5.8,
+      "abs_error": 5.8,
+      "exploitability_pct": 0.18463092,
+      "elapsed_sec": 107.5,
+      "status": "ok"
+    },
+    {
+      "board": "QJTss",
+      "board_cards": "Qc,Jc,Td",
+      "ref_cbet_pct": 47,
+      "solver_cbet_pct": 53.9,
+      "error": 6.9,
+      "abs_error": 6.9,
+      "exploitability_pct": 0.19469261,
+      "elapsed_sec": 128.2,
+      "status": "ok"
+    }
+  ]
+}

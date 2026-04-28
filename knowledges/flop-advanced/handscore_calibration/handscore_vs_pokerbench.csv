@@ -1,0 +1,1457 @@
+board,holding,hand_score,category,action,correct_decision,pot_size
+4s4h3h,AcKc,2,エア,bet,Bet 2,5
+9dTs8s,Kh9c,8,セカンドペア強,check,Check,5
+Ad8d3d,KsTc,2,バックドアドロー,check,Check,5
+Js8d3c,7h7c,5,弱ペア/ボトムペア,check,Check,5
+5c5dAh,KhQs,2,バックドアドロー,check,Check,5
+Jh4h5s,KsTs,2,バックドアドロー,check,Check,5
+Ad8d3d,Ah5s,10,TP+弱キッカー,check,Check,5
+Ad9h8h,Ah7s,10,TP+弱キッカー,check,Check,5
+Ad9h8h,Ks5s,2,エア,check,Check,5
+Ks7h2d,AhQd,2,バックドアドロー,bet,Bet 2,5
+9s7s4c,AcQd,2,エア,check,Check,5
+4s4h3h,As2s,5,ガットショット,check,Check,5
+Ad9h8h,AcKh,12,TP+強キッカー,bet,Bet 4,5
+8h8cTc,Ts9d,15,2ペア,bet,Bet 2,5
+JsKs5d,Qs9s,10,フラッシュドロー,bet,Bet 4,5
+Ad9h8h,Qs9s,8,セカンドペア強,check,Check,5
+Jh4h5s,AhTd,2,バックドアドロー,check,Check,5
+5c2d3h,9s7s,2,エア,check,Check,5
+TsKcAh,QcTh,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,Ad5c,2,バックドアドロー,check,Check,5
+8h8cTc,AdTh,15,2ペア,bet,Bet 2,5
+Ks7h2d,As3s,2,バックドアドロー,bet,Bet 2,5
+QcAdKh,9d8d,2,バックドアドロー,check,Check,5
+Ad9h8h,Ks8d,5,弱ペア/ボトムペア,check,Check,5
+Qc8cAc,5s5h,5,弱ペア/ボトムペア,check,Check,5
+AcKs7d,KhKd,18,セット,bet,Bet 4,5
+AcKs7d,QsQc,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,8h7h,8,ドロー+弱ペア,check,Check,5
+JsKs5d,2h2c,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,Qc9s,2,エア,check,Check,5
+7d6c4h,Kc8c,5,ガットショット,bet,Bet 2,5
+9dTs8s,6h6d,5,弱ペア/ボトムペア,check,Check,5
+Ad9h8h,7c6c,8,OESD,bet,Bet 4,5
+Jh4h5s,2s2d,5,弱ペア/ボトムペア,check,Check,5
+9s7s4c,Ad5h,2,エア,check,Check,5
+JcJh4s,As6d,2,エア,check,Check,5
+JsKs5d,Jc5c,15,2ペア,bet,Bet 4,5
+Th4c5d,Ac9d,2,エア,check,Check,5
+5c2d3h,9d9c,15,オーバーペア,bet,Bet 2,5
+JsKs5d,7h5h,5,弱ペア/ボトムペア,check,Check,5
+QcAdKh,9d8d,2,バックドアドロー,check,Check,5
+Ad8d3d,As4s,10,TP+弱キッカー,check,Check,5
+AcKs7d,Qs7s,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,5d5c,18,セット,bet,Bet 4,5
+Td6h4h,Ts7s,10,TP+弱キッカー,check,Check,5
+Js8d3c,Ah6s,2,エア,check,Check,5
+QcAdKh,Jc7c,5,ガットショット,bet,Bet 4,5
+9s7s4c,AdTs,2,バックドアドロー,check,Check,5
+JsKs5d,As3c,2,バックドアドロー,bet,Bet 4,5
+Th3s2d,AcTd,15,TPTK,bet,Bet 4,5
+Ad8d3d,KsKh,5,弱ペア/ボトムペア,check,Check,5
+4s4h3h,Th8c,2,バックドアドロー,bet,Bet 2,5
+9s7s4c,6s6d,5,弱ペア/ボトムペア,check,Check,5
+Th3s2d,Ks8s,2,バックドアドロー,check,Check,5
+Jh4h5s,As4d,5,弱ペア/ボトムペア,check,Check,5
+8h8cTc,Ks8d,18,セット,bet,Bet 2,5
+JcJh4s,9c6c,2,バックドアドロー,bet,Bet 2,5
+Ks7h2d,Ah4d,2,エア,bet,Bet 2,5
+7d6c4h,AsJc,2,エア,check,Check,5
+QcAdKh,AhKd,15,2ペア,bet,Bet 4,5
+TsKcAh,Kd5d,5,セカンドペア弱,check,Check,5
+Ks7h2d,AcJd,2,エア,bet,Bet 2,5
+9dTs8s,AdAc,15,オーバーペア,check,Check,5
+7d6c4h,KsQd,2,エア,check,Check,5
+Jh4h5s,KsTc,2,エア,check,Check,5
+JcJh4s,Ah5h,2,バックドアドロー,check,Check,5
+AcKs7d,Kc9h,5,セカンドペア弱,check,Check,5
+7d6c4h,9s9c,15,オーバーペア,bet,Bet 2,5
+JsKs5d,Th9h,5,ガットショット,check,Check,5
+Th4c5d,Ah4h,5,弱ペア/ボトムペア,bet,Bet 4,5
+9dTs8s,AhQd,5,ガットショット,bet,Bet 2,5
+Jh4h5s,As8d,2,エア,check,Check,5
+7d6c4h,QhTh,2,バックドアドロー,check,Check,5
+Jh4h5s,Qh9h,10,フラッシュドロー,bet,Bet 4,5
+9dTs8s,JcTc,12,コンボドロー(TP+中キッカー),check,Check,5
+TsKcAh,QcJc,18,ストレート,bet,Bet 4,5
+9dTs8s,Ad8d,5,弱ペア/ボトムペア,check,Check,5
+6s8d7c,AcQs,2,バックドアドロー,bet,Bet 2,5
+JsKs5d,Ac8d,2,エア,check,Check,5
+Th4c5d,Ah4h,5,弱ペア/ボトムペア,bet,Bet 4,5
+Jh4h5s,AhTd,2,バックドアドロー,check,Check,5
+AcKs7d,Qs5s,2,バックドアドロー,check,Check,5
+5c2d3h,Td7d,2,バックドアドロー,bet,Bet 2,5
+9s7s4c,Ah5d,2,エア,check,Check,5
+8h8cTc,Td8s,18,セット,bet,Bet 2,5
+Th4c5d,9h9c,5,弱ペア/ボトムペア,check,Check,5
+Th3s2d,QsJs,2,バックドアドロー,bet,Bet 4,5
+Jh4h5s,Jd8d,10,TP+中キッカー,check,Check,5
+TsKcAh,QhJd,18,ストレート,bet,Bet 4,5
+Ad9h8h,KsQs,2,バックドアドロー,check,Check,5
+Th4c5d,4s4d,18,セット,bet,Bet 4,5
+TsKcAh,5h5c,5,弱ペア/ボトムペア,check,Check,5
+7d6c4h,5h5d,8,ドロー+弱ペア,bet,Bet 2,5
+8h8cTc,Ac6h,2,バックドアドロー,bet,Bet 2,5
+JcJh4s,As7d,2,エア,check,Check,5
+Ad8d3d,7s7d,8,ドロー+弱ペア,check,Check,5
+JsKs5d,KcJd,15,2ペア,bet,Bet 4,5
+5c5dAh,9d7d,2,バックドアドロー,bet,Bet 2,5
+4s4h3h,9s9h,15,2ペア,bet,Bet 2,5
+Td6h4h,Jh9d,2,バックドアドロー,bet,Bet 4,5
+Qc8cAc,Qs2s,5,セカンドペア弱,check,Check,5
+4s4h3h,6d5d,8,OESD,bet,Bet 2,5
+5c2d3h,Kh8c,2,エア,bet,Bet 2,5
+QcAdKh,JsJc,5,弱ペア/ボトムペア,bet,Bet 4,5
+Qc8cAc,Qd4d,5,セカンドペア弱,check,Check,5
+4s4h3h,Jc5c,2,バックドアドロー,bet,Bet 2,5
+5c2d3h,9d6d,5,ガットショット,bet,Bet 2,5
+9s7s4c,AhQh,2,エア,check,Check,5
+Td6h4h,Kc8d,2,エア,check,Check,5
+Th4c5d,7h5h,5,セカンドペア弱,check,Check,5
+Ad9h8h,Ts9s,5,セカンドペア弱,check,Check,5
+JcJh4s,Ac4c,15,2ペア,bet,Bet 2,5
+6s8d7c,AdAc,15,オーバーペア,check,Check,5
+Td6h4h,Ad9c,2,エア,check,Check,5
+Qc8cAc,Ad9c,12,コンボドロー(TP+中キッカー),check,Check,5
+Js8d3c,As6s,2,バックドアドロー,check,Check,5
+8h8cTc,Kd5d,2,エア,check,Check,5
+Ad8d3d,Ac6d,12,コンボドロー(TP+弱キッカー),check,Check,5
+Ad8d3d,As5s,10,TP+弱キッカー,check,Check,5
+QcAdKh,JcTh,18,ストレート,bet,Bet 4,5
+TsKcAh,6c5c,2,バックドアドロー,check,Check,5
+Ks7h2d,Kd9d,10,TP+中キッカー,bet,Bet 2,5
+7d6c4h,Kc5c,8,OESD,bet,Bet 2,5
+Jh4h5s,Ac4s,5,弱ペア/ボトムペア,check,Check,5
+JcJh4s,Tc8s,2,エア,bet,Bet 2,5
+Js8d3c,KsKh,15,オーバーペア,bet,Bet 2,5
+Jh4h5s,TsTh,5,弱ペア/ボトムペア,check,Check,5
+Th4c5d,Jd4d,5,弱ペア/ボトムペア,check,Check,5
+AcKs7d,Qh9c,2,バックドアドロー,check,Check,5
+9dTs8s,Td8h,15,2ペア,check,Check,5
+JcJh4s,Qc9s,2,エア,bet,Bet 2,5
+9dTs8s,7c5c,8,OESD,bet,Bet 2,5
+9s7s4c,As9h,15,TPTK,bet,Bet 4,5
+TsKcAh,Kh7h,5,セカンドペア弱,check,Check,5
+8h8cTc,KcJs,2,バックドアドロー,bet,Bet 2,5
+5c5dAh,KsTd,2,エア,check,Check,5
+TsKcAh,AcKh,15,2ペア,bet,Bet 4,5
+Qc8cAc,QdTs,5,セカンドペア弱,check,Check,5
+Ad9h8h,KcQc,2,バックドアドロー,check,Check,5
+8h8cTc,AhTh,15,2ペア,bet,Bet 2,5
+JsKs5d,QsJh,8,セカンドペア強,check,Check,5
+4s4h3h,KcTc,2,エア,check,Check,5
+TsKcAh,Jh9c,5,ガットショット,bet,Bet 4,5
+5c2d3h,7s6s,5,ガットショット,bet,Bet 2,5
+5c5dAh,Ac3h,15,2ペア,check,Check,5
+6s8d7c,8c6c,15,2ペア,bet,Bet 2,5
+4s4h3h,Tc8d,2,エア,check,Check,5
+7d6c4h,Qd5d,8,OESD,bet,Bet 2,5
+Js8d3c,Ah6h,2,エア,check,Check,5
+Td6h4h,As4d,5,弱ペア/ボトムペア,check,Check,5
+Ad9h8h,Jh5h,10,フラッシュドロー,check,Check,5
+JsKs5d,JhTc,5,セカンドペア弱,check,Check,5
+JsKs5d,8h8d,5,弱ペア/ボトムペア,check,Check,5
+Th4c5d,5h4h,15,2ペア,bet,Bet 4,5
+Th4c5d,Ah9h,2,バックドアドロー,check,Check,5
+Td6h4h,Ks8d,2,エア,check,Check,5
+Ad8d3d,Kc7c,2,バックドアドロー,check,Check,5
+6s8d7c,Qs9h,8,OESD,bet,Bet 2,5
+Qc8cAc,Kc4c,20,フラッシュ/SF,bet,Bet 2,5
+Js8d3c,KcQs,2,バックドアドロー,bet,Bet 2,5
+5c2d3h,As5h,15,TPTK,bet,Bet 2,5
+9s7s4c,Ad4h,5,弱ペア/ボトムペア,check,Check,5
+Ks7h2d,KdQh,12,TP+強キッカー,bet,Bet 2,5
+Th3s2d,Ts9s,10,TP+中キッカー,bet,Bet 4,5
+9dTs8s,QsJc,18,ストレート,bet,Bet 2,5
+Jh4h5s,Jd6d,10,TP+弱キッカー,check,Check,5
+9s7s4c,Ad9h,15,TPTK,bet,Bet 4,5
+Th3s2d,AcJs,2,バックドアドロー,check,Check,5
+Th4c5d,Ad8c,2,エア,check,Check,5
+6s8d7c,4d4c,5,弱ペア/ボトムペア,check,Check,5
+5c2d3h,Td8h,2,エア,bet,Bet 2,5
+9dTs8s,Qd9h,8,セカンドペア強,check,Check,5
+7d6c4h,AhAc,15,オーバーペア,check,Check,5
+JsKs5d,Jd9s,5,セカンドペア弱,check,Check,5
+Ks7h2d,Ts8h,2,エア,bet,Bet 2,5
+JsKs5d,Jh4h,5,セカンドペア弱,check,Check,5
+JcJh4s,AcJs,18,セット,bet,Bet 2,5
+7d6c4h,Qc9h,2,エア,bet,Bet 2,5
+Ad8d3d,Ac5d,12,コンボドロー(TP+弱キッカー),check,Check,5
+Ad8d3d,KsJs,2,バックドアドロー,check,Check,5
+Td6h4h,Jc9s,2,バックドアドロー,check,Check,5
+Ad8d3d,QdTd,20,フラッシュ/SF,bet,Bet 2,5
+Ad9h8h,Kh6h,10,フラッシュドロー,bet,Bet 4,5
+Js8d3c,Kh7h,2,エア,check,Check,5
+7d6c4h,Qd6d,8,セカンドペア強,bet,Bet 2,5
+Th4c5d,Jh4h,5,弱ペア/ボトムペア,check,Check,5
+AcKs7d,Qc9s,2,バックドアドロー,check,Check,5
+Jh4h5s,Ac4d,5,弱ペア/ボトムペア,check,Check,5
+8h8cTc,Ts8s,18,セット,bet,Bet 2,5
+Th3s2d,AhJs,2,バックドアドロー,check,Check,5
+Ks7h2d,Td8s,2,エア,bet,Bet 2,5
+Td6h4h,2s2c,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,AhTc,2,バックドアドロー,check,Check,5
+Th4c5d,JcTd,10,TP+中キッカー,check,Check,5
+Td6h4h,Js8s,2,エア,check,Check,5
+9s7s4c,KcTc,2,バックドアドロー,check,Check,5
+Js8d3c,AcKc,2,バックドアドロー,bet,Bet 2,5
+Js8d3c,KcQs,2,バックドアドロー,bet,Bet 2,5
+Td6h4h,Tc7c,10,TP+弱キッカー,check,Check,5
+5c5dAh,Ad3c,15,2ペア,check,Check,5
+Th4c5d,Tc8h,10,TP+中キッカー,check,Check,5
+Th4c5d,3s3c,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,7s7h,8,ドロー+弱ペア,check,Check,5
+AcKs7d,Ah7h,15,2ペア,bet,Bet 4,5
+TsKcAh,Tc9c,5,弱ペア/ボトムペア,check,Check,5
+6s8d7c,KdJs,2,バックドアドロー,bet,Bet 2,5
+Jh4h5s,Ad8c,2,エア,check,Check,5
+JsKs5d,Ac2c,2,エア,bet,Bet 4,5
+6s8d7c,As5s,8,OESD,bet,Bet 2,5
+6s8d7c,5s4s,18,ストレート,bet,Bet 2,5
+JcJh4s,As6d,2,エア,check,Check,5
+Js8d3c,KdTs,2,エア,bet,Bet 2,5
+AcKs7d,AsJd,10,TP+中キッカー,bet,Bet 4,5
+Ad8d3d,Kh9d,10,フラッシュドロー,check,Check,5
+4s4h3h,KhTd,2,バックドアドロー,check,Check,5
+5c5dAh,QdJd,2,バックドアドロー,check,Check,5
+AcKs7d,8s8h,5,弱ペア/ボトムペア,check,Check,5
+5c2d3h,Ah9h,5,ガットショット,bet,Bet 2,5
+6s8d7c,Ad2d,2,バックドアドロー,check,Check,5
+Jh4h5s,AhKh,10,フラッシュドロー,check,Check,5
+JcJh4s,Tc6c,2,バックドアドロー,bet,Bet 2,5
+Td6h4h,Qh9d,2,バックドアドロー,bet,Bet 4,5
+Ks7h2d,Ac8d,2,エア,check,Check,5
+QcAdKh,KdTd,5,セカンドペア弱,bet,Bet 4,5
+9dTs8s,KhJc,8,OESD,bet,Bet 2,5
+Jh4h5s,AhKs,2,バックドアドロー,check,Check,5
+4s4h3h,Ac5s,5,ガットショット,check,Check,5
+AcKs7d,KcTh,5,セカンドペア弱,check,Check,5
+Ad8d3d,6d5d,20,フラッシュ/SF,check,Check,5
+Jh4h5s,Kc8s,2,エア,check,Check,5
+5c2d3h,Qd4d,8,OESD,bet,Bet 2,5
+QcAdKh,JsTs,18,ストレート,bet,Bet 4,5
+8h8cTc,Qh2h,2,バックドアドロー,bet,Bet 2,5
+JcJh4s,Ad6h,2,エア,check,Check,5
+9s7s4c,6s6c,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,Qh9h,8,セカンドペア強,check,Check,5
+TsKcAh,Kh6h,5,セカンドペア弱,check,Check,5
+Ad8d3d,9c8c,5,セカンドペア弱,check,Check,5
+6s8d7c,4s4h,5,弱ペア/ボトムペア,check,Check,5
+Ad8d3d,Ah9h,10,TP+中キッカー,check,Check,5
+Ad8d3d,Kc9h,2,バックドアドロー,check,Check,5
+7d6c4h,Ts7s,10,TP+中キッカー,check,Check,5
+9dTs8s,Qh5h,5,ガットショット,check,Check,5
+7d6c4h,AdJh,2,エア,check,Check,5
+4s4h3h,KcJd,2,エア,check,Check,5
+Js8d3c,Ks9c,2,エア,bet,Bet 2,5
+Th3s2d,As8d,2,バックドアドロー,check,Check,5
+JsKs5d,9h9d,5,弱ペア/ボトムペア,check,Check,5
+Td6h4h,8h7h,10,フラッシュドロー,bet,Bet 4,5
+9s7s4c,Ad2d,2,エア,bet,Bet 4,5
+6s8d7c,Jd9c,8,OESD,bet,Bet 2,5
+5c5dAh,KcTh,2,エア,check,Check,5
+Ad9h8h,7d7c,5,弱ペア/ボトムペア,check,Check,5
+8h8cTc,Ad7s,2,エア,check,Check,5
+5c5dAh,KcJd,2,エア,check,Check,5
+Ad8d3d,KsQs,2,バックドアドロー,check,Check,5
+Ad8d3d,As7s,10,TP+弱キッカー,check,Check,5
+4s4h3h,7d7c,15,2ペア,bet,Bet 2,5
+Td6h4h,AdAc,15,オーバーペア,check,Check,5
+Ks7h2d,As9d,2,エア,check,Check,5
+Ad9h8h,AhTd,10,TP+中キッカー,check,Check,5
+TsKcAh,Td8c,5,弱ペア/ボトムペア,check,Check,5
+JsKs5d,Ah9c,2,エア,check,Check,5
+JcJh4s,5s5h,15,2ペア,bet,Bet 2,5
+JsKs5d,Qh4h,2,バックドアドロー,check,Check,5
+Th4c5d,Td9c,10,TP+中キッカー,check,Check,5
+QcAdKh,Qs9d,5,弱ペア/ボトムペア,check,Check,5
+Ad9h8h,AhKs,12,TP+強キッカー,bet,Bet 4,5
+Th4c5d,Kh8d,2,エア,check,Check,5
+Ad9h8h,KsQd,2,バックドアドロー,check,Check,5
+Th3s2d,Ac7c,2,バックドアドロー,check,Check,5
+Ad9h8h,Kh4h,10,フラッシュドロー,bet,Bet 4,5
+9s7s4c,JdTc,5,ガットショット,check,Check,5
+Ks7h2d,Ad3s,2,バックドアドロー,bet,Bet 2,5
+TsKcAh,Ac9d,10,TP+中キッカー,check,Check,5
+Ad9h8h,Kh8s,5,弱ペア/ボトムペア,check,Check,5
+4s4h3h,Ad7h,2,バックドアドロー,check,Check,5
+Th4c5d,AcTd,15,TPTK,bet,Bet 4,5
+5c5dAh,9c6c,2,バックドアドロー,bet,Bet 2,5
+JsKs5d,As2s,10,フラッシュドロー,bet,Bet 4,5
+JsKs5d,3h3d,5,弱ペア/ボトムペア,check,Check,5
+Js8d3c,9s7s,5,ガットショット,bet,Bet 2,5
+5c2d3h,KsJh,2,エア,check,Check,5
+9s7s4c,As6d,2,バックドアドロー,bet,Bet 4,5
+JcJh4s,JdTs,18,セット,bet,Bet 2,5
+4s4h3h,AsKc,2,エア,bet,Bet 2,5
+QcAdKh,Ks2s,5,セカンドペア弱,check,Check,5
+Th3s2d,Ks5s,2,バックドアドロー,bet,Bet 4,5
+Td6h4h,Qd6d,8,セカンドペア強,bet,Bet 4,5
+Jh4h5s,6d6c,5,弱ペア/ボトムペア,check,Check,5
+Th3s2d,QhQd,15,オーバーペア,bet,Bet 4,5
+Ad9h8h,KsQh,2,バックドアドロー,check,Check,5
+9s7s4c,Kd4d,5,弱ペア/ボトムペア,check,Check,5
+JsKs5d,Qs9d,5,ガットショット,bet,Bet 4,5
+7d6c4h,Ah5h,8,OESD,bet,Bet 2,5
+4s4h3h,As5d,5,ガットショット,check,Check,5
+Ks7h2d,Kh8d,10,TP+中キッカー,check,Check,5
+9s7s4c,As6d,2,バックドアドロー,bet,Bet 4,5
+Ad9h8h,As6c,10,TP+弱キッカー,check,Check,5
+Th3s2d,4h4d,5,弱ペア/ボトムペア,check,Check,5
+JcJh4s,Ah5c,2,エア,bet,Bet 2,5
+Td6h4h,Jc4c,5,弱ペア/ボトムペア,check,Check,5
+5c5dAh,9h6h,2,バックドアドロー,bet,Bet 2,5
+Ks7h2d,AdJd,2,バックドアドロー,bet,Bet 2,5
+Th3s2d,Td9d,10,TP+中キッカー,bet,Bet 4,5
+TsKcAh,JhJc,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,Tc6c,10,TP+弱キッカー,bet,Bet 2,5
+Jh4h5s,Td6d,2,バックドアドロー,check,Check,5
+JsKs5d,AdQd,5,ガットショット,bet,Bet 4,5
+Th3s2d,8s8c,5,弱ペア/ボトムペア,check,Check,5
+Th3s2d,Qh5h,2,バックドアドロー,bet,Bet 4,5
+Th4c5d,Tc8d,10,TP+中キッカー,check,Check,5
+Jh4h5s,Ad7s,2,エア,check,Check,5
+6s8d7c,Qd2d,2,バックドアドロー,bet,Bet 2,5
+4s4h3h,Ad2d,5,ガットショット,check,Check,5
+9s7s4c,Ac6s,2,バックドアドロー,bet,Bet 4,5
+Js8d3c,Ad9d,2,バックドアドロー,check,Check,5
+Td6h4h,AcJh,2,バックドアドロー,check,Check,5
+QcAdKh,Th6h,5,ガットショット,bet,Bet 4,5
+9dTs8s,KcQs,5,ガットショット,bet,Bet 2,5
+4s4h3h,9h8h,10,フラッシュドロー,bet,Bet 2,5
+4s4h3h,Kc8d,2,エア,check,Check,5
+Jh4h5s,AcQd,2,エア,check,Check,5
+Ks7h2d,Kc9d,10,TP+中キッカー,check,Check,5
+Th3s2d,Ah8c,2,バックドアドロー,check,Check,5
+Jh4h5s,Jc9s,10,TP+中キッカー,check,Check,5
+8h8cTc,Js9c,8,OESD,bet,Bet 2,5
+Th3s2d,Ad5d,5,ガットショット,bet,Bet 4,5
+7d6c4h,Js5s,8,OESD,bet,Bet 2,5
+AcKs7d,7h6h,5,弱ペア/ボトムペア,bet,Bet 4,5
+Ad9h8h,7s6s,8,OESD,bet,Bet 4,5
+Td6h4h,5d5c,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,Kh3h,2,バックドアドロー,check,Check,5
+Th3s2d,AhJc,2,バックドアドロー,check,Check,5
+JsKs5d,AsQd,5,ガットショット,bet,Bet 4,5
+AcKs7d,QsTs,5,ガットショット,bet,Bet 4,5
+Qc8cAc,Jc9s,10,フラッシュドロー,bet,Bet 2,5
+QcAdKh,Td8d,5,ガットショット,bet,Bet 4,5
+Ks7h2d,Jd9s,2,エア,bet,Bet 2,5
+Th3s2d,AdTd,15,TPTK,bet,Bet 4,5
+Td6h4h,As9c,2,エア,check,Check,5
+QcAdKh,Kc8s,5,セカンドペア弱,check,Check,5
+Ks7h2d,As5h,2,エア,bet,Bet 2,5
+Th3s2d,7s5s,2,バックドアドロー,check,Check,5
+4s4h3h,Kc8d,2,エア,check,Check,5
+7d6c4h,Td9d,5,ガットショット,bet,Bet 2,5
+7d6c4h,KsJs,2,エア,check,Check,5
+AcKs7d,Jh5h,2,エア,check,Check,5
+8h8cTc,Kc9s,2,バックドアドロー,bet,Bet 2,5
+Th4c5d,Ah9h,2,バックドアドロー,check,Check,5
+9dTs8s,Ac7d,8,OESD,bet,Bet 2,5
+JsKs5d,JhTs,5,セカンドペア弱,check,Check,5
+Td6h4h,JcTs,10,TP+中キッカー,check,Check,5
+AcKs7d,Jd9c,2,エア,check,Check,5
+9dTs8s,4h4d,5,弱ペア/ボトムペア,check,Check,5
+8h8cTc,As4d,2,エア,check,Check,5
+QcAdKh,Ac6h,10,TP+弱キッカー,check,Check,5
+JcJh4s,AcKd,2,エア,bet,Bet 2,5
+TsKcAh,9d9c,5,弱ペア/ボトムペア,check,Check,5
+5c2d3h,7s7d,15,オーバーペア,bet,Bet 2,5
+Td6h4h,Ah9d,2,バックドアドロー,check,Check,5
+Ad8d3d,Js7s,2,バックドアドロー,check,Check,5
+AcKs7d,6s6h,5,弱ペア/ボトムペア,check,Check,5
+QcAdKh,Tc7c,5,ガットショット,bet,Bet 4,5
+AcKs7d,KdTd,5,セカンドペア弱,check,Check,5
+JsKs5d,JhJd,18,セット,bet,Bet 4,5
+Th4c5d,QhTd,12,TP+強キッカー,check,Check,5
+Js8d3c,5h5c,5,弱ペア/ボトムペア,check,Check,5
+Ks7h2d,KhKd,18,セット,bet,Bet 2,5
+QcAdKh,JsJc,5,弱ペア/ボトムペア,bet,Bet 4,5
+9s7s4c,KhQd,2,エア,check,Check,5
+TsKcAh,QhQd,5,弱ペア/ボトムペア,check,Check,5
+JsKs5d,JhTs,5,セカンドペア弱,check,Check,5
+TsKcAh,Kh8s,5,セカンドペア弱,check,Check,5
+9dTs8s,Ad5h,2,バックドアドロー,check,Check,5
+Th4c5d,Ac4d,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,AsKs,2,バックドアドロー,check,Check,5
+8h8cTc,Ad8d,18,セット,bet,Bet 2,5
+Js8d3c,Ah3h,5,弱ペア/ボトムペア,bet,Bet 2,5
+5c5dAh,Ad5h,18,セット,bet,Bet 2,5
+Td6h4h,2d2c,5,弱ペア/ボトムペア,check,Check,5
+Ad9h8h,Tc9c,5,セカンドペア弱,check,Check,5
+6s8d7c,Qd9d,8,OESD,bet,Bet 2,5
+JsKs5d,Ah8h,2,エア,check,Check,5
+Qc8cAc,Qs6s,5,セカンドペア弱,check,Check,5
+9s7s4c,AsQh,2,バックドアドロー,check,Check,5
+Ad8d3d,Ac4s,10,TP+弱キッカー,check,Check,5
+Ad9h8h,As6d,10,TP+弱キッカー,check,Check,5
+7d6c4h,Ks4s,5,弱ペア/ボトムペア,check,Check,5
+QcAdKh,Kc2c,5,セカンドペア弱,check,Check,5
+JsKs5d,Qc4c,2,バックドアドロー,check,Check,5
+5c5dAh,KdTd,2,バックドアドロー,check,Check,5
+TsKcAh,Kd9h,5,セカンドペア弱,check,Check,5
+8h8cTc,As5h,2,エア,check,Check,5
+Qc8cAc,JdTc,10,フラッシュドロー,check,Check,5
+Td6h4h,KhQc,2,バックドアドロー,bet,Bet 4,5
+QcAdKh,7s5s,2,バックドアドロー,check,Check,5
+AcKs7d,Ad2d,10,TP+弱キッカー,check,Check,5
+AcKs7d,Kc8s,5,セカンドペア弱,check,Check,5
+7d6c4h,Qh7h,12,TP+強キッカー,bet,Bet 2,5
+9dTs8s,Kc9h,8,セカンドペア強,check,Check,5
+QcAdKh,QsQd,18,セット,bet,Bet 4,5
+AcKs7d,Qd9h,2,バックドアドロー,check,Check,5
+9dTs8s,Ah4h,2,バックドアドロー,check,Check,5
+Th3s2d,Jh5h,2,バックドアドロー,bet,Bet 4,5
+AcKs7d,Js9d,2,エア,check,Check,5
+5c5dAh,AsAc,18,セット,bet,Bet 2,5
+4s4h3h,Kc9d,2,エア,check,Check,5
+Qc8cAc,KcTd,10,フラッシュドロー,bet,Bet 2,5
+8h8cTc,Jh5h,2,バックドアドロー,bet,Bet 2,5
+AcKs7d,QdQc,5,弱ペア/ボトムペア,check,Check,5
+QcAdKh,TsTc,5,弱ペア/ボトムペア,bet,Bet 4,5
+Ks7h2d,Ad7s,8,セカンドペア強,bet,Bet 2,5
+Th4c5d,Ac6s,2,バックドアドロー,bet,Bet 4,5
+Th3s2d,KsKc,15,オーバーペア,bet,Bet 4,5
+Ad9h8h,Jd9s,5,セカンドペア弱,check,Check,5
+Ad9h8h,Kc8d,5,弱ペア/ボトムペア,check,Check,5
+Qc8cAc,KhTc,10,フラッシュドロー,check,Check,5
+Ad9h8h,Kc8s,5,弱ペア/ボトムペア,check,Check,5
+JsKs5d,Jd9c,5,セカンドペア弱,check,Check,5
+9s7s4c,AdJh,2,エア,check,Check,5
+AcKs7d,Ah7c,15,2ペア,bet,Bet 4,5
+8h8cTc,Qh7h,2,バックドアドロー,bet,Bet 2,5
+9s7s4c,TsTc,15,オーバーペア,bet,Bet 4,5
+Ks7h2d,Ac9h,2,エア,check,Check,5
+Ad9h8h,Qh5h,10,フラッシュドロー,check,Check,5
+Th4c5d,Js5s,5,セカンドペア弱,check,Check,5
+Jh4h5s,Ah7c,2,バックドアドロー,bet,Bet 4,5
+QcAdKh,9h6h,2,バックドアドロー,check,Check,5
+Ks7h2d,As4s,2,バックドアドロー,bet,Bet 2,5
+Th3s2d,Ks8c,2,エア,check,Check,5
+4s4h3h,Td9h,2,バックドアドロー,bet,Bet 2,5
+QcAdKh,Kc9s,5,セカンドペア弱,check,Check,5
+JsKs5d,Tc6c,2,エア,check,Check,5
+9dTs8s,Kd9s,8,セカンドペア強,check,Check,5
+Ad9h8h,Ac9d,15,2ペア,bet,Bet 4,5
+9dTs8s,Ah4c,2,バックドアドロー,check,Check,5
+AcKs7d,QdQc,5,弱ペア/ボトムペア,check,Check,5
+5c5dAh,KsJd,2,エア,check,Check,5
+Ad8d3d,As9d,12,コンボドロー(TP+中キッカー),check,Check,5
+Th3s2d,Ah7h,2,バックドアドロー,check,Check,5
+7d6c4h,As7h,15,TPTK,bet,Bet 2,5
+7d6c4h,Qh6h,8,セカンドペア強,bet,Bet 2,5
+JsKs5d,AhQd,5,ガットショット,check,Check,5
+JsKs5d,AhTd,5,ガットショット,check,Check,5
+9s7s4c,QsTc,2,バックドアドロー,bet,Bet 4,5
+Td6h4h,AdJs,2,エア,check,Check,5
+5c5dAh,As4d,15,2ペア,check,Check,5
+Th3s2d,Ah7h,2,バックドアドロー,check,Check,5
+6s8d7c,3s3h,5,弱ペア/ボトムペア,check,Check,5
+Ad9h8h,QhQd,5,弱ペア/ボトムペア,check,Check,5
+6s8d7c,Jh9h,8,OESD,bet,Bet 2,5
+9s7s4c,KhQh,2,エア,check,Check,5
+JsKs5d,Ad8c,2,エア,check,Check,5
+TsKcAh,Jc9d,5,ガットショット,bet,Bet 4,5
+6s8d7c,Qh3h,2,バックドアドロー,check,Check,5
+Td6h4h,Ac3s,2,エア,check,Check,5
+9dTs8s,9s6s,12,コンボドロー(セカンドペア弱),check,Check,5
+8h8cTc,Ad5s,2,エア,check,Check,5
+Th4c5d,6h6c,5,弱ペア/ボトムペア,check,Check,5
+Ad8d3d,As5d,12,コンボドロー(TP+弱キッカー),check,Check,5
+Td6h4h,QdJd,2,バックドアドロー,bet,Bet 4,5
+AcKs7d,JcTc,5,ガットショット,bet,Bet 4,5
+9dTs8s,Qh5h,5,ガットショット,check,Check,5
+Ad9h8h,Qc9s,8,セカンドペア強,check,Check,5
+JcJh4s,AsKs,2,バックドアドロー,bet,Bet 2,5
+AcKs7d,9s6s,2,バックドアドロー,bet,Bet 4,5
+QcAdKh,Ac6d,10,TP+弱キッカー,check,Check,5
+7d6c4h,Ac3c,5,ガットショット,check,Check,5
+Th4c5d,As4d,5,弱ペア/ボトムペア,check,Check,5
+Td6h4h,JdJc,15,オーバーペア,bet,Bet 4,5
+AcKs7d,Kh6h,5,セカンドペア弱,check,Check,5
+TsKcAh,KhTd,15,2ペア,check,Check,5
+8h8cTc,Ac6s,2,バックドアドロー,bet,Bet 2,5
+5c2d3h,Jh9d,2,エア,bet,Bet 2,5
+Th4c5d,AhJh,2,バックドアドロー,check,Check,5
+5c5dAh,KsQd,2,バックドアドロー,check,Check,5
+9dTs8s,JdTc,12,コンボドロー(TP+中キッカー),check,Check,5
+Th4c5d,9d7d,2,バックドアドロー,check,Check,5
+Ad8d3d,Ks9d,10,フラッシュドロー,check,Check,5
+5c2d3h,Qh2h,5,弱ペア/ボトムペア,bet,Bet 2,5
+7d6c4h,AsJs,2,エア,check,Check,5
+Jh4h5s,Ac8h,2,バックドアドロー,check,Check,5
+Th4c5d,Ad4h,5,弱ペア/ボトムペア,check,Check,5
+Th3s2d,QsJc,2,バックドアドロー,bet,Bet 4,5
+Th4c5d,3s3c,5,弱ペア/ボトムペア,check,Check,5
+Qc8cAc,KhKd,5,弱ペア/ボトムペア,check,Check,5
+9s7s4c,Kc8c,2,バックドアドロー,check,Check,5
+Ad8d3d,Ac5d,12,コンボドロー(TP+弱キッカー),check,Check,5
+4s4h3h,Kd9c,2,エア,check,Check,5
+8h8cTc,Qc6c,10,フラッシュドロー,bet,Bet 2,5
+JsKs5d,Jc9h,5,セカンドペア弱,check,Check,5
+TsKcAh,Ad9h,10,TP+中キッカー,check,Check,5
+Th3s2d,Ad7h,2,バックドアドロー,check,Check,5
+Js8d3c,KdJd,12,TP+強キッカー,bet,Bet 2,5
+8h8cTc,Ad6c,2,バックドアドロー,bet,Bet 2,5
+Jh4h5s,Jc7c,10,TP+弱キッカー,check,Check,5
+8h8cTc,Th8d,18,セット,bet,Bet 2,5
+JsKs5d,8h6h,2,エア,check,Check,5
+5c2d3h,KcQc,2,バックドアドロー,check,Check,5
+9s7s4c,Ad8s,2,バックドアドロー,check,Check,5
+9dTs8s,AsJc,8,OESD,bet,Bet 2,5
+Th3s2d,JsTc,10,TP+中キッカー,check,Check,5
+Ad9h8h,9d8d,15,2ペア,bet,Bet 4,5
+9dTs8s,Th6h,10,TP+弱キッカー,bet,Bet 2,5
+JcJh4s,Kd2d,2,エア,bet,Bet 2,5
+Th3s2d,Tc7c,10,TP+弱キッカー,check,Check,5
+6s8d7c,Ad9s,8,OESD,check,Check,5
+8h8cTc,Ah9h,2,バックドアドロー,check,Check,5
+5c5dAh,KdJh,2,エア,check,Check,5
+TsKcAh,Qh9c,5,ガットショット,bet,Bet 4,5
+5c5dAh,Kh4h,2,バックドアドロー,bet,Bet 2,5
+JsKs5d,JhTd,5,セカンドペア弱,check,Check,5
+Th3s2d,7d5d,2,バックドアドロー,check,Check,5
+9s7s4c,AsJd,2,バックドアドロー,check,Check,5
+6s8d7c,8h8c,18,セット,bet,Bet 2,5
+9s7s4c,AdTd,2,エア,check,Check,5
+Td6h4h,AsTs,15,TPTK,bet,Bet 4,5
+JsKs5d,JhJc,18,セット,bet,Bet 4,5
+9s7s4c,6d6c,5,弱ペア/ボトムペア,check,Check,5
+9s7s4c,Jd8d,5,ガットショット,check,Check,5
+JsKs5d,Ah9c,2,エア,check,Check,5
+QcAdKh,Jd7d,5,ガットショット,bet,Bet 4,5
+JcJh4s,Kc4c,15,2ペア,bet,Bet 2,5
+Th4c5d,AcJs,2,エア,check,Check,5
+9s7s4c,Jh4h,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,Ks8h,2,バックドアドロー,bet,Bet 4,5
+Qc8cAc,Qs2s,5,セカンドペア弱,check,Check,5
+Th3s2d,Kc8c,2,エア,check,Check,5
+Qc8cAc,7s7h,5,弱ペア/ボトムペア,check,Check,5
+Th3s2d,JsJd,15,オーバーペア,bet,Bet 4,5
+5c5dAh,4s4h,15,2ペア,bet,Bet 2,5
+9s7s4c,2s2d,5,弱ペア/ボトムペア,bet,Bet 4,5
+Ad8d3d,Kh8h,8,セカンドペア強,check,Check,5
+Js8d3c,4h4d,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,AdJh,8,OESD,check,Check,5
+4s4h3h,Tc8d,2,エア,check,Check,5
+QcAdKh,AcQd,15,2ペア,bet,Bet 4,5
+Th3s2d,Ah9h,2,バックドアドロー,check,Check,5
+Td6h4h,Qs9c,2,エア,check,Check,5
+Jh4h5s,As4c,5,弱ペア/ボトムペア,check,Check,5
+Td6h4h,Ad4d,5,弱ペア/ボトムペア,bet,Bet 4,5
+7d6c4h,KdTd,2,バックドアドロー,check,Check,5
+QcAdKh,QsTh,5,弱ペア/ボトムペア,check,Check,5
+Ad9h8h,QdJs,5,ガットショット,check,Check,5
+Ad9h8h,9s9d,18,セット,bet,Bet 4,5
+Ad8d3d,As4s,10,TP+弱キッカー,check,Check,5
+Ks7h2d,QcJh,2,バックドアドロー,check,Check,5
+5c2d3h,AhQh,5,ガットショット,bet,Bet 2,5
+Jh4h5s,AhJd,15,TPTK,check,Check,5
+7d6c4h,Kd8d,5,ガットショット,bet,Bet 2,5
+Th4c5d,Ah9c,2,エア,check,Check,5
+9dTs8s,Jh9s,12,コンボドロー(セカンドペア弱),check,Check,5
+Jh4h5s,Qs9d,2,エア,check,Check,5
+Th4c5d,Ac9s,2,エア,check,Check,5
+TsKcAh,JdTh,5,弱ペア/ボトムペア,check,Check,5
+JsKs5d,Th8c,2,エア,check,Check,5
+5c2d3h,Kc3c,8,セカンドペア強,bet,Bet 2,5
+TsKcAh,JcTd,5,弱ペア/ボトムペア,check,Check,5
+TsKcAh,Kd2d,5,セカンドペア弱,check,Check,5
+Ad9h8h,AcTd,10,TP+中キッカー,check,Check,5
+TsKcAh,As6c,10,TP+弱キッカー,check,Check,5
+Ad9h8h,AhAc,18,セット,bet,Bet 4,5
+Jh4h5s,Tc9d,2,バックドアドロー,check,Check,5
+JcJh4s,Qh9s,2,エア,bet,Bet 2,5
+9s7s4c,9d6d,10,TP+弱キッカー,check,Check,5
+Th4c5d,Ad7d,2,バックドアドロー,check,Check,5
+6s8d7c,Ks8c,12,TP+強キッカー,check,Check,5
+Td6h4h,AcJd,2,エア,check,Check,5
+TsKcAh,As7h,10,TP+弱キッカー,check,Check,5
+Ad8d3d,KsQc,2,バックドアドロー,check,Check,5
+4s4h3h,KsQh,2,バックドアドロー,check,Check,5
+Ad8d3d,Qh8h,8,セカンドペア強,check,Check,5
+Jh4h5s,Tc9c,2,バックドアドロー,check,Check,5
+AcKs7d,Jc9c,2,バックドアドロー,bet,Bet 4,5
+QcAdKh,Qh8h,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,9s6s,12,コンボドロー(セカンドペア弱),check,Check,5
+JsKs5d,AdJh,8,セカンドペア強,check,Check,5
+4s4h3h,AsTc,2,エア,check,Check,5
+Jh4h5s,Jd9d,10,TP+中キッカー,check,Check,5
+JsKs5d,KhKc,18,セット,bet,Bet 4,5
+Ad9h8h,Ts9c,5,セカンドペア弱,check,Check,5
+5c5dAh,8d6d,2,バックドアドロー,bet,Bet 2,5
+QcAdKh,TsTh,5,弱ペア/ボトムペア,bet,Bet 4,5
+Ad9h8h,Jc9s,5,セカンドペア弱,check,Check,5
+9dTs8s,6c5c,5,ガットショット,check,Check,5
+5c5dAh,9h9c,15,2ペア,bet,Bet 2,5
+JcJh4s,JdTc,18,セット,bet,Bet 2,5
+Ad9h8h,QsJd,5,ガットショット,check,Check,5
+9dTs8s,Kc8d,5,弱ペア/ボトムペア,check,Check,5
+Ad9h8h,Ks4s,2,エア,check,Check,5
+Ad9h8h,Td7d,8,OESD,bet,Bet 4,5
+QcAdKh,Kc8d,5,セカンドペア弱,check,Check,5
+Qc8cAc,KsTc,10,フラッシュドロー,check,Check,5
+9s7s4c,2h2d,5,弱ペア/ボトムペア,check,Check,5
+TsKcAh,8s8c,5,弱ペア/ボトムペア,check,Check,5
+TsKcAh,Td9d,5,弱ペア/ボトムペア,check,Check,5
+Th4c5d,Jc9c,2,バックドアドロー,bet,Bet 4,5
+Ad8d3d,Kc7c,2,バックドアドロー,check,Check,5
+Js8d3c,KdKc,15,オーバーペア,bet,Bet 2,5
+Ad8d3d,Ac7h,10,TP+弱キッカー,check,Check,5
+6s8d7c,Jc9s,8,OESD,bet,Bet 2,5
+5c2d3h,As7h,5,ガットショット,check,Check,5
+Td6h4h,6d5d,5,セカンドペア弱,bet,Bet 4,5
+5c5dAh,9s6s,2,エア,bet,Bet 2,5
+Ad9h8h,6h5h,10,フラッシュドロー,bet,Bet 4,5
+Ad8d3d,KdTs,10,フラッシュドロー,bet,Bet 2,5
+9s7s4c,KdQc,2,エア,check,Check,5
+JsKs5d,QsJc,8,セカンドペア強,check,Check,5
+Td6h4h,Tc7c,10,TP+弱キッカー,check,Check,5
+Th4c5d,Kh8c,2,エア,check,Check,5
+Js8d3c,Kh8h,8,セカンドペア強,bet,Bet 2,5
+Jh4h5s,Ad9h,2,バックドアドロー,check,Check,5
+Th4c5d,6h6d,5,弱ペア/ボトムペア,check,Check,5
+5c2d3h,AdTc,5,ガットショット,check,Check,5
+Ad8d3d,Td8h,12,コンボドロー(セカンドペア弱),check,Check,5
+JcJh4s,As4d,15,2ペア,bet,Bet 2,5
+Td6h4h,Js9c,2,バックドアドロー,check,Check,5
+Ks7h2d,Ac6s,2,エア,check,Check,5
+7d6c4h,7s7h,18,セット,bet,Bet 2,5
+QcAdKh,KdTc,5,セカンドペア弱,check,Check,5
+JsKs5d,Qc8c,2,バックドアドロー,check,Check,5
+Qc8cAc,QhTh,5,セカンドペア弱,check,Check,5
+AcKs7d,TsTd,5,弱ペア/ボトムペア,check,Check,5
+JsKs5d,Ad8h,2,エア,check,Check,5
+Js8d3c,Qh8h,8,セカンドペア強,check,Check,5
+Th4c5d,AdJc,2,エア,check,Check,5
+5c2d3h,Kd4d,8,OESD,bet,Bet 2,5
+Ks7h2d,As8s,2,バックドアドロー,check,Check,5
+5c5dAh,9c8c,2,バックドアドロー,bet,Bet 2,5
+6s8d7c,AhAd,15,オーバーペア,check,Check,5
+Jh4h5s,Qs9c,2,エア,check,Check,5
+Qc8cAc,6h6d,5,弱ペア/ボトムペア,check,Check,5
+7d6c4h,KhQd,2,エア,check,Check,5
+JcJh4s,5h5d,15,2ペア,bet,Bet 2,5
+4s4h3h,Ad4d,18,セット,bet,Bet 2,5
+Td6h4h,8s6s,5,セカンドペア弱,check,Check,5
+TsKcAh,7s7d,5,弱ペア/ボトムペア,check,Check,5
+Js8d3c,QsQd,15,オーバーペア,bet,Bet 2,5
+Td6h4h,AdKc,2,エア,check,Check,5
+Td6h4h,Ah7c,2,バックドアドロー,bet,Bet 4,5
+Td6h4h,Qc3c,2,エア,check,Check,5
+4s4h3h,2h2c,15,2ペア,bet,Bet 2,5
+9dTs8s,7h5h,8,OESD,bet,Bet 2,5
+6s8d7c,Ts8s,10,TP+中キッカー,bet,Bet 2,5
+Js8d3c,6h6d,5,弱ペア/ボトムペア,check,Check,5
+4s4h3h,Ad6h,2,バックドアドロー,check,Check,5
+Th4c5d,AhJd,2,エア,check,Check,5
+JcJh4s,7s7d,15,2ペア,bet,Bet 2,5
+Js8d3c,Jd4d,10,TP+弱キッカー,bet,Bet 2,5
+Th4c5d,Ks9c,2,エア,check,Check,5
+JsKs5d,ThTd,5,弱ペア/ボトムペア,check,Check,5
+Ad8d3d,Td7d,20,フラッシュ/SF,check,Check,5
+9dTs8s,Qc4c,5,ガットショット,check,Check,5
+QcAdKh,Qd9c,5,弱ペア/ボトムペア,check,Check,5
+JcJh4s,4d4c,18,セット,bet,Bet 2,5
+9dTs8s,4h4d,5,弱ペア/ボトムペア,check,Check,5
+Th3s2d,4s4c,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,3h3c,5,弱ペア/ボトムペア,check,Check,5
+Th4c5d,AhJs,2,エア,check,Check,5
+6s8d7c,Qs2s,2,バックドアドロー,bet,Bet 2,5
+JsKs5d,Qc3c,2,バックドアドロー,check,Check,5
+9s7s4c,Jc5c,2,バックドアドロー,bet,Bet 4,5
+Jh4h5s,Tc7c,2,エア,check,Check,5
+Td6h4h,2h2c,5,弱ペア/ボトムペア,check,Check,5
+AcKs7d,AdQc,12,TP+強キッカー,bet,Bet 4,5
+Ks7h2d,Kh9d,10,TP+中キッカー,check,Check,5
+5c5dAh,KsQs,2,バックドアドロー,check,Check,5
+JcJh4s,AsJs,18,セット,bet,Bet 2,5
+Jh4h5s,2s2c,5,弱ペア/ボトムペア,check,Check,5
+8h8cTc,Ts9c,15,2ペア,bet,Bet 2,5
+5c2d3h,9s7s,2,エア,check,Check,5
+Qc8cAc,KdQh,8,セカンドペア強,check,Check,5
+TsKcAh,6s5s,2,バックドアドロー,check,Check,5
+TsKcAh,KdQs,8,セカンドペア強,bet,Bet 4,5
+Ad9h8h,9c8c,15,2ペア,bet,Bet 4,5
+Jh4h5s,Kh3h,10,フラッシュドロー,bet,Bet 4,5
+4s4h3h,QhTs,2,バックドアドロー,bet,Bet 2,5
+4s4h3h,KcTs,2,エア,check,Check,5
+5c2d3h,9s7s,2,エア,check,Check,5
+Jh4h5s,AdKs,2,エア,check,Check,5
+9dTs8s,JcTd,12,コンボドロー(TP+中キッカー),check,Check,5
+Td6h4h,JcTc,10,TP+中キッカー,check,Check,5
+QcAdKh,Jh7h,5,ガットショット,bet,Bet 4,5
+8h8cTc,Ah7h,2,バックドアドロー,check,Check,5
+Jh4h5s,AsQc,2,エア,check,Check,5
+6s8d7c,Ad4s,5,ガットショット,bet,Bet 2,5
+7d6c4h,KcJh,2,エア,check,Check,5
+Jh4h5s,AsQs,2,バックドアドロー,check,Check,5
+Qc8cAc,AsTc,12,コンボドロー(TP+中キッカー),check,Check,5
+Ad8d3d,Ac6c,10,TP+弱キッカー,check,Check,5
+Qc8cAc,KsTc,10,フラッシュドロー,check,Check,5
+JsKs5d,Jh9c,5,セカンドペア弱,check,Check,5
+TsKcAh,8h8d,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,Qs9c,2,エア,check,Check,5
+6s8d7c,As7s,8,セカンドペア強,bet,Bet 2,5
+JsKs5d,JhJc,18,セット,bet,Bet 4,5
+Ad9h8h,As7d,10,TP+弱キッカー,check,Check,5
+Ad9h8h,7d6d,8,OESD,bet,Bet 4,5
+QcAdKh,Jd9h,5,ガットショット,bet,Bet 4,5
+Td6h4h,Jc6c,5,セカンドペア弱,check,Check,5
+JsKs5d,KcJh,15,2ペア,bet,Bet 4,5
+Js8d3c,8h8c,18,セット,bet,Bet 2,5
+6s8d7c,7h7d,18,セット,bet,Bet 2,5
+TsKcAh,QhTc,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,Ah3s,5,ガットショット,bet,Bet 4,5
+Ad9h8h,Kc5c,2,エア,check,Check,5
+9dTs8s,Ad4h,2,バックドアドロー,check,Check,5
+Ad8d3d,KhJc,2,バックドアドロー,check,Check,5
+4s4h3h,Kd9h,2,バックドアドロー,check,Check,5
+TsKcAh,Kh9d,5,セカンドペア弱,check,Check,5
+JsKs5d,Tc8d,2,エア,check,Check,5
+JsKs5d,8c6c,2,エア,check,Check,5
+Ad8d3d,Ah4s,10,TP+弱キッカー,check,Check,5
+Ad8d3d,Ts8c,5,セカンドペア弱,check,Check,5
+Th3s2d,Ah6c,2,バックドアドロー,bet,Bet 4,5
+Td6h4h,As7d,2,エア,check,Check,5
+Jh4h5s,Ac7d,2,エア,check,Check,5
+4s4h3h,Ad6h,2,バックドアドロー,check,Check,5
+AcKs7d,3s3d,5,弱ペア/ボトムペア,bet,Bet 4,5
+Jh4h5s,QhTd,2,バックドアドロー,bet,Bet 4,5
+AcKs7d,AsJs,10,TP+中キッカー,bet,Bet 4,5
+7d6c4h,Js4s,5,弱ペア/ボトムペア,check,Check,5
+Ad8d3d,QdTd,20,フラッシュ/SF,bet,Bet 2,5
+9s7s4c,Jc5c,2,バックドアドロー,bet,Bet 4,5
+Jh4h5s,Ad4s,5,弱ペア/ボトムペア,check,Check,5
+7d6c4h,9s9c,15,オーバーペア,bet,Bet 2,5
+AcKs7d,AdJc,10,TP+中キッカー,bet,Bet 4,5
+Ad8d3d,As4c,10,TP+弱キッカー,check,Check,5
+Ad9h8h,Kc6c,2,エア,check,Check,5
+Js8d3c,Ad3h,5,弱ペア/ボトムペア,bet,Bet 2,5
+JcJh4s,Qd3d,2,エア,bet,Bet 2,5
+9s7s4c,KdJh,2,エア,check,Check,5
+Th3s2d,As9d,2,バックドアドロー,check,Check,5
+Jh4h5s,2d2c,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,Ah8c,2,バックドアドロー,bet,Bet 4,5
+Qc8cAc,As6c,12,コンボドロー(TP+弱キッカー),check,Check,5
+4s4h3h,9s8s,2,バックドアドロー,bet,Bet 2,5
+5c5dAh,8d6d,2,バックドアドロー,bet,Bet 2,5
+Js8d3c,Ac8c,8,セカンドペア強,bet,Bet 2,5
+AcKs7d,As7s,15,2ペア,bet,Bet 4,5
+6s8d7c,4s4c,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,AcTc,2,エア,check,Check,5
+Ad8d3d,Ah6h,10,TP+弱キッカー,check,Check,5
+4s4h3h,Ad7d,2,エア,check,Check,5
+Td6h4h,AcKc,2,エア,check,Check,5
+TsKcAh,JsTc,5,弱ペア/ボトムペア,check,Check,5
+Ad9h8h,Qc9s,8,セカンドペア強,check,Check,5
+Th3s2d,JdTc,10,TP+中キッカー,check,Check,5
+Ad9h8h,Js9c,5,セカンドペア弱,check,Check,5
+QcAdKh,QhTh,5,弱ペア/ボトムペア,check,Check,5
+9s7s4c,KsJs,10,フラッシュドロー,bet,Bet 4,5
+Ad8d3d,4h4d,8,ドロー+弱ペア,check,Check,5
+TsKcAh,8s8h,5,弱ペア/ボトムペア,check,Check,5
+7d6c4h,AdJh,2,エア,check,Check,5
+JsKs5d,QhQd,5,弱ペア/ボトムペア,check,Check,5
+Td6h4h,Ah5d,2,バックドアドロー,bet,Bet 4,5
+TsKcAh,5s5c,5,弱ペア/ボトムペア,check,Check,5
+TsKcAh,Kd7d,5,セカンドペア弱,check,Check,5
+Qc8cAc,5s5d,5,弱ペア/ボトムペア,check,Check,5
+4s4h3h,KdTc,2,エア,check,Check,5
+Ad8d3d,9s9c,5,弱ペア/ボトムペア,check,Check,5
+5c2d3h,Td9c,2,エア,bet,Bet 2,5
+5c5dAh,As2s,15,2ペア,check,Check,5
+JsKs5d,AcQd,5,ガットショット,check,Check,5
+5c5dAh,Th8h,2,バックドアドロー,bet,Bet 2,5
+Qc8cAc,TdTc,8,ドロー+弱ペア,check,Check,5
+AcKs7d,AhAd,18,セット,bet,Bet 4,5
+5c5dAh,8s8c,15,2ペア,bet,Bet 2,5
+9s7s4c,Js6s,10,フラッシュドロー,check,Check,5
+Js8d3c,QdJd,12,TP+強キッカー,bet,Bet 2,5
+7d6c4h,4s4c,18,セット,bet,Bet 2,5
+TsKcAh,Ks9c,5,セカンドペア弱,check,Check,5
+JsKs5d,KcJc,15,2ペア,bet,Bet 4,5
+Js8d3c,Qd9s,5,ガットショット,bet,Bet 2,5
+8h8cTc,Qd9c,5,ガットショット,bet,Bet 2,5
+9s7s4c,AhJs,2,バックドアドロー,check,Check,5
+5c2d3h,KhTs,2,エア,check,Check,5
+JcJh4s,QcJs,18,セット,bet,Bet 2,5
+QcAdKh,Kd9h,5,セカンドペア弱,check,Check,5
+JsKs5d,AsAd,15,オーバーペア,bet,Bet 4,5
+Js8d3c,5s5d,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,Td7d,2,エア,check,Check,5
+Th3s2d,As9d,2,バックドアドロー,check,Check,5
+5c5dAh,2s2h,15,2ペア,bet,Bet 2,5
+QcAdKh,Qh7h,5,弱ペア/ボトムペア,check,Check,5
+Ad9h8h,Td8s,5,弱ペア/ボトムペア,check,Check,5
+Ad9h8h,7s6s,8,OESD,bet,Bet 4,5
+Th4c5d,Ac8c,2,バックドアドロー,check,Check,5
+8h8cTc,Ah5c,2,バックドアドロー,bet,Bet 2,5
+9dTs8s,AdAc,15,オーバーペア,check,Check,5
+Th3s2d,AsJh,2,バックドアドロー,check,Check,5
+Td6h4h,Ad6d,8,セカンドペア強,bet,Bet 4,5
+AcKs7d,5h5c,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,6d5d,5,セカンドペア弱,check,Check,5
+Ad8d3d,9s9c,5,弱ペア/ボトムペア,check,Check,5
+Ad9h8h,Qh9c,8,セカンドペア強,check,Check,5
+Th3s2d,QcTs,12,TP+強キッカー,check,Check,5
+Th3s2d,Ah9s,2,バックドアドロー,check,Check,5
+Js8d3c,Ah9h,2,エア,check,Check,5
+AcKs7d,Jh4h,2,エア,check,Check,5
+Ad9h8h,KsJh,2,バックドアドロー,bet,Bet 4,5
+Qc8cAc,Qs3s,5,セカンドペア弱,check,Check,5
+Ks7h2d,KhQh,12,TP+強キッカー,bet,Bet 2,5
+Th4c5d,2h2d,5,弱ペア/ボトムペア,check,Check,5
+JsKs5d,Ad7c,2,エア,check,Check,5
+Td6h4h,5s4s,5,弱ペア/ボトムペア,check,Check,5
+JsKs5d,Kc9d,10,TP+中キッカー,check,Check,5
+4s4h3h,Ah8h,10,フラッシュドロー,bet,Bet 2,5
+Ad8d3d,As6c,10,TP+弱キッカー,check,Check,5
+JsKs5d,Ad9h,2,エア,check,Check,5
+4s4h3h,Ad8h,2,バックドアドロー,check,Check,5
+Ad9h8h,AhJs,10,TP+中キッカー,check,Check,5
+6s8d7c,Jc9s,8,OESD,bet,Bet 2,5
+Td6h4h,Kc8c,2,エア,check,Check,5
+9s7s4c,QhTc,2,エア,bet,Bet 4,5
+Th3s2d,Tc7c,10,TP+弱キッカー,check,Check,5
+TsKcAh,5d4d,2,エア,check,Check,5
+8h8cTc,Kc3c,10,フラッシュドロー,bet,Bet 2,5
+AcKs7d,Ad7c,15,2ペア,bet,Bet 4,5
+Ad8d3d,As7h,10,TP+弱キッカー,check,Check,5
+Ad8d3d,Js8s,5,セカンドペア弱,check,Check,5
+Td6h4h,JsJd,15,オーバーペア,bet,Bet 4,5
+5c5dAh,Qs4s,2,エア,bet,Bet 2,5
+Js8d3c,Jc4c,10,TP+弱キッカー,bet,Bet 2,5
+Ad8d3d,As7d,12,コンボドロー(TP+弱キッカー),check,Check,5
+Td6h4h,3s3d,5,弱ペア/ボトムペア,check,Check,5
+Td6h4h,Ks9c,2,エア,check,Check,5
+Th3s2d,Ah8s,2,バックドアドロー,check,Check,5
+Ad9h8h,2h2c,5,弱ペア/ボトムペア,bet,Bet 4,5
+JsKs5d,9s9d,5,弱ペア/ボトムペア,check,Check,5
+AcKs7d,KcJh,5,セカンドペア弱,check,Check,5
+Td6h4h,9d9c,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,AhKd,2,バックドアドロー,check,Check,5
+Ks7h2d,Jd9h,2,エア,bet,Bet 2,5
+9dTs8s,QcJs,18,ストレート,bet,Bet 2,5
+5c2d3h,KhTs,2,エア,check,Check,5
+TsKcAh,As6h,10,TP+弱キッカー,check,Check,5
+Jh4h5s,AsTs,2,バックドアドロー,check,Check,5
+5c2d3h,Jd5d,10,TP+中キッカー,bet,Bet 2,5
+AcKs7d,JdJc,5,弱ペア/ボトムペア,check,Check,5
+JsKs5d,Ad9h,2,エア,check,Check,5
+7d6c4h,Ah3d,5,ガットショット,bet,Bet 2,5
+TsKcAh,AsKd,15,2ペア,bet,Bet 4,5
+QcAdKh,Qs6s,5,弱ペア/ボトムペア,check,Check,5
+Th4c5d,Ad4h,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,Ac3d,2,バックドアドロー,check,Check,5
+9dTs8s,3h3c,5,弱ペア/ボトムペア,check,Check,5
+5c5dAh,KdJh,2,エア,check,Check,5
+JcJh4s,Ad8h,2,エア,check,Check,5
+Jh4h5s,5h5c,18,セット,bet,Bet 4,5
+Jh4h5s,Ac3h,5,ガットショット,bet,Bet 4,5
+9s7s4c,QcTs,2,バックドアドロー,bet,Bet 4,5
+Ad8d3d,Ac6d,12,コンボドロー(TP+弱キッカー),check,Check,5
+5c2d3h,Th6h,5,ガットショット,bet,Bet 2,5
+Ad8d3d,KhQh,2,バックドアドロー,check,Check,5
+JcJh4s,AsAh,15,2ペア,check,Check,5
+JsKs5d,7s7c,5,弱ペア/ボトムペア,check,Check,5
+Th3s2d,AdTc,15,TPTK,bet,Bet 4,5
+4s4h3h,QdQc,15,2ペア,bet,Bet 2,5
+9s7s4c,Ad6h,2,エア,check,Check,5
+Qc8cAc,KhQh,8,セカンドペア強,check,Check,5
+QcAdKh,Qd3d,5,弱ペア/ボトムペア,check,Check,5
+TsKcAh,Ks5s,5,セカンドペア弱,check,Check,5
+Td6h4h,Ts8c,10,TP+中キッカー,check,Check,5
+Th3s2d,Ad6c,2,バックドアドロー,bet,Bet 4,5
+Jh4h5s,6d6c,5,弱ペア/ボトムペア,check,Check,5
+8h8cTc,Qd8d,18,セット,bet,Bet 2,5
+Ad9h8h,JhJd,5,弱ペア/ボトムペア,check,Check,5
+8h8cTc,AcKs,2,バックドアドロー,bet,Bet 2,5
+4s4h3h,Ad6d,2,エア,check,Check,5
+5c2d3h,AcTd,5,ガットショット,check,Check,5
+Ks7h2d,8h8d,5,弱ペア/ボトムペア,bet,Bet 2,5
+9dTs8s,Ac8d,5,弱ペア/ボトムペア,check,Check,5
+QcAdKh,9s9d,5,弱ペア/ボトムペア,check,Check,5
+7d6c4h,Kd4d,5,弱ペア/ボトムペア,bet,Bet 2,5
+Ad9h8h,Qc5c,2,エア,check,Check,5
+7d6c4h,As6s,8,セカンドペア強,bet,Bet 2,5
+9dTs8s,AcJh,8,OESD,check,Check,5
+9dTs8s,9c7c,12,コンボドロー(セカンドペア弱),check,Check,5
+Js8d3c,AhAc,15,オーバーペア,bet,Bet 2,5
+Ad8d3d,KhTs,2,バックドアドロー,check,Check,5
+Ad9h8h,As9c,15,2ペア,bet,Bet 4,5
+Th3s2d,4d4c,5,弱ペア/ボトムペア,check,Check,5
+Ks7h2d,AcTh,2,エア,check,Check,5
+5c5dAh,Td8s,2,エア,check,Check,5
+TsKcAh,Th7h,5,弱ペア/ボトムペア,check,Check,5
+8h8cTc,Th8s,18,セット,bet,Bet 2,5
+TsKcAh,JdTc,5,弱ペア/ボトムペア,check,Check,5
+Th4c5d,As3d,5,ガットショット,bet,Bet 4,5
+6s8d7c,Tc9h,18,ストレート,bet,Bet 2,5
+Th4c5d,Ah9h,2,バックドアドロー,check,Check,5
+Th4c5d,Ks8d,2,エア,check,Check,5
+Td6h4h,8h8d,5,弱ペア/ボトムペア,check,Check,5
+Ad8d3d,KcJs,2,バックドアドロー,check,Check,5
+6s8d7c,QdJc,2,バックドアドロー,bet,Bet 2,5
+Td6h4h,Qc3c,2,エア,check,Check,5
+JsKs5d,9s9c,5,弱ペア/ボトムペア,check,Check,5
+Ks7h2d,AcKd,15,TPTK,bet,Bet 2,5
+8h8cTc,Ks5s,2,エア,check,Check,5
+TsKcAh,KsJh,5,セカンドペア弱,check,Check,5
+9dTs8s,As8d,5,弱ペア/ボトムペア,check,Check,5
+Ad8d3d,Ah7h,10,TP+弱キッカー,check,Check,5
+JsKs5d,Tc8c,2,エア,check,Check,5
+TsKcAh,Ks8d,5,セカンドペア弱,check,Check,5
+4s4h3h,Kh9d,2,バックドアドロー,bet,Bet 2,5
+6s8d7c,Ad4s,5,ガットショット,bet,Bet 2,5
+Th4c5d,AsQs,2,エア,check,Check,5
+4s4h3h,Ad7d,2,エア,check,Check,5
+6s8d7c,Jh4h,5,ガットショット,check,Check,5
+Jh4h5s,Jd7d,10,TP+弱キッカー,check,Check,5
+Jh4h5s,Kd8h,2,バックドアドロー,bet,Bet 4,5
+Ks7h2d,9s8s,2,バックドアドロー,bet,Bet 2,5
+9s7s4c,Ac8c,2,バックドアドロー,check,Check,5
+TsKcAh,QcJs,18,ストレート,bet,Bet 4,5
+Ad9h8h,ThTc,5,弱ペア/ボトムペア,check,Check,5
+Ad8d3d,Ts6s,2,バックドアドロー,check,Check,5
+Th4c5d,8h7h,5,ガットショット,bet,Bet 4,5
+Th3s2d,Kc9s,2,エア,check,Check,5
+AcKs7d,5s5h,5,弱ペア/ボトムペア,check,Check,5
+Qc8cAc,Ah9c,12,コンボドロー(TP+中キッカー),check,Check,5
+Js8d3c,Kc9d,2,エア,bet,Bet 2,5
+Ks7h2d,Ac9h,2,エア,check,Check,5
+JcJh4s,Kc9h,2,エア,bet,Bet 2,5
+Ad9h8h,6d6c,5,弱ペア/ボトムペア,check,Check,5
+JsKs5d,Qd4d,2,バックドアドロー,check,Check,5
+Ks7h2d,9s8s,2,バックドアドロー,bet,Bet 2,5
+Th4c5d,As4d,5,弱ペア/ボトムペア,check,Check,5
+Td6h4h,Ad3d,2,バックドアドロー,check,Check,5
+Td6h4h,KhJd,2,バックドアドロー,bet,Bet 4,5
+4s4h3h,KdQc,2,エア,check,Check,5
+Th3s2d,5d4d,8,OESD,bet,Bet 4,5
+QcAdKh,Th7h,5,ガットショット,bet,Bet 4,5
+Ks7h2d,Ad4h,2,エア,bet,Bet 2,5
+Ad9h8h,QcTh,5,ガットショット,bet,Bet 4,5
+JsKs5d,Ac7d,2,エア,check,Check,5
+AcKs7d,Kh2h,5,セカンドペア弱,check,Check,5
+Th3s2d,4d4c,5,弱ペア/ボトムペア,check,Check,5
+AcKs7d,Qd9h,2,バックドアドロー,check,Check,5
+Td6h4h,Ad2d,2,バックドアドロー,check,Check,5
+Ad9h8h,Tc7c,8,OESD,bet,Bet 4,5
+6s8d7c,Ac3c,2,バックドアドロー,check,Check,5
+9s7s4c,KdQd,2,エア,check,Check,5
+Th3s2d,Qc7c,2,エア,check,Check,5
+Jh4h5s,AdQd,2,エア,check,Check,5
+QcAdKh,Jd9s,5,ガットショット,bet,Bet 4,5
+AcKs7d,Kh2h,5,セカンドペア弱,check,Check,5
+Ad9h8h,KcQd,2,バックドアドロー,check,Check,5
+TsKcAh,7s7c,5,弱ペア/ボトムペア,check,Check,5
+4s4h3h,KcTd,2,エア,check,Check,5
+JcJh4s,As3d,2,エア,bet,Bet 2,5
+JsKs5d,Ah4d,2,エア,check,Check,5
+JsKs5d,As8d,2,バックドアドロー,check,Check,5
+Ad9h8h,Jd6d,2,バックドアドロー,bet,Bet 4,5
+8h8cTc,Qs9c,5,ガットショット,bet,Bet 2,5
+Qc8cAc,Qh5h,5,セカンドペア弱,check,Check,5
+Ad8d3d,KhTh,2,バックドアドロー,check,Check,5
+Td6h4h,Ac8d,2,エア,check,Check,5
+Jh4h5s,Qc9s,2,エア,check,Check,5
+JsKs5d,6c5c,5,弱ペア/ボトムペア,check,Check,5
+Qc8cAc,8h8d,18,セット,bet,Bet 2,5
+JsKs5d,Td8h,2,エア,check,Check,5
+9dTs8s,Jd8d,8,ドロー+弱ペア,check,Check,5
+Ks7h2d,AdJd,2,バックドアドロー,bet,Bet 2,5
+6s8d7c,Ks9s,8,OESD,bet,Bet 2,5
+Qc8cAc,Kh8h,5,弱ペア/ボトムペア,check,Check,5
+4s4h3h,KcQc,2,エア,check,Check,5
+Td6h4h,3s3h,5,弱ペア/ボトムペア,check,Check,5
+6s8d7c,Th7h,5,セカンドペア弱,check,Check,5
+Ad9h8h,Qc3c,2,エア,check,Check,5
+Ks7h2d,4h4d,5,弱ペア/ボトムペア,bet,Bet 2,5
+5c2d3h,7h7d,15,オーバーペア,bet,Bet 2,5
+5c5dAh,Ac5h,18,セット,bet,Bet 2,5
+9dTs8s,Ah8d,5,弱ペア/ボトムペア,check,Check,5
+Ad9h8h,AhQc,12,TP+強キッカー,check,Check,5
+JsKs5d,7d7c,5,弱ペア/ボトムペア,check,Check,5
+5c2d3h,Kh4h,8,OESD,bet,Bet 2,5
+9s7s4c,JhTc,5,ガットショット,check,Check,5
+QcAdKh,Ks8h,5,セカンドペア弱,check,Check,5
+Td6h4h,4s4d,18,セット,bet,Bet 4,5
+Td6h4h,JsJd,15,オーバーペア,bet,Bet 4,5
+JsKs5d,Ah9d,2,エア,check,Check,5
+Td6h4h,9s9d,5,弱ペア/ボトムペア,check,Check,5
+6s8d7c,Jh6h,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,ThTc,18,セット,bet,Bet 2,5
+TsKcAh,JhTc,5,弱ペア/ボトムペア,check,Check,5
+Th4c5d,KhJd,2,エア,bet,Bet 4,5
+AcKs7d,ThTc,5,弱ペア/ボトムペア,check,Check,5
+JcJh4s,AdJd,18,セット,bet,Bet 2,5
+Jh4h5s,Kc8s,2,エア,check,Check,5
+6s8d7c,As8s,15,TPTK,bet,Bet 2,5
+QcAdKh,QdJh,5,弱ペア/ボトムペア,check,Check,5
+JsKs5d,Jd9d,5,セカンドペア弱,check,Check,5
+Ad9h8h,7h7c,5,弱ペア/ボトムペア,check,Check,5
+Ad8d3d,6h6d,8,ドロー+弱ペア,check,Check,5
+7d6c4h,9h9c,15,オーバーペア,bet,Bet 2,5
+8h8cTc,QhTh,15,2ペア,bet,Bet 2,5
+Qc8cAc,JsJd,5,弱ペア/ボトムペア,check,Check,5
+8h8cTc,As5d,2,エア,check,Check,5
+7d6c4h,AdTs,2,エア,check,Check,5
+9dTs8s,Ks7s,12,コンボドロー(FD+OESD),bet,Bet 2,5
+Ad8d3d,Ah5c,10,TP+弱キッカー,check,Check,5
+5c2d3h,Ah6h,5,ガットショット,bet,Bet 2,5
+8h8cTc,Ac7s,2,バックドアドロー,bet,Bet 2,5
+9s7s4c,5h4h,5,弱ペア/ボトムペア,check,Check,5
+Ks7h2d,Ad9s,2,エア,check,Check,5
+JsKs5d,Ad9d,2,バックドアドロー,check,Check,5
+Ks7h2d,Ac9s,2,エア,check,Check,5
+Jh4h5s,Kd9s,2,エア,check,Check,5
+9dTs8s,3d3c,5,弱ペア/ボトムペア,check,Check,5
+Th4c5d,Ah9h,2,バックドアドロー,check,Check,5
+JcJh4s,Ad5c,2,エア,check,Check,5
+Ad8d3d,Ks9s,2,バックドアドロー,check,Check,5
+Th4c5d,Ac9h,2,エア,check,Check,5
+Th3s2d,AsTs,15,TPTK,bet,Bet 4,5
+AcKs7d,JsJh,5,弱ペア/ボトムペア,check,Check,5
+9s7s4c,AdKd,2,エア,check,Check,5
+Js8d3c,2h2d,5,弱ペア/ボトムペア,check,Check,5
+QcAdKh,Qs9c,5,弱ペア/ボトムペア,check,Check,5
+7d6c4h,8s8c,15,オーバーペア,bet,Bet 2,5
+QcAdKh,Ac7h,10,TP+弱キッカー,check,Check,5
+9s7s4c,KhQd,2,エア,check,Check,5
+7d6c4h,AcJs,2,エア,check,Check,5
+QcAdKh,Kc8h,5,セカンドペア弱,check,Check,5
+Js8d3c,6d6c,5,弱ペア/ボトムペア,check,Check,5
+Td6h4h,Qs4s,5,弱ペア/ボトムペア,check,Check,5
+AcKs7d,Jd5d,2,バックドアドロー,check,Check,5
+AcKs7d,Qh6h,2,バックドアドロー,check,Check,5
+5c5dAh,KsKd,15,2ペア,check,Check,5
+Th4c5d,JhTc,10,TP+中キッカー,check,Check,5
+TsKcAh,KsJc,5,セカンドペア弱,check,Check,5
+TsKcAh,Ad9h,10,TP+中キッカー,check,Check,5
+4s4h3h,Ac5s,5,ガットショット,check,Check,5
+8h8cTc,4s4d,15,2ペア,check,Check,5
+Ks7h2d,Kh5h,10,TP+弱キッカー,bet,Bet 2,5
+5c2d3h,9s7s,2,エア,check,Check,5
+Ad9h8h,KdTh,2,バックドアドロー,bet,Bet 4,5
+Ks7h2d,AhJs,2,エア,bet,Bet 2,5
+Ad8d3d,9s9h,5,弱ペア/ボトムペア,check,Check,5
+Th3s2d,Kh8d,2,エア,check,Check,5
+4s4h3h,KsJc,2,エア,check,Check,5
+Th4c5d,Ks9c,2,エア,check,Check,5
+Ks7h2d,QhJc,2,バックドアドロー,check,Check,5
+Ks7h2d,KhTh,10,TP+中キッカー,bet,Bet 2,5
+QcAdKh,JsJc,5,弱ペア/ボトムペア,bet,Bet 4,5
+9dTs8s,7h7c,8,ドロー+弱ペア,check,Check,5
+Td6h4h,AcQc,2,エア,check,Check,5
+9s7s4c,6s6c,5,弱ペア/ボトムペア,check,Check,5
+Th3s2d,Ah6c,2,バックドアドロー,bet,Bet 4,5
+Td6h4h,Ac7c,2,エア,check,Check,5
+TsKcAh,QhQc,5,弱ペア/ボトムペア,check,Check,5
+5c2d3h,AhTc,5,ガットショット,check,Check,5
+Ad9h8h,AsAh,18,セット,bet,Bet 4,5
+8h8cTc,5d4d,2,エア,check,Check,5
+Ks7h2d,2s2h,18,セット,bet,Bet 2,5
+8h8cTc,As6h,2,エア,check,Check,5
+AcKs7d,QcJc,5,ガットショット,bet,Bet 4,5
+Jh4h5s,8h6h,10,フラッシュドロー,bet,Bet 4,5
+Js8d3c,KsQd,2,バックドアドロー,bet,Bet 2,5
+6s8d7c,TsTc,15,オーバーペア,bet,Bet 2,5
+JsKs5d,Jh9s,5,セカンドペア弱,check,Check,5
+6s8d7c,AdAc,15,オーバーペア,check,Check,5
+Td6h4h,Ks4s,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,Tc8s,2,エア,check,Check,5
+Th3s2d,Ad9s,2,バックドアドロー,check,Check,5
+Th3s2d,KhKd,15,オーバーペア,bet,Bet 4,5
+Ad8d3d,7h7d,8,ドロー+弱ペア,check,Check,5
+AcKs7d,Qh9s,2,バックドアドロー,check,Check,5
+4s4h3h,KcJs,2,エア,check,Check,5
+9s7s4c,Js4s,8,ドロー+弱ペア,bet,Bet 4,5
+5c5dAh,KhQs,2,バックドアドロー,check,Check,5
+5c2d3h,Ad4s,18,ストレート,bet,Bet 2,5
+9s7s4c,AcJd,2,エア,check,Check,5
+7d6c4h,Ah3d,5,ガットショット,bet,Bet 2,5
+9s7s4c,Th7h,5,セカンドペア弱,check,Check,5
+Js8d3c,Kd3d,5,弱ペア/ボトムペア,bet,Bet 2,5
+AcKs7d,Qc6c,2,バックドアドロー,check,Check,5
+Jh4h5s,Ac4d,5,弱ペア/ボトムペア,check,Check,5
+Qc8cAc,Kh8d,5,弱ペア/ボトムペア,check,Check,5
+Js8d3c,AsJd,15,TPTK,bet,Bet 2,5
+Ks7h2d,AhJd,2,エア,bet,Bet 2,5
+6s8d7c,5d5c,8,ドロー+弱ペア,check,Check,5
+7d6c4h,AsJd,2,エア,check,Check,5
+5c2d3h,AcTd,5,ガットショット,check,Check,5
+9s7s4c,Ah8s,2,バックドアドロー,check,Check,5
+Th4c5d,7c6c,8,OESD,bet,Bet 4,5
+9dTs8s,Qh9h,8,セカンドペア強,check,Check,5
+Td6h4h,JhJd,15,オーバーペア,bet,Bet 4,5
+QcAdKh,Ks3s,5,セカンドペア弱,check,Check,5
+Ks7h2d,AsTc,2,エア,check,Check,5
+Td6h4h,AcJs,2,エア,check,Check,5
+Ad8d3d,KhKd,8,ドロー+弱ペア,check,Check,5
+Td6h4h,QsQc,15,オーバーペア,bet,Bet 4,5
+Td6h4h,TsTh,18,セット,bet,Bet 4,5
+AcKs7d,KdJd,5,セカンドペア弱,check,Check,5
+AcKs7d,9d9c,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,Ks7s,12,コンボドロー(FD+OESD),bet,Bet 2,5
+9s7s4c,AhJh,2,エア,check,Check,5
+Ad8d3d,Th8h,5,セカンドペア弱,check,Check,5
+9s7s4c,Td9h,10,TP+中キッカー,check,Check,5
+Ad8d3d,KsTh,2,バックドアドロー,check,Check,5
+6s8d7c,JsTh,5,ガットショット,bet,Bet 2,5
+8h8cTc,AhTd,15,2ペア,bet,Bet 2,5
+5c2d3h,KhJh,2,バックドアドロー,check,Check,5
+8h8cTc,Th8s,18,セット,bet,Bet 2,5
+Td6h4h,Ks2s,2,エア,check,Check,5
+TsKcAh,9h9d,5,弱ペア/ボトムペア,check,Check,5
+AcKs7d,As7s,15,2ペア,bet,Bet 4,5
+Ad8d3d,As6s,10,TP+弱キッカー,check,Check,5
+4s4h3h,2d2c,15,2ペア,bet,Bet 2,5
+5c2d3h,KcJh,2,エア,check,Check,5
+JcJh4s,6h6d,15,2ペア,bet,Bet 2,5
+7d6c4h,QcJc,2,バックドアドロー,check,Check,5
+Th4c5d,Ac9c,2,バックドアドロー,check,Check,5
+Jh4h5s,KdTc,2,エア,check,Check,5
+Th3s2d,9d9c,5,弱ペア/ボトムペア,check,Check,5
+TsKcAh,QhTc,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,Kh9s,8,セカンドペア強,check,Check,5
+Td6h4h,9d6d,5,セカンドペア弱,check,Check,5
+Th3s2d,Qs7s,2,バックドアドロー,check,Check,5
+Th3s2d,Ks7s,2,バックドアドロー,check,Check,5
+Jh4h5s,Kh9c,2,バックドアドロー,bet,Bet 4,5
+JsKs5d,Tc8s,2,バックドアドロー,bet,Bet 4,5
+6s8d7c,AsKc,2,バックドアドロー,bet,Bet 2,5
+QcAdKh,9h8h,2,バックドアドロー,check,Check,5
+JcJh4s,Qs5s,2,バックドアドロー,bet,Bet 2,5
+Ad9h8h,8d8c,18,セット,bet,Bet 4,5
+Th3s2d,AsJs,2,バックドアドロー,check,Check,5
+4s4h3h,Ad4d,18,セット,bet,Bet 2,5
+TsKcAh,AcKs,15,2ペア,bet,Bet 4,5
+9s7s4c,5s5c,5,弱ペア/ボトムペア,check,Check,5
+Th4c5d,Qs5s,8,セカンドペア強,check,Check,5
+JcJh4s,AsJd,18,セット,bet,Bet 2,5
+Js8d3c,3s3d,18,セット,bet,Bet 2,5
+Js8d3c,QsTs,5,ガットショット,bet,Bet 2,5
+TsKcAh,Tc7c,5,弱ペア/ボトムペア,check,Check,5
+QcAdKh,Qs3s,5,弱ペア/ボトムペア,check,Check,5
+Th4c5d,Ad6s,2,バックドアドロー,bet,Bet 4,5
+9dTs8s,5s5h,5,弱ペア/ボトムペア,check,Check,5
+Th4c5d,As8h,2,エア,check,Check,5
+6s8d7c,Ah8h,15,TPTK,bet,Bet 2,5
+Ks7h2d,Ah3c,2,バックドアドロー,bet,Bet 2,5
+Th3s2d,As8c,2,バックドアドロー,check,Check,5
+6s8d7c,JhTd,5,ガットショット,bet,Bet 2,5
+Th3s2d,JcTd,10,TP+中キッカー,check,Check,5
+JcJh4s,Jd7d,18,セット,bet,Bet 2,5
+5c5dAh,Ks9c,2,エア,check,Check,5
+Th3s2d,KsKh,15,オーバーペア,bet,Bet 4,5
+Ks7h2d,As9s,2,バックドアドロー,check,Check,5
+4s4h3h,KsJh,2,バックドアドロー,check,Check,5
+Th3s2d,Ah9s,2,バックドアドロー,check,Check,5
+9s7s4c,Jd9d,10,TP+中キッカー,check,Check,5
+Th4c5d,As9h,2,エア,check,Check,5
+5c5dAh,7s7c,15,2ペア,bet,Bet 2,5
+Th3s2d,JdTs,10,TP+中キッカー,check,Check,5
+4s4h3h,Ks9s,2,バックドアドロー,check,Check,5
+Js8d3c,Ac3h,5,弱ペア/ボトムペア,bet,Bet 2,5
+Ad9h8h,KcTh,2,バックドアドロー,bet,Bet 4,5
+4s4h3h,Qh9d,2,バックドアドロー,bet,Bet 2,5
+Js8d3c,Qd9c,5,ガットショット,bet,Bet 2,5
+Qc8cAc,TsTh,5,弱ペア/ボトムペア,check,Check,5
+Jh4h5s,AsQh,2,バックドアドロー,check,Check,5
+Ad9h8h,AhJs,10,TP+中キッカー,check,Check,5
+TsKcAh,JhTd,5,弱ペア/ボトムペア,check,Check,5
+8h8cTc,Jc9s,8,OESD,bet,Bet 2,5
+Ks7h2d,5d4d,2,バックドアドロー,bet,Bet 2,5
+5c5dAh,KdQc,2,バックドアドロー,check,Check,5
+9dTs8s,As2s,10,フラッシュドロー,bet,Bet 2,5
+Td6h4h,Qh5h,10,フラッシュドロー,bet,Bet 4,5
+4s4h3h,Kc2c,2,バックドアドロー,bet,Bet 2,5
+Js8d3c,QsJd,12,TP+強キッカー,check,Check,5
+Js8d3c,7h7d,5,弱ペア/ボトムペア,check,Check,5
+9s7s4c,As8s,10,フラッシュドロー,bet,Bet 4,5
+Ad9h8h,Ts6s,5,ガットショット,check,Check,5
+9dTs8s,Ad8h,5,弱ペア/ボトムペア,check,Check,5
+Th3s2d,Qc6c,2,エア,check,Check,5
+5c5dAh,Qs3s,2,エア,bet,Bet 2,5
+Qc8cAc,Qs8s,15,2ペア,bet,Bet 2,5
+Ad9h8h,Ah6s,10,TP+弱キッカー,check,Check,5
+8h8cTc,QhTh,15,2ペア,bet,Bet 2,5
+Ks7h2d,AcKc,15,TPTK,bet,Bet 2,5
+Ad9h8h,AhTs,10,TP+中キッカー,check,Check,5
+Jh4h5s,8s8c,5,弱ペア/ボトムペア,check,Check,5
+Ad9h8h,Ah5c,10,TP+弱キッカー,check,Check,5
+Jh4h5s,AhKd,2,バックドアドロー,check,Check,5
+JcJh4s,Ah3c,2,エア,bet,Bet 2,5
+Th3s2d,2h2c,18,セット,bet,Bet 4,5
+QcAdKh,Qh9c,5,弱ペア/ボトムペア,check,Check,5
+6s8d7c,Kd9d,8,OESD,bet,Bet 2,5
+Ad9h8h,TsTd,5,弱ペア/ボトムペア,check,Check,5
+Th4c5d,3s3c,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,Qs7s,12,コンボドロー(FD+OESD),bet,Bet 2,5
+7d6c4h,KsJs,2,エア,check,Check,5
+5c2d3h,Ad8c,5,ガットショット,check,Check,5
+Ad9h8h,Qs4s,2,エア,check,Check,5
+Td6h4h,7d7c,5,弱ペア/ボトムペア,check,Check,5
+Th3s2d,JdTd,10,TP+中キッカー,bet,Bet 4,5
+JcJh4s,Ah6h,2,バックドアドロー,check,Check,5
+7d6c4h,Ac5c,8,OESD,bet,Bet 2,5
+5c5dAh,KdQs,2,バックドアドロー,check,Check,5
+JcJh4s,As7s,2,バックドアドロー,check,Check,5
+Td6h4h,5h5c,5,弱ペア/ボトムペア,check,Check,5
+QcAdKh,QdTs,5,弱ペア/ボトムペア,check,Check,5
+Js8d3c,Qh6h,2,エア,check,Check,5
+Qc8cAc,Qh7h,5,セカンドペア弱,check,Check,5
+6s8d7c,JsTs,5,ガットショット,bet,Bet 2,5
+9dTs8s,Qc9c,8,セカンドペア強,check,Check,5
+Td6h4h,5s4s,5,弱ペア/ボトムペア,check,Check,5
+9s7s4c,Qs6s,10,フラッシュドロー,bet,Bet 4,5
+6s8d7c,Jc9h,8,OESD,bet,Bet 2,5
+Td6h4h,JsJc,15,オーバーペア,bet,Bet 4,5
+Ad8d3d,KsQc,2,バックドアドロー,check,Check,5
+Ad9h8h,AhJd,10,TP+中キッカー,check,Check,5
+Th3s2d,Ah3c,8,セカンドペア強,bet,Bet 4,5
+8h8cTc,KdJd,2,エア,bet,Bet 2,5
+Th3s2d,Ac7h,2,バックドアドロー,check,Check,5
+Ks7h2d,AsKh,15,TPTK,bet,Bet 2,5
+Th3s2d,JdTc,10,TP+中キッカー,check,Check,5
+Jh4h5s,Ac9d,2,エア,check,Check,5
+AcKs7d,JcTh,5,ガットショット,bet,Bet 4,5
+6s8d7c,Ah3c,2,バックドアドロー,check,Check,5
+Jh4h5s,AsTs,2,バックドアドロー,check,Check,5
+7d6c4h,QhTh,2,バックドアドロー,check,Check,5
+7d6c4h,AhJs,2,エア,check,Check,5
+Th4c5d,Kh5h,8,セカンドペア強,bet,Bet 4,5
+JsKs5d,Tc6c,2,エア,check,Check,5
+Ks7h2d,QdJc,2,バックドアドロー,check,Check,5
+9s7s4c,AhQs,2,バックドアドロー,check,Check,5
+9s7s4c,JsTh,5,ガットショット,bet,Bet 4,5
+6s8d7c,Ad4d,5,ガットショット,check,Check,5
+Ad9h8h,Ah5d,10,TP+弱キッカー,check,Check,5
+JsKs5d,JhTh,5,セカンドペア弱,check,Check,5
+Ks7h2d,Ah5s,2,エア,bet,Bet 2,5
+Th4c5d,9s8s,2,バックドアドロー,check,Check,5
+8h8cTc,5s5h,15,2ペア,check,Check,5
+TsKcAh,Kd8s,5,セカンドペア弱,check,Check,5
+Ad9h8h,KsJc,2,エア,check,Check,5
+Ad8d3d,KsJc,2,バックドアドロー,check,Check,5
+6s8d7c,9h9c,15,オーバーペア,bet,Bet 2,5
+Ad8d3d,Ts8c,5,セカンドペア弱,check,Check,5
+Ad9h8h,Jh6h,10,フラッシュドロー,check,Check,5
+Th4c5d,As8d,2,エア,check,Check,5
+Jh4h5s,Ac7d,2,エア,check,Check,5
+JcJh4s,As3d,2,エア,bet,Bet 2,5
+Td6h4h,As9s,2,エア,check,Check,5
+5c2d3h,6h6c,15,オーバーペア,bet,Bet 2,5
+AcKs7d,Ad7h,15,2ペア,bet,Bet 4,5
+7d6c4h,KhJh,2,バックドアドロー,check,Check,5
+Ad8d3d,Ac6s,10,TP+弱キッカー,check,Check,5
+JsKs5d,AhQd,5,ガットショット,check,Check,5
+5c2d3h,AdKc,5,ガットショット,bet,Bet 2,5
+Th4c5d,Ks8c,2,エア,check,Check,5
+Ad9h8h,Kd8c,5,弱ペア/ボトムペア,check,Check,5
+Td6h4h,AcQd,2,エア,check,Check,5
+Th3s2d,QhJc,2,バックドアドロー,bet,Bet 4,5
+7d6c4h,AdJs,2,エア,check,Check,5
+9dTs8s,7h7d,8,ドロー+弱ペア,check,Check,5
+4s4h3h,Jd5d,2,バックドアドロー,bet,Bet 2,5
+9s7s4c,Kd4d,5,弱ペア/ボトムペア,check,Check,5
+9s7s4c,JhTs,5,ガットショット,bet,Bet 4,5
+Jh4h5s,AcKd,2,エア,check,Check,5
+Js8d3c,Ts8s,5,セカンドペア弱,bet,Bet 2,5
+JsKs5d,9h8h,2,エア,check,Check,5
+AcKs7d,AhJs,10,TP+中キッカー,bet,Bet 4,5
+Jh4h5s,Ks8s,2,バックドアドロー,check,Check,5
+6s8d7c,As4d,5,ガットショット,bet,Bet 2,5
+6s8d7c,JsJc,15,オーバーペア,bet,Bet 2,5
+AcKs7d,JhTc,5,ガットショット,bet,Bet 4,5
+6s8d7c,4h4c,5,弱ペア/ボトムペア,check,Check,5
+QcAdKh,JdTs,18,ストレート,bet,Bet 4,5
+JsKs5d,Ah3s,2,バックドアドロー,bet,Bet 4,5
+Th4c5d,KsJs,2,エア,check,Check,5
+6s8d7c,Ac4c,5,ガットショット,check,Check,5
+5c2d3h,Kh5h,12,TP+強キッカー,bet,Bet 2,5
+9s7s4c,Td9h,10,TP+中キッカー,check,Check,5
+Qc8cAc,Qs9h,5,セカンドペア弱,check,Check,5
+Ks7h2d,AhJd,2,エア,bet,Bet 2,5
+4s4h3h,7h7c,15,2ペア,bet,Bet 2,5
+8h8cTc,AdTd,15,2ペア,bet,Bet 2,5
+AcKs7d,Qc9c,2,バックドアドロー,check,Check,5
+9dTs8s,QhJh,18,ストレート,bet,Bet 2,5
+Th4c5d,Kh9d,2,エア,check,Check,5
+Js8d3c,QhTc,5,ガットショット,bet,Bet 2,5
+Th3s2d,As9h,2,バックドアドロー,check,Check,5
+AcKs7d,8s8h,5,弱ペア/ボトムペア,check,Check,5
+7d6c4h,KdQc,2,エア,check,Check,5
+Js8d3c,Ad8h,8,セカンドペア強,bet,Bet 2,5
+Jh4h5s,9h6h,10,フラッシュドロー,check,Check,5
+4s4h3h,8s8d,15,2ペア,bet,Bet 2,5
+7d6c4h,Kh9c,2,エア,bet,Bet 2,5
+Jh4h5s,KhJs,12,TP+強キッカー,check,Check,5
+5c5dAh,As4c,15,2ペア,check,Check,5
+9dTs8s,6s5s,10,フラッシュドロー,check,Check,5
+Ad8d3d,KhJh,2,バックドアドロー,check,Check,5
+Js8d3c,Ah3h,5,弱ペア/ボトムペア,bet,Bet 2,5
+Th3s2d,Ah7s,2,バックドアドロー,check,Check,5
+8h8cTc,Kh8s,18,セット,bet,Bet 2,5
+TsKcAh,Qc9d,5,ガットショット,bet,Bet 4,5
+QcAdKh,AhTc,10,TP+中キッカー,check,Check,5
+Td6h4h,Ah3s,2,バックドアドロー,bet,Bet 4,5
+JsKs5d,Td8c,2,エア,check,Check,5
+JsKs5d,Jh9d,5,セカンドペア弱,check,Check,5
+JsKs5d,TsTd,5,弱ペア/ボトムペア,check,Check,5
+5c2d3h,2h2c,18,セット,bet,Bet 2,5
+7d6c4h,AhJc,2,エア,check,Check,5
+Td6h4h,AsKc,2,エア,check,Check,5
+Ad8d3d,Tc8h,5,セカンドペア弱,check,Check,5
+Ad9h8h,KdKc,5,弱ペア/ボトムペア,check,Check,5
+TsKcAh,Th9d,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,Ac3h,2,バックドアドロー,check,Check,5
+Qc8cAc,5s5h,5,弱ペア/ボトムペア,check,Check,5
+6s8d7c,9s9c,15,オーバーペア,bet,Bet 2,5
+Qc8cAc,JdJc,8,ドロー+弱ペア,check,Check,5
+JsKs5d,AdQc,5,ガットショット,check,Check,5
+Ad9h8h,Ks5s,2,エア,check,Check,5
+Jh4h5s,KhJd,12,TP+強キッカー,check,Check,5
+Th4c5d,AsJd,2,エア,check,Check,5
+9s7s4c,Ad6h,2,エア,check,Check,5
+AcKs7d,Jd9d,2,バックドアドロー,bet,Bet 4,5
+Ks7h2d,Ah7s,8,セカンドペア強,bet,Bet 2,5
+JsKs5d,Ac4d,2,エア,check,Check,5
+JcJh4s,QdJs,18,セット,bet,Bet 2,5
+Th4c5d,9h9c,5,弱ペア/ボトムペア,check,Check,5
+Ad8d3d,KhJh,2,バックドアドロー,check,Check,5
+7d6c4h,KcQs,2,エア,check,Check,5
+Js8d3c,KcTd,2,エア,bet,Bet 2,5
+Td6h4h,AhJs,2,バックドアドロー,check,Check,5
+7d6c4h,KcJs,2,エア,check,Check,5
+9dTs8s,AdJh,8,OESD,check,Check,5
+9dTs8s,QsJc,18,ストレート,bet,Bet 2,5
+Jh4h5s,Jc8c,10,TP+中キッカー,check,Check,5
+8h8cTc,Ah3h,2,バックドアドロー,check,Check,5
+4s4h3h,KsTs,2,バックドアドロー,check,Check,5
+Td6h4h,AhQd,2,バックドアドロー,check,Check,5
+Td6h4h,KsKc,15,オーバーペア,check,Check,5
+9dTs8s,Ac4d,2,バックドアドロー,check,Check,5
+JsKs5d,Qc7c,2,バックドアドロー,check,Check,5
+Ks7h2d,KhKd,18,セット,bet,Bet 2,5
+5c5dAh,KdJs,2,エア,check,Check,5
+9dTs8s,Qd9s,8,セカンドペア強,check,Check,5
+Ad8d3d,Ac2c,10,TP+弱キッカー,check,Check,5
+Jh4h5s,KhJs,12,TP+強キッカー,check,Check,5
+Th3s2d,Kc9s,2,エア,check,Check,5
+JsKs5d,AdTh,5,ガットショット,check,Check,5
+Ad8d3d,Ah6d,12,コンボドロー(TP+弱キッカー),check,Check,5
+QcAdKh,Jd7d,5,ガットショット,bet,Bet 4,5
+Td6h4h,Ac7c,2,エア,check,Check,5
+9s7s4c,AhJs,2,バックドアドロー,check,Check,5
+JsKs5d,Th6h,2,エア,check,Check,5
+8h8cTc,Ac2c,10,フラッシュドロー,bet,Bet 2,5
+6s8d7c,Qd5d,8,OESD,bet,Bet 2,5
+Qc8cAc,6s6d,5,弱ペア/ボトムペア,check,Check,5
+Td6h4h,Qc9d,2,エア,check,Check,5
+7d6c4h,Kc9h,2,エア,bet,Bet 2,5
+JcJh4s,AsAc,15,2ペア,check,Check,5
+6s8d7c,8s8h,18,セット,bet,Bet 2,5
+Js8d3c,6s6h,5,弱ペア/ボトムペア,check,Check,5
+Td6h4h,Ac8c,2,エア,check,Check,5
+JcJh4s,Ts8c,2,エア,bet,Bet 2,5
+AcKs7d,Jh8h,2,エア,check,Check,5
+JsKs5d,JdJc,18,セット,bet,Bet 4,5
+Jh4h5s,6s6c,5,弱ペア/ボトムペア,check,Check,5
+TsKcAh,Js9d,5,ガットショット,bet,Bet 4,5
+9dTs8s,Qd9c,8,セカンドペア強,check,Check,5
+Ks7h2d,AcTh,2,エア,check,Check,5
+7d6c4h,Jh5h,8,OESD,bet,Bet 2,5
+AcKs7d,Qc9c,2,バックドアドロー,check,Check,5
+Jh4h5s,QdJs,12,TP+強キッカー,check,Check,5
+Jh4h5s,TsTc,5,弱ペア/ボトムペア,check,Check,5
+9s7s4c,AsQd,2,バックドアドロー,check,Check,5
+Td6h4h,AsKd,2,エア,check,Check,5
+AcKs7d,Qs9s,2,バックドアドロー,check,Check,5
+TsKcAh,8s8c,5,弱ペア/ボトムペア,check,Check,5
+4s4h3h,As7h,2,バックドアドロー,check,Check,5
+9s7s4c,Td9d,10,TP+中キッカー,check,Check,5
+5c5dAh,AdQs,15,2ペア,bet,Bet 2,5
+Ad9h8h,5d5c,5,弱ペア/ボトムペア,check,Check,5
+9s7s4c,Ac8h,2,バックドアドロー,check,Check,5
+Jh4h5s,QsTd,2,バックドアドロー,check,Check,5
+Qc8cAc,KdTc,10,フラッシュドロー,check,Check,5
+QcAdKh,As5c,10,TP+弱キッカー,check,Check,5
+TsKcAh,QsTh,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,Td6d,10,TP+弱キッカー,check,Check,5
+TsKcAh,7c5c,2,バックドアドロー,check,Check,5
+Js8d3c,KcTs,2,エア,bet,Bet 2,5
+9s7s4c,Ts8s,12,コンボドロー(FD+OESD),bet,Bet 4,5
+9dTs8s,Jd8d,8,ドロー+弱ペア,check,Check,5
+8h8cTc,Ad8s,18,セット,bet,Bet 2,5
+TsKcAh,5s5d,5,弱ペア/ボトムペア,check,Check,5
+Ad9h8h,8d8c,18,セット,bet,Bet 4,5
+Ks7h2d,AdKh,15,TPTK,bet,Bet 2,5
+Ad9h8h,Qs3s,2,エア,check,Check,5
+Ad9h8h,Kc5c,2,エア,check,Check,5
+Th4c5d,Ah8h,2,バックドアドロー,check,Check,5
+Js8d3c,QsTs,5,ガットショット,bet,Bet 2,5
+9dTs8s,Ah5h,2,バックドアドロー,check,Check,5
+Td6h4h,Js9d,2,バックドアドロー,check,Check,5
+Js8d3c,As9c,2,エア,bet,Bet 2,5
+Th3s2d,JdTs,10,TP+中キッカー,check,Check,5
+TsKcAh,Ks8s,5,セカンドペア弱,check,Check,5
+Ad9h8h,As5s,10,TP+弱キッカー,check,Check,5
+AcKs7d,Kc9s,5,セカンドペア弱,check,Check,5
+Jh4h5s,KdTd,2,エア,check,Check,5
+JcJh4s,AsJs,18,セット,bet,Bet 2,5
+Jh4h5s,As4d,5,弱ペア/ボトムペア,check,Check,5
+7d6c4h,KhQd,2,エア,check,Check,5
+Th4c5d,QdJd,2,バックドアドロー,bet,Bet 4,5
+6s8d7c,AsAh,15,オーバーペア,check,Check,5
+Js8d3c,7h7d,5,弱ペア/ボトムペア,check,Check,5
+Ks7h2d,QcJd,2,バックドアドロー,check,Check,5
+TsKcAh,Ks7s,5,セカンドペア弱,check,Check,5
+JcJh4s,Ah4h,15,2ペア,bet,Bet 2,5
+Ks7h2d,2h2c,18,セット,bet,Bet 2,5
+9dTs8s,Ad8d,5,弱ペア/ボトムペア,check,Check,5
+Th3s2d,JcTc,10,TP+中キッカー,check,Check,5
+6s8d7c,TsTd,15,オーバーペア,bet,Bet 2,5
+9dTs8s,5s5c,5,弱ペア/ボトムペア,check,Check,5
+Ad8d3d,Ac4c,10,TP+弱キッカー,check,Check,5
+AcKs7d,AsAh,18,セット,bet,Bet 4,5
+4s4h3h,Qs9h,2,バックドアドロー,bet,Bet 2,5
+Ad9h8h,5d5c,5,弱ペア/ボトムペア,check,Check,5
+JsKs5d,Jh7h,5,セカンドペア弱,check,Check,5
+Js8d3c,7h7d,5,弱ペア/ボトムペア,check,Check,5
+6s8d7c,Tc8c,10,TP+中キッカー,bet,Bet 2,5
+Td6h4h,As7d,2,エア,check,Check,5
+Jh4h5s,AcJd,15,TPTK,bet,Bet 4,5
+Js8d3c,Ah5s,2,エア,check,Check,5
+9dTs8s,As4s,10,フラッシュドロー,bet,Bet 2,5
+4s4h3h,Kc9d,2,エア,check,Check,5
+9dTs8s,Kh9h,8,セカンドペア強,check,Check,5
+9dTs8s,Ac4h,2,バックドアドロー,check,Check,5
+Ad8d3d,Ks9h,2,バックドアドロー,check,Check,5
+4s4h3h,As6h,2,バックドアドロー,check,Check,5
+Jh4h5s,Jc6c,10,TP+弱キッカー,check,Check,5
+TsKcAh,9h9c,5,弱ペア/ボトムペア,check,Check,5
+QcAdKh,9h6h,2,バックドアドロー,check,Check,5
+Th3s2d,Ah9d,2,バックドアドロー,check,Check,5
+Th4c5d,Ks8h,2,エア,check,Check,5
+7d6c4h,9s6s,5,セカンドペア弱,check,Check,5
+7d6c4h,TdTc,15,オーバーペア,bet,Bet 2,5
+QcAdKh,Qh9c,5,弱ペア/ボトムペア,check,Check,5
+9dTs8s,Jc4c,8,OESD,bet,Bet 2,5
+6s8d7c,Jh9d,8,OESD,bet,Bet 2,5
+8h8cTc,As6s,2,エア,check,Check,5
+6s8d7c,AdQc,2,バックドアドロー,bet,Bet 2,5
+4s4h3h,As2s,5,ガットショット,check,Check,5
+Qc8cAc,KsKd,5,弱ペア/ボトムペア,check,Check,5
+5c2d3h,7d7c,15,オーバーペア,bet,Bet 2,5
+Ad9h8h,Ah7d,10,TP+弱キッカー,check,Check,5
+Th3s2d,JdJc,15,オーバーペア,bet,Bet 4,5
+Td6h4h,7h5h,12,コンボドロー(FD+OESD),bet,Bet 4,5
+Qc8cAc,7h7d,5,弱ペア/ボトムペア,check,Check,5
+7d6c4h,AdTs,2,エア,check,Check,5
+JsKs5d,AhTd,5,ガットショット,check,Check,5
+Td6h4h,Ad5c,2,バックドアドロー,check,Check,5
+Th3s2d,AsTc,15,TPTK,bet,Bet 4,5
