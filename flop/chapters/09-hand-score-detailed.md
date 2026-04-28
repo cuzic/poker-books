@@ -16,14 +16,6 @@
 
 ---
 
-<figure><img src="images/f08-fig1-handscore-formula.jpg" alt="HandScore = 役スコア + ドロー加点 + ブロッカー補正の式構造図" /><figcaption>HandScore = 役スコア + ドロー加点 + ブロッカー補正の式構造図</figcaption></figure>
-
-<figure><img src="images/f08-fig2-hand-rank-score-table.jpg" alt="セット30・TPTK18・TPGK15・TPWK6等の役スコア早見テーブル" /><figcaption>セット30・TPTK18・TPGK15・TPWK6等の役スコア早見テーブル</figcaption></figure>
-
-<figure><img src="images/f08-fig3-draw-bonus-table.jpg" alt="OESD +14 / FD +13 / GS +10のドロー加点一覧テーブル" /><figcaption>OESD +14 / FD +13 / GS +10のドロー加点一覧テーブル</figcaption></figure>
-
-<figure><img src="images/f08-fig4-blocker-effect-visual.jpg" alt="ブロッカー保有時の相手ナッツコンボ減少とHandScore+3補正の視覚化" /><figcaption>ブロッカー保有時の相手ナッツコンボ減少とHandScore+3補正の視覚化</figcaption></figure>
-
 ## ボードだけでは判断できない
 
 第8章でK♥7♦2♣ に簡易レンジスコア チェックリストを適用すると、トップK・レインボー・非ウェットの「ハイドライ」ボードとなりCBet基準頻度は85%になります。
@@ -44,6 +36,8 @@ HandScoreは「自分の手がこのボードに対してどれほど強いか�
 
 ## HandScore の定義
 
+<figure><img src="images/f08-fig1-handscore-formula.jpg" alt="HandScore = 役スコア + ドロー加点 + ブロッカー補正の式構造図" /><figcaption>HandScore = 役スコア + ドロー加点 + ブロッカー補正の式構造図</figcaption></figure>
+
 ```
 HandScore = 役スコア + ドロー加点 + ブロッカー
 ```
@@ -54,6 +48,8 @@ HandScore = 役スコア + ドロー加点 + ブロッカー
 ---
 
 ## 役スコア：確定した役の基礎点
+
+<figure><img src="images/f08-fig2-hand-rank-score-table.jpg" alt="セット30・TPTK18・TPGK15・TPWK6等の役スコア早見テーブル" /><figcaption>セット30・TPTK18・TPGK15・TPWK6等の役スコア早見テーブル</figcaption></figure>
 
 フロップ時点で「すでに完成している役」を次のように点数化します。本書の値は **GTO Wizard の公開ソルバー解（PokerBench, 1456 サンプル）で校正済**で、ベット頻度との単調性を持ちます。
 
@@ -104,6 +100,8 @@ HandScore = 役スコア + ドロー加点 + ブロッカー
 
 ## ドロー加点：未来のエクイティを現在点に換算する
 
+<figure><img src="images/f08-fig3-draw-bonus-table.jpg" alt="OESD +14 / FD +13 / GS +10のドロー加点一覧テーブル" /><figcaption>OESD +14 / FD +13 / GS +10のドロー加点一覧テーブル</figcaption></figure>
+
 フロップではまだ 2 枚のカードが残っています。ドローは「現在は役がないが、今後役になりうる期待値」を持ちます。次の表で覚えてください。
 
 | ドローの種類 | アウツ数 | ドロー加点 |
@@ -143,6 +141,8 @@ HandScore = 役スコア + ドロー加点 + ブロッカー
 ---
 
 ## ブロッカー：相手のナッツを消す価値
+
+<figure><img src="images/f08-fig4-blocker-effect-visual.jpg" alt="ブロッカー保有時の相手ナッツコンボ減少とHandScore+3補正の視覚化" /><figcaption>ブロッカー保有時の相手ナッツコンボ減少とHandScore+3補正の視覚化</figcaption></figure>
 
 ブロッカーは、自分の手札が「相手が特定の強いハンドを持つ可能性を排除する」効果です。
 

@@ -19,13 +19,9 @@
 
 ---
 
-<figure><img src="images/f06-fig1-draw-outs-bars.jpg" alt="フラッシュドロー9 / OESD8 / ガットショット4のアウツ数比較横棒グラフ" /><figcaption>フラッシュドロー9 / OESD8 / ガットショット4のアウツ数比較横棒グラフ</figcaption></figure>
-
-<figure><img src="images/f06-fig2-rule-of-2-and-4.jpg" alt="アウツ×2%（ターン）/ アウツ×4%（2枚合計）のRule of 2 and 4を図解" /><figcaption>アウツ×2%（ターン）/ アウツ×4%（2枚合計）のRule of 2 and 4を図解</figcaption></figure>
-
-<figure><img src="images/f06-fig3-draw-completion-table.jpg" alt="FD/OESD/GS等の主要ドローのターン・リバー・2枚合計完成率早見表" /><figcaption>FD/OESD/GS等の主要ドローのターン・リバー・2枚合計完成率早見表</figcaption></figure>
-
 ## 6-1　アウツとは何か
+
+<figure><img src="images/f06-fig1-draw-outs-bars.jpg" alt="フラッシュドロー9 / OESD8 / ガットショット4のアウツ数比較横棒グラフ" /><figcaption>フラッシュドロー9 / OESD8 / ガットショット4のアウツ数比較横棒グラフ</figcaption></figure>
 
 **アウツ（Outs）** とは、現在の弱い手を完成させてくれるデッキ内の残りカードの枚数です。
 たとえばフロップでフラッシュドローを持っているとき、残り13枚ある同スートのカードのうち、
@@ -48,6 +44,8 @@
 ---
 
 ## 6-2　Rule of 2 and 4 の基本
+
+<figure><img src="images/f06-fig2-rule-of-2-and-4.jpg" alt="アウツ×2%（ターン）/ アウツ×4%（2枚合計）のRule of 2 and 4を図解" /><figcaption>アウツ×2%（ターン）/ アウツ×4%（2枚合計）のRule of 2 and 4を図解</figcaption></figure>
 
 **Rule of 2 and 4** は、Phil Gordonが著書 *Phil Gordon's Little Green Book*（Simon Spotlight, 2005）で広めた近似公式です。
 アウツ数に定数を掛けるだけで完成確率を暗算できます。
@@ -80,6 +78,8 @@ P = 1 − (46/47) × (45/46) = 1 − 45/47 ≒ 4.26%
 ---
 
 ## 6-3　主要ドローのアウツ数と確率一覧
+
+<figure><img src="images/f06-fig3-draw-completion-table.jpg" alt="FD/OESD/GS等の主要ドローのターン・リバー・2枚合計完成率早見表" /><figcaption>FD/OESD/GS等の主要ドローのターン・リバー・2枚合計完成率早見表</figcaption></figure>
 
 実戦で頻出するドローのアウツ数と正確な確率を示します。
 

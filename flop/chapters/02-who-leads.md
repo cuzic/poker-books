@@ -16,11 +16,9 @@
 
 ---
 
-<figure><img src="images/f03-fig1-range-propagation.jpg" alt="プリフロップレンジがフロップのHandScore計算→アクション判断へ伝搬するフロー図" /><figcaption>プリフロップレンジがフロップのHandScore計算→アクション判断へ伝搬するフロー図</figcaption></figure>
-
-<figure><img src="images/f03-fig2-position-handscore-bars.jpg" alt="UTG〜BB各ポジションのフロップ平均HandScore比較棒グラフ" /><figcaption>UTG〜BB各ポジションのフロップ平均HandScore比較棒グラフ</figcaption></figure>
-
 ## 2-1　ポジション別オープンレンジ——前作の閾値から逆算する
+
+<figure><img src="images/f03-fig1-range-propagation.jpg" alt="プリフロップレンジがフロップのHandScore計算→アクション判断へ伝搬するフロー図" /><figcaption>プリフロップレンジがフロップのHandScore計算→アクション判断へ伝搬するフロー図</figcaption></figure>
 
 6-max NLキャッシュゲーム、100BBスタックでの標準的なオープンレンジを確認します。これはGTOソルバーが示す解であり、前作の「スコア式で開けるハンドの集合」と概ね一致します（スコア式はGTOより若干タイト、UTGで約±1%の差）。
 
@@ -232,6 +230,8 @@ QQが4ベットをコールする場合、そのハンドはフロップでオ�
 ---
 
 ## 2-6　レンジの「平均 HandScore」を出す簡易式
+
+<figure><img src="images/f03-fig2-position-handscore-bars.jpg" alt="UTG〜BB各ポジションのフロップ平均HandScore比較棒グラフ" /><figcaption>UTG〜BB各ポジションのフロップ平均HandScore比較棒グラフ</figcaption></figure>
 
 相手のプリフロップアクションがわかれば、そのレンジの「平均的な強さ」をHandScoreでざっくり推定できます。本書では以下の簡易式を使います。
 

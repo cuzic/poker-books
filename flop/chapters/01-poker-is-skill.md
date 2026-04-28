@@ -12,13 +12,9 @@
 
 ---
 
-<figure><img src="images/f01-fig1-info-revealed-pie.jpg" alt="プリフロップ28%→フロップ71%の情報公開率をパイチャートで比較" /><figcaption>プリフロップ28%→フロップ71%の情報公開率をパイチャートで比較</figcaption></figure>
-
-<figure><img src="images/f01-fig2-ako-flop-hit-pie.jpg" alt="AKoのフロップヒット分岐（Aヒット32% / Kヒット26% / ミス23%等）パイチャート" /><figcaption>AKoのフロップヒット分岐（Aヒット32% / Kヒット26% / ミス23%等）パイチャート</figcaption></figure>
-
-<figure><img src="images/f01-fig3-board-ev-variance.jpg" alt="ドライ・ミドル・ウェット・モノトーン各ボードのEV振れ幅比較バーチャート" /><figcaption>ドライ・ミドル・ウェット・モノトーン各ボードのEV振れ幅比較バーチャート</figcaption></figure>
-
 ## 1-1. フロップで情報の71%が一気に明かされる
+
+<figure><img src="images/f01-fig1-info-revealed-pie.jpg" alt="プリフロップ28%→フロップ71%の情報公開率をパイチャートで比較" /><figcaption>プリフロップ28%→フロップ71%の情報公開率をパイチャートで比較</figcaption></figure>
 
 前作『迷わないポーカー① プリフロップ』でマスターしたプリフロップ判断は、「手持ちの2枚」をもとに行うものでした。
 最終的な5枚のうち2枚のみ、つまり全情報の**28.6%**しか揃っていない段階での判断です。
@@ -45,6 +41,8 @@ GTO Wizardの分析が示す重要な原則があります。
 ---
 
 ## 1-2. AKo が示す「同じハンドでも EV が激変する」現実
+
+<figure><img src="images/f01-fig2-ako-flop-hit-pie.jpg" alt="AKoのフロップヒット分岐（Aヒット32% / Kヒット26% / ミス23%等）パイチャート" /><figcaption>AKoのフロップヒット分岐（Aヒット32% / Kヒット26% / ミス23%等）パイチャート</figcaption></figure>
 
 前作の読者ならAKoの強さをよく知っているはずです。
 しかしフロップが開くと、そのAKoのEVはボードによって大きく分岐します。
@@ -97,6 +95,8 @@ A♥9♥2♥ でTPTKを持っていても、相手のレンジにはフラッシ
 ---
 
 ## 1-3. ボードカバレッジ欠如が EV を下げる構造
+
+<figure><img src="images/f01-fig3-board-ev-variance.jpg" alt="ドライ・ミドル・ウェット・モノトーン各ボードのEV振れ幅比較バーチャート" /><figcaption>ドライ・ミドル・ウェット・モノトーン各ボードのEV振れ幅比較バーチャート</figcaption></figure>
 
 「ボードカバレッジ」という概念を理解すると、フロップのEV分岐がさらに明確になります。
 

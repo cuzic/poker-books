@@ -22,10 +22,6 @@ MDF（Minimum Defense Frequency）の計算式を暗記する必要はありま�
 
 ---
 
-<figure><img src="images/f12-fig1-size-required-equity-bars.jpg" alt="1/4〜1ポットの各ベットサイズに対するディフェンダーの必要勝率（20%〜50%）棒グラフ" /><figcaption>1/4〜1ポットの各ベットサイズに対するディフェンダーの必要勝率（20%〜50%）棒グラフ</figcaption></figure>
-
-<figure><img src="images/f12-fig2-mdf-table.jpg" alt="フロップのベットサイズ別MDF（最低防御頻度）早見テーブル" /><figcaption>フロップのベットサイズ別MDF（最低防御頻度）早見テーブル</figcaption></figure>
-
 ## 13-1　CBet に対する3つの基本的な応答
 
 フロップで相手がCBetを打ってきたとき、あなたの選択肢は3つです。
@@ -50,6 +46,8 @@ MDF（Minimum Defense Frequency）の計算式を暗記する必要はありま�
 ---
 
 ## 13-2　ポットオッズの復習（フロップ版）
+
+<figure><img src="images/f12-fig1-size-required-equity-bars.jpg" alt="1/4〜1ポットの各ベットサイズに対するディフェンダーの必要勝率（20%〜50%）棒グラフ" /><figcaption>1/4〜1ポットの各ベットサイズに対するディフェンダーの必要勝率（20%〜50%）棒グラフ</figcaption></figure>
 
 ポットオッズとは「このコールにかかるコストと、見返りのバランス」を示す指標です。
 計算式は次の通りです。
@@ -90,6 +88,8 @@ MDF（Minimum Defense Frequency）の計算式を暗記する必要はありま�
 ---
 
 ## 13-3　防衛感覚：ベットサイズ別の「コールする割合」
+
+<figure><img src="images/f12-fig2-mdf-table.jpg" alt="フロップのベットサイズ別MDF（最低防御頻度）早見テーブル" /><figcaption>フロップのベットサイズ別MDF（最低防御頻度）早見テーブル</figcaption></figure>
 
 ポットオッズは「このハンドをコールすべきか」という**個別の判断**に使います。
 一方、「自分がどのくらいの頻度でコールしているか」という大局的な視点も必要です。

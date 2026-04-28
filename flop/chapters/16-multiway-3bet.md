@@ -11,10 +11,6 @@
 
 ---
 
-<figure><img src="images/f18-fig1-multiway-cbet-frequency.jpg" alt="2-way 65% / 3-way 42% / 4-way 28%のCBet頻度低下を示す棒グラフ" /><figcaption>2-way 65% / 3-way 42% / 4-way 28%のCBet頻度低下を示す棒グラフ</figcaption></figure>
-
-<figure><img src="images/f18-fig2-multiway-range-contraction.jpg" alt="2-way〜5-way以上のプレイヤー数別推奨HandScoreしきい値テーブル" /><figcaption>2-way〜5-way以上のプレイヤー数別推奨HandScoreしきい値テーブル</figcaption></figure>
-
 ## 16-1 マルチウェイで起きる4つの変化
 
 プレイヤーが増えると、フロップ戦略は以下の4点で変わります。
@@ -27,6 +23,8 @@
 ---
 
 ## 16-2 CBet 頻度の激減
+
+<figure><img src="images/f18-fig1-multiway-cbet-frequency.jpg" alt="2-way 65% / 3-way 42% / 4-way 28%のCBet頻度低下を示す棒グラフ" /><figcaption>2-way 65% / 3-way 42% / 4-way 28%のCBet頻度低下を示す棒グラフ</figcaption></figure>
 
 GTO Wizardのマルチウェイ解析によれば、CBetの頻度はヘッズアップ比で劇的に下がります。
 
@@ -61,6 +59,8 @@ AKの **65% → 40% は 25 ポイント**の急落です。マルチウェイで
 ---
 
 ## 16-4 ナッツの必要性が上がる
+
+<figure><img src="images/f18-fig2-multiway-range-contraction.jpg" alt="2-way〜5-way以上のプレイヤー数別推奨HandScoreしきい値テーブル" /><figcaption>2-way〜5-way以上のプレイヤー数別推奨HandScoreしきい値テーブル</figcaption></figure>
 
 GTO WizardのPhil Galfondによる分析では、4-way K♣T♥6♠ フロップでAAを持っていた場合、**誰かがトップペア以上の確率は約 69%** に達します。つまりAAであっても、すでに**40% 程度は負けている可能性**があるということです。
 
