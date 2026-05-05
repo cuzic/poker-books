@@ -24,7 +24,7 @@ flopDefense.roleReason: 役の根拠 + ポジション差説明
 **フォーマット**: HandScore + back_score ベース
 ```
 formula.title: "HandScore + ナッツアドバンテージ → 防御アクション"
-formula.steps: [役スコア, ドロー加点, HandScore, A 係数, 基準値, C補正, M補正, 後手スコア合計, ナッツアドバンテージ, 判断]
+formula.steps: [役スコア, ドロー加点, HandScore, A 係数, 基準値, C 補正, M 補正, 後手スコア合計, ナッツアドバンテージ, 判断]
 flopDefense.role: なし
 formula は計算的、SDV は概念的
 ```

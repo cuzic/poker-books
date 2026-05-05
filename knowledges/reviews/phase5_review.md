@@ -151,10 +151,10 @@ CBetスコア=18。ハイカード×レイザー→R3=+2。18+2=20。T1=20: T-2=
 
 ## D. BB audit との整合
 
-### D1. flop 第21章（現・動的レンジ推定章）行56：BB値欠落
+### D1. flop 第21章（現・動的レンジ推定章）行56：BB 値欠落
 
 - 判定: 要修正（未解消）
-- 根拠: flop/chapters/21-dynamic-range.md 行56を確認した結果、現在も「UTG: 20 / MP: 17 / CO: 14 / BTN: 10 / SB: 13」のままでBB値が欠落している。同章行88では「BB の平均 HandScore ≈ 18 × 1.5 = 27」という計算が出現しており、矛盾が残存している。この問題はbb_position_audit.mdが「高優先度（修正推奨）」と評価した件であり、第27章や付録での解消は計画書（行289）で予定されていたが、第27章は新規コンテンツであり既存のflop/21章の行56は未修正のまま。
+- 根拠: flop/chapters/21-dynamic-range.md 行56を確認した結果、現在も「UTG: 20 / MP: 17 / CO: 14 / BTN: 10 / SB: 13」のままでBB 値が欠落している。同章行88では「BB の平均 HandScore ≈ 18 × 1.5 = 27」という計算が出現しており、矛盾が残存している。この問題はbb_position_audit.mdが「高優先度（修正推奨）」と評価した件であり、第27章や付録での解消は計画書（行289）で予定されていたが、第27章は新規コンテンツであり既存のflop/21章の行56は未修正のまま。
 - 推奨: flop/chapters/21-dynamic-range.md 行56に「/ BB: 18」を追記し、脚注でBBディフェンスレンジの特性を説明する。
 
 ### D2. flop 第3章 行306：BB/SB不足
@@ -212,7 +212,7 @@ CBetスコア=18。ハイカード×レイザー→R3=+2。18+2=20。T1=20: T-2=
 **P2（中程度・要修正）: BB audit 未解消2件**
 
 - flop/chapters/21-dynamic-range.md 行56 に「/ BB: 18」を追記する。
-- flop/chapters/03-preflop-range-carryover.md 行306 に脚注またはBB値を追加する。
+- flop/chapters/03-preflop-range-carryover.md 行306 に脚注またはBB 値を追加する。
 
 **P3（中程度・要修正）: preflop第12章 対SB脚注の欠落**
 

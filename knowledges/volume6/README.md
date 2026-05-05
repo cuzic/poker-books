@@ -8,7 +8,7 @@
 | :--- | :--- | :--- |
 | [01_icm_theory.md](01_icm_theory.md) | ICM 理論と Malmuth-Harville アルゴリズム | 第3章「ICM の直感的理解」、付録C |
 | [02_icm_tables.md](02_icm_tables.md) | ICM equity 早見表（HU〜10-handed バブルまで） | 第4章「ICM equity」、付録B |
-| [03_push_fold_nash.md](03_push_fold_nash.md) | Push/Fold Nash チャート（M値別、ICM 補正含む） | 第9〜10章、付録A |
+| [03_push_fold_nash.md](03_push_fold_nash.md) | Push/Fold Nash チャート（M 値別、ICM 補正含む） | 第9〜10章、付録A |
 | [04_bubble_factor.md](04_bubble_factor.md) | Bubble factor 数値例（ステージ別マトリクス） | 第5章「ICM 補正」、第13章「バブル」 |
 | [05_icm_premium.md](05_icm_premium.md) | ICM 補正 ステージ別一覧 | 第5章、第7〜10章「スタック深度別」 |
 
@@ -46,6 +46,6 @@ Push/Fold Nash チャートの数値は標準的な poker 文献からの代表�
 
 ## 未着手項目
 
-- 各ポジション × M値 × ICM プレミアム の包括的 push/call 範囲表
+- 各ポジション × M 値 × ICM プレミアム の包括的 push/call 範囲表
 - バウンティトーナメント特有の補正
 - サテライトの「定額勝利」構造での ICM 修正
