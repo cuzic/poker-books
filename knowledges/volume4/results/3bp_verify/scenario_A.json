@@ -1,0 +1,95 @@
+{
+  "status": "ok",
+  "scenario": "K72r_3BP_flop_OOP",
+  "board": "Kc,7d,2s",
+  "pot_bb": 19,
+  "stack_bb": 91,
+  "exploitability_pct": 0.623,
+  "elapsed_sec": 69.4,
+  "analysis": {
+    "bet33_key": "BET 6.000000",
+    "oop_response_actions": [
+      "CALL",
+      "RAISE 91.000000",
+      "FOLD"
+    ],
+    "avg_call_pct": 77.0,
+    "avg_fold_pct": 4.7,
+    "avg_raise_pct": 18.3,
+    "combo_analysis": {
+      "AA": {
+        "combos": [
+          "AhAd",
+          "AhAc",
+          "AdAc"
+        ],
+        "n": 3,
+        "call_pct": 53.7,
+        "fold_pct": 0.0,
+        "raise_pct": 46.3
+      },
+      "KK": {
+        "combos": [
+          "KhKd"
+        ],
+        "n": 1,
+        "call_pct": 69.3,
+        "fold_pct": 0.0,
+        "raise_pct": 30.7
+      },
+      "QQ": {
+        "combos": [
+          "QhQd",
+          "QhQc",
+          "QdQc"
+        ],
+        "n": 3,
+        "call_pct": 97.5,
+        "fold_pct": 2.1,
+        "raise_pct": 0.4
+      },
+      "AKs": {
+        "combos": [
+          "AhKh",
+          "AdKd"
+        ],
+        "n": 2,
+        "call_pct": 66.1,
+        "fold_pct": 0.0,
+        "raise_pct": 33.9
+      },
+      "AKo": {
+        "combos": [
+          "AhKd",
+          "AdKh"
+        ],
+        "n": 2,
+        "call_pct": 63.9,
+        "fold_pct": 0.0,
+        "raise_pct": 36.1
+      },
+      "A5s": {
+        "combos": [
+          "Ah5h",
+          "Ad5d",
+          "Ac5c"
+        ],
+        "n": 3,
+        "call_pct": 85.9,
+        "fold_pct": 7.9,
+        "raise_pct": 6.2
+      },
+      "A4s": {
+        "combos": [
+          "Ah4h",
+          "Ad4d",
+          "Ac4c"
+        ],
+        "n": 3,
+        "call_pct": 87.0,
+        "fold_pct": 7.4,
+        "raise_pct": 5.5
+      }
+    }
+  }
+}

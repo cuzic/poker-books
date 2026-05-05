@@ -1,0 +1,22 @@
+{
+  "status": "ok",
+  "scenario": "K72r3h_turn_CBet_SPR2.7",
+  "board": "Kc,7d,2s,3h",
+  "pot_bb": 31,
+  "stack_bb": 85,
+  "spr": 2.74,
+  "exploitability_pct": 0.313,
+  "elapsed_sec": 25.7,
+  "analysis": {
+    "ip_actions": [
+      "CHECK",
+      "BET 10.000000",
+      "BET 16.000000",
+      "BET 23.000000",
+      "BET 85.000000"
+    ],
+    "n_combos": 53,
+    "cbet_pct": 94.5,
+    "check_pct": 5.5
+  }
+}

@@ -1,5 +1,38 @@
 {
   "scenario_id": "blocker_105_reverse_block_2",
-  "error": "solver rc=-6",
-  "elapsed_sec": 12.0
+  "board": [
+    "As",
+    "8d",
+    "3c",
+    "6h",
+    "2s"
+  ],
+  "pot_bb": 18,
+  "effective_stack_bb": 82,
+  "street": 2,
+  "hero_position": "BTN",
+  "hero_is_ip": true,
+  "bet_size": 0.33,
+  "summary": {
+    "ip_first": {
+      "error": "gto_query.py 失敗: # モデル: best.pt  architecture=[256, 256, 128]  params=148,997\nエラー: 有効なコンボが見つかりません\n"
+    },
+    "oop_facing_bet": {
+      "fold_freq": 0.1139,
+      "check_call_freq": 0.3699,
+      "bet_freq_total": 0.5163,
+      "bet_freq_by_class": {
+        "value": 0.739,
+        "mid": 0.4911,
+        "bluff": 0.4924
+      },
+      "bet_small_total": 0.023283850931677015,
+      "bet_large_total": 0.468310766045548,
+      "allin_total": 0.024687991718426516,
+      "combos_value": 48,
+      "combos_bluff": 196,
+      "combos_mid": 239,
+      "combos_total": 483
+    }
+  }
 }

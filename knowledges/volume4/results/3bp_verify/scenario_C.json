@@ -1,0 +1,26 @@
+{
+  "hu_3bet": {
+    "size_bb": 9.0,
+    "dead_money_bb": 2.5,
+    "fold_raiser": 0.6,
+    "ev_fold": 1.5,
+    "ev_call": -6.7,
+    "net_ev": -5.2
+  },
+  "squeeze": {
+    "dead_money": 5.0,
+    "pot_before": 5.0,
+    "squeeze_size": 10.0,
+    "fold_prob_raiser": 0.55,
+    "fold_prob_caller": 0.7,
+    "both_fold_prob": 0.385,
+    "ev_both_fold": 1.925,
+    "ev_raiser_calls": 0.787,
+    "ev_caller_calls": 0.413,
+    "ev_3way": -0.675,
+    "net_ev": 2.45
+  },
+  "dead_money_bonus_bb": 1.375,
+  "threshold_reduction_approx": 1.38,
+  "note": "コーラー1人のデッドマネー 2.5bb により、fold率 55% × 2.5bb = 1.38bb の EV 上乗せ。HandScore 1pt ≈ 1bb EV の近似より、閾値は約 1.4 下がる。"
+}

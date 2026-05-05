@@ -7,14 +7,27 @@
   ],
   "pot_bb": 15,
   "effective_stack_bb": 85,
-  "elapsed_sec": 78.6,
+  "street": 0,
+  "hero_position": "BB",
+  "hero_is_ip": false,
+  "bet_size": 0.33,
   "summary": {
-    "ip_river_first_action_freq": {
-      "CHECK": 1.0
-    },
-    "oop_response_to_bet": {},
-    "oop_after_ip_check": {
-      "CHECK": 1.0
+    "ip_first": {
+      "fold_freq": 0.2099,
+      "check_call_freq": 0.6442,
+      "bet_freq_total": 0.1458,
+      "bet_freq_by_class": {
+        "value": 0.1385,
+        "mid": 0.1441,
+        "bluff": 0.1519
+      },
+      "bet_small_total": 0.026269962686567193,
+      "bet_large_total": 0.09837462686567175,
+      "allin_total": 0.02119757462686564,
+      "combos_value": 66,
+      "combos_bluff": 168,
+      "combos_mid": 302,
+      "combos_total": 536
     }
   }
 }

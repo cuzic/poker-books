@@ -1,0 +1,746 @@
+{
+  "BDFD_4_K72r": [
+    {
+      "combo": "5c4c",
+      "hs": 4,
+      "desc": "54s BDFD clubs (Kc)",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 1,
+          "predict": "call",
+          "call": 0.8,
+          "raise": 0.199,
+          "fold": 0.001,
+          "actual": "call",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 0,
+          "predict": "call",
+          "call": 0.0,
+          "raise": 0.142,
+          "fold": 0.858,
+          "actual": "fold",
+          "match": false,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": -2,
+          "predict": "fold",
+          "call": 0.0,
+          "raise": 0.0,
+          "fold": 1.0,
+          "actual": "fold",
+          "match": true,
+          "mdf_exception": false
+        }
+      ]
+    },
+    {
+      "combo": "5d4d",
+      "hs": 4,
+      "desc": "54s BDFD diamonds (7d)",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 1,
+          "predict": "call",
+          "call": 0.839,
+          "raise": 0.16,
+          "fold": 0.001,
+          "actual": "call",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 0,
+          "predict": "call",
+          "call": 0.0,
+          "raise": 0.006,
+          "fold": 0.994,
+          "actual": "fold",
+          "match": false,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": -2,
+          "predict": "fold",
+          "call": 0.0,
+          "raise": 0.0,
+          "fold": 1.0,
+          "actual": "fold",
+          "match": true,
+          "mdf_exception": false
+        }
+      ]
+    },
+    {
+      "combo": "5s4s",
+      "hs": 4,
+      "desc": "54s BDFD spades (2s)",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 1,
+          "predict": "call",
+          "call": 0.859,
+          "raise": 0.14,
+          "fold": 0.001,
+          "actual": "call",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 0,
+          "predict": "call",
+          "call": 0.0,
+          "raise": 0.002,
+          "fold": 0.998,
+          "actual": "fold",
+          "match": false,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": -2,
+          "predict": "fold",
+          "call": 0.0,
+          "raise": 0.0,
+          "fold": 1.0,
+          "actual": "fold",
+          "match": true,
+          "mdf_exception": false
+        }
+      ]
+    },
+    {
+      "combo": "6d5d",
+      "hs": 4,
+      "desc": "65s BDFD diamonds",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 1,
+          "predict": "call",
+          "call": 0.897,
+          "raise": 0.102,
+          "fold": 0.001,
+          "actual": "call",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 0,
+          "predict": "call",
+          "call": 0.0,
+          "raise": 0.002,
+          "fold": 0.997,
+          "actual": "fold",
+          "match": false,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": -2,
+          "predict": "fold",
+          "call": 0.0,
+          "raise": 0.0,
+          "fold": 1.0,
+          "actual": "fold",
+          "match": true,
+          "mdf_exception": false
+        }
+      ]
+    },
+    {
+      "combo": "6c4c",
+      "hs": 4,
+      "desc": "64o BDFD clubs",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 1,
+          "predict": "call",
+          "call": 0.924,
+          "raise": 0.071,
+          "fold": 0.006,
+          "actual": "call",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 0,
+          "predict": "call",
+          "call": 0.0,
+          "raise": 0.0,
+          "fold": 1.0,
+          "actual": "fold",
+          "match": false,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": -2,
+          "predict": "fold",
+          "call": 0.0,
+          "raise": 0.0,
+          "fold": 1.0,
+          "actual": "fold",
+          "match": true,
+          "mdf_exception": false
+        }
+      ]
+    }
+  ],
+  "OESD_14_T98r": [
+    {
+      "combo": "Js7s",
+      "hs": 14,
+      "desc": "J7o OESD (J-T-9-8-7)",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 9,
+          "predict": "raise",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 8,
+          "predict": "raise",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": 6,
+          "predict": "call",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": false,
+          "mdf_exception": false
+        }
+      ]
+    },
+    {
+      "combo": "7s6d",
+      "hs": 14,
+      "desc": "76o OESD (6-7-8-9-T)",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 9,
+          "predict": "raise",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 8,
+          "predict": "raise",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": 6,
+          "predict": "call",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": false,
+          "mdf_exception": false
+        }
+      ]
+    },
+    {
+      "combo": "7d6s",
+      "hs": 14,
+      "desc": "76o OESD",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 9,
+          "predict": "raise",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 8,
+          "predict": "raise",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": 6,
+          "predict": "call",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": false,
+          "mdf_exception": false
+        }
+      ]
+    },
+    {
+      "combo": "7s6s",
+      "hs": 14,
+      "desc": "76s OESD (0 same-suit on board)",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 9,
+          "predict": "raise",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 8,
+          "predict": "raise",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": 6,
+          "predict": "call",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": false,
+          "mdf_exception": false
+        }
+      ]
+    }
+  ],
+  "BDFD_ref_T98r": [
+    {
+      "combo": "5d4d",
+      "hs": 4,
+      "desc": "54s BDFD diamonds (9d)",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": -1,
+          "predict": "fold",
+          "call": 0.332,
+          "raise": 0.0,
+          "fold": 0.668,
+          "actual": "fold",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": -2,
+          "predict": "fold",
+          "call": 0.0,
+          "raise": 0.0,
+          "fold": 1.0,
+          "actual": "fold",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": -4,
+          "predict": "fold",
+          "call": 0.0,
+          "raise": 0.0,
+          "fold": 1.0,
+          "actual": "fold",
+          "match": true,
+          "mdf_exception": false
+        }
+      ]
+    },
+    {
+      "combo": "5h4h",
+      "hs": 4,
+      "desc": "54s BDFD hearts (Th)",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": -1,
+          "predict": "fold",
+          "call": 0.33,
+          "raise": 0.0,
+          "fold": 0.67,
+          "actual": "fold",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": -2,
+          "predict": "fold",
+          "call": 0.0,
+          "raise": 0.0,
+          "fold": 1.0,
+          "actual": "fold",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": -4,
+          "predict": "fold",
+          "call": 0.0,
+          "raise": 0.0,
+          "fold": 1.0,
+          "actual": "fold",
+          "match": true,
+          "mdf_exception": false
+        }
+      ]
+    }
+  ],
+  "FD_13_Q83ss": [
+    {
+      "combo": "As2s",
+      "hs": 13,
+      "desc": "A2s FD-only (nut FD, no pair)",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 9,
+          "predict": "raise",
+          "call": 0.001,
+          "raise": 0.999,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 8,
+          "predict": "raise",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": 6,
+          "predict": "call",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": false,
+          "mdf_exception": false
+        }
+      ]
+    },
+    {
+      "combo": "As4s",
+      "hs": 13,
+      "desc": "A4s FD-only (nut FD)",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 9,
+          "predict": "raise",
+          "call": 0.001,
+          "raise": 0.999,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 8,
+          "predict": "raise",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": 6,
+          "predict": "call",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": false,
+          "mdf_exception": false
+        }
+      ]
+    },
+    {
+      "combo": "Ks4s",
+      "hs": 13,
+      "desc": "K4s FD-only",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 9,
+          "predict": "raise",
+          "call": 0.226,
+          "raise": 0.774,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 8,
+          "predict": "raise",
+          "call": 0.103,
+          "raise": 0.897,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": 6,
+          "predict": "call",
+          "call": 0.023,
+          "raise": 0.977,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": false,
+          "mdf_exception": false
+        }
+      ]
+    },
+    {
+      "combo": "Ks2s",
+      "hs": 13,
+      "desc": "K2s FD-only",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 9,
+          "predict": "raise",
+          "call": 0.267,
+          "raise": 0.733,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 8,
+          "predict": "raise",
+          "call": 0.024,
+          "raise": 0.976,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": 6,
+          "predict": "call",
+          "call": 0.0,
+          "raise": 1.0,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": false,
+          "mdf_exception": false
+        }
+      ]
+    },
+    {
+      "combo": "Ts5s",
+      "hs": 13,
+      "desc": "T5s FD-only (low FD)",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 9,
+          "predict": "raise",
+          "call": 0.303,
+          "raise": 0.697,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 8,
+          "predict": "raise",
+          "call": 0.169,
+          "raise": 0.831,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": 6,
+          "predict": "call",
+          "call": 0.875,
+          "raise": 0.125,
+          "fold": 0.0,
+          "actual": "call",
+          "match": true,
+          "mdf_exception": false
+        }
+      ]
+    },
+    {
+      "combo": "Js6s",
+      "hs": 13,
+      "desc": "J6s FD-only",
+      "by_bet": [
+        {
+          "bet_bb": 2.0,
+          "c": 3,
+          "ds": 9,
+          "predict": "raise",
+          "call": 0.462,
+          "raise": 0.538,
+          "fold": 0.0,
+          "actual": "raise",
+          "match": true,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 4.0,
+          "c": 4,
+          "ds": 8,
+          "predict": "raise",
+          "call": 0.612,
+          "raise": 0.388,
+          "fold": 0.0,
+          "actual": "call",
+          "match": false,
+          "mdf_exception": false
+        },
+        {
+          "bet_bb": 5.0,
+          "c": 6,
+          "ds": 6,
+          "predict": "call",
+          "call": 0.966,
+          "raise": 0.034,
+          "fold": 0.0,
+          "actual": "call",
+          "match": true,
+          "mdf_exception": false
+        }
+      ]
+    }
+  ],
+  "conclusions": {
+    "BDFD_4": "confirmed: CALL vs 33% (DS=1), FOLD vs 75% (DS=-2)",
+    "OESD_14": "confirmed: RAISE 100% vs 33%/50% (DS=9/8); CALL expected vs 75% (DS=6)",
+    "FD_13": "confirmed: RAISE dominant vs 33%/50% (DS=9/8); CALL vs 75% (DS=6) for non-nut FDs; nut FDs (As2s etc.) may raise even vs 75%"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "summary": {
+    "100pct_mean_mdf": 0.495,
+    "150pct_mean_mdf": 0.269,
+    "100pct_theory_mdf": 0.5,
+    "150pct_theory_mdf": 0.4,
+    "100pct_dry_mean": 0.495,
+    "150pct_dry_mean": 0.256
+  },
+  "verdict": {
+    "C9_100pct": "良好: dry/semi で MDF ≈ 0.49 (theory 0.50, 誤差 1%)",
+    "C11_150pct": "保守的設定: 実測 MDF ≈ 0.27 (dry) / 0.25-0.34 (通常ボード), 理論 0.40 より約 13pp 低い。C=11 は守りすぎだが EV ロスは軽微。HS 分布依存で単純変換困難なため維持推奨。"
+  },
+  "raw": {
+    "100": [
+      [
+        "Adry",
+        0.4899
+      ],
+      [
+        "Kdry",
+        0.4992
+      ],
+      [
+        "BoardTrips",
+        0.502
+      ],
+      [
+        "TwoPair",
+        0.4982
+      ],
+      [
+        "FlushDone",
+        0.4751
+      ],
+      [
+        "FullHouseable",
+        0.4735
+      ],
+      [
+        "FourStraight",
+        0.4715
+      ],
+      [
+        "LowStraight",
+        0.8065
+      ],
+      [
+        "StraightDone",
+        0.3873
+      ],
+      [
+        "Monotone",
+        0.3472
+      ]
+    ],
+    "150": [
+      [
+        "Adry",
+        0.2469
+      ],
+      [
+        "Kdry",
+        0.2659
+      ],
+      [
+        "BoardTrips",
+        0.3406
+      ],
+      [
+        "TwoPair",
+        0.3014
+      ],
+      [
+        "FlushDone",
+        0.2431
+      ],
+      [
+        "FullHouseable",
+        0.2423
+      ],
+      [
+        "FourStraight",
+        0.2489
+      ],
+      [
+        "LowStraight",
+        0.476
+      ],
+      [
+        "StraightDone",
+        0.151
+      ],
+      [
+        "Monotone",
+        0.1784
+      ]
+    ]
+  }
+}

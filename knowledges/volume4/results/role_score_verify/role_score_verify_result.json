@@ -1,0 +1,146 @@
+{
+  "summary": {
+    "board": "K72r",
+    "date": "2026-05-01",
+    "total_cases": 8,
+    "cases_with_data": 8,
+    "matches": 7
+  },
+  "correct_role_scores": {
+    "set_plus": 30,
+    "two_pair": 18,
+    "overpair": 20,
+    "tptk": 18,
+    "tpgk": 15,
+    "tpmk": 8,
+    "tpwk": 6,
+    "second_pair_strong": 9,
+    "second_pair_weak": 3,
+    "underpair": 6,
+    "bottom_pair": 4,
+    "air": 0
+  },
+  "old_values_corrected": {
+    "two_pair": 22,
+    "tpmk": 12,
+    "tpwk": 10,
+    "second_pair_strong": 8,
+    "second_pair_weak": null
+  },
+  "gto_cases": [
+    {
+      "hand": "K7o",
+      "role": "two_pair",
+      "hs": 18,
+      "ds": 15,
+      "predict": "RAISE",
+      "fold_pct": 0.0,
+      "call_pct": 0.0,
+      "raise_pct": 100.0,
+      "n": 2,
+      "gto_action": "RAISE",
+      "match": "✓"
+    },
+    {
+      "hand": "KQo",
+      "role": "tpgk",
+      "hs": 15,
+      "ds": 12,
+      "predict": "RAISE",
+      "fold_pct": 0.0,
+      "call_pct": 63.6,
+      "raise_pct": 36.4,
+      "n": 12,
+      "gto_action": "CALL",
+      "match": "✗"
+    },
+    {
+      "hand": "KJo",
+      "role": "tpmk",
+      "hs": 8,
+      "ds": 5,
+      "predict": "CALL",
+      "fold_pct": 0.0,
+      "call_pct": 90.6,
+      "raise_pct": 9.4,
+      "n": 12,
+      "gto_action": "CALL",
+      "match": "✓"
+    },
+    {
+      "hand": "KTo",
+      "role": "tpmk",
+      "hs": 8,
+      "ds": 5,
+      "predict": "CALL",
+      "fold_pct": 0.0,
+      "call_pct": 98.9,
+      "raise_pct": 1.1,
+      "n": 12,
+      "gto_action": "CALL",
+      "match": "✓"
+    },
+    {
+      "hand": "K9o",
+      "role": "tpmk",
+      "hs": 8,
+      "ds": 5,
+      "predict": "CALL",
+      "fold_pct": 0.0,
+      "call_pct": 100.0,
+      "raise_pct": 0.0,
+      "n": 3,
+      "gto_action": "CALL",
+      "match": "✓"
+    },
+    {
+      "hand": "K5o",
+      "role": "tpwk",
+      "hs": 6,
+      "ds": 3,
+      "predict": "CALL",
+      "fold_pct": 0.0,
+      "call_pct": 100.0,
+      "raise_pct": 0.0,
+      "n": 3,
+      "gto_action": "CALL",
+      "match": "✓"
+    },
+    {
+      "hand": "A7o",
+      "role": "second_pair_strong",
+      "hs": 9,
+      "ds": 6,
+      "predict": "CALL",
+      "fold_pct": 0.0,
+      "call_pct": 100.0,
+      "raise_pct": 0.0,
+      "n": 12,
+      "gto_action": "CALL",
+      "match": "✓"
+    },
+    {
+      "hand": "A2o",
+      "role": "bottom_pair",
+      "hs": 4,
+      "ds": 1,
+      "predict": "CALL",
+      "fold_pct": 0.0,
+      "call_pct": 100.0,
+      "raise_pct": 0.0,
+      "n": 12,
+      "gto_action": "CALL",
+      "match": "✓"
+    }
+  ],
+  "key_finding": "TPMK=8はGTO確定: KT/K9がK72r 33%CBetに99-100%CALL。TPMK=12(旧calc.py)ならDS=9→RAISEとなり矛盾。",
+  "calc_py_bugs_fixed": [
+    "two_pair: 22 → 18",
+    "tpmk: 12 → 8 (GTO confirmed)",
+    "tpwk: 10 → 6",
+    "second_pair_strong: 8 → 9",
+    "second_pair_weak: None → 3 (added)",
+    "AK on K-board: bottom_pair → tptk (l_on_board top_pair check)",
+    "kicker thresholds: tptk=kicker>top_board, tpgk=Q+(>=12), tpmk=8+(>=8)"
+  ]
+}

@@ -9,35 +9,44 @@
   ],
   "pot_bb": 25,
   "effective_stack_bb": 75,
-  "elapsed_sec": 12.3,
+  "street": 2,
+  "hero_position": "BTN",
+  "hero_is_ip": true,
+  "bet_size": 0.33,
   "summary": {
-    "ip_river_first_action_freq": {
-      "CHECK": 0.6228,
-      "BET 13.000000": 0.0016,
-      "BET 25.000000": 0.004,
-      "BET 75.000000": 0.3716
-    },
-    "oop_response_to_bet": {
-      "BET 13.000000": {
-        "CALL": 0.6851,
-        "RAISE 75.000000": 0.0774,
-        "FOLD": 0.2375
+    "ip_first": {
+      "fold_freq": 0.0324,
+      "check_call_freq": 0.4233,
+      "bet_freq_total": 0.5444,
+      "bet_freq_by_class": {
+        "value": 0.5444,
+        "mid": 0,
+        "bluff": 0
       },
-      "BET 25.000000": {
-        "CALL": 0.6072,
-        "RAISE 75.000000": 0.0108,
-        "FOLD": 0.382
-      },
-      "BET 75.000000": {
-        "CALL": 0.2579,
-        "FOLD": 0.7421
-      }
+      "bet_small_total": 0.020700000000000007,
+      "bet_large_total": 0.49893333333333334,
+      "allin_total": 0.024766666666666663,
+      "combos_value": 9,
+      "combos_bluff": 0,
+      "combos_mid": 0,
+      "combos_total": 9
     },
-    "oop_after_ip_check": {
-      "CHECK": 0.8623,
-      "BET 8.000000": 0.126,
-      "BET 19.000000": 0.0097,
-      "BET 75.000000": 0.002
+    "oop_facing_bet": {
+      "fold_freq": 0.2014,
+      "check_call_freq": 0.4377,
+      "bet_freq_total": 0.3609,
+      "bet_freq_by_class": {
+        "value": 0.3578,
+        "mid": 0.4066,
+        "bluff": 0.294
+      },
+      "bet_small_total": 0.021864285714285656,
+      "bet_large_total": 0.3173531746031734,
+      "allin_total": 0.02167976190476186,
+      "combos_value": 84,
+      "combos_bluff": 168,
+      "combos_mid": 252,
+      "combos_total": 504
     }
   }
 }

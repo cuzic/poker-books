@@ -1,0 +1,433 @@
+{
+  "summary": {
+    "total_cells": 16,
+    "correct_cells": 14,
+    "cell_match_rate": 87.5,
+    "total_scenarios": 198,
+    "correct_scenarios": 149,
+    "scenario_match_rate": 75.3
+  },
+  "cells": [
+    {
+      "fc": 8,
+      "ftype_name": "dry",
+      "tc": 4,
+      "tc_name": "pair",
+      "barrel": 12,
+      "n": 14,
+      "mean_cbet": 92.7,
+      "min_cbet": 76.4,
+      "max_cbet": 100.0,
+      "predict_aggressive": true,
+      "actual_aggressive": true,
+      "match": true,
+      "individual_matches": 14
+    },
+    {
+      "fc": 8,
+      "ftype_name": "dry",
+      "tc": 3,
+      "tc_name": "overcard",
+      "barrel": 11,
+      "n": 8,
+      "mean_cbet": 80.5,
+      "min_cbet": 61.3,
+      "max_cbet": 90.7,
+      "predict_aggressive": true,
+      "actual_aggressive": true,
+      "match": true,
+      "individual_matches": 7
+    },
+    {
+      "fc": 8,
+      "ftype_name": "dry",
+      "tc": 2,
+      "tc_name": "blank",
+      "barrel": 10,
+      "n": 41,
+      "mean_cbet": 74.1,
+      "min_cbet": 55.8,
+      "max_cbet": 92.1,
+      "predict_aggressive": true,
+      "actual_aggressive": true,
+      "match": true,
+      "individual_matches": 29
+    },
+    {
+      "fc": 6,
+      "ftype_name": "semi",
+      "tc": 4,
+      "tc_name": "pair",
+      "barrel": 10,
+      "n": 8,
+      "mean_cbet": 86.2,
+      "min_cbet": 78.0,
+      "max_cbet": 100.0,
+      "predict_aggressive": true,
+      "actual_aggressive": true,
+      "match": true,
+      "individual_matches": 8
+    },
+    {
+      "fc": 6,
+      "ftype_name": "semi",
+      "tc": 3,
+      "tc_name": "overcard",
+      "barrel": 9,
+      "n": 9,
+      "mean_cbet": 70.0,
+      "min_cbet": 53.1,
+      "max_cbet": 91.7,
+      "predict_aggressive": true,
+      "actual_aggressive": false,
+      "match": false,
+      "individual_matches": 5
+    },
+    {
+      "fc": 6,
+      "ftype_name": "semi",
+      "tc": 2,
+      "tc_name": "blank",
+      "barrel": 8,
+      "n": 11,
+      "mean_cbet": 67.0,
+      "min_cbet": 53.3,
+      "max_cbet": 78.9,
+      "predict_aggressive": true,
+      "actual_aggressive": false,
+      "match": false,
+      "individual_matches": 4
+    },
+    {
+      "fc": 6,
+      "ftype_name": "semi",
+      "tc": 0,
+      "tc_name": "connector",
+      "barrel": 6,
+      "n": 8,
+      "mean_cbet": 64.3,
+      "min_cbet": 49.8,
+      "max_cbet": 97.3,
+      "predict_aggressive": false,
+      "actual_aggressive": false,
+      "match": true,
+      "individual_matches": 6
+    },
+    {
+      "fc": 4,
+      "ftype_name": "suited",
+      "tc": 4,
+      "tc_name": "pair",
+      "barrel": 8,
+      "n": 16,
+      "mean_cbet": 88.0,
+      "min_cbet": 67.9,
+      "max_cbet": 99.9,
+      "predict_aggressive": true,
+      "actual_aggressive": true,
+      "match": true,
+      "individual_matches": 15
+    },
+    {
+      "fc": 4,
+      "ftype_name": "suited",
+      "tc": 3,
+      "tc_name": "overcard",
+      "barrel": 7,
+      "n": 14,
+      "mean_cbet": 74.9,
+      "min_cbet": 53.2,
+      "max_cbet": 97.5,
+      "predict_aggressive": true,
+      "actual_aggressive": true,
+      "match": true,
+      "individual_matches": 9
+    },
+    {
+      "fc": 4,
+      "ftype_name": "suited",
+      "tc": 2,
+      "tc_name": "blank",
+      "barrel": 6,
+      "n": 20,
+      "mean_cbet": 61.4,
+      "min_cbet": 42.0,
+      "max_cbet": 79.2,
+      "predict_aggressive": false,
+      "actual_aggressive": false,
+      "match": true,
+      "individual_matches": 13
+    },
+    {
+      "fc": 4,
+      "ftype_name": "suited",
+      "tc": 1,
+      "tc_name": "flush",
+      "barrel": 5,
+      "n": 8,
+      "mean_cbet": 65.6,
+      "min_cbet": 54.2,
+      "max_cbet": 92.2,
+      "predict_aggressive": false,
+      "actual_aggressive": false,
+      "match": true,
+      "individual_matches": 7
+    },
+    {
+      "fc": 4,
+      "ftype_name": "suited",
+      "tc": 0,
+      "tc_name": "connector",
+      "barrel": 4,
+      "n": 14,
+      "mean_cbet": 59.5,
+      "min_cbet": 41.1,
+      "max_cbet": 91.4,
+      "predict_aggressive": false,
+      "actual_aggressive": false,
+      "match": true,
+      "individual_matches": 12
+    },
+    {
+      "fc": 3,
+      "ftype_name": "connected",
+      "tc": 4,
+      "tc_name": "pair",
+      "barrel": 7,
+      "n": 6,
+      "mean_cbet": 84.4,
+      "min_cbet": 77.2,
+      "max_cbet": 94.4,
+      "predict_aggressive": true,
+      "actual_aggressive": true,
+      "match": true,
+      "individual_matches": 6
+    },
+    {
+      "fc": 3,
+      "ftype_name": "connected",
+      "tc": 3,
+      "tc_name": "overcard",
+      "barrel": 6,
+      "n": 8,
+      "mean_cbet": 65.6,
+      "min_cbet": 56.3,
+      "max_cbet": 80.5,
+      "predict_aggressive": false,
+      "actual_aggressive": false,
+      "match": true,
+      "individual_matches": 6
+    },
+    {
+      "fc": 3,
+      "ftype_name": "connected",
+      "tc": 2,
+      "tc_name": "blank",
+      "barrel": 5,
+      "n": 7,
+      "mean_cbet": 70.0,
+      "min_cbet": 64.3,
+      "max_cbet": 73.5,
+      "predict_aggressive": false,
+      "actual_aggressive": false,
+      "match": true,
+      "individual_matches": 3
+    },
+    {
+      "fc": 3,
+      "ftype_name": "connected",
+      "tc": 0,
+      "tc_name": "connector",
+      "barrel": 3,
+      "n": 6,
+      "mean_cbet": 66.3,
+      "min_cbet": 59.2,
+      "max_cbet": 81.9,
+      "predict_aggressive": false,
+      "actual_aggressive": false,
+      "match": true,
+      "individual_matches": 5
+    }
+  ],
+  "focus_cases": [
+    {
+      "ftype": "suited",
+      "fc": 4,
+      "turn_cat": "flush",
+      "tc": 1,
+      "barrel": 5,
+      "predict": "hand-dependent",
+      "scenarios": [
+        {
+          "id": "turn_cbet_102_987ss_6s",
+          "cbet": 64.6,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_AT7ss_Ks",
+          "cbet": 92.2,
+          "match": false
+        },
+        {
+          "id": "turn_cbet_102_J84ss_Ts",
+          "cbet": 68.0,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_JT8ss_9s",
+          "cbet": 59.8,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_JT9ss_8s",
+          "cbet": 56.7,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_KQTss_Js",
+          "cbet": 68.6,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_Q83ss_Js",
+          "cbet": 54.2,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_T98ss_7s",
+          "cbet": 60.7,
+          "match": true
+        }
+      ]
+    },
+    {
+      "ftype": "suited",
+      "fc": 4,
+      "turn_cat": "connector",
+      "tc": 0,
+      "barrel": 4,
+      "predict": "hand-dependent",
+      "scenarios": [
+        {
+          "id": "turn_cbet_102_987ss_5c",
+          "cbet": 67.6,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_987ss_6h",
+          "cbet": 62.4,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_AT7ss_Jc",
+          "cbet": 67.3,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_AT7ss_Kh",
+          "cbet": 91.4,
+          "match": false
+        },
+        {
+          "id": "turn_cbet_102_J84ss_5c",
+          "cbet": 64.0,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_J84ss_7h",
+          "cbet": 55.3,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_JT8ss_6c",
+          "cbet": 48.4,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_JT8ss_9h",
+          "cbet": 50.4,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_JT9ss_7c",
+          "cbet": 50.5,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_JT9ss_8h",
+          "cbet": 50.4,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_KQTss_8c",
+          "cbet": 70.3,
+          "match": false
+        },
+        {
+          "id": "turn_cbet_102_KQTss_Jh",
+          "cbet": 41.1,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_T98ss_6c",
+          "cbet": 60.1,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_T98ss_7h",
+          "cbet": 54.4,
+          "match": true
+        }
+      ]
+    },
+    {
+      "ftype": "connected",
+      "fc": 3,
+      "turn_cat": "flush",
+      "tc": 1,
+      "barrel": 4,
+      "predict": "hand-dependent",
+      "scenarios": []
+    },
+    {
+      "ftype": "connected",
+      "fc": 3,
+      "turn_cat": "connector",
+      "tc": 0,
+      "barrel": 3,
+      "predict": "hand-dependent",
+      "scenarios": [
+        {
+          "id": "turn_cbet_102_876r_4c",
+          "cbet": 66.9,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_876r_5s",
+          "cbet": 64.1,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_965r_3c",
+          "cbet": 64.1,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_965r_8s",
+          "cbet": 81.9,
+          "match": false
+        },
+        {
+          "id": "turn_cbet_102_T98r_6c",
+          "cbet": 59.2,
+          "match": true
+        },
+        {
+          "id": "turn_cbet_102_T98r_7s",
+          "cbet": 61.7,
+          "match": true
+        }
+      ]
+    }
+  ]
+}

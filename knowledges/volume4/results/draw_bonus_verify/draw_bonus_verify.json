@@ -1,0 +1,165 @@
+{
+  "K72r_BDFD": [
+    {
+      "combo": "5d4d",
+      "label": "低カード 5♦4♦ BDFD diamonds",
+      "expected_hs": 4,
+      "bet_pct": 100.0
+    },
+    {
+      "combo": "6d4d",
+      "label": "低カード 6♦4♦ BDFD diamonds",
+      "expected_hs": 4,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "5h4h",
+      "label": "低カード 5♥4♥ BDFD hearts",
+      "expected_hs": 4,
+      "bet_pct": 100.0
+    },
+    {
+      "combo": "6h4h",
+      "label": "低カード 6♥4♥ BDFD hearts",
+      "expected_hs": 4,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "5s4s",
+      "label": "低カード 5♠4♠ BDFD spades",
+      "expected_hs": 4,
+      "bet_pct": 100.0
+    },
+    {
+      "combo": "6s4s",
+      "label": "低カード 6♠4♠ BDFD spades",
+      "expected_hs": 4,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "Jd9d",
+      "label": "J♦9♦ OC+BDFD diamonds",
+      "expected_hs": 4,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "Jh9h",
+      "label": "J♥9♥ OC+BDFD hearts",
+      "expected_hs": 4,
+      "bet_pct": null,
+      "error": "not found"
+    }
+  ],
+  "T98r_OESD": [
+    {
+      "combo": "Js7d",
+      "label": "J♠7♦ OESD pure (J-T-9-8-7)",
+      "expected_hs": 14,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "Jd7s",
+      "label": "J♦7♠ OESD pure",
+      "expected_hs": 14,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "Js7s",
+      "label": "J♠7♠ OESD pure (0 board spades)",
+      "expected_hs": 14,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "Jc7s",
+      "label": "J♣7♠ OESD+BDFD clubs (skip)",
+      "expected_hs": 14,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "7s6d",
+      "label": "7♠6♦ OESD pure (6-7-8-9-T)",
+      "expected_hs": 14,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "7d6s",
+      "label": "7♦6♠ OESD pure",
+      "expected_hs": 14,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "7s6s",
+      "label": "7♠6♠ OESD pure",
+      "expected_hs": 14,
+      "bet_pct": 100.0
+    }
+  ],
+  "Q83ss_FD": [
+    {
+      "combo": "AsKs",
+      "label": "A♠K♠ FD only (no pair)",
+      "expected_hs": 13,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "AsJs",
+      "label": "A♠J♠ FD only (no pair)",
+      "expected_hs": 13,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "KsJs",
+      "label": "K♠J♠ FD only (no pair)",
+      "expected_hs": 13,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "KsTs",
+      "label": "K♠T♠ FD only (no pair)",
+      "expected_hs": 13,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "JsTs",
+      "label": "J♠T♠ FD only (no pair)",
+      "expected_hs": 13,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "Js9s",
+      "label": "J♠9♠ FD only (no pair)",
+      "expected_hs": 13,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "As2s",
+      "label": "A♠2♠ FD (A-high no pair)",
+      "expected_hs": 13,
+      "bet_pct": null,
+      "error": "not found"
+    },
+    {
+      "combo": "Ks2s",
+      "label": "K♠2♠ FD (K-high no pair)",
+      "expected_hs": 13,
+      "bet_pct": null,
+      "error": "not found"
+    }
+  ]
+}

@@ -1,5 +1,38 @@
 {
   "scenario_id": "blocker_105_missed_fd_3",
-  "error": "solver rc=-6",
-  "elapsed_sec": 10.7
+  "board": [
+    "Jc",
+    "9c",
+    "4h",
+    "2c",
+    "3h"
+  ],
+  "pot_bb": 18,
+  "effective_stack_bb": 82,
+  "street": 2,
+  "hero_position": "BTN",
+  "hero_is_ip": true,
+  "bet_size": 0.33,
+  "summary": {
+    "ip_first": {
+      "error": "gto_query.py 失敗: # モデル: best.pt  architecture=[256, 256, 128]  params=148,997\nエラー: 有効なコンボが見つかりません\n"
+    },
+    "oop_facing_bet": {
+      "fold_freq": 0.1053,
+      "check_call_freq": 0.4798,
+      "bet_freq_total": 0.4149,
+      "bet_freq_by_class": {
+        "value": 0.3754,
+        "mid": 0.381,
+        "bluff": 0.4851
+      },
+      "bet_small_total": 0.021160869565217424,
+      "bet_large_total": 0.3707361660079053,
+      "allin_total": 0.022966205533596868,
+      "combos_value": 63,
+      "combos_bluff": 168,
+      "combos_mid": 275,
+      "combos_total": 506
+    }
+  }
 }

@@ -1,5 +1,33 @@
 {
   "scenario_id": "hook_108_ahigh_check_1",
-  "error": "solver rc=-1",
-  "elapsed_sec": 180.5
+  "board": [
+    "Ac",
+    "7d",
+    "4s"
+  ],
+  "pot_bb": 7,
+  "effective_stack_bb": 92,
+  "street": 0,
+  "hero_position": "BTN",
+  "hero_is_ip": true,
+  "bet_size": 0.33,
+  "summary": {
+    "ip_first": {
+      "fold_freq": 0.1194,
+      "check_call_freq": 0.7551,
+      "bet_freq_total": 0.1255,
+      "bet_freq_by_class": {
+        "value": 0.1253,
+        "mid": 0.1171,
+        "bluff": 0.1313
+      },
+      "bet_small_total": 0.032999238095238144,
+      "bet_large_total": 0.07178933333333339,
+      "allin_total": 0.020675999999999996,
+      "combos_value": 57,
+      "combos_bluff": 276,
+      "combos_mid": 192,
+      "combos_total": 525
+    }
+  }
 }
