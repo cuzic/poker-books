@@ -127,4 +127,12 @@ knowledges/<book>/reviews/review_<scope>.md
 各巻の gist URL は書籍固有（`book.json` 内の `identifier` とは別）。公開済みの gist：
 
 - プリフロップ編: https://gistpreview.github.io/?a263151bbdee0ac9cbaa4a4e97483edb
-- フロップ編: （未公開）
+- フロップ編[基礎]: （未公開）
+- フロップ編[応用]: （未公開）
+- ターン・リバー[基礎]: （未公開）
+- ターン・リバー[応用]: （未公開）
+- トーナメント編: （未公開）
+- ダイジェスト版: （未公開）
+
+加えて GitHub Pages 経由で全巻を公開済み: <https://cuzic.github.io/poker-books/>
+（`.github/workflows/deploy.yml` で main push 時に自動デプロイ）
