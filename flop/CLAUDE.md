@@ -73,6 +73,8 @@ flop/
 ├── source.txt          # フロップ戦略の原案メモ
 ├── toc.md              # 詳細目次（執筆ガイド）
 ├── book.json           # 書誌
+├── kdp-metadata.txt    # KDP 公開用テキスト（自動生成）
+├── images.json         # AI 生成画像のプロンプト定義
 └── CLAUDE.md           # このファイル
 ```
 
