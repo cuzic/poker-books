@@ -6,7 +6,7 @@
   "identifier": "urn:uuid:e5f6a7b8-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
   "publisher": "川西智也",
   "description": "『迷わないポーカー』シリーズ第⑥巻、トーナメント編。キャッシュゲームと根本的に異なる「チップを賞金に換算する」発想を、暗算で扱える3つの式に圧縮。ICM equity（chip→$EV変換）、ICM 補正（リスクの数値化）、M値（ステージ判定）を中核に、序盤・中盤・バブル・ITM・ファイナルテーブルまでのスタック深度別／ステージ別戦略を体系化。サテライト・SNG・リエントリー・バウンティの応用シナリオも網羅。Push/FoldチャートとICM equity早見表を付録に収録。",
-  "cover": "src/chapters/images/cover.jpg",
+  "cover": "chapters/images/cover.jpg",
   "kdp": {
     "keywords": [
       "テキサスホールデム トーナメント",
