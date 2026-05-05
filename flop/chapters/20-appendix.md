@@ -186,7 +186,7 @@ Step 4: トップ A/K/Q × ウェット
 
 ### GTO 検証結果
 
-30ボードのGTO Wizardデータとの一致：。
+30ボードのGTO Wizardデータとの一致：
 
 - **R² = 0.873**
 - **MAE = 6.03%**
@@ -493,7 +493,7 @@ A: はい。マルチウェイではAQoの価値が激減します。プリフ�
 
 ### GTO Wizard データ
 
-本書の検証に使用した30ボードはGTO Wizardの公開データ（無料プランで閲覧可能）から抽出しています。主要な出典：。
+本書の検証に使用した30ボードはGTO Wizardの公開データ（無料プランで閲覧可能）から抽出しています。主要な出典：
 
 - GTO Wizard Blog: *Flop Heuristics: IP C-Betting in Cash Games*
   <https://blog.gtowizard.com/flop-heuristics-ip-c-betting-in-cash-games/>
@@ -524,7 +524,7 @@ cd poker-books/
 python3 scripts/range_score.py
 ```
 
-出力例：。
+出力例：
 
 ```text
 簡易レンジスコア    : R² = 0.873  MAE = 6.03  r = 0.938

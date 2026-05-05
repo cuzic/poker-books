@@ -244,7 +244,7 @@ GTO Wizard「Aggregate Flop Strategy: SB C-Betting in SRP」によれば、SB vs
 
 ### 具体例
 
-上の **例1（KQ on K72r）** をSB vs BBで考え直すと：。
+上の **例1（KQ on K72r）** をSB vs BBで考え直すと：
 
 ```
 簡易レンジスコア → 85% → OOP 補正 −10% = 75% → 高頻度（≥70%）
