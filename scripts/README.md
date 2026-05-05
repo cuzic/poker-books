@@ -44,7 +44,7 @@
 | `role_score_verify.py` | tpgk/tpmk 等の役スコア検証 |
 | `draw_bonus_verify.py` | OESD/FD/BDFD のドロー加点検証 |
 
-### 後手スコア / C係数 (巻② 第13章 + 巻④)
+### 後手スコア / C 係数 (巻② 第13章 + 巻④)
 
 | Script | 検証対象 |
 |--------|---------|
