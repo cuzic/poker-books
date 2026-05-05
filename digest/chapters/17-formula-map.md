@@ -62,7 +62,7 @@
 
 ```
 キャッシュゲーム → 各式をそのまま適用
-トーナメント    → 必要 equity = (1 + ICM補正) ÷ (2 + ICM補正)
+トーナメント    → 必要 equity = (1 + ICM 補正) ÷ (2 + ICM 補正)
                   M 値でステージを確認し、戦略モードを切り替え
 ```
 
@@ -137,7 +137,7 @@ M 値 = スタック ÷ (SB + BB + アンテ合計)
   Green≥20 / Yellow 10-20 / Orange 6-10 / Red≤5
 
 ICM 補正 = bubble factor − 1.0
-必要 equity = (1 + ICM補正) ÷ (2 + ICM補正)
+必要 equity = (1 + ICM 補正) ÷ (2 + ICM 補正)
 
   バブル直前 STT: 補正≈0.875 → 必要 equity ≈ 65.8%
   バブル直前 MTT: 補正≈0.40 → 必要 equity ≈ 58.3%

@@ -17,7 +17,7 @@
 | ターン・リバー防御 | 後手スコア | 後手スコア = HandScore + A − 3 − C − M | ≥8→CR検討 / 0〜7→コール / <0→フォールド |
 | ターン（攻撃） | バレルスコア | バレルスコア = FlopType係数 + TurnCard係数 | ≥7→積極バレル / <7→ハンド依存 |
 | リバー（配分） | α 式 | α = ベット ÷ (ポット + ベット) | α がMDFを規定 |
-| トーナメント | ICM 補正 | 必要 equity = (1 + ICM補正) ÷ (2 + ICM補正) | bubble factor − 1.0 = ICM補正 |
+| トーナメント | ICM 補正 | 必要 equity = (1 + ICM 補正) ÷ (2 + ICM 補正) | bubble factor − 1.0 = ICM 補正 |
 | トーナメント | M 値 | M 値 = スタック ÷ (SB + BB + アンテ合計) | ≥20→Green / 10-20→Yellow / 6-10→Orange / ≤5→Red |
 
 ---
