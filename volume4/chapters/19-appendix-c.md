@@ -1,4 +1,4 @@
-# 付録C　巻①-3 からの継承
+# 付録C　巻①-③ からの継承
 
 <!-- markdownlint-disable MD026 MD033 MD036 MD040 MD060 -->
 
