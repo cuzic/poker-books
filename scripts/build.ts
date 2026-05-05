@@ -207,6 +207,8 @@ async function embedImages(bookId: BookId, content: string): Promise<string> {
   const imgRegex = /src="images\/([^"]+)"/g;
   const matches = [...content.matchAll(imgRegex)];
   let result = content;
+  // Track filenames that need to be stripped (file missing on disk)
+  const missingFiles: string[] = [];
   for (const match of matches) {
     const [fullMatch, filename] = match;
     const imagePath = join(imagesDir, filename);
@@ -225,6 +227,23 @@ async function embedImages(bookId: BookId, content: string): Promise<string> {
         fullMatch,
         `src="data:${mimeType};base64,${base64}"`
       );
+    } else {
+      missingFiles.push(filename);
+    }
+  }
+  // For missing images, strip the entire <figure>...</figure> wrapping the <img>
+  // so EPUB / fetch doesn't try to resolve the relative URL. <figcaption> text
+  // is preserved as a paragraph so readers still see the description.
+  for (const filename of missingFiles) {
+    const figureRegex = new RegExp(
+      `<figure>\\s*<img[^>]*src="images/${filename.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\\\$&")}"[^>]*/>\\s*(?:<figcaption>([^<]*)</figcaption>)?\\s*</figure>`,
+      "g"
+    );
+    result = result.replace(figureRegex, (_full, caption) =>
+      caption ? `<p><em>[図: ${caption}]</em></p>` : ""
+    );
+    if (missingFiles.length > 0) {
+      console.warn(`[${bookId}] missing image stripped: images/${filename}`);
     }
   }
   return result;
