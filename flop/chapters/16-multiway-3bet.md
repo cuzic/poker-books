@@ -195,8 +195,6 @@ SRPではフロップ開始時のSPRが約17あり、まだ「序盤の入口」
 
 **33% CBetでも次のストリートはSPR≈2〜3**、つまりほぼコミット圏です。SRPで33% CBet後のSPRが約8であることと比べると、どれほど状況が違うかが分かります。
 
-<figure><img src="images/f16-fig3-3bet-vs-srp-spr-transition.jpg" alt="SRPと3ベットポットのSPR推移比較（フロップ〜ターン〜リバーまでの各ストリートSPR）" /><figcaption>SRPと3ベットポットのSPR推移比較。SRPでは33% CBet後もSPR≈8あるが、3ベットポットでは同サイズでもSPR≈2〜3まで落ちる</figcaption></figure>
-
 ### 本書式の3ベットポット補正
 
 SRPでの9マスマトリクス（第10章）を3ベットポット用に調整します。ポイントは**ブラフコストの急上昇**です。
@@ -215,8 +213,6 @@ SRPでH1をレンジベットできた理由:
   3ベットポット（SPR≈4.8）でのブラフ → 残りSPR≈2 → 相手がコールで事実上コミット
   → ブラフの「降ろせればOK」が成立しにくい
 ```
-
-<figure><img src="images/f16-fig4-3bet-handscore-action-table.jpg" alt="3ベットポット HandScore × アクション判断テーブル（H3/H2/H1 × CBet推奨/選択的/チェック）" /><figcaption>3ベットポット用 HandScore × アクション判断テーブル（3行2列）</figcaption></figure>
 
 ### 4つの判断パターン
 
