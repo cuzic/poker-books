@@ -202,12 +202,15 @@ async function buildXhtml(bookId: BookId): Promise<void> {
   console.log(`[${bookId}] xhtml built → ${outDir}`);
 }
 
+/**
+ * Replace `src="images/X.jpg"` with embedded base64 data URI.
+ * Used for HTML/XHTML output where images can be inlined.
+ */
 async function embedImages(bookId: BookId, content: string): Promise<string> {
   const imagesDir = join(ROOT, bookDir(bookId), "chapters", "images");
   const imgRegex = /src="images\/([^"]+)"/g;
   const matches = [...content.matchAll(imgRegex)];
   let result = content;
-  // Track filenames that need to be stripped (file missing on disk)
   const missingFiles: string[] = [];
   for (const match of matches) {
     const [fullMatch, filename] = match;
@@ -231,9 +234,48 @@ async function embedImages(bookId: BookId, content: string): Promise<string> {
       missingFiles.push(filename);
     }
   }
-  // For missing images, strip the entire <figure>...</figure> wrapping the <img>
-  // so EPUB / fetch doesn't try to resolve the relative URL. <figcaption> text
-  // is preserved as a paragraph so readers still see the description.
+  result = stripMissingImageFigures(bookId, result, missingFiles);
+  return result;
+}
+
+/**
+ * Replace `src="images/X.jpg"` with `src="file:///absolute/path/to/X.jpg"`.
+ * Used for EPUB output: epub-gen-memory's fetchable.js handles file:// URLs
+ * via fs.readFile, and mime.getType() infers proper extension/mediaType from
+ * the file path. Embedding base64 data URIs causes mime.getType() to return
+ * null and the resulting EPUB fails epubcheck (PKG-011, RSC-032).
+ */
+async function rewriteImagesToFileUrls(
+  bookId: BookId,
+  content: string
+): Promise<string> {
+  const imagesDir = join(ROOT, bookDir(bookId), "chapters", "images");
+  const imgRegex = /src="images\/([^"]+)"/g;
+  const matches = [...content.matchAll(imgRegex)];
+  let result = content;
+  const missingFiles: string[] = [];
+  for (const match of matches) {
+    const [fullMatch, filename] = match;
+    const imagePath = join(imagesDir, filename);
+    const imageFile = Bun.file(imagePath);
+    if (await imageFile.exists()) {
+      // file:// URL with proper file extension lets epub-gen-memory infer
+      // mediaType correctly via mime.getType().
+      result = result.replace(fullMatch, `src="file://${imagePath}"`);
+    } else {
+      missingFiles.push(filename);
+    }
+  }
+  result = stripMissingImageFigures(bookId, result, missingFiles);
+  return result;
+}
+
+function stripMissingImageFigures(
+  bookId: BookId,
+  content: string,
+  missingFiles: string[]
+): string {
+  let result = content;
   for (const filename of missingFiles) {
     const figureRegex = new RegExp(
       `<figure>\\s*<img[^>]*src="images/${filename.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\\\$&")}"[^>]*/>\\s*(?:<figcaption>([^<]*)</figcaption>)?\\s*</figure>`,
@@ -242,9 +284,7 @@ async function embedImages(bookId: BookId, content: string): Promise<string> {
     result = result.replace(figureRegex, (_full, caption) =>
       caption ? `<p><em>[図: ${caption}]</em></p>` : ""
     );
-    if (missingFiles.length > 0) {
-      console.warn(`[${bookId}] missing image stripped: images/${filename}`);
-    }
+    console.warn(`[${bookId}] missing image stripped: images/${filename}`);
   }
   return result;
 }
@@ -256,7 +296,12 @@ async function buildEpub(bookId: BookId, config: BookConfig): Promise<void> {
   const epubChapters: Array<{ title: string; content: string }> = [];
   for (const chapterPath of await getChapterFiles(bookId)) {
     const chapter = await processMarkdown(chapterPath, processor);
-    const contentWithImages = await embedImages(bookId, chapter.content);
+    // EPUB: rewrite image refs to file:// URLs so epub-gen-memory can fetch
+    // them with proper mediaType inference (vs base64 data URIs which fail).
+    const contentWithImages = await rewriteImagesToFileUrls(
+      bookId,
+      chapter.content
+    );
     epubChapters.push({
       title: chapter.title,
       content: contentWithImages,
