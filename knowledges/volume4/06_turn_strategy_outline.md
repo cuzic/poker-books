@@ -267,8 +267,8 @@ GTO Wizard「Turn Check-Raise Heuristics」より:
 「コールで防御するか、チェックレイズで防御するか」の内訳が変化する。
 
 一般則:
-- ベットサイズが小 (33%pot 以下): チェックコール多用
-- ベットサイズが大 (75%pot 以上): チェックレイズを組み込む必要
+- ベットサイズが小 (33% pot 以下): チェックコール多用
+- ベットサイズが大 (75% pot 以上): チェックレイズを組み込む必要
 
 出典: [MDF & Alpha - GTO Wizard](https://blog.gtowizard.com/mdf-alpha/),
 [Round Out Your Defense: The Power of Raising - GTO Wizard](https://blog.gtowizard.com/round_out_your_defense_the_power_of_raising/)
