@@ -1,0 +1,296 @@
+[
+  {
+    "board": "Ks,7c,2c",
+    "label": "ナッツFD単独 AcXc [formula H2=13]",
+    "formula_bucket": "H2",
+    "formula_hs": 13,
+    "intuitive": "H3 (強いドロー)",
+    "ip_cbet": 100.0,
+    "n_ip": 9,
+    "oop33": {
+      "n": 9,
+      "F": 0.0,
+      "C": 19.9,
+      "R": 80.1
+    },
+    "oop75": {
+      "n": 9,
+      "F": 0.0,
+      "C": 0.0,
+      "R": 100.0
+    }
+  },
+  {
+    "board": "Ks,7c,2c",
+    "label": "非ナッツFD QcXc [formula H2=13]",
+    "formula_bucket": "H2",
+    "formula_hs": 13,
+    "intuitive": "H2 (Q高FD)",
+    "ip_cbet": 100.0,
+    "n_ip": 7,
+    "oop33": {
+      "n": 8,
+      "F": 0.0,
+      "C": 99.0,
+      "R": 1.0
+    },
+    "oop75": {
+      "n": 8,
+      "F": 0.0,
+      "C": 94.7,
+      "R": 5.3
+    }
+  },
+  {
+    "board": "Ks,7c,2c",
+    "label": "非ナッツFD TcXc [formula H2=13]",
+    "formula_bucket": "H2",
+    "formula_hs": 13,
+    "intuitive": "H2 (T高FD)",
+    "ip_cbet": 100.0,
+    "n_ip": 3,
+    "oop33": {
+      "n": 4,
+      "F": 0.0,
+      "C": 95.9,
+      "R": 4.1
+    },
+    "oop75": {
+      "n": 4,
+      "F": 0.0,
+      "C": 84.6,
+      "R": 15.4
+    }
+  },
+  {
+    "board": "Ks,7c,2c",
+    "label": "tpmk+nut FD KcJc/KcTc [formula H3=21/20]",
+    "formula_bucket": "H3",
+    "formula_hs": 21,
+    "intuitive": "H3",
+    "ip_cbet": 100.0,
+    "n_ip": 2,
+    "oop33": {
+      "n": 2,
+      "F": 0.0,
+      "C": 0.0,
+      "R": 100.0
+    },
+    "oop75": {
+      "n": 2,
+      "F": 0.0,
+      "C": 0.0,
+      "R": 100.0
+    }
+  },
+  {
+    "board": "Ks,7c,2c",
+    "label": "tpwk+FD Kc5c [formula H3=19]",
+    "formula_bucket": "H3",
+    "formula_hs": 19,
+    "intuitive": "H3",
+    "ip_cbet": 100.0,
+    "n_ip": 1,
+    "oop33": {
+      "n": 1,
+      "F": 0.0,
+      "C": 0.0,
+      "R": 100.0
+    },
+    "oop75": {
+      "n": 1,
+      "F": 0.0,
+      "C": 0.0,
+      "R": 100.0
+    }
+  },
+  {
+    "board": "Ks,7c,2c",
+    "label": "tpmk no FD KhJd/KhTd [formula H2=8]",
+    "formula_bucket": "H2",
+    "formula_hs": 8,
+    "intuitive": "H2",
+    "ip_cbet": 100.0,
+    "n_ip": 18,
+    "oop33": {
+      "n": 18,
+      "F": 0.0,
+      "C": 98.9,
+      "R": 1.1
+    },
+    "oop75": {
+      "n": 18,
+      "F": 0.0,
+      "C": 100.0,
+      "R": 0.0
+    }
+  },
+  {
+    "board": "Ks,7c,2c",
+    "label": "tpmk+BDFD KhJh [formula H2=12]",
+    "formula_bucket": "H2",
+    "formula_hs": 12,
+    "intuitive": "H2 (ペア+BDFD)",
+    "ip_cbet": 100.0,
+    "n_ip": 4,
+    "oop33": {
+      "n": 4,
+      "F": 0.0,
+      "C": 100.0,
+      "R": 0.0
+    },
+    "oop75": {
+      "n": 4,
+      "F": 0.0,
+      "C": 100.0,
+      "R": 0.0
+    }
+  },
+  {
+    "board": "Ad,7c,2s",
+    "label": "tpwk A3o-A6o [formula H1=6]",
+    "formula_bucket": "H1",
+    "formula_hs": 6,
+    "intuitive": "H2 (ペアあり)",
+    "ip_cbet": 100.0,
+    "n_ip": 36,
+    "oop33": {
+      "n": 36,
+      "F": 0.0,
+      "C": 100.0,
+      "R": 0.0
+    },
+    "oop75": {
+      "n": 36,
+      "F": 0.0,
+      "C": 100.0,
+      "R": 0.0
+    }
+  },
+  {
+    "board": "Ad,7c,2s",
+    "label": "tpmk ATo/AJo [formula H2=8]",
+    "formula_bucket": "H2",
+    "formula_hs": 8,
+    "intuitive": "H2",
+    "ip_cbet": 100.0,
+    "n_ip": 18,
+    "oop33": {
+      "n": 18,
+      "F": 0.0,
+      "C": 100.0,
+      "R": 0.0
+    },
+    "oop75": {
+      "n": 18,
+      "F": 0.0,
+      "C": 100.0,
+      "R": 0.0
+    }
+  },
+  {
+    "board": "Ad,7c,2s",
+    "label": "tpwk A8o/A9o [formula H1=6]",
+    "formula_bucket": "H1",
+    "formula_hs": 6,
+    "intuitive": "H2",
+    "ip_cbet": 100.0,
+    "n_ip": 18,
+    "oop33": {
+      "n": 18,
+      "F": 0.0,
+      "C": 100.0,
+      "R": 0.0
+    },
+    "oop75": {
+      "n": 18,
+      "F": 0.0,
+      "C": 100.0,
+      "R": 0.0
+    }
+  },
+  {
+    "board": "Tc,8d,4s",
+    "label": "gutshot単独 QhJh [formula H2=10]",
+    "formula_bucket": "H2",
+    "formula_hs": 10,
+    "intuitive": "H2",
+    "ip_cbet": 100.0,
+    "n_ip": 4,
+    "oop33": {
+      "n": 4,
+      "F": 0.0,
+      "C": 58.9,
+      "R": 41.1
+    },
+    "oop75": {
+      "n": 4,
+      "F": 0.0,
+      "C": 33.2,
+      "R": 66.8
+    }
+  },
+  {
+    "board": "Tc,8d,4s",
+    "label": "BDFD単独 Ah2h [formula H1=4]",
+    "formula_bucket": "H1",
+    "formula_hs": 4,
+    "intuitive": "H1",
+    "ip_cbet": 0.0,
+    "n_ip": 4,
+    "oop33": {
+      "n": 4,
+      "F": 15.8,
+      "C": 84.2,
+      "R": 0.0
+    },
+    "oop75": {
+      "n": 4,
+      "F": 76.0,
+      "C": 24.0,
+      "R": 0.0
+    }
+  },
+  {
+    "board": "Tc,8d,4s",
+    "label": "2ndペア+gut 8hJh [formula H3~19]",
+    "formula_bucket": "H3",
+    "formula_hs": 19,
+    "intuitive": "H3 (ペア+ドロー)",
+    "ip_cbet": 100.0,
+    "n_ip": 3,
+    "oop33": {
+      "n": 3,
+      "F": 0.0,
+      "C": 100.0,
+      "R": 0.0
+    },
+    "oop75": {
+      "n": 3,
+      "F": 0.0,
+      "C": 100.0,
+      "R": 0.0
+    }
+  },
+  {
+    "board": "Tc,8d,4s",
+    "label": "OESD単独 J9 全スート [formula H2=14] (v1 再確認)",
+    "formula_bucket": "H2",
+    "formula_hs": 14,
+    "intuitive": "H3",
+    "ip_cbet": 100.0,
+    "n_ip": 4,
+    "oop33": {
+      "n": 16,
+      "F": 0.0,
+      "C": 0.1,
+      "R": 99.9
+    },
+    "oop75": {
+      "n": 16,
+      "F": 0.0,
+      "C": 49.4,
+      "R": 50.6
+    }
+  }
+]
