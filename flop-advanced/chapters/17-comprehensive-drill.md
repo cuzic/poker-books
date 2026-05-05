@@ -84,7 +84,7 @@ Step 3: 9マス → 低頻度×中 → チェック
 - A6: 自ハンドAA on AKQmono → 20%（モノトーン固定）
 - A7: 自ハンドKK on K44 → ペアoverrideでKK ≥ QQ + kicker 4 < 8 → 50%（ただしKKはトリップス、CBet 75%）
 - A8: 自ハンド22 on Q83ss → アンダーペア、中ハンド → チェック
-- A9: 自ハンドKJ on K♠T♦5♣ → 型2e（middle=T）→ CBet 50% (精密レンジスコアで -15補正）
+- A9: 自ハンドKJ on K♠T♦5♣ → 型2e（middle=T）→ CBet 50%（精密レンジスコアで -15補正）
 - A10: 自ハンド87s on J♠T♠9♦ → ガットショット + BDFD → 中、33% セミブラフ
 
 ---
