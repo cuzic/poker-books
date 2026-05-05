@@ -131,3 +131,31 @@ Sub-NFD (FD + K blocker on flush board):
 - 本ドキュメントは将来的な v2 設計時の参考資料として保管
 
 優先度: **中**（巻4 v2 改訂時に検討）
+
+---
+
+## 4. 実装完了履歴 (2026-05-05 追記)
+
+**全 5 項目実装完了**。本提案は spec 拡張として正式採用された:
+
+| # | アクション | コミット | 状態 |
+|---|----------|---------|------|
+| 1 | `calc_hand_score()` に NFD detection (+3) | `15287ec` (poker-drill) | ✓ |
+| 2a | Sub-NFD detection (+2) | `4c927a6` (poker-drill) | ✓ |
+| 2b | ナッツストレート blocker detection (+2) | `3834a21` (poker-drill) | ✓ |
+| 3 | 巻④ 第7章 7-5-a 節を加筆 | `d2cad33` (poker-books) | ✓ |
+| 4 | 314 テスト影響確認 + 再生成 | `15287ec` 等 | ✓ 全テスト合格 |
+| 5 | CHANGELOG 記録 | `148fabe` (poker-drill) | ✓ |
+
+**関連改訂**:
+- 巻⑤ 第5章への参照追加: `4f55daa`
+- digest 第14章への参照追加: `fccf8f2`
+- 巻間整合性メモ: `knowledges/spec_extension_volume_alignment.md` (commit `f1e6407`)
+
+**実装後の挙動 (確認済み)**:
+- AhKd on J♥8♥5♣ → 4♥: HS 13 → **16** (NFD 適用、H3 promotion)
+- KhQc on J♥8♥5♣ → 4♥: HS 13 → **15** (Sub-NFD 適用、H3 promotion)
+- K♥2♦ on J♣T♦9♠8♥: gutshot 6 → **8** (ナッツストレート blocker 適用)
+
+これで spec → 書籍 → 実装 → CHANGELOG の参照チェーンが完成。本ドキュメントは
+歴史的記録として保管。
