@@ -2,7 +2,7 @@
 
 <!-- textlint-disable -->
 
-<!-- markdownlint-disable MD036 MD040 MD056 MD060 -->
+<!-- markdownlint-disable MD033 MD036 MD040 MD056 MD060 -->
 
 本書の本文で扱った内容を、実戦時に即参照できる形にまとめた資料集。
 
