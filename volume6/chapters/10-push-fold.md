@@ -73,7 +73,7 @@ M = 4（スタック 10BB）での展開例:
 
 実用的には「このレンジから外れると損をする」という境界線と理解してください。チップ EV ベースの Nash チャートは、ICM を考慮しない純粋なチップ獲得を最大化する解です。ICM 補正が加わると修正が必要ですが（10-6節）、まず基礎のナッシュ解を押さえることが重要です。
 
-Nash チャートの数値は _Kill Everyone_（Nelson, Streib & Heston, 2009）、Holdem Resources Calculator（HRC）、ICMIZER の出力と ±2% の差で整合しています。
+Nash チャートの数値は *Kill Everyone*（Nelson, Streib & Heston, 2009）、Holdem Resources Calculator（HRC）、ICMIZER の出力と ±2% の差で整合しています。
 
 ### なぜ Nash 均衡でフロップを見ないゲームが計算可能か
 

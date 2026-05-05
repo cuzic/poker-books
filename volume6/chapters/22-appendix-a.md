@@ -101,7 +101,7 @@ M 値 ≈ BB スタック ÷ 2.5
 | 10.0 | 約 16% | 33+、A6s+、ATo+、KJs+ |
 | 15.0 | 約 12% | 44+、A8s+、AJo+、KQs |
 
-出典: _Kill Everyone_ (Nelson et al., 2009)、HRC 再計算値と±2% 内で整合。
+出典: *Kill Everyone* (Nelson et al., 2009)、HRC 再計算値と±2% 内で整合。
 
 ---
 

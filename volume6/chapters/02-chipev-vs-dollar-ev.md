@@ -62,7 +62,7 @@
 
 チップを $EV に変換する標準モデルが **ICM（Independent Chip Model、独立チップモデル）** です。
 
-ICM の数学的な根拠は2つの先行研究に由来します。競馬の着順確率を計算した Harville（1973）の手法と、ポーカートーナメントへの適用を体系化した Malmuth（1987）の論文です。Mason Malmuth は著書 _Settling Up in Tournaments_ でこのモデルをポーカー界に紹介しました。
+ICM の数学的な根拠は2つの先行研究に由来します。競馬の着順確率を計算した Harville（1973）の手法と、ポーカートーナメントへの適用を体系化した Malmuth（1987）の論文です。Mason Malmuth は著書 *Settling Up in Tournaments* でこのモデルをポーカー界に紹介しました。
 
 ICM は次の単純な仮定を置きます。
 

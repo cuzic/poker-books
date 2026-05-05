@@ -131,6 +131,7 @@ CBet 頻度（overall）と、GTO 実測から抽出した「Value 圧」「Bluf
 | Q/J ハイ + ローペア | 55% | ~0.85 | 中 | – | Q33, J55 |
 
 **注**:
+
 - **Value 圧** = HandScore≥14 のハンドが bet される確率
 - **Bluff 圧** = HandScore≤4 のハンドが bet される確率
 - overall ≈ 0.25 × Value 圧 + 0.75 × Bluff 圧（強ハンド比率 ≈25%）

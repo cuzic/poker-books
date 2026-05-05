@@ -404,5 +404,5 @@ GTO Wizardの実測では、3ベットポットのIPフロップCBet頻度はSRP
 - Phil Galfond『Mastering Multi-Way Pots』
 - SplitSuit『C-Betting Bluffs On Multi-Way Flops』
 - poker.pro『Multiway Muscle: Big-Bet Windows』
-- GTO Wizard - C-Betting OOP in 3-Bet Pots: https://blog.gtowizard.com/c-betting-oop-in-3-bet-pots/
-- GTO Wizard - IP vs OOP in 3-Bet Pots: https://blog.gtowizard.com/3-bet-pots/
+- GTO Wizard - C-Betting OOP in 3-Bet Pots: <https://blog.gtowizard.com/c-betting-oop-in-3-bet-pots/>
+- GTO Wizard - IP vs OOP in 3-Bet Pots: <https://blog.gtowizard.com/3-bet-pots/>

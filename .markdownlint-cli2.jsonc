@@ -138,7 +138,11 @@
   "globs": [
     "preflop/chapters/**/*.md",
     "flop/chapters/**/*.md",
-    "flop-advanced/chapters/**/*.md"
+    "flop-advanced/chapters/**/*.md",
+    "volume4/chapters/**/*.md",
+    "volume5/chapters/**/*.md",
+    "volume6/chapters/**/*.md",
+    "digest/chapters/**/*.md"
   ],
   "ignores": [
     "node_modules/**"
