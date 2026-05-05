@@ -1,6 +1,6 @@
 # 第16章　マルチウェイのフロップ
 
-<!-- markdownlint-disable MD060 -->
+<!-- markdownlint-disable MD036 MD060 -->
 <!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
 
 > **本章の目標**: 本書の3式はヘッズアップ（2人対戦）前提で設計されています。3人以上のマルチウェイでは、**式の前提が崩れる**ため別ルールが必要です。本章でその別ルールを示します。

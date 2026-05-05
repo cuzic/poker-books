@@ -1,6 +1,6 @@
 # 第7章　ポジション別しきい値で決める
 
-<!-- markdownlint-disable MD060 -->
+<!-- markdownlint-disable MD036 MD060 -->
 <!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
 <!-- textlint-disable preset-jtf-style/4.3.7.山かっこ<> -->
 

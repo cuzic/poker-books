@@ -1,6 +1,6 @@
 # 第9章　ハンド役割分類：攻める・守る・捨てる・ショーダウンバリュー
 
-<!-- markdownlint-disable MD028 MD033 MD040 MD060 -->
+<!-- markdownlint-disable MD028 MD033 MD036 MD040 MD060 -->
 <!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
 <!-- textlint-disable preset-jtf-style/4.2.9.ダッシュ(-) -->
 
