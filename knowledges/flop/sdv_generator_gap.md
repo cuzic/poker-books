@@ -124,12 +124,37 @@ flop-vs-cbet-cards.ts の役割分類は `commit 3d2fe42` で確立済み。24 �
 
 ---
 
-## 5. 暫定対応
+## 5. 暫定対応 → 解消（2026-05-05）
 
-実装するまでの間、以下の運用ルールで凌ぐ:
+~~実装するまでの間、以下の運用ルールで凌ぐ~~
 
-1. **flop-vs-cbet-* と flop-multiway-cards.ts は手編集が source of truth**
-2. **再生成スクリプトを実行する際は git diff で変更を確認、手編集を上書きしない**
-3. **NFD のような calc.py 変更は他の deck (turn-cbet, river-*) のみ regen して反映**
+**全フェーズ完了**:
 
-このメモを後継 generator 改修のスタート地点とする。
+- フェーズ 1+2 完了 (commit ec27b42): `flop-vs-cbet-cards.ts` 24枚を SDV generator 化
+  - CSV (`situation02_flop_defense_inputs.csv`) に SDV 列を追加
+  - `flop_defense.py` に SDV モード分岐を実装
+  - `core/builder.py` の `build_flop_defense_card` に SDV パラメータを追加
+- フェーズ 3 完了 (commit 1c22e18): 残り 4 deck の SDV 化
+  - `flop-vs-cbet-3bp-cards.ts` (12枚, 3 ステップ)
+  - `flop-vs-cbet-4bp-cards.ts` (6枚, 4 ステップ)
+  - `flop-vs-cbet-3bp-oop-cards.ts` (12枚, 5 ステップ)
+  - `flop-multiway-cards.ts` (15枚, 5 or 6 ステップ)
+- データエラー修正 (commit fa3ddf5): mw_010 と rf_002 の重複カード解消
+
+**現在の状況**:
+
+- 全 5 deck (flop-vs-cbet, 3bp, 4bp, 3bp-oop, multiway) は generator から SDV 4 分類で再生成可能
+- 手編集禁止リストは空（feedback memory 更新済み）
+- calc.py 変更（NFD 等）に対しても全 deck を安全に regen できる
+
+**残課題**:
+
+- なし。本ドキュメントは履歴として保持。将来の SDV ロジック発展時の参考資料。
+
+## 6. 教訓
+
+このフェーズで得た知見:
+
+1. **CSV にデータ列を追加する戦略は強力**: ロジック実装より単純で柔軟
+2. **手編集と generator の食い違いは早期検出が重要**: git diff チェックを CI に組み込むべき
+3. **重複カード（A♠ in hand and board）は generator が自動検出すべき**: 将来 calc.py に validation を追加する余地あり
