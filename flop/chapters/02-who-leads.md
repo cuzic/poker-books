@@ -372,8 +372,8 @@ UTGは後ろに5人いるため、TT+、Broadwayスーテッド、KQoなど強�
 
 ## 出典
 
-| タイトル | URL |
-|---------|-----|
+| タイトル | サイト | URL |
+|---------|-------|-----|
 | Preflop Range Morphology | GTO Wizard | <https://blog.gtowizard.com/preflop-range-morphology/> |
 | Range Morphology | GTO Wizard | <https://blog.gtowizard.com/range-morphology/> |
 | 6 max Preflop Charts | FreeBetRange | <https://blog.freebetrange.com/article/preflop-charts-open-raise-in-6-max-poker-cash-games> |
