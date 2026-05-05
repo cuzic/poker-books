@@ -2,7 +2,7 @@
 
 <!-- textlint-disable -->
 
-<!-- markdownlint-disable MD033 MD036 MD040 MD060 -->
+<!-- markdownlint-disable MD028 MD033 MD036 MD040 MD060 -->
 
 > 🗺️ **現在地**:巻③ / **[I 部 モデル精密化]** / ch3「精密 HandScore」（巻② ch9 HandScore の精密化、17 型と接続）
 > （本書全体の道具マップは「はじめに」末尾を参照）

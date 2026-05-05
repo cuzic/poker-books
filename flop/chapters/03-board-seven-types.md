@@ -1,6 +1,6 @@
 # 第3章　ボードを 7 つの型に分類する
 
-<!-- markdownlint-disable MD033 MD036 MD040 MD060 -->
+<!-- markdownlint-disable MD028 MD033 MD036 MD040 MD060 -->
 <!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
 <!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
 <!-- textlint-disable preset-jtf-style/4.3.7.山かっこ<> -->

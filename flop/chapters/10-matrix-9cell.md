@@ -1,6 +1,6 @@
 # 第10章　簡易レンジスコア とハンド強度を結ぶ ― CBet 統合判定
 
-<!-- markdownlint-disable MD036 MD040 MD060 -->
+<!-- markdownlint-disable MD028 MD036 MD040 MD060 -->
 <!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
 <!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
 <!-- textlint-disable preset-jtf-style/4.3.7.山かっこ<> -->

@@ -1,6 +1,6 @@
 # 第4章　型別アクションプラン
 
-<!-- markdownlint-disable MD033 MD036 MD040 MD060 -->
+<!-- markdownlint-disable MD028 MD033 MD036 MD040 MD060 -->
 <!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
 <!-- textlint-disable preset-ja-technical-writing/no-unmatched-pair -->
 

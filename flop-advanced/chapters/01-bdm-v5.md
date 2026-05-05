@@ -2,7 +2,7 @@
 
 <!-- textlint-disable -->
 
-<!-- markdownlint-disable MD033 MD036 MD040 MD060 -->
+<!-- markdownlint-disable MD028 MD033 MD036 MD040 MD060 -->
 
 > 🗺️ **現在地**:巻③ / **[I 部 モデル精密化・式派]** / ch1「精密レンジスコア」（巻② ch8 簡易レンジスコアの精密化）
 > （本書全体の道具マップは「はじめに」末尾を参照）

@@ -1,6 +1,6 @@
 # 第8章　CBet頻度を見抜く ― 簡易レンジスコア チェックリスト
 
-<!-- markdownlint-disable MD033 MD036 MD040 MD060 -->
+<!-- markdownlint-disable MD028 MD033 MD036 MD040 MD060 -->
 <!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
 <!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
 <!-- textlint-disable preset-ja-technical-writing/no-doubled-joshi -->

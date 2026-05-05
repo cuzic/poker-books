@@ -2,7 +2,7 @@
 
 <!-- textlint-disable -->
 
-<!-- markdownlint-disable MD033 MD036 MD040 MD060 -->
+<!-- markdownlint-disable MD028 MD033 MD036 MD040 MD060 -->
 
 > 🗺️ **現在地**:巻③ / **[I 部 モデル精密化・表派]** / ch4「17 型分類」（巻② 7 型の細分化、ch1 と「同じ問題への 2 表現」）
 > （本書全体の道具マップは「はじめに」末尾を参照）
