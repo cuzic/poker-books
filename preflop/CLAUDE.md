@@ -13,7 +13,7 @@
 
 ## 本書の構成
 
-全20章＋付録。詳細は `toc.md` を参照。
+全 22 章＋付録（12 セクション、A〜I + K + L）。詳細は `toc.md` を参照。
 
 ### 5部構成
 
@@ -21,24 +21,26 @@
 - 第II部（5〜8章）：オープンレイズの簡易式
 - 第III部（9〜13章）：対オープンのアクション
 - 第IV部（14〜17章）：補正と応用
-- 第V部（18〜20章）：実戦定着と次への橋渡し
+- 第V部（18〜22章）：実戦定着・上級補正・次への橋渡し
+- 付録（23章）：参考文献、レンジチャート、用語集、Q&A、出典など 12 セクション
 
 ## Directory Structure
 
 ```
-poker-preflop-book/
-├── src/
-│   ├── chapters/           # 本文（01-*.md 〜 20-*.md）
-│   │   └── images/         # 画像
-│   └── assets/             # CSS
-├── knowledges/             # リサーチ結果
-│   ├── reviews/            # レビュー結果
-│   └── process/            # プロセス知見
-├── preflop.txt             # 簡易計算式の原案（参考資料）
+preflop/
+├── chapters/               # 本文（00-introduction、00-terms、01〜22-*.md、23-appendix.md）
+│   └── images/             # 章内画像
+├── teaching/               # 指導者向け補助資料（worksheet/checklist/FAQ）
+├── source.txt              # 簡易計算式の原案メモ
 ├── toc.md                  # 目次・執筆ガイド
 ├── book.json               # 書籍メタデータ
+├── kdp-metadata.txt        # KDP 公開用テキスト（自動生成）
+├── images.json             # AI 生成画像のプロンプト定義
 └── CLAUDE.md               # このファイル
 ```
+
+リサーチ素材は `../knowledges/preflop/`、レビュー結果は
+`../knowledges/preflop/reviews/` にプロジェクト共通配置。
 
 ## 執筆方針
 
@@ -66,7 +68,7 @@ poker-preflop-book/
 
 ## 計算式の中核
 
-本書で扱う主要な式は `preflop.txt` の原案を出発点とする。
+本書で扱う主要な式は `source.txt` の原案を出発点とする。
 
 ### オープンレイズ（スコア式）
 
