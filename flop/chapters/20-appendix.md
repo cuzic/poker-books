@@ -192,7 +192,7 @@ Step 4: トップ A/K/Q × ウェット
 - **MAE = 6.03%**
 - **Pearson r = +0.938**
 
-検証スクリプト： `scripts/range_score.py`
+検証は GTO Wizard の30ボード公開データに対する適合度評価。30 ボード全リストは付録 F 参照。
 
 ---
 
@@ -270,7 +270,7 @@ CBet% = 90 − HighCardDeficit − TextureCost − SuitPenalty − Extra
 - **MAE = 5.27%**
 - Pearson r = +0.962
 
-再現コード： `scripts/range_score.py` (関数 `seimitsu_score()`)
+精密レンジスコアの完全な計算手順は巻③ 第1章に掲載。30 ボード × 169 ハンドの実測検証は巻③ 付録 B に詳述。
 
 ---
 

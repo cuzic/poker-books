@@ -691,9 +691,11 @@ python3 scripts/range_score.py
 
 ---
 
-## 付録 I　検証スクリプト リファレンス
+## 付録 I　検証スクリプト API スケッチ
 
-### `scripts/range_score.py` の主要関数
+本付録は精密レンジスコアの実装イメージを示す API ドラフトです。実コードは執筆時点で未公開のため、自己実装の参考として関数シグネチャと使用イメージを掲載します。
+
+### 関数シグネチャ（API ドラフト）
 
 ```python
 def kantan_score(ranks: list[int], suits: list[str], paired: bool) -> int:
