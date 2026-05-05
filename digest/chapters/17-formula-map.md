@@ -76,7 +76,7 @@
 
 ```
 Score = H + L + ボーナス − ペナルティ
-  しきい値: UTG≥23 / MP≥22 / CO≥21 / BTN≥18 / SB≥20
+  しきい値: UTG≥24 / MP≥22 / CO≥21 / BTN≥18 / SB≥22
 
 Score₃ = H + 0.5L + B + S + C − G − R
 ```
