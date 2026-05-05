@@ -32,15 +32,6 @@ type BookId = "preflop" | "flop" | "flop-advanced" | "volume4" | "volume5" | "vo
 
 const ROOT = join(import.meta.dir, "..");
 const BOOKS: BookId[] = ["preflop", "flop", "flop-advanced", "volume4", "volume5", "volume6", "digest"];
-const BOOK_LABELS: Record<BookId, string> = {
-  preflop: "迷わないポーカー① プリフロップ",
-  flop: "迷わないポーカー② フロップ[基礎]",
-  "flop-advanced": "迷わないポーカー③ フロップ[応用]",
-  volume4: "迷わないポーカー④ ターン・リバー[基礎]",
-  volume5: "迷わないポーカー⑤ ターン・リバー[応用]",
-  volume6: "迷わないポーカー⑥ トーナメント",
-  digest: "迷わないポーカー ダイジェスト",
-};
 
 // 各 book ID とディレクトリの対応（同名でない場合のみ記載）
 const BOOK_DIRS: Partial<Record<BookId, string>> = {};
@@ -461,8 +452,7 @@ async function buildLanding(): Promise<void> {
       const cfg = await loadBookConfig(id);
       return `
     <article class="book">
-      <h2>${BOOK_LABELS[id]}</h2>
-      <h3>${cfg.title}</h3>
+      <h2>${cfg.title}</h2>
       ${cfg.subtitle ? `<p class="subtitle">${cfg.subtitle}</p>` : ""}
       <p class="description">${cfg.description.slice(0, 200)}...</p>
       <a class="read" href="${id}/index.html">目次へ →</a>
