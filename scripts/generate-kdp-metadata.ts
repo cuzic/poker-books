@@ -1,7 +1,15 @@
 import { join } from "node:path";
 
 const ROOT = join(import.meta.dir, "..");
-const BOOKS = ["preflop", "flop"] as const;
+const BOOKS = [
+  "preflop",
+  "flop",
+  "flop-advanced",
+  "volume4",
+  "volume5",
+  "volume6",
+  "digest",
+] as const;
 type BookId = (typeof BOOKS)[number];
 
 interface BookJson {
