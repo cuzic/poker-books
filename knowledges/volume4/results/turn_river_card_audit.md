@@ -162,3 +162,40 @@ td_001〜td_015 全件で「H+A−3−C 計算 → 推奨」が一致。15/15 �
 - `knowledges/volume4/results/c_coef_verify/c_coef_summary.json`
 - `knowledges/volume4/action_framework_coefficients.md`
 - `volume4/chapters/08-barrel-score.md` (FlopType 分類の優先順位)
+
+---
+
+## 修正完了履歴 (2026-05-05 追記)
+
+**全項目修正完了**。本レポートで指摘した不整合は以下のコミットで解消済み:
+
+### 必須修正（推奨アクション反転）
+
+| 項目 | コミット | 状態 |
+|------|---------|------|
+| tc_006 を スーテッド + チェックに変更 | `195d6cf` | ✓ |
+| tc_010 を スーテッド + CBet に変更 | `195d6cf` | ✓ |
+| rf_010 / rf_016 formula↔answer 整合 | `85bcb26` | ✓ |
+| rf_013 / rf_017 / rf_018 TPMK 薄バリュー分岐 | `85bcb26` | ✓ |
+
+### 推奨修正
+
+| 項目 | コミット | 状態 |
+|------|---------|------|
+| tc_011/012/019/020/022 を スーテッド に統一 | `195d6cf` で統合修正 | ✓ |
+| tc_022〜tc_025 を削除（impossible flush combos） | `195d6cf` (25→21 cards) | ✓ |
+| flopTypeReason テキストの「同スート2枚以上」優先表記 | `195d6cf` | ✓ |
+
+### 追加対応（本レポート指摘外）
+
+| 項目 | コミット |
+|------|---------|
+| Sub-NFD / ナッツストレートブロッカー +2 補正の実装 | `4c927a6` / `3834a21` |
+| Wheel straight 完成 / J-Q-K-A の OESD→gutshot 修正 | `45a5f55` |
+| ペア板 trips 認識 (set_plus 30) | `20d6261` |
+| 重複カード validation | `295aed6` |
+| flop-vs-cbet 系 5 deck の SDV (4分類) generator 化 | `ec27b42` / `1c22e18` |
+
+**現状の cards (2026-05-05)**: tc_022-025 は存在しない。turn-cbet 21 cards 構成で、すべての formula↔answer は整合。`audit_card_consistency.py` で 411 cards 中 0 実体不整合を確認済み。
+
+詳細は `poker-drill/CHANGELOG.md` 参照。
