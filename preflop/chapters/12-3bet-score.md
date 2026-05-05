@@ -270,6 +270,16 @@ GTO WizardはA5sをBTN vs UTGのスポットで「**60%3ベット、40%コール
 
 この「スコア20〜22帯」というのが、GTOでミックス戦略が効く境界帯と一致します。
 
+### 3betレンジがポーラード型になる理由
+
+GTOの3betレンジは「ポーラード型（二極化型）」になります。ポーラードレンジとは、AA/KK/AKといったナッツハンドとA5s/A4sといったブラフ的ハンドで構成し、JJ/TT/AQsなどの中間ハンドを除外する構成です。
+
+なぜ中間ハンドを3betから外すのでしょうか。**リニアレンジ（中間ハンドを含む3bet）は相手にシンプルなコールで対応されやすいからです。**中間ハンドで3betすると、相手はプレミアムハンドとブラフの両方に対してタイトに動けるため、3betの脅威が薄れます。
+
+一方、ポーラードレンジはナッツとブラフが混在するため、相手は「コールしたらナッツに捕まるかもしれない」という恐怖を持ち続けます。これがフォールドエクイティを高める設計です。
+
+**「JJやTTがコールを混ぜるのはなぜか」** という疑問もここで解決します。JJ/TTは中間ハンドの典型で、ポーラード戦略の一部としてコールレンジに回される設計です。無理に3betして4betを返されると困るハンドを、コールレンジに置くことで安定した運用ができます。ただし相手のオープンポジションが広い（CO/BTN）場合は、JJ/TTもバリュー3betとして機能します。
+
 <figure><img src="images/range-table-3bet-vs-utg.png" alt="3ベット vs UTG レンジ表。赤=バリュー3bet（QQ+/AKs/AKo/AQs）、オレンジ=ブラフ3bet（A5s〜A3s）、青=コール、灰=フォールド" /><figcaption>3ベット vs UTG（ポーラライズ型） — 赤がバリュー、オレンジがブロッカー付きブラフ、青がコール</figcaption></figure>
 
 <figure><img src="images/range-table-3bet-vs-btn.png" alt="3ベット vs BTN レンジ表。リニア型でバリュー範囲が広く（QQ+/JJ/TT/AQs/AJs含む）、コール範囲も広い" /><figcaption>3ベット vs BTN（リニア型） — vs UTGより広いバリュー範囲でオーバーオール3bet頻度が上がる</figcaption></figure>
@@ -340,6 +350,7 @@ AKsの3ベットスコアを計算してください。
 - SplitSuit Poker『Poker Combos & Blockers 101 In 2026』
 - GTO Wizard『A Beginner's Guide to Poker Combinatorics』
 - GTO Wizard『PKO Versus Classic: Responding to 3-Bets』
+- GTO Wizard『Preflop Range Morphology』
 - Pokercode『Understand How to Use Blockers the Right Way』
 - Poker.Pro『Constructing 3-Bet And vs. 3-Bet Ranges』
 - Betting Data Lab『Poker 3Bet Range Strategy for Cash Games』
