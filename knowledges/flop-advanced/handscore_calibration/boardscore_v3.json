@@ -1,0 +1,402 @@
+{
+  "scale": "v3 (new, 0-100 equity %)",
+  "hs_source_scale": "new",
+  "thresholds": {
+    "H3": 65,
+    "H2": 35
+  },
+  "per_board": [
+    {
+      "board": "4s4h3h",
+      "type_code": "6d",
+      "n_holdings": 62,
+      "strong_n": 11,
+      "strong_bet_rate": 0.818,
+      "weak_n": 8,
+      "weak_bet_rate": 0.75,
+      "tp_plus_n": 2,
+      "tp_plus_bet_rate": 1.0,
+      "overall_cbet": 0.387
+    },
+    {
+      "board": "5c2d3h",
+      "type_code": "4d",
+      "n_holdings": 43,
+      "strong_n": 15,
+      "strong_bet_rate": 1.0,
+      "weak_n": 9,
+      "weak_bet_rate": 0.556,
+      "tp_plus_n": 0,
+      "tp_plus_bet_rate": null,
+      "overall_cbet": 0.628
+    },
+    {
+      "board": "5c5dAh",
+      "type_code": "7a",
+      "n_holdings": 43,
+      "strong_n": 15,
+      "strong_bet_rate": 0.6,
+      "weak_n": 28,
+      "weak_bet_rate": 0.393,
+      "tp_plus_n": 0,
+      "tp_plus_bet_rate": null,
+      "overall_cbet": 0.465
+    },
+    {
+      "board": "6s8d7c",
+      "type_code": "4d",
+      "n_holdings": 62,
+      "strong_n": 28,
+      "strong_bet_rate": 0.714,
+      "weak_n": 10,
+      "weak_bet_rate": 0.4,
+      "tp_plus_n": 0,
+      "tp_plus_bet_rate": null,
+      "overall_cbet": 0.661
+    },
+    {
+      "board": "7d6c4h",
+      "type_code": "4d",
+      "n_holdings": 59,
+      "strong_n": 18,
+      "strong_bet_rate": 0.889,
+      "weak_n": 2,
+      "weak_bet_rate": 0.0,
+      "tp_plus_n": 1,
+      "tp_plus_bet_rate": 1.0,
+      "overall_cbet": 0.475
+    },
+    {
+      "board": "8h8cTc",
+      "type_code": "7x",
+      "n_holdings": 52,
+      "strong_n": 20,
+      "strong_bet_rate": 0.9,
+      "weak_n": 24,
+      "weak_bet_rate": 0.458,
+      "tp_plus_n": 5,
+      "tp_plus_bet_rate": 1.0,
+      "overall_cbet": 0.712
+    },
+    {
+      "board": "9dTs8s",
+      "type_code": "4a",
+      "n_holdings": 81,
+      "strong_n": 23,
+      "strong_bet_rate": 0.348,
+      "weak_n": 19,
+      "weak_bet_rate": 0.0,
+      "tp_plus_n": 0,
+      "tp_plus_bet_rate": null,
+      "overall_cbet": 0.247
+    },
+    {
+      "board": "9s7s4c",
+      "type_code": "3c",
+      "n_holdings": 71,
+      "strong_n": 4,
+      "strong_bet_rate": 1.0,
+      "weak_n": 25,
+      "weak_bet_rate": 0.32,
+      "tp_plus_n": 1,
+      "tp_plus_bet_rate": 1.0,
+      "overall_cbet": 0.282
+    },
+    {
+      "board": "AcKs7d",
+      "type_code": "1c",
+      "n_holdings": 66,
+      "strong_n": 9,
+      "strong_bet_rate": 1.0,
+      "weak_n": 26,
+      "weak_bet_rate": 0.231,
+      "tp_plus_n": 0,
+      "tp_plus_bet_rate": null,
+      "overall_cbet": 0.364
+    },
+    {
+      "board": "Ad8d3d",
+      "type_code": "5b",
+      "n_holdings": 74,
+      "strong_n": 18,
+      "strong_bet_rate": 0.111,
+      "weak_n": 21,
+      "weak_bet_rate": 0.0,
+      "tp_plus_n": 0,
+      "tp_plus_bet_rate": null,
+      "overall_cbet": 0.041
+    },
+    {
+      "board": "Ad9h8h",
+      "type_code": "2a",
+      "n_holdings": 90,
+      "strong_n": 12,
+      "strong_bet_rate": 0.917,
+      "weak_n": 29,
+      "weak_bet_rate": 0.172,
+      "tp_plus_n": 0,
+      "tp_plus_bet_rate": null,
+      "overall_cbet": 0.289
+    },
+    {
+      "board": "JcJh4s",
+      "type_code": "7x",
+      "n_holdings": 46,
+      "strong_n": 21,
+      "strong_bet_rate": 0.905,
+      "weak_n": 23,
+      "weak_bet_rate": 0.609,
+      "tp_plus_n": 8,
+      "tp_plus_bet_rate": 1.0,
+      "overall_cbet": 0.761
+    },
+    {
+      "board": "Jh4h5s",
+      "type_code": "4a",
+      "n_holdings": 92,
+      "strong_n": 7,
+      "strong_bet_rate": 0.429,
+      "weak_n": 48,
+      "weak_bet_rate": 0.125,
+      "tp_plus_n": 1,
+      "tp_plus_bet_rate": 1.0,
+      "overall_cbet": 0.152
+    },
+    {
+      "board": "Js8d3c",
+      "type_code": "3d",
+      "n_holdings": 57,
+      "strong_n": 9,
+      "strong_bet_rate": 1.0,
+      "weak_n": 21,
+      "weak_bet_rate": 0.619,
+      "tp_plus_n": 1,
+      "tp_plus_bet_rate": 1.0,
+      "overall_cbet": 0.632
+    },
+    {
+      "board": "JsKs5d",
+      "type_code": "1a",
+      "n_holdings": 90,
+      "strong_n": 11,
+      "strong_bet_rate": 1.0,
+      "weak_n": 42,
+      "weak_bet_rate": 0.119,
+      "tp_plus_n": 0,
+      "tp_plus_bet_rate": null,
+      "overall_cbet": 0.211
+    },
+    {
+      "board": "Ks7h2d",
+      "type_code": "1b",
+      "n_holdings": 58,
+      "strong_n": 9,
+      "strong_bet_rate": 1.0,
+      "weak_n": 38,
+      "weak_bet_rate": 0.579,
+      "tp_plus_n": 4,
+      "tp_plus_bet_rate": 1.0,
+      "overall_cbet": 0.672
+    },
+    {
+      "board": "Qc8cAc",
+      "type_code": "5b",
+      "n_holdings": 41,
+      "strong_n": 9,
+      "strong_bet_rate": 0.333,
+      "weak_n": 2,
+      "weak_bet_rate": 0.5,
+      "tp_plus_n": 0,
+      "tp_plus_bet_rate": null,
+      "overall_cbet": 0.122
+    },
+    {
+      "board": "QcAdKh",
+      "type_code": "2f",
+      "n_holdings": 58,
+      "strong_n": 9,
+      "strong_bet_rate": 0.778,
+      "weak_n": 17,
+      "weak_bet_rate": 0.118,
+      "tp_plus_n": 0,
+      "tp_plus_bet_rate": null,
+      "overall_cbet": 0.379
+    },
+    {
+      "board": "Td6h4h",
+      "type_code": "4a",
+      "n_holdings": 91,
+      "strong_n": 11,
+      "strong_bet_rate": 0.818,
+      "weak_n": 38,
+      "weak_bet_rate": 0.132,
+      "tp_plus_n": 1,
+      "tp_plus_bet_rate": 1.0,
+      "overall_cbet": 0.264
+    },
+    {
+      "board": "Th3s2d",
+      "type_code": "4c",
+      "n_holdings": 78,
+      "strong_n": 13,
+      "strong_bet_rate": 1.0,
+      "weak_n": 36,
+      "weak_bet_rate": 0.167,
+      "tp_plus_n": 0,
+      "tp_plus_bet_rate": null,
+      "overall_cbet": 0.346
+    },
+    {
+      "board": "Th4c5d",
+      "type_code": "4c",
+      "n_holdings": 72,
+      "strong_n": 3,
+      "strong_bet_rate": 1.0,
+      "weak_n": 34,
+      "weak_bet_rate": 0.088,
+      "tp_plus_n": 1,
+      "tp_plus_bet_rate": 1.0,
+      "overall_cbet": 0.194
+    },
+    {
+      "board": "TsKcAh",
+      "type_code": "2f",
+      "n_holdings": 70,
+      "strong_n": 7,
+      "strong_bet_rate": 0.857,
+      "weak_n": 15,
+      "weak_bet_rate": 0.333,
+      "tp_plus_n": 0,
+      "tp_plus_bet_rate": null,
+      "overall_cbet": 0.171
+    }
+  ],
+  "per_type": [
+    {
+      "type_code": "1a",
+      "n_boards": 1,
+      "n_holdings": 90,
+      "strong_n": 11,
+      "strong_bet_rate": 1.0,
+      "weak_n": 42,
+      "weak_bet_rate": 0.119
+    },
+    {
+      "type_code": "1b",
+      "n_boards": 1,
+      "n_holdings": 58,
+      "strong_n": 9,
+      "strong_bet_rate": 1.0,
+      "weak_n": 38,
+      "weak_bet_rate": 0.579
+    },
+    {
+      "type_code": "1c",
+      "n_boards": 1,
+      "n_holdings": 66,
+      "strong_n": 9,
+      "strong_bet_rate": 1.0,
+      "weak_n": 26,
+      "weak_bet_rate": 0.231
+    },
+    {
+      "type_code": "2a",
+      "n_boards": 1,
+      "n_holdings": 90,
+      "strong_n": 12,
+      "strong_bet_rate": 0.917,
+      "weak_n": 29,
+      "weak_bet_rate": 0.172
+    },
+    {
+      "type_code": "2f",
+      "n_boards": 2,
+      "n_holdings": 128,
+      "strong_n": 16,
+      "strong_bet_rate": 0.812,
+      "weak_n": 32,
+      "weak_bet_rate": 0.219
+    },
+    {
+      "type_code": "3c",
+      "n_boards": 1,
+      "n_holdings": 71,
+      "strong_n": 4,
+      "strong_bet_rate": 1.0,
+      "weak_n": 25,
+      "weak_bet_rate": 0.32
+    },
+    {
+      "type_code": "3d",
+      "n_boards": 1,
+      "n_holdings": 57,
+      "strong_n": 9,
+      "strong_bet_rate": 1.0,
+      "weak_n": 21,
+      "weak_bet_rate": 0.619
+    },
+    {
+      "type_code": "4a",
+      "n_boards": 3,
+      "n_holdings": 264,
+      "strong_n": 41,
+      "strong_bet_rate": 0.488,
+      "weak_n": 105,
+      "weak_bet_rate": 0.105
+    },
+    {
+      "type_code": "4c",
+      "n_boards": 2,
+      "n_holdings": 150,
+      "strong_n": 16,
+      "strong_bet_rate": 1.0,
+      "weak_n": 70,
+      "weak_bet_rate": 0.129
+    },
+    {
+      "type_code": "4d",
+      "n_boards": 3,
+      "n_holdings": 164,
+      "strong_n": 61,
+      "strong_bet_rate": 0.836,
+      "weak_n": 21,
+      "weak_bet_rate": 0.429
+    },
+    {
+      "type_code": "5b",
+      "n_boards": 2,
+      "n_holdings": 115,
+      "strong_n": 27,
+      "strong_bet_rate": 0.185,
+      "weak_n": 23,
+      "weak_bet_rate": 0.043
+    },
+    {
+      "type_code": "6d",
+      "n_boards": 1,
+      "n_holdings": 62,
+      "strong_n": 11,
+      "strong_bet_rate": 0.818,
+      "weak_n": 8,
+      "weak_bet_rate": 0.75
+    },
+    {
+      "type_code": "7a",
+      "n_boards": 1,
+      "n_holdings": 43,
+      "strong_n": 15,
+      "strong_bet_rate": 0.6,
+      "weak_n": 28,
+      "weak_bet_rate": 0.393
+    },
+    {
+      "type_code": "7x",
+      "n_boards": 2,
+      "n_holdings": 98,
+      "strong_n": 41,
+      "strong_bet_rate": 0.902,
+      "weak_n": 47,
+      "weak_bet_rate": 0.532
+    }
+  ]
+}

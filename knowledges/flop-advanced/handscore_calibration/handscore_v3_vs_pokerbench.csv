@@ -1,0 +1,1457 @@
+board,holding,hand_score,category,action,correct_decision,pot_size
+4s4h3h,AcKc,49,Aハイ+2OC,bet,Bet 2,5
+9dTs8s,Kh9c,43,セカンドペア(強)+BDSD,check,Check,5
+Ad8d3d,KsTc,25,Kハイ+BDFD,check,Check,5
+Js8d3c,7h7c,35,アンダーペア(低),check,Check,5
+5c5dAh,KhQs,22,Kハイ+BDSD,check,Check,5
+Jh4h5s,KsTs,25,Kハイ+BDFD,check,Check,5
+Ad8d3d,Ah5s,50,TPWK+BDFD,check,Check,5
+Ad9h8h,Ah7s,49,TPWK+BDFD+BDSD,check,Check,5
+Ad9h8h,Ks5s,20,Kハイ,check,Check,5
+Ks7h2d,AhQd,27,Aハイ+BDSD,bet,Bet 2,5
+9s7s4c,AcQd,49,Aハイ+2OC,check,Check,5
+4s4h3h,As2s,73,Aハイ+BDFD+GS,check,Check,5
+Ad9h8h,AcKh,75,TPTK+BDFD,bet,Bet 4,5
+8h8cTc,Ts9d,79,2ペア(top2)+BDSD,bet,Bet 2,5
+JsKs5d,Qs9s,63,Qハイ+FD+GS,bet,Bet 4,5
+Ad9h8h,Qs9s,42,セカンドペア(強),check,Check,5
+Jh4h5s,AhTd,30,Aハイ+BDFD,check,Check,5
+5c2d3h,9s7s,32,空振り+2OC,check,Check,5
+TsKcAh,QcTh,48,ボトムペア+GS,check,Check,5
+9dTs8s,Ad5c,27,Aハイ+BDSD,check,Check,5
+8h8cTc,AdTh,78,2ペア(top2),bet,Bet 2,5
+Ks7h2d,As3s,31,Aハイ+BDFD+BDSD,bet,Bet 2,5
+QcAdKh,9d8d,14,空振り+BDFD+BDSD,check,Check,5
+Ad9h8h,Ks8d,32,ボトムペア,check,Check,5
+Qc8cAc,5s5h,40,アンダーペア(低)+BDFD,check,Check,5
+AcKs7d,KhKd,88,ミドルセット,bet,Bet 4,5
+AcKs7d,QsQc,46,アンダーペア(高)+BDSD,check,Check,5
+9dTs8s,8h7h,64,ボトムペア+OESD,check,Check,5
+JsKs5d,2h2c,35,アンダーペア(低),check,Check,5
+Jh4h5s,Qc9s,15,Qハイ,check,Check,5
+7d6c4h,Kc8c,68,Kハイ+BDFD+GS,bet,Bet 2,5
+9dTs8s,6h6d,51,アンダーペア(低)+GS,check,Check,5
+Ad9h8h,7c6c,40,空振り+OESD,bet,Bet 4,5
+Jh4h5s,2s2d,35,アンダーペア(低),check,Check,5
+9s7s4c,Ad5h,25,Aハイ,check,Check,5
+JcJh4s,As6d,25,Aハイ,check,Check,5
+JsKs5d,Jc5c,68,2ペア(split),bet,Bet 4,5
+Th4c5d,Ac9d,25,Aハイ,check,Check,5
+5c2d3h,9d9c,68,オーバーペア(低),bet,Bet 2,5
+JsKs5d,7h5h,32,ボトムペア,check,Check,5
+QcAdKh,9d8d,14,空振り+BDFD+BDSD,check,Check,5
+Ad8d3d,As4s,50,TPWK+BDFD,check,Check,5
+AcKs7d,Qs7s,36,ボトムペア+BDFD+BDSD,check,Check,5
+Jh4h5s,5d5c,88,ミドルセット,bet,Bet 4,5
+Td6h4h,Ts7s,45,TPWK,check,Check,5
+Js8d3c,Ah6s,25,Aハイ,check,Check,5
+QcAdKh,Jc7c,58,Jハイ+BDFD+GS,bet,Bet 4,5
+9s7s4c,AdTs,49,Aハイ+2OC,check,Check,5
+JsKs5d,As3c,30,Aハイ+BDFD,bet,Bet 4,5
+Th3s2d,AcTd,71,TPTK+BDSD,bet,Bet 4,5
+Ad8d3d,KsKh,50,アンダーペア(高)+BDFD,check,Check,5
+4s4h3h,Th8c,32,空振り+2OC,bet,Bet 2,5
+9s7s4c,6s6d,40,アンダーペア(低)+BDFD,check,Check,5
+Th3s2d,Ks8s,25,Kハイ+BDFD,check,Check,5
+Jh4h5s,As4d,32,ボトムペア,check,Check,5
+8h8cTc,Ks8d,85,トリップス,bet,Bet 2,5
+JcJh4s,9c6c,13,空振り+BDFD,bet,Bet 2,5
+Ks7h2d,Ah4d,25,Aハイ,bet,Bet 2,5
+7d6c4h,AsJc,49,Aハイ+2OC,check,Check,5
+QcAdKh,AhKd,79,2ペア(top2)+BDSD,bet,Bet 4,5
+TsKcAh,Kd5d,32,セカンドペア(弱),check,Check,5
+Ks7h2d,AcJd,25,Aハイ,bet,Bet 2,5
+9dTs8s,AdAc,79,オーバーペア(高)+BDSD,check,Check,5
+7d6c4h,KsQd,44,Kハイ+2OC,check,Check,5
+Jh4h5s,KsTc,20,Kハイ,check,Check,5
+JcJh4s,Ah5h,30,Aハイ+BDFD,check,Check,5
+AcKs7d,Kc9h,35,セカンドペア(中),check,Check,5
+7d6c4h,9s9c,68,オーバーペア(低),bet,Bet 2,5
+JsKs5d,Th9h,24,空振り+GS,check,Check,5
+Th4c5d,Ah4h,37,ボトムペア+BDFD,bet,Bet 4,5
+9dTs8s,AhQd,41,Aハイ+GS,bet,Bet 2,5
+Jh4h5s,As8d,25,Aハイ,check,Check,5
+7d6c4h,QhTh,39,Qハイ+2OC,check,Check,5
+Jh4h5s,Qh9h,51,Qハイ+FD,bet,Bet 4,5
+9dTs8s,JcTc,82,TPMK+OESD,check,Check,5
+TsKcAh,QcJc,100,Aハイストレート+BDFD+OESD,bet,Bet 4,5
+9dTs8s,Ad8d,36,ボトムペア+BDFD+BDSD,check,Check,5
+6s8d7c,AcQs,49,Aハイ+2OC,bet,Bet 2,5
+JsKs5d,Ac8d,25,Aハイ,check,Check,5
+Th4c5d,Ah4h,37,ボトムペア+BDFD,bet,Bet 4,5
+Jh4h5s,AhTd,30,Aハイ+BDFD,check,Check,5
+AcKs7d,Qs5s,21,Qハイ+BDFD+BDSD,check,Check,5
+5c2d3h,Td7d,32,空振り+2OC,bet,Bet 2,5
+9s7s4c,Ah5d,25,Aハイ,check,Check,5
+8h8cTc,Td8s,92,フルハウス,bet,Bet 2,5
+Th4c5d,9h9c,35,アンダーペア(低),check,Check,5
+Th3s2d,QsJs,39,Qハイ+2OC,bet,Bet 4,5
+Jh4h5s,Jd8d,50,TPMK,check,Check,5
+TsKcAh,QhJd,100,Aハイストレート+OESD,bet,Bet 4,5
+Ad9h8h,KsQs,22,Kハイ+BDSD,check,Check,5
+Th4c5d,4s4d,85,ボトムセット,bet,Bet 4,5
+TsKcAh,5h5c,35,アンダーペア(低),check,Check,5
+7d6c4h,5h5d,67,アンダーペア(低)+OESD,bet,Bet 2,5
+8h8cTc,Ac6h,30,Aハイ+BDFD,bet,Bet 2,5
+JcJh4s,As7d,25,Aハイ,check,Check,5
+Ad8d3d,7s7d,71,アンダーペア(低)+FD,check,Check,5
+JsKs5d,KcJd,78,2ペア(top2),bet,Bet 4,5
+5c5dAh,9d7d,13,空振り+BDFD,bet,Bet 2,5
+4s4h3h,9s9h,73,2ペア(split)+BDFD,bet,Bet 2,5
+Td6h4h,Jh9d,16,Jハイ+BDFD+BDSD,bet,Bet 4,5
+Qc8cAc,Qs2s,37,セカンドペア(弱)+BDFD,check,Check,5
+4s4h3h,6d5d,40,空振り+OESD,bet,Bet 2,5
+5c2d3h,Kh8c,44,Kハイ+2OC,bet,Bet 2,5
+QcAdKh,JsJc,56,アンダーペア(中)+GS,bet,Bet 4,5
+Qc8cAc,Qd4d,37,セカンドペア(弱)+BDFD,check,Check,5
+4s4h3h,Jc5c,34,Jハイ+2OC,bet,Bet 2,5
+5c2d3h,9d6d,56,空振り+BDFD+GS,bet,Bet 2,5
+9s7s4c,AhQh,49,Aハイ+2OC,check,Check,5
+Td6h4h,Kc8d,20,Kハイ,check,Check,5
+Th4c5d,7h5h,37,セカンドペア(弱)+BDFD,check,Check,5
+Ad9h8h,Ts9s,36,セカンドペア(中)+BDSD,check,Check,5
+JcJh4s,Ac4c,80,2ペア(top+mid)+BDFD,bet,Bet 2,5
+6s8d7c,AdAc,79,オーバーペア(高)+BDSD,check,Check,5
+Td6h4h,Ad9c,25,Aハイ,check,Check,5
+Qc8cAc,Ad9c,86,TPMK+FD,check,Check,5
+Js8d3c,As6s,30,Aハイ+BDFD,check,Check,5
+8h8cTc,Kd5d,20,Kハイ,check,Check,5
+Ad8d3d,Ac6d,81,TPWK+FD,check,Check,5
+Ad8d3d,As5s,50,TPWK+BDFD,check,Check,5
+QcAdKh,JcTh,100,Aハイストレート+OESD,bet,Bet 4,5
+TsKcAh,6c5c,13,空振り+BDFD,check,Check,5
+Ks7h2d,Kd9d,55,TPMK+BDFD,bet,Bet 2,5
+7d6c4h,Kc5c,70,Kハイ+BDFD+OESD,bet,Bet 2,5
+Jh4h5s,Ac4s,32,ボトムペア,check,Check,5
+JcJh4s,Tc8s,8,空振り,bet,Bet 2,5
+Js8d3c,KsKh,78,オーバーペア(高),bet,Bet 2,5
+Jh4h5s,TsTh,45,アンダーペア(中)+BDFD,check,Check,5
+Th4c5d,Jd4d,37,ボトムペア+BDFD,check,Check,5
+AcKs7d,Qh9c,17,Qハイ+BDSD,check,Check,5
+9dTs8s,Td8h,76,2ペア(top+mid)+BDSD,check,Check,5
+JcJh4s,Qc9s,15,Qハイ,bet,Bet 2,5
+9dTs8s,7c5c,40,空振り+OESD,bet,Bet 2,5
+9s7s4c,As9h,75,TPTK+BDFD,bet,Bet 4,5
+TsKcAh,Kh7h,37,セカンドペア(弱)+BDFD,check,Check,5
+8h8cTc,KcJs,44,Kハイ+2OC,bet,Bet 2,5
+5c5dAh,KsTd,20,Kハイ,check,Check,5
+TsKcAh,AcKh,78,2ペア(top2),bet,Bet 4,5
+Qc8cAc,QdTs,40,セカンドペア(中)+BDFD,check,Check,5
+Ad9h8h,KcQc,22,Kハイ+BDSD,check,Check,5
+8h8cTc,AhTh,83,2ペア(top2)+BDFD,bet,Bet 2,5
+JsKs5d,QsJh,46,セカンドペア(強)+BDFD+BDSD,check,Check,5
+4s4h3h,KcTc,44,Kハイ+2OC,check,Check,5
+TsKcAh,Jh9c,26,Jハイ+GS,bet,Bet 4,5
+5c2d3h,7s6s,24,空振り+GS,bet,Bet 2,5
+5c5dAh,Ac3h,78,2ペア(top2),check,Check,5
+6s8d7c,8c6c,79,2ペア(top+mid)+BDFD+BDSD,bet,Bet 2,5
+4s4h3h,Tc8d,32,空振り+2OC,check,Check,5
+7d6c4h,Qd5d,65,Qハイ+BDFD+OESD,bet,Bet 2,5
+Js8d3c,Ah6h,25,Aハイ,check,Check,5
+Td6h4h,As4d,32,ボトムペア,check,Check,5
+Ad9h8h,Jh5h,46,Jハイ+FD,check,Check,5
+JsKs5d,JhTc,35,セカンドペア(中),check,Check,5
+JsKs5d,8h8d,35,アンダーペア(低),check,Check,5
+Th4c5d,5h4h,73,2ペア(split)+BDFD,bet,Bet 4,5
+Th4c5d,Ah9h,30,Aハイ+BDFD,check,Check,5
+Td6h4h,Ks8d,20,Kハイ,check,Check,5
+Ad8d3d,Kc7c,25,Kハイ+BDFD,check,Check,5
+6s8d7c,Qs9h,47,Qハイ+OESD,bet,Bet 2,5
+Qc8cAc,Kc4c,86,フラッシュ+BDSD,bet,Bet 2,5
+Js8d3c,KcQs,44,Kハイ+2OC,bet,Bet 2,5
+5c2d3h,As5h,86,TPTK+GS,bet,Bet 2,5
+9s7s4c,Ad4h,32,ボトムペア,check,Check,5
+Ks7h2d,KdQh,62,TPGK,bet,Bet 2,5
+Th3s2d,Ts9s,55,TPMK+BDFD,bet,Bet 4,5
+9dTs8s,QsJc,100,ストレート(high)+OESD,bet,Bet 2,5
+Jh4h5s,Jd6d,46,TPWK+BDSD,check,Check,5
+9s7s4c,Ad9h,70,TPTK,bet,Bet 4,5
+Th3s2d,AcJs,49,Aハイ+2OC,check,Check,5
+Th4c5d,Ad8c,25,Aハイ,check,Check,5
+6s8d7c,4d4c,51,アンダーペア(低)+GS,check,Check,5
+5c2d3h,Td8h,32,空振り+2OC,bet,Bet 2,5
+9dTs8s,Qd9h,58,セカンドペア(強)+GS,check,Check,5
+7d6c4h,AhAc,78,オーバーペア(高),check,Check,5
+JsKs5d,Jd9s,40,セカンドペア(中)+BDFD,check,Check,5
+Ks7h2d,Ts8h,8,空振り,bet,Bet 2,5
+JsKs5d,Jh4h,32,セカンドペア(弱),check,Check,5
+JcJh4s,AcJs,85,トリップス,bet,Bet 2,5
+7d6c4h,Qc9h,39,Qハイ+2OC,bet,Bet 2,5
+Ad8d3d,Ac5d,81,TPWK+FD,check,Check,5
+Ad8d3d,KsJs,25,Kハイ+BDFD,check,Check,5
+Td6h4h,Jc9s,12,Jハイ+BDSD,check,Check,5
+Ad8d3d,QdTd,85,フラッシュ,bet,Bet 2,5
+Ad9h8h,Kh6h,56,Kハイ+FD,bet,Bet 4,5
+Js8d3c,Kh7h,20,Kハイ,check,Check,5
+7d6c4h,Qd6d,47,セカンドペア(強)+BDFD,bet,Bet 2,5
+Th4c5d,Jh4h,37,ボトムペア+BDFD,check,Check,5
+AcKs7d,Qc9s,17,Qハイ+BDSD,check,Check,5
+Jh4h5s,Ac4d,32,ボトムペア,check,Check,5
+8h8cTc,Ts8s,92,フルハウス,bet,Bet 2,5
+Th3s2d,AhJs,49,Aハイ+2OC,check,Check,5
+Ks7h2d,Td8s,8,空振り,bet,Bet 2,5
+Td6h4h,2s2c,35,アンダーペア(低),check,Check,5
+Jh4h5s,AhTc,30,Aハイ+BDFD,check,Check,5
+Th4c5d,JcTd,50,TPMK,check,Check,5
+Td6h4h,Js8s,10,Jハイ,check,Check,5
+9s7s4c,KcTc,44,Kハイ+2OC,check,Check,5
+Js8d3c,AcKc,49,Aハイ+2OC,bet,Bet 2,5
+Js8d3c,KcQs,44,Kハイ+2OC,bet,Bet 2,5
+Td6h4h,Tc7c,45,TPWK,check,Check,5
+5c5dAh,Ad3c,78,2ペア(top2),check,Check,5
+Th4c5d,Tc8h,50,TPMK,check,Check,5
+Th4c5d,3s3c,36,アンダーペア(低)+BDSD,check,Check,5
+9dTs8s,7s7h,67,アンダーペア(低)+OESD,check,Check,5
+AcKs7d,Ah7h,75,2ペア(top+mid),bet,Bet 4,5
+TsKcAh,Tc9c,37,ボトムペア+BDFD,check,Check,5
+6s8d7c,KdJs,44,Kハイ+2OC,bet,Bet 2,5
+Jh4h5s,Ad8c,25,Aハイ,check,Check,5
+JsKs5d,Ac2c,25,Aハイ,bet,Bet 4,5
+6s8d7c,As5s,75,Aハイ+BDFD+OESD,bet,Bet 2,5
+6s8d7c,5s4s,100,ストレート(mid)+BDFD+OESD,bet,Bet 2,5
+JcJh4s,As6d,25,Aハイ,check,Check,5
+Js8d3c,KdTs,20,Kハイ,bet,Bet 2,5
+AcKs7d,AsJd,50,TPMK,bet,Bet 4,5
+Ad8d3d,Kh9d,38,Kハイ+FD,check,Check,5
+4s4h3h,KhTd,44,Kハイ+2OC,check,Check,5
+5c5dAh,QdJd,20,Qハイ+BDFD,check,Check,5
+AcKs7d,8s8h,35,アンダーペア(低),check,Check,5
+5c2d3h,Ah9h,73,Aハイ+BDFD+GS,bet,Bet 2,5
+6s8d7c,Ad2d,31,Aハイ+BDFD+BDSD,check,Check,5
+Jh4h5s,AhKh,61,Aハイ+FD,check,Check,5
+JcJh4s,Tc6c,13,空振り+BDFD,bet,Bet 2,5
+Td6h4h,Qh9d,20,Qハイ+BDFD,bet,Bet 4,5
+Ks7h2d,Ac8d,25,Aハイ,check,Check,5
+QcAdKh,KdTd,83,セカンドペア(中)+BDFD+GS,bet,Bet 4,5
+9dTs8s,KhJc,52,Kハイ+OESD,bet,Bet 2,5
+Jh4h5s,AhKs,49,Aハイ+2OC,check,Check,5
+4s4h3h,Ac5s,41,Aハイ+GS,check,Check,5
+AcKs7d,KcTh,35,セカンドペア(中),check,Check,5
+Ad8d3d,6d5d,85,フラッシュ,check,Check,5
+Jh4h5s,Kc8s,20,Kハイ,check,Check,5
+5c2d3h,Qd4d,65,Qハイ+BDFD+OESD,bet,Bet 2,5
+QcAdKh,JsTs,100,Aハイストレート+OESD,bet,Bet 4,5
+8h8cTc,Qh2h,20,Qハイ+BDFD,bet,Bet 2,5
+JcJh4s,Ad6h,25,Aハイ,check,Check,5
+9s7s4c,6s6c,40,アンダーペア(低)+BDFD,check,Check,5
+9dTs8s,Qh9h,58,セカンドペア(強)+GS,check,Check,5
+TsKcAh,Kh6h,37,セカンドペア(弱)+BDFD,check,Check,5
+Ad8d3d,9c8c,40,セカンドペア(中)+BDFD,check,Check,5
+6s8d7c,4s4h,51,アンダーペア(低)+GS,check,Check,5
+Ad8d3d,Ah9h,55,TPMK+BDFD,check,Check,5
+Ad8d3d,Kc9h,25,Kハイ+BDFD,check,Check,5
+7d6c4h,Ts7s,50,TPMK,check,Check,5
+9dTs8s,Qh5h,31,Qハイ+GS,check,Check,5
+7d6c4h,AdJh,49,Aハイ+2OC,check,Check,5
+4s4h3h,KcJd,44,Kハイ+2OC,check,Check,5
+Js8d3c,Ks9c,20,Kハイ,bet,Bet 2,5
+Th3s2d,As8d,27,Aハイ+BDSD,check,Check,5
+JsKs5d,9h9d,35,アンダーペア(低),check,Check,5
+Td6h4h,8h7h,56,空振り+FD+GS,bet,Bet 4,5
+9s7s4c,Ad2d,25,Aハイ,bet,Bet 4,5
+6s8d7c,Jd9c,42,Jハイ+OESD,bet,Bet 2,5
+5c5dAh,KcTh,20,Kハイ,check,Check,5
+Ad9h8h,7d7c,36,アンダーペア(低)+BDSD,check,Check,5
+8h8cTc,Ad7s,25,Aハイ,check,Check,5
+5c5dAh,KcJd,20,Kハイ,check,Check,5
+Ad8d3d,KsQs,26,Kハイ+BDFD+BDSD,check,Check,5
+Ad8d3d,As7s,50,TPWK+BDFD,check,Check,5
+4s4h3h,7d7c,68,2ペア(split),bet,Bet 2,5
+Td6h4h,AdAc,78,オーバーペア(高),check,Check,5
+Ks7h2d,As9d,25,Aハイ,check,Check,5
+Ad9h8h,AhTd,54,TPMK+BDFD+BDSD,check,Check,5
+TsKcAh,Td8c,32,ボトムペア,check,Check,5
+JsKs5d,Ah9c,25,Aハイ,check,Check,5
+JcJh4s,5s5h,75,2ペア(top+mid),bet,Bet 2,5
+JsKs5d,Qh4h,17,Qハイ+BDSD,check,Check,5
+Th4c5d,Td9c,50,TPMK,check,Check,5
+QcAdKh,Qs9d,33,ボトムペア+BDSD,check,Check,5
+Ad9h8h,AhKs,75,TPTK+BDFD,bet,Bet 4,5
+Th4c5d,Kh8d,20,Kハイ,check,Check,5
+Ad9h8h,KsQd,22,Kハイ+BDSD,check,Check,5
+Th3s2d,Ac7c,27,Aハイ+BDSD,check,Check,5
+Ad9h8h,Kh4h,56,Kハイ+FD,bet,Bet 4,5
+9s7s4c,JdTc,26,Jハイ+GS,check,Check,5
+Ks7h2d,Ad3s,27,Aハイ+BDSD,bet,Bet 2,5
+TsKcAh,Ac9d,50,TPMK,check,Check,5
+Ad9h8h,Kh8s,37,ボトムペア+BDFD,check,Check,5
+4s4h3h,Ad7h,49,Aハイ+2OC,check,Check,5
+Th4c5d,AcTd,70,TPTK,bet,Bet 4,5
+5c5dAh,9c6c,13,空振り+BDFD,bet,Bet 2,5
+JsKs5d,As2s,61,Aハイ+FD,bet,Bet 4,5
+JsKs5d,3h3d,35,アンダーペア(低),check,Check,5
+Js8d3c,9s7s,56,空振り+BDFD+GS,bet,Bet 2,5
+5c2d3h,KsJh,44,Kハイ+2OC,check,Check,5
+9s7s4c,As6d,30,Aハイ+BDFD,bet,Bet 4,5
+JcJh4s,JdTs,85,トリップス,bet,Bet 2,5
+4s4h3h,AsKc,49,Aハイ+2OC,bet,Bet 2,5
+QcAdKh,Ks2s,33,セカンドペア(弱)+BDSD,check,Check,5
+Th3s2d,Ks5s,25,Kハイ+BDFD,bet,Bet 4,5
+Td6h4h,Qd6d,47,セカンドペア(強)+BDFD,bet,Bet 4,5
+Jh4h5s,6d6c,36,アンダーペア(低)+BDSD,check,Check,5
+Th3s2d,QhQd,78,オーバーペア(高),bet,Bet 4,5
+Ad9h8h,KsQh,26,Kハイ+BDFD+BDSD,check,Check,5
+9s7s4c,Kd4d,32,ボトムペア,check,Check,5
+JsKs5d,Qs9d,31,Qハイ+GS,bet,Bet 4,5
+7d6c4h,Ah5h,75,Aハイ+BDFD+OESD,bet,Bet 2,5
+4s4h3h,As5d,41,Aハイ+GS,check,Check,5
+Ks7h2d,Kh8d,50,TPMK,check,Check,5
+9s7s4c,As6d,30,Aハイ+BDFD,bet,Bet 4,5
+Ad9h8h,As6c,45,TPWK,check,Check,5
+Th3s2d,4h4d,36,アンダーペア(低)+BDSD,check,Check,5
+JcJh4s,Ah5c,25,Aハイ,bet,Bet 2,5
+Td6h4h,Jc4c,32,ボトムペア,check,Check,5
+5c5dAh,9h6h,13,空振り+BDFD,bet,Bet 2,5
+Ks7h2d,AdJd,30,Aハイ+BDFD,bet,Bet 2,5
+Th3s2d,Td9d,55,TPMK+BDFD,bet,Bet 4,5
+TsKcAh,JhJc,56,アンダーペア(中)+GS,check,Check,5
+9dTs8s,Tc6c,61,TPWK+GS,bet,Bet 2,5
+Jh4h5s,Td6d,10,空振り+BDSD,check,Check,5
+JsKs5d,AdQd,73,Aハイ+BDFD+GS,bet,Bet 4,5
+Th3s2d,8s8c,35,アンダーペア(低),check,Check,5
+Th3s2d,Qh5h,20,Qハイ+BDFD,bet,Bet 4,5
+Th4c5d,Tc8d,50,TPMK,check,Check,5
+Jh4h5s,Ad7s,25,Aハイ,check,Check,5
+6s8d7c,Qd2d,21,Qハイ+BDFD+BDSD,bet,Bet 2,5
+4s4h3h,Ad2d,41,Aハイ+GS,check,Check,5
+9s7s4c,Ac6s,30,Aハイ+BDFD,bet,Bet 4,5
+Js8d3c,Ad9d,30,Aハイ+BDFD,check,Check,5
+Td6h4h,AcJh,49,Aハイ+2OC,check,Check,5
+QcAdKh,Th6h,56,空振り+BDFD+GS,bet,Bet 4,5
+9dTs8s,KcQs,36,Kハイ+GS,bet,Bet 2,5
+4s4h3h,9h8h,44,空振り+FD,bet,Bet 2,5
+4s4h3h,Kc8d,44,Kハイ+2OC,check,Check,5
+Jh4h5s,AcQd,49,Aハイ+2OC,check,Check,5
+Ks7h2d,Kc9d,50,TPMK,check,Check,5
+Th3s2d,Ah8c,27,Aハイ+BDSD,check,Check,5
+Jh4h5s,Jc9s,50,TPMK,check,Check,5
+8h8cTc,Js9c,42,Jハイ+OESD,bet,Bet 2,5
+Th3s2d,Ad5d,73,Aハイ+BDFD+GS,bet,Bet 4,5
+7d6c4h,Js5s,42,Jハイ+OESD,bet,Bet 2,5
+AcKs7d,7h6h,32,ボトムペア,bet,Bet 4,5
+Ad9h8h,7s6s,40,空振り+OESD,bet,Bet 4,5
+Td6h4h,5d5c,36,アンダーペア(低)+BDSD,check,Check,5
+9dTs8s,Kh3h,22,Kハイ+BDSD,check,Check,5
+Th3s2d,AhJc,49,Aハイ+2OC,check,Check,5
+JsKs5d,AsQd,41,Aハイ+GS,bet,Bet 4,5
+AcKs7d,QsTs,63,Qハイ+BDFD+GS,bet,Bet 4,5
+Qc8cAc,Jc9s,34,Jハイ+FD+GS,bet,Bet 2,5
+QcAdKh,Td8d,56,空振り+BDFD+GS,bet,Bet 4,5
+Ks7h2d,Jd9s,10,Jハイ,bet,Bet 2,5
+Th3s2d,AdTd,74,TPTK+BDFD+BDSD,bet,Bet 4,5
+Td6h4h,As9c,25,Aハイ,check,Check,5
+QcAdKh,Kc8s,36,セカンドペア(中)+BDSD,check,Check,5
+Ks7h2d,As5h,25,Aハイ,bet,Bet 2,5
+Th3s2d,7s5s,13,空振り+BDFD,check,Check,5
+4s4h3h,Kc8d,44,Kハイ+2OC,check,Check,5
+7d6c4h,Td9d,56,空振り+BDFD+GS,bet,Bet 2,5
+7d6c4h,KsJs,44,Kハイ+2OC,check,Check,5
+AcKs7d,Jh5h,10,Jハイ,check,Check,5
+8h8cTc,Kc9s,26,Kハイ+BDFD+BDSD,bet,Bet 2,5
+Th4c5d,Ah9h,30,Aハイ+BDFD,check,Check,5
+9dTs8s,Ac7d,57,Aハイ+OESD,bet,Bet 2,5
+JsKs5d,JhTs,40,セカンドペア(中)+BDFD,check,Check,5
+Td6h4h,JcTs,50,TPMK,check,Check,5
+AcKs7d,Jd9c,10,Jハイ,check,Check,5
+9dTs8s,4h4d,36,アンダーペア(低)+BDSD,check,Check,5
+8h8cTc,As4d,25,Aハイ,check,Check,5
+QcAdKh,Ac6h,46,TPWK+BDSD,check,Check,5
+JcJh4s,AcKd,49,Aハイ+2OC,bet,Bet 2,5
+TsKcAh,9d9c,35,アンダーペア(低),check,Check,5
+5c2d3h,7s7d,68,オーバーペア(低),bet,Bet 2,5
+Td6h4h,Ah9d,30,Aハイ+BDFD,check,Check,5
+Ad8d3d,Js7s,15,Jハイ+BDFD,check,Check,5
+AcKs7d,6s6h,35,アンダーペア(低),check,Check,5
+QcAdKh,Tc7c,56,空振り+BDFD+GS,bet,Bet 4,5
+AcKs7d,KdTd,40,セカンドペア(中)+BDFD,check,Check,5
+JsKs5d,JhJd,88,ミドルセット,bet,Bet 4,5
+Th4c5d,QhTd,62,TPGK,check,Check,5
+Js8d3c,5h5c,35,アンダーペア(低),check,Check,5
+Ks7h2d,KhKd,92,トップセット,bet,Bet 2,5
+QcAdKh,JsJc,56,アンダーペア(中)+GS,bet,Bet 4,5
+9s7s4c,KhQd,44,Kハイ+2OC,check,Check,5
+TsKcAh,QhQd,61,アンダーペア(高)+GS,check,Check,5
+JsKs5d,JhTs,40,セカンドペア(中)+BDFD,check,Check,5
+TsKcAh,Kh8s,35,セカンドペア(中),check,Check,5
+9dTs8s,Ad5h,27,Aハイ+BDSD,check,Check,5
+Th4c5d,Ac4d,32,ボトムペア,check,Check,5
+Jh4h5s,AsKs,49,Aハイ+2OC,check,Check,5
+8h8cTc,Ad8d,85,トリップス,bet,Bet 2,5
+Js8d3c,Ah3h,32,ボトムペア,bet,Bet 2,5
+5c5dAh,Ad5h,92,フルハウス,bet,Bet 2,5
+Td6h4h,2d2c,35,アンダーペア(低),check,Check,5
+Ad9h8h,Tc9c,36,セカンドペア(中)+BDSD,check,Check,5
+6s8d7c,Qd9d,65,Qハイ+BDFD+OESD,bet,Bet 2,5
+JsKs5d,Ah8h,25,Aハイ,check,Check,5
+Qc8cAc,Qs6s,37,セカンドペア(弱)+BDFD,check,Check,5
+9s7s4c,AsQh,49,Aハイ+2OC,check,Check,5
+Ad8d3d,Ac4s,50,TPWK+BDFD,check,Check,5
+Ad9h8h,As6d,45,TPWK,check,Check,5
+7d6c4h,Ks4s,32,ボトムペア,check,Check,5
+QcAdKh,Kc2c,36,セカンドペア(弱)+BDFD+BDSD,check,Check,5
+JsKs5d,Qc4c,17,Qハイ+BDSD,check,Check,5
+5c5dAh,KdTd,25,Kハイ+BDFD,check,Check,5
+TsKcAh,Kd9h,35,セカンドペア(中),check,Check,5
+8h8cTc,As5h,25,Aハイ,check,Check,5
+Qc8cAc,JdTc,34,Jハイ+FD+GS,check,Check,5
+Td6h4h,KhQc,44,Kハイ+2OC,bet,Bet 4,5
+QcAdKh,7s5s,10,空振り+BDSD,check,Check,5
+AcKs7d,Ad2d,50,TPWK+BDFD,check,Check,5
+AcKs7d,Kc8s,35,セカンドペア(中),check,Check,5
+7d6c4h,Qh7h,67,TPGK+BDFD,bet,Bet 2,5
+9dTs8s,Kc9h,43,セカンドペア(強)+BDSD,check,Check,5
+QcAdKh,QsQd,86,ボトムセット+BDSD,bet,Bet 4,5
+AcKs7d,Qd9h,17,Qハイ+BDSD,check,Check,5
+9dTs8s,Ah4h,27,Aハイ+BDSD,check,Check,5
+Th3s2d,Jh5h,15,Jハイ+BDFD,bet,Bet 4,5
+AcKs7d,Js9d,10,Jハイ,check,Check,5
+5c5dAh,AsAc,92,フルハウス,bet,Bet 2,5
+4s4h3h,Kc9d,44,Kハイ+2OC,check,Check,5
+Qc8cAc,KcTd,44,Kハイ+FD+GS,bet,Bet 2,5
+8h8cTc,Jh5h,15,Jハイ+BDFD,bet,Bet 2,5
+AcKs7d,QdQc,46,アンダーペア(高)+BDSD,check,Check,5
+QcAdKh,TsTc,56,アンダーペア(中)+GS,bet,Bet 4,5
+Ks7h2d,Ad7s,42,セカンドペア(強),bet,Bet 2,5
+Th4c5d,Ac6s,27,Aハイ+BDSD,bet,Bet 4,5
+Th3s2d,KsKc,78,オーバーペア(高),bet,Bet 4,5
+Ad9h8h,Jd9s,35,セカンドペア(中),check,Check,5
+Ad9h8h,Kc8d,32,ボトムペア,check,Check,5
+Qc8cAc,KhTc,44,Kハイ+FD+GS,check,Check,5
+Ad9h8h,Kc8s,32,ボトムペア,check,Check,5
+JsKs5d,Jd9c,35,セカンドペア(中),check,Check,5
+9s7s4c,AdJh,49,Aハイ+2OC,check,Check,5
+AcKs7d,Ah7c,75,2ペア(top+mid),bet,Bet 4,5
+8h8cTc,Qh7h,20,Qハイ+BDFD,bet,Bet 2,5
+9s7s4c,TsTc,77,オーバーペア(中)+BDFD,bet,Bet 4,5
+Ks7h2d,Ac9h,25,Aハイ,check,Check,5
+Ad9h8h,Qh5h,51,Qハイ+FD,check,Check,5
+Th4c5d,Js5s,35,セカンドペア(中),check,Check,5
+Jh4h5s,Ah7c,30,Aハイ+BDFD,bet,Bet 4,5
+QcAdKh,9h6h,14,空振り+BDFD+BDSD,check,Check,5
+Ks7h2d,As4s,30,Aハイ+BDFD,bet,Bet 2,5
+Th3s2d,Ks8c,20,Kハイ,check,Check,5
+4s4h3h,Td9h,32,空振り+2OC,bet,Bet 2,5
+QcAdKh,Kc9s,36,セカンドペア(中)+BDSD,check,Check,5
+JsKs5d,Tc6c,8,空振り,check,Check,5
+9dTs8s,Kd9s,46,セカンドペア(強)+BDFD+BDSD,check,Check,5
+Ad9h8h,Ac9d,78,2ペア(top2),bet,Bet 4,5
+9dTs8s,Ah4c,27,Aハイ+BDSD,check,Check,5
+AcKs7d,QdQc,46,アンダーペア(高)+BDSD,check,Check,5
+5c5dAh,KsJd,20,Kハイ,check,Check,5
+Ad8d3d,As9d,86,TPMK+FD,check,Check,5
+Th3s2d,Ah7h,31,Aハイ+BDFD+BDSD,check,Check,5
+7d6c4h,As7h,70,TPTK,bet,Bet 2,5
+7d6c4h,Qh6h,47,セカンドペア(強)+BDFD,bet,Bet 2,5
+JsKs5d,AhQd,41,Aハイ+GS,check,Check,5
+JsKs5d,AhTd,41,Aハイ+GS,check,Check,5
+9s7s4c,QsTc,39,Qハイ+2OC,bet,Bet 4,5
+Td6h4h,AdJs,49,Aハイ+2OC,check,Check,5
+5c5dAh,As4d,78,2ペア(top2),check,Check,5
+Th3s2d,Ah7h,31,Aハイ+BDFD+BDSD,check,Check,5
+6s8d7c,3s3h,36,アンダーペア(低)+BDSD,check,Check,5
+Ad9h8h,QhQd,50,アンダーペア(高)+BDFD,check,Check,5
+6s8d7c,Jh9h,42,Jハイ+OESD,bet,Bet 2,5
+9s7s4c,KhQh,44,Kハイ+2OC,check,Check,5
+JsKs5d,Ad8c,25,Aハイ,check,Check,5
+TsKcAh,Jc9d,26,Jハイ+GS,bet,Bet 4,5
+6s8d7c,Qh3h,17,Qハイ+BDSD,check,Check,5
+Td6h4h,Ac3s,25,Aハイ,check,Check,5
+9dTs8s,9s6s,80,セカンドペア(弱)+FD+GS,check,Check,5
+8h8cTc,Ad5s,25,Aハイ,check,Check,5
+Th4c5d,6h6c,36,アンダーペア(低)+BDSD,check,Check,5
+Ad8d3d,As5d,81,TPWK+FD,check,Check,5
+Td6h4h,QdJd,39,Qハイ+2OC,bet,Bet 4,5
+AcKs7d,JcTc,58,Jハイ+BDFD+GS,bet,Bet 4,5
+9dTs8s,Qh5h,31,Qハイ+GS,check,Check,5
+Ad9h8h,Qc9s,42,セカンドペア(強),check,Check,5
+JcJh4s,AsKs,49,Aハイ+2OC,bet,Bet 2,5
+AcKs7d,9s6s,13,空振り+BDFD,bet,Bet 4,5
+QcAdKh,Ac6d,46,TPWK+BDSD,check,Check,5
+7d6c4h,Ac3c,73,Aハイ+BDFD+GS,check,Check,5
+Th4c5d,As4d,32,ボトムペア,check,Check,5
+Td6h4h,JdJc,72,オーバーペア(中),bet,Bet 4,5
+AcKs7d,Kh6h,32,セカンドペア(弱),check,Check,5
+TsKcAh,KhTd,68,2ペア(split),check,Check,5
+8h8cTc,Ac6s,30,Aハイ+BDFD,bet,Bet 2,5
+5c2d3h,Jh9d,34,Jハイ+2OC,bet,Bet 2,5
+Th4c5d,AhJh,49,Aハイ+2OC,check,Check,5
+5c5dAh,KsQd,22,Kハイ+BDSD,check,Check,5
+9dTs8s,JdTc,82,TPMK+OESD,check,Check,5
+Th4c5d,9d7d,13,空振り+BDFD,check,Check,5
+Ad8d3d,Ks9d,38,Kハイ+FD,check,Check,5
+5c2d3h,Qh2h,37,ボトムペア+BDFD,bet,Bet 2,5
+7d6c4h,AsJs,49,Aハイ+2OC,check,Check,5
+Jh4h5s,Ac8h,30,Aハイ+BDFD,check,Check,5
+Th4c5d,Ad4h,32,ボトムペア,check,Check,5
+Th3s2d,QsJc,39,Qハイ+2OC,bet,Bet 4,5
+Th4c5d,3s3c,36,アンダーペア(低)+BDSD,check,Check,5
+Qc8cAc,KhKd,49,アンダーペア(高)+BDFD+BDSD,check,Check,5
+9s7s4c,Kc8c,26,Kハイ+BDFD+BDSD,check,Check,5
+Ad8d3d,Ac5d,81,TPWK+FD,check,Check,5
+4s4h3h,Kd9c,44,Kハイ+2OC,check,Check,5
+8h8cTc,Qc6c,51,Qハイ+FD,bet,Bet 2,5
+JsKs5d,Jc9h,35,セカンドペア(中),check,Check,5
+TsKcAh,Ad9h,50,TPMK,check,Check,5
+Th3s2d,Ad7h,27,Aハイ+BDSD,check,Check,5
+Js8d3c,KdJd,75,TPTK+BDFD,bet,Bet 2,5
+8h8cTc,Ad6c,30,Aハイ+BDFD,bet,Bet 2,5
+Jh4h5s,Jc7c,45,TPWK,check,Check,5
+8h8cTc,Th8d,92,フルハウス,bet,Bet 2,5
+JsKs5d,8h6h,8,空振り,check,Check,5
+5c2d3h,KcQc,44,Kハイ+2OC,check,Check,5
+9s7s4c,Ad8s,31,Aハイ+BDFD+BDSD,check,Check,5
+9dTs8s,AsJc,57,Aハイ+OESD,bet,Bet 2,5
+Th3s2d,JsTc,50,TPMK,check,Check,5
+Ad9h8h,9d8d,73,2ペア(split)+BDFD,bet,Bet 4,5
+9dTs8s,Th6h,61,TPWK+GS,bet,Bet 2,5
+JcJh4s,Kd2d,20,Kハイ,bet,Bet 2,5
+Th3s2d,Tc7c,45,TPWK,check,Check,5
+6s8d7c,Ad9s,57,Aハイ+OESD,check,Check,5
+8h8cTc,Ah9h,31,Aハイ+BDFD+BDSD,check,Check,5
+5c5dAh,KdJh,20,Kハイ,check,Check,5
+TsKcAh,Qh9c,31,Qハイ+GS,bet,Bet 4,5
+5c5dAh,Kh4h,25,Kハイ+BDFD,bet,Bet 2,5
+JsKs5d,JhTd,35,セカンドペア(中),check,Check,5
+Th3s2d,7d5d,13,空振り+BDFD,check,Check,5
+9s7s4c,AsJd,49,Aハイ+2OC,check,Check,5
+6s8d7c,8h8c,93,トップセット+BDSD,bet,Bet 2,5
+9s7s4c,AdTd,49,Aハイ+2OC,check,Check,5
+Td6h4h,AsTs,70,TPTK,bet,Bet 4,5
+JsKs5d,JhJc,88,ミドルセット,bet,Bet 4,5
+9s7s4c,6d6c,35,アンダーペア(低),check,Check,5
+9s7s4c,Jd8d,26,Jハイ+GS,check,Check,5
+JsKs5d,Ah9c,25,Aハイ,check,Check,5
+QcAdKh,Jd7d,58,Jハイ+BDFD+GS,bet,Bet 4,5
+JcJh4s,Kc4c,80,2ペア(top+mid)+BDFD,bet,Bet 2,5
+Th4c5d,AcJs,49,Aハイ+2OC,check,Check,5
+9s7s4c,Jh4h,32,ボトムペア,check,Check,5
+Jh4h5s,Ks8h,25,Kハイ+BDFD,bet,Bet 4,5
+Qc8cAc,Qs2s,37,セカンドペア(弱)+BDFD,check,Check,5
+Th3s2d,Kc8c,20,Kハイ,check,Check,5
+Qc8cAc,7s7h,40,アンダーペア(低)+BDFD,check,Check,5
+Th3s2d,JsJd,72,オーバーペア(中),bet,Bet 4,5
+5c5dAh,4s4h,68,2ペア(split),bet,Bet 2,5
+9s7s4c,2s2d,40,アンダーペア(低)+BDFD,bet,Bet 4,5
+Ad8d3d,Kh8h,47,セカンドペア(強)+BDFD,check,Check,5
+Js8d3c,4h4d,35,アンダーペア(低),check,Check,5
+9dTs8s,AdJh,57,Aハイ+OESD,check,Check,5
+4s4h3h,Tc8d,32,空振り+2OC,check,Check,5
+QcAdKh,AcQd,76,2ペア(top+mid)+BDSD,bet,Bet 4,5
+Th3s2d,Ah9h,31,Aハイ+BDFD+BDSD,check,Check,5
+Td6h4h,Qs9c,15,Qハイ,check,Check,5
+Jh4h5s,As4c,32,ボトムペア,check,Check,5
+Td6h4h,Ad4d,37,ボトムペア+BDFD,bet,Bet 4,5
+7d6c4h,KdTd,44,Kハイ+2OC,check,Check,5
+QcAdKh,QsTh,48,ボトムペア+GS,check,Check,5
+Ad9h8h,QdJs,31,Qハイ+GS,check,Check,5
+Ad9h8h,9s9d,88,ミドルセット,bet,Bet 4,5
+Ad8d3d,As4s,50,TPWK+BDFD,check,Check,5
+Ks7h2d,QcJh,17,Qハイ+BDSD,check,Check,5
+5c2d3h,AhQh,73,Aハイ+BDFD+GS,bet,Bet 2,5
+Jh4h5s,AhJd,75,TPTK+BDFD,check,Check,5
+7d6c4h,Kd8d,68,Kハイ+BDFD+GS,bet,Bet 2,5
+Th4c5d,Ah9c,25,Aハイ,check,Check,5
+9dTs8s,Jh9s,67,セカンドペア(中)+OESD,check,Check,5
+Jh4h5s,Qs9d,15,Qハイ,check,Check,5
+Th4c5d,Ac9s,25,Aハイ,check,Check,5
+TsKcAh,JdTh,48,ボトムペア+GS,check,Check,5
+JsKs5d,Th8c,8,空振り,check,Check,5
+5c2d3h,Kc3c,47,セカンドペア(強)+BDFD,bet,Bet 2,5
+TsKcAh,JcTd,48,ボトムペア+GS,check,Check,5
+TsKcAh,Kd2d,32,セカンドペア(弱),check,Check,5
+Ad9h8h,AcTd,51,TPMK+BDSD,check,Check,5
+TsKcAh,As6c,45,TPWK,check,Check,5
+Ad9h8h,AhAc,97,トップセット+BDFD,bet,Bet 4,5
+Jh4h5s,Tc9d,10,空振り+BDSD,check,Check,5
+JcJh4s,Qh9s,15,Qハイ,bet,Bet 2,5
+9s7s4c,9d6d,45,TPWK,check,Check,5
+Th4c5d,Ad7d,30,Aハイ+BDFD,check,Check,5
+6s8d7c,Ks8c,71,TPTK+BDSD,check,Check,5
+Td6h4h,AcJd,49,Aハイ+2OC,check,Check,5
+TsKcAh,As7h,45,TPWK,check,Check,5
+Ad8d3d,KsQc,26,Kハイ+BDFD+BDSD,check,Check,5
+4s4h3h,KsQh,44,Kハイ+2OC,check,Check,5
+Ad8d3d,Qh8h,47,セカンドペア(強)+BDFD,check,Check,5
+Jh4h5s,Tc9c,10,空振り+BDSD,check,Check,5
+AcKs7d,Jc9c,15,Jハイ+BDFD,bet,Bet 4,5
+QcAdKh,Qh8h,36,ボトムペア+BDFD+BDSD,check,Check,5
+9dTs8s,9s6s,80,セカンドペア(弱)+FD+GS,check,Check,5
+JsKs5d,AdJh,42,セカンドペア(強),check,Check,5
+4s4h3h,AsTc,49,Aハイ+2OC,check,Check,5
+Jh4h5s,Jd9d,50,TPMK,check,Check,5
+JsKs5d,KhKc,92,トップセット,bet,Bet 4,5
+Ad9h8h,Ts9c,36,セカンドペア(中)+BDSD,check,Check,5
+5c5dAh,8d6d,13,空振り+BDFD,bet,Bet 2,5
+QcAdKh,TsTh,56,アンダーペア(中)+GS,bet,Bet 4,5
+Ad9h8h,Jc9s,35,セカンドペア(中),check,Check,5
+9dTs8s,6c5c,24,空振り+GS,check,Check,5
+5c5dAh,9h9c,68,2ペア(split),bet,Bet 2,5
+JcJh4s,JdTc,85,トリップス,bet,Bet 2,5
+Ad9h8h,QsJd,31,Qハイ+GS,check,Check,5
+9dTs8s,Kc8d,33,ボトムペア+BDSD,check,Check,5
+Ad9h8h,Ks4s,20,Kハイ,check,Check,5
+Ad9h8h,Td7d,58,空振り+BDFD+OESD,bet,Bet 4,5
+QcAdKh,Kc8d,36,セカンドペア(中)+BDSD,check,Check,5
+Qc8cAc,KsTc,44,Kハイ+FD+GS,check,Check,5
+9s7s4c,2h2d,35,アンダーペア(低),check,Check,5
+TsKcAh,8s8c,35,アンダーペア(低),check,Check,5
+TsKcAh,Td9d,32,ボトムペア,check,Check,5
+Th4c5d,Jc9c,16,Jハイ+BDFD+BDSD,bet,Bet 4,5
+Ad8d3d,Kc7c,25,Kハイ+BDFD,check,Check,5
+Js8d3c,KdKc,78,オーバーペア(高),bet,Bet 2,5
+Ad8d3d,Ac7h,50,TPWK+BDFD,check,Check,5
+6s8d7c,Jc9s,42,Jハイ+OESD,bet,Bet 2,5
+5c2d3h,As7h,41,Aハイ+GS,check,Check,5
+Td6h4h,6d5d,36,セカンドペア(弱)+BDFD+BDSD,bet,Bet 4,5
+5c5dAh,9s6s,8,空振り,bet,Bet 2,5
+Ad9h8h,6h5h,56,空振り+FD+GS,bet,Bet 4,5
+Ad8d3d,KdTs,38,Kハイ+FD,bet,Bet 2,5
+9s7s4c,KdQc,44,Kハイ+2OC,check,Check,5
+JsKs5d,QsJc,46,セカンドペア(強)+BDFD+BDSD,check,Check,5
+Td6h4h,Tc7c,45,TPWK,check,Check,5
+Th4c5d,Kh8c,20,Kハイ,check,Check,5
+Js8d3c,Kh8h,42,セカンドペア(強),bet,Bet 2,5
+Jh4h5s,Ad9h,30,Aハイ+BDFD,check,Check,5
+Th4c5d,6h6d,36,アンダーペア(低)+BDSD,check,Check,5
+5c2d3h,AdTc,41,Aハイ+GS,check,Check,5
+Ad8d3d,Td8h,71,セカンドペア(中)+FD,check,Check,5
+JcJh4s,As4d,75,2ペア(top+mid),bet,Bet 2,5
+Td6h4h,Js9c,12,Jハイ+BDSD,check,Check,5
+Ks7h2d,Ac6s,25,Aハイ,check,Check,5
+7d6c4h,7s7h,92,トップセット,bet,Bet 2,5
+QcAdKh,KdTc,51,セカンドペア(中)+GS,check,Check,5
+JsKs5d,Qc8c,17,Qハイ+BDSD,check,Check,5
+Qc8cAc,QhTh,40,セカンドペア(中)+BDFD,check,Check,5
+AcKs7d,TsTd,40,アンダーペア(中),check,Check,5
+JsKs5d,Ad8h,25,Aハイ,check,Check,5
+Js8d3c,Qh8h,42,セカンドペア(強),check,Check,5
+Th4c5d,AdJc,49,Aハイ+2OC,check,Check,5
+5c2d3h,Kd4d,70,Kハイ+BDFD+OESD,bet,Bet 2,5
+Ks7h2d,As8s,30,Aハイ+BDFD,check,Check,5
+5c5dAh,9c8c,13,空振り+BDFD,bet,Bet 2,5
+6s8d7c,AhAd,79,オーバーペア(高)+BDSD,check,Check,5
+Jh4h5s,Qs9c,15,Qハイ,check,Check,5
+Qc8cAc,6h6d,40,アンダーペア(低)+BDFD,check,Check,5
+7d6c4h,KhQd,44,Kハイ+2OC,check,Check,5
+JcJh4s,5h5d,75,2ペア(top+mid),bet,Bet 2,5
+4s4h3h,Ad4d,85,トリップス,bet,Bet 2,5
+Td6h4h,8s6s,35,セカンドペア(中),check,Check,5
+TsKcAh,7s7d,35,アンダーペア(低),check,Check,5
+Js8d3c,QsQd,78,オーバーペア(高),bet,Bet 2,5
+Td6h4h,AdKc,49,Aハイ+2OC,check,Check,5
+Td6h4h,Ah7c,30,Aハイ+BDFD,bet,Bet 4,5
+Td6h4h,Qc3c,15,Qハイ,check,Check,5
+4s4h3h,2h2c,76,2ペア(top+bot)+BDFD+BDSD,bet,Bet 2,5
+9dTs8s,7h5h,40,空振り+OESD,bet,Bet 2,5
+6s8d7c,Ts8s,98,TPMK+BDFD+GS,bet,Bet 2,5
+Js8d3c,6h6d,35,アンダーペア(低),check,Check,5
+4s4h3h,Ad6h,49,Aハイ+2OC,check,Check,5
+Th4c5d,AhJd,49,Aハイ+2OC,check,Check,5
+JcJh4s,7s7d,75,2ペア(top+mid),bet,Bet 2,5
+Js8d3c,Jd4d,50,TPWK+BDFD,bet,Bet 2,5
+Th4c5d,Ks9c,20,Kハイ,check,Check,5
+JsKs5d,ThTd,40,アンダーペア(中),check,Check,5
+Ad8d3d,Td7d,85,フラッシュ,check,Check,5
+9dTs8s,Qc4c,31,Qハイ+GS,check,Check,5
+QcAdKh,Qd9c,33,ボトムペア+BDSD,check,Check,5
+JcJh4s,4d4c,92,フルハウス,bet,Bet 2,5
+9dTs8s,4h4d,36,アンダーペア(低)+BDSD,check,Check,5
+Th3s2d,4s4c,36,アンダーペア(低)+BDSD,check,Check,5
+Jh4h5s,3h3c,39,アンダーペア(低)+BDFD+BDSD,check,Check,5
+Th4c5d,AhJs,49,Aハイ+2OC,check,Check,5
+6s8d7c,Qs2s,21,Qハイ+BDFD+BDSD,bet,Bet 2,5
+JsKs5d,Qc3c,17,Qハイ+BDSD,check,Check,5
+9s7s4c,Jc5c,15,Jハイ+BDFD,bet,Bet 4,5
+Jh4h5s,Tc7c,8,空振り,check,Check,5
+Td6h4h,2h2c,40,アンダーペア(低)+BDFD,check,Check,5
+AcKs7d,AdQc,63,TPGK+BDSD,bet,Bet 4,5
+Ks7h2d,Kh9d,50,TPMK,check,Check,5
+5c5dAh,KsQs,22,Kハイ+BDSD,check,Check,5
+JcJh4s,AsJs,90,トリップス+BDFD,bet,Bet 2,5
+Jh4h5s,2s2c,35,アンダーペア(低),check,Check,5
+8h8cTc,Ts9c,82,2ペア(top2)+BDFD+BDSD,bet,Bet 2,5
+5c2d3h,9s7s,32,空振り+2OC,check,Check,5
+Qc8cAc,KdQh,46,セカンドペア(強)+BDFD+BDSD,check,Check,5
+TsKcAh,6s5s,13,空振り+BDFD,check,Check,5
+TsKcAh,KdQs,58,セカンドペア(強)+GS,bet,Bet 4,5
+Ad9h8h,9c8c,68,2ペア(split),bet,Bet 4,5
+Jh4h5s,Kh3h,56,Kハイ+FD,bet,Bet 4,5
+4s4h3h,QhTs,39,Qハイ+2OC,bet,Bet 2,5
+4s4h3h,KcTs,44,Kハイ+2OC,check,Check,5
+5c2d3h,9s7s,32,空振り+2OC,check,Check,5
+Jh4h5s,AdKs,49,Aハイ+2OC,check,Check,5
+9dTs8s,JcTd,82,TPMK+OESD,check,Check,5
+Td6h4h,JcTc,50,TPMK,check,Check,5
+QcAdKh,Jh7h,58,Jハイ+BDFD+GS,bet,Bet 4,5
+8h8cTc,Ah7h,30,Aハイ+BDFD,check,Check,5
+Jh4h5s,AsQc,49,Aハイ+2OC,check,Check,5
+6s8d7c,Ad4s,41,Aハイ+GS,bet,Bet 2,5
+7d6c4h,KcJh,44,Kハイ+2OC,check,Check,5
+Jh4h5s,AsQs,49,Aハイ+2OC,check,Check,5
+Qc8cAc,AsTc,86,TPMK+FD,check,Check,5
+Ad8d3d,Ac6c,50,TPWK+BDFD,check,Check,5
+Qc8cAc,KsTc,44,Kハイ+FD+GS,check,Check,5
+JsKs5d,Jh9c,35,セカンドペア(中),check,Check,5
+TsKcAh,8h8d,35,アンダーペア(低),check,Check,5
+Jh4h5s,Qs9c,15,Qハイ,check,Check,5
+6s8d7c,As7s,46,セカンドペア(強)+BDFD+BDSD,bet,Bet 2,5
+JsKs5d,JhJc,88,ミドルセット,bet,Bet 4,5
+Ad9h8h,As7d,46,TPWK+BDSD,check,Check,5
+Ad9h8h,7d6d,58,空振り+BDFD+OESD,bet,Bet 4,5
+QcAdKh,Jd9h,26,Jハイ+GS,bet,Bet 4,5
+Td6h4h,Jc6c,35,セカンドペア(中),check,Check,5
+JsKs5d,KcJh,78,2ペア(top2),bet,Bet 4,5
+Js8d3c,8h8c,88,ミドルセット,bet,Bet 2,5
+6s8d7c,7h7d,89,ミドルセット+BDSD,bet,Bet 2,5
+TsKcAh,QhTc,48,ボトムペア+GS,check,Check,5
+Jh4h5s,Ah3s,41,Aハイ+GS,bet,Bet 4,5
+Ad9h8h,Kc5c,20,Kハイ,check,Check,5
+9dTs8s,Ad4h,27,Aハイ+BDSD,check,Check,5
+Ad8d3d,KhJc,25,Kハイ+BDFD,check,Check,5
+4s4h3h,Kd9h,44,Kハイ+2OC,check,Check,5
+TsKcAh,Kh9d,35,セカンドペア(中),check,Check,5
+JsKs5d,Tc8d,8,空振り,check,Check,5
+JsKs5d,8c6c,8,空振り,check,Check,5
+Ad8d3d,Ah4s,50,TPWK+BDFD,check,Check,5
+Ad8d3d,Ts8c,40,セカンドペア(中)+BDFD,check,Check,5
+Th3s2d,Ah6c,27,Aハイ+BDSD,bet,Bet 4,5
+Td6h4h,As7d,25,Aハイ,check,Check,5
+Jh4h5s,Ac7d,25,Aハイ,check,Check,5
+4s4h3h,Ad6h,49,Aハイ+2OC,check,Check,5
+AcKs7d,3s3d,35,アンダーペア(低),bet,Bet 4,5
+Jh4h5s,QhTd,21,Qハイ+BDFD+BDSD,bet,Bet 4,5
+AcKs7d,AsJs,55,TPMK+BDFD,bet,Bet 4,5
+7d6c4h,Js4s,32,ボトムペア,check,Check,5
+Ad8d3d,QdTd,85,フラッシュ,bet,Bet 2,5
+9s7s4c,Jc5c,15,Jハイ+BDFD,bet,Bet 4,5
+Jh4h5s,Ad4s,32,ボトムペア,check,Check,5
+7d6c4h,9s9c,68,オーバーペア(低),bet,Bet 2,5
+AcKs7d,AdJc,50,TPMK,bet,Bet 4,5
+Ad8d3d,As4c,50,TPWK+BDFD,check,Check,5
+Ad9h8h,Kc6c,20,Kハイ,check,Check,5
+Js8d3c,Ad3h,32,ボトムペア,bet,Bet 2,5
+JcJh4s,Qd3d,15,Qハイ,bet,Bet 2,5
+9s7s4c,KdJh,44,Kハイ+2OC,check,Check,5
+Th3s2d,As9d,27,Aハイ+BDSD,check,Check,5
+Jh4h5s,2d2c,35,アンダーペア(低),check,Check,5
+Jh4h5s,Ah8c,30,Aハイ+BDFD,bet,Bet 4,5
+Qc8cAc,As6c,81,TPWK+FD,check,Check,5
+4s4h3h,9s8s,32,空振り+2OC,bet,Bet 2,5
+5c5dAh,8d6d,13,空振り+BDFD,bet,Bet 2,5
+Js8d3c,Ac8c,47,セカンドペア(強)+BDFD,bet,Bet 2,5
+AcKs7d,As7s,80,2ペア(top+mid)+BDFD,bet,Bet 4,5
+6s8d7c,4s4c,51,アンダーペア(低)+GS,check,Check,5
+Jh4h5s,AcTc,25,Aハイ,check,Check,5
+Ad8d3d,Ah6h,50,TPWK+BDFD,check,Check,5
+4s4h3h,Ad7d,49,Aハイ+2OC,check,Check,5
+Td6h4h,AcKc,49,Aハイ+2OC,check,Check,5
+TsKcAh,JsTc,48,ボトムペア+GS,check,Check,5
+Ad9h8h,Qc9s,42,セカンドペア(強),check,Check,5
+Th3s2d,JdTc,50,TPMK,check,Check,5
+Ad9h8h,Js9c,35,セカンドペア(中),check,Check,5
+QcAdKh,QhTh,80,ボトムペア+BDFD+GS,check,Check,5
+9s7s4c,KsJs,56,Kハイ+FD,bet,Bet 4,5
+Ad8d3d,4h4d,71,アンダーペア(低)+FD,check,Check,5
+TsKcAh,8s8h,35,アンダーペア(低),check,Check,5
+7d6c4h,AdJh,49,Aハイ+2OC,check,Check,5
+JsKs5d,QhQd,46,アンダーペア(高)+BDSD,check,Check,5
+Td6h4h,Ah5d,31,Aハイ+BDFD+BDSD,bet,Bet 4,5
+TsKcAh,5s5c,35,アンダーペア(低),check,Check,5
+TsKcAh,Kd7d,32,セカンドペア(弱),check,Check,5
+Qc8cAc,5s5d,40,アンダーペア(低)+BDFD,check,Check,5
+4s4h3h,KdTc,44,Kハイ+2OC,check,Check,5
+Ad8d3d,9s9c,40,アンダーペア(低)+BDFD,check,Check,5
+5c2d3h,Td9c,32,空振り+2OC,bet,Bet 2,5
+5c5dAh,As2s,78,2ペア(top2),check,Check,5
+JsKs5d,AcQd,41,Aハイ+GS,check,Check,5
+5c5dAh,Th8h,13,空振り+BDFD,bet,Bet 2,5
+Qc8cAc,TdTc,76,アンダーペア(中)+FD,check,Check,5
+AcKs7d,AhAd,92,トップセット,bet,Bet 4,5
+5c5dAh,8s8c,68,2ペア(split),bet,Bet 2,5
+9s7s4c,Js6s,46,Jハイ+FD,check,Check,5
+Js8d3c,QdJd,67,TPGK+BDFD,bet,Bet 2,5
+7d6c4h,4s4c,85,ボトムセット,bet,Bet 2,5
+TsKcAh,Ks9c,35,セカンドペア(中),check,Check,5
+JsKs5d,KcJc,78,2ペア(top2),bet,Bet 4,5
+Js8d3c,Qd9s,31,Qハイ+GS,bet,Bet 2,5
+8h8cTc,Qd9c,31,Qハイ+GS,bet,Bet 2,5
+9s7s4c,AhJs,49,Aハイ+2OC,check,Check,5
+5c2d3h,KhTs,44,Kハイ+2OC,check,Check,5
+JcJh4s,QcJs,85,トリップス,bet,Bet 2,5
+QcAdKh,Kd9h,36,セカンドペア(中)+BDSD,check,Check,5
+JsKs5d,AsAd,83,オーバーペア(高)+BDFD,bet,Bet 4,5
+Js8d3c,5s5d,35,アンダーペア(低),check,Check,5
+Jh4h5s,Td7d,8,空振り,check,Check,5
+Th3s2d,As9d,27,Aハイ+BDSD,check,Check,5
+5c5dAh,2s2h,68,2ペア(split),bet,Bet 2,5
+QcAdKh,Qh7h,36,ボトムペア+BDFD+BDSD,check,Check,5
+Ad9h8h,Td8s,33,ボトムペア+BDSD,check,Check,5
+Ad9h8h,7s6s,40,空振り+OESD,bet,Bet 4,5
+Th4c5d,Ac8c,30,Aハイ+BDFD,check,Check,5
+8h8cTc,Ah5c,30,Aハイ+BDFD,bet,Bet 2,5
+9dTs8s,AdAc,79,オーバーペア(高)+BDSD,check,Check,5
+Th3s2d,AsJh,49,Aハイ+2OC,check,Check,5
+Td6h4h,Ad6d,47,セカンドペア(強)+BDFD,bet,Bet 4,5
+AcKs7d,5h5c,35,アンダーペア(低),check,Check,5
+Jh4h5s,6d5d,33,セカンドペア(弱)+BDSD,check,Check,5
+Ad8d3d,9s9c,40,アンダーペア(低)+BDFD,check,Check,5
+Ad9h8h,Qh9c,47,セカンドペア(強)+BDFD,check,Check,5
+Th3s2d,QcTs,62,TPGK,check,Check,5
+Th3s2d,Ah9s,27,Aハイ+BDSD,check,Check,5
+Js8d3c,Ah9h,25,Aハイ,check,Check,5
+AcKs7d,Jh4h,10,Jハイ,check,Check,5
+Ad9h8h,KsJh,25,Kハイ+BDFD,bet,Bet 4,5
+Qc8cAc,Qs3s,37,セカンドペア(弱)+BDFD,check,Check,5
+Ks7h2d,KhQh,67,TPGK+BDFD,bet,Bet 2,5
+Th4c5d,2h2d,35,アンダーペア(低),check,Check,5
+JsKs5d,Ad7c,25,Aハイ,check,Check,5
+Td6h4h,5s4s,33,ボトムペア+BDSD,check,Check,5
+JsKs5d,Kc9d,50,TPMK,check,Check,5
+4s4h3h,Ah8h,61,Aハイ+FD,bet,Bet 2,5
+Ad8d3d,As6c,50,TPWK+BDFD,check,Check,5
+JsKs5d,Ad9h,25,Aハイ,check,Check,5
+4s4h3h,Ad8h,49,Aハイ+2OC,check,Check,5
+Ad9h8h,AhJs,55,TPMK+BDFD,check,Check,5
+6s8d7c,Jc9s,42,Jハイ+OESD,bet,Bet 2,5
+Td6h4h,Kc8c,20,Kハイ,check,Check,5
+9s7s4c,QhTc,39,Qハイ+2OC,bet,Bet 4,5
+Th3s2d,Tc7c,45,TPWK,check,Check,5
+TsKcAh,5d4d,8,空振り,check,Check,5
+8h8cTc,Kc3c,56,Kハイ+FD,bet,Bet 2,5
+AcKs7d,Ad7c,75,2ペア(top+mid),bet,Bet 4,5
+Ad8d3d,As7h,50,TPWK+BDFD,check,Check,5
+Ad8d3d,Js8s,40,セカンドペア(中)+BDFD,check,Check,5
+Td6h4h,JsJd,72,オーバーペア(中),bet,Bet 4,5
+5c5dAh,Qs4s,15,Qハイ,bet,Bet 2,5
+Js8d3c,Jc4c,50,TPWK+BDFD,bet,Bet 2,5
+Ad8d3d,As7d,81,TPWK+FD,check,Check,5
+Td6h4h,3s3d,35,アンダーペア(低),check,Check,5
+Td6h4h,Ks9c,20,Kハイ,check,Check,5
+Th3s2d,Ah8s,27,Aハイ+BDSD,check,Check,5
+Ad9h8h,2h2c,40,アンダーペア(低)+BDFD,bet,Bet 4,5
+JsKs5d,9s9d,40,アンダーペア(低)+BDFD,check,Check,5
+AcKs7d,KcJh,35,セカンドペア(中),check,Check,5
+Td6h4h,9d9c,35,アンダーペア(低),check,Check,5
+Jh4h5s,AhKd,49,Aハイ+2OC,check,Check,5
+Ks7h2d,Jd9h,10,Jハイ,bet,Bet 2,5
+9dTs8s,QcJs,100,ストレート(high)+OESD,bet,Bet 2,5
+5c2d3h,KhTs,44,Kハイ+2OC,check,Check,5
+TsKcAh,As6h,45,TPWK,check,Check,5
+Jh4h5s,AsTs,30,Aハイ+BDFD,check,Check,5
+5c2d3h,Jd5d,55,TPMK+BDFD,bet,Bet 2,5
+AcKs7d,JdJc,40,アンダーペア(中),check,Check,5
+JsKs5d,Ad9h,25,Aハイ,check,Check,5
+7d6c4h,Ah3d,41,Aハイ+GS,bet,Bet 2,5
+TsKcAh,AsKd,78,2ペア(top2),bet,Bet 4,5
+QcAdKh,Qs6s,33,ボトムペア+BDSD,check,Check,5
+Th4c5d,Ad4h,32,ボトムペア,check,Check,5
+9dTs8s,Ac3d,27,Aハイ+BDSD,check,Check,5
+9dTs8s,3h3c,36,アンダーペア(低)+BDSD,check,Check,5
+5c5dAh,KdJh,20,Kハイ,check,Check,5
+JcJh4s,Ad8h,25,Aハイ,check,Check,5
+Jh4h5s,5h5c,93,ミドルセット+BDFD,bet,Bet 4,5
+Jh4h5s,Ac3h,41,Aハイ+GS,bet,Bet 4,5
+9s7s4c,QcTs,39,Qハイ+2OC,bet,Bet 4,5
+Ad8d3d,Ac6d,81,TPWK+FD,check,Check,5
+5c2d3h,Th6h,56,空振り+BDFD+GS,bet,Bet 2,5
+Ad8d3d,KhQh,26,Kハイ+BDFD+BDSD,check,Check,5
+JcJh4s,AsAh,68,2ペア(split),check,Check,5
+JsKs5d,7s7c,40,アンダーペア(低)+BDFD,check,Check,5
+Th3s2d,AdTc,71,TPTK+BDSD,bet,Bet 4,5
+4s4h3h,QdQc,68,2ペア(split),bet,Bet 2,5
+9s7s4c,Ad6h,25,Aハイ,check,Check,5
+Qc8cAc,KhQh,46,セカンドペア(強)+BDFD+BDSD,check,Check,5
+QcAdKh,Qd3d,36,ボトムペア+BDFD+BDSD,check,Check,5
+TsKcAh,Ks5s,37,セカンドペア(弱)+BDFD,check,Check,5
+Td6h4h,Ts8c,50,TPMK,check,Check,5
+Th3s2d,Ad6c,27,Aハイ+BDSD,bet,Bet 4,5
+Jh4h5s,6d6c,36,アンダーペア(低)+BDSD,check,Check,5
+8h8cTc,Qd8d,85,トリップス,bet,Bet 2,5
+Ad9h8h,JhJd,45,アンダーペア(中)+BDFD,check,Check,5
+8h8cTc,AcKs,49,Aハイ+2OC,bet,Bet 2,5
+4s4h3h,Ad6d,49,Aハイ+2OC,check,Check,5
+5c2d3h,AcTd,41,Aハイ+GS,check,Check,5
+Ks7h2d,8h8d,35,アンダーペア(低),bet,Bet 2,5
+9dTs8s,Ac8d,33,ボトムペア+BDSD,check,Check,5
+QcAdKh,9s9d,36,アンダーペア(低)+BDSD,check,Check,5
+7d6c4h,Kd4d,37,ボトムペア+BDFD,bet,Bet 2,5
+Ad9h8h,Qc5c,15,Qハイ,check,Check,5
+7d6c4h,As6s,42,セカンドペア(強),bet,Bet 2,5
+9dTs8s,AcJh,57,Aハイ+OESD,check,Check,5
+9dTs8s,9c7c,64,セカンドペア(弱)+OESD,check,Check,5
+Js8d3c,AhAc,78,オーバーペア(高),bet,Bet 2,5
+Ad8d3d,KhTs,25,Kハイ+BDFD,check,Check,5
+Ad9h8h,As9c,78,2ペア(top2),bet,Bet 4,5
+Th3s2d,4d4c,36,アンダーペア(低)+BDSD,check,Check,5
+Ks7h2d,AcTh,25,Aハイ,check,Check,5
+5c5dAh,Td8s,8,空振り,check,Check,5
+TsKcAh,Th7h,37,ボトムペア+BDFD,check,Check,5
+8h8cTc,Th8s,92,フルハウス,bet,Bet 2,5
+TsKcAh,JdTc,48,ボトムペア+GS,check,Check,5
+Th4c5d,As3d,41,Aハイ+GS,bet,Bet 4,5
+6s8d7c,Tc9h,100,ストレート(mid)+OESD,bet,Bet 2,5
+Th4c5d,Ah9h,30,Aハイ+BDFD,check,Check,5
+Th4c5d,Ks8d,20,Kハイ,check,Check,5
+Td6h4h,8h8d,40,アンダーペア(低)+BDFD,check,Check,5
+Ad8d3d,KcJs,25,Kハイ+BDFD,check,Check,5
+6s8d7c,QdJc,39,Qハイ+2OC,bet,Bet 2,5
+Td6h4h,Qc3c,15,Qハイ,check,Check,5
+JsKs5d,9s9c,40,アンダーペア(低)+BDFD,check,Check,5
+Ks7h2d,AcKd,70,TPTK,bet,Bet 2,5
+8h8cTc,Ks5s,20,Kハイ,check,Check,5
+TsKcAh,KsJh,51,セカンドペア(中)+GS,check,Check,5
+9dTs8s,As8d,36,ボトムペア+BDFD+BDSD,check,Check,5
+Ad8d3d,Ah7h,50,TPWK+BDFD,check,Check,5
+JsKs5d,Tc8c,8,空振り,check,Check,5
+TsKcAh,Ks8d,35,セカンドペア(中),check,Check,5
+4s4h3h,Kh9d,44,Kハイ+2OC,bet,Bet 2,5
+6s8d7c,Ad4s,41,Aハイ+GS,bet,Bet 2,5
+Th4c5d,AsQs,49,Aハイ+2OC,check,Check,5
+4s4h3h,Ad7d,49,Aハイ+2OC,check,Check,5
+6s8d7c,Jh4h,26,Jハイ+GS,check,Check,5
+Jh4h5s,Jd7d,45,TPWK,check,Check,5
+Jh4h5s,Kd8h,25,Kハイ+BDFD,bet,Bet 4,5
+Ks7h2d,9s8s,14,空振り+BDFD+BDSD,bet,Bet 2,5
+9s7s4c,Ac8c,31,Aハイ+BDFD+BDSD,check,Check,5
+TsKcAh,QcJs,100,Aハイストレート+OESD,bet,Bet 4,5
+Ad9h8h,ThTc,44,アンダーペア(中)+BDFD+BDSD,check,Check,5
+Ad8d3d,Ts6s,13,空振り+BDFD,check,Check,5
+Th4c5d,8h7h,56,空振り+BDFD+GS,bet,Bet 4,5
+Th3s2d,Kc9s,20,Kハイ,check,Check,5
+AcKs7d,5s5h,35,アンダーペア(低),check,Check,5
+Qc8cAc,Ah9c,86,TPMK+FD,check,Check,5
+Js8d3c,Kc9d,20,Kハイ,bet,Bet 2,5
+Ks7h2d,Ac9h,25,Aハイ,check,Check,5
+JcJh4s,Kc9h,20,Kハイ,bet,Bet 2,5
+Ad9h8h,6d6c,35,アンダーペア(低),check,Check,5
+JsKs5d,Qd4d,21,Qハイ+BDFD+BDSD,check,Check,5
+Ks7h2d,9s8s,14,空振り+BDFD+BDSD,bet,Bet 2,5
+Th4c5d,As4d,32,ボトムペア,check,Check,5
+Td6h4h,Ad3d,30,Aハイ+BDFD,check,Check,5
+Td6h4h,KhJd,44,Kハイ+2OC,bet,Bet 4,5
+4s4h3h,KdQc,44,Kハイ+2OC,check,Check,5
+Th3s2d,5d4d,58,空振り+BDFD+OESD,bet,Bet 4,5
+QcAdKh,Th7h,56,空振り+BDFD+GS,bet,Bet 4,5
+Ks7h2d,Ad4h,25,Aハイ,bet,Bet 2,5
+Ad9h8h,QcTh,31,Qハイ+GS,bet,Bet 4,5
+JsKs5d,Ac7d,25,Aハイ,check,Check,5
+AcKs7d,Kh2h,32,セカンドペア(弱),check,Check,5
+Th3s2d,4d4c,36,アンダーペア(低)+BDSD,check,Check,5
+AcKs7d,Qd9h,17,Qハイ+BDSD,check,Check,5
+Td6h4h,Ad2d,30,Aハイ+BDFD,check,Check,5
+Ad9h8h,Tc7c,40,空振り+OESD,bet,Bet 4,5
+6s8d7c,Ac3c,31,Aハイ+BDFD+BDSD,check,Check,5
+9s7s4c,KdQd,44,Kハイ+2OC,check,Check,5
+Th3s2d,Qc7c,15,Qハイ,check,Check,5
+Jh4h5s,AdQd,49,Aハイ+2OC,check,Check,5
+QcAdKh,Jd9s,26,Jハイ+GS,bet,Bet 4,5
+AcKs7d,Kh2h,32,セカンドペア(弱),check,Check,5
+Ad9h8h,KcQd,22,Kハイ+BDSD,check,Check,5
+TsKcAh,7s7c,35,アンダーペア(低),check,Check,5
+4s4h3h,KcTd,44,Kハイ+2OC,check,Check,5
+JcJh4s,As3d,25,Aハイ,bet,Bet 2,5
+JsKs5d,Ah4d,25,Aハイ,check,Check,5
+JsKs5d,As8d,30,Aハイ+BDFD,check,Check,5
+Ad9h8h,Jd6d,15,Jハイ+BDFD,bet,Bet 4,5
+8h8cTc,Qs9c,31,Qハイ+GS,bet,Bet 2,5
+Qc8cAc,Qh5h,37,セカンドペア(弱)+BDFD,check,Check,5
+Ad8d3d,KhTh,25,Kハイ+BDFD,check,Check,5
+Td6h4h,Ac8d,25,Aハイ,check,Check,5
+Jh4h5s,Qc9s,15,Qハイ,check,Check,5
+JsKs5d,6c5c,32,ボトムペア,check,Check,5
+Qc8cAc,8h8d,90,ボトムセット+BDFD,bet,Bet 2,5
+JsKs5d,Td8h,8,空振り,check,Check,5
+9dTs8s,Jd8d,82,ボトムペア+BDFD+OESD,check,Check,5
+Ks7h2d,AdJd,30,Aハイ+BDFD,bet,Bet 2,5
+6s8d7c,Ks9s,70,Kハイ+BDFD+OESD,bet,Bet 2,5
+Qc8cAc,Kh8h,36,ボトムペア+BDFD+BDSD,check,Check,5
+4s4h3h,KcQc,44,Kハイ+2OC,check,Check,5
+Td6h4h,3s3h,40,アンダーペア(低)+BDFD,check,Check,5
+6s8d7c,Th7h,51,セカンドペア(中)+GS,check,Check,5
+Ad9h8h,Qc3c,15,Qハイ,check,Check,5
+Ks7h2d,4h4d,35,アンダーペア(低),bet,Bet 2,5
+5c2d3h,7h7d,68,オーバーペア(低),bet,Bet 2,5
+5c5dAh,Ac5h,92,フルハウス,bet,Bet 2,5
+9dTs8s,Ah8d,33,ボトムペア+BDSD,check,Check,5
+Ad9h8h,AhQc,67,TPGK+BDFD,check,Check,5
+JsKs5d,7d7c,35,アンダーペア(低),check,Check,5
+5c2d3h,Kh4h,70,Kハイ+BDFD+OESD,bet,Bet 2,5
+9s7s4c,JhTc,26,Jハイ+GS,check,Check,5
+QcAdKh,Ks8h,36,セカンドペア(中)+BDSD,check,Check,5
+Td6h4h,4s4d,85,ボトムセット,bet,Bet 4,5
+Td6h4h,JsJd,72,オーバーペア(中),bet,Bet 4,5
+JsKs5d,Ah9d,25,Aハイ,check,Check,5
+Td6h4h,9s9d,35,アンダーペア(低),check,Check,5
+6s8d7c,Jh6h,33,ボトムペア+BDSD,check,Check,5
+9dTs8s,ThTc,93,トップセット+BDSD,bet,Bet 2,5
+TsKcAh,JhTc,48,ボトムペア+GS,check,Check,5
+Th4c5d,KhJd,44,Kハイ+2OC,bet,Bet 4,5
+AcKs7d,ThTc,40,アンダーペア(中),check,Check,5
+JcJh4s,AdJd,85,トリップス,bet,Bet 2,5
+Jh4h5s,Kc8s,20,Kハイ,check,Check,5
+6s8d7c,As8s,74,TPTK+BDFD+BDSD,bet,Bet 2,5
+QcAdKh,QdJh,48,ボトムペア+GS,check,Check,5
+JsKs5d,Jd9d,40,セカンドペア(中)+BDFD,check,Check,5
+Ad9h8h,7h7c,39,アンダーペア(低)+BDFD+BDSD,check,Check,5
+Ad8d3d,6h6d,71,アンダーペア(低)+FD,check,Check,5
+7d6c4h,9h9c,68,オーバーペア(低),bet,Bet 2,5
+8h8cTc,QhTh,83,2ペア(top2)+BDFD,bet,Bet 2,5
+Qc8cAc,JsJd,45,アンダーペア(中)+BDFD,check,Check,5
+8h8cTc,As5d,25,Aハイ,check,Check,5
+7d6c4h,AdTs,49,Aハイ+2OC,check,Check,5
+9dTs8s,Ks7s,70,Kハイ+FD+OESD,bet,Bet 2,5
+Ad8d3d,Ah5c,50,TPWK+BDFD,check,Check,5
+5c2d3h,Ah6h,73,Aハイ+BDFD+GS,bet,Bet 2,5
+8h8cTc,Ac7s,30,Aハイ+BDFD,bet,Bet 2,5
+9s7s4c,5h4h,32,ボトムペア,check,Check,5
+Ks7h2d,Ad9s,25,Aハイ,check,Check,5
+JsKs5d,Ad9d,30,Aハイ+BDFD,check,Check,5
+Ks7h2d,Ac9s,25,Aハイ,check,Check,5
+Jh4h5s,Kd9s,20,Kハイ,check,Check,5
+9dTs8s,3d3c,36,アンダーペア(低)+BDSD,check,Check,5
+Th4c5d,Ah9h,30,Aハイ+BDFD,check,Check,5
+JcJh4s,Ad5c,25,Aハイ,check,Check,5
+Ad8d3d,Ks9s,25,Kハイ+BDFD,check,Check,5
+Th4c5d,Ac9h,25,Aハイ,check,Check,5
+Th3s2d,AsTs,74,TPTK+BDFD+BDSD,bet,Bet 4,5
+AcKs7d,JsJh,40,アンダーペア(中),check,Check,5
+9s7s4c,AdKd,49,Aハイ+2OC,check,Check,5
+Js8d3c,2h2d,35,アンダーペア(低),check,Check,5
+QcAdKh,Qs9c,33,ボトムペア+BDSD,check,Check,5
+7d6c4h,8s8c,84,オーバーペア(低)+GS,bet,Bet 2,5
+QcAdKh,Ac7h,46,TPWK+BDSD,check,Check,5
+9s7s4c,KhQd,44,Kハイ+2OC,check,Check,5
+7d6c4h,AcJs,49,Aハイ+2OC,check,Check,5
+QcAdKh,Kc8h,36,セカンドペア(中)+BDSD,check,Check,5
+Js8d3c,6d6c,35,アンダーペア(低),check,Check,5
+Td6h4h,Qs4s,32,ボトムペア,check,Check,5
+AcKs7d,Jd5d,15,Jハイ+BDFD,check,Check,5
+AcKs7d,Qh6h,17,Qハイ+BDSD,check,Check,5
+5c5dAh,KsKd,68,2ペア(split),check,Check,5
+Th4c5d,JhTc,50,TPMK,check,Check,5
+TsKcAh,KsJc,51,セカンドペア(中)+GS,check,Check,5
+TsKcAh,Ad9h,50,TPMK,check,Check,5
+4s4h3h,Ac5s,41,Aハイ+GS,check,Check,5
+8h8cTc,4s4d,68,2ペア(split),check,Check,5
+Ks7h2d,Kh5h,50,TPWK+BDFD,bet,Bet 2,5
+5c2d3h,9s7s,32,空振り+2OC,check,Check,5
+Ad9h8h,KdTh,26,Kハイ+BDFD+BDSD,bet,Bet 4,5
+Ks7h2d,AhJs,25,Aハイ,bet,Bet 2,5
+Ad8d3d,9s9h,40,アンダーペア(低)+BDFD,check,Check,5
+Th3s2d,Kh8d,20,Kハイ,check,Check,5
+4s4h3h,KsJc,44,Kハイ+2OC,check,Check,5
+Th4c5d,Ks9c,20,Kハイ,check,Check,5
+Ks7h2d,QhJc,17,Qハイ+BDSD,check,Check,5
+Ks7h2d,KhTh,55,TPMK+BDFD,bet,Bet 2,5
+QcAdKh,JsJc,56,アンダーペア(中)+GS,bet,Bet 4,5
+9dTs8s,7h7c,67,アンダーペア(低)+OESD,check,Check,5
+Td6h4h,AcQc,49,Aハイ+2OC,check,Check,5
+9s7s4c,6s6c,40,アンダーペア(低)+BDFD,check,Check,5
+Th3s2d,Ah6c,27,Aハイ+BDSD,bet,Bet 4,5
+Td6h4h,Ac7c,25,Aハイ,check,Check,5
+TsKcAh,QhQc,61,アンダーペア(高)+GS,check,Check,5
+5c2d3h,AhTc,41,Aハイ+GS,check,Check,5
+Ad9h8h,AsAh,97,トップセット+BDFD,bet,Bet 4,5
+8h8cTc,5d4d,8,空振り,check,Check,5
+Ks7h2d,2s2h,85,ボトムセット,bet,Bet 2,5
+8h8cTc,As6h,25,Aハイ,check,Check,5
+AcKs7d,QcJc,63,Qハイ+BDFD+GS,bet,Bet 4,5
+Jh4h5s,8h6h,56,空振り+FD+GS,bet,Bet 4,5
+Js8d3c,KsQd,44,Kハイ+2OC,bet,Bet 2,5
+6s8d7c,TsTc,88,オーバーペア(中)+GS,bet,Bet 2,5
+JsKs5d,Jh9s,40,セカンドペア(中)+BDFD,check,Check,5
+6s8d7c,AdAc,79,オーバーペア(高)+BDSD,check,Check,5
+Td6h4h,Ks4s,32,ボトムペア,check,Check,5
+Jh4h5s,Tc8s,8,空振り,check,Check,5
+Th3s2d,Ad9s,27,Aハイ+BDSD,check,Check,5
+Th3s2d,KhKd,78,オーバーペア(高),bet,Bet 4,5
+Ad8d3d,7h7d,71,アンダーペア(低)+FD,check,Check,5
+AcKs7d,Qh9s,17,Qハイ+BDSD,check,Check,5
+4s4h3h,KcJs,44,Kハイ+2OC,check,Check,5
+9s7s4c,Js4s,68,ボトムペア+FD,bet,Bet 4,5
+5c5dAh,KhQs,22,Kハイ+BDSD,check,Check,5
+5c2d3h,Ad4s,100,ストレート(low)+OESD,bet,Bet 2,5
+9s7s4c,AcJd,49,Aハイ+2OC,check,Check,5
+7d6c4h,Ah3d,41,Aハイ+GS,bet,Bet 2,5
+9s7s4c,Th7h,35,セカンドペア(中),check,Check,5
+Js8d3c,Kd3d,37,ボトムペア+BDFD,bet,Bet 2,5
+AcKs7d,Qc6c,21,Qハイ+BDFD+BDSD,check,Check,5
+Jh4h5s,Ac4d,32,ボトムペア,check,Check,5
+Qc8cAc,Kh8d,36,ボトムペア+BDFD+BDSD,check,Check,5
+Js8d3c,AsJd,70,TPTK,bet,Bet 2,5
+Ks7h2d,AhJd,25,Aハイ,bet,Bet 2,5
+6s8d7c,5d5c,67,アンダーペア(低)+OESD,check,Check,5
+7d6c4h,AsJd,49,Aハイ+2OC,check,Check,5
+5c2d3h,AcTd,41,Aハイ+GS,check,Check,5
+9s7s4c,Ah8s,31,Aハイ+BDFD+BDSD,check,Check,5
+Th4c5d,7c6c,58,空振り+BDFD+OESD,bet,Bet 4,5
+9dTs8s,Qh9h,58,セカンドペア(強)+GS,check,Check,5
+Td6h4h,JhJd,77,オーバーペア(中)+BDFD,bet,Bet 4,5
+QcAdKh,Ks3s,33,セカンドペア(弱)+BDSD,check,Check,5
+Ks7h2d,AsTc,25,Aハイ,check,Check,5
+Td6h4h,AcJs,49,Aハイ+2OC,check,Check,5
+Ad8d3d,KhKd,81,アンダーペア(高)+FD,check,Check,5
+Td6h4h,QsQc,78,オーバーペア(高),bet,Bet 4,5
+Td6h4h,TsTh,97,トップセット+BDFD,bet,Bet 4,5
+AcKs7d,KdJd,40,セカンドペア(中)+BDFD,check,Check,5
+AcKs7d,9d9c,35,アンダーペア(低),check,Check,5
+9dTs8s,Ks7s,70,Kハイ+FD+OESD,bet,Bet 2,5
+9s7s4c,AhJh,49,Aハイ+2OC,check,Check,5
+Ad8d3d,Th8h,40,セカンドペア(中)+BDFD,check,Check,5
+9s7s4c,Td9h,50,TPMK,check,Check,5
+Ad8d3d,KsTh,25,Kハイ+BDFD,check,Check,5
+6s8d7c,JsTh,26,Jハイ+GS,bet,Bet 2,5
+8h8cTc,AhTd,78,2ペア(top2),bet,Bet 2,5
+5c2d3h,KhJh,44,Kハイ+2OC,check,Check,5
+8h8cTc,Th8s,92,フルハウス,bet,Bet 2,5
+Td6h4h,Ks2s,20,Kハイ,check,Check,5
+TsKcAh,9h9d,35,アンダーペア(低),check,Check,5
+AcKs7d,As7s,80,2ペア(top+mid)+BDFD,bet,Bet 4,5
+Ad8d3d,As6s,50,TPWK+BDFD,check,Check,5
+4s4h3h,2d2c,73,2ペア(top+bot)+BDSD,bet,Bet 2,5
+5c2d3h,KcJh,44,Kハイ+2OC,check,Check,5
+JcJh4s,6h6d,75,2ペア(top+mid),bet,Bet 2,5
+7d6c4h,QcJc,39,Qハイ+2OC,check,Check,5
+Th4c5d,Ac9c,30,Aハイ+BDFD,check,Check,5
+Jh4h5s,KdTc,20,Kハイ,check,Check,5
+Th3s2d,9d9c,35,アンダーペア(低),check,Check,5
+TsKcAh,QhTc,48,ボトムペア+GS,check,Check,5
+9dTs8s,Kh9s,46,セカンドペア(強)+BDFD+BDSD,check,Check,5
+Td6h4h,9d6d,40,セカンドペア(中)+BDFD,check,Check,5
+Th3s2d,Qs7s,20,Qハイ+BDFD,check,Check,5
+Th3s2d,Ks7s,25,Kハイ+BDFD,check,Check,5
+Jh4h5s,Kh9c,25,Kハイ+BDFD,bet,Bet 4,5
+JsKs5d,Tc8s,13,空振り+BDFD,bet,Bet 4,5
+6s8d7c,AsKc,49,Aハイ+2OC,bet,Bet 2,5
+QcAdKh,9h8h,14,空振り+BDFD+BDSD,check,Check,5
+JcJh4s,Qs5s,20,Qハイ+BDFD,bet,Bet 2,5
+Ad9h8h,8d8c,85,ボトムセット,bet,Bet 4,5
+Th3s2d,AsJs,49,Aハイ+2OC,check,Check,5
+4s4h3h,Ad4d,85,トリップス,bet,Bet 2,5
+TsKcAh,AcKs,78,2ペア(top2),bet,Bet 4,5
+9s7s4c,5s5c,40,アンダーペア(低)+BDFD,check,Check,5
+Th4c5d,Qs5s,42,セカンドペア(強),check,Check,5
+JcJh4s,AsJd,85,トリップス,bet,Bet 2,5
+Js8d3c,3s3d,85,ボトムセット,bet,Bet 2,5
+Js8d3c,QsTs,63,Qハイ+BDFD+GS,bet,Bet 2,5
+TsKcAh,Tc7c,37,ボトムペア+BDFD,check,Check,5
+QcAdKh,Qs3s,33,ボトムペア+BDSD,check,Check,5
+Th4c5d,Ad6s,27,Aハイ+BDSD,bet,Bet 4,5
+9dTs8s,5s5h,39,アンダーペア(低)+BDFD+BDSD,check,Check,5
+Th4c5d,As8h,25,Aハイ,check,Check,5
+6s8d7c,Ah8h,71,TPTK+BDSD,bet,Bet 2,5
+Ks7h2d,Ah3c,27,Aハイ+BDSD,bet,Bet 2,5
+Th3s2d,As8c,27,Aハイ+BDSD,check,Check,5
+6s8d7c,JhTd,26,Jハイ+GS,bet,Bet 2,5
+Th3s2d,JcTd,50,TPMK,check,Check,5
+JcJh4s,Jd7d,85,トリップス,bet,Bet 2,5
+5c5dAh,Ks9c,20,Kハイ,check,Check,5
+Th3s2d,KsKh,78,オーバーペア(高),bet,Bet 4,5
+Ks7h2d,As9s,30,Aハイ+BDFD,check,Check,5
+4s4h3h,KsJh,44,Kハイ+2OC,check,Check,5
+Th3s2d,Ah9s,27,Aハイ+BDSD,check,Check,5
+9s7s4c,Jd9d,50,TPMK,check,Check,5
+Th4c5d,As9h,25,Aハイ,check,Check,5
+5c5dAh,7s7c,68,2ペア(split),bet,Bet 2,5
+Th3s2d,JdTs,50,TPMK,check,Check,5
+4s4h3h,Ks9s,44,Kハイ+2OC,check,Check,5
+Js8d3c,Ac3h,32,ボトムペア,bet,Bet 2,5
+Ad9h8h,KcTh,26,Kハイ+BDFD+BDSD,bet,Bet 4,5
+4s4h3h,Qh9d,39,Qハイ+2OC,bet,Bet 2,5
+Js8d3c,Qd9c,31,Qハイ+GS,bet,Bet 2,5
+Qc8cAc,TsTh,45,アンダーペア(中)+BDFD,check,Check,5
+Jh4h5s,AsQh,49,Aハイ+2OC,check,Check,5
+Ad9h8h,AhJs,55,TPMK+BDFD,check,Check,5
+TsKcAh,JhTd,48,ボトムペア+GS,check,Check,5
+8h8cTc,Jc9s,42,Jハイ+OESD,bet,Bet 2,5
+Ks7h2d,5d4d,13,空振り+BDFD,bet,Bet 2,5
+5c5dAh,KdQc,22,Kハイ+BDSD,check,Check,5
+9dTs8s,As2s,61,Aハイ+FD,bet,Bet 2,5
+Td6h4h,Qh5h,51,Qハイ+FD,bet,Bet 4,5
+4s4h3h,Kc2c,22,Kハイ+BDSD,bet,Bet 2,5
+Js8d3c,QsJd,62,TPGK,check,Check,5
+Js8d3c,7h7d,35,アンダーペア(低),check,Check,5
+9s7s4c,As8s,61,Aハイ+FD,bet,Bet 4,5
+Ad9h8h,Ts6s,24,空振り+GS,check,Check,5
+9dTs8s,Ad8h,33,ボトムペア+BDSD,check,Check,5
+Th3s2d,Qc6c,15,Qハイ,check,Check,5
+5c5dAh,Qs3s,15,Qハイ,bet,Bet 2,5
+Qc8cAc,Qs8s,73,2ペア(split)+BDFD,bet,Bet 2,5
+Ad9h8h,Ah6s,50,TPWK+BDFD,check,Check,5
+8h8cTc,QhTh,83,2ペア(top2)+BDFD,bet,Bet 2,5
+Ks7h2d,AcKc,70,TPTK,bet,Bet 2,5
+Ad9h8h,AhTs,54,TPMK+BDFD+BDSD,check,Check,5
+Jh4h5s,8s8c,35,アンダーペア(低),check,Check,5
+Ad9h8h,Ah5c,50,TPWK+BDFD,check,Check,5
+Jh4h5s,AhKd,49,Aハイ+2OC,check,Check,5
+JcJh4s,Ah3c,25,Aハイ,bet,Bet 2,5
+Th3s2d,2h2c,85,ボトムセット,bet,Bet 4,5
+QcAdKh,Qh9c,33,ボトムペア+BDSD,check,Check,5
+6s8d7c,Kd9d,70,Kハイ+BDFD+OESD,bet,Bet 2,5
+Ad9h8h,TsTd,41,アンダーペア(中)+BDSD,check,Check,5
+Th4c5d,3s3c,36,アンダーペア(低)+BDSD,check,Check,5
+9dTs8s,Qs7s,65,Qハイ+FD+OESD,bet,Bet 2,5
+7d6c4h,KsJs,44,Kハイ+2OC,check,Check,5
+5c2d3h,Ad8c,41,Aハイ+GS,check,Check,5
+Ad9h8h,Qs4s,15,Qハイ,check,Check,5
+Td6h4h,7d7c,35,アンダーペア(低),check,Check,5
+Th3s2d,JdTd,55,TPMK+BDFD,bet,Bet 4,5
+JcJh4s,Ah6h,30,Aハイ+BDFD,check,Check,5
+7d6c4h,Ac5c,75,Aハイ+BDFD+OESD,bet,Bet 2,5
+5c5dAh,KdQs,22,Kハイ+BDSD,check,Check,5
+JcJh4s,As7s,30,Aハイ+BDFD,check,Check,5
+Td6h4h,5h5c,39,アンダーペア(低)+BDFD+BDSD,check,Check,5
+QcAdKh,QdTs,48,ボトムペア+GS,check,Check,5
+Js8d3c,Qh6h,15,Qハイ,check,Check,5
+Qc8cAc,Qh7h,37,セカンドペア(弱)+BDFD,check,Check,5
+6s8d7c,JsTs,58,Jハイ+BDFD+GS,bet,Bet 2,5
+9dTs8s,Qc9c,58,セカンドペア(強)+GS,check,Check,5
+Td6h4h,5s4s,33,ボトムペア+BDSD,check,Check,5
+9s7s4c,Qs6s,51,Qハイ+FD,bet,Bet 4,5
+6s8d7c,Jc9h,42,Jハイ+OESD,bet,Bet 2,5
+Td6h4h,JsJc,72,オーバーペア(中),bet,Bet 4,5
+Ad8d3d,KsQc,26,Kハイ+BDFD+BDSD,check,Check,5
+Ad9h8h,AhJd,55,TPMK+BDFD,check,Check,5
+Th3s2d,Ah3c,43,セカンドペア(強)+BDSD,bet,Bet 4,5
+8h8cTc,KdJd,44,Kハイ+2OC,bet,Bet 2,5
+Th3s2d,Ac7h,27,Aハイ+BDSD,check,Check,5
+Ks7h2d,AsKh,70,TPTK,bet,Bet 2,5
+Th3s2d,JdTc,50,TPMK,check,Check,5
+Jh4h5s,Ac9d,25,Aハイ,check,Check,5
+AcKs7d,JcTh,26,Jハイ+GS,bet,Bet 4,5
+6s8d7c,Ah3c,27,Aハイ+BDSD,check,Check,5
+Jh4h5s,AsTs,30,Aハイ+BDFD,check,Check,5
+7d6c4h,QhTh,39,Qハイ+2OC,check,Check,5
+7d6c4h,AhJs,49,Aハイ+2OC,check,Check,5
+Th4c5d,Kh5h,47,セカンドペア(強)+BDFD,bet,Bet 4,5
+JsKs5d,Tc6c,8,空振り,check,Check,5
+Ks7h2d,QdJc,17,Qハイ+BDSD,check,Check,5
+9s7s4c,AhQs,49,Aハイ+2OC,check,Check,5
+9s7s4c,JsTh,26,Jハイ+GS,bet,Bet 4,5
+6s8d7c,Ad4d,73,Aハイ+BDFD+GS,check,Check,5
+Ad9h8h,Ah5d,50,TPWK+BDFD,check,Check,5
+JsKs5d,JhTh,35,セカンドペア(中),check,Check,5
+Ks7h2d,Ah5s,25,Aハイ,bet,Bet 2,5
+Th4c5d,9s8s,10,空振り+BDSD,check,Check,5
+8h8cTc,5s5h,68,2ペア(split),check,Check,5
+TsKcAh,Kd8s,35,セカンドペア(中),check,Check,5
+Ad9h8h,KsJc,20,Kハイ,check,Check,5
+Ad8d3d,KsJc,25,Kハイ+BDFD,check,Check,5
+6s8d7c,9h9c,100,オーバーペア(低)+OESD,bet,Bet 2,5
+Ad8d3d,Ts8c,40,セカンドペア(中)+BDFD,check,Check,5
+Ad9h8h,Jh6h,46,Jハイ+FD,check,Check,5
+Th4c5d,As8d,25,Aハイ,check,Check,5
+Jh4h5s,Ac7d,25,Aハイ,check,Check,5
+JcJh4s,As3d,25,Aハイ,bet,Bet 2,5
+Td6h4h,As9s,25,Aハイ,check,Check,5
+5c2d3h,6h6c,84,オーバーペア(低)+GS,bet,Bet 2,5
+AcKs7d,Ad7h,75,2ペア(top+mid),bet,Bet 4,5
+7d6c4h,KhJh,44,Kハイ+2OC,check,Check,5
+Ad8d3d,Ac6s,50,TPWK+BDFD,check,Check,5
+JsKs5d,AhQd,41,Aハイ+GS,check,Check,5
+5c2d3h,AdKc,41,Aハイ+GS,bet,Bet 2,5
+Th4c5d,Ks8c,20,Kハイ,check,Check,5
+Ad9h8h,Kd8c,32,ボトムペア,check,Check,5
+Td6h4h,AcQd,49,Aハイ+2OC,check,Check,5
+Th3s2d,QhJc,39,Qハイ+2OC,bet,Bet 4,5
+7d6c4h,AdJs,49,Aハイ+2OC,check,Check,5
+9dTs8s,7h7d,67,アンダーペア(低)+OESD,check,Check,5
+4s4h3h,Jd5d,34,Jハイ+2OC,bet,Bet 2,5
+9s7s4c,Kd4d,32,ボトムペア,check,Check,5
+9s7s4c,JhTs,26,Jハイ+GS,bet,Bet 4,5
+Jh4h5s,AcKd,49,Aハイ+2OC,check,Check,5
+Js8d3c,Ts8s,40,セカンドペア(中)+BDFD,bet,Bet 2,5
+JsKs5d,9h8h,8,空振り,check,Check,5
+AcKs7d,AhJs,50,TPMK,bet,Bet 4,5
+Jh4h5s,Ks8s,25,Kハイ+BDFD,check,Check,5
+6s8d7c,As4d,41,Aハイ+GS,bet,Bet 2,5
+6s8d7c,JsJc,73,オーバーペア(中)+BDSD,bet,Bet 2,5
+AcKs7d,JhTc,26,Jハイ+GS,bet,Bet 4,5
+6s8d7c,4h4c,51,アンダーペア(低)+GS,check,Check,5
+QcAdKh,JdTs,100,Aハイストレート+OESD,bet,Bet 4,5
+JsKs5d,Ah3s,30,Aハイ+BDFD,bet,Bet 4,5
+Th4c5d,KsJs,44,Kハイ+2OC,check,Check,5
+6s8d7c,Ac4c,73,Aハイ+BDFD+GS,check,Check,5
+5c2d3h,Kh5h,75,TPTK+BDFD,bet,Bet 2,5
+9s7s4c,Td9h,50,TPMK,check,Check,5
+Qc8cAc,Qs9h,40,セカンドペア(中)+BDFD,check,Check,5
+Ks7h2d,AhJd,25,Aハイ,bet,Bet 2,5
+4s4h3h,7h7c,73,2ペア(split)+BDFD,bet,Bet 2,5
+8h8cTc,AdTd,78,2ペア(top2),bet,Bet 2,5
+AcKs7d,Qc9c,21,Qハイ+BDFD+BDSD,check,Check,5
+9dTs8s,QhJh,100,ストレート(high)+OESD,bet,Bet 2,5
+Th4c5d,Kh9d,20,Kハイ,check,Check,5
+Js8d3c,QhTc,31,Qハイ+GS,bet,Bet 2,5
+Th3s2d,As9h,27,Aハイ+BDSD,check,Check,5
+AcKs7d,8s8h,35,アンダーペア(低),check,Check,5
+7d6c4h,KdQc,44,Kハイ+2OC,check,Check,5
+Js8d3c,Ad8h,42,セカンドペア(強),bet,Bet 2,5
+Jh4h5s,9h6h,44,空振り+FD,check,Check,5
+4s4h3h,8s8d,68,2ペア(split),bet,Bet 2,5
+7d6c4h,Kh9c,44,Kハイ+2OC,bet,Bet 2,5
+Jh4h5s,KhJs,75,TPTK+BDFD,check,Check,5
+5c5dAh,As4c,78,2ペア(top2),check,Check,5
+9dTs8s,6s5s,56,空振り+FD+GS,check,Check,5
+Ad8d3d,KhJh,25,Kハイ+BDFD,check,Check,5
+Js8d3c,Ah3h,32,ボトムペア,bet,Bet 2,5
+Th3s2d,Ah7s,27,Aハイ+BDSD,check,Check,5
+8h8cTc,Kh8s,85,トリップス,bet,Bet 2,5
+TsKcAh,Qc9d,31,Qハイ+GS,bet,Bet 4,5
+QcAdKh,AhTc,66,TPMK+GS,check,Check,5
+Td6h4h,Ah3s,30,Aハイ+BDFD,bet,Bet 4,5
+JsKs5d,Td8c,8,空振り,check,Check,5
+JsKs5d,Jh9d,35,セカンドペア(中),check,Check,5
+JsKs5d,TsTd,45,アンダーペア(中)+BDFD,check,Check,5
+5c2d3h,2h2c,85,ボトムセット,bet,Bet 2,5
+7d6c4h,AhJc,49,Aハイ+2OC,check,Check,5
+Td6h4h,AsKc,49,Aハイ+2OC,check,Check,5
+Ad8d3d,Tc8h,40,セカンドペア(中)+BDFD,check,Check,5
+Ad9h8h,KdKc,45,アンダーペア(高),check,Check,5
+TsKcAh,Th9d,32,ボトムペア,check,Check,5
+9dTs8s,Ac3h,27,Aハイ+BDSD,check,Check,5
+Qc8cAc,5s5h,40,アンダーペア(低)+BDFD,check,Check,5
+6s8d7c,9s9c,100,オーバーペア(低)+OESD,bet,Bet 2,5
+Qc8cAc,JdJc,76,アンダーペア(中)+FD,check,Check,5
+JsKs5d,AdQc,41,Aハイ+GS,check,Check,5
+Ad9h8h,Ks5s,20,Kハイ,check,Check,5
+Jh4h5s,KhJd,75,TPTK+BDFD,check,Check,5
+Th4c5d,AsJd,49,Aハイ+2OC,check,Check,5
+9s7s4c,Ad6h,25,Aハイ,check,Check,5
+AcKs7d,Jd9d,15,Jハイ+BDFD,bet,Bet 4,5
+Ks7h2d,Ah7s,42,セカンドペア(強),bet,Bet 2,5
+JsKs5d,Ac4d,25,Aハイ,check,Check,5
+JcJh4s,QdJs,85,トリップス,bet,Bet 2,5
+Th4c5d,9h9c,35,アンダーペア(低),check,Check,5
+Ad8d3d,KhJh,25,Kハイ+BDFD,check,Check,5
+7d6c4h,KcQs,44,Kハイ+2OC,check,Check,5
+Js8d3c,KcTd,20,Kハイ,bet,Bet 2,5
+Td6h4h,AhJs,49,Aハイ+2OC,check,Check,5
+7d6c4h,KcJs,44,Kハイ+2OC,check,Check,5
+9dTs8s,AdJh,57,Aハイ+OESD,check,Check,5
+9dTs8s,QsJc,100,ストレート(high)+OESD,bet,Bet 2,5
+Jh4h5s,Jc8c,50,TPMK,check,Check,5
+8h8cTc,Ah3h,30,Aハイ+BDFD,check,Check,5
+4s4h3h,KsTs,44,Kハイ+2OC,check,Check,5
+Td6h4h,AhQd,49,Aハイ+2OC,check,Check,5
+Td6h4h,KsKc,78,オーバーペア(高),check,Check,5
+9dTs8s,Ac4d,27,Aハイ+BDSD,check,Check,5
+JsKs5d,Qc7c,17,Qハイ+BDSD,check,Check,5
+Ks7h2d,KhKd,92,トップセット,bet,Bet 2,5
+5c5dAh,KdJs,20,Kハイ,check,Check,5
+9dTs8s,Qd9s,58,セカンドペア(強)+GS,check,Check,5
+Ad8d3d,Ac2c,49,TPWK+BDFD+BDSD,check,Check,5
+Jh4h5s,KhJs,75,TPTK+BDFD,check,Check,5
+Th3s2d,Kc9s,20,Kハイ,check,Check,5
+JsKs5d,AdTh,41,Aハイ+GS,check,Check,5
+Ad8d3d,Ah6d,81,TPWK+FD,check,Check,5
+QcAdKh,Jd7d,58,Jハイ+BDFD+GS,bet,Bet 4,5
+Td6h4h,Ac7c,25,Aハイ,check,Check,5
+9s7s4c,AhJs,49,Aハイ+2OC,check,Check,5
+JsKs5d,Th6h,8,空振り,check,Check,5
+8h8cTc,Ac2c,61,Aハイ+FD,bet,Bet 2,5
+6s8d7c,Qd5d,65,Qハイ+BDFD+OESD,bet,Bet 2,5
+Qc8cAc,6s6d,40,アンダーペア(低)+BDFD,check,Check,5
+Td6h4h,Qc9d,15,Qハイ,check,Check,5
+7d6c4h,Kc9h,44,Kハイ+2OC,bet,Bet 2,5
+JcJh4s,AsAc,68,2ペア(split),check,Check,5
+6s8d7c,8s8h,93,トップセット+BDSD,bet,Bet 2,5
+Js8d3c,6s6h,35,アンダーペア(低),check,Check,5
+Td6h4h,Ac8c,25,Aハイ,check,Check,5
+JcJh4s,Ts8c,8,空振り,bet,Bet 2,5
+AcKs7d,Jh8h,10,Jハイ,check,Check,5
+JsKs5d,JdJc,88,ミドルセット,bet,Bet 4,5
+Jh4h5s,6s6c,36,アンダーペア(低)+BDSD,check,Check,5
+TsKcAh,Js9d,26,Jハイ+GS,bet,Bet 4,5
+9dTs8s,Qd9c,58,セカンドペア(強)+GS,check,Check,5
+Ks7h2d,AcTh,25,Aハイ,check,Check,5
+7d6c4h,Jh5h,60,Jハイ+BDFD+OESD,bet,Bet 2,5
+AcKs7d,Qc9c,21,Qハイ+BDFD+BDSD,check,Check,5
+Jh4h5s,QdJs,62,TPGK,check,Check,5
+Jh4h5s,TsTc,40,アンダーペア(中),check,Check,5
+9s7s4c,AsQd,49,Aハイ+2OC,check,Check,5
+Td6h4h,AsKd,49,Aハイ+2OC,check,Check,5
+AcKs7d,Qs9s,21,Qハイ+BDFD+BDSD,check,Check,5
+TsKcAh,8s8c,35,アンダーペア(低),check,Check,5
+4s4h3h,As7h,49,Aハイ+2OC,check,Check,5
+9s7s4c,Td9d,50,TPMK,check,Check,5
+5c5dAh,AdQs,78,2ペア(top2),bet,Bet 2,5
+Ad9h8h,5d5c,35,アンダーペア(低),check,Check,5
+9s7s4c,Ac8h,27,Aハイ+BDSD,check,Check,5
+Jh4h5s,QsTd,17,Qハイ+BDSD,check,Check,5
+Qc8cAc,KdTc,44,Kハイ+FD+GS,check,Check,5
+QcAdKh,As5c,46,TPWK+BDSD,check,Check,5
+TsKcAh,QsTh,48,ボトムペア+GS,check,Check,5
+9dTs8s,Td6d,93,TPWK+BDFD+GS,check,Check,5
+TsKcAh,7c5c,13,空振り+BDFD,check,Check,5
+Js8d3c,KcTs,20,Kハイ,bet,Bet 2,5
+9s7s4c,Ts8s,58,空振り+FD+OESD,bet,Bet 4,5
+9dTs8s,Jd8d,82,ボトムペア+BDFD+OESD,check,Check,5
+8h8cTc,Ad8s,85,トリップス,bet,Bet 2,5
+TsKcAh,5s5d,35,アンダーペア(低),check,Check,5
+Ad9h8h,8d8c,85,ボトムセット,bet,Bet 4,5
+Ks7h2d,AdKh,70,TPTK,bet,Bet 2,5
+Ad9h8h,Qs3s,15,Qハイ,check,Check,5
+Ad9h8h,Kc5c,20,Kハイ,check,Check,5
+Th4c5d,Ah8h,30,Aハイ+BDFD,check,Check,5
+Js8d3c,QsTs,63,Qハイ+BDFD+GS,bet,Bet 2,5
+9dTs8s,Ah5h,27,Aハイ+BDSD,check,Check,5
+Td6h4h,Js9d,12,Jハイ+BDSD,check,Check,5
+Js8d3c,As9c,25,Aハイ,bet,Bet 2,5
+Th3s2d,JdTs,50,TPMK,check,Check,5
+TsKcAh,Ks8s,40,セカンドペア(中)+BDFD,check,Check,5
+Ad9h8h,As5s,45,TPWK,check,Check,5
+AcKs7d,Kc9s,35,セカンドペア(中),check,Check,5
+Jh4h5s,KdTd,20,Kハイ,check,Check,5
+JcJh4s,AsJs,90,トリップス+BDFD,bet,Bet 2,5
+Jh4h5s,As4d,32,ボトムペア,check,Check,5
+7d6c4h,KhQd,44,Kハイ+2OC,check,Check,5
+Th4c5d,QdJd,39,Qハイ+2OC,bet,Bet 4,5
+6s8d7c,AsAh,79,オーバーペア(高)+BDSD,check,Check,5
+Js8d3c,7h7d,35,アンダーペア(低),check,Check,5
+Ks7h2d,QcJd,17,Qハイ+BDSD,check,Check,5
+TsKcAh,Ks7s,37,セカンドペア(弱)+BDFD,check,Check,5
+JcJh4s,Ah4h,80,2ペア(top+mid)+BDFD,bet,Bet 2,5
+Ks7h2d,2h2c,85,ボトムセット,bet,Bet 2,5
+9dTs8s,Ad8d,36,ボトムペア+BDFD+BDSD,check,Check,5
+Th3s2d,JcTc,50,TPMK,check,Check,5
+6s8d7c,TsTd,88,オーバーペア(中)+GS,bet,Bet 2,5
+9dTs8s,5s5c,39,アンダーペア(低)+BDFD+BDSD,check,Check,5
+Ad8d3d,Ac4c,50,TPWK+BDFD,check,Check,5
+AcKs7d,AsAh,92,トップセット,bet,Bet 4,5
+4s4h3h,Qs9h,39,Qハイ+2OC,bet,Bet 2,5
+Ad9h8h,5d5c,35,アンダーペア(低),check,Check,5
+JsKs5d,Jh7h,32,セカンドペア(弱),check,Check,5
+Js8d3c,7h7d,35,アンダーペア(低),check,Check,5
+6s8d7c,Tc8c,98,TPMK+BDFD+GS,bet,Bet 2,5
+Td6h4h,As7d,25,Aハイ,check,Check,5
+Jh4h5s,AcJd,70,TPTK,bet,Bet 4,5
+Js8d3c,Ah5s,25,Aハイ,check,Check,5
+9dTs8s,As4s,61,Aハイ+FD,bet,Bet 2,5
+4s4h3h,Kc9d,44,Kハイ+2OC,check,Check,5
+9dTs8s,Kh9h,43,セカンドペア(強)+BDSD,check,Check,5
+9dTs8s,Ac4h,27,Aハイ+BDSD,check,Check,5
+Ad8d3d,Ks9h,25,Kハイ+BDFD,check,Check,5
+4s4h3h,As6h,49,Aハイ+2OC,check,Check,5
+Jh4h5s,Jc6c,46,TPWK+BDSD,check,Check,5
+TsKcAh,9h9c,35,アンダーペア(低),check,Check,5
+QcAdKh,9h6h,14,空振り+BDFD+BDSD,check,Check,5
+Th3s2d,Ah9d,27,Aハイ+BDSD,check,Check,5
+Th4c5d,Ks8h,20,Kハイ,check,Check,5
+7d6c4h,9s6s,35,セカンドペア(中),check,Check,5
+7d6c4h,TdTc,72,オーバーペア(中),bet,Bet 2,5
+QcAdKh,Qh9c,33,ボトムペア+BDSD,check,Check,5
+9dTs8s,Jc4c,42,Jハイ+OESD,bet,Bet 2,5
+6s8d7c,Jh9d,42,Jハイ+OESD,bet,Bet 2,5
+8h8cTc,As6s,25,Aハイ,check,Check,5
+6s8d7c,AdQc,49,Aハイ+2OC,bet,Bet 2,5
+4s4h3h,As2s,73,Aハイ+BDFD+GS,check,Check,5
+Qc8cAc,KsKd,49,アンダーペア(高)+BDFD+BDSD,check,Check,5
+5c2d3h,7d7c,68,オーバーペア(低),bet,Bet 2,5
+Ad9h8h,Ah7d,49,TPWK+BDFD+BDSD,check,Check,5
+Th3s2d,JdJc,72,オーバーペア(中),bet,Bet 4,5
+Td6h4h,7h5h,58,空振り+FD+OESD,bet,Bet 4,5
+Qc8cAc,7h7d,40,アンダーペア(低)+BDFD,check,Check,5
+7d6c4h,AdTs,49,Aハイ+2OC,check,Check,5
+JsKs5d,AhTd,41,Aハイ+GS,check,Check,5
+Td6h4h,Ad5c,27,Aハイ+BDSD,check,Check,5
+Th3s2d,AsTc,71,TPTK+BDSD,bet,Bet 4,5
