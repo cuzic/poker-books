@@ -49,7 +49,7 @@
 | Script | 検証対象 |
 |--------|---------|
 | `ds_framework_recheck.py` | 後手スコア式の整合性 |
-| `texassolver_c_coef_verify.py` | C 係数 (33%=3, 50%=4, 75%=6) 検証 |
+| `texassolver_c_coef_verify.py` | C 係数 (33%=3, 50%=5, 75%=7) 検証 |
 | `texassolver_c_coef_srp_verify.py` | SRP での C 係数微調整 |
 | `c33_boundary_check.py` | 33% ベット境界 |
 | `c150_accuracy_eval.py` | 150% オーバーベット精度 |
