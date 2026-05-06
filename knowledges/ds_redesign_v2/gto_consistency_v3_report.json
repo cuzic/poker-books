@@ -1,0 +1,482 @@
+{
+  "phase1": {
+    "test_set": "Phase1 ds_framework_recheck",
+    "total": 27,
+    "new_scale": {
+      "match_rate": 92.5925925925926,
+      "match_inc_boundary": 100.0,
+      "correct": 25,
+      "boundary": 2
+    },
+    "old_scale": {
+      "match_rate": 88.88888888888889,
+      "match_inc_boundary": 100.0,
+      "correct": 24,
+      "boundary": 3
+    },
+    "rows": [
+      {
+        "board": "K72r",
+        "bet_pct": 33,
+        "bucket": "H3",
+        "actual": "RAISE",
+        "new_pred": "RAISE",
+        "new_DS": 70,
+        "new_match": true,
+        "old_pred": "RAISE",
+        "old_DS": 14,
+        "old_match": true
+      },
+      {
+        "board": "K72r",
+        "bet_pct": 33,
+        "bucket": "H1",
+        "actual": "CALL",
+        "new_pred": "CALL",
+        "new_DS": 28,
+        "new_match": true,
+        "old_pred": "CALL",
+        "old_DS": 1,
+        "old_match": true
+      },
+      {
+        "board": "K72r",
+        "bet_pct": 33,
+        "bucket": "H2",
+        "actual": "RAISE",
+        "new_pred": "RAISE",
+        "new_DS": 47,
+        "new_match": true,
+        "old_pred": "RAISE",
+        "old_DS": 8,
+        "old_match": true
+      },
+      {
+        "board": "K72r",
+        "bet_pct": 50,
+        "bucket": "H3",
+        "actual": "RAISE",
+        "new_pred": "RAISE",
+        "new_DS": 65,
+        "new_match": true,
+        "old_pred": "RAISE",
+        "old_DS": 12,
+        "old_match": true
+      },
+      {
+        "board": "K72r",
+        "bet_pct": 50,
+        "bucket": "H1",
+        "actual": "FOLD",
+        "new_pred": "CALL",
+        "new_DS": 23,
+        "new_match": false,
+        "old_pred": "FOLD",
+        "old_DS": -1,
+        "old_match": true
+      },
+      {
+        "board": "K72r",
+        "bet_pct": 50,
+        "bucket": "H2",
+        "actual": "RAISE",
+        "new_pred": "RAISE",
+        "new_DS": 42,
+        "new_match": true,
+        "old_pred": "CALL",
+        "old_DS": 6,
+        "old_match": false
+      },
+      {
+        "board": "K72r",
+        "bet_pct": 75,
+        "bucket": "H3",
+        "actual": "RAISE",
+        "new_pred": "RAISE",
+        "new_DS": 60,
+        "new_match": true,
+        "old_pred": "RAISE",
+        "old_DS": 10,
+        "old_match": true
+      },
+      {
+        "board": "K72r",
+        "bet_pct": 75,
+        "bucket": "H1",
+        "actual": "FOLD",
+        "new_pred": "FOLD",
+        "new_DS": 18,
+        "new_match": true,
+        "old_pred": "FOLD",
+        "old_DS": -3,
+        "old_match": true
+      },
+      {
+        "board": "K72r",
+        "bet_pct": 75,
+        "bucket": "H2",
+        "actual": "CALL",
+        "new_pred": "CALL",
+        "new_DS": 37,
+        "new_match": true,
+        "old_pred": "CALL",
+        "old_DS": 4,
+        "old_match": true
+      },
+      {
+        "board": "KJ7r",
+        "bet_pct": 33,
+        "bucket": "H1",
+        "actual": "CALL",
+        "new_pred": "CALL",
+        "new_DS": 22,
+        "new_match": true,
+        "old_pred": "CALL",
+        "old_DS": 0,
+        "old_match": true
+      },
+      {
+        "board": "KJ7r",
+        "bet_pct": 33,
+        "bucket": "H3",
+        "actual": "RAISE",
+        "new_pred": "RAISE",
+        "new_DS": 64,
+        "new_match": true,
+        "old_pred": "RAISE",
+        "old_DS": 13,
+        "old_match": true
+      },
+      {
+        "board": "KJ7r",
+        "bet_pct": 33,
+        "bucket": "H2",
+        "actual": "RAISE",
+        "new_pred": "RAISE",
+        "new_DS": 41,
+        "new_match": true,
+        "old_pred": "CALL",
+        "old_DS": 7,
+        "old_match": false
+      },
+      {
+        "board": "KJ7r",
+        "bet_pct": 50,
+        "bucket": "H1",
+        "actual": "FOLD",
+        "new_pred": "FOLD",
+        "new_DS": 17,
+        "new_match": true,
+        "old_pred": "FOLD",
+        "old_DS": -2,
+        "old_match": true
+      },
+      {
+        "board": "KJ7r",
+        "bet_pct": 50,
+        "bucket": "H3",
+        "actual": "RAISE",
+        "new_pred": "RAISE",
+        "new_DS": 59,
+        "new_match": true,
+        "old_pred": "RAISE",
+        "old_DS": 11,
+        "old_match": true
+      },
+      {
+        "board": "KJ7r",
+        "bet_pct": 50,
+        "bucket": "H2",
+        "actual": "CALL",
+        "new_pred": "CALL",
+        "new_DS": 36,
+        "new_match": true,
+        "old_pred": "CALL",
+        "old_DS": 5,
+        "old_match": true
+      },
+      {
+        "board": "KJ7r",
+        "bet_pct": 75,
+        "bucket": "H1",
+        "actual": "FOLD",
+        "new_pred": "FOLD",
+        "new_DS": 12,
+        "new_match": true,
+        "old_pred": "FOLD",
+        "old_DS": -4,
+        "old_match": true
+      },
+      {
+        "board": "KJ7r",
+        "bet_pct": 75,
+        "bucket": "H3",
+        "actual": "RAISE",
+        "new_pred": "RAISE",
+        "new_DS": 54,
+        "new_match": true,
+        "old_pred": "RAISE",
+        "old_DS": 9,
+        "old_match": true
+      },
+      {
+        "board": "KJ7r",
+        "bet_pct": 75,
+        "bucket": "H2",
+        "actual": "CALL",
+        "new_pred": "CALL",
+        "new_DS": 31,
+        "new_match": true,
+        "old_pred": "CALL",
+        "old_DS": 3,
+        "old_match": true
+      },
+      {
+        "board": "T98r",
+        "bet_pct": 33,
+        "bucket": "H1",
+        "actual": "CALL",
+        "new_pred": "FOLD",
+        "new_DS": 16,
+        "new_match": false,
+        "old_pred": "FOLD",
+        "old_DS": -1,
+        "old_match": false
+      },
+      {
+        "board": "T98r",
+        "bet_pct": 33,
+        "bucket": "H2",
+        "actual": "CALL",
+        "new_pred": "CALL",
+        "new_DS": 35,
+        "new_match": true,
+        "old_pred": "CALL",
+        "old_DS": 6,
+        "old_match": true
+      },
+      {
+        "board": "T98r",
+        "bet_pct": 33,
+        "bucket": "H3",
+        "actual": "RAISE",
+        "new_pred": "RAISE",
+        "new_DS": 58,
+        "new_match": true,
+        "old_pred": "RAISE",
+        "old_DS": 12,
+        "old_match": true
+      },
+      {
+        "board": "T98r",
+        "bet_pct": 50,
+        "bucket": "H1",
+        "actual": "FOLD",
+        "new_pred": "FOLD",
+        "new_DS": 11,
+        "new_match": true,
+        "old_pred": "FOLD",
+        "old_DS": -3,
+        "old_match": true
+      },
+      {
+        "board": "T98r",
+        "bet_pct": 50,
+        "bucket": "H2",
+        "actual": "CALL",
+        "new_pred": "CALL",
+        "new_DS": 30,
+        "new_match": true,
+        "old_pred": "CALL",
+        "old_DS": 4,
+        "old_match": true
+      },
+      {
+        "board": "T98r",
+        "bet_pct": 50,
+        "bucket": "H3",
+        "actual": "RAISE",
+        "new_pred": "RAISE",
+        "new_DS": 53,
+        "new_match": true,
+        "old_pred": "RAISE",
+        "old_DS": 10,
+        "old_match": true
+      },
+      {
+        "board": "T98r",
+        "bet_pct": 75,
+        "bucket": "H1",
+        "actual": "FOLD",
+        "new_pred": "FOLD",
+        "new_DS": 6,
+        "new_match": true,
+        "old_pred": "FOLD",
+        "old_DS": -5,
+        "old_match": true
+      },
+      {
+        "board": "T98r",
+        "bet_pct": 75,
+        "bucket": "H2",
+        "actual": "CALL",
+        "new_pred": "CALL",
+        "new_DS": 25,
+        "new_match": true,
+        "old_pred": "CALL",
+        "old_DS": 2,
+        "old_match": true
+      },
+      {
+        "board": "T98r",
+        "bet_pct": 75,
+        "bucket": "H3",
+        "actual": "RAISE",
+        "new_pred": "RAISE",
+        "new_DS": 48,
+        "new_match": true,
+        "old_pred": "RAISE",
+        "old_DS": 8,
+        "old_match": true
+      }
+    ]
+  },
+  "boundary": {
+    "test_set": "handscore_boundary individual hands",
+    "total": 14,
+    "new_scale": {
+      "match_rate": 21.428571428571427,
+      "match_inc_boundary": 57.14285714285714,
+      "correct": 3,
+      "boundary": 5
+    },
+    "rows": [
+      {
+        "board": "Ks,7c,2c",
+        "label": "ナッツFD単独 AcXc",
+        "new_hs": 41,
+        "new_DS": 41,
+        "new_pred": "RAISE",
+        "actual": "RAISE",
+        "match": true
+      },
+      {
+        "board": "Ks,7c,2c",
+        "label": "非ナッツFD QcXc",
+        "new_hs": 41,
+        "new_DS": 41,
+        "new_pred": "RAISE",
+        "actual": "CALL",
+        "match": false
+      },
+      {
+        "board": "Ks,7c,2c",
+        "label": "非ナッツFD TcXc",
+        "new_hs": 41,
+        "new_DS": 41,
+        "new_pred": "RAISE",
+        "actual": "CALL",
+        "match": false
+      },
+      {
+        "board": "Ks,7c,2c",
+        "label": "tpmk+nut FD KcJc/KcTc",
+        "new_hs": 91,
+        "new_DS": 91,
+        "new_pred": "RAISE",
+        "actual": "RAISE",
+        "match": true
+      },
+      {
+        "board": "Ks,7c,2c",
+        "label": "tpwk+FD Kc5c",
+        "new_hs": 81,
+        "new_DS": 81,
+        "new_pred": "RAISE",
+        "actual": "RAISE",
+        "match": true
+      },
+      {
+        "board": "Ks,7c,2c",
+        "label": "tpmk no FD KhJd/KhTd",
+        "new_hs": 50,
+        "new_DS": 50,
+        "new_pred": "RAISE",
+        "actual": "CALL",
+        "match": false
+      },
+      {
+        "board": "Ks,7c,2c",
+        "label": "tpmk+BDFD KhJh",
+        "new_hs": 55,
+        "new_DS": 55,
+        "new_pred": "RAISE",
+        "actual": "CALL",
+        "match": false
+      },
+      {
+        "board": "Ad,7c,2s",
+        "label": "tpwk A3o-A6o",
+        "new_hs": 45,
+        "new_DS": 45,
+        "new_pred": "RAISE",
+        "actual": "CALL",
+        "match": false
+      },
+      {
+        "board": "Ad,7c,2s",
+        "label": "tpmk ATo/AJo",
+        "new_hs": 50,
+        "new_DS": 50,
+        "new_pred": "RAISE",
+        "actual": "CALL",
+        "match": false
+      },
+      {
+        "board": "Ad,7c,2s",
+        "label": "tpwk A8o/A9o",
+        "new_hs": 45,
+        "new_DS": 45,
+        "new_pred": "RAISE",
+        "actual": "CALL",
+        "match": false
+      },
+      {
+        "board": "Tc,8d,4s",
+        "label": "gutshot単独 QhJh",
+        "new_hs": 16,
+        "new_DS": 10,
+        "new_pred": "FOLD",
+        "actual": "CALL",
+        "match": false
+      },
+      {
+        "board": "Tc,8d,4s",
+        "label": "BDFD単独 Ah2h",
+        "new_hs": 5,
+        "new_DS": -1,
+        "new_pred": "FOLD",
+        "actual": "CALL",
+        "match": false
+      },
+      {
+        "board": "Tc,8d,4s",
+        "label": "2ndペア+gut 8hJh",
+        "new_hs": 48,
+        "new_DS": 42,
+        "new_pred": "RAISE",
+        "actual": "CALL",
+        "match": false
+      },
+      {
+        "board": "Tc,8d,4s",
+        "label": "OESD単独 J9 全スート",
+        "new_hs": 32,
+        "new_DS": 26,
+        "new_pred": "CALL",
+        "actual": "RAISE",
+        "match": false
+      }
+    ]
+  }
+}
