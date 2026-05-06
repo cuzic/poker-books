@@ -31,8 +31,8 @@
     // MD012: 連続する空行を禁止
     "no-multiple-blanks": { "maximum": 1 },
 
-    // MD013: 行の長さ制限（日本語では緩和するが基本は有効）
-    "line-length": { "line_length": 200, "code_blocks": false, "tables": false },
+    // MD013: 行の長さ制限（日本語の段落は 1 段落 1 行で書く慣行のため緩和）
+    "line-length": { "line_length": 500, "code_blocks": false, "tables": false },
 
     // MD014: コマンド出力にドル記号を付けない
     "commands-show-output": true,
