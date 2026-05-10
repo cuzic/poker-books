@@ -4,6 +4,15 @@
 <!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
 <!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
 
+> ⚠️ **このワークシートは旧版の式に基づいています**
+>
+> 本書の最新設計では「ハンド役割分類 × 9マスマトリクス」（第9・10章）を
+> 採用し、R1〜R6 のような混合戦略補正は巻③（フロップ応用）に移管されました。
+> HandScore は equity % 相当の 0-100 指標です。
+>
+> 最新の判定方法は本書第9・10章、および巻③第7章（混合戦略 R1-R6）を
+> 参照してください。
+
 **指示**：各問題でまず基本 CBet スコアを計算し、R1〜R6 を適用して最終判断を出してください。
 
 **R1 バンド定義（3バンド化）**

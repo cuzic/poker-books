@@ -1,5 +1,9 @@
 # M 係数（マルチウェイ補正）の理論導出
 
+> **NOTE (2026-05-05)**: 旧スケール (HS 0-30) 時代の理論導出。
+> 新スケール (HS 0-100) では M = {HU 0, 3-way 12, 4-way+ 22}。
+> 検証成果は [`../ds_redesign_v2/multiway_m_validation_v2.md`](../ds_redesign_v2/multiway_m_validation_v2.md) 参照。
+
 出典: GTO Wizard ブログ + MDF 公式からの導出
 導出日: 2026-05-01
 

@@ -47,11 +47,11 @@ formula は計算的、SDV は概念的
 
 **SDV と back_score は異なるフレームワーク:**
 
-- **back_score** (DS = HS + A − 3 − C − M): 数値的に「コール / CR / fold」の閾値で判定
+- **back_score** (DS = HS + A − C − M、新スケール 0-100): 数値的に「コール / CR / fold」の閾値で判定
 - **SDV**: ハンドの役 × ポジション × ナッツアドバンテージで「攻める / SDV / 守る / 捨てる」をルックアップ
 
 両者は重なる部分もあるが、境界での挙動が違う:
-- back_score ≥ 0 → CALL（H1 でも MDF で守る）
+- back_score ≥ 20 → CALL（H1 でも MDF で守る）
 - SDV「捨てる」→ FOLD（H1 weak はナッツ不利板で fold）
 
 ---

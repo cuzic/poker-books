@@ -1,5 +1,6 @@
 {
   "title": "迷わないポーカー① プリフロップ",
+  "titleRomaji": "Mayowanai Poker 1: Preflop",
   "subtitle": "覚えなくていいレンジの考え方",
   "author": "川西智也",
   "language": "ja",
@@ -15,7 +16,10 @@
       "ポーカー 初心者",
       "GTO プリフロップ",
       "ハンド評価 Chen",
-      "ポジション ポーカー"
+      "ポジション ポーカー",
+      "オープンレイズ ポーカー",
+      "3ベット ポーカー",
+      "プリフロップ 暗算"
     ],
     "categories": [
       "Kindle Store > 趣味・実用 > ゲーム",
@@ -41,7 +45,7 @@
     },
     "pricing": {
       "currency": "JPY",
-      "listPrice": 780,
+      "listPrice": 980,
       "kdpSelect": true
     }
   }

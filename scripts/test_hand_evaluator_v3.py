@@ -56,9 +56,11 @@ class TestSpecExamples:
         assert score == 40
 
     def test_example_5_combo_draw(self):
-        """例5: JsTs on 9s8c2h → コンボドロー → 50 (上限)"""
+        """例5: JsTs on 9s8c2h → BDFD+OESD コンボドロー
+        役なし(8) + BDFD+OESD (11 outs × 4 = 44) = 52
+        """
         score, _ = evaluate_v3("JsTs", "9s8c2h", "flop")
-        assert 55 <= score <= 70
+        assert 50 <= score <= 65
 
     def test_example_6_tpgk_fd_turn(self):
         """例6: KcQc on Ks7c2c+5d → TPGK + FD ターン → 62 + 18 = 80"""
@@ -190,9 +192,10 @@ class TestDrawBonus:
         assert draw_bonus(4, "flop") == 16
 
     def test_flop_combo_cap(self):
-        """フロップ outs × 4 は 50 で上限クランプ"""
-        assert draw_bonus(15, "flop") == 50  # 60 → 50
-        assert draw_bonus(20, "flop") == 50
+        """フロップ outs × 4 は 60 で上限クランプ (FD+OESD 13 outs = 52 を許容)"""
+        assert draw_bonus(13, "flop") == 52  # FD+OESD 重複控除後
+        assert draw_bonus(15, "flop") == 60  # キャップ到達
+        assert draw_bonus(20, "flop") == 60  # キャップ維持
 
     def test_turn_fd(self):
         """ターン FD: 9 × 2 = 18"""

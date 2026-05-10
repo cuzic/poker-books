@@ -4,6 +4,15 @@
 <!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
 <!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
 
+> ⚠️ **このワークシートは旧版の式に基づいています**
+>
+> 本書の最新設計では、CBet 統合式に代わって
+> 「**ハンド役割分類 × 9マスマトリクス**」（第9・10章）を採用しています。
+> ターン・リバーの判断は巻④の「**バレルスコア / 後手スコア**」
+> （HandScore 0-100、後手スコア = HS+A−C−M）を参照してください。
+>
+> 最新の判定方法は本書第9・10章、および巻④第8・10・11章を参照してください。
+
 **指示**：各問題で完全統合式を使って最終 CBet スコアを算出し、判定を出してください。
 
 **完全統合式**

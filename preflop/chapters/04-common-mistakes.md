@@ -11,7 +11,7 @@
 
 <figure><img src="images/p04-fig1-three-common-mistakes.jpg" alt="Axo過信・ギャップ好き・ポジション無視の3大プリフロップ失敗を列挙した縦型図" /><figcaption>Axo過信・ギャップ好き・ポジション無視の3大プリフロップ失敗を列挙した縦型図</figcaption></figure>
 
-<figure><img src="images/p04-fig2-a9o-ev-loss.jpg" alt="A9oをUTG/MP/CO/BTN/SBでプレイした場合のEV損失を棒グラフで示す" /><figcaption>A9oをUTG/MP/CO/BTN/SBでプレイした場合のEV損失を棒グラフで示す</figcaption></figure>
+<figure><img src="images/p04-fig2-a9o-ev-loss.jpg" alt="A9oをUTG/HJ/CO/BTN/SBでプレイした場合のEV損失を棒グラフで示す" /><figcaption>A9oをUTG/HJ/CO/BTN/SBでプレイした場合のEV損失を棒グラフで示す</figcaption></figure>
 
 ## 4-1 リンプ：最大級の赤字行動
 
@@ -55,7 +55,7 @@ GTO推奨のオープン頻度を再掲します。
 | ポジション | GTO推奨 | 典型的ミス |
 |-----------|--------|-----------|
 | UTG | 約 17〜18% | 20%超でオープン |
-| MP | 約 21〜24% | UTG並みにタイト |
+| HJ | 約 21〜24% | UTG並みにタイト |
 | CO | 約 27〜30% | 中間（ミスは少ない） |
 | BTN | 約 43〜51% | 40%未満でタイト |
 
@@ -110,7 +110,7 @@ K3sの問題は、**ボードにKが落ちたときに相手に必ずドミネ�
 
 | ポジション | 採用開始の Kxs |
 |-----------|-------------|
-| UTG〜MP | K採用は KQs のみ |
+| UTG〜HJ | K採用は KQs のみ |
 | HJ | K8s〜 から |
 | CO | K6s〜 から |
 | BTN | K2s まで全採用 |
@@ -215,7 +215,7 @@ SBの具体戦略は第15章で深掘りします。本章では「SBでコー�
 
 6-maxでリンプが最も推奨されないポジションはどれでしょうか。
 
-1. UTG〜MP
+1. UTG〜HJ
 2. BTN
 3. BB
 
@@ -244,7 +244,7 @@ UTGから「Aがついているから」と開くと、本書の推奨から外�
 
 ### 解答
 
-- **問1**：1（UTG〜MPからのリンプは −120bb/100クラスの損失になりうる）
+- **問1**：1（UTG〜HJからのリンプは −120bb/100クラスの損失になりうる）
 - **問2**：2と3（AJoとATsはUTGでのオープン対象、A9oとA5oは原則フォールド）
 - **問3**：2（セット成立率12% から逆算すると、インプライドオッズを含めて約25倍が必要）
 

@@ -1,5 +1,6 @@
 {
   "title": "迷わないポーカー③ フロップ[応用]",
+  "titleRomaji": "Mayowanai Poker 3: Flop Advanced",
   "subtitle": "相手のレンジを読んで搾取する",
   "author": "川西智也",
   "language": "ja",
@@ -14,11 +15,15 @@
       "ポーカー メタゲーム",
       "BDM v5",
       "HUD 統計 ポーカー",
-      "混合戦略 R1-R6"
+      "混合戦略 R1-R6",
+      "フロップ 応用",
+      "レンジ vs レンジ ポーカー",
+      "ノードロック ポーカー"
     ],
     "categories": [
       "Kindle Store > 趣味・実用 > ゲーム",
-      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム"
+      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム",
+      "Kindle Store > ノンフィクション > 科学・テクノロジー"
     ],
     "bisac": [
       "GAM004000",
@@ -36,6 +41,12 @@
       "textAssisted": true,
       "imageGenerated": false,
       "note": "Claude Code（Anthropic）を執筆補助ツールとして使用。最終的な編集・監修は著者が実施。"
+    },
+    "pricing": {
+      "currency": "JPY",
+      "listPrice": 980,
+      "kdpSelect": true
     }
-  }
+  },
+  "cover": "chapters/images/cover.jpg"
 }

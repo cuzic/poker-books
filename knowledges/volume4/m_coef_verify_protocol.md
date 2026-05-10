@@ -1,6 +1,11 @@
 # M 係数（マルチウェイ補正）GTO Wizard Elite 検証プロトコル
 Task #130
 
+> **NOTE (2026-05-05)**: 旧スケール (HS 0-30) 時代の検証プロトコル。
+> 新スケール (HS 0-100 equity %) における M 値の妥当性検証は
+> [`../ds_redesign_v2/multiway_m_validation_v2.md`](../ds_redesign_v2/multiway_m_validation_v2.md) を参照。
+> 新スケール M = {HU 0, 3-way 12, 4-way+ 22}。
+
 ## 概要
 
 DS 式のマルチウェイ補正係数 M の検証。

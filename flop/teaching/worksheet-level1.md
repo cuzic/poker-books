@@ -4,6 +4,15 @@
 <!-- textlint-disable preset-ja-technical-writing/no-exclamation-question-mark -->
 <!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu -->
 
+> ⚠️ **このワークシートは旧版の式に基づいています**
+>
+> 本書（巻②フロップ基礎）の最新設計では、CBet スコア統合式に代わって
+> **「ハンド役割分類 × 9マスマトリクス」**（第9・10章）を使用します。
+> HandScore は equity % 相当の 0-100 指標へ統一されています。
+>
+> 最新の判定方法は本書 **第9章（ハンド役割分類）**および
+> **第10章（9マスマトリクス）**を参照してください。
+
 **指示**：各問題で `CBet スコア = HandScore − BoardScore + ポジション係数` を計算し、判定してください。
 
 **判定基準**

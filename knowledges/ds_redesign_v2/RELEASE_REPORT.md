@@ -146,6 +146,39 @@ poker-drill:
 EPUB 全 7 巻:
   ✓ 0 fatals / 0 errors / 0 warnings
   ✓ KDP 公開可能な状態
+
+追加検証 (2026-05-05):
+  ✓ 3BP SPR 補正の導出 → spr_correction_3bp.md
+       SPR ≥ 6 → ≥40 / 3〜5 → ≥60 / <3 → ≥75
+       巻⑤ Ch10 に反映済み
+  ✓ 4BP 章の追加 → 巻⑤ Ch10 新節 10-9 (push/fold 圏)
+  ✓ IP/OOP 非対称性 → ip_oop_threshold_correction.md
+       式は対称、戦略差は巻④ Ch12/13 で対応済み
+  ✓ マルチウェイ M 値検証 → multiway_m_validation_v2.md
+       8 ソース (GTO Wizard / Galfond / Upswing 等) で
+       M=12/22 の妥当性を確認
+
+追加補強 (2026-05-06):
+  ✓ 巻④ Ch13 に 「IP/OOP の非対称性メモ」(13-8) 追加
+       式は対称、戦略選択 (CR / コール余地 / レンジ強度) の非対称性を整理
+  ✓ 巻⑤ Ch12 に 4-way 例 5 を追加 (Galfond の K-T-6 AA ケース)
+       M=22 が GTO 実測 (Phil Galfond 公開分析) と整合する例
+  ✓ digest Ch12 に 12-6 (3BP/4BP SPR 補正) と 12-7 (M 補正) 追加
+       digest 読者が 3BP/マルチウェイの存在を認知できる程度の簡潔記述
+
+ユーザ向け旧スケール参照削除 (2026-05-06):
+  ✓ 全 7 書籍 chapters: 0 件 (44 ファイル × 163 箇所削除)
+  ✓ poker-drill UI コンポーネント: 0 件
+  ✓ README, toc.md, dist/ 全て: 0 件
+  ✓ 内部 docs (knowledges/, design/, .claude/) は意図的に保留 (履歴記録)
+
+poker-drill 修正 (2026-05-06):
+  ✓ scripts/archive/generate_flop_donk_cards.py: 新スケール化 + パスバグ修正
+  ✓ scripts/archive/generate_turn_river_decks.py: DEPRECATED マーク
+  ✓ scripts/generate/river_alpha.py: 新規作成 (17 cards generator-driven)
+  ✓ src/data/*.ts 全 16 ファイル: 旧スケール残存除去 (再生成完了)
+  ✓ core/calc.py: back_score_judgment_by_spr() 追加 (SPR 別 CR 閾値)
+  ✓ test_calc.py: 13 SPR-tiered tests 追加、全 pass (343/343 全 E2E pass)
 ```
 
 ## ご報告事項

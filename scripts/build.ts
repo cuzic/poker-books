@@ -7,8 +7,12 @@ import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import EPub from "epub-gen-memory";
-import { readdir, mkdir } from "node:fs/promises";
+import { readdir, mkdir, writeFile, readFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { join, basename, extname } from "node:path";
+import { tmpdir } from "node:os";
+import { spawn } from "node:child_process";
+import { createHash } from "node:crypto";
 
 interface BookConfig {
   title: string;
@@ -90,13 +94,90 @@ function createXhtmlProcessor() {
     });
 }
 
+// ─── Mermaid 前処理 ───────────────────────────────────────────────────────────
+// mmdc (mermaid-cli) を呼び出して mermaid コードブロックを SVG に置換。
+// SVG は HTML/XHTML/EPUB すべてで描画可能。同じソースは MERMAID_CACHE で再利用。
+const MERMAID_CACHE = join(ROOT, ".mermaid-cache");
+
+async function ensureMermaidCache() {
+  if (!existsSync(MERMAID_CACHE)) {
+    await mkdir(MERMAID_CACHE, { recursive: true });
+  }
+}
+
+async function renderMermaidBlock(source: string): Promise<Buffer> {
+  await ensureMermaidCache();
+  const hash = createHash("sha256").update(source).digest("hex").slice(0, 16);
+  const pngPath = join(MERMAID_CACHE, `${hash}.png`);
+  if (existsSync(pngPath)) {
+    return await readFile(pngPath);
+  }
+
+  const mmdPath = join(tmpdir(), `mermaid-${hash}.mmd`);
+  await writeFile(mmdPath, source, "utf-8");
+
+  await new Promise<void>((resolve, reject) => {
+    // PNG 出力: SVG だと epubcheck が <foreignObject><p>...</p></foreignObject>
+    // を namespace エラーにするため、PNG に統一する。スケール 2 で高 DPI 対応。
+    const child = spawn(
+      "bunx",
+      ["mmdc", "-i", mmdPath, "-o", pngPath, "-s", "2", "-w", "1200"],
+      { stdio: ["ignore", "pipe", "pipe"] }
+    );
+    let stderr = "";
+    child.stderr.on("data", (d) => (stderr += d.toString()));
+    child.on("error", reject);
+    child.on("close", (code) => {
+      if (code === 0) resolve();
+      else reject(new Error(`mmdc exited ${code}: ${stderr}`));
+    });
+  });
+  return await readFile(pngPath);
+}
+
+// Mermaid 図を PNG として <bookDir>/chapters/images/mermaid-{hash}.png に保存し、
+// `<img src="images/...">` で参照する。既存の rewriteImagesToFileUrls パイプラインが
+// EPUB 用の file:// URL 変換、HTML 用の base64 埋め込みを担当する。
+// SVG は mermaid の <foreignObject> による HTML 要素混入で epubcheck エラーになるため、
+// PNG に統一する (スケール ×2 で 1200px 幅、高 DPI 対応)。
+async function preprocessMermaid(markdown: string, bookDirPath: string): Promise<string> {
+  const re = /```mermaid\n([\s\S]*?)\n```/g;
+  const blocks: { match: string; source: string }[] = [];
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(markdown)) !== null) {
+    blocks.push({ match: m[0], source: m[1] });
+  }
+  if (blocks.length === 0) return markdown;
+
+  const imagesDir = join(bookDirPath, "chapters", "images");
+  if (!existsSync(imagesDir)) {
+    await mkdir(imagesDir, { recursive: true });
+  }
+
+  let result = markdown;
+  for (const { match, source } of blocks) {
+    const png = await renderMermaidBlock(source);
+    const hash = createHash("sha256").update(source).digest("hex").slice(0, 16);
+    const filename = `mermaid-${hash}.png`;
+    const outPath = join(imagesDir, filename);
+    if (!existsSync(outPath)) {
+      await writeFile(outPath, png);
+    }
+    const wrapped = `<figure class="mermaid-figure"><img src="images/${filename}" alt="Mermaid diagram"/></figure>`;
+    result = result.replace(match, `\n\n${wrapped}\n\n`);
+  }
+  return result;
+}
+
 async function processMarkdown(
   filePath: string,
-  processor: ReturnType<typeof createHtmlProcessor>
+  processor: ReturnType<typeof createHtmlProcessor>,
+  bookDirPath: string
 ): Promise<Chapter> {
-  const content = await Bun.file(filePath).text();
+  const rawContent = await Bun.file(filePath).text();
+  const content = await preprocessMermaid(rawContent, bookDirPath);
   const result = await processor.process(content);
-  const titleMatch = content.match(/^#\s+(.+)$/m);
+  const titleMatch = rawContent.match(/^#\s+(.+)$/m);
   const title = titleMatch ? titleMatch[1] : basename(filePath, ".md");
   return {
     title,
@@ -172,7 +253,7 @@ async function buildHtml(bookId: BookId): Promise<void> {
   await mkdir(outDir, { recursive: true });
   const processor = createHtmlProcessor();
   for (const chapterPath of await getChapterFiles(bookId)) {
-    const chapter = await processMarkdown(chapterPath, processor);
+    const chapter = await processMarkdown(chapterPath, processor, join(ROOT, bookDir(bookId)));
     const html = wrapHtml(chapter.content, chapter.title, false);
     await Bun.write(join(outDir, `${chapter.filename}.html`), html);
   }
@@ -185,7 +266,7 @@ async function buildXhtml(bookId: BookId): Promise<void> {
   await mkdir(outDir, { recursive: true });
   const processor = createXhtmlProcessor();
   for (const chapterPath of await getChapterFiles(bookId)) {
-    const chapter = await processMarkdown(chapterPath, processor);
+    const chapter = await processMarkdown(chapterPath, processor, join(ROOT, bookDir(bookId)));
     const xhtml = wrapHtml(chapter.content, chapter.title, true);
     await Bun.write(join(outDir, `${chapter.filename}.xhtml`), xhtml);
   }
@@ -286,7 +367,7 @@ async function buildEpub(bookId: BookId, config: BookConfig): Promise<void> {
   const processor = createXhtmlProcessor();
   const epubChapters: Array<{ title: string; content: string }> = [];
   for (const chapterPath of await getChapterFiles(bookId)) {
-    const chapter = await processMarkdown(chapterPath, processor);
+    const chapter = await processMarkdown(chapterPath, processor, join(ROOT, bookDir(bookId)));
     // EPUB: rewrite image refs to file:// URLs so epub-gen-memory can fetch
     // them with proper mediaType inference (vs base64 data URIs which fail).
     const contentWithImages = await rewriteImagesToFileUrls(
@@ -353,7 +434,7 @@ async function buildSite(bookId: BookId, config: BookConfig): Promise<void> {
   const chapterFiles = await getChapterFiles(bookId);
   const chapters: Chapter[] = [];
   for (const chapterPath of chapterFiles) {
-    chapters.push(await processMarkdown(chapterPath, processor));
+    chapters.push(await processMarkdown(chapterPath, processor, join(ROOT, bookDir(bookId))));
   }
 
   for (let i = 0; i < chapters.length; i++) {

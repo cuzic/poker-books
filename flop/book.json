@@ -1,5 +1,6 @@
 {
   "title": "迷わないポーカー② フロップ[基礎]",
+  "titleRomaji": "Mayowanai Poker 2: Flop Basic",
   "subtitle": "秒で決まるボード判断",
   "author": "川西智也",
   "language": "ja",
@@ -15,7 +16,10 @@
       "ポーカー 計算式",
       "GTO フロップ",
       "SPR ポーカー",
-      "ポストフロップ 初心者"
+      "ポストフロップ 初心者",
+      "HandScore ポーカー",
+      "フロップ 暗算",
+      "C ベットサイズ ポーカー"
     ],
     "categories": [
       "Kindle Store > 趣味・実用 > ゲーム",

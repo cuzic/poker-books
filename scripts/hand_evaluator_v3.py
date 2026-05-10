@@ -129,7 +129,7 @@ def draw_bonus(outs: int, street: str, draw_type: str = "") -> int:
     if "BDSD" in draw_type:
         return 2
     if street == "flop":
-        return min(outs * 4, 50)
+        return min(outs * 4, 60)
     elif street == "turn":
         return min(outs * 2, 30)
     return 0
@@ -409,8 +409,9 @@ def _calc_draw_bonus(
         bonus = draw_bonus(outs, street)
         return bonus, "FD+OESD"
     if enhanced_bd_combo and oesd:
-        # SPEC 例5: 9 + 8 - 2 重複 = 15 effective outs → 50 (上限)
-        outs = 15
+        # SPEC 例5: BDFD (3 outs相当) + OESD (8 outs) ≒ 11 effective outs (重複考慮)
+        # FD+OESD (13 outs = +52) より下、OESD単独 (+32) より上
+        outs = 11
         bonus = draw_bonus(outs, street)
         return bonus, "BDFD+OESD"
     if enhanced_bd_combo and gs:
