@@ -1,0 +1,22 @@
+{
+  "board_id": "JT9r_1",
+  "solver_str": "Jc,Td,9h",
+  "texture": "rainbow_connected",
+  "b_score": 67,
+  "note": "JT9 rainbow",
+  "r_hi": 11,
+  "r_mid": 10,
+  "r_lo": 9,
+  "elapsed_s": 100.1,
+  "btn_cbet_pct": 68.19,
+  "btn_cbet_33": 19.51,
+  "bb_fold_vs33": 18.45,
+  "btn_cbet_50": 23.1,
+  "bb_fold_vs50": 33.77,
+  "btn_cbet_75": 25.58,
+  "bb_fold_vs75": 39.23,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_two_overcards": 100.0,
+  "cbet_air": 41.32
+}

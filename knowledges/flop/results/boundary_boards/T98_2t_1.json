@@ -1,0 +1,22 @@
+{
+  "board_id": "T98_2t_1",
+  "solver_str": "Tc,9d,8c",
+  "texture": "2tone",
+  "b_score": 50,
+  "note": "T98 2-tone — spread 2, top<J",
+  "r_hi": 10,
+  "r_mid": 9,
+  "r_lo": 8,
+  "elapsed_s": 74.4,
+  "btn_cbet_pct": 52.29,
+  "btn_cbet_33": 1.67,
+  "bb_fold_vs33": 12.89,
+  "btn_cbet_50": 12.51,
+  "bb_fold_vs50": 24.71,
+  "btn_cbet_75": 33.29,
+  "bb_fold_vs75": 30.07,
+  "cbet_overpair": 99.44,
+  "cbet_top_pair": 84.47,
+  "cbet_two_overcards": 51.29,
+  "cbet_air": 34.2
+}

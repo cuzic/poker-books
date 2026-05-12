@@ -1,0 +1,22 @@
+{
+  "board_id": "T73cc_1",
+  "solver_str": "Tc,7c,3c",
+  "texture": "mono",
+  "b_score": 70,
+  "note": "T73 mono",
+  "r_hi": 10,
+  "r_mid": 7,
+  "r_lo": 3,
+  "elapsed_s": 88.4,
+  "btn_cbet_pct": 72.05,
+  "btn_cbet_33": 11.73,
+  "bb_fold_vs33": 8.57,
+  "btn_cbet_50": 36.43,
+  "bb_fold_vs50": 23.65,
+  "btn_cbet_75": 23.89,
+  "bb_fold_vs75": 29.62,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_two_overcards": 53.13,
+  "cbet_air": 57.18
+}

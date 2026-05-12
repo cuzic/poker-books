@@ -1,0 +1,22 @@
+{
+  "board_id": "J84cc_1",
+  "solver_str": "Jc,8c,4c",
+  "texture": "mono",
+  "b_score": 70,
+  "note": "J84 mono",
+  "r_hi": 11,
+  "r_mid": 8,
+  "r_lo": 4,
+  "elapsed_s": 103.2,
+  "btn_cbet_pct": 73.33,
+  "btn_cbet_33": 13.1,
+  "bb_fold_vs33": 11.33,
+  "btn_cbet_50": 36.03,
+  "bb_fold_vs50": 24.42,
+  "btn_cbet_75": 24.19,
+  "bb_fold_vs75": 33.58,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_two_overcards": 49.33,
+  "cbet_air": 63.14
+}

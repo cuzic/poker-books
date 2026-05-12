@@ -1,0 +1,22 @@
+{
+  "board_id": "987r_1",
+  "solver_str": "9c,8d,7h",
+  "texture": "rainbow",
+  "b_score": 55,
+  "note": "987 rainbow — spread 2, top<J",
+  "r_hi": 9,
+  "r_mid": 8,
+  "r_lo": 7,
+  "elapsed_s": 124.6,
+  "btn_cbet_pct": 58.67,
+  "btn_cbet_33": 1.64,
+  "bb_fold_vs33": 6.03,
+  "btn_cbet_50": 17.78,
+  "bb_fold_vs50": 18.24,
+  "btn_cbet_75": 35.26,
+  "bb_fold_vs75": 22.38,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_two_overcards": 53.7,
+  "cbet_air": 17.9
+}

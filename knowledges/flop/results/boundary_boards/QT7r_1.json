@@ -1,0 +1,22 @@
+{
+  "board_id": "QT7r_1",
+  "solver_str": "Qc,Td,7h",
+  "texture": "rainbow_q",
+  "b_score": 58,
+  "note": "QT7 rainbow — connected-ish",
+  "r_hi": 12,
+  "r_mid": 10,
+  "r_lo": 7,
+  "elapsed_s": 73.6,
+  "btn_cbet_pct": 56.17,
+  "btn_cbet_33": 11.85,
+  "bb_fold_vs33": 19.42,
+  "btn_cbet_50": 11.82,
+  "bb_fold_vs50": 35.01,
+  "btn_cbet_75": 30.8,
+  "bb_fold_vs75": 40.51,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_two_overcards": 99.99,
+  "cbet_air": 31.83
+}

@@ -1,0 +1,22 @@
+{
+  "board_id": "987_2t_1",
+  "solver_str": "9c,8d,7c",
+  "texture": "2tone",
+  "b_score": 50,
+  "note": "987 2-tone — spread 2",
+  "r_hi": 9,
+  "r_mid": 8,
+  "r_lo": 7,
+  "elapsed_s": 77.9,
+  "btn_cbet_pct": 52.67,
+  "btn_cbet_33": 0.03,
+  "bb_fold_vs33": 4.9,
+  "btn_cbet_50": 9.73,
+  "bb_fold_vs50": 17.94,
+  "btn_cbet_75": 38.13,
+  "bb_fold_vs75": 22.17,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 99.09,
+  "cbet_two_overcards": 46.25,
+  "cbet_air": 30.77
+}

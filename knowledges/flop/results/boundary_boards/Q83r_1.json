@@ -1,0 +1,22 @@
+{
+  "board_id": "Q83r_1",
+  "solver_str": "Qc,8d,3h",
+  "texture": "rainbow_q",
+  "b_score": 58,
+  "note": "Q83 rainbow — Q high dry",
+  "r_hi": 12,
+  "r_mid": 8,
+  "r_lo": 3,
+  "elapsed_s": 77.8,
+  "btn_cbet_pct": 61.96,
+  "btn_cbet_33": 4.35,
+  "bb_fold_vs33": 3.17,
+  "btn_cbet_50": 15.77,
+  "bb_fold_vs50": 29.83,
+  "btn_cbet_75": 36.71,
+  "bb_fold_vs75": 38.22,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_two_overcards": 92.75,
+  "cbet_air": 38.1
+}

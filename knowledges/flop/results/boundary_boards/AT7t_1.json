@@ -1,0 +1,20 @@
+{
+  "board_id": "AT7t_1",
+  "solver_str": "Ac,Td,7c",
+  "texture": "2tone_ak",
+  "b_score": 56,
+  "note": "AT7 2-tone — somewhat connected",
+  "r_hi": 14,
+  "r_mid": 10,
+  "r_lo": 7,
+  "elapsed_s": 74.4,
+  "btn_cbet_pct": 53.69,
+  "btn_cbet_33": 4.22,
+  "bb_fold_vs33": 20.03,
+  "btn_cbet_50": 10.87,
+  "bb_fold_vs50": 34.27,
+  "btn_cbet_75": 36.59,
+  "bb_fold_vs75": 39.46,
+  "cbet_top_pair": 100.0,
+  "cbet_air": 39.37
+}

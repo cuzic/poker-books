@@ -1,0 +1,21 @@
+{
+  "board_id": "K95cc_1",
+  "solver_str": "Kc,9c,5c",
+  "texture": "mono",
+  "b_score": 70,
+  "note": "K95 mono — K high",
+  "r_hi": 13,
+  "r_mid": 9,
+  "r_lo": 5,
+  "elapsed_s": 101.4,
+  "btn_cbet_pct": 70.08,
+  "btn_cbet_33": 9.17,
+  "bb_fold_vs33": 11.55,
+  "btn_cbet_50": 33.07,
+  "bb_fold_vs50": 26.58,
+  "btn_cbet_75": 26.8,
+  "bb_fold_vs75": 31.57,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_air": 61.87
+}

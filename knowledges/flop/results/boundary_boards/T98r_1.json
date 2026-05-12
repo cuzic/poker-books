@@ -1,0 +1,22 @@
+{
+  "board_id": "T98r_1",
+  "solver_str": "Tc,9d,8h",
+  "texture": "rainbow",
+  "b_score": 55,
+  "note": "T98 rainbow — spread 2, top<J → should get B boost?",
+  "r_hi": 10,
+  "r_mid": 9,
+  "r_lo": 8,
+  "elapsed_s": 106.6,
+  "btn_cbet_pct": 64.15,
+  "btn_cbet_33": 11.31,
+  "bb_fold_vs33": 14.71,
+  "btn_cbet_50": 19.49,
+  "bb_fold_vs50": 24.88,
+  "btn_cbet_75": 30.3,
+  "bb_fold_vs75": 29.51,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_two_overcards": 73.04,
+  "cbet_air": 24.36
+}

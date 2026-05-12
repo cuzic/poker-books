@@ -1,0 +1,20 @@
+{
+  "board_id": "A72t_1",
+  "solver_str": "Ac,7d,2c",
+  "texture": "2tone_ak",
+  "b_score": 56,
+  "note": "A72 2-tone — A high very dry",
+  "r_hi": 14,
+  "r_mid": 7,
+  "r_lo": 2,
+  "elapsed_s": 74.7,
+  "btn_cbet_pct": 57.46,
+  "btn_cbet_33": 13.47,
+  "bb_fold_vs33": 24.16,
+  "btn_cbet_50": 17.28,
+  "bb_fold_vs50": 41.53,
+  "btn_cbet_75": 24.14,
+  "bb_fold_vs75": 46.06,
+  "cbet_top_pair": 100.0,
+  "cbet_air": 33.46
+}

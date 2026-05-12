@@ -1,0 +1,387 @@
+[
+  {
+    "board_id": "Ks7d2c7h",
+    "solver_str": "Ks,7d,2c,7h",
+    "n_cards": 4,
+    "texture": "rainbow_ak",
+    "b_score": 62,
+    "r_hi": 13,
+    "r_mid": 7,
+    "r_lo": 7,
+    "source_decks": [
+      "turn-cbet-cards.ts",
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Ks7d2cAh",
+    "solver_str": "Ks,7d,2c,Ah",
+    "n_cards": 4,
+    "texture": "rainbow_ak",
+    "b_score": 62,
+    "r_hi": 14,
+    "r_mid": 13,
+    "r_lo": 7,
+    "source_decks": [
+      "turn-cbet-cards.ts",
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "As8d3c2h",
+    "solver_str": "As,8d,3c,2h",
+    "n_cards": 4,
+    "texture": "rainbow_ak",
+    "b_score": 62,
+    "r_hi": 14,
+    "r_mid": 8,
+    "r_lo": 3,
+    "source_decks": [
+      "turn-cbet-cards.ts",
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Js8d5c8h",
+    "solver_str": "Js,8d,5c,8h",
+    "n_cards": 4,
+    "texture": "rainbow",
+    "b_score": 55,
+    "r_hi": 11,
+    "r_mid": 8,
+    "r_lo": 8,
+    "source_decks": [
+      "turn-cbet-cards.ts",
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Js8d5cAh",
+    "solver_str": "Js,8d,5c,Ah",
+    "n_cards": 4,
+    "texture": "rainbow",
+    "b_score": 55,
+    "r_hi": 14,
+    "r_mid": 11,
+    "r_lo": 8,
+    "source_decks": [
+      "turn-cbet-cards.ts",
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Ks9s5s9h",
+    "solver_str": "Ks,9s,5s,9h",
+    "n_cards": 4,
+    "texture": "mono",
+    "b_score": 70,
+    "r_hi": 13,
+    "r_mid": 9,
+    "r_lo": 9,
+    "source_decks": [
+      "turn-cbet-cards.ts",
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Ks9s5s2h",
+    "solver_str": "Ks,9s,5s,2h",
+    "n_cards": 4,
+    "texture": "mono",
+    "b_score": 70,
+    "r_hi": 13,
+    "r_mid": 9,
+    "r_lo": 5,
+    "source_decks": [
+      "turn-cbet-cards.ts",
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Ks9s5sTs",
+    "solver_str": "Ks,9s,5s,Ts",
+    "n_cards": 4,
+    "texture": "mono",
+    "b_score": 70,
+    "r_hi": 13,
+    "r_mid": 10,
+    "r_lo": 9,
+    "source_decks": [
+      "turn-cbet-cards.ts",
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "8c7d6sAh",
+    "solver_str": "8c,7d,6s,Ah",
+    "n_cards": 4,
+    "texture": "rainbow",
+    "b_score": 55,
+    "r_hi": 14,
+    "r_mid": 8,
+    "r_lo": 7,
+    "source_decks": [
+      "turn-cbet-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "8c7d6s2h",
+    "solver_str": "8c,7d,6s,2h",
+    "n_cards": 4,
+    "texture": "rainbow",
+    "b_score": 55,
+    "r_hi": 8,
+    "r_mid": 7,
+    "r_lo": 6,
+    "source_decks": [
+      "turn-cbet-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Qs9d2cTh",
+    "solver_str": "Qs,9d,2c,Th",
+    "n_cards": 4,
+    "texture": "rainbow_q",
+    "b_score": 58,
+    "r_hi": 12,
+    "r_mid": 10,
+    "r_lo": 9,
+    "source_decks": [
+      "turn-cbet-cards.ts",
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Ts9d6c8h",
+    "solver_str": "Ts,9d,6c,8h",
+    "n_cards": 4,
+    "texture": "rainbow",
+    "b_score": 55,
+    "r_hi": 10,
+    "r_mid": 9,
+    "r_lo": 8,
+    "source_decks": [
+      "turn-cbet-cards.ts",
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Ks9s5sQh",
+    "solver_str": "Ks,9s,5s,Qh",
+    "n_cards": 4,
+    "texture": "mono",
+    "b_score": 70,
+    "r_hi": 13,
+    "r_mid": 12,
+    "r_lo": 9,
+    "source_decks": [
+      "turn-cbet-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Js8d3c2h",
+    "solver_str": "Js,8d,3c,2h",
+    "n_cards": 4,
+    "texture": "rainbow",
+    "b_score": 55,
+    "r_hi": 11,
+    "r_mid": 8,
+    "r_lo": 3,
+    "source_decks": [
+      "turn-cbet-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Ks9s5sAh",
+    "solver_str": "Ks,9s,5s,Ah",
+    "n_cards": 4,
+    "texture": "mono",
+    "b_score": 70,
+    "r_hi": 14,
+    "r_mid": 13,
+    "r_lo": 9,
+    "source_decks": [
+      "turn-cbet-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Tc9d8h8s",
+    "solver_str": "Tc,9d,8h,8s",
+    "n_cards": 4,
+    "texture": "rainbow",
+    "b_score": 55,
+    "r_hi": 10,
+    "r_mid": 9,
+    "r_lo": 8,
+    "source_decks": [
+      "turn-cbet-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Tc9d8h7s",
+    "solver_str": "Tc,9d,8h,7s",
+    "n_cards": 4,
+    "texture": "rainbow",
+    "b_score": 55,
+    "r_hi": 10,
+    "r_mid": 9,
+    "r_lo": 8,
+    "source_decks": [
+      "turn-cbet-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Kd7c2s5h",
+    "solver_str": "Kd,7c,2s,5h",
+    "n_cards": 4,
+    "texture": "rainbow_ak",
+    "b_score": 62,
+    "r_hi": 13,
+    "r_mid": 7,
+    "r_lo": 5,
+    "source_decks": [
+      "turn-defense-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Js8d5c3h",
+    "solver_str": "Js,8d,5c,3h",
+    "n_cards": 4,
+    "texture": "rainbow",
+    "b_score": 55,
+    "r_hi": 11,
+    "r_mid": 8,
+    "r_lo": 5,
+    "source_decks": [
+      "turn-defense-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Ts9s8d6c",
+    "solver_str": "Ts,9s,8d,6c",
+    "n_cards": 4,
+    "texture": "2tone",
+    "b_score": 50,
+    "r_hi": 10,
+    "r_mid": 9,
+    "r_lo": 8,
+    "source_decks": [
+      "turn-defense-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Jd8d5c4d",
+    "solver_str": "Jd,8d,5c,4d",
+    "n_cards": 4,
+    "texture": "2tone",
+    "b_score": 50,
+    "r_hi": 11,
+    "r_mid": 8,
+    "r_lo": 5,
+    "source_decks": [
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "JhTh9cTd",
+    "solver_str": "Jh,Th,9c,Td",
+    "n_cards": 4,
+    "texture": "2tone",
+    "b_score": 50,
+    "r_hi": 11,
+    "r_mid": 10,
+    "r_lo": 10,
+    "source_decks": [
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "8d7d6cAh",
+    "solver_str": "8d,7d,6c,Ah",
+    "n_cards": 4,
+    "texture": "2tone",
+    "b_score": 50,
+    "r_hi": 14,
+    "r_mid": 8,
+    "r_lo": 7,
+    "source_decks": [
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "Ks7d3d9d",
+    "solver_str": "Ks,7d,3d,9d",
+    "n_cards": 4,
+    "texture": "2tone_ak",
+    "b_score": 56,
+    "r_hi": 13,
+    "r_mid": 9,
+    "r_lo": 7,
+    "source_decks": [
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  },
+  {
+    "board_id": "8d7d6c2s",
+    "solver_str": "8d,7d,6c,2s",
+    "n_cards": 4,
+    "texture": "2tone",
+    "b_score": 50,
+    "r_hi": 8,
+    "r_mid": 7,
+    "r_lo": 6,
+    "source_decks": [
+      "turn-cbet-3bp-cards.ts"
+    ],
+    "pot_bb": 10,
+    "stack_bb": 92
+  }
+]

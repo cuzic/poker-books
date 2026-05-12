@@ -1,0 +1,20 @@
+{
+  "board_id": "A83t_1",
+  "solver_str": "Ac,8d,3c",
+  "texture": "2tone_ak",
+  "b_score": 56,
+  "note": "A83 2-tone — A high dry",
+  "r_hi": 14,
+  "r_mid": 8,
+  "r_lo": 3,
+  "elapsed_s": 75.7,
+  "btn_cbet_pct": 55.92,
+  "btn_cbet_33": 9.49,
+  "bb_fold_vs33": 22.9,
+  "btn_cbet_50": 17.68,
+  "bb_fold_vs50": 38.77,
+  "btn_cbet_75": 26.03,
+  "bb_fold_vs75": 43.68,
+  "cbet_top_pair": 100.0,
+  "cbet_air": 33.27
+}

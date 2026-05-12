@@ -1,0 +1,20 @@
+{
+  "board_id": "A52cc_1",
+  "solver_str": "Ac,5c,2c",
+  "texture": "mono",
+  "b_score": 70,
+  "note": "A52 mono — A high",
+  "r_hi": 14,
+  "r_mid": 5,
+  "r_lo": 2,
+  "elapsed_s": 82.5,
+  "btn_cbet_pct": 67.34,
+  "btn_cbet_33": 27.94,
+  "bb_fold_vs33": 26.18,
+  "btn_cbet_50": 17.57,
+  "bb_fold_vs50": 36.6,
+  "btn_cbet_75": 20.46,
+  "bb_fold_vs75": 46.67,
+  "cbet_top_pair": 100.0,
+  "cbet_air": 51.2
+}

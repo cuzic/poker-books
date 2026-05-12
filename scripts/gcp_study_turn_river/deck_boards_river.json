@@ -1,0 +1,229 @@
+[
+  {
+    "board_id": "AsKd7c2h9s",
+    "solver_str": "As,Kd,7c,2h,9s",
+    "n_cards": 5,
+    "texture": "rainbow_ak",
+    "b_score": 62,
+    "r_hi": 14,
+    "r_mid": 13,
+    "r_lo": 9,
+    "source_decks": [
+      "river-defense-cards.ts",
+      "river-first-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  },
+  {
+    "board_id": "AsKs7s2h9s",
+    "solver_str": "As,Ks,7s,2h,9s",
+    "n_cards": 5,
+    "texture": "mono",
+    "b_score": 70,
+    "r_hi": 14,
+    "r_mid": 13,
+    "r_lo": 9,
+    "source_decks": [
+      "river-first-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  },
+  {
+    "board_id": "KsKd7c2h9s",
+    "solver_str": "Ks,Kd,7c,2h,9s",
+    "n_cards": 5,
+    "texture": "paired_high",
+    "b_score": 83,
+    "r_hi": 13,
+    "r_mid": 13,
+    "r_lo": 9,
+    "source_decks": [
+      "river-first-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  },
+  {
+    "board_id": "AsKdTc2hJs",
+    "solver_str": "As,Kd,Tc,2h,Js",
+    "n_cards": 5,
+    "texture": "rainbow_ak",
+    "b_score": 62,
+    "r_hi": 14,
+    "r_mid": 13,
+    "r_lo": 11,
+    "source_decks": [
+      "river-first-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  },
+  {
+    "board_id": "JsTd9c5h2s",
+    "solver_str": "Js,Td,9c,5h,2s",
+    "n_cards": 5,
+    "texture": "rainbow_connected",
+    "b_score": 67,
+    "r_hi": 11,
+    "r_mid": 10,
+    "r_lo": 9,
+    "source_decks": [
+      "river-first-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  },
+  {
+    "board_id": "KsQd7c2h9s",
+    "solver_str": "Ks,Qd,7c,2h,9s",
+    "n_cards": 5,
+    "texture": "rainbow_ak",
+    "b_score": 62,
+    "r_hi": 13,
+    "r_mid": 12,
+    "r_lo": 9,
+    "source_decks": [
+      "river-defense-cards.ts",
+      "river-first-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  },
+  {
+    "board_id": "AsKd8c2h5s",
+    "solver_str": "As,Kd,8c,2h,5s",
+    "n_cards": 5,
+    "texture": "rainbow_ak",
+    "b_score": 62,
+    "r_hi": 14,
+    "r_mid": 13,
+    "r_lo": 8,
+    "source_decks": [
+      "river-first-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  },
+  {
+    "board_id": "Ts9s8d2h7c",
+    "solver_str": "Ts,9s,8d,2h,7c",
+    "n_cards": 5,
+    "texture": "2tone",
+    "b_score": 50,
+    "r_hi": 10,
+    "r_mid": 9,
+    "r_lo": 8,
+    "source_decks": [
+      "river-defense-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  },
+  {
+    "board_id": "JsTs9d2h3c",
+    "solver_str": "Js,Ts,9d,2h,3c",
+    "n_cards": 5,
+    "texture": "2tone",
+    "b_score": 50,
+    "r_hi": 11,
+    "r_mid": 10,
+    "r_lo": 9,
+    "source_decks": [
+      "river-defense-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  },
+  {
+    "board_id": "KsQd7c3h2s",
+    "solver_str": "Ks,Qd,7c,3h,2s",
+    "n_cards": 5,
+    "texture": "rainbow_ak",
+    "b_score": 62,
+    "r_hi": 13,
+    "r_mid": 12,
+    "r_lo": 7,
+    "source_decks": [
+      "river-alpha-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  },
+  {
+    "board_id": "AhJd9c4s2h",
+    "solver_str": "Ah,Jd,9c,4s,2h",
+    "n_cards": 5,
+    "texture": "rainbow_ak",
+    "b_score": 62,
+    "r_hi": 14,
+    "r_mid": 11,
+    "r_lo": 9,
+    "source_decks": [
+      "river-alpha-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  },
+  {
+    "board_id": "7c5c3dTsKh",
+    "solver_str": "7c,5c,3d,Ts,Kh",
+    "n_cards": 5,
+    "texture": "2tone",
+    "b_score": 50,
+    "r_hi": 13,
+    "r_mid": 10,
+    "r_lo": 7,
+    "source_decks": [
+      "river-alpha-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  },
+  {
+    "board_id": "QsQc5d9h2s",
+    "solver_str": "Qs,Qc,5d,9h,2s",
+    "n_cards": 5,
+    "texture": "paired_high",
+    "b_score": 83,
+    "r_hi": 12,
+    "r_mid": 12,
+    "r_lo": 9,
+    "source_decks": [
+      "river-alpha-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  },
+  {
+    "board_id": "AsKd8h5cJs",
+    "solver_str": "As,Kd,8h,5c,Js",
+    "n_cards": 5,
+    "texture": "rainbow_ak",
+    "b_score": 62,
+    "r_hi": 14,
+    "r_mid": 13,
+    "r_lo": 11,
+    "source_decks": [
+      "river-alpha-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  },
+  {
+    "board_id": "Js8d4c2h9s",
+    "solver_str": "Js,8d,4c,2h,9s",
+    "n_cards": 5,
+    "texture": "rainbow",
+    "b_score": 55,
+    "r_hi": 11,
+    "r_mid": 9,
+    "r_lo": 8,
+    "source_decks": [
+      "river-alpha-cards.ts"
+    ],
+    "pot_bb": 20,
+    "stack_bb": 80
+  }
+]

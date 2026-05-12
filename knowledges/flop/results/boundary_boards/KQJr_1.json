@@ -1,0 +1,21 @@
+{
+  "board_id": "KQJr_1",
+  "solver_str": "Kc,Qd,Jh",
+  "texture": "rainbow_connected",
+  "b_score": 67,
+  "note": "KQJ rainbow — top K",
+  "r_hi": 13,
+  "r_mid": 12,
+  "r_lo": 11,
+  "elapsed_s": 94.6,
+  "btn_cbet_pct": 67.99,
+  "btn_cbet_33": 27.11,
+  "bb_fold_vs33": 26.9,
+  "btn_cbet_50": 18.78,
+  "bb_fold_vs50": 38.79,
+  "btn_cbet_75": 22.11,
+  "bb_fold_vs75": 43.93,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_air": 60.03
+}

@@ -1,0 +1,21 @@
+{
+  "board_id": "KQTr_1",
+  "solver_str": "Kc,Qd,Th",
+  "texture": "rainbow_connected",
+  "b_score": 67,
+  "note": "KQT rainbow — spread 3",
+  "r_hi": 13,
+  "r_mid": 12,
+  "r_lo": 10,
+  "elapsed_s": 90.7,
+  "btn_cbet_pct": 68.61,
+  "btn_cbet_33": 22.84,
+  "bb_fold_vs33": 28.52,
+  "btn_cbet_50": 19.4,
+  "bb_fold_vs50": 40.69,
+  "btn_cbet_75": 26.37,
+  "bb_fold_vs75": 45.43,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_air": 62.4
+}

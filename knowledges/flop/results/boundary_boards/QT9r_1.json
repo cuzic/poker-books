@@ -1,0 +1,22 @@
+{
+  "board_id": "QT9r_1",
+  "solver_str": "Qc,Td,9h",
+  "texture": "rainbow_connected",
+  "b_score": 67,
+  "note": "QT9 rainbow — spread 3",
+  "r_hi": 12,
+  "r_mid": 10,
+  "r_lo": 9,
+  "elapsed_s": 90.1,
+  "btn_cbet_pct": 71.72,
+  "btn_cbet_33": 10.79,
+  "bb_fold_vs33": 18.62,
+  "btn_cbet_50": 36.26,
+  "bb_fold_vs50": 32.05,
+  "btn_cbet_75": 24.67,
+  "bb_fold_vs75": 40.05,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_two_overcards": 100.0,
+  "cbet_air": 64.39
+}

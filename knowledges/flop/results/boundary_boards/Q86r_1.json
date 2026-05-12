@@ -1,0 +1,22 @@
+{
+  "board_id": "Q86r_1",
+  "solver_str": "Qc,8d,6h",
+  "texture": "rainbow_q",
+  "b_score": 58,
+  "note": "Q86 rainbow",
+  "r_hi": 12,
+  "r_mid": 8,
+  "r_lo": 6,
+  "elapsed_s": 74.3,
+  "btn_cbet_pct": 52.24,
+  "btn_cbet_33": 0.87,
+  "bb_fold_vs33": 7.04,
+  "btn_cbet_50": 9.08,
+  "bb_fold_vs50": 26.71,
+  "btn_cbet_75": 33.42,
+  "bb_fold_vs75": 34.86,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_two_overcards": 10.79,
+  "cbet_air": 33.2
+}

@@ -1,0 +1,22 @@
+{
+  "board_id": "QJTr_1",
+  "solver_str": "Qc,Jd,Th",
+  "texture": "rainbow_connected",
+  "b_score": 67,
+  "note": "QJT rainbow",
+  "r_hi": 12,
+  "r_mid": 11,
+  "r_lo": 10,
+  "elapsed_s": 97.2,
+  "btn_cbet_pct": 58.85,
+  "btn_cbet_33": 11.1,
+  "bb_fold_vs33": 29.15,
+  "btn_cbet_50": 9.58,
+  "bb_fold_vs50": 40.98,
+  "btn_cbet_75": 28.77,
+  "bb_fold_vs75": 46.98,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 93.33,
+  "cbet_two_overcards": 100.0,
+  "cbet_air": 42.17
+}

@@ -1,0 +1,21 @@
+{
+  "board_id": "K94t_1",
+  "solver_str": "Kc,9d,4c",
+  "texture": "2tone_ak",
+  "b_score": 56,
+  "note": "K94 2-tone — K high dry",
+  "r_hi": 13,
+  "r_mid": 9,
+  "r_lo": 4,
+  "elapsed_s": 79.1,
+  "btn_cbet_pct": 54.56,
+  "btn_cbet_33": 5.1,
+  "bb_fold_vs33": 19.22,
+  "btn_cbet_50": 11.22,
+  "bb_fold_vs50": 36.73,
+  "btn_cbet_75": 33.62,
+  "bb_fold_vs75": 41.69,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_air": 37.55
+}

@@ -1,0 +1,22 @@
+{
+  "board_id": "876r_1",
+  "solver_str": "8c,7d,6h",
+  "texture": "rainbow",
+  "b_score": 55,
+  "note": "876 rainbow — spread 2, top<J",
+  "r_hi": 8,
+  "r_mid": 7,
+  "r_lo": 6,
+  "elapsed_s": 112.1,
+  "btn_cbet_pct": 57.22,
+  "btn_cbet_33": 1.26,
+  "bb_fold_vs33": 10.11,
+  "btn_cbet_50": 30.31,
+  "bb_fold_vs50": 14.69,
+  "btn_cbet_75": 25.66,
+  "bb_fold_vs75": 20.61,
+  "cbet_overpair": 84.8,
+  "cbet_top_pair": 100.0,
+  "cbet_two_overcards": 39.95,
+  "cbet_air": 11.11
+}

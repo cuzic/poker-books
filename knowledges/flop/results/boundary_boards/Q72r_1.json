@@ -1,0 +1,22 @@
+{
+  "board_id": "Q72r_1",
+  "solver_str": "Qc,7d,2h",
+  "texture": "rainbow_q",
+  "b_score": 58,
+  "note": "Q72 rainbow — Q high very dry",
+  "r_hi": 12,
+  "r_mid": 7,
+  "r_lo": 2,
+  "elapsed_s": 77.5,
+  "btn_cbet_pct": 64.89,
+  "btn_cbet_33": 4.88,
+  "bb_fold_vs33": 4.48,
+  "btn_cbet_50": 28.27,
+  "bb_fold_vs50": 36.9,
+  "btn_cbet_75": 27.57,
+  "bb_fold_vs75": 43.64,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_two_overcards": 100.0,
+  "cbet_air": 37.3
+}

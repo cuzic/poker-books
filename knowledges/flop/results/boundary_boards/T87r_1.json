@@ -1,0 +1,22 @@
+{
+  "board_id": "T87r_1",
+  "solver_str": "Tc,8d,7h",
+  "texture": "rainbow",
+  "b_score": 55,
+  "note": "T87 rainbow — spread 3, top<J",
+  "r_hi": 10,
+  "r_mid": 8,
+  "r_lo": 7,
+  "elapsed_s": 80.9,
+  "btn_cbet_pct": 58.46,
+  "btn_cbet_33": 3.08,
+  "bb_fold_vs33": 9.88,
+  "btn_cbet_50": 30.25,
+  "bb_fold_vs50": 22.12,
+  "btn_cbet_75": 25.13,
+  "bb_fold_vs75": 24.99,
+  "cbet_overpair": 96.99,
+  "cbet_top_pair": 100.0,
+  "cbet_two_overcards": 55.53,
+  "cbet_air": 15.09
+}

@@ -1,0 +1,21 @@
+{
+  "board_id": "KJTr_1",
+  "solver_str": "Kc,Jd,Th",
+  "texture": "rainbow_connected",
+  "b_score": 67,
+  "note": "KJT rainbow — spread 3",
+  "r_hi": 13,
+  "r_mid": 11,
+  "r_lo": 10,
+  "elapsed_s": 99.4,
+  "btn_cbet_pct": 68.06,
+  "btn_cbet_33": 15.15,
+  "bb_fold_vs33": 25.6,
+  "btn_cbet_50": 20.65,
+  "bb_fold_vs50": 39.59,
+  "btn_cbet_75": 32.26,
+  "bb_fold_vs75": 44.0,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_air": 62.11
+}

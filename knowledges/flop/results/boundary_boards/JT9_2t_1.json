@@ -1,0 +1,22 @@
+{
+  "board_id": "JT9_2t_1",
+  "solver_str": "Jc,Td,9c",
+  "texture": "2tone",
+  "b_score": 50,
+  "note": "JT9 2-tone — spread 2",
+  "r_hi": 11,
+  "r_mid": 10,
+  "r_lo": 9,
+  "elapsed_s": 76.2,
+  "btn_cbet_pct": 50.21,
+  "btn_cbet_33": 8.17,
+  "bb_fold_vs33": 22.21,
+  "btn_cbet_50": 15.59,
+  "bb_fold_vs50": 34.56,
+  "btn_cbet_75": 21.95,
+  "bb_fold_vs75": 39.91,
+  "cbet_overpair": 83.77,
+  "cbet_top_pair": 88.81,
+  "cbet_two_overcards": 63.22,
+  "cbet_air": 39.3
+}

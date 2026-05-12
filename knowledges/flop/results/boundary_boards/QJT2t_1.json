@@ -1,0 +1,22 @@
+{
+  "board_id": "QJT2t_1",
+  "solver_str": "Qc,Jd,Tc",
+  "texture": "2tone",
+  "b_score": 50,
+  "note": "QJT 2-tone — spread 2, top Q≥J, but 2-tone",
+  "r_hi": 12,
+  "r_mid": 11,
+  "r_lo": 10,
+  "elapsed_s": 72.8,
+  "btn_cbet_pct": 50.06,
+  "btn_cbet_33": 2.99,
+  "bb_fold_vs33": 24.38,
+  "btn_cbet_50": 10.35,
+  "bb_fold_vs50": 41.54,
+  "btn_cbet_75": 20.49,
+  "bb_fold_vs75": 46.19,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 83.34,
+  "cbet_two_overcards": 100.0,
+  "cbet_air": 37.45
+}

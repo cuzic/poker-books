@@ -1,0 +1,22 @@
+{
+  "board_id": "Q94r_1",
+  "solver_str": "Qc,9d,4h",
+  "texture": "rainbow_q",
+  "b_score": 58,
+  "note": "Q94 rainbow",
+  "r_hi": 12,
+  "r_mid": 9,
+  "r_lo": 4,
+  "elapsed_s": 78.0,
+  "btn_cbet_pct": 55.09,
+  "btn_cbet_33": 3.08,
+  "bb_fold_vs33": 14.82,
+  "btn_cbet_50": 9.56,
+  "bb_fold_vs50": 33.21,
+  "btn_cbet_75": 33.68,
+  "bb_fold_vs75": 39.08,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_two_overcards": 60.11,
+  "cbet_air": 34.34
+}

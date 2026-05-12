@@ -1,0 +1,21 @@
+{
+  "board_id": "K86t_1",
+  "solver_str": "Kc,8d,6c",
+  "texture": "2tone_ak",
+  "b_score": 56,
+  "note": "K86 2-tone",
+  "r_hi": 13,
+  "r_mid": 8,
+  "r_lo": 6,
+  "elapsed_s": 75.2,
+  "btn_cbet_pct": 51.1,
+  "btn_cbet_33": 1.88,
+  "bb_fold_vs33": 11.27,
+  "btn_cbet_50": 15.7,
+  "bb_fold_vs50": 34.12,
+  "btn_cbet_75": 28.95,
+  "bb_fold_vs75": 38.47,
+  "cbet_overpair": 100.0,
+  "cbet_top_pair": 100.0,
+  "cbet_air": 34.61
+}
