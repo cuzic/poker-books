@@ -96,7 +96,7 @@ K が2枚 → **トップペア・トップキッカー（TPTK）**。HandScore 
 BTN オープン → BB コール の SRP。フロップアクション前の状態: 双方ともに広いレンジ。ここでCBetを打てば BTN が Uncapped（ナッツを含む可能性あり）、コールのBBがCapped気味という標準状態が確立します。
 
 **current 軸の評価**:
-簡易レンジスコアが高（ドライ板）→ FlopType = ドライ（FlopType係数 = 8）。ドライボードはIPがレンジ優位を持ちやすい。
+Board Score B が高（ドライ板、B≥62）→ FlopType = ドライ（FlopType係数 = 8）。ドライボードはIPがレンジ優位を持ちやすい。
 
 **backward 軸の事前設計**:
 リバーの主要シナリオを2個想定します。
