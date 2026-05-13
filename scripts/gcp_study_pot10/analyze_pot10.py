@@ -33,11 +33,11 @@ DESIGN_VALUES = {
     "oop_fold_vs33_baseline": 15,  # vs 33%: HS < 15 でフォールド
     "oop_fold_vs75_baseline": 35,  # vs 75%: HS < 35 でフォールド
     # CBet 頻度の GTO 目標
-    "target_cbet_pct_dry": 70,     # dry rainbow の目標 CBet %
-    "target_cbet_pct_wet": 55,     # wet 2tone の目標 CBet %
+    "target_cbet_pct_dry": 90,     # dry rainbow の目標 CBet % (range bet at 33%)
+    "target_cbet_pct_wet": 75,     # wet 2tone の目標 CBet %
     "target_overpair_cbet": 90,    # オーバーペアの CBet %
-    "target_top_pair_cbet": 75,    # トップペアの CBet %
-    "target_air_cbet": 25,         # Air (T3 bluff) の CBet %
+    "target_top_pair_cbet": 90,    # トップペアの CBet % (range bet → near 90%)
+    "target_air_cbet": 90,         # Air (dry board range bet at 33%)  ※wet boards ~30%
     # OOP フォールド率の目標 (MDF=75% → フォールド 25%)
     "target_oop_fold_vs33": 25,    # vs 33%: α=25% → 75% MDF
     "target_oop_fold_vs75": 43,    # vs 75%: α=43% → 57% MDF
@@ -72,6 +72,36 @@ def load_scenarios() -> dict[str, dict]:
     return {s["id"]: s for s in d["scenarios"]}
 
 
+# ── ボードテクスチャ分類 ────────────────────────────────────────────────────────
+
+def _classify_texture(board_str: str) -> str:
+    from collections import Counter
+    RANK_VAL = {"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"T":10,"J":11,"Q":12,"K":13,"A":14}
+    cards = [(RANK_VAL.get(c[0].upper(), 0), c[1].lower()) for c in board_str.split(",") if len(c) >= 2]
+    if not cards:
+        return "unknown"
+    ranks = [r for r, _ in cards]
+    suits = [s for _, s in cards]
+    if len(set(suits)) == 1:
+        return "mono"
+    from collections import Counter as C
+    if any(v >= 2 for v in C(ranks).values()):
+        top = max(r for r, cnt in C(ranks).items() if cnt >= 2)
+        return "paired_high" if top >= 10 else "paired_low"
+    n_suits = len(set(suits))
+    top = max(ranks)
+    spread = max(ranks) - min(ranks)
+    if n_suits == 2:
+        return "2tone_ak" if top >= 13 else "2tone"
+    if spread <= 3 and top >= 11:
+        return "rainbow_connected"
+    if top >= 13:
+        return "rainbow_ak"
+    if top == 12:
+        return "rainbow_q"
+    return "rainbow"
+
+
 # ── 集計・分析 ─────────────────────────────────────────────────────────────────
 
 def analyze(records: list[dict], scenarios: dict[str, dict]) -> dict[str, Any]:
@@ -100,7 +130,8 @@ def analyze(records: list[dict], scenarios: dict[str, dict]) -> dict[str, Any]:
             continue
 
         scenario = scenarios.get(sid, {})
-        tex = scenario.get("texture", "unknown")
+        board_str = r.get("board", scenario.get("board", ""))
+        tex = _classify_texture(board_str) if board_str else "unknown"
 
         cbet = r.get("ip_cbet_pct")
         if cbet is not None:
