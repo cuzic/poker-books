@@ -1,0 +1,63 @@
+{
+  "board": "8c,7d,2h",
+  "slug": "872r",
+  "cbet": {
+    "total_cbet_pct": 53.1,
+    "check_pct": 46.9,
+    "bet_breakdown": {
+      "BET 2.000000": 0.0,
+      "BET 4.000000": 13.2,
+      "BET 5.000000": 29.3,
+      "BET 97.000000": 10.5
+    },
+    "top_bet_key": "BET 5.000000",
+    "top_bet_label": "75%(BET5)",
+    "n_combos": 346
+  },
+  "bb_fold_vs_33pct": {
+    "key_used": "BET 2.000000",
+    "actual_bet_amt": 2.0,
+    "avg_fold_pct": 4.9,
+    "n_combos": 329
+  },
+  "bb_fold_vs_75pct": {
+    "key_used": "BET 5.000000",
+    "actual_bet_amt": 5.0,
+    "avg_fold_pct": 34.2,
+    "n_combos": 329
+  },
+  "cbet_by_category": {
+    "set": {
+      "avg_cbet_pct": 100.0,
+      "n": 9
+    },
+    "underpair": {
+      "avg_cbet_pct": 85.3,
+      "n": 24
+    },
+    "air": {
+      "avg_cbet_pct": 30.9,
+      "n": 50
+    },
+    "middle_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 24
+    },
+    "top_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 8
+    },
+    "overpair": {
+      "avg_cbet_pct": 100.0,
+      "n": 36
+    },
+    "2oc": {
+      "avg_cbet_pct": 30.9,
+      "n": 180
+    },
+    "tptk": {
+      "avg_cbet_pct": 100.0,
+      "n": 15
+    }
+  }
+}

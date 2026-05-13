@@ -1,0 +1,51 @@
+{
+  "board": "Jc,Jd,9h",
+  "slug": "JJ9r",
+  "cbet": {
+    "total_cbet_pct": 76.6,
+    "check_pct": 23.4,
+    "bet_breakdown": {
+      "BET 2.000000": 1.9,
+      "BET 4.000000": 38.2,
+      "BET 5.000000": 36.4,
+      "BET 97.000000": 0.0
+    },
+    "top_bet_key": "BET 4.000000",
+    "top_bet_label": "50%(BET4)",
+    "n_combos": 321
+  },
+  "bb_fold_vs_33pct": {
+    "key_used": "BET 2.000000",
+    "actual_bet_amt": 2.0,
+    "avg_fold_pct": 4.0,
+    "n_combos": 301
+  },
+  "bb_fold_vs_75pct": {
+    "key_used": "BET 5.000000",
+    "actual_bet_amt": 5.0,
+    "avg_fold_pct": 22.5,
+    "n_combos": 301
+  },
+  "cbet_by_category": {
+    "underpair": {
+      "avg_cbet_pct": 77.8,
+      "n": 51
+    },
+    "air": {
+      "avg_cbet_pct": 67.5,
+      "n": 196
+    },
+    "top_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 18
+    },
+    "trips": {
+      "avg_cbet_pct": 100.0,
+      "n": 38
+    },
+    "overpair": {
+      "avg_cbet_pct": 100.0,
+      "n": 18
+    }
+  }
+}

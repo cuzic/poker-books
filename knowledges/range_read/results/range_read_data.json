@@ -1,0 +1,545 @@
+{
+  "flop": {},
+  "turn": {
+    "K73r_As": {
+      "id": "K73r_As",
+      "board": "Kc,7d,2s,Ah",
+      "flop_id": "K73r",
+      "turn_card": "Ah",
+      "turn_type": "OC_ace",
+      "label": "K73r + A♥ (オーバーカード Ace)",
+      "turn_strategies": {
+        "oop_check_freq": 94.7,
+        "oop_bet50_freq": 3.2,
+        "oop_bet100_freq": 2.1,
+        "ip_check_freq": 22.2,
+        "ip_bet33_freq": 45.0,
+        "ip_bet75_freq": 32.7,
+        "oop_call_vs_ip33": 53.0,
+        "oop_fold_vs_ip33": 40.4
+      }
+    },
+    "K73r_9d": {
+      "id": "K73r_9d",
+      "board": "Kc,7d,2s,9d",
+      "flop_id": "K73r",
+      "turn_card": "9d",
+      "turn_type": "blank",
+      "label": "K73r + 9♦ (ブランク)",
+      "turn_strategies": {
+        "oop_check_freq": 93.8,
+        "oop_bet50_freq": 6.2,
+        "oop_bet100_freq": 0.0,
+        "ip_check_freq": 18.3,
+        "ip_bet33_freq": 35.8,
+        "ip_bet75_freq": 46.0,
+        "oop_call_vs_ip33": 65.6,
+        "oop_fold_vs_ip33": 26.4
+      }
+    },
+    "K73r_7h": {
+      "id": "K73r_7h",
+      "board": "Kc,7d,2s,7h",
+      "flop_id": "K73r",
+      "turn_card": "7h",
+      "turn_type": "pair",
+      "label": "K73r + 7♥ (ペア)",
+      "turn_strategies": {
+        "oop_check_freq": 97.2,
+        "oop_bet50_freq": 1.9,
+        "oop_bet100_freq": 0.9,
+        "ip_check_freq": 16.4,
+        "ip_bet33_freq": 70.4,
+        "ip_bet75_freq": 13.1,
+        "oop_call_vs_ip33": 50.4,
+        "oop_fold_vs_ip33": 42.6
+      }
+    },
+    "A72r_Kh": {
+      "id": "A72r_Kh",
+      "board": "Ac,7d,2s,Kh",
+      "flop_id": "A72r",
+      "turn_card": "Kh",
+      "turn_type": "OC_king",
+      "label": "A72r + K♥ (オーバーカード King)",
+      "turn_strategies": {
+        "oop_check_freq": 94.7,
+        "oop_bet50_freq": 3.1,
+        "oop_bet100_freq": 2.1,
+        "ip_check_freq": 22.1,
+        "ip_bet33_freq": 45.3,
+        "ip_bet75_freq": 32.6,
+        "oop_call_vs_ip33": 52.9,
+        "oop_fold_vs_ip33": 40.4
+      }
+    },
+    "A72r_9d": {
+      "id": "A72r_9d",
+      "board": "Ac,7d,2s,9d",
+      "flop_id": "A72r",
+      "turn_card": "9d",
+      "turn_type": "blank",
+      "label": "A72r + 9♦ (ブランク)",
+      "turn_strategies": {
+        "oop_check_freq": 81.2,
+        "oop_bet50_freq": 17.1,
+        "oop_bet100_freq": 1.6,
+        "ip_check_freq": 32.3,
+        "ip_bet33_freq": 32.6,
+        "ip_bet75_freq": 35.1,
+        "oop_call_vs_ip33": 61.2,
+        "oop_fold_vs_ip33": 29.7
+      }
+    },
+    "A72r_7h": {
+      "id": "A72r_7h",
+      "board": "Ac,7d,2s,7h",
+      "flop_id": "A72r",
+      "turn_card": "7h",
+      "turn_type": "pair",
+      "label": "A72r + 7♥ (ペア)",
+      "turn_strategies": {
+        "oop_check_freq": 89.5,
+        "oop_bet50_freq": 3.8,
+        "oop_bet100_freq": 6.7,
+        "ip_check_freq": 27.0,
+        "ip_bet33_freq": 66.6,
+        "ip_bet75_freq": 6.4,
+        "oop_call_vs_ip33": 48.1,
+        "oop_fold_vs_ip33": 44.5
+      }
+    },
+    "JT5r_Ah": {
+      "id": "JT5r_Ah",
+      "board": "Jc,Td,5s,Ah",
+      "flop_id": "JT5r",
+      "turn_card": "Ah",
+      "turn_type": "OC_ace",
+      "label": "JT5r + A♥ (オーバーカード Ace)",
+      "turn_strategies": {
+        "oop_check_freq": 81.4,
+        "oop_bet50_freq": 14.6,
+        "oop_bet100_freq": 4.0,
+        "ip_check_freq": 16.3,
+        "ip_bet33_freq": 56.1,
+        "ip_bet75_freq": 27.6,
+        "oop_call_vs_ip33": 56.6,
+        "oop_fold_vs_ip33": 31.8
+      }
+    },
+    "JT5r_9d": {
+      "id": "JT5r_9d",
+      "board": "Jc,Td,5s,9d",
+      "flop_id": "JT5r",
+      "turn_card": "9d",
+      "turn_type": "straight",
+      "label": "JT5r + 9♦ (ストレートコンプリート)",
+      "turn_strategies": {
+        "oop_check_freq": 64.4,
+        "oop_bet50_freq": 23.1,
+        "oop_bet100_freq": 12.6,
+        "ip_check_freq": 51.4,
+        "ip_bet33_freq": 27.7,
+        "ip_bet75_freq": 20.9,
+        "oop_call_vs_ip33": 60.2,
+        "oop_fold_vs_ip33": 22.8
+      }
+    },
+    "JT5r_6h": {
+      "id": "JT5r_6h",
+      "board": "Jc,Td,5s,6h",
+      "flop_id": "JT5r",
+      "turn_card": "6h",
+      "turn_type": "blank_low",
+      "label": "JT5r + 6♥ (ブランク low)",
+      "turn_strategies": {
+        "oop_check_freq": 65.1,
+        "oop_bet50_freq": 31.4,
+        "oop_bet100_freq": 3.5,
+        "ip_check_freq": 47.0,
+        "ip_bet33_freq": 12.7,
+        "ip_bet75_freq": 40.2,
+        "oop_call_vs_ip33": 68.2,
+        "oop_fold_vs_ip33": 20.5
+      }
+    },
+    "987r_6s": {
+      "id": "987r_6s",
+      "board": "9s,8d,7c,6h",
+      "flop_id": "987r",
+      "turn_card": "6h",
+      "turn_type": "straight",
+      "label": "987r + 6♥ (ストレートコンプリート)",
+      "turn_strategies": {
+        "oop_check_freq": 60.7,
+        "oop_bet50_freq": 38.1,
+        "oop_bet100_freq": 1.2,
+        "ip_check_freq": 29.9,
+        "ip_bet33_freq": 49.4,
+        "ip_bet75_freq": 20.7,
+        "oop_call_vs_ip33": 69.5,
+        "oop_fold_vs_ip33": 21.8
+      }
+    },
+    "987r_Td": {
+      "id": "987r_Td",
+      "board": "9s,8d,7c,Td",
+      "flop_id": "987r",
+      "turn_card": "Td",
+      "turn_type": "OC_ten",
+      "label": "987r + T♦ (オーバーカード Ten)",
+      "turn_strategies": {
+        "oop_check_freq": 65.8,
+        "oop_bet50_freq": 31.2,
+        "oop_bet100_freq": 3.0,
+        "ip_check_freq": 45.9,
+        "ip_bet33_freq": 37.6,
+        "ip_bet75_freq": 16.5,
+        "oop_call_vs_ip33": 68.6,
+        "oop_fold_vs_ip33": 21.7
+      }
+    },
+    "987r_9h": {
+      "id": "987r_9h",
+      "board": "9s,8d,7c,9h",
+      "flop_id": "987r",
+      "turn_card": "9h",
+      "turn_type": "pair",
+      "label": "987r + 9♥ (ペア)",
+      "turn_strategies": {
+        "oop_check_freq": 43.9,
+        "oop_bet50_freq": 41.2,
+        "oop_bet100_freq": 14.9,
+        "ip_check_freq": 21.4,
+        "ip_bet33_freq": 63.5,
+        "ip_bet75_freq": 15.1,
+        "oop_call_vs_ip33": 64.6,
+        "oop_fold_vs_ip33": 18.4
+      }
+    },
+    "K72fd_3s": {
+      "id": "K72fd_3s",
+      "board": "Ks,7s,2h,3s",
+      "flop_id": "K72fd",
+      "turn_card": "3s",
+      "turn_type": "flush_hit",
+      "label": "K72fd + 3♠ (フラッシュ完成)",
+      "turn_strategies": {
+        "oop_check_freq": 85.5,
+        "oop_bet50_freq": 11.1,
+        "oop_bet100_freq": 3.4,
+        "ip_check_freq": 21.5,
+        "ip_bet33_freq": 61.5,
+        "ip_bet75_freq": 17.1,
+        "oop_call_vs_ip33": 57.0,
+        "oop_fold_vs_ip33": 33.3
+      }
+    },
+    "K72fd_Ah": {
+      "id": "K72fd_Ah",
+      "board": "Ks,7s,2h,Ah",
+      "flop_id": "K72fd",
+      "turn_card": "Ah",
+      "turn_type": "OC_ace",
+      "label": "K72fd + A♥ (オーバーカード Ace)",
+      "turn_strategies": {
+        "oop_check_freq": 88.5,
+        "oop_bet50_freq": 8.3,
+        "oop_bet100_freq": 3.2,
+        "ip_check_freq": 26.0,
+        "ip_bet33_freq": 40.0,
+        "ip_bet75_freq": 33.9,
+        "oop_call_vs_ip33": 51.1,
+        "oop_fold_vs_ip33": 39.0
+      }
+    },
+    "K72fd_7h": {
+      "id": "K72fd_7h",
+      "board": "Ks,7s,2h,7h",
+      "flop_id": "K72fd",
+      "turn_card": "7h",
+      "turn_type": "pair",
+      "label": "K72fd + 7♥ (ペア)",
+      "turn_strategies": {
+        "oop_check_freq": 89.5,
+        "oop_bet50_freq": 8.1,
+        "oop_bet100_freq": 2.4,
+        "ip_check_freq": 21.8,
+        "ip_bet33_freq": 64.3,
+        "ip_bet75_freq": 13.9,
+        "oop_call_vs_ip33": 46.3,
+        "oop_fold_vs_ip33": 39.9
+      }
+    },
+    "JT5fd_2s": {
+      "id": "JT5fd_2s",
+      "board": "Js,Ts,5h,2s",
+      "flop_id": "JT5fd",
+      "turn_card": "2s",
+      "turn_type": "flush_hit",
+      "label": "JT5fd + 2♠ (フラッシュ完成)",
+      "turn_strategies": {
+        "oop_check_freq": 73.1,
+        "oop_bet50_freq": 24.1,
+        "oop_bet100_freq": 2.7,
+        "ip_check_freq": 34.5,
+        "ip_bet33_freq": 34.5,
+        "ip_bet75_freq": 31.0,
+        "oop_call_vs_ip33": 64.1,
+        "oop_fold_vs_ip33": 25.8
+      }
+    },
+    "JT5fd_Ah": {
+      "id": "JT5fd_Ah",
+      "board": "Js,Ts,5h,Ah",
+      "flop_id": "JT5fd",
+      "turn_card": "Ah",
+      "turn_type": "OC_ace",
+      "label": "JT5fd + A♥ (オーバーカード Ace)",
+      "turn_strategies": {
+        "oop_check_freq": 84.4,
+        "oop_bet50_freq": 13.3,
+        "oop_bet100_freq": 2.4,
+        "ip_check_freq": 30.1,
+        "ip_bet33_freq": 45.3,
+        "ip_bet75_freq": 24.6,
+        "oop_call_vs_ip33": 59.0,
+        "oop_fold_vs_ip33": 28.7
+      }
+    },
+    "JT5fd_9s": {
+      "id": "JT5fd_9s",
+      "board": "Js,Ts,5h,9s",
+      "flop_id": "JT5fd",
+      "turn_card": "9s",
+      "turn_type": "straight_fd",
+      "label": "JT5fd + 9♠ (ストレート + FD同時)",
+      "turn_strategies": {
+        "oop_check_freq": 64.0,
+        "oop_bet50_freq": 33.4,
+        "oop_bet100_freq": 2.7,
+        "ip_check_freq": 35.8,
+        "ip_bet33_freq": 38.7,
+        "ip_bet75_freq": 25.5,
+        "oop_call_vs_ip33": 67.5,
+        "oop_fold_vs_ip33": 21.7
+      }
+    },
+    "QQ4r_Ah": {
+      "id": "QQ4r_Ah",
+      "board": "Qc,Qd,4s,Ah",
+      "flop_id": "QQ4r",
+      "turn_card": "Ah",
+      "turn_type": "OC_ace",
+      "label": "QQ4r + A♥ (オーバーカード Ace)",
+      "turn_strategies": {
+        "oop_check_freq": 88.2,
+        "oop_bet50_freq": 2.0,
+        "oop_bet100_freq": 9.8,
+        "ip_check_freq": 32.1,
+        "ip_bet33_freq": 46.0,
+        "ip_bet75_freq": 21.9,
+        "oop_call_vs_ip33": 52.5,
+        "oop_fold_vs_ip33": 39.9
+      }
+    },
+    "QQ4r_Kd": {
+      "id": "QQ4r_Kd",
+      "board": "Qc,Qd,4s,Kd",
+      "flop_id": "QQ4r",
+      "turn_card": "Kd",
+      "turn_type": "OC_king",
+      "label": "QQ4r + K♦ (オーバーカード King)",
+      "turn_strategies": {
+        "oop_check_freq": 86.7,
+        "oop_bet50_freq": 8.2,
+        "oop_bet100_freq": 5.1,
+        "ip_check_freq": 14.4,
+        "ip_bet33_freq": 81.5,
+        "ip_bet75_freq": 4.1,
+        "oop_call_vs_ip33": 45.6,
+        "oop_fold_vs_ip33": 40.1
+      }
+    },
+    "QQ4r_4h": {
+      "id": "QQ4r_4h",
+      "board": "Qc,Qd,4s,4h",
+      "flop_id": "QQ4r",
+      "turn_card": "4h",
+      "turn_type": "pair",
+      "label": "QQ4r + 4♥ (ペア)",
+      "turn_strategies": {
+        "oop_check_freq": 66.8,
+        "oop_bet50_freq": 18.3,
+        "oop_bet100_freq": 15.0,
+        "ip_check_freq": 1.8,
+        "ip_bet33_freq": 79.7,
+        "ip_bet75_freq": 18.5,
+        "oop_call_vs_ip33": 60.1,
+        "oop_fold_vs_ip33": 37.4
+      }
+    },
+    "AKTr_Qs": {
+      "id": "AKTr_Qs",
+      "board": "Ac,Kd,Ts,Qh",
+      "flop_id": "AKTr",
+      "turn_card": "Qh",
+      "turn_type": "straight",
+      "label": "AKTr + Q♥ (ブロードウェイストレート)",
+      "turn_strategies": {
+        "oop_check_freq": 74.5,
+        "oop_bet50_freq": 9.3,
+        "oop_bet100_freq": 16.1,
+        "ip_check_freq": 16.6,
+        "ip_bet33_freq": 60.9,
+        "ip_bet75_freq": 22.5,
+        "oop_call_vs_ip33": 52.9,
+        "oop_fold_vs_ip33": 34.6
+      }
+    },
+    "AKTr_5d": {
+      "id": "AKTr_5d",
+      "board": "Ac,Kd,Ts,5d",
+      "flop_id": "AKTr",
+      "turn_card": "5d",
+      "turn_type": "blank",
+      "label": "AKTr + 5♦ (ブランク)",
+      "turn_strategies": {
+        "oop_check_freq": 93.8,
+        "oop_bet50_freq": 5.5,
+        "oop_bet100_freq": 0.7,
+        "ip_check_freq": 17.3,
+        "ip_bet33_freq": 59.9,
+        "ip_bet75_freq": 22.8,
+        "oop_call_vs_ip33": 47.9,
+        "oop_fold_vs_ip33": 43.4
+      }
+    },
+    "AKTr_As": {
+      "id": "AKTr_As",
+      "board": "Ac,Kd,Ts,As",
+      "flop_id": "AKTr",
+      "turn_card": "As",
+      "turn_type": "pair",
+      "label": "AKTr + A♠ (ペア Ace)",
+      "turn_strategies": {
+        "oop_check_freq": 95.7,
+        "oop_bet50_freq": 4.2,
+        "oop_bet100_freq": 0.1,
+        "ip_check_freq": 19.1,
+        "ip_bet33_freq": 64.0,
+        "ip_bet75_freq": 16.9,
+        "oop_call_vs_ip33": 46.5,
+        "oop_fold_vs_ip33": 46.9
+      }
+    },
+    "T86r_7h": {
+      "id": "T86r_7h",
+      "board": "Tc,8d,6s,7h",
+      "flop_id": "T86r",
+      "turn_card": "7h",
+      "turn_type": "straight",
+      "label": "T86r + 7♥ (ストレートコンプリート)",
+      "turn_strategies": {
+        "oop_check_freq": 38.1,
+        "oop_bet50_freq": 47.4,
+        "oop_bet100_freq": 14.5,
+        "ip_check_freq": 25.9,
+        "ip_bet33_freq": 45.4,
+        "ip_bet75_freq": 28.7,
+        "oop_call_vs_ip33": 70.3,
+        "oop_fold_vs_ip33": 14.1
+      }
+    },
+    "T86r_Ah": {
+      "id": "T86r_Ah",
+      "board": "Tc,8d,6s,Ah",
+      "flop_id": "T86r",
+      "turn_card": "Ah",
+      "turn_type": "OC_ace",
+      "label": "T86r + A♥ (オーバーカード Ace)",
+      "turn_strategies": {
+        "oop_check_freq": 74.6,
+        "oop_bet50_freq": 22.8,
+        "oop_bet100_freq": 2.5,
+        "ip_check_freq": 28.2,
+        "ip_bet33_freq": 29.9,
+        "ip_bet75_freq": 41.9,
+        "oop_call_vs_ip33": 60.8,
+        "oop_fold_vs_ip33": 24.7
+      }
+    },
+    "T86r_Td": {
+      "id": "T86r_Td",
+      "board": "Tc,8d,6s,Td",
+      "flop_id": "T86r",
+      "turn_card": "Td",
+      "turn_type": "pair",
+      "label": "T86r + T♦ (ペア)",
+      "turn_strategies": {
+        "oop_check_freq": 59.7,
+        "oop_bet50_freq": 33.5,
+        "oop_bet100_freq": 6.8,
+        "ip_check_freq": 21.4,
+        "ip_bet33_freq": 58.7,
+        "ip_bet75_freq": 19.9,
+        "oop_call_vs_ip33": 57.6,
+        "oop_fold_vs_ip33": 23.5
+      }
+    },
+    "K75m_3s": {
+      "id": "K75m_3s",
+      "board": "Ks,7s,5s,3h",
+      "flop_id": "K75mono",
+      "turn_card": "3h",
+      "turn_type": "blank",
+      "label": "K75s + 3♥ (ブランク off-suit)",
+      "turn_strategies": {
+        "oop_check_freq": 81.0,
+        "oop_bet50_freq": 16.0,
+        "oop_bet100_freq": 3.0,
+        "ip_check_freq": 24.0,
+        "ip_bet33_freq": 56.6,
+        "ip_bet75_freq": 19.3,
+        "oop_call_vs_ip33": 56.8,
+        "oop_fold_vs_ip33": 31.0
+      }
+    },
+    "K75m_As": {
+      "id": "K75m_As",
+      "board": "Ks,7s,5s,As",
+      "flop_id": "K75mono",
+      "turn_card": "As",
+      "turn_type": "flush_hit",
+      "label": "K75s + A♠ (フラッシュ 2枚目スート)",
+      "turn_strategies": {
+        "oop_check_freq": 69.6,
+        "oop_bet50_freq": 25.4,
+        "oop_bet100_freq": 5.0,
+        "ip_check_freq": 25.5,
+        "ip_bet33_freq": 55.2,
+        "ip_bet75_freq": 19.4,
+        "oop_call_vs_ip33": 56.4,
+        "oop_fold_vs_ip33": 37.2
+      }
+    },
+    "K75m_7h": {
+      "id": "K75m_7h",
+      "board": "Ks,7s,5s,7h",
+      "flop_id": "K75mono",
+      "turn_card": "7h",
+      "turn_type": "pair",
+      "label": "K75s + 7♥ (ペア)",
+      "turn_strategies": {
+        "oop_check_freq": 81.7,
+        "oop_bet50_freq": 13.4,
+        "oop_bet100_freq": 5.0,
+        "ip_check_freq": 16.9,
+        "ip_bet33_freq": 72.4,
+        "ip_bet75_freq": 10.7,
+        "oop_call_vs_ip33": 55.7,
+        "oop_fold_vs_ip33": 34.7
+      }
+    }
+  }
+}

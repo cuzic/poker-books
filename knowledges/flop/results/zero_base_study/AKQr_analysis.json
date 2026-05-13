@@ -1,0 +1,55 @@
+{
+  "board": "Ac,Kd,Qh",
+  "slug": "AKQr",
+  "cbet": {
+    "total_cbet_pct": 57.8,
+    "check_pct": 42.2,
+    "bet_breakdown": {
+      "BET 2.000000": 16.0,
+      "BET 4.000000": 17.9,
+      "BET 5.000000": 23.8,
+      "BET 97.000000": 0.1
+    },
+    "top_bet_key": "BET 5.000000",
+    "top_bet_label": "75%(BET5)",
+    "n_combos": 300
+  },
+  "bb_fold_vs_33pct": {
+    "key_used": "BET 2.000000",
+    "actual_bet_amt": 2.0,
+    "avg_fold_pct": 23.1,
+    "n_combos": 298
+  },
+  "bb_fold_vs_75pct": {
+    "key_used": "BET 5.000000",
+    "actual_bet_amt": 5.0,
+    "avg_fold_pct": 45.6,
+    "n_combos": 298
+  },
+  "cbet_by_category": {
+    "underpair": {
+      "avg_cbet_pct": 3.3,
+      "n": 60
+    },
+    "air": {
+      "avg_cbet_pct": 42.5,
+      "n": 108
+    },
+    "top_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 24
+    },
+    "tptk": {
+      "avg_cbet_pct": 100.0,
+      "n": 42
+    },
+    "set": {
+      "avg_cbet_pct": 100.0,
+      "n": 9
+    },
+    "middle_pair": {
+      "avg_cbet_pct": 88.7,
+      "n": 57
+    }
+  }
+}

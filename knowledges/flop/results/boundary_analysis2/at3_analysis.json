@@ -1,0 +1,55 @@
+{
+  "board": "Ac,Td,3h",
+  "slug": "at3",
+  "cbet": {
+    "total_cbet_pct": 63.0,
+    "check_pct": 37.0,
+    "bet_breakdown": {
+      "BET 2.000000": 7.6,
+      "BET 4.000000": 23.9,
+      "BET 5.000000": 30.7,
+      "BET 97.000000": 0.9
+    },
+    "top_bet_key": "BET 5.000000",
+    "top_bet_label": "75%(BET5)",
+    "n_combos": 321
+  },
+  "bb_fold_vs_33pct": {
+    "key_used": "BET 2.000000",
+    "actual_bet_amt": 2.0,
+    "avg_fold_pct": 10.6,
+    "n_combos": 306
+  },
+  "bb_fold_vs_75pct": {
+    "key_used": "BET 5.000000",
+    "actual_bet_amt": 5.0,
+    "avg_fold_pct": 36.0,
+    "n_combos": 306
+  },
+  "cbet_by_category": {
+    "underpair": {
+      "avg_cbet_pct": 33.4,
+      "n": 60
+    },
+    "set": {
+      "avg_cbet_pct": 100.0,
+      "n": 9
+    },
+    "air": {
+      "avg_cbet_pct": 43.3,
+      "n": 139
+    },
+    "top_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 23
+    },
+    "tptk": {
+      "avg_cbet_pct": 100.0,
+      "n": 45
+    },
+    "middle_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 45
+    }
+  }
+}

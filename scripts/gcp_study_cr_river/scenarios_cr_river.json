@@ -1,0 +1,316 @@
+{
+  "meta": {
+    "total": 27,
+    "flop_cr": 15,
+    "river": 12,
+    "tags": {
+      "cr_study": 15,
+      "river_snap": 12
+    },
+    "pot_flop": 6,
+    "pot_river": 17,
+    "stack_flop": 94,
+    "stack_river": 89,
+    "bet_sizes": "flop=33,75  river=33,75",
+    "purpose": "OOP check-raise freq + river value/bluff/defense"
+  },
+  "scenarios": [
+    {
+      "id": "cr_K72r",
+      "tag": "cr_study",
+      "board": "Kc,7d,2s",
+      "n_board": 3,
+      "texture": "dry_K_high",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "cr_A82r",
+      "tag": "cr_study",
+      "board": "Ac,8d,2s",
+      "n_board": 3,
+      "texture": "dry_A_high",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "cr_JT5r",
+      "tag": "cr_study",
+      "board": "Jc,Td,5s",
+      "n_board": 3,
+      "texture": "semi_broadway",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "cr_KQTr",
+      "tag": "cr_study",
+      "board": "Kc,Qd,Ts",
+      "n_board": 3,
+      "texture": "semi_broadway_high",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "cr_987r",
+      "tag": "cr_study",
+      "board": "9s,8d,7c",
+      "n_board": 3,
+      "texture": "connected_mid",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "cr_T86r",
+      "tag": "cr_study",
+      "board": "Tc,8d,6s",
+      "n_board": 3,
+      "texture": "connected_mid2",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "cr_K83fd",
+      "tag": "cr_study",
+      "board": "Kc,8c,3d",
+      "n_board": 3,
+      "texture": "fd_K_high",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "cr_Q85fd",
+      "tag": "cr_study",
+      "board": "Qc,8c,5d",
+      "n_board": 3,
+      "texture": "fd_Q_high",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "cr_JT4fd",
+      "tag": "cr_study",
+      "board": "Jc,Tc,4d",
+      "n_board": 3,
+      "texture": "fd_broadway_fd",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "cr_K75m",
+      "tag": "cr_study",
+      "board": "Ks,7s,5s",
+      "n_board": 3,
+      "texture": "mono",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "cr_KK7r",
+      "tag": "cr_study",
+      "board": "Kc,Kd,7s",
+      "n_board": 3,
+      "texture": "paired_high",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "cr_774r",
+      "tag": "cr_study",
+      "board": "7c,7d,4s",
+      "n_board": 3,
+      "texture": "paired_mid",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "cr_742r",
+      "tag": "cr_study",
+      "board": "7c,4d,2s",
+      "n_board": 3,
+      "texture": "low_dry",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "cr_865r",
+      "tag": "cr_study",
+      "board": "8c,6d,5s",
+      "n_board": 3,
+      "texture": "low_connected",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "cr_A85fd",
+      "tag": "cr_study",
+      "board": "Ac,8c,5d",
+      "n_board": 3,
+      "texture": "fd_A_high",
+      "pot_bb": 6,
+      "effective_stack_bb": 94,
+      "flop_bet_sizes": "33,75",
+      "turn_bet_sizes": "33,75"
+    },
+    {
+      "id": "rv_K73r_As_2c",
+      "tag": "river_snap",
+      "board": "Kc,7d,2s,Ah,2c",
+      "n_board": 5,
+      "river_type": "pair_low",
+      "prev_turn": "OC_ace",
+      "pot_bb": 17,
+      "effective_stack_bb": 89,
+      "river_bet_sizes": "33,75"
+    },
+    {
+      "id": "rv_K73r_As_Jd",
+      "tag": "river_snap",
+      "board": "Kc,7d,2s,Ah,Jd",
+      "n_board": 5,
+      "river_type": "blank_mid",
+      "prev_turn": "OC_ace",
+      "pot_bb": 17,
+      "effective_stack_bb": 89,
+      "river_bet_sizes": "33,75"
+    },
+    {
+      "id": "rv_A72r_Kh_Ts",
+      "tag": "river_snap",
+      "board": "Ac,7d,2s,Kh,Ts",
+      "n_board": 5,
+      "river_type": "blank_mid",
+      "prev_turn": "OC_king",
+      "pot_bb": 17,
+      "effective_stack_bb": 89,
+      "river_bet_sizes": "33,75"
+    },
+    {
+      "id": "rv_A72r_Kh_7d",
+      "tag": "river_snap",
+      "board": "Ac,7d,2s,Kh,7d",
+      "n_board": 5,
+      "river_type": "pair_mid",
+      "prev_turn": "OC_king",
+      "pot_bb": 17,
+      "effective_stack_bb": 89,
+      "river_bet_sizes": "33,75"
+    },
+    {
+      "id": "rv_JT5r_9d_2h",
+      "tag": "river_snap",
+      "board": "Jc,Td,5s,9d,2h",
+      "n_board": 5,
+      "river_type": "blank_low",
+      "prev_turn": "straight",
+      "pot_bb": 17,
+      "effective_stack_bb": 89,
+      "river_bet_sizes": "33,75"
+    },
+    {
+      "id": "rv_JT5r_9d_Qh",
+      "tag": "river_snap",
+      "board": "Jc,Td,5s,9d,Qh",
+      "n_board": 5,
+      "river_type": "OC",
+      "prev_turn": "straight",
+      "pot_bb": 17,
+      "effective_stack_bb": 89,
+      "river_bet_sizes": "33,75"
+    },
+    {
+      "id": "rv_987r_6h_As",
+      "tag": "river_snap",
+      "board": "9s,8d,7c,6h,As",
+      "n_board": 5,
+      "river_type": "OC_ace",
+      "prev_turn": "straight",
+      "pot_bb": 17,
+      "effective_stack_bb": 89,
+      "river_bet_sizes": "33,75"
+    },
+    {
+      "id": "rv_987r_6h_3d",
+      "tag": "river_snap",
+      "board": "9s,8d,7c,6h,3d",
+      "n_board": 5,
+      "river_type": "blank_low",
+      "prev_turn": "straight",
+      "pot_bb": 17,
+      "effective_stack_bb": 89,
+      "river_bet_sizes": "33,75"
+    },
+    {
+      "id": "rv_K72fd_3s_8h",
+      "tag": "river_snap",
+      "board": "Ks,7s,2h,3s,8h",
+      "n_board": 5,
+      "river_type": "blank",
+      "prev_turn": "flush_hit",
+      "pot_bb": 17,
+      "effective_stack_bb": 89,
+      "river_bet_sizes": "33,75"
+    },
+    {
+      "id": "rv_K72fd_3s_Kh",
+      "tag": "river_snap",
+      "board": "Ks,7s,2h,3s,Kh",
+      "n_board": 5,
+      "river_type": "pair_top",
+      "prev_turn": "flush_hit",
+      "pot_bb": 17,
+      "effective_stack_bb": 89,
+      "river_bet_sizes": "33,75"
+    },
+    {
+      "id": "rv_QQ4r_Ah_5d",
+      "tag": "river_snap",
+      "board": "Qc,Qd,4s,Ah,5d",
+      "n_board": 5,
+      "river_type": "blank",
+      "prev_turn": "OC_ace",
+      "pot_bb": 17,
+      "effective_stack_bb": 89,
+      "river_bet_sizes": "33,75"
+    },
+    {
+      "id": "rv_QQ4r_Ah_Qh",
+      "tag": "river_snap",
+      "board": "Qc,Qd,4s,Ah,Qh",
+      "n_board": 5,
+      "river_type": "quads_Q",
+      "prev_turn": "OC_ace",
+      "pot_bb": 17,
+      "effective_stack_bb": 89,
+      "river_bet_sizes": "33,75"
+    }
+  ]
+}

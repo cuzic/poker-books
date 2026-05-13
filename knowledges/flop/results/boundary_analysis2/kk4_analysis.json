@@ -1,0 +1,51 @@
+{
+  "board": "Kc,Kd,4h",
+  "slug": "kk4",
+  "cbet": {
+    "total_cbet_pct": 84.5,
+    "check_pct": 15.5,
+    "bet_breakdown": {
+      "BET 2.000000": 7.7,
+      "BET 4.000000": 45.1,
+      "BET 5.000000": 31.5,
+      "BET 97.000000": 0.1
+    },
+    "top_bet_key": "BET 4.000000",
+    "top_bet_label": "50%(BET4)",
+    "n_combos": 315
+  },
+  "bb_fold_vs_33pct": {
+    "key_used": "BET 2.000000",
+    "actual_bet_amt": 2.0,
+    "avg_fold_pct": 2.9,
+    "n_combos": 309
+  },
+  "bb_fold_vs_75pct": {
+    "key_used": "BET 5.000000",
+    "actual_bet_amt": 5.0,
+    "avg_fold_pct": 26.9,
+    "n_combos": 309
+  },
+  "cbet_by_category": {
+    "underpair": {
+      "avg_cbet_pct": 100.0,
+      "n": 63
+    },
+    "top_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 6
+    },
+    "air": {
+      "avg_cbet_pct": 74.5,
+      "n": 192
+    },
+    "trips": {
+      "avg_cbet_pct": 100.0,
+      "n": 48
+    },
+    "overpair": {
+      "avg_cbet_pct": 100.0,
+      "n": 6
+    }
+  }
+}

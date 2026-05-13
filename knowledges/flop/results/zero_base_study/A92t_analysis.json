@@ -1,0 +1,55 @@
+{
+  "board": "Ac,9d,2c",
+  "slug": "A92t",
+  "cbet": {
+    "total_cbet_pct": 53.5,
+    "check_pct": 46.5,
+    "bet_breakdown": {
+      "BET 2.000000": 5.1,
+      "BET 4.000000": 19.4,
+      "BET 5.000000": 25.9,
+      "BET 97.000000": 3.2
+    },
+    "top_bet_key": "BET 5.000000",
+    "top_bet_label": "75%(BET5)",
+    "n_combos": 333
+  },
+  "bb_fold_vs_33pct": {
+    "key_used": "BET 2.000000",
+    "actual_bet_amt": 2.0,
+    "avg_fold_pct": 11.8,
+    "n_combos": 318
+  },
+  "bb_fold_vs_75pct": {
+    "key_used": "BET 5.000000",
+    "actual_bet_amt": 5.0,
+    "avg_fold_pct": 41.2,
+    "n_combos": 318
+  },
+  "cbet_by_category": {
+    "set": {
+      "avg_cbet_pct": 100.0,
+      "n": 9
+    },
+    "underpair": {
+      "avg_cbet_pct": 41.6,
+      "n": 60
+    },
+    "air": {
+      "avg_cbet_pct": 32.7,
+      "n": 175
+    },
+    "middle_pair": {
+      "avg_cbet_pct": 89.4,
+      "n": 18
+    },
+    "top_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 23
+    },
+    "tptk": {
+      "avg_cbet_pct": 100.0,
+      "n": 48
+    }
+  }
+}

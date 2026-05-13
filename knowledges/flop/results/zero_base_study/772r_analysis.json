@@ -1,0 +1,51 @@
+{
+  "board": "7c,7d,2h",
+  "slug": "772r",
+  "cbet": {
+    "total_cbet_pct": 75.0,
+    "check_pct": 25.0,
+    "bet_breakdown": {
+      "BET 2.000000": 0.7,
+      "BET 4.000000": 27.9,
+      "BET 5.000000": 45.5,
+      "BET 97.000000": 0.9
+    },
+    "top_bet_key": "BET 5.000000",
+    "top_bet_label": "75%(BET5)",
+    "n_combos": 346
+  },
+  "bb_fold_vs_33pct": {
+    "key_used": "BET 2.000000",
+    "actual_bet_amt": 2.0,
+    "avg_fold_pct": 3.5,
+    "n_combos": 330
+  },
+  "bb_fold_vs_75pct": {
+    "key_used": "BET 5.000000",
+    "actual_bet_amt": 5.0,
+    "avg_fold_pct": 29.6,
+    "n_combos": 330
+  },
+  "cbet_by_category": {
+    "underpair": {
+      "avg_cbet_pct": 100.0,
+      "n": 27
+    },
+    "air": {
+      "avg_cbet_pct": 65.6,
+      "n": 252
+    },
+    "trips": {
+      "avg_cbet_pct": 100.0,
+      "n": 19
+    },
+    "overpair": {
+      "avg_cbet_pct": 100.0,
+      "n": 42
+    },
+    "top_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 6
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "board": "Qc,Qd,7h",
+  "slug": "qq7r",
+  "cbet": {
+    "total_cbet_pct": 82.4,
+    "check_pct": 17.6,
+    "bet_breakdown": {
+      "BET 2.000000": 2.3,
+      "BET 4.000000": 42.8,
+      "BET 5.000000": 37.3,
+      "BET 97.000000": 0.0
+    },
+    "top_bet_key": "BET 4.000000",
+    "top_bet_label": "50%(BET4)",
+    "n_combos": 317
+  },
+  "bb_fold_vs_33pct": {
+    "key_used": "BET 2.000000",
+    "actual_bet_amt": 2.0,
+    "avg_fold_pct": 2.2,
+    "n_combos": 305
+  },
+  "bb_fold_vs_75pct": {
+    "key_used": "BET 5.000000",
+    "actual_bet_amt": 5.0,
+    "avg_fold_pct": 25.2,
+    "n_combos": 305
+  },
+  "cbet_by_category": {
+    "air": {
+      "avg_cbet_pct": 76.6,
+      "n": 238
+    },
+    "top_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 27
+    },
+    "trips": {
+      "avg_cbet_pct": 100.0,
+      "n": 40
+    },
+    "overpair": {
+      "avg_cbet_pct": 100.0,
+      "n": 12
+    }
+  }
+}

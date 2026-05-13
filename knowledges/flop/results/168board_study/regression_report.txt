@@ -1,0 +1,60 @@
+Loaded 257 boards
+
+=== Pearson correlations → btn_cbet_pct ===
+  feature             r
+  ------------------------------
+  is_paired           +0.699  █████████████
+  is_2tone            -0.477  █████████
+  top_x_2tone         -0.449  ████████
+  kicker_rank         +0.407  ████████
+  mid_diff            +0.399  ███████
+  top_diff            -0.388  ███████
+  is_monotone         +0.351  ███████
+  top_x_mono          +0.337  ██████
+  top_rank            +0.227  ████
+  high_connected      +0.182  ███
+  density_wet         +0.163  ███
+  spread              +0.091  █
+
+=== btn_cbet_pct by board category ===
+  2tone         n= 56  mean=52.1%  sd=3.9  min=46.7  max=65.0
+  monotone      n= 43  mean=70.5%  sd=3.0  min=63.2  max=75.7
+  paired        n= 43  mean=79.0%  sd=6.8  min=61.8  max=87.6
+  rainbow       n=115  mean=57.2%  sd=5.8  min=47.0  max=71.7
+
+=== OLS regression → btn_cbet_pct ===
+  R² = 0.8291   RMSE = 4.51%
+
+  feature             coeff
+  --------------------------------
+  bias                +44.081
+  is_monotone         +31.183
+  is_paired           +21.148
+  is_2tone            +3.265
+  density_wet         -2.007
+  top_x_mono          -1.645
+  top_x_2tone         -0.776
+  top_rank            +0.711
+  kicker_rank         +0.606
+  high_connected      +0.291
+  top_diff            +0.106
+  spread              +0.071
+  mid_diff            -0.035
+
+=== R² for all targets ===
+  btn_cbet_pct              n=257  R²=0.829  RMSE=4.51%
+  bb_fold_vs33              n=257  R²=0.772  RMSE=4.24%
+  bb_fold_vs50              n=257  R²=0.657  RMSE=4.27%
+  bb_fold_vs75              n=257  R²=0.600  RMSE=4.61%
+  cbet_overpair             n=223  R²=0.146  RMSE=5.91%
+  cbet_underpair            n=232  R²=0.711  RMSE=19.52%
+  cbet_two_overcards        n=189  R²=0.610  RMSE=15.92%
+  cbet_air                  n=257  R²=0.523  RMSE=11.12%
+
+=== Candidate simple formula ===
+  btn_cbet_pct ≈ 44.1
+    +31.18 × is_monotone
+    +21.15 × is_paired
+    +3.26 × is_2tone
+
+Combined dataset: ../../knowledges/flop/results/168board_study/combined_dataset.json

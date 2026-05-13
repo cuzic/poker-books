@@ -1,0 +1,59 @@
+{
+  "board": "Kc,8d,3h",
+  "slug": "k83r",
+  "cbet": {
+    "total_cbet_pct": 65.7,
+    "check_pct": 34.3,
+    "bet_breakdown": {
+      "BET 2.000000": 5.8,
+      "BET 4.000000": 26.9,
+      "BET 5.000000": 28.4,
+      "BET 97.000000": 4.7
+    },
+    "top_bet_key": "BET 5.000000",
+    "top_bet_label": "75%(BET5)",
+    "n_combos": 331
+  },
+  "bb_fold_vs_33pct": {
+    "key_used": "BET 2.000000",
+    "actual_bet_amt": 2.0,
+    "avg_fold_pct": 2.1,
+    "n_combos": 319
+  },
+  "bb_fold_vs_75pct": {
+    "key_used": "BET 5.000000",
+    "actual_bet_amt": 5.0,
+    "avg_fold_pct": 45.7,
+    "n_combos": 319
+  },
+  "cbet_by_category": {
+    "underpair": {
+      "avg_cbet_pct": 84.1,
+      "n": 54
+    },
+    "set": {
+      "avg_cbet_pct": 100.0,
+      "n": 9
+    },
+    "air": {
+      "avg_cbet_pct": 38.6,
+      "n": 171
+    },
+    "middle_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 21
+    },
+    "tptk": {
+      "avg_cbet_pct": 100.0,
+      "n": 48
+    },
+    "overpair": {
+      "avg_cbet_pct": 100.0,
+      "n": 6
+    },
+    "top_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 22
+    }
+  }
+}

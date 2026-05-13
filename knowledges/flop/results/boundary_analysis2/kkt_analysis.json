@@ -1,0 +1,51 @@
+{
+  "board": "Kc,Kd,Th",
+  "slug": "kkt",
+  "cbet": {
+    "total_cbet_pct": 74.8,
+    "check_pct": 25.2,
+    "bet_breakdown": {
+      "BET 2.000000": 8.2,
+      "BET 4.000000": 31.2,
+      "BET 5.000000": 34.0,
+      "BET 97.000000": 1.5
+    },
+    "top_bet_key": "BET 5.000000",
+    "top_bet_label": "75%(BET5)",
+    "n_combos": 301
+  },
+  "bb_fold_vs_33pct": {
+    "key_used": "BET 2.000000",
+    "actual_bet_amt": 2.0,
+    "avg_fold_pct": 9.1,
+    "n_combos": 293
+  },
+  "bb_fold_vs_75pct": {
+    "key_used": "BET 5.000000",
+    "actual_bet_amt": 5.0,
+    "avg_fold_pct": 31.2,
+    "n_combos": 293
+  },
+  "cbet_by_category": {
+    "underpair": {
+      "avg_cbet_pct": 72.3,
+      "n": 63
+    },
+    "air": {
+      "avg_cbet_pct": 58.3,
+      "n": 140
+    },
+    "trips": {
+      "avg_cbet_pct": 100.0,
+      "n": 47
+    },
+    "top_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 45
+    },
+    "overpair": {
+      "avg_cbet_pct": 100.0,
+      "n": 6
+    }
+  }
+}

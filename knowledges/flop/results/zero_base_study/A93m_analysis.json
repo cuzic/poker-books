@@ -1,0 +1,55 @@
+{
+  "board": "Ac,9c,3c",
+  "slug": "A93m",
+  "cbet": {
+    "total_cbet_pct": 60.4,
+    "check_pct": 39.6,
+    "bet_breakdown": {
+      "BET 2.000000": 19.9,
+      "BET 4.000000": 19.1,
+      "BET 5.000000": 19.1,
+      "BET 97.000000": 2.2
+    },
+    "top_bet_key": "BET 2.000000",
+    "top_bet_label": "33%(BET2)",
+    "n_combos": 334
+  },
+  "bb_fold_vs_33pct": {
+    "key_used": "BET 2.000000",
+    "actual_bet_amt": 2.0,
+    "avg_fold_pct": 22.6,
+    "n_combos": 318
+  },
+  "bb_fold_vs_75pct": {
+    "key_used": "BET 5.000000",
+    "actual_bet_amt": 5.0,
+    "avg_fold_pct": 41.0,
+    "n_combos": 318
+  },
+  "cbet_by_category": {
+    "underpair": {
+      "avg_cbet_pct": 47.9,
+      "n": 60
+    },
+    "set": {
+      "avg_cbet_pct": 100.0,
+      "n": 9
+    },
+    "air": {
+      "avg_cbet_pct": 49.5,
+      "n": 175
+    },
+    "middle_pair": {
+      "avg_cbet_pct": 29.3,
+      "n": 18
+    },
+    "top_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 24
+    },
+    "tptk": {
+      "avg_cbet_pct": 100.0,
+      "n": 48
+    }
+  }
+}

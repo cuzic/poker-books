@@ -1,0 +1,47 @@
+{
+  "board": "Ac,Ad,2h",
+  "slug": "aa2",
+  "cbet": {
+    "total_cbet_pct": 84.0,
+    "check_pct": 16.0,
+    "bet_breakdown": {
+      "BET 2.000000": 8.5,
+      "BET 4.000000": 42.4,
+      "BET 5.000000": 32.9,
+      "BET 97.000000": 0.2
+    },
+    "top_bet_key": "BET 4.000000",
+    "top_bet_label": "50%(BET4)",
+    "n_combos": 316
+  },
+  "bb_fold_vs_33pct": {
+    "key_used": "BET 2.000000",
+    "actual_bet_amt": 2.0,
+    "avg_fold_pct": 2.7,
+    "n_combos": 311
+  },
+  "bb_fold_vs_75pct": {
+    "key_used": "BET 5.000000",
+    "actual_bet_amt": 5.0,
+    "avg_fold_pct": 28.6,
+    "n_combos": 311
+  },
+  "cbet_by_category": {
+    "underpair": {
+      "avg_cbet_pct": 100.0,
+      "n": 69
+    },
+    "air": {
+      "avg_cbet_pct": 74.3,
+      "n": 196
+    },
+    "trips": {
+      "avg_cbet_pct": 100.0,
+      "n": 48
+    },
+    "top_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 3
+    }
+  }
+}

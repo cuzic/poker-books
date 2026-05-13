@@ -1,0 +1,59 @@
+{
+  "board": "Kc,Qd,Jh",
+  "slug": "KQJr",
+  "cbet": {
+    "total_cbet_pct": 64.7,
+    "check_pct": 35.3,
+    "bet_breakdown": {
+      "BET 2.000000": 19.3,
+      "BET 4.000000": 20.9,
+      "BET 5.000000": 23.9,
+      "BET 97.000000": 0.6
+    },
+    "top_bet_key": "BET 5.000000",
+    "top_bet_label": "75%(BET5)",
+    "n_combos": 305
+  },
+  "bb_fold_vs_33pct": {
+    "key_used": "BET 2.000000",
+    "actual_bet_amt": 2.0,
+    "avg_fold_pct": 20.7,
+    "n_combos": 298
+  },
+  "bb_fold_vs_75pct": {
+    "key_used": "BET 5.000000",
+    "actual_bet_amt": 5.0,
+    "avg_fold_pct": 39.8,
+    "n_combos": 298
+  },
+  "cbet_by_category": {
+    "underpair": {
+      "avg_cbet_pct": 13.8,
+      "n": 54
+    },
+    "air": {
+      "avg_cbet_pct": 56.5,
+      "n": 125
+    },
+    "tptk": {
+      "avg_cbet_pct": 100.0,
+      "n": 42
+    },
+    "middle_pair": {
+      "avg_cbet_pct": 85.1,
+      "n": 45
+    },
+    "overpair": {
+      "avg_cbet_pct": 100.0,
+      "n": 6
+    },
+    "set": {
+      "avg_cbet_pct": 100.0,
+      "n": 9
+    },
+    "top_pair": {
+      "avg_cbet_pct": 100.0,
+      "n": 24
+    }
+  }
+}
