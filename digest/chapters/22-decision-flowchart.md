@@ -51,9 +51,9 @@ flowchart TD
 
 ```text
 キッカーランク → スコア
-  A or K        → TPTK = 70
-  Q             → TPGK = 62
-  8〜J          → TPMK = 50
+  A or K        → TPTK = 65
+  Q             → TPGK = 60
+  8〜J          → TPMK = 55
   7 以下        → TPWK = 45
 ```
 
@@ -259,18 +259,18 @@ flowchart TD
 ハンド: A♣K♦   ボード: K♠7♦2♣ (ドライ)
 SPR ≈ 17 (SRP)、HU、相手 50% ベット
 
-Step 1: 役 → TPTK (Aキッカー) = 70
+Step 1: 役 → TPTK (Aキッカー) = 65
 Step 2: ドロー → なし = 0
 Step 3: ブロッカー → なし = 0
-Step 4: HandScore = 70 + 0 + 0 = 70
+Step 4: HandScore = 65 + 0 + 0 = 65
 
 Step 5: A = 12 (ドライ)
 Step 6: C = 17 (50% pot)
 Step 7: M = 0 (HU)
-後手スコア = 70 + 12 − 17 − 0 = 65
+後手スコア = 65 + 12 − 17 − 0 = 60
 
 Step 8: SPR 17 → SRP、閾値 ≥ 40
-Step 9: 65 ≥ 40 → CR 検討
+Step 9: 60 ≥ 40 → CR 検討
 ```
 
 ### 例2: FD単独 on ウェット板、HU、75% ベット (SRP)
@@ -299,18 +299,18 @@ Step 9: 44 ≥ 40 → CR 検討 (セミブラフ CR)
 ハンド: A♣K♦   ボード: K♠7♦2♣ (ドライ)
 SPR ≈ 4.8 (3BP)、HU、相手 33% ベット
 
-Step 1: 役 → TPTK = 70
+Step 1: 役 → TPTK = 65
 Step 2: ドロー → 0
 Step 3: ブロッカー → 0
-Step 4: HandScore = 70
+Step 4: HandScore = 65
 
 Step 5: A = 12 (ドライ)
 Step 6: C = 12 (33% pot)
 Step 7: M = 0 (HU)
-後手スコア = 70 + 12 − 12 − 0 = 70
+後手スコア = 65 + 12 − 12 − 0 = 65
 
 Step 8: SPR 4.8 → 3BP、閾値 ≥ 60
-Step 9: 70 ≥ 60 → CR 検討
+Step 9: 65 ≥ 60 → CR 検討
    ただし実戦は GTO 混合戦略 (CR 34% / call 66%)。
    境界ハンドは「コール優先」が安全。
 ```
