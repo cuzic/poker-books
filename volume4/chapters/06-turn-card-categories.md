@@ -1,4 +1,4 @@
-# 第8章　ターンカードの5分類
+# 第6章　ターンカードの5分類
 
 <!-- markdownlint-disable MD026 MD033 MD036 MD040 MD060 -->
 

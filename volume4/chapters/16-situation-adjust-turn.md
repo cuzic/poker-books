@@ -241,15 +241,15 @@ BB がターンでベットを選んだということは「BBがチェックの
 SB チェック → BB ベット時の SB fold threshold 調整:
 
 vs BB 33% ベット: fold threshold = 20 − 5 = 15
-  通常の OOP fold threshold（vs 33%: HandScore ≥ 20 でコール）から −5 引き上げ
-  → HandScore ≥ 15 以上のハンドのみコール対象
+  通常の OOP fold threshold（vs 33%: HandScore ≥ 20 でコール）から −5 引き下げ
+  → HandScore ≥ 15 以上のハンドもコール対象に含める
 
 vs BB 75% ベット: fold threshold = 40 − 5 = 35
-  通常の OOP fold threshold（vs 75%: HandScore ≥ 40 でコール）から −5 引き上げ
-  → HandScore ≥ 35 以上のハンドのみコール対象
+  通常の OOP fold threshold（vs 75%: HandScore ≥ 40 でコール）から −5 引き下げ
+  → HandScore ≥ 35 以上のハンドもコール対象に含める
 ```
 
-「通常より守る」方向の調整です。「−5 引き上げ」の意味は「より高い HandScore が必要になる」ことを指します。BB の delayed bet は SB のチェックを「弱み」として攻撃しているため、SB が薄いコールをするとパターン化されて搾取されます。
+「通常より広く守る」方向の調整です。「−5 引き下げ」の意味は「より低い HandScore でもコール可能になる」ことを指します。BB の delayed bet は SB のチェックを「弱み」として攻撃しているため、SB が薄いコールをするとパターン化されて搾取されます。
 
 ### SB チェック → BB チェックの場合
 
