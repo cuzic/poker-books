@@ -1,0 +1,96 @@
+volume: "Vol3"
+chapter_num: "10"
+title: "ブラフ選択原則"
+street: "flop"
+
+summary: |
+  ブラフの 3 原則: ブロッカー × エクイティ × ポジション。
+  最良ブラフ = 「相手のナッツをブロック + 自分に equity がある + IP 優位」。
+  T3 ハンドでのブラフは B ≥ 62 の乾燥ボードのみ (Vol2 ch04 ルール)。
+
+key_formulas:
+  "ブラフ選択の優先順位":
+    |
+    Priority 1: ブロッカー
+      相手のナッツ (フラッシュ/ストレート/セット) をブロックするカードを保有
+      例: Kh 保有 → 相手の Kh フラッシュをブロック (on flush board)
+
+    Priority 2: エクイティ
+      ブラフしながら draw もある = semi-bluff
+      GS (HS=22+12=34) on dry board → ブラフしながら 4 アウト分のバックアップ
+
+    Priority 3: ポジション
+      IP からのブラフ: ターン・リバーへの継続が容易
+      OOP からのブラフ (donk): 稀、特定テクスチャのみ
+
+  "フロップブラフの EV 計算":
+    |
+    EV(bluff75%) = α × pot - (1-α) × bet
+    α = 75%/(100%+75%) = 43%
+
+    K72r での OOP fold rate (実測): ≈ 46%
+    EV = 0.46 × 6 - 0.54 × 4.5 = 2.76 - 2.43 = +0.33bb (barely +EV)
+
+    vs 33% CBet on K72r: α=25%, fold_rate=46%
+    EV = 0.46 × 6 - 0.54 × 2 = 2.76 - 1.08 = +1.68bb (+EV)
+
+  "semi-bluff の優位性":
+    |
+    pure bluff EV = FE × pot - (1-FE) × bet
+    semi-bluff EV = pure bluff EV + equity_gain × (remaining_pot)
+
+    NFD semi-bluff: equity ≈ 36% → even if bluff fails, 36% chance to win
+    → semi-bluff は pure bluff より大幅に +EV
+
+examples:
+  # T3 with BDFD blocker
+  - hand: "65o"
+    board: "Kc,7d,2s"
+  # Semi-bluff: gutshot + bluff value
+  - hand: "AQo"
+    board: "9s,8d,7c"
+  # FD semi-bluff
+  - hand: "AJs"
+    board: "Qc,8c,3d"
+  # Bad bluff (no equity, no blocker)
+  - hand: "T6o"
+    board: "Kc,7d,2s"
+  # IP bluff vs OOP check
+  - hand: "98s"
+    board: "Ac,5d,2s"
+
+gto_reference:
+  source: "pot10 accuracy30 study (running)"
+  notes: |
+    実測 OOP fold vs33% on K72r: 46.2% → T3 ブラフは barely +EV。
+    Q53r: fold vs33% = 19.2% → T3 ブラフは -EV (fold rate < α=25%)。
+    → T3 ブラフが有効なのは K/A-high dry board のみ確認済み。
+
+key_points:
+  - "最強ブラフ = semi-bluff (FD/OESD保有) + ブロッカー + IP"
+  - "pure bluff (air) は B ≥ 62 ボードのみ: fold rate ≥ α 必要"
+  - "Q-high board (fold_vs33 ≈ 19%) では T3 ブラフが -EV"
+  - "ブロッカー効果: ナッツを持つ可能性を下げる (相手の defense を弱める)"
+  - "OOP からのブラフ (donk): 特定テクスチャのみ (Vol3 ch06 で詳述)"
+
+sections:
+  - title: "3 原則の優先順位"
+    summary: |
+      ブロッカー > エクイティ > ポジション。
+      ブロッカーなしの pure bluff はリスクが高い。
+      semi-bluff (FD/OESD) はどのボードでも正当化されやすい。
+  - title: "pure bluff の成立条件"
+    summary: |
+      B ≥ 62: OOP が守備しにくい乾燥ボード。
+      fold rate ≥ α = 25% (vs33% CBet)。
+      実測で K72r (46%) は OK, Q53r (19%) は NG。
+  - title: "semi-bluff の強み"
+    summary: |
+      FD (9アウト): equity=36% → 失敗しても 36% win rate。
+      OESD (8アウト): equity=32% → semi-bluff EV が大幅向上。
+      semi-bluff なら全テクスチャで T2/T3 のベットが正当化される。
+  - title: "ブラフレンジの構成"
+    summary: |
+      GTO的均衡: バリューレンジ + ブラフレンジのバランス。
+      V:B 比 ≈ 3:1 (vs33% bet) → バリュー 3 に対しブラフ 1 の割合。
+      過剰ブラフ → 相手がコールすべき → バリューで返される。

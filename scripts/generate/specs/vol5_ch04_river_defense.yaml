@@ -1,0 +1,115 @@
+volume: "Vol5"
+chapter_num: "08"
+title: "リバーディフェンス"
+street: "river"
+
+summary: |
+  リバーでの OOP ディフェンス頻度は MDF = 1 - α で決まる。
+  GTO: 相手のブラフを 0 EV にするため、MDF 以上を守備する。
+  実戦: HS ≥ fold_threshold_river でコール。それ以下でフォールド。
+  river_tag によるボードタイプが閾値調整を決める。
+
+key_formulas:
+  "MDF (最小守備頻度)":
+    |
+    MDF = 1 - α = pot / (pot + bet)
+
+    vs 33% bet: α=0.25 → MDF=0.75 (75% はコール/CR)
+    vs 50% bet: α=0.33 → MDF=0.67 (67% はコール)
+    vs 75% bet: α=0.43 → MDF=0.57 (57% はコール)
+    vs 100% bet: α=0.50 → MDF=0.50 (半分コール)
+
+    ※ フロップと同式。ただしリバーは draws がないのでフォールドが増える。
+
+  "リバー フォールド閾値 (river_tag 対応)":
+    |
+    ベースライン (リバー):
+      vs 33% → HS < 35 でフォールド  (= B バケット全部)
+      vs 50% → HS < 42 でフォールド  (= second_pair_strong まで)
+      vs 75% → HS < 50 でフォールド  (= TPWK まで)
+      vs 100% → HS < 55 でフォールド  (= TPMK まで)
+
+    river_tag 補正 (IP の危険性):
+      PB  (ペアボード) → +10 (FH 恐怖: IP に FH が多い → コール閾値を上げる)
+      SC  (ストレート完成) → -5 (OOP にナッツが集中 → OOP は守りやすい)
+      FC  (フラッシュ完成) → -5 (OOP にフラッシュが集中 → OOP は守りやすい)
+      OC  (オーバーカード) → +5 (トップペアが下がった → コール慎重)
+      blank               → 0
+
+    実装: fold_threshold = base_threshold(bet_size) + runout_adjustment(river_tag)
+
+    例: HS=65 (TPTK), vs50% on PB → threshold = 42 + 10 = 52 → 65 ≥ 52 → CALL
+    例: HS=50 (TPWK), vs50% on SC → threshold = 42 - 5 = 37 → 50 ≥ 37 → CALL
+    例: HS=50 (TPWK), vs75% on PB → threshold = 50 + 10 = 60 → 50 < 60 → FOLD
+
+  "IP ベットに対する OOP の対応フロー":
+    |
+    1. IP の river_tag を確認 (PB/SC/FC/OC/blank)
+    2. bet size から基本閾値を求める
+    3. river_tag 補正を適用
+    4. HS ≥ threshold → call (または check-raise候補 ch11)
+       HS < threshold → fold
+
+    注意: SC/FC ボードでは OOP がリードした場合の IP bet は
+      「ドンクに対するレイズ」または「OOP チェックを誘った IP ベット」と区別する。
+      ch09 (OOP リード) の後にこの章が来る: リードしなかった OOP の守備判断。
+
+examples:
+  - hand: "AKs"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "AQo"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "T9s"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "AKo"
+    board: "Jc,Td,5s,9d,2h"
+  - hand: "AQo"
+    board: "Jc,Td,5s,9d,2h"
+  - hand: "77"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "AKo"
+    board: "Ac,7d,2s,Kh,7h"
+
+gto_reference:
+  source: "river_snap 12 scenarios (2026-05-12 完了)"
+  notes: |
+    MDF = 1 - α は数学的定義 (確認不要)。
+    リバーのフォールド閾値 (HS < 35 vs 33%):
+      フロップ閾値 vs 33% = HS < 15 → リバーでは HS < 35 に引き上げ。
+      理由: draws がなくなりフォールドしやすくなるため閾値が上昇。
+    PB 補正 +10 の根拠: A72-Kh-7d で TPTK のベット率 0% (IP がチェック) →
+      OOP から見ると IP の強いレンジが警戒対象 → コール閾値上昇が整合。
+    SC 補正 -5: JT59-2 で OOP のストレートが多い → OOP のコール範囲が広がる。
+
+key_points:
+  - "MDF はリバーも同じ: vs33%→75%, vs75%→57%, vs100%→50%"
+  - "リバーフォールド閾値: HS<35 (vs33%), HS<50 (vs75%), HS<55 (vs100%)"
+  - "river_tag 補正: PB+10, SC-5, FC-5, OC+5, blank±0"
+  - "TPWK (HS=50) は vs75% PB でフォールド: threshold=60 → 50 < 60"
+  - "SC/FC ボードでは OOP が守りやすい: ナッツがOOPに多い"
+  - "フロップより閾値が高い: draws がないため弱いハンドのコール価値が減少"
+
+sections:
+  - title: "MDF: 守備すべき最小頻度"
+    summary: |
+      相手のブラフを 0 EV にするため、MDF 以上のコール必要。
+      MDF を下回ると: 相手はブラフし放題 → 大きく EV 損失。
+      MDF を上回ると: 相手はバリューのみベット → OK。
+  - title: "river_tag 別コール閾値"
+    summary: |
+      PB: FH が怖い → 閾値 +10。TPTK でも警戒してコール慎重。
+      SC/FC: OOP のナッツが多い → OOP 視点では守りやすい (閾値 -5)。
+      blank: 標準閾値で判断。TPWK がコールの境界線。
+      OC: トップペアが下落 → 閾値 +5。TPTK は慎重。
+  - title: "リバーフォールド閾値の引き上げ"
+    summary: |
+      フロップ vs33% → threshold=15 (ドロー価値があるため低い)。
+      リバー vs33% → threshold=35 (ドローなし → より弱い手が多くフォールド)。
+      draws の有無が閾値を大きく変える。
+  - title: "OOP の実戦フロー"
+    summary: |
+      1. IP のリバーベットを確認。
+      2. HS を計算 (役スコアのみ、draws=0)。
+      3. ベットサイズ + river_tag から threshold を計算。
+      4. HS ≥ threshold → call。HS < threshold → fold。
+      5. HS ≥ 90 でナッツ → check-raise 候補 (ch11 参照)。

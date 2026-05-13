@@ -1,0 +1,95 @@
+volume: "Vol4"
+chapter_num: "01"
+title: "ターンの標準状況"
+street: "turn"
+
+summary: |
+  「ターンの標準状況」は SRP (Single Raised Pot) でフロップ CBet + 呼ばれた場面。
+  pot=10bb, stack=92bb がデフォルト。
+  ターンカードの分類 (5 種) がアクション判断の起点となる。
+
+key_formulas:
+  "SRP ターン標準状況":
+    |
+    BTN 3× open (6bb) → BB call (pot=6bb)
+    フロップ: BTN 33% CBet (2bb) → BB call → pot=10bb, stack=92bb
+
+    SPR at turn:
+      SPR = 92 / 10 = 9.2  → Large SPR (複数ストリート余裕あり)
+
+  "ターンカード 5 分類":
+    |
+    1. blank    : ボードの役・ドロー状況を変えないカード
+    2. OC       : Over Card — ボード最高ランクを超えるカード
+    3. pair     : ボードをペアにするカード
+    4. straight : ストレートを完成するカード
+    5. flush_hit: フラッシュを完成するカード (フラッシュドロー → 完成)
+
+  "ターン barrel 判断":
+    |
+    T1 (HS ≥ 65): 常にバレル, size=33%
+    T2 (HS ≥ 20): 常にバレル, size=33%
+    T3 (HS < 20): B ≥ 62 のみバレル, size=33%
+
+examples:
+  # K73r × 3 turn types
+  - hand: "AKs"
+    board: "Kc,7d,2s,Ah"
+  - hand: "AKs"
+    board: "Kc,7d,2s,9d"
+  - hand: "AKs"
+    board: "Kc,7d,2s,7h"
+  # A72r × turns
+  - hand: "AQo"
+    board: "Ac,7d,2s,Kh"
+  - hand: "AQo"
+    board: "Ac,7d,2s,9d"
+  # JT5r × straight turn
+  - hand: "98s"
+    board: "Jc,Td,5s,9d"
+  - hand: "AKo"
+    board: "Jc,Td,5s,9d"
+
+spr_examples:
+  - label: "SRP ターン (標準)"
+    stack: 92
+    pot: 10
+  - label: "SRP ターン after 33% bet+call"
+    stack: 89
+    pot: 17
+  - label: "SRP リバー after 33% turn+call"
+    stack: 86
+    pot: 23
+
+gto_reference:
+  source: "range_read 30 シナリオ (完了)"
+  notes: |
+    検証済み: GTO 78%+ ベット率 → T1/T2 は常時バレル
+    ターン全テクスチャで size=33% が最適
+    代表シナリオ: K73r_As: CBet=81.5%, K73r_9d: CBet=72.3%, K73r_7h: CBet=45.2%
+
+key_points:
+  - "pot=10bb は BTN 3× open + 33% CBet + call から来る「ゴールデン標準」"
+  - "SPR=9.2 はラージSPR: まだ 3 ストリートのスペースがある"
+  - "ターンカード分類で HS が大きく変わる: pair ターンでセットが急増"
+  - "blank/OC でも OOP のレンジ組成が変化 → 有利なターンかどうかを判断"
+  - "T1/T2 の常時バレルは GTO 78%+ で確認済み — T2 がチェックするのは例外的"
+
+sections:
+  - title: "SRP 標準展開の復習"
+    summary: |
+      プリフロップ → フロップ → ターンの pot/stack の変化を計算。
+      BTN が 33% CBet した場合の標準的な ターン pot=10bb を確認。
+  - title: "ターンカード 5 分類"
+    summary: |
+      各ターンカードタイプとその HS への影響。
+      blank: レンジ変化小, OC: AKs が急上昇, pair: Sets 急増, straight/flush: 完成ハンド急増
+  - title: "バレル判断: T1/T2 は常時"
+    summary: |
+      フロップとの違い: フロップ T2 は B < 58 でチェック。
+      ターン T2 は常時バレル — ターンで全テクスチャ 78%+ ベット。
+      理由: ターンはより強い情報を要求するため、IP は積極的に圧力をかける。
+  - title: "ターンサイズ 33%"
+    summary: |
+      GTO: ターンサイズは 33% が最適 (フロップ 75% から大幅減少)。
+      小サイズで wide range を維持しながらバレルする戦略。

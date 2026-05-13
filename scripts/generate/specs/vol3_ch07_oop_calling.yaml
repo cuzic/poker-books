@@ -1,0 +1,105 @@
+volume: "Vol3"
+chapter_num: "07"
+title: "OOP コーリングレンジ"
+street: "flop"
+
+summary: |
+  OOP (BB) が IP の CBet に対して「コールすべきか」の詳細判断。
+  fold threshold テーブルとレンジ思考の組み合わせ。
+  10 ボードの GTO 実測値との照合。
+
+key_formulas:
+  "OOP コール条件":
+    |
+    HS ≥ fold_threshold → call (or check-raise)
+    HS < fold_threshold → fold
+
+    threshold (再掲):
+      vs 33%: base=15 +2tone+5 -mono5 -paired10
+      vs 75%: base=35 +2tone+5 -mono5 -paired10
+
+    check-raise (CR) 条件 (SPR≥6):
+      HS ≥ 40 → CR 可能 (semi-bluff or value)
+      HS ≥ 60 → 強いバリュー CR
+
+  "OOP レンジ構成 by board":
+    |
+    Kc,7d,2s (rainbow_ak, B=62, vs33% threshold=15):
+      fold_vs33=46.2% → 46.2% of BB range が fold
+      コール: TPTK(65+), 中以下のペア (K7s, K2s等), draws
+
+    Qc,5d,3s (rainbow_q, B=58, vs33% threshold=15):
+      fold_vs33=19.2% → 19.2% fold
+      コール: 多くのハンド (TPWK以上, 2OC, FD, OESD)
+      理由: lower top card → OOP のレンジが better
+
+    Kc,4d,4s (paired_high, B=83, vs33% threshold=5 = 15-10):
+      fold_vs33=45.7% → 45.7% fold
+      コール: FH (K4s, 44), trips (Kx), pairs with cagey play
+      threshold=5 → HS ≥ 5 でコール (virtually all non-air hands)
+
+    Jc,8c,4d (2tone J-high, B=50, vs33% threshold=20 = 15+5):
+      fold_vs33=14.5% → 14.5% fold
+      コール: 多くのハンド (2tone で守備しやすい)
+
+  "MDF との整合":
+    |
+    vs 33% bet: MDF = 75% → fold ≤ 25%
+    K72r fold=46% → BB の実測 fold が MDF (25%) を大幅超過!
+    Q83fd fold=19% → MDF 以内 (fold ≤ 25%)
+
+    → K72r: BB の over-fold は exploitable? or GTO が正確?
+    解釈: K72r は IP のナッツアドバンテージが大きく、OOP がインセンティブなくfolding。
+
+examples:
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+  - hand: "JTo"
+    board: "Kc,7d,2s"
+  - hand: "K7s"
+    board: "Kc,7d,2s"
+  - hand: "98s"
+    board: "Jc,Td,5s"
+  - hand: "AQo"
+    board: "Jc,8c,4d"
+  - hand: "65s"
+    board: "Qc,5d,3s"
+
+gto_reference:
+  source: "pot10 accuracy30 study (11/68 完了)"
+  notes: |
+    fold_vs33 実測 (11 boards の一部):
+    K72r=46.2%, Q53r=19.2%, K44pair=45.7%,
+    A72r=38.0%, Q83fd=19.0%, J84fd=14.5%
+
+    注目: K/A-high dry board (fold_vs33=38-46%) は threshold model の 15 と合わない。
+    → BB の wide range に対して IP の strong range が dominant なため。
+
+key_points:
+  - "threshold 計算の実用性: fold_vs33 実測値と formula の方向性は一致"
+  - "K/A-high board の over-fold (46%): ナッツアドバンテージが大きすぎてOOP が守れない"
+  - "Q/J-high board の low fold (14-19%): OOP が多くの draws + pairs で守備"
+  - "MDF 違反 (K72r): GTO でも IP advantage が大きい場合は MDF を下回ることがある"
+  - "コール判断の実戦フロー: HS計算 → threshold比較 → 直感チェック の 3 ステップ"
+
+sections:
+  - title: "fold_threshold vs GTO 実測"
+    summary: |
+      K72r fold_vs33=46.2% >> threshold_based_fold ≈ 25%。
+      Q83fd fold_vs33=19.0% < threshold_based_fold ≈ 25%。
+      方向性: dry K/A-high は多くが fold、semi-wet は多くが call → 一致。
+  - title: "OOP レンジの守備強度"
+    summary: |
+      高い守備 (low fold): 2tone/connected ボード → BB に draws が多い。
+      低い守備 (high fold): dry K/A-high → BB の多くが air になる。
+      BB のデフォルトレンジは wide なため、board によって大きく変わる。
+  - title: "チェックレイズの基準"
+    summary: |
+      HS ≥ 40 (T2上位) でCR が有効: semi-bluff CR (FS+pair, OESD+pair等)。
+      HS ≥ 60 でバリューCR: top-pair+FD, 2pair, sets。
+      SPR < 3 では CR = almost commit → HS ≥ 75 (2pair+) のみ CR。
+  - title: "over-fold の解釈"
+    summary: |
+      K72r で BB が 46% fold (MDF=75% → 25% fold が均衡)。
+      これは BB の exploitable over-fold ではなく、IP のナッツ比率が高いため。
+      IP がほぼ全手でベット → BB が fold しても IP が搾り取る EV が大きい。

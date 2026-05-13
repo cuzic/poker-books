@@ -1,0 +1,112 @@
+volume: "Vol5"
+chapter_num: "03"
+title: "リバーバリューベット"
+street: "river"
+
+summary: |
+  リバーバリューベット: V(≥70)は原則 bet、M+(55-69)は blank/OC で bet・SC/FC/PB でcheck。
+  IP ベット閾値は river_tag によって変わる: blank=55, OC=60, SC/FC=70, PB=80。
+  「V→常にbet」から「V→原則bet、M+→ボードタイプで判断」へ改訂。
+
+key_formulas:
+  "IP リバーベット判断 (river_tag × バケット)":
+    |
+    IP bet if HS ≥ threshold(river_tag):
+      blank : HS ≥ 55  (M+ 全員ベット)
+      OC    : HS ≥ 60  (M+: TPGK/TPTK ベット、TPMK チェック)
+      SC    : HS ≥ 70  (V のみ)
+      FC    : HS ≥ 70  (V のみ)
+      PB    : HS ≥ 80  (強 V のみ: トリップス/FH+)
+
+    実装: calc_river_ip_bet(hand_score, river_tag)
+
+  "river_tag 判定手順":
+    |
+    1. river card がターンランクと重複? → PB
+    2. river card で新たなイージーストレート窓(1枚で完成)が生まれる? → SC
+    3. river card でボード同スーツが4枚になる? → FC
+    4. river card が全ターンカードより高い? → OC
+    5. 上記なし → blank
+
+    例:
+      JT59 + Q → SC (8-9-T-J-Q, 9-T-J-Q-K 各1枚で完成)
+      JT59 + 2 → blank (2 は新ストレート窓を生まない)
+      K72A + 2 → PB  (2 がターンのランク2と重複)
+      K75 3♠(4枚目スペード) → FC
+
+  "バリューベットのサイズ":
+    |
+    board_score ≥ 83 (paired_high) → 100% pot
+    その他                         → 50% pot  (default)
+    75% pot (ナッツアドバンテージ大, overbet 候補は ch10)
+
+  "バリューベット EV":
+    |
+    EV(bet) = P(call_worse) × bet - P(call_better) × bet
+    TPTK vs OOP range: worse_hands = TP弱/セカンドペア → P(call_worse) ≈ 0.5
+    → EV ≈ 0.5 × 50% × pot ≈ 0.25 pot (blank ボード標準)
+
+examples:
+  - hand: "AA"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "AKs"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "KQo"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "77"
+    board: "Kc,7d,2s,9h,7d"
+  - hand: "AKs"
+    board: "Kc,Kd,7s,2h,3d"
+  - hand: "AKs"
+    board: "Jc,Td,5s,9d,Qh"
+
+gto_reference:
+  source: "river_snap 12 scenarios (2026-05-12 完了)"
+  notes: |
+    GTO 実測 IP TPTK(65) bet rate:
+      Connected blank (JT59-2)  : 99%  → blank tag → BET ✓ (threshold 55)
+      Blank mid (K73-As-Jd)     : 62%  → blank tag → BET ✓
+      ストレート完成OC (JT59-Q) : 42%  → SC tag   → check ✓ (threshold 70)
+      ペアボード (A72-Kh-7d)    : 0%   → PB tag   → check ✓ (threshold 80)
+
+    GTO 実測 Set(85-90) bet rate:
+      blank_low (9876-3)  : 80% → V BET ✓
+      OC_ace (9876-As)    : 83% → V BET ✓
+      OC_SC (JT59-Q)      : 68% → V BET ✓ (SC threshold=70, set=85>70)
+      PB/quads (QQQ4-Ah)  : 50% → V だが一部 check (check-raise狙い)
+
+key_points:
+  - "V(≥70) は原則 bet。SC/FC/PB で一部 check を混ぜるが基本はベット"
+  - "M+(55-69): blank→BET, SC/FC/PB→check。これが M+ の核心判断"
+  - "TPTK(65): PB で 0%、blank で 62-99%。同じ HS でも 0〜99% のレンジ"
+  - "river_tag がベット閾値を決める: blank=55, OC=60, SC/FC=70, PB=80"
+  - "サイズ: paired_high(B=83)→100%, その他→50%"
+
+sections:
+  - title: "「常にbet」から「原則bet」へ"
+    summary: |
+      旧ルール「V→常にbet」は GTO の実態と乖離がある。
+      セット(V)でも PB(ペアボード)では 50% がチェック → check-raise 狙い。
+      新ルール「V→ベット開始点。完成ランアウトでは一部チェックも混ぜる」。
+      読者への説明: 「まずベットから考える。ただし怖いボードでは慎重に」。
+  - title: "M+ ハンドのボードタイプ別判断"
+    summary: |
+      M+(55-69) = TPTK/TPGK/TPMK の扱いが Vol5 最大の実戦テーマ。
+      blank ボード: TPTK はベット (worse hands がコール)。
+      SC/FC ボード: OOP レンジにストレート/フラッシュが多い → TPTK は check。
+      PB ボード: FH が相手に多い → TPTK はほぼ常にcheck。
+      river_tag を見て「怖いか？」を1秒で判断するのが目標。
+  - title: "river_tag の読み方"
+    summary: |
+      実戦では river_tag を「リバーカードが何をしたか」で判定する。
+      PB: ボードにペアができた → FH 警戒
+      SC: ストレート完成した (1枚で届く窓が新生) → range が危ない
+      FC: 4枚目のフラッシュ → 1枚持ちで全員フラッシュ
+      OC: オーバーカード落ち → トップペアの価値が下がる
+      blank: 特に変化なし → 通常通りベット
+  - title: "ベットサイズの選択"
+    summary: |
+      標準 50%: リバーのデフォルトサイズ。OOP のコールレンジが広い。
+      100% (paired_high, B≥83): フルハウス恐怖で OOP が守れない → 大きく。
+      33%: thin value (TPMK 程度) で OOP の弱いハンドをコールさせる。
+      75%+: オーバーベット候補 (ch10 で詳述)。

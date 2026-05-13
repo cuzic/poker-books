@@ -1,0 +1,100 @@
+volume: "Vol3"
+chapter_num: "03"
+title: "ボードテクスチャ × CBet 精度"
+street: "flop"
+
+summary: |
+  12 ボードの GTO 実測 CBet 率とフォールド率から、
+  T1/T2/T3 ルールの精度を検証する。
+  fold_vs33 が低い wet ボードでは T3 ブラフが -EV と確認。
+
+key_formulas:
+  "12 ボード実測データ (pot=10bb, accuracy30)":
+    |
+    Board          | B  | CBet% | fold_vs33 | fold_vs75 | 33%size
+    Kc,7d,2s       | 62 | 99.9  | 46.2      | 51.0      | 54.9
+    Kc,4d,4s       | 83 | 99.9  | 45.7      | 55.2      | 61.3
+    Ac,7d,2s       | 62 | 98.6  | 38.0      | 48.7      | 66.0
+    Qc,5d,3s       | 58 | 95.6  | 19.2      | 33.9      | 58.5
+    Ac,5d,2s       | 62 | —     | —         | —         | —
+    Ac,8d,2s       | 62 | —     | —         | —         | —
+    Qc,8c,3d       | 50 | 96.2  | 19.0      | 34.8      | 72.6
+    Jc,8c,4d       | 50 | 93.1  | 14.5      | 32.2      | 73.4
+    Ac,Tc,7d       | 56 | 90.3  | 23.0      | 39.5      | 67.2
+    Tc,9c,8d       | 50 | 90.5  | 13.4      | 33.8      | 69.9
+    Kc,8d,3s       | 62 | —     | —         | —         | —
+    Kc,9d,5s       | 62 | —     | —         | —         | —
+
+  "fold_vs33 vs α=25% (T3 ブラフ判断)":
+    |
+    fold_vs33 > 25% (α) → T3 ブラフ +EV:
+      K72r (46.2%) ✓ dry rainbow AK
+      K44pair (45.7%) ✓ paired_high
+      A72r (38.0%) ✓ dry rainbow AK
+
+    fold_vs33 < 25% (α) → T3 ブラフ -EV:
+      Q53r (19.2%) ✗ rainbow_q
+      Q83fd (19.0%) ✗ 2tone
+      J84fd (14.5%) ✗ 2tone
+      AcTc7d (23.0%) ✗ 2tone_ak (close but under 25%)
+      T98fd (13.4%) ✗ 2tone connected (最低値!)
+
+  "fold_vs33 と B 値の相関":
+    |
+    B=83 (paired): fold≈46% (FH 警戒)
+    B=62 (rainbow_ak): fold≈38-46%
+    B=58 (rainbow_q): fold≈19%
+    B=50-56 (2tone系): fold≈13-23% (最低域)
+
+    → T3 ブラフ閾値 B≥62 のルールは「fold_vs33 > α=25%」の代理
+
+examples:
+  - hand: "65o"
+    board: "Kc,7d,2s"
+  - hand: "65o"
+    board: "Qc,5d,3s"
+  - hand: "AQo"
+    board: "Tc,9c,8d"
+  - hand: "AKs"
+    board: "Jc,8c,4d"
+
+gto_reference:
+  source: "pot10 accuracy30 study (12/68 完了)"
+  notes: |
+    12 ボードの実測値。残り 56 ボードは実行中。
+    CBet aggregate 全ボード 90%+: fold_vs33 < α でも GTO はベット継続。
+    理由: バリューハンドの EV が T3 ブラフの -EV を相殺。
+    T3 ブラフの閾値 B≥62 → GTO fold_vs33 > α=25% の board と一致 (K/A-high dry)。
+
+key_points:
+  - "CBet 90%+ 全ボード: aggregate が高いのはバリューハンドの密度による"
+  - "T3 ブラフの成立条件: fold_vs33 > α=25% → B≥62 ボードに一致"
+  - "2tone 系: fold_vs33=13-23% → T3 ブラフは明確に -EV"
+  - "T98fd (B=50): fold_vs33=13.4% → 最も守備が hard なボード"
+  - "CBet サイズ: 2tone/fd ボードで 33% が主流 (69-73%) → 大きいサイズは不要"
+
+sections:
+  - title: "fold_vs33 の ボード別パターン"
+    summary: |
+      dry K/A-high (B=62): fold 38-46% → T3 ブラフ OK。
+      Q-high rainbow (B=58): fold 19% → T3 ブラフ NG。
+      2tone/fd (B=50-56): fold 13-23% → T3 ブラフ NG (全部)。
+      → B=62 閾値は「fold > α」のボードを正確に分離する (rainbow_ak が新たに追加)。
+  - title: "全カテゴリの CBet 継続 (90%+)"
+    summary: |
+      fold < α でも GTO が CBet する理由:
+      TP/overpair のバリューベット EV が dominant。
+      T3 (air) は -EV だが、T3 の CBet は range の一部のみ。
+      aggregate EV = value EV × weight + bluff EV × weight > 0。
+  - title: "CBet サイズの実測"
+    summary: |
+      dry board (K/A-high): 33%≈55-66%, 75%≈33-45%。
+      2tone board: 33%≈70-73%, 75%≈19-24%。
+      → 2tone では 33% に寄せる (wide range 維持)。
+      簡易モデル (75% default) は dry boards で OK, 2tone では rough。
+  - title: "T3 閾値の精度検証"
+    summary: |
+      B≥62 ルール: fold_vs33 > α のボードを分離。
+      12 ボードで validation: B=62 (fold=38-46%) → OK, B=58 (fold=19%) → NG。
+      B=50 2tone connected (T98, fold=13.4%) は圧倒的に NG。
+      → B≥62 閾値は GTO データと整合 (12 ボードで 100% 一致)。

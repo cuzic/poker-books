@@ -1,0 +1,90 @@
+volume: "Vol3"
+chapter_num: "01"
+title: "フロップでのレンジ優位"
+street: "flop"
+
+summary: |
+  レンジ優位 (Range Advantage) = IP が OOP より多くの「ナッツハンド」を持つ状態。
+  ナッツアドバンテージ × エクイティアドバンテージ の組み合わせで判断。
+  BTN vs BB での典型的な range advantage を学ぶ。
+
+key_formulas:
+  "ナッツアドバンテージ (Nut Advantage)":
+    |
+    定義: IP レンジの上位 10% HS vs OOP レンジの上位 10% HS
+
+    典型的な BTN vs BB:
+      BTN: AAs, KKs, AKs, AKo → open range は top 20%
+      BB: wider defend range (ATC 含む) → ナッツ密度が低い
+
+    Kc,7d,2s ボードでの ナッツアドバンテージ:
+      IP (BTN): AA(HS=80), AKs(HS=71), 77(HS=85) が多い
+      OOP (BB): K7s, K2s などは possible だが少ない
+
+  "エクイティアドバンテージ":
+    |
+    HS 分布の平均値比較:
+      BTN average HS on K72r ≈ 52 (手を多く持つ)
+      BB average HS on K72r ≈ 38 (wide range → 弱いハンドも含む)
+
+    差 = 52 - 38 = 14 → BTN がエクイティ優位
+
+  "レンジ優位がある場合の行動":
+    |
+    IP ナッツ優位 + エクイティ優位:
+      → T1/T2/T3 共に aggressive 寄り
+      → T2 が B < 58 でもギリギリ bet するケースあり
+
+    OOP ナッツ優位 (稀):
+      → OOP は check-raise を多用できる
+      → IP は bet を絞る (バレルバリューが下がる)
+
+examples:
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "77"
+    board: "Kc,7d,2s"
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+  - hand: "98s"
+    board: "Jc,Td,5s"
+  - hand: "AKo"
+    board: "Jc,Td,5s"
+  - hand: "T9s"
+    board: "Jc,Td,5s"
+
+gto_reference:
+  source: "pot10 accuracy30 study (running)"
+  notes: |
+    BTN CBet 率の高さがナッツアドバンテージの代理指標。
+    K72r CBet=99.9% → IP has overwhelming advantage。
+    JT5r CBet ≈ 72% (lower) → OOP が OESD/2pair で守備できる。
+
+key_points:
+  - "ナッツアドバンテージ = ナッツハンドの密度差: BTN > BB (open range が tight)"
+  - "K-high dry board: IP の TP/sets が多い → CBet 率 99%+"
+  - "connected board: OOP の OESD/2pair が増える → IP の advantage 縮小"
+  - "レンジ思考の基本: 1 hand ではなく全 range の HS 分布を考える"
+  - "ナッツ優位がない場面でのベット → ブラフ価値が低くなる"
+
+sections:
+  - title: "BTN と BB のレンジ構成"
+    summary: |
+      BTN open range (18%): 上位 18% の hands のみ。
+      BB defend range (vs 3× open): MDF = 67% → 3 in 4 hands defend.
+      BB は wide だが、premium hands の密度が BTN より低い。
+  - title: "ボード別ナッツアドバンテージ"
+    summary: |
+      K72r: BTN の AK/AA/77 が hits → overwhelming advantage。
+      JT5r: BTN の AT/KQ/JJ も hits, だが OOP の 98/T8/KJ も hits。
+      Q83fd: BTN の AQ/KQ が hits, OOP の 45s/56s も FD に。
+  - title: "ナッツアドバンテージ vs エクイティアドバンテージ"
+    summary: |
+      ナッツアドバンテージ: 最強ハンドの比率差。
+      エクイティアドバンテージ: 全レンジの平均HS差。
+      両方が IP 有利 → aggressive CBet が正当化される。
+  - title: "OOP レンジとの相互作用"
+    summary: |
+      OOP が defend range で多くの draws を持つボード:
+      → OOP のエクイティが上がる → IP のバレル効率が下がる。
+      2tone/connected ボードで IP の T2 がチェックする理由: OOP の draw が多い。

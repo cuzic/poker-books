@@ -1,0 +1,57 @@
+[
+  {
+    "label": "J♥T♥ 純FD",
+    "hs": 26,
+    "draw": "FD 9outs",
+    "base": 8,
+    "combo": "JhTh",
+    "fold_pct": 0.0,
+    "call_pct": 0.0,
+    "raise_pct": 100.0,
+    "defense_pct": 100.0
+  },
+  {
+    "label": "Q♠J♠ 2OC",
+    "hs": 20,
+    "draw": "none",
+    "base": 20,
+    "combo": "QsJs",
+    "fold_pct": 0.0,
+    "call_pct": 100.0,
+    "raise_pct": 0.0,
+    "defense_pct": 100.0
+  },
+  {
+    "label": "T♥8♥ 純OESD",
+    "hs": 24,
+    "draw": "OESD 8out",
+    "base": 8,
+    "combo": "Th8h",
+    "fold_pct": 0.0,
+    "call_pct": 0.0,
+    "raise_pct": 100.0,
+    "defense_pct": 100.0
+  },
+  {
+    "label": "K♦Q♦ TPMK",
+    "hs": 50,
+    "draw": "none",
+    "base": 50,
+    "combo": "KdQd",
+    "fold_pct": 0.0,
+    "call_pct": 100.0,
+    "raise_pct": 0.0,
+    "defense_pct": 100.0
+  },
+  {
+    "label": "A♦J♦ Aハイのみ",
+    "hs": 25,
+    "draw": "none",
+    "base": 25,
+    "combo": "AdJd",
+    "fold_pct": 0.0,
+    "call_pct": 100.0,
+    "raise_pct": 0.0,
+    "defense_pct": 100.0
+  }
+]

@@ -1,0 +1,91 @@
+volume: "Vol2"
+chapter_num: "03"
+title: "T1/T2/T3 ティアシステム"
+street: "flop"
+
+summary: |
+  ハンドスコア HS の値に応じてハンドを T1/T2/T3 の3段階に分類するシステム。
+  T2 の下限を 20 に設定することで 2OC (2枚オーバーカード) が含まれ、
+  GTO と 92.6% の整合性を持つ。
+
+key_formulas:
+  "ティア分類":
+    |
+    T1: HS ≥ 65  (強いメイドハンド: セット以上, TPTK, 強いオーバーペア)
+    T2: HS ≥ 20  (ミドルハンド: TP系, 2OC, FD, OESD)
+    T3: HS < 20  (弱ハンド: 弱いペア, 弱いエアー)
+  "CBet 判断":
+    |
+    T1 → 常にベット
+    T2 → B ≥ 58 ならベット
+    T3 → B ≥ 62 ならベット (乾燥ボードのみ)
+
+examples:
+  # T1 hands
+  - hand: "KK"
+    board: "Jc,7d,2s"
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "77"
+    board: "Kc,7d,2s"
+  # T2 hands (2OC + draws)
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+  - hand: "AQs"
+    board: "Jc,7d,2s"
+  - hand: "JTs"
+    board: "Kc,7d,2s"
+  - hand: "98s"
+    board: "Jc,Td,5s"
+  - hand: "ATo"
+    board: "9s,8d,7c"
+  # T3 hands
+  - hand: "65o"
+    board: "Kc,7d,2s"
+  - hand: "43s"
+    board: "Kc,7d,2s"
+
+spr_examples:
+  - label: "SRP フロップ (標準)"
+    stack: 94
+    pot: 6
+  - label: "SRP ターン (CBet call後)"
+    stack: 92
+    pot: 10
+  - label: "3BP フロップ"
+    stack: 88
+    pot: 24
+
+gto_reference:
+  source: "pot10 accuracy30 study (running)"
+  notes: "T2/T3 CBet 閾値は 30 ボード × 各ハンドティアで確認予定"
+
+key_points:
+  - "T2 の下限が 20 である理由: 2OC ハンドに +24 ボーナスが加わり HS=25-49 → T2 に入る"
+  - "T3 の閾値 B≥62 は旧 B≥70 から 2026-05 に改訂 (GTO 85.2% 精度)"
+  - "T1 は常にベット: HS≥65 で 33%+ が全ボードで CBet 最適"
+  - "T2 の B≥58 閾値: mono(70), paired_high(83), rainbow_connected(67) はすべて ≥58 → T2 常にベット"
+  - "実質的に T2 がベットしないのは rainbow(55) と 2tone(50) のみ"
+
+sections:
+  - title: "H1/H2/H3 から T1/T2/T3 への改訂"
+    summary: |
+      旧システムは H2 下限 = 35 だったため、HS 20-34 の 2OC ハンドが
+      H1 (弱ハンド) に分類されていた。GTO データで 2OC は B≥58 で積極的に
+      CBet することが確認されたため、T2 下限を 20 に拡張した。
+  - title: "T1 ハンドの特徴"
+    summary: |
+      HS ≥ 65 のハンド一覧と、なぜ全ボードでベットするかの説明。
+      例: セット (85), 強いオーバーペア (80), TPTK (65)。
+  - title: "T2 ハンドとボードスコア閾値"
+    summary: |
+      HS 20-64 のハンドは B ≥ 58 でベット。
+      主な T2 ハンド: TP中キッカー, 2OC, FD, OESD, ガットショット。
+      B=58 は rainbow(55) を除くほぼ全テクスチャをカバー。
+  - title: "T3 ハンドと乾燥ボード限定ベット"
+    summary: |
+      HS < 20 (弱いエアー, 弱いペア) は B ≥ 62 の乾燥ボードのみベット。
+      rainbow_connected(67), paired_high(83), mono(70) が対象。
+  - title: "練習問題"
+    summary: |
+      10 ハンドのティア分類と CBet 判断を計算する問題。

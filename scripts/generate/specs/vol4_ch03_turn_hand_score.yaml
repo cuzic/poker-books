@@ -1,0 +1,108 @@
+volume: "Vol4"
+chapter_num: "05"
+title: "ターンハンドスコア"
+street: "turn"
+
+summary: |
+  ターンでの HS 計算はフロップと同じ公式だが、ドローボーナスが半減する。
+  フロップ: draw_bonus = outs × 4。ターン: draw_bonus = outs × 2。
+  役スコアはフロップと同じ。ターンカードで role が変化する場合は再計算。
+
+key_formulas:
+  "ターン HS 計算":
+    |
+    HS = role_score + draw_bonus_turn + 2OC_bonus
+
+    draw_bonus_turn (outs × 2):
+      NFD = 9 × 2 = 18
+      FD  = 9 × 2 = 18 (non-nut)
+      OESD = 8 × 2 = 16
+      GS   = 4 × 2 = 8
+      BDFD = 0 (ターンでは BDFD ボーナス不適用)
+
+    役スコア (フロップと同じ):
+      セット以上   = 85
+      オーバーペア高(AA-QQ) = 80, 中(JJ-TT) = 75, 低(99-) = 70
+      2ペア      = 72
+      TPTK       = 65, TPGK = 60, TPMK = 55, TPWK = 50
+      セカンドペア強 = 42, 弱 = 38, ボトムペア = 30
+      A-high = 25, K-high = 20, Q-high = 15, その他エアー = 10
+
+  "ターンカードによる role 変化":
+    |
+    例: AKs on Kc,7d,2s (TPTK, HS=65) → turn=Ah
+      role: TPTK → 2ペア (Ah で Aces and Kings)
+      HS = 72 (2ペア)
+
+    例: 77 on Kc,7d,2s (Set, HS=85) → turn=7h
+      役変化なし (依然として Set)
+      HS = 85 (変化なし)
+
+    例: AQo on Kc,7d,2s (TPWK, wait...) → Wait:
+      AQo on Kc,7d,2s: role = A-high (25) + 2OC bonus? No.
+      Max board = K. A is over K, Q is NOT over K → only 1 overcard over board.
+      Actually A > K only. Q < K. So NOT 2OC. role = A-high = 25.
+      Hmm, but A-high with top kicker... actually AQo has Ace pair (not paired)
+      Wait: AQo on Kc,7d,2s — no pair with board → A-high (25), no 2OC (+0)
+      Actually: K is max board. A > K, Q < K → only 1 OC (Ace).
+      Not 2OC. HS = 25. Wait that doesn't seem right.
+      Let me reconsider: 2OC = both hole cards > max(board).
+      On K-high board, max=K. A > K, Q NOT > K → not 2OC.
+      So AQo/K72r = A-high (25) + 0 = 25. T2 (barely).
+
+  "ターンドローの残りアウト":
+    |
+    NFD turn: 9 アウト (フロップと同じ, but only 1 card remaining → × 2)
+    OESD turn: 8 アウト (フロップと同じ, but × 2)
+    combo draw turn: FD (9) + OESD (8) = 17 アウト → × 2 = 34 → cap at role_score
+
+examples:
+  # Role changes on turn
+  - hand: "AKs"
+    board: "Kc,7d,2s,Ah"
+  - hand: "AKs"
+    board: "Kc,7d,2s,9d"
+  - hand: "AKs"
+    board: "Kc,7d,2s,7h"
+  # Draw recalculation
+  - hand: "98s"
+    board: "Jc,Td,5s,9d"
+  - hand: "JTs"
+    board: "Qc,8c,3d,2c"
+  # 2OC bonus at turn
+  - hand: "AQo"
+    board: "Ac,7d,2s,Kh"
+  - hand: "AQo"
+    board: "9s,8d,7c,2h"
+
+gto_reference:
+  source: "range_read 30 シナリオ (完了)"
+  notes: |
+    ターン HS 計算式は計算式ベース (GTO 測定不要)。
+    ターン barrel 判断 (Vol4 ch04) に HS × 2 を使用。
+
+key_points:
+  - "ドローボーナス半減: フロップ FD=+32 → ターン FD=+18 (1 ストリート分)"
+  - "BDFD (+6) はターンでは 0: バックドアドローは消滅"
+  - "ターンカードで role が変化 → HS を再計算する (pair→2pair, 2pair→fullhouse etc)"
+  - "ターン 2OC ボーナス: ターンカード含む全 4 枚のうち hole cards が最高ランク超えか確認"
+  - "combo draw (FD+OESD) at turn: 17 × 2 = 34 → 役スコアに加算"
+
+sections:
+  - title: "フロップからターンへのスケール変換"
+    summary: |
+      フロップ: outs × 4 (2 ストリート残り)。
+      ターン:   outs × 2 (1 ストリート残り)。
+      NFD: 36 → 18、OESD: 28 → 16 に半減する。
+      BDFD はターンでは 0 (実現に 2 ストリート必要だったが 1 しかない)。
+  - title: "ターンカードによる HS の変化"
+    summary: |
+      ブランクターン: role 変化なし。HS = フロップ HS (draw 半減のみ)。
+      OC ターン: Ace が落ちると AK → 2ペア に昇格 (TPTK 65 → 2ペア 72)。
+      ペアターン: Set → 4of kind (稀) or FullHouse。2ペア → FullHouse。
+  - title: "ターン HS ティア判定"
+    summary: |
+      T1 (HS ≥ 65): セット/2ペア/オーバーペア/TPTK + 大 draw 込み。
+      T2 (HS ≥ 20): TP系/ドロー単独。
+      T3 (HS < 20): ほぼ air。
+      ターンでは T3 でも B ≥ 62 でバレルするのがフロップと同じ。

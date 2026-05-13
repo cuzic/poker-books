@@ -1,0 +1,92 @@
+volume: "Vol2"
+chapter_num: "04"
+title: "CBet 判断の黄金律"
+street: "flop"
+
+summary: |
+  IP (BTN) がフロップで CBet すべきか否かを HS と BS の組み合わせで決定する。
+  T1 は常時、T2 は B≥58、T3 は B≥62 という 3 ルールを暗記する。
+
+key_formulas:
+  "CBet 判断フロー":
+    |
+    STEP 1: HS を計算 → ティア決定
+      T1 (HS ≥ 65): 常にベット → STEP 3 へ
+      T2 (HS ≥ 20): STEP 2 へ
+      T3 (HS < 20):  STEP 2' へ
+
+    STEP 2 (T2): BS ≥ 58 ?
+      YES → ベット
+      NO  → チェック
+
+    STEP 2' (T3): BS ≥ 62 ?
+      YES → ベット (乾燥ボード限定ブラフ)
+      NO  → チェック
+
+    STEP 3: サイズ決定
+      paired_high / mono → 50%
+      その他             → 75%
+
+examples:
+  # T1 hands on various boards
+  - hand: "AA"
+    board: "9s,8d,7c"
+  - hand: "77"
+    board: "9s,8d,7c"
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "T9s"
+    board: "Jc,Td,5s"
+  # T2: bet vs check decision
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+  - hand: "AQo"
+    board: "Jc,Td,5s"
+  - hand: "AQo"
+    board: "9s,8d,7c"
+  - hand: "AQs"
+    board: "Qc,8c,3d"
+  # T3: rare bet situations
+  - hand: "65o"
+    board: "Kc,7d,2s"
+  - hand: "65o"
+    board: "9s,8d,7c"
+
+gto_reference:
+  source: "pot10 accuracy30 study (10 boards so far)"
+  notes: |
+    実測 CBet 総合率: K72r=99.9%, Q53r=95.6%, Q83fd=96.2%
+    各ボードで T1 は全ほぼ 100% ベット確認済み。
+    T2/T3 の閾値精度は 30 ボード完了後に最終確認予定。
+
+key_points:
+  - "T1 例外なし: HS≥65 なら常にベット (ポジション・ボード問わず)"
+  - "T2 境界: B=58 は rainbow(55)と2tone(50)で check、それ以外でbet"
+  - "T3 境界: B=62 は rainbow_ak(62), rainbow_connected(67), paired_high(83), mono(70) でbet"
+  - "実質的に T3 がベットするのは K/A-high 乾燥ボード (rainbow_ak 以上) のみ"
+  - "GTO CBet 総合率 90-100%: 計算式は T3 弱ハンドでチェックさせることで精度を保つ"
+
+sections:
+  - title: "T1: 常にベットする理由"
+    summary: |
+      HS≥65 はすべてのボードでエクイティ優位を持つ。
+      チェックすることでエクイティを失う (ショーダウン到達率低下)。
+  - title: "T2: B≥58 の意味"
+    summary: |
+      B=58 は rainbow Q-high(58), rainbow_ak(62), rainbow_connected(67),
+      paired_high(83), mono(70), 2tone_ak(56)...
+      2tone(50)と rainbow(55) だけが < 58。
+      → T2 がチェックするのは 2tone と rainbow の 2 テクスチャのみ。
+  - title: "T3: B≥62 の乾燥ボード限定"
+    summary: |
+      T3 ハンドは純ブラフ。成功するには相手に多くのフォールドが必要。
+      B≥62 のボードは OOP の守備が難しい。
+      mono(70), paired_high(83), rainbow_connected(67) で T3 も bet。
+  - title: "フォールド率と CBet 収支"
+    summary: |
+      vs T3 CBet: 要求フォールド率 = α = 25% (33%ベット時)
+      OOP fold rate vs33% は dry K-high で≈46% — T3 ブラフは十分収益的。
+  - title: "実戦フロー統合"
+    summary: |
+      HS 計算 → ティア判定 → BS 比較 → bet/check → サイズ決定
+      この 5 ステップを暗算で回せるようにする。

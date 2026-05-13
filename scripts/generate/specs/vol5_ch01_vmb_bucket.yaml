@@ -1,0 +1,133 @@
+volume: "Vol5"
+chapter_num: "02"
+title: "VMBバケット"
+street: "river"
+
+summary: |
+  リバーでの HS を 4 バケットに分類: V (Value) / M+ (強ミディアム) / M- (SDV) / B (Bluff)。
+  旧3分類 VMB を M→M+/M- に細分化。GTO データより M+ はボードタイプで行動が分かれる。
+  V≥70, M+(55-69), M-(35-54), B<35。
+
+key_formulas:
+  "VMB バケット定義 (新4分類)":
+    |
+    V (Value): HS ≥ 70
+      → IP: 原則 bet (完成ランアウトでは一部 check)
+      → OOP: SC/FC ボードでは lead、その他は check-raise or check-call
+      → ハンド例: セット+, 2ペア, ナッツストレート/フラッシュ, オーバーペア
+
+    M+ (強ミディアム): HS 55-69
+      → IP: blank/OC ボードでは bet、SC/FC/PB では check
+      → OOP: check-call
+      → ハンド例: TPTK(65), TPGK(60), TPMK(55)
+
+    M- (弱ミディアム / SDV): HS 35-54
+      → IP/OOP: ほぼ check-back (SDV を守る)
+      → ハンド例: TPWK(50), セカンドペア強(42), セカンドペア弱(38)
+
+    B (Bluff/Air): HS < 35
+      → check (SDV なし) or ブロッカー保有時ブラフ
+      → ハンド例: ボトムペア(30), A-high(25), 未完成ドロー
+
+  "リバー HS 計算":
+    |
+    HS_river = role_score  (draw_bonus = 0 at river)
+
+    役スコア:
+      セット以上   = 85-97
+      オーバーペア = 70-80
+      2ペア      = 72
+      TPTK       = 65, TPGK = 60, TPMK = 55, TPWK = 50
+      セカンドペア = 42/38, ボトムペア = 30
+      Air (A-K-Q-high) = 25/20/15
+      フラッシュ  = 84-88, ストレート = 80-82
+
+  "river_tag × バケット IP ベット判断":
+    |
+    ボードタイプ | V(≥70) | M+(55-69) | M-(35-54) | B(<35)
+    ---------|--------|----------|----------|-------
+    blank    | BET    | BET      | check    | bluff?
+    OC       | BET    | BET      | check    | bluff?
+    SC       | BET    | check    | check    | blocker-bluff
+    FC       | BET    | check    | check    | blocker-bluff
+    PB       | BET    | check    | check    | check
+
+    GTO 実測:
+      TPTK(65/M+) blank: bet 62-99%, PB: bet 0%, SC: bet ~0-42%
+      Set(85+/V) PB: bet 50-83% (強 V でも一部 check → trap/check-raise)
+
+  "river_tag 判定":
+    |
+    classify_river_runout(turn_board, river_card) → tag:
+      PB   : river card がターンのランクと重複
+      SC   : river card で「1枚ホールカードで完成」ストレート窓が新生
+      FC   : river card でボード同スーツ 4 枚目
+      OC   : river card が全ターンカードより高い
+      blank: 上記なし
+
+  "OOP リード (ドンク) 条件":
+    |
+    classify_river_board(5_card_board) → type: PB/SC/FC/blank
+      SC: 2枚以下ホールカードで完成するストレート窓 ≥ 3
+      FC: 4枚以上同スーツ
+
+    OOP lead = type ∈ {SC, FC} AND HS ≥ 70
+    GTO: SC ボードで OOP donk 46-53%, FC ボードで 28%
+
+examples:
+  - hand: "AA"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "AKs"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "AQo"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "T9s"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "98s"
+    board: "Jc,Td,5s,9d,2h"
+  - hand: "AKo"
+    board: "Jc,Td,5s,9d,2h"
+  - hand: "AKs"
+    board: "Ac,7d,2s,Kh,7d"
+
+gto_reference:
+  source: "river_snap 12 scenarios (2026-05-12 完了)"
+  notes: |
+    GTO 実測値:
+      OOP donk rate: SC ボード 46-53%, FC ボード 28%, 標準 15-25%, PB 16-18%
+      IP TPTK(65) bet rate: blank 62-99%, OC 42%, SC ~0%, PB 0%
+      Set(85-90) bet rate: blank 80%, SC/OC 68-83%, PB 50%
+    → M+/M- 分界線 HS=55 を設定 (TPMK が M+ 下限)
+    → V 「常にbet」→ 「原則 bet」に変更 (PB/完成ランアウトで一部 check)
+
+key_points:
+  - "M を M+/M- に細分: M+(55-69)は blank で薄いバリューあり、M-(35-54)はSDV専門"
+  - "V(≥70)は「原則 bet」。ただし完成ランアウト/PB ボードでは check-raise も混ぜる"
+  - "M+(65=TPTK): blank→BET 99%, SC→BET 0%. ボードタイプで180度変わる"
+  - "OOP リード: SC/FC ボードで V ハンドの 28-53% がドンク — チェックで待たない"
+  - "新 classify_river_runout / classify_river_board が判断の SSOT"
+
+sections:
+  - title: "なぜ M を 2 つに分けるのか"
+    summary: |
+      旧 M(35-69) では TPTK(65) とセカンドペア(38) が同じ扱いになり不正確。
+      GTO データ: TPTK の bet 率が 0〜99% まで変化 → M+ と M- は別物。
+      M+(55-69): 「薄いバリュー or SDV」どちらにもなれる境界ハンド。
+      M-(35-54): ほぼ常に SDV。ベットするとバリュー薄すぎ or ブラフになる。
+  - title: "V バケット: 原則 bet"
+    summary: |
+      「常にbet」→ 「原則bet」に改訂。
+      理由: セット(85-90)でも PB ボードで 50% check。理由は check-raise 狙い + trap。
+      実戦ルール: V は「ベット開始点」。完成ランアウト(SC/FC/PB)では一部 check を混ぜる。
+  - title: "M+ バケット: ボードタイプで判断"
+    summary: |
+      M+(55-69) は river_tag で行動が変わる中核バケット。
+      blank/OC: TPTK はほぼ常にベット (62-99%)。
+      SC/FC/PB: TPTK はチェック (0-42%)。
+      M+ の判断が Vol5 の「肝」。
+  - title: "OOP リード: SC/FC ボードの主導権"
+    summary: |
+      OOP の常識「チェックして IP のアクションを待つ」が崩れる場面。
+      SC ボード (JT59-2 など): OOP の BBレンジにストレートが多い → 46-53% ドンク。
+      FC ボード (K♠7♠5♠-3♠-8h など): フラッシュ保有者がドンク → 28%。
+      「完成カードでレンジ優位が OOP に移ったとき、OOP は先に打てる」

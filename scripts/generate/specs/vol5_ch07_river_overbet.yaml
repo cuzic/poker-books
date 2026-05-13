@@ -1,0 +1,91 @@
+volume: "Vol5"
+chapter_num: "10"
+title: "リバーオーバーベット"
+street: "river"
+
+summary: |
+  リバーオーバーベット (100%+): paired_high ボードまたはナッツアドバンテージ圧倒時のみ。
+  GTO ルール: B ≥ 83 → 100% bet、その他は 50% が標準。
+  ポーラーレンジ (ナッツ or ブラフ) でのみ大サイズが機能する。
+
+key_formulas:
+  "リバーオーバーベット条件":
+    |
+    B ≥ 83 (paired_high): 100% pot
+      理由: FH/Trips でポーラーレンジが形成される
+      OOP は FH 警戒で守備できない → 大サイズで搾れる
+
+    B ≥ 70 (mono): 可能 (フラッシュが落ちた後)
+      Flush hit river on mono board:
+      OOP のフラッシュ = 完成 or 完全 miss で2極化
+
+    その他: 50% 標準
+      V:B バランスが崩れやすい
+
+  "オーバーベットのサイズ選択と V:B 要件":
+    |
+    100% bet: α=0.50 → V:B=1:1 (バリュー:ブラフ=1:1)
+    150% bet: α=0.60 → V:B=2:3 (ブラフが多い)
+    200% bet: α=0.67 → V:B=1:2 (ブラフ2:バリュー1)
+
+    実際: IP のレンジにナッツが多い (paired ターンで Trips/FH 急増)
+    → V 多い → 100% が最適 (V:B=1:1 を実現)
+
+  "paired_high (B=83) でのリバー判断":
+    |
+    IP のリバーレンジ (paired_high):
+      V ≥ 70: Trips/FH → 100% OB
+      M 35-69: TPTK/overpair → 50%
+      B < 35:  air/pair → check or small bluff
+
+    OOP が守備できない理由:
+      Board: K44 river A → FH警戒が最大。
+      OOP の defending range が narrow → IP の 100% bet が高 EV。
+
+examples:
+  - hand: "77"
+    board: "7c,7d,2s,Kh,3d"
+  - hand: "AA"
+    board: "Kc,4d,4s,Ah,2d"
+  - hand: "KK"
+    board: "Kc,4d,4s,Ah,2d"
+  - hand: "65o"
+    board: "Kc,4d,4s,Ah,2d"
+  - hand: "AKs"
+    board: "Ks,7s,5s,2d,Ts"
+
+gto_reference:
+  source: "river study (0/12 完了) — pending"
+  notes: |
+    リバーOB 頻度: river study 完了後に確認予定。
+    GTO では paired_high (B=83) でのリバー 100% bet rate が高い予測。
+    B=83 以外での OB は frequency が低い (ナッツ advantage が限定的)。
+
+key_points:
+  - "B ≥ 83 (paired_high): リバー 100% bet が最高 EV"
+  - "100% bet: V:B = 1:1 必要 → Trips/FH が多い paired board で実現"
+  - "50% のデフォルト: その他全ボードで 50% が標準 (EV ロス最小)"
+  - "ポーラーレンジ条件: オーバーベットはナッツか ブラフかを明確に示す"
+  - "merged range (TPTK 等) に 100% は悪手: OOP が容易にコール/レイズできる"
+
+sections:
+  - title: "オーバーベットが機能する条件"
+    summary: |
+      IP のレンジが 2 極化 (ナッツ or 弱い手) していること。
+      paired_high: Trips/FH (ナッツ) + air (ブラフ) が同時に増える。
+      この 2 極化 → 大サイズが有効。中間の手 (TPTK等) は 50%。
+  - title: "V:B 比率の管理"
+    summary: |
+      100% bet: V とB の数が等しくなるよう調整。
+      実際には V が多い (FH > bluff) → 一部の V を 50% に回して mix。
+      完全な 100% polarized range は理想: 実戦では mix で近似。
+  - title: "OOP からの対抗"
+    summary: |
+      OOP が paired_high board で守備するには: FH 以上が必要。
+      Trips (Ax or Kx with pair board) もコール可能。
+      が、IP の 100% に対して MDF=50% → 全体の半分しか守れない。
+  - title: "ターンとリバーのオーバーベット統合"
+    summary: |
+      ターン OB (Vol5 ch06): SPR ≥ 8 が必要。
+      リバー OB: B ≥ 83 が必要 (またはナッツ圧倒)。
+      2 つのOB のうち実戦で多い: リバー OB (paired_high で頻繁)。

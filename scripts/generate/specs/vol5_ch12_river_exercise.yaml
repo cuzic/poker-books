@@ -1,0 +1,159 @@
+volume: "Vol5"
+chapter_num: "12"
+title: "総合演習：リバーの判断フローを回す"
+street: "river"
+
+summary: |
+  Vol5 の全知識を統合する総合演習章。
+  実戦形式: ボードとハンドが与えられ、river_tag/board_type/バケット/アクションを順に判断。
+  IP と OOP それぞれの視点から 12 の演習問題を解く。
+  「迷わない」フローの完成: どんなリバーシナリオでも1ステップずつ判断できる。
+
+key_formulas:
+  "リバー判断フロー (IP 視点)":
+    |
+    Step 1: classify_river_runout(turn_board, river_card) → river_tag
+    Step 2: calc_river_bucket(hand_score) → V/M+/M-/B
+    Step 3: calc_river_ip_bet(hand_score, river_tag) → BET or CHECK
+    Step 4 (BET の場合): サイズ選択
+      board_score ≥ 83 (paired_high) → 100% pot
+      SC/FC 通常 → 50% pot
+      その他 → 50% pot (standard)
+    Step 5 (CHECK の場合): check-back or check-raise準備 (V の場合)
+
+  "リバー判断フロー (OOP 視点)":
+    |
+    Step 1: classify_river_board(5_card_board) → board_type
+    Step 2: calc_river_bucket(hand_score) → V/M+/M-/B
+    Step 3a (先攻): calc_river_oop_lead(hand_score, board_type) → LEAD or CHECK
+      LEAD条件: board_type ∈ {SC, FC} AND HS ≥ 70
+    Step 3b (IP ベット後): fold_threshold(bet_size, river_tag) と HS を比較
+      HS ≥ threshold → CALL (or CR候補)
+      HS < threshold → FOLD
+
+  "IP ベット閾値一覧":
+    |
+    river_tag | threshold | 代表ハンド
+    ---------|-----------|----------
+    blank    | 55        | M+ (TPMK) 全員ベット
+    OC       | 60        | M+ TPGK 以上ベット
+    SC       | 70        | V のみベット
+    FC       | 70        | V のみベット
+    PB       | 80        | 強 V のみ (Trips/FH)
+
+  "OOP フォールド閾値一覧 (vs 50% bet)":
+    |
+    river_tag | base | 補正 | 実効閾値 | TPWK(50) の判断
+    ---------|------|------|---------|---------------
+    blank    | 42   |  0   | 42      | CALL
+    OC       | 42   | +5   | 47      | CALL
+    SC       | 42   | -5   | 37      | CALL
+    FC       | 42   | -5   | 37      | CALL
+    PB       | 42   | +10  | 52      | FOLD
+
+  "OOP リード頻度 (GTO 実測)":
+    |
+    board_type | OOP donk rate
+    -----------|-------------
+    SC (ストレート完成) | 46-53%
+    FC (フラッシュ完成) | 28%
+    PB (ペアボード)     | 16-18%
+    blank / OC          | 15-25%
+
+examples:
+  - hand: "AKs"
+    board: "Kc,7d,2s,9h,3d"
+    position: "IP"
+    question: "river_tag と推奨アクションは？"
+    answer: "river_tag=blank (3d はターンと重複なし、新窓なし), HS=65 (TPTK), threshold=55 → BET 50%"
+  - hand: "AKs"
+    board: "Jc,Td,5s,9d,Qh"
+    position: "IP"
+    question: "river_tag と推奨アクションは？"
+    answer: "river_tag=SC (Qh で8-9-T-J-Q等の窓が新生), HS=65, threshold=70 → CHECK"
+  - hand: "AKs"
+    board: "Ac,7d,2s,Kh,7h"
+    position: "IP"
+    question: "river_tag と推奨アクションは？"
+    answer: "river_tag=PB (7h がターン7と重複), HS=65 (TPTK, 2ペアなし), threshold=80 → CHECK"
+  - hand: "98s"
+    board: "Jc,Td,5s,9d,2h"
+    position: "OOP"
+    question: "board_type と推奨アクションは？"
+    answer: "board_type=SC (窓3以上), HS=42 (セカンドペア), threshold=70 → CHECK (V未満でリード不可)"
+  - hand: "87s"
+    board: "9s,8d,7c,6h,3d"
+    position: "OOP"
+    question: "board_type と推奨アクションは？"
+    answer: "board_type=SC, HS=82 (ストレート), calc_river_oop_lead=True → LEAD (50%)"
+  - hand: "Ks,3s"
+    board: "Ks,7s,5s,3s,8h"
+    position: "OOP"
+    question: "board_type と推奨アクションは？"
+    answer: "board_type=FC (スペード4枚), HS=84 (フラッシュ), calc_river_oop_lead=True → LEAD (50%)"
+  - hand: "AKo"
+    board: "Jc,Td,5s,9d,Qh"
+    position: "IP"
+    question: "river_tag と推奨アクションは？"
+    answer: "river_tag=SC, HS=82 (Broadway straight), threshold=70 → BET 50%"
+  - hand: "77"
+    board: "9s,8d,7c,6h,3d"
+    position: "IP"
+    question: "river_tag と推奨アクションは？"
+    answer: "river_tag=blank (3d は新窓なし), HS=85 (セット), threshold=55 → BET"
+  - hand: "AQo"
+    board: "Kc,7d,2s,9h,3d"
+    position: "OOP"
+    question: "IP 50%ベットに対する行動は？"
+    answer: "river_tag=blank, HS=25 (A-high, no pair), threshold=42 → FOLD (25<42)"
+  - hand: "KQo"
+    board: "Kc,7d,2s,9h,3d"
+    position: "OOP"
+    question: "IP 50%ベットに対する行動は？"
+    answer: "river_tag=blank, HS=55 (TPMK=KQ on K board), threshold=42 → CALL"
+  - hand: "AQs"
+    board: "Ks,7s,5s,3s,8h"
+    position: "IP"
+    question: "OOP がリードしてきた。IPのアクションは？"
+    answer: "OOP リード on FC board, HS=60 (TPGK), OOP のリード=SC/FC+V多め → IPは慎重: CALL (raiseは危険)"
+  - hand: "AKo"
+    board: "9s,8d,7c,6h,3d"
+    position: "IP"
+    question: "river_tag と推奨アクションは？"
+    answer: "river_tag=blank (3d は新窓なし), HS=25 (A-high no pair), B バケット → CHECK (ブロッカーブラフ候補だがブロッカー弱)"
+
+gto_reference:
+  source: "river_snap 12 scenarios (2026-05-12 完了)"
+  notes: |
+    演習問題は river_snap の実測シナリオから選定。
+    各演習の答えは GTO 実測データと本書フレームワークを照合して設計。
+    GTO 整合率 92%+ を目標とした判断フロー (ch02〜ch11) の総合テスト。
+
+key_points:
+  - "フロー: river_tag → バケット → IP閾値 → アクション の4ステップ"
+  - "OOPフロー: board_type → バケット → リード判断 → IP後の守備判断"
+  - "SC/FC ボードで IP M+ はチェック: OOP のリードに対しても慎重"
+  - "PB ボードは攻守とも threshold が大きく動く: IP もOOP も慎重"
+  - "演習12問で全ボードタイプ × 全バケットをカバー"
+
+sections:
+  - title: "演習前の確認: フロー全体像"
+    summary: |
+      Vol5 のリバー判断を1枚のフローチャートで確認する。
+      IP: river_tag → 閾値 → ベット or チェック。
+      OOP: board_type → リード判断 → IP後の守備 (コール/フォールド)。
+      両者の判断が交差する場面を理解することが演習の目的。
+  - title: "演習 1-4: IP の判断 (blank/OC/SC/PB)"
+    summary: |
+      4ボードタイプに1問ずつ。TPTK が各ボードでどう変わるかを体験。
+      blank→BET, SC→CHECK, PB→CHECK の体感を身につける。
+  - title: "演習 5-8: OOP の判断 (リード/チェック/守備)"
+    summary: |
+      SC/FC でのリード決断。IPベット後の コール/フォールド。
+      「OOP は先にリードすべきか、それとも待つべきか」をケースで学ぶ。
+  - title: "演習 9-12: 複合ケース"
+    summary: |
+      OOP がリードした後の IP の対応。
+      IP がチェックした後の OOP の行動。
+      ブラフキャッチャーとしてのコール判断。
+      チェックレイズ発動条件。

@@ -1,0 +1,106 @@
+volume: "Vol3"
+chapter_num: "06"
+title: "ドンクベット"
+street: "flop"
+
+summary: |
+  ドンクベット (donk): OOP がチェックせずに IP に先制ベットする行動。
+  GTO 的には稀 (5-10%): 特定の条件でのみ高 EV。
+  主な使用: OOP のレンジアドバンテージが圧倒的なとき。
+
+key_formulas:
+  "ドンクベットの条件":
+    |
+    標準的な donk が機能するケース:
+      1. OOP のレンジに IP より明確なナッツアドバンテージがある
+      2. IP のベット予測サイズが大きい (OOP が価格設定を優先したい)
+      3. board が OOP のコールレンジに特に有利
+
+    例:
+      BB (OOP) vs BTN (IP), フロップ A-2-3:
+        BB のレンジ: A2, A3, 23, 45s など低カードが多い → donk
+      BB vs BTN, フロップ low-connected (5-6-7):
+        BB のレンジ: low pair + draws が多い → donk 候補
+
+    逆に donk が弱い:
+      高いカード (K, A) が IP のレンジに有利
+      IP がほぼ常時 CBet するボード → donk は EV を減らす
+
+  "ドンクサイズの選択":
+    |
+    small donk (25-33%):
+      目的: 情報収集 + weak range とのポット構築
+      VS: IP がよくフォールドするボード
+
+    medium donk (50-75%):
+      目的: value (set/2pair) のポット拡大
+      VS: IP がコールレンジを持つボード
+
+    large donk (100%+):
+      目的: ブラフ遮断 or ナッツ確定
+      GTO では稀: overbet on rare nut advantage boards
+
+  "donk vs check-call/check-raise の比較":
+    |
+    check → IP CBet → OOP call:
+      + IP のサイズが 33% なら小さいコール
+      - IP のレンジ情報を得られない
+
+    check → IP CBet → OOP CR:
+      + OOP がポットをコントロール
+      - IP がチェックバックを選ぶリスク
+
+    donk → IP call or raise:
+      + OOP がポットサイズを決める
+      - IP の CR (re-raise) リスクが高い
+      - IP がフォールドして利得が減る
+
+examples:
+  - hand: "77"
+    board: "Tc,7d,3s"
+  - hand: "AKo"
+    board: "Ac,5d,3s"
+  - hand: "65s"
+    board: "7c,6d,5s"
+  - hand: "T9s"
+    board: "Jc,Td,5s"
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+
+gto_reference:
+  source: "cr_river_study (進行中) + 理論ベース"
+  notes: |
+    GTO donk 頻度: cr_study 完了後に確認予定。
+    理論的に donk は 5-10% の頻度が GTO に近い。
+    BB vs BTN のドンクは特定 board (low connected, A23 type) で高頻度の予測。
+    高カードボードでのドンクは exploitative になりやすい。
+
+key_points:
+  - "donk は OOP がレンジアドバンテージを持つ稀な状況で機能"
+  - "low-connected board (5-7-6r, A-2-3r): OOP のレンジが有利 → donk 候補"
+  - "高いカードボード (K72r, A82r): IP 有利 → donk は EV 損"
+  - "donk サイズ: medium (50-75%) が最も一般的な value donk"
+  - "初心者の誤用: 毎回 donk するのは均衡から外れる"
+
+sections:
+  - title: "ドンクベットとは何か"
+    summary: |
+      「ドンク (donkey)」: 最適でない行動から来た名称。
+      ただし現代 GTO では一定頻度でドンクが均衡に含まれる。
+      OOP が IP のアクションを待たずにベット = 情報戦での積極策。
+  - title: "donk が機能するボード"
+    summary: |
+      OOP のレンジが IP より strong なボード:
+        BB range: low pair + draws → low-connected board (5-7-8) で有利。
+        BB range: AX (A2-A5) → A-2-3 board で有利 (two pair/trips 多)。
+      IP (BTN) が有利なボード (A-K-Q high): donk は逆効果。
+  - title: "donk のリスク"
+    summary: |
+      IP の re-raise (raise vs donk): donk bet に対して IP がレイズするリスク。
+      OOP はレイズに対して call/fold の選択を迫られる。
+      donk サイズが大きいほど IP の re-raise が effective → small donk が安全。
+  - title: "donk vs CR の選択基準"
+    summary: |
+      IP が high CBet rate のボード (B ≥ 62): CR の方が多い情報を得られる。
+      IP が low CBet rate (pair board, B=83): donk でポット制御が有効かも。
+      実戦: CR が default、donk は「IP がチェックバックしそうな時」の選択肢。

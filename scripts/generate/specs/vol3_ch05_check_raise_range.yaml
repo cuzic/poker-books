@@ -1,0 +1,101 @@
+volume: "Vol3"
+chapter_num: "05"
+title: "チェックレイズレンジ構築"
+street: "flop"
+
+summary: |
+  OOP CR レンジの構築: バリューとブラフをどう組み合わせるか。
+  ポーラーレンジ (ナッツ or ブラフ) が CR の理想形。
+  レンジ構築で IP のコール/フォールド境界をコントロールする。
+
+key_formulas:
+  "CR レンジの 3 層構造":
+    |
+    Layer 1 — always CR (バリュー最上位):
+      HS ≥ 85: set/trips/flush → always CR
+      目的: 最大のポット構築
+
+    Layer 2 — CR or call (中位バリュー):
+      HS 65-84: 2pair/TPTK+FD → mixed strategy
+      例: 50% CR, 50% call で均衡
+      理由: call でSDV守備 vs CR でポット拡大のトレードオフ
+
+    Layer 3 — CR bluff (ブラフ/ドロー):
+      HS 40-64 with draws: FD (9 outs), OESD (8 outs)
+      HS < 40 with blockers: ナッツブロッカー + air
+      目的: IP のコールレンジを弱める (equity があるのでリスク低)
+
+  "IP から見た CR レンジの読み方":
+    |
+    dry K-high CR → OOP は set/2pair を持つ率が高い
+      → IP は TP以上でコール可 (TPTK: HS=65)
+
+    wet 2tone CR → OOP は FD+set が混在
+      → IP は 2pair+ でコール (TPTK でもコールできる)
+
+    mono CR → OOP はフラッシュ保有 or FD の可能性大
+      → IP はフラッシュなら必ずコール、それ以外は慎重
+
+  "CR バランスの計算":
+    |
+    IP のポットオッズ (vs 3× CR): 22%
+    IP が correct callするには equity ≥ 22%
+
+    OOP が均衡するには:
+      Bluff/(Value+Bluff) = IP_fold_freq
+      If IP folds 50% → OOP bluff = Value × (50/50) = 1:1
+      If IP folds 30% → OOP bluff = Value × (30/70) ≈ 0.43:1
+
+    実用近似: バリュー 2-3 combo に対しブラフ 1 combo
+
+examples:
+  - hand: "77"
+    board: "Kc,7d,2s"
+  - hand: "JTs"
+    board: "Qc,8c,5d"
+  - hand: "AKs"
+    board: "Ks,7s,5s"
+  - hand: "T9s"
+    board: "Tc,9c,8d"
+  - hand: "AQs"
+    board: "Qc,8c,5d"
+
+gto_reference:
+  source: "cr_river_study (進行中) — 実測値追記予定"
+  notes: |
+    OOP CR レンジ構成: cr_study 完了後に実測。
+    特に FD の CR 頻度 (Layer 3) が理論値と一致するか確認予定。
+    dry board では Layer 3 (ブラフ CR) がほぼ 0% の予測。
+
+key_points:
+  - "CR レンジ = ポーラー: 最強ハンド + ドロー (ブラフ) で構成"
+  - "中位ハンド (TPTK など) は CR or call の混合 — pure CR ではない"
+  - "FD が最良のブラフ CR 候補: equity あり + ナッツへの道がある"
+  - "バリュー2-3:ブラフ1 が近似均衡 (IP の fold rate 依存)"
+  - "IP が wide で CR → OOP のブラフ CR 頻度を上げて搾る"
+
+sections:
+  - title: "ポーラーレンジとは"
+    summary: |
+      CR レンジ = ナッツ (set/flush) + ブラフ (FD/OESD) = 2極化。
+      中位ハンド (TPTK) は CR に含めない → IP が容易にコールできる。
+      ポーラー化することで IP の mean range を「負け」にできる。
+  - title: "ブラフ CR の手の選び方"
+    summary: |
+      優先順位:
+        1. FD + strong draw: equity が 40%+ ある → リスク最小
+        2. OESD: equity 30%+; dry board では候補少
+        3. ナッツブロッカー + weak pair: IP のナッツレンジを阻害
+        4. pure air: 基本的に避ける (IP のコールに完全に負ける)
+  - title: "CR 頻度のボード別調整"
+    summary: |
+      同じハンド (例: FD) でも CR 頻度はボードによって異なる。
+      wet board: FD はほぼ always CR (draws が多い → ブラフ比率が適切)。
+      dry board: FD の CR は頻度を下げる (バリュー比率が高くなりすぎる)。
+      調整: バリューとブラフのバランスを常に意識。
+  - title: "IP の対抗戦略"
+    summary: |
+      OOP の CR レンジを読んで IP がコール/フォールドを決定。
+      IP が always fold vs CR → OOP のブラフ CR が exploitative に profitable。
+      IP が always call → OOP のブラフ CR が -EV → バリューのみ CR。
+      均衡: IP は 50-70% コール rate でバランスを取る。

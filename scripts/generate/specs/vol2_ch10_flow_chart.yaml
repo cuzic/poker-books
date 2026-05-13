@@ -1,0 +1,127 @@
+volume: "Vol2"
+chapter_num: "10"
+title: "フロップ判断フローチャート"
+street: "flop"
+
+summary: |
+  第 02-09 章の全フレームワークを 1 枚のフローチャートに統合。
+  IP/OOP それぞれの意思決定ツリーを暗記可能な形で提示。
+  「数式を暗記」ではなく「フローを体験で覚える」章。
+
+key_formulas:
+  "IP フロップフロー (CBet判断)":
+    |
+    STEP1: Board Score B を計算
+      mono=70, paired_high=83, paired_low=71
+      2tone_AK=56, 2tone=50
+      rainbow_connected=67, rainbow_AK=62, rainbow_Q=58, rainbow=55
+
+    STEP2: Hand Score HS を計算
+      HS = role_score + draw_bonus(outs×4) + 2OC_bonus + BDFD
+      role: 役スコア (Set≥90, trips=85, 2pair=72, TPTK=65, ...)
+      2OC: both hole cards > max board rank → +24 (flop only)
+      BDFD: backdoor flush draw → +6 (flop only)
+
+    STEP3: Tier 判定
+      T1: HS ≥ 65 → 常にCBet
+      T2: 20 ≤ HS < 65 → B ≥ 58 でCBet
+      T3: HS < 20 → B ≥ 62 でCBet
+
+    STEP4: サイズ選択
+      B ≥ 70 (wet): 75% ポット
+      B < 70 (dry): 33% ポット
+
+    STEP5: C値 検証 (任意)
+      C = α × 50 (33%bet → C=12, 75%bet → C=22)
+      HS ≥ C × 手持ちスタック割合 → bet EV 正
+
+  "OOP フロップフロー (ディフェンス)":
+    |
+    STEP1: IP のベットサイズを確認
+      33%: α=0.25, MDF=75%, threshold_base=15
+      75%: α=0.43, MDF=57%, threshold_base=35
+
+    STEP2: テクスチャ補正
+      ペア: -10, 2トーン: +5, モノ: -5, それ以外: 0
+
+    STEP3: HS を計算 (turn draws 込みで)
+      HS ≥ threshold → call / raise
+      HS < threshold → fold
+
+    STEP4: Check-Raise (CR) 判断
+      HS ≥ 80 (ナッツ) → CR 候補
+      ドロー (FD/OESD) → CR ブラフ候補 (Vol3 ch04-05)
+
+  "全章マップ":
+    |
+    Chapter 01: Board Score B の計算 → STEP1
+    Chapter 02: Hand Score HS の計算 → STEP2
+    Chapter 03: Tier (T1/T2/T3) → STEP3
+    Chapter 04: CBet 決定ツリー → STEP3+4
+    Chapter 05: CBet サイズ → STEP4
+    Chapter 06: OOP Fold Threshold → OOP STEP3
+    Chapter 07: C値 → STEP5
+    Chapter 08: Check-Raise → OOP STEP4 (Vol3 へ続く)
+    Chapter 09: Check-Check → IP チェックバック
+
+examples:
+  # T1: Always CBet
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  # T2: CBet when B>=58
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+  - hand: "AQo"
+    board: "Qc,8c,5d"
+  # T3: CBet when B>=62
+  - hand: "65o"
+    board: "Kc,7d,2s"
+  - hand: "65o"
+    board: "Qc,5d,3s"
+  # OOP defense
+  - hand: "T9s"
+    board: "Kc,7d,2s"
+
+gto_reference:
+  source: "pot10_study (12/68完了) + turn_river study (233件完了)"
+  notes: |
+    T1 CBet率: GTO 94-100% (確認済み)。
+    T3 境界 B=62: pot10_12件で fold_vs33 > α=25% を確認 (rainbow_AK)。
+    T2 境界 B=58: rainbow_Q (fold_vs33=19%) がボーダーライン。
+    OOP threshold: 理論値ベース (MDF = 1 - α)。
+    check-raise 頻度: cr_river_study 完了後に追記予定。
+
+key_points:
+  - "IP: HS (Tier) × B (Board Score) の 2 次元マトリクスで CBet 決定"
+  - "T1 (HS≥65): ボード問わず常時CBet — 例外なし"
+  - "T2 (HS 20-64): B≥58 でCBet — 乾燥rainbowでもbet"
+  - "T3 (HS<20): B≥62 でのみCBet — A/K-high dryのみ"
+  - "OOP: MDF閾値を超えるかどうかで fold/call 判断"
+  - "サイズ: wet(B≥70)→75%, dry(B<70)→33% が原則"
+
+sections:
+  - title: "IP の 4 ステップフロー"
+    summary: |
+      STEP1: B を計算 (ボードテクスチャ → 数値)。
+      STEP2: HS を計算 (役 + ドロー + ボーナス)。
+      STEP3: Tier でCBetするかを判定。
+      STEP4: サイズを選ぶ (wet→75%, dry→33%)。
+      この 4 ステップは暗算で 5 秒以内に実行できる。
+  - title: "OOP の 3 ステップフロー"
+    summary: |
+      STEP1: IP のベットサイズを読む (33% or 75%)。
+      STEP2: 自分の HS を計算 + テクスチャ補正。
+      STEP3: HS ≥ threshold → call、< threshold → fold。
+      Check-Raise: HS ≥ 80 またはナッツドローで検討 (Vol3)。
+  - title: "フロー全体の外観"
+    summary: |
+      IP がベット: 60-99% の確率 (T1 常時, T2/T3 条件付き)。
+      OOP が守備: MDF = 75% or 57% をベースに判定。
+      チェックで回す場合: IP は T2-T3 のSDV手でチェックバック (ch09)。
+      ターン・リバーへ続く: Vol4/Vol5 で同フローを継続。
+  - title: "式の暗記ではなくフローの体験で覚える"
+    summary: |
+      最初の 10 回: 各ステップを数字で確認しながらプレイ。
+      次の 50 回: STEP2 (HS) が自動化されるまで繰り返す。
+      その後: STEP1 (B) も直感化 → フロー全体が無意識に。
+      例題 (examples) を使って練習が推奨。

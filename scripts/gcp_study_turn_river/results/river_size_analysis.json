@@ -1,0 +1,112 @@
+[
+  {
+    "texture": "mono",
+    "n": 13,
+    "share_50": 14.3,
+    "share_75": 14.0,
+    "share_100": 14.0,
+    "recommended": "50%",
+    "book_current": "50%",
+    "match": true
+  },
+  {
+    "texture": "paired_high",
+    "n": 14,
+    "share_50": 11.3,
+    "share_75": 16.4,
+    "share_100": 18.8,
+    "recommended": "100%",
+    "book_current": "50%",
+    "match": false
+  },
+  {
+    "texture": "paired_low",
+    "n": 12,
+    "share_50": 19.0,
+    "share_75": 13.0,
+    "share_100": 11.4,
+    "recommended": "50%",
+    "book_current": "50%",
+    "match": true
+  },
+  {
+    "texture": "2tone_ak",
+    "n": 12,
+    "share_50": 15.5,
+    "share_75": 15.1,
+    "share_100": 13.3,
+    "recommended": "50%",
+    "book_current": "50%",
+    "match": true
+  },
+  {
+    "texture": "2tone",
+    "n": 15,
+    "share_50": 13.6,
+    "share_75": 13.5,
+    "share_100": 12.0,
+    "recommended": "50%",
+    "book_current": "50%",
+    "match": true
+  },
+  {
+    "texture": "rainbow_connected",
+    "n": 19,
+    "share_50": 17.9,
+    "share_75": 12.2,
+    "share_100": 10.5,
+    "recommended": "50%",
+    "book_current": "50%",
+    "match": true
+  },
+  {
+    "texture": "rainbow_ak",
+    "n": 19,
+    "share_50": 15.5,
+    "share_75": 14.7,
+    "share_100": 13.6,
+    "recommended": "50%",
+    "book_current": "50%",
+    "match": true
+  },
+  {
+    "texture": "rainbow_q",
+    "n": 15,
+    "share_50": 13.9,
+    "share_75": 14.1,
+    "share_100": 13.6,
+    "recommended": "75%",
+    "book_current": "50%",
+    "match": false
+  },
+  {
+    "texture": "rainbow",
+    "n": 13,
+    "share_50": 13.7,
+    "share_75": 12.7,
+    "share_100": 11.2,
+    "recommended": "50%",
+    "book_current": "50%",
+    "match": true
+  },
+  {
+    "texture": "rainbow_lowconn",
+    "n": 18,
+    "share_50": 15.3,
+    "share_75": 13.4,
+    "share_100": 12.2,
+    "recommended": "50%",
+    "book_current": "50%",
+    "match": true
+  },
+  {
+    "texture": "2tone_conn",
+    "n": 12,
+    "share_50": 16.2,
+    "share_75": 12.8,
+    "share_100": 10.9,
+    "recommended": "50%",
+    "book_current": "50%",
+    "match": true
+  }
+]

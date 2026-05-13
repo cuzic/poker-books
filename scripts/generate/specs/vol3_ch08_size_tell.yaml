@@ -1,0 +1,94 @@
+volume: "Vol3"
+chapter_num: "08"
+title: "サイズ・テル"
+street: "flop"
+
+summary: |
+  IP のベットサイズから相手のレンジを推定する「サイズ・テル」。
+  GTO: dry board では 33%/75% の混合。wet 2tone board では 33% 主流。
+  実測データで「大サイズ = ナッツ偏重、小サイズ = wide range」を確認。
+
+key_formulas:
+  "CBet サイズ分布 (GTO 実測 12 boards)":
+    |
+    Board          | B  | 33%size | 75%size
+    Kc,7d,2s(dry)  | 62 | 54.9    | 45.0
+    Kc,4d,4s(pair) | 83 | 61.3    | 38.6
+    Ac,7d,2s(dry)  | 62 | 66.0    | 32.6
+    Qc,5d,3s(dry)  | 58 | 58.5    | 37.1
+    Qc,8c,3d(fd)   | 50 | 72.6    | 23.6
+    Jc,8c,4d(fd)   | 50 | 73.4    | 19.5
+    Ac,Tc,7d(fd)   | 56 | 67.2    | 23.1
+    Tc,9c,8d(wet)  | 50 | 69.9    | 20.6
+
+  "サイズ選択の原則":
+    |
+    75% bet: ポーラーレンジ寄り
+      - Strong made hands (T1): T/P強 + セット + オーバーペア
+      - 一部のブラフ (high fold rate board)
+      - K72r で 45% が 75% → T1/T3 mix
+
+    33% bet: wide range
+      - T1/T2 全て
+      - wet board で OOP のドローを守備可能にする
+      - T98fd で 70% が 33% → wide range 維持
+
+  "サイズからのレンジ推定":
+    |
+    相手 (IP) が 75% bet:
+      → ナッツかブラフの2極化 (polarized)
+      → コールは strong 以上 (HS ≥ 40+)
+      → TPWK でフォールドを考慮
+
+    相手 (IP) が 33% bet:
+      → wide range (T1/T2 全て)
+      → many hands bet
+      → コールは lower threshold で OK (MDF=75%)
+
+examples:
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+  - hand: "98s"
+    board: "Jc,Td,5s"
+  - hand: "AKo"
+    board: "Tc,9c,8d"
+  - hand: "AQo"
+    board: "Qc,8c,3d"
+
+gto_reference:
+  source: "pot10 accuracy30 study (12/68 完了)"
+  notes: |
+    CBet サイズ分布: dry board で 33%≈55-66%, wet 2tone で 33%≈68-73%。
+    GTO は 2tone で圧倒的に 33% preferred → 簡易式 (75% default) は 2tone で rough。
+    実際の EV 差は小さい (< 0.5bb per hand)。
+
+key_points:
+  - "75%: polarized (ナッツ or ブラフ) → 相手は strong 以上でコール"
+  - "33%: wide range → 相手は MDF=75% をコールで達成すれば OK"
+  - "wet 2tone board: GTO が 33% を強く prefer → IP はほぼ全手で small bet"
+  - "dry K/A-high board: 33%/75% の mix → IP がポーラーとワイドを両立"
+  - "実戦での読み: small bet → wide range に対して wide defense、large bet → polarized に対して tighter"
+
+sections:
+  - title: "GTO サイズ選択の実態"
+    summary: |
+      GTO は multiple sizes を使う: 単純に「33% or 75%」ではない。
+      しかし dominant size が板によって明確: dry で 33%/75% 拮抗, wet で 33% 主流。
+      実戦: 相手の dominant size pattern を読む。
+  - title: "large bet = polarized の含意"
+    summary: |
+      IP が 75% bet: strong hands (T1) + some bluffs (T3 on B≥62)。
+      Middle hands (T2) は mostly 33%。
+      → 75% bet に対してコールするにはHS≥40+ が必要 (vs 50% だと HS≥35)。
+  - title: "2tone board での GTO 行動"
+    summary: |
+      2tone board: IP はほぼ全手 33% で bet。
+      理由: OOP が FD/OESD で守備しやすい → large bet は EV が低い。
+      wide range を 33% で維持: T1/T2/T3 blend で OOP を indifferent に。
+  - title: "OOP としてのサイズ対応"
+    summary: |
+      IP が 33%: wide range → MDF=75% を守る。fold threshold=15。
+      IP が 75%: polarized → MDF=57%。fold threshold=35。
+      実戦: large bet には fold threshold を上げて守備を絞る。

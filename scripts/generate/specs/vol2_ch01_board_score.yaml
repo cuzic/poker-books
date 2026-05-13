@@ -1,0 +1,76 @@
+volume: "Vol2"
+chapter_num: "01"
+title: "ボードスコアBを計算する"
+street: "flop"
+
+summary: |
+  ボードスコア B (0–100) は 9 ルールの優先ルールで決まる。
+  B が高いほど強いハンドに有利なボードで、IP は T2/T3 でもベットしやすい。
+  B が低いほど OOP に有利で、IP はベットを絞る。
+
+key_formulas:
+  "Board Score B (9ルール)":
+    |
+    1. モノトーン             → B = 70
+    2. ペアボード × top ≥ T  → B = 83
+    3. ペアボード × top < T  → B = 71
+    4. 2トーン × top A/K     → B = 56
+    5. 2トーン               → B = 50
+    6. レインボー × spread≤3 × top≥J → B = 67
+    7. レインボー × top A/K  → B = 62
+    8. レインボー × top Q    → B = 58
+    9. レインボー            → B = 55
+
+examples:
+  # Rule 1: Mono
+  - hand: "AKs"
+    board: "Ks,7s,5s"
+  # Rule 2: paired_high
+  - hand: "AKs"
+    board: "Kc,Kd,7s"
+  # Rule 3: paired_low
+  - hand: "AKs"
+    board: "7c,7d,2s"
+  # Rule 4: 2tone A/K
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+  # Rule 5: 2tone
+  - hand: "AQo"
+    board: "9c,7d,2s"
+  # Rule 6: rainbow connected
+  - hand: "AQo"
+    board: "9s,8d,7c"
+  # Rule 7: rainbow A/K
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+  # Rule 8: rainbow Q
+  - hand: "AQo"
+    board: "Qc,5d,3s"
+  # Rule 9: rainbow
+  - hand: "AQo"
+    board: "Jc,6d,2s"
+
+key_points:
+  - "B=83 (paired_high) は最高値: AA/KK など強いペアがダブルアップしやすい"
+  - "B=50/55 (2tone/rainbow) は最低域: OOP が多くのドローを持てる"
+  - "B 値は CBet 閾値と比較するだけでいい (58 or 67 との大小)"
+  - "フロップ 3 枚のみで計算 (ターン/リバーカードは別計算)"
+  - "モノトーンが B=70 と中間値なのは OOP もフラッシュドロー保有の恩恵があるため"
+
+sections:
+  - title: "なぜボードスコアが必要か"
+    summary: |
+      直感的に「乾燥ボードは IP に有利」とわかっていても、
+      閾値との比較を毎回計算するためには数値化が必要。
+      B はそのための圧縮指標。
+  - title: "9 ルールの覚え方"
+    summary: |
+      覚え方: ペア最強(83) > モノトーン(70) > 2トーン系(50-56) > レインボー系(55-67)
+      レインボーの中では「つながり(connected)」と「A/K トップ」で差がつく。
+  - title: "B が CBet 判断にどう使われるか"
+    summary: |
+      T2 ハンドは B ≥ 58 でベット、T3 ハンドは B ≥ 62 でベット。
+      B の値を閾値と比べるだけで判断できる。
+  - title: "練習問題"
+    summary: |
+      5 ボードの B 値計算と、T2 ハンド (HS=40) の CBet 判断。

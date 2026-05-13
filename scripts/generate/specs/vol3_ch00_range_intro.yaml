@@ -1,0 +1,101 @@
+volume: "Vol3"
+chapter_num: "00"
+title: "レンジで考える — フロップ応用の入り口"
+street: "flop"
+
+summary: |
+  Vol3 はレンジ思考の実践編。1 ハンドではなく「全レンジ」を考える。
+  BTN open range / BB defend range の基礎と、それがフロップに与える影響。
+  「なぜ GTO は 99% ベットするか」をレンジ思考で説明できるようになる。
+
+key_formulas:
+  "BTN open range の概算":
+    |
+    BTN open (T_open=18): Score ≥ 18 → 約 40% RFI
+    強いハンド (AA-QQ, AKs, AQs 等): Score ≥ 28
+    弱いハンド (67o, 45s 等): Score ≈ 18-19
+
+    BTN range density:
+      Premium (AA-KK, AKs): ~2% of hands
+      Strong (QQ-JJ, AQs, KQs): ~5%
+      Playable (TT-88, ATs, KJs...): ~15%
+      Marginal (J9s, Q8s, 76s...): ~18%
+      Total: ~40%
+
+  "BB defend range の概算":
+    |
+    vs BTN 3× open: pot_odds = 3/(6+3) = 33% → MDF = 67%
+    BB defends 67% of hands:
+      Score_BB ≥ 20 → defend (call or 3bet)
+      AKs: Score_BB=41 → 3bet
+      65o: Score_BB=21 → call (just barely)
+
+    BB range density:
+      Strong (AA-JJ, AK 等): ~3%
+      Medium (QQ-99, AQ, KQ 等): ~8%
+      Wide (pairs, suited connectors, Ax, Kx 等): ~35%
+      Marginal (off-suit broadways etc): ~21%
+      Total: ~67%
+
+  "フロップでのレンジ交差":
+    |
+    BTN range × K72r:
+      Sets (77): 0.5% of range
+      Overpairs (AA-TT): 12%
+      TPTK (AK): 2.5%
+      Strong hands (HS≥65): ~20% of BTN range
+
+    BB range × K72r:
+      K7s, K2s: 0.3% (two-pair)
+      KQo-K5o: 8% (various TPTK/pair)
+      HS ≥ 65 in BB: ~8% (less than BTN's 20%)
+
+    → BTN has 2.5× more HS≥65 hands on K72r
+
+examples:
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "T9s"
+    board: "Kc,7d,2s"
+  - hand: "65s"
+    board: "Kc,7d,2s"
+  - hand: "AKo"
+    board: "Jc,9c,3d"
+  - hand: "JTs"
+    board: "Jc,9c,3d"
+
+gto_reference:
+  source: "pot10 accuracy30 study + range_read 30 シナリオ"
+  notes: |
+    BTN range は preflop spec から導出。
+    BB range は GTO solver の BB defend range から。
+    レンジ密度の数字は approximate (preflop study からの推定値)。
+
+key_points:
+  - "レンジ思考: 1 ハンドではなく「全 range の平均 HS」でボードを評価"
+  - "BTN vs BB: K72r で BTN の strong hand (HS≥65) は 20% vs BB の 8%"
+  - "ナッツアドバンテージ = T1 の密度差。この差が CBet 頻度を決める"
+  - "BB は wide range: 多くの弱いハンドを含むが, draws も多い"
+  - "レンジ交差: ボードが BTN か BB か どちらの range に「より合うか」を考える"
+
+sections:
+  - title: "1 ハンド思考 vs レンジ思考"
+    summary: |
+      初心者: 「自分が AK を持っているから CBet する」。
+      中級者: 「自分の全 range (AA-67o 含む) がこのボードで有利か」を考える。
+      GTO が 99% CBet する理由: レンジ全体の average HS が高いから。
+  - title: "BTN range の特徴"
+    summary: |
+      Open range (40%): premium から marginal まで。
+      K72r での強さ: AA, AK (TPTK), 77 (set) が多い。
+      Kc,7d,2s はまさに BTN が hit しやすいボード (K/7 はopen rangeに多い)。
+  - title: "BB range の特徴"
+    summary: |
+      Defend range (67%): wide だが premium の密度が低い。
+      K72r での強さ: K7s, K2s が少ない (BTN も K を持っている)。
+      BB の強みは: 多様性 (draws, pairs, odd suited connectors) にある。
+  - title: "ボードでのレンジ評価"
+    summary: |
+      ボードを見たとき: 「このボードは自分の range (BTN) に合うか?」。
+      K72r: BTN のAK/AA/77 が多くヒット → aggressive CBet が正当化。
+      JT5r: BTN のAK/KQ も JJ/TT もヒット、だが BB の 98s/KJ も hits。

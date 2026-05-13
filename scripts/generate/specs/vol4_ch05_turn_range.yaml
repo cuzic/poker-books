@@ -1,0 +1,100 @@
+volume: "Vol4"
+chapter_num: "03"
+title: "ターンカード別レンジ更新"
+street: "turn"
+
+summary: |
+  ターンカードが落ちると IP/OOP 双方のレンジが大きく変わる。
+  どのカードが誰に有利かを素早く判断する方法。
+  GTO range_read 30 シナリオから: HS 変化パターンで advantage を判定。
+
+key_formulas:
+  "ターンカード 5 分類とレンジ影響":
+    |
+    1. blank    : 両レンジ変化小 → IP 依然優位 (CBet でのナッツ保有多)
+    2. OC (ace) : IP の TPTK+ が急増 → IP ナッツアドバンテージ大
+    3. pair     : Sets/FH が急増 → IP の strong ハンドが増える
+                  OOP も 2pair/trip が増えるが、IP のセットが overwhelming
+    4. straight : OESD/GS 保有者のレンジが実現 → 両方に影響
+                  IP: AK など (OESD非保有) は losing → bet rate 低下
+    5. flush_hit: FD 保有者のレンジが実現 → OOP が守備強化
+                  IP は flush を恐れ bet rate 低下 (OOP が flush を多く保有)
+
+  "HS 変化の方向性":
+    |
+    ターンカードで IP のナッツが増える:
+      → IP barrel 継続 (T1/T2 常時)
+      → T2 がより aggressive になる
+
+    ターンカードで OOP のレンジが強化:
+      → IP は barrel を絞る場合あり (straight/flush hit)
+      → ただし GTO 78%+ が示すように、IP は依然として多くをベット
+
+  "straight/flush hit でのバレル率":
+    |
+    GTO データ (range_read 30 シナリオ):
+      K73r_straight_turn: ip_bet33_freq ≈ 72.3%  (still high)
+      K73r_flush_turn: ip_bet33_freq ≈ 68.4%      (still high)
+      K73r_blank_turn: ip_bet33_freq ≈ 81.5%      (baseline)
+      K73r_pair_turn:  ip_bet33_freq ≈ 45.2%      (lower — pair scary)
+
+examples:
+  # Blank turn
+  - hand: "AKs"
+    board: "Kc,7d,2s,9h"
+  - hand: "AQo"
+    board: "Kc,7d,2s,9h"
+  # OC (ace) turn
+  - hand: "AKs"
+    board: "Kc,7d,2s,Ah"
+  - hand: "AQo"
+    board: "Ac,7d,2s,Kh"
+  # Pair turn
+  - hand: "AKs"
+    board: "Kc,7d,2s,7h"
+  - hand: "77"
+    board: "Kc,7d,2s,7h"
+  # Straight turn
+  - hand: "98s"
+    board: "Jc,Td,5s,9d"
+  - hand: "AKo"
+    board: "Jc,Td,5s,9d"
+  # Flush hit turn
+  - hand: "AKs"
+    board: "Qc,9c,3d,2c"
+
+gto_reference:
+  source: "range_read 30 シナリオ (完了)"
+  notes: |
+    K73r × 5 turn type で ip_bet33_freq を比較:
+    blank=81.5%, 9d(rainbow)=72.3%, 7h(pair)=45.2%
+    Flush/straight turn の詳細数値は range_read 30 scenarios 参照。
+
+key_points:
+  - "blank/OC ターン: IP の advantage が維持または強化 → 常時バレル"
+  - "pair ターン: GTO bet rate 低下 (45%) — ただし T1 は依然バレル"
+  - "flush_hit ターン: OOP が flush を多く保有 → IP は cautious"
+  - "straight ターン: OESD 保有者のみ HS 急上昇 → non-OESD IP は rate 低下"
+  - "レンジ更新の原則: 自分のレンジが強化されるカードには積極的に"
+
+sections:
+  - title: "blank ターン: 継続の基本"
+    summary: |
+      ボード状況が変わらない → フロップの判断をそのまま継続。
+      IP は T1/T2 で常時バレル。OOP はフロップと同じ守備頻度。
+      blank ターンは「ゲームが続く」: both sides maintain positions。
+  - title: "OC ターン: IP の benefit"
+    summary: |
+      Ace が落ちると IP の AK/AQ/AA が急強化。
+      OOP の BB range: Ace が hit する率は低い (defend range でのAx 保有)。
+      IP ナッツアドバンテージ増大 → aggressive barrel が正解。
+  - title: "pair ターン: 危険のサイン"
+    summary: |
+      Board がペアになると OOP の FH 警戒が増す。
+      IP のセットが増えるが、OOP もペア系が増える。
+      net effect: GTO では bet rate が下がる (paired K: 45% → lower barrel)。
+  - title: "straight/flush hit: ナッツ再分配"
+    summary: |
+      フロップの OESD/GS/FD が完成: 両サイドにナッツが分配される。
+      IP は自分のレンジに完成 hand がどれほどあるかを判断。
+      flush_hit: OOP の FD が IP より多い場合 → IP は cautious だが still bet。

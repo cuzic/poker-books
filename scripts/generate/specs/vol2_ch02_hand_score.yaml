@@ -1,0 +1,86 @@
+volume: "Vol2"
+chapter_num: "02"
+title: "ハンドスコアを計算する"
+street: "flop"
+
+summary: |
+  ハンドスコア HS (0–100) は 「役スコア + ドローボーナス + 2OC ボーナス」で計算する。
+  HS は後続の全判断 (CBet/フォールド/チェックレイズ) の入力値となる。
+
+key_formulas:
+  "ハンドスコア HS":
+    |
+    HS = role_score + draw_bonus + 2OC_bonus
+
+    役スコア:
+      セット以上   = 85
+      オーバーペア高(AA-QQ) = 80, 中(JJ-TT) = 75, 低(99-) = 70
+      2ペア      = 72
+      TPTK       = 65, TPGK = 60, TPMK = 55, TPWK = 50
+      セカンドペア強 = 42, 弱 = 38, ボトムペア = 30
+      A-high = 25, K-high = 20, Q-high = 15, その他エアー = 10
+
+    ドローボーナス (× フロップ 4 倍):
+      NFD = 9アウト × 4 = +36
+      FD  = 9アウト × 4 = +32
+      OESD = 8アウト × 4 = +28
+      GS   = 4アウト × 4 = +12
+      BDFD = 定数 +6
+
+    2OC ボーナス:
+      エアーハンドで両カードがボード最高ランク超え → +24
+
+examples:
+  # Strong made hands
+  - hand: "AA"
+    board: "Kc,7d,2s"
+  - hand: "77"
+    board: "Kc,7d,2s"
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "KTs"
+    board: "Kc,7d,2s"
+  # Draws
+  - hand: "JTs"
+    board: "Qc,9c,3d"
+  - hand: "AJs"
+    board: "Qc,8c,3d"
+  - hand: "98s"
+    board: "Jc,Td,5s"
+  # 2OC hands
+  - hand: "AQo"
+    board: "9s,8d,7c"
+  - hand: "AKo"
+    board: "9s,8d,7c"
+  # Weak hands
+  - hand: "65o"
+    board: "Kc,7d,2s"
+
+key_points:
+  - "役スコアはボードに対するハンドの強さを表す 0-85 の値"
+  - "ドローボーナスは Rule of 4: アウト数 × 4 (フロップ) がおおよそのエクイティ%"
+  - "2OC ボーナス +24 は GTO で重要: A-high air (25) + 24 = 49 → T2 に入る"
+  - "BDFD (バックドアフラッシュ) は +6 のみ (2 ストリートで実現)"
+  - "ターンでは draw_bonus × 2、リバーでは 0 (アウト不要)"
+
+sections:
+  - title: "役スコアの覚え方"
+    summary: |
+      85-65: 強いメイドハンド (T1 候補)
+      60-30: ミドルペア系 (T2 候補)
+      25-10: ハイカード/エアー (+ボーナスで T2 になることも)
+  - title: "ドローボーナスとアウト計算"
+    summary: |
+      FD = 9 アウト: フロップで × 4 = 36 → HS 36 増加
+      OESD = 8 アウト: フロップで × 4 = 32 → HS 32 増加
+      GS = 4 アウト: フロップで × 4 = 16 → HS 16 増加
+      例: J♠T♠ on Q♣9♣3♦ → FD (9) + OESD (8) = combo draw = 15 × 4 = 60 → HS=70
+  - title: "2OC ボーナスの重要性"
+    summary: |
+      旧 H1/H2/H3 では 2OC が H1 (弱) に分類されていたが、
+      GTO では 2OC はドライ/セミウェットボードで積極的に CBet する。
+      +24 ボーナスで HS=49 → T2 に正しく分類される。
+  - title: "計算練習"
+    summary: |
+      5 ハンド × 2 ボード の HS 計算。
+      TPTK + FD、2OC + GS など複合パターンを含む。

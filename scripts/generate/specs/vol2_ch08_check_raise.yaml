@@ -1,0 +1,103 @@
+volume: "Vol2"
+chapter_num: "08"
+title: "チェックレイズ入門"
+street: "flop"
+
+summary: |
+  OOP チェックレイズ (CR): チェックして IP のベットにレイズする行動。
+  目的: ナッツハンドのポット拡大 + ブラフレンジの保護。
+  標準サイズ: 3× IP のベット (33% CBet → CR to 2bb×3=6bb)。
+
+key_formulas:
+  "CR サイズと IP の降伏条件":
+    |
+    標準 CR = 3 × IP bet
+
+    例: pot=6bb, IP bet 33% (2bb) → CR to 6bb
+      新ポット = 6 + 2 + 6 = 14bb
+      IP 追加コール = 6 - 2 = 4bb
+      IP のポットオッズ = 4 / (14 + 4) = 22%
+      → IP は 22% 以上のエクイティが必要
+
+    pot=6bb, IP bet 75% (4.5bb) → CR to 13.5bb
+      新ポット = 6 + 4.5 + 13.5 = 24bb
+      IP 追加コール = 13.5 - 4.5 = 9bb
+      IP のポットオッズ = 9 / (24 + 9) = 27%
+
+  "CR のバリュー:ブラフ比率":
+    |
+    CR に対し IP がフォールドする確率 = 1 - IP_call_freq
+    IP が 22% ポットオッズでコール → IP_call_freq ≈ 50-60% (vs strong OOP range)
+
+    OOP の CR が均衡するには:
+      V:B = (1 - fold_freq) : fold_freq に応じて調整
+      近似: CR ブラフ = CR バリューの 30-40%
+
+    実用: CR バリュー 2-3 combo につき CR ブラフ 1 combo
+
+  "CR を使うべきボードと手":
+    |
+    優先条件:
+      1. OOP が TP+ の強いハンドを持つ
+      2. ボードが wet (2tone/mono) → draws でブラフ CR 可能
+      3. IP の CBet レンジが wide (T3 もベット) → CR のバリューが高い
+
+    hand 例:
+      set (HS=90): 常に CR 候補 (ポット拡大が最重要)
+      FD (HS=50): wet board では CR ブラフ候補
+      TPTK (HS=65): CR or call — board と IP のバレル率で判断
+
+    CR を避けるべき:
+      dry board で TP のみ → IP にフォールドされ利得なし
+      weak hand で CR → リスクが高い
+
+examples:
+  - hand: "77"
+    board: "Kc,7d,2s"
+  - hand: "AQs"
+    board: "Qc,8c,5d"
+  - hand: "JTs"
+    board: "Qc,8c,5d"
+  - hand: "AKo"
+    board: "Kc,4d,4s"
+  - hand: "T9s"
+    board: "Jc,Td,5s"
+
+gto_reference:
+  source: "cr_river_study (進行中) — 結果追記予定"
+  notes: |
+    CR 頻度: cr_river_study 完了後に確認予定。
+    理論値: dry K-high (K72r) → OOP CR 5-10%。
+    wet board (K83fd) → OOP CR 15-25%。
+    これらは理論予測。実測値は cr_study 完了後に更新。
+
+key_points:
+  - "CR = チェック → IP ベット → OOP レイズ: ポーラーレンジで機能"
+  - "標準 CR サイズ: 3× IP のベット (pot=6, bet=2 → CR to 6bb)"
+  - "CR バリュー: set/2pair でポット拡大 → 下位ハンドからの価値最大化"
+  - "CR ブラフ: FD/OESD で均衡を保ち IP にコールを強制"
+  - "dry board での CR は value extract が難しい → call が多い"
+
+sections:
+  - title: "CR の 2 つの目的"
+    summary: |
+      目的1: バリュー (set/2pair): ポットを大きくして将来の価値を増やす。
+      目的2: ブラフ保護: calling range を守る (IP にチェックバックさせない)。
+      この 2 目的が揃うとき → CR が最も強力なツールになる。
+  - title: "CR サイズの選択"
+    summary: |
+      標準: 3× IP bet (最も一般的)。
+      大きめ: 4-5× IP bet → IPをよりタイトなレンジに絞る。
+      all-in CR: stack が小さい時 (SPR < 3) に有効。
+      サイズが大きい → IP のコール頻度が下がる → ブラフ CR が有効化。
+  - title: "ボードテクスチャと CR 頻度"
+    summary: |
+      wet board (2tone/mono): FD/OESD が多い → CR ブラフ候補が増える → CR 頻度高。
+      dry board (rainbow): ブラフ CR 候補が少ない → CR はほぼバリューのみ。
+      paired board: OOP の set 比率が低い → CR バリューが限定的。
+  - title: "IP の CR 対応"
+    summary: |
+      IP が CR に直面: pot odds で判断 (22-27% エクイティ必要)。
+      T1 ハンド (HS≥65): コールで継続。
+      T2 ハンド (HS 20-65): フォールドが多い。
+      IP のフォールドが多い → OOP の CR が profitable。

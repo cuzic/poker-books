@@ -1,0 +1,97 @@
+volume: "Vol2"
+chapter_num: "07"
+title: "C値: どれだけ押すか"
+street: "flop"
+
+summary: |
+  C値 (aggression coefficient) は「ベットサイズが pot の何%か」を 0–30 スケールで表した指標。
+  C = α × 50 (α = bet / (pot + bet))。
+  C値が高いほど強いベット = 相手が降りないと収益が下がる。
+
+key_formulas:
+  "C値の定義":
+    |
+    α   = bet_size / (pot + bet_size)   ← ブラフの要求フォールド率
+    C   = round(α × 50)
+
+    代入表:
+      33% ベット: α = 0.33/(1+0.33) ≈ 0.25 → C = 12
+      50% ベット: α = 0.50/(1+0.50) ≈ 0.33 → C = 17
+      75% ベット: α = 0.75/(1+0.75) ≈ 0.43 → C = 22
+     100% ベット: α = 1.00/(1+1.00) = 0.50  → C = 25
+     150% ベット: α = 1.50/(1+1.50) = 0.60  → C = 30
+
+  "C値の使い方":
+    |
+    SPR別 チェックレイズ対応閾値:
+      SPR ≥ 6: CR_threshold = 40  (大スタック: CR多い)
+      SPR 3-5: CR_threshold = 60  (中スタック)
+      SPR < 3: CR_threshold = 75  (短スタック: CR=オールイン)
+
+    判断: HS ≥ CR_threshold → コール or CR
+          HS < CR_threshold → フォールド検討
+
+  "CBet 収支の概算":
+    |
+    EV(bluff) = α × pot - (1-α) × bet
+              = α × pot - (1-α) × (α/(1-α)) × pot
+              = 0    ← ブレイクイーブン条件
+
+    実際には EV > 0 なら価値的ベット、EV < 0 なら check が良い
+    → C値 = 必要フォールド率の指標として使う
+
+examples:
+  # C値の計算
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+  - hand: "65o"
+    board: "Kc,7d,2s"
+  # different bet sizes
+  - hand: "T9s"
+    board: "Jc,Td,5s"
+  - hand: "AKo"
+    board: "Jc,Td,5s"
+
+spr_examples:
+  - label: "SRP フロップ (標準)"
+    stack: 97
+    pot: 6
+  - label: "SRP フロップ after 75% CBet"
+    stack: 93
+    pot: 15
+  - label: "3BP フロップ (3bet pot)"
+    stack: 85
+    pot: 30
+
+gto_reference:
+  source: "計算式のみ (GTO測定不要)"
+  notes: |
+    C値は数学的定義: GTO 検証は不要。
+    SPR別 CR閾値 (40/60/75) は range_read 30 シナリオで確認済み。
+
+key_points:
+  - "C=12 (33%) は要求フォールド率 25%: 4 回に 1 回相手が降りれば収益"
+  - "C=22 (75%) は要求フォールド率 43%: ほぼ半分降りないと損"
+  - "C値が高い = リスクが高い = HS が高いハンドが正当化できる"
+  - "暗記: 33%→C=12, 75%→C=22 の 2 点だけ押さえれば実戦で使える"
+  - "SPR ≥ 6 で CR_threshold=40: T2 下位でもコールできる場面が増える"
+
+sections:
+  - title: "α (アルファ) から C値へ"
+    summary: |
+      α = ブラフの要求フォールド率。これを 50 倍して整数化したのが C値。
+      C値の意味: 「この C 点分の圧力をかけている」= HS との比較に使える。
+  - title: "主要ベットサイズの C値一覧"
+    summary: |
+      33%→12, 50%→17, 75%→22, 100%→25, 150%→30。
+      実戦で使うのは 33%/75% の 2 サイズ (Vol4 ターン以降も同様)。
+  - title: "SPR別 チェックレイズ対応"
+    summary: |
+      C値は単体では使わない。CR される可能性を SPR で見積もり、
+      HS が CR_threshold を超えていれば push できる。
+  - title: "ブラフ EV と C値"
+    summary: |
+      ブラフ EV = 0 (ブレイクイーブン) が成立する条件が α。
+      C値 > HS のハンドはブラフ不成立 → check が最善。

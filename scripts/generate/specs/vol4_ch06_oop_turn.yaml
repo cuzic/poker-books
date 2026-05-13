@@ -1,0 +1,131 @@
+volume: "Vol4"
+chapter_num: "07"
+title: "OOP ターンディフェンス"
+street: "turn"
+
+summary: |
+  IP はターンを 85.6% バレル (全テクスチャ) → OOP は必ずディフェンスを想定する。
+  ディフェンス基本: MDF = 1 - α と同じ。ターンのフォールド閾値はフロップより高い。
+  ドロー価値が残る (対リバーより低い閾値) が、リバーより厳しいコール判断が必要。
+
+key_formulas:
+  "MDF (ターン)":
+    |
+    MDF = 1 - α (フロップ・リバーと同式)
+
+    vs 33%: α=0.25 → MDF=75% → フォールド 25%以内
+    vs 75%: α=0.43 → MDF=57% → フォールド 43%以内
+    vs 100%: α=0.50 → MDF=50% → フォールド 50%以内
+
+  "ターン フォールド閾値 (turn_tag 対応)":
+    |
+    ベースライン:
+      vs 33% → HS < 20 でフォールド
+      vs 75% → HS < 40 でフォールド
+      vs 100% → HS < 50 でフォールド
+
+    turn_tag 補正 (classify_turn_card で判定):
+      PB  (ペアターン)  → -10 (IP が HS≥20 の広レンジでバレル率 96% → ブラフ率高 → OOP は MDF 維持のため閾値を下げる)
+      SC  (ストレート完成) → +5 (IP は T1 主体のみベット → バリュー率高 → OOP はより強いハンドが必要)
+      FC  (フラッシュ完成) → +5 (IP は T1 主体のみベット → バリュー率高 → OOP はより強いハンドが必要)
+      OC  (オーバーカード) → 0  (標準)
+      blank               → 0  (標準)
+
+    実装: fold_threshold = base(bet_size) + turn_tag_adjustment
+
+    例:
+      HS=25 (2nd pair) vs 33% on blank  → threshold=20 → 25 ≥ 20 → CALL
+      HS=25 (2nd pair) vs 33% on SC     → threshold=25 → 25 ≥ 25 → CALL (ギリギリ)
+      HS=25 (2nd pair) vs 75% on blank  → threshold=40 → 25 < 40 → FOLD
+      HS=25 (2nd pair) vs 33% on PB     → threshold=10 → 25 ≥ 10 → CALL (IP が広バレルするため OOP の守備幅が広がる)
+
+    注意: SC/FC turn の +5 は「OOP が守備しやすい」方向:
+      → threshold が上がる = OOP はより強いハンドでコールする必要がある?
+      いいえ: SC/FC ターンで IP は T1 しかベットしない (ch04 参照)
+      → IP ベットレンジが V 主体 → OOP は「強い手でないとコールできない」
+      → threshold +5 は「IP ベットが強い → 閾値上昇」の意味
+
+  "IP ターンバレル率 (GTO 実測)":
+    |
+    全テクスチャ平均: 85.6%  (ほぼ常時バレル)
+
+    ターンカード別:
+      pair ターン:      96.1% (セット/FH が急増 → 全レンジで攻撃的)
+      deck (blank):   87.4% (安全な継続)
+      flush hit:      85.8% (IP もフラッシュ保有 → 継続高)
+      overcard:       84.8%
+      blank:          83.0%
+      connector:      77.5% (ストレート完成 → 若干控えめ)
+
+  "OOP フォールド率 (GTO 実測, vs33%)":
+    |
+    テクスチャ別 OOP フォールド率 (参考):
+      rainbow_connected:  28-38% (高フォールド: IP のナッツが多い)
+      rainbow_ak:         26-31% (高フォールド)
+      paired_high:        23-33% (混合)
+      2tone_ak:           18-28% (低フォールド: ドロー多)
+      mono:               22-27% (低フォールド)
+      2tone:              14-22% (非常に低フォールド: OOP がよく守備)
+      rainbow_lowconn:    13-20% (最低フォールド: OOP のレンジが強い)
+
+    ※ GTO フォールド率 ≈ α = 25% が均衡。テクスチャで 13-38% まで変動。
+
+examples:
+  # Rainbow flat: standard defense
+  - hand: "AKs"
+    board: "Kc,7d,2s,9h"
+  - hand: "AQo"
+    board: "Kc,7d,2s,9h"
+  - hand: "T9s"
+    board: "Kc,7d,2s,9h"
+  # Paired turn: OOP tightens
+  - hand: "AKo"
+    board: "Kc,7d,2s,7h"
+  - hand: "77"
+    board: "Kc,7d,2s,7h"
+  # 2-tone turn: OOP has draws
+  - hand: "98s"
+    board: "Jc,Td,5s,9h"
+  - hand: "AKo"
+    board: "Jc,Td,5s,9h"
+
+gto_reference:
+  source: "turn_river study (233件完了)"
+  notes: |
+    IP barrel 率: 85.6% 平均 (全テクスチャ)。
+    Pair ターン: 96.1% が最高 → OOP は pair ターンで特に注意。
+    OOP フォールド率: 13-38% (テクスチャ依存)。
+    vs 33%: MDF=75% → フォールド 25% が理論値。
+    実測フォールド率は multi-way effect で変動あり。
+
+key_points:
+  - "IP はほぼ常時バレル (85.6%): OOP は必ずディフェンス計画を持つ"
+  - "turn_tag 補正: PB=-10, SC=+5, FC=+5, OC/blank=0"
+  - "MDF = 1 - α は turn も同じ: vs33%→75%守備, vs75%→57%守備"
+  - "turn 閾値 vs33%: HS < 20 (flop=15 と river=35 の中間)"
+  - "SC/FC ターンで IP ベット → T1 主体 → OOP はより強いハンドで守備 (+5)"
+  - "PB ターンで IP barrel 96%（広レンジ・ブラフ多）→ OOP は MDF 維持のため閾値 -10 で広くコール"
+
+sections:
+  - title: "IP は常にバレルすると思え"
+    summary: |
+      85.6% バレル → 「IP はチェックする」は期待できない。
+      OOP がチェック → IP のバレルに備える: コール or フォールドを事前に決める。
+      チェックレイズ (CR) も選択肢だが、高い精度が必要 (Vol5 ch08)。
+  - title: "turn 閾値はフロップより高い"
+    summary: |
+      フロップ vs33%: threshold=15 (ドロー価値 = outs×4 で高い)。
+      ターン vs33%: threshold=20 (outs×2 に下がりドロー価値が半減)。
+      リバー vs33%: threshold=35 (ドローなし → 最高閾値)。
+      draws の有無が閾値を段階的に変える。
+  - title: "テクスチャ別 OOP 守備"
+    summary: |
+      wet board (2tone, low-conn): OOP のレンジが強い → 低フォールド → 守備しやすい。
+      dry board (rainbow_connected, rainbow_ak): IP ナッツが多い → 高フォールド。
+      OOP は wet board でコールしやすく、dry board では選択的に。
+  - title: "pair ターン: 特に厳しい"
+    summary: |
+      Pair ターンで IP barrel 96%: セット/FH での強攻め。
+      OOP がフルハウスを持てない場合: ほぼ全ての強いハンドが守備対象。
+      pair ターンのテクスチャ補正 -10: threshold が 10 下がり「守備基準を緩める」。
+      (= OOP はトリップスなど相対的に弱いハンドでもコールが正解)

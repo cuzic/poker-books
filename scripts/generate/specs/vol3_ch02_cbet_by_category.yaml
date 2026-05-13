@@ -1,0 +1,90 @@
+volume: "Vol3"
+chapter_num: "02"
+title: "ハンドカテゴリ別 CBet 分析"
+street: "flop"
+
+summary: |
+  GTO 実測: ハンドカテゴリ別 CBet 率の比較。
+  overpair/top_pair/2OC/air の 4 カテゴリでボードごとの CBet 率を分析。
+  「T1 は常時」「T2 は B≥58 で」のルールを実測値で検証。
+
+key_formulas:
+  "CBet 率 × ハンドカテゴリ":
+    |
+    GTO 実測 (7 boards, pot=10bb, accuracy30):
+
+    Board         | B  | CBet% | overpair | top_pair | 2OC    | air
+    Kc,7d,2s      | 62 | 99.9  | 99.9     | 99.8     | (none) | 100.0
+    Qc,5d,3s      | 58 | 95.6  | 92.9     | 85.6     | 100.0  | 97.8
+    Kc,4d,4s(pair)| 83 | 99.9  | 99.8     | 99.8     | (none) | 100.0
+    Ac,7d,2s      | 62 | 98.6  | (none)   | 98.4     | (none) | 99.2
+    Qc,8c,3d(fd)  | 50 | 96.2  | 97.3     | 95.8     | 99.6   | 97.9
+    Jc,8c,4d(fd)  | 50 | 93.1  | 97.1     | 91.7     | 97.7   | 95.4
+    Ac,Tc,7d(fd)  | 56 | 90.3  | (none)   | 89.2     | (none) | 91.5
+
+  "CBet サイズ分布":
+    |
+    Board         | 33% rate | 75% rate
+    Kc,7d,2s      | 54.9     | 45.0
+    Qc,5d,3s      | 58.5     | 37.1
+    Kc,4d,4s      | 61.3     | 38.6
+    Ac,7d,2s      | 66.0     | 32.6
+    Qc,8c,3d(fd)  | 72.6     | 23.6
+    Jc,8c,4d(fd)  | 73.4     | 19.5
+    Ac,Tc,7d(fd)  | 67.2     | 23.1
+
+    注目: 2tone/mono ボードで 33% 比率が高い → 簡易式 (paired→50%, 他→75%) は rough
+
+examples:
+  - hand: "AA"
+    board: "Kc,7d,2s"
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+  - hand: "AKo"
+    board: "Qc,5d,3s"
+  - hand: "AQs"
+    board: "Jc,8c,4d"
+  - hand: "ATs"
+    board: "Ac,Tc,7d"
+
+gto_reference:
+  source: "pot10 accuracy30 study (11/68 完了)"
+  notes: |
+    実測 7 ボードのカテゴリ別 CBet 率。
+    overpair, top_pair, 2OC は全ボードで 85%+。
+    air も 90%+ → 純粋な air は IP range に少ない (K/A-high boards で 2OC が先に分離される)。
+    CBet サイズ: 2tone で 33% 比率が上昇 → vol2 の簡易 2-size model は rough。
+
+key_points:
+  - "全カテゴリ 85%+ CBet: ほぼ全手でベット推奨が GTO と一致"
+  - "top_pair の CBet 低下: Q53r 85.6% vs K72r 99.8% — ボードが弱いと少し減る"
+  - "2OC の 97-100%: 2OC ボーナス (+24) で T2 に分類されることを GTO が支持"
+  - "air の 90-100%: K/A-high air (K-high HS=20) は T2 なので当然 bet — T3 の pure air は稀"
+  - "CBet サイズ: 2tone/fd ボードで 33% 比率が高い (GTO は mixed strategy を使う)"
+
+sections:
+  - title: "カテゴリ別 CBet 率の読み方"
+    summary: |
+      overpair (AA-QQ on non-pair board): 全ボードで 92%+。T1 確実。
+      top_pair (TP any kicker): B=62 で 99.8%, B=50 で 89.2%。バラつきあり。
+      2OC (AK on Q/J-high board): 97-100%。Vol2 のボーナス+24 で T2 が確認される。
+      air (no pair, no draw): 90-100%。K-high の多くが T2 相当 (HS=20)。
+  - title: "2OC ボーナスの GTO 確認"
+    summary: |
+      Q53r での cbet_two_overcards=100%: AK on Q53r は常にベット。
+      AKo on Q53r: A > Q, K > Q → 2OC bonus +24 → HS=25+24=49 → T2 (≥20)。
+      この確認で Vol2 ch02 の「+24 ボーナス」が実証される。
+  - title: "CBet サイズの GTO 実測"
+    summary: |
+      簡易モデル (paired→50%, 他→75%) は rough: GTO は連続的なサイズ分布。
+      2tone ボードで 33% 比率が上昇 (Q83fd: 33%=72.6%, 75%=23.6%)。
+      K72r (rainbow): 33%=54.9%, 75%=45.0% → ほぼ半々。
+      → 実戦では 75% に寄せれば OK (EV 差は小さい)。
+  - title: "ボードテクスチャと CBet 率の関係"
+    summary: |
+      K/A-high boards: CBet 97%+ (all categories)。
+      Q/J-high 2tone (J84fd): CBet 93.1% — 少し下がる。
+      Q54r (rainbow_q): CBet 95.6% — 2tone より高い。
+      → 2tone が low fold rate のため CBet aggregate が下がる。

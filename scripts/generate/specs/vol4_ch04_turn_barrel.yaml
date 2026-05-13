@@ -1,0 +1,130 @@
+volume: "Vol4"
+chapter_num: "06"
+title: "ターン barrel 判断"
+street: "turn"
+
+summary: |
+  ターンのバレル判断は turn_tag (カードの種類) で微調整する。
+  基本: T1/T2 は常時バレル、T3 は B ≥ 62 のみ。
+  turn_tag v2: PB turn → T3 も barrel (IP の FH/set が急増)。
+              SC/FC turn → T1 のみ barrel (T2 はチェック)。
+  GTO 実測: 全テクスチャで 78%+ ベット率、PB turn で 96%。
+
+key_formulas:
+  "ターン barrel 判断 v2 (turn_tag 対応)":
+    |
+    classify_turn_card(flop_board_str, turn_card_str) → turn_tag:
+      PB, SC, FC, OC, blank (同じ分類ロジックを使用)
+
+    barrel 閾値 by turn_tag:
+      PB  (ペアターン):  HS ≥ 20 でバレル (T2以上 + T3も可)
+        理由: IP の FH/set が急増 → IP がナッツアドバンテージ大
+              T3 でもブラフが有効 (OOP が FH 警戒でフォールド)
+      SC  (ストレート完成): HS ≥ 65 でバレル (T1 のみ)
+        理由: OOP のストレートが完成 → IP の M+ には危険
+              T2 はチェックが安全
+      FC  (フラッシュ完成): HS ≥ 65 でバレル (T1 のみ)
+        理由: OOP にフラッシュが多い → IP の M+ は check
+      OC  (オーバーカード): HS ≥ 20 でバレル (標準: T1/T2)
+        理由: OC はナッツが IP に多い可能性あり → 通常バレル
+      blank:               HS ≥ 20 でバレル (標準: T1/T2)
+
+    T3 (HS < 20) のブラフ: PB ターンのみ (B ≥ 62 条件は廃止)
+
+    フロップとの違い:
+      フロップ T2: B < 58 (2tone/rainbow) → チェック
+      ターン  T2: SC/FC では check、その他は常時バレル
+
+  "ターンサイズ 33% の統一":
+    |
+    フロップ CBet: 50% or 75% (ボードによる)
+    ターン barrel: 33% 統一
+
+    理由: ターンは wide range を維持しながら圧力をかける
+          33% で T1/T2 全て bet → exploitative に強い
+
+    例外: PB ターンで T1 (HS≥65): 75% も選択肢 (IP のナッツアドバンテージ大)
+
+  "なぜターンで T2 が常時ベットか (blank/OC)":
+    |
+    フロップ T2 + check-back → ターンで OOP が bet してくる
+    IP が check-back したイメージ → ターン IP が強くなければ呼べない
+
+    ターンで T2 が bet:
+      1. OOP のブラフをブロックする (IP が先に bet)
+      2. 33% の小サイズでレンジ全体を守備
+
+  "SC/FC ターンで T2 がチェックする理由":
+    |
+    SC turn: OOP のレンジにストレートが完成 → IP の TPTK は脅威に直面
+      T2 (TPTK) がベット → OOP のナッツ (ストレート) にコール or レイズされる
+      → チェックで SDV を守る方が高 EV
+
+    FC turn: OOP のフラッシュが完成 → 同様に IP の T2 は check
+
+    GTO 整合: SC/FC ターンで IP のM+ bet率が大幅低下 (T1 のみが継続)
+
+examples:
+  # T1 barrel examples
+  - hand: "AKs"
+    board: "Kc,7d,2s,Ah"
+  - hand: "77"
+    board: "Kc,7d,2s,9d"
+  # T2 barrel examples (always barrel)
+  - hand: "AQo"
+    board: "Ac,7d,2s,Kh"
+  - hand: "AQo"
+    board: "Ac,7d,2s,9d"
+  - hand: "JTs"
+    board: "Qc,8c,3d,2s"
+  # T3 barrel (B ≥ 62 only)
+  - hand: "65o"
+    board: "Kc,7d,2s,9s"
+  - hand: "AKo"
+    board: "Jc,Td,5s,9d"
+  # Straight turn
+  - hand: "98s"
+    board: "Jc,Td,5s,9d"
+  - hand: "AKo"
+    board: "Jc,Td,5s,9d"
+
+gto_reference:
+  source: "range_read 30 シナリオ (完了)"
+  notes: |
+    検証済み (395 ボード):
+    ターン全テクスチャで GTO ベット率 78%+
+    K73r_As: CBet=81.5%, K73r_9d: CBet=72.3%, K73r_7h: CBet=45.2%
+    (ペアターンは lower だが依然として high)
+    T2 の average bet rate across all textures ≈ 80%
+
+key_points:
+  - "turn_tag v2: PB→T3も barrel, SC/FC→T1のみ barrel, blank/OC→T1/T2"
+  - "33% 統一サイズ: フロップ 75% から大幅低下 (wide range をキープ)"
+  - "GTO 78%+: ターンでベットしないのは例外的な場面のみ"
+  - "PB turn barrel 96%: IP のナッツアドバンテージ最大 → 全tier 攻撃的"
+  - "SC/FC turn: T2 (TPTK等) はチェック → OOP の完成ハンドに負ける"
+
+sections:
+  - title: "フロップとターンのバレル判断の違い"
+    summary: |
+      フロップ: T2 が 2tone/rainbow でチェック (B < 58 → check)。
+      ターン: turn_tag で判断。SC/FC は T1 のみ barrel, PB は T3 も barrel。
+      なぜ変わるか: ターンカードがレンジ優位を大きく変える。
+  - title: "turn_tag 別バレル判断"
+    summary: |
+      PB turn (ペア): IP の FH/set が急増 → 全tier で積極的バレル。
+        T3 (air) もブラフ有効: OOP が FH 警戒でフォールドしやすい。
+      SC/FC turn: OOP のナッツが完成 → IP の M+ (T2) はチェック。
+        T1 のみが続けてベット可能 (ナッツや準ナッツ)。
+      blank/OC: 通常通り T1/T2 barrel (T2 は常時継続)。
+  - title: "ターン 33% サイズの論理"
+    summary: |
+      フロップ 75% は「弱い手を削る」大サイズ戦略。
+      ターン 33% は「wide range を継続する」小サイズ戦略。
+      GTO 的に: ターンで 75% を打つと手が絞られすぎる → 33% で wide range を維持。
+      例外: PB turn で T1 強ハンドは 75% も選択肢。
+  - title: "GTO 実測: 78%+ ベット"
+    summary: |
+      395 ボードの range_read 調査で全テクスチャ 78%+ 確認。
+      PB turn: 96%+ (最高)。SC/FC turn: やや低下 (IP の T2 が多くチェック)。
+      → T2 チェックバックは SC/FC ターンで合理的 (例外ではなく design)。

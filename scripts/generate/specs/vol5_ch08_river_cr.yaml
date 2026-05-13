@@ -1,0 +1,104 @@
+volume: "Vol5"
+chapter_num: "11"
+title: "リバーチェックレイズ"
+street: "river"
+
+summary: |
+  リバー CR: リバーでのチェックレイズ。強力だがリスクも最大。
+  頻度: GTO で 2-8% (稀だが均衡に必要)。
+  用途: ナッツブロッカー保有のブラフ + ナッツバリュー。
+
+key_formulas:
+  "リバー CR のサイズと IP ポットオッズ":
+    |
+    リバー pot = 17bb (標準: pot10 + turn call), stack = 89bb
+
+    IP river bet 50% (8.5bb):
+      CR to 3× = 25.5bb
+      新ポット = 17 + 8.5 + 25.5 = 51bb
+      IP 追加コール = 25.5 - 8.5 = 17bb
+      IP ポットオッズ = 17 / (51 + 17) = 25%
+
+    IP river bet 75% (12.75bb):
+      CR to 3× = 38.25bb
+      新ポット = 17 + 12.75 + 38.25 = 68bb
+      IP 追加コール = 38.25 - 12.75 = 25.5bb
+      IP ポットオッズ = 25.5 / (68 + 25.5) = 27%
+
+  "リバー CR の V:B 比率":
+    |
+    IP が 25-27% のポットオッズ → IP の call/fold 均衡:
+      GTO では IP はコール頻度を高める (ブラフの可能性があるため)
+
+    OOP が均衡するには:
+      Bluff CR / (Value CR + Bluff CR) ≈ 25-27%
+      → Value CR 3 combo に対し Bluff CR 1 combo
+
+  "リバー CR ハンドの選択":
+    |
+    バリュー CR (always CR):
+      HS ≥ 90 (ナッツ: quads/straight flush/nut flush)
+      vs paired board: FH 最強
+      vs mono board: nut flush
+
+    ブラフ CR (均衡でのみ):
+      ナッツブロッカー保有 + SDV ≈ 0 のハンド
+      例: Ax on flush board (A♠ blocks nut flush while having no showdown value)
+      例: 67o on J-T-5-9-2 (blocker to straight, no showdown value)
+
+    回避:
+      SDV ≥ 35 のハンド → check-back or call が CR より高 EV
+      weak pair のブラフ CR → IP がブロッカーなしで CR を認識しやすい
+
+examples:
+  - hand: "AQs"
+    board: "Ks,7s,5s,2d,Ts"
+  - hand: "65o"
+    board: "Jc,Td,5s,9d,2h"
+  - hand: "AQo"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "77"
+    board: "7c,7d,2s,Kh,3d"
+  - hand: "AKs"
+    board: "Kc,4d,4s,Ah,2d"
+
+gto_reference:
+  source: "cr_river_study (進行中) + river_study データ"
+  notes: |
+    リバー CR 頻度: cr_study の river_snap scenarios で確認予定。
+    理論値: OOP リバー CR ≈ 2-8% 全体。
+    paired_high board: FH でのバリュー CR が高頻度の予測。
+    mono board: nut flush での CR が典型的バリュー CR。
+    ブラフ CR: ナッツブロッカー保有が条件。
+
+key_points:
+  - "リバー CR = 最終兵器: EV が最高だが失敗した場合のリスクも最大"
+  - "頻度は 2-8%: 稀だが GTO レンジに必要 (IP のコールを強制)"
+  - "バリュー CR: ナッツ (nut flush/FH) を IP の弱いベットで搾る"
+  - "ブラフ CR: ナッツブロッカー保有ハンドのみ推奨"
+  - "SDV ≥ 35 のハンドでの CR は避ける: チェックバックが通常 higher EV"
+
+sections:
+  - title: "リバーでの CR が機能する場面"
+    summary: |
+      IP がリバーで「thin value」ベット (medium ハンドで 33-50%) をする場面。
+      OOP がナッツを持つとき: IP のベットをスパンキングする。
+      リバーはドローなし → CR のブラフは純粋にブロッカーで正当化。
+  - title: "ブラフ CR の構築"
+    summary: |
+      リバーブラフ CR の条件:
+        1. ナッツブロッカーがある (相手のナッツを阻害)
+        2. 自分の SDV ≈ 0 (チェックで負ける手)
+        3. IP がベットしている (チェックバックなら CR 不要)
+      例: flush board でA♠保有 → IP のナッツフラッシュを block + 自分はノーショー。
+  - title: "IP の CR 対応"
+    summary: |
+      IP がリバー CR に直面: 27% のポットオッズ。
+      T1/V ハンド (HS≥65+): コールで守備。
+      T2/M ハンド (HS 35-65): フォールドが多い。
+      IP が too often fold → OOP の CR ブラフが profitable。
+  - title: "リバー CR vs ベット"
+    summary: |
+      CR の利点: IP のシン バリューを最大化 (100% ではなく 33-50% ベットに対して)。
+      CR のリスク: IP がチェックバックした場合、OOP は大きくベットできない。
+      判断: IP が「ベットしそうか」を正確に読めるときにCRを使う。

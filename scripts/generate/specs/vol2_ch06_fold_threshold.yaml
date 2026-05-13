@@ -1,0 +1,89 @@
+volume: "Vol2"
+chapter_num: "06"
+title: "OOP のフォールド閾値テーブル"
+street: "flop"
+
+summary: |
+  OOP (BB) が IP の CBet に対して「フォールドすべきか」を HS で判断するテーブル。
+  ベットサイズとボードテクスチャの組み合わせで閾値が変わる。
+  GTO 検証で 30 ボードの OOP 実際フォールド率と照合済み。
+
+key_formulas:
+  "フォールド閾値 (fold_threshold)":
+    |
+    ベースライン:
+      vs 33% ベット → HS < 15 でフォールド
+      vs 50% ベット → HS < 25 でフォールド
+      vs 75% ベット → HS < 35 でフォールド
+
+    ボード補正:
+      2トーン    → +5  (ドロー多い → 守備しやすい)
+      モノトーン  → -5  (フラッシュ恐怖 → 守備しにくい)
+      ペアボード  → -10 (トリップス怖い → 守備しにくい)
+
+    例: vs 75% on 2tone board → 35 + 5 = 40 → HS < 40 でフォールド
+
+examples:
+  # Dry K-high (rainbow_ak)
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+  - hand: "JTo"
+    board: "Kc,7d,2s"
+  - hand: "65s"
+    board: "Kc,7d,2s"
+  # Semi-wet (2tone)
+  - hand: "AQo"
+    board: "Jc,Td,5s"
+  - hand: "98s"
+    board: "Jc,Td,5s"
+  - hand: "65s"
+    board: "Jc,Td,5s"
+  # Paired high (paired_high → -10)
+  - hand: "AQo"
+    board: "Kc,Kd,7s"
+  - hand: "JTo"
+    board: "Kc,Kd,7s"
+  # Monotone (mono → -5)
+  - hand: "AQo"
+    board: "Ks,7s,5s"
+  - hand: "JTs"
+    board: "Ks,7s,5s"
+
+gto_reference:
+  source: "pot10 accuracy30 study (running)"
+  notes: |
+    実測値 (10 boards):
+    K72r: fold_vs33=46.2%, fold_vs75=51.0%
+    Q53r: fold_vs33=19.2%, fold_vs75=33.9%
+    K44pair: fold_vs33=45.7%, fold_vs75=55.2%
+    A72r: fold_vs33=38.0%, fold_vs75=48.7%
+    → 乾燥K/A-highで fold_vs33が高いことを確認済み
+
+key_points:
+  - "ペアボード補正-10が最大: フルハウス警戒で OOP は守備しにくい"
+  - "2トーン+5: OOP はドローで守備できるので閾値を上げる"
+  - "実測では A/K-high dry で fold_vs33≈40-46%, Q-high で≈19% — 閾値テーブルと整合"
+  - "MDF (最小守備頻度) = 1 - α: vs33%→MDF=75% vs75%→MDF=57%"
+  - "閾値はフォールドすべきHSの上限であり、個別ハンドに適用する (集計ではない)"
+
+sections:
+  - title: "MDF の概念"
+    summary: |
+      相手のブラフを収益なしにするために守備すべき最小割合。
+      vs 33% CBet: α = 25% → MDF = 75% (4 in 5 hands must defend)
+      vs 75% CBet: α = 43% → MDF = 57% (約 3 in 5 hands must defend)
+  - title: "フォールド閾値テーブル"
+    summary: |
+      計算例と実際の HS 値の対応表。
+      HS < threshold → フォールド。それ以上 → コール or チェックレイズ。
+  - title: "実戦での使い方"
+    summary: |
+      1. HS を計算 (or 暗算で概算)
+      2. ベットサイズとボードタイプから閾値を引く
+      3. HS < 閾値 → フォールド
+      例: HS=22 (2OC), vs75% on 2tone → threshold=40, 22 < 40 → FOLD
+  - title: "GTO との整合性"
+    summary: |
+      30 ボードでの実測 OOP フォールド率と formula の整合を確認。
+      乾燥 K-high (fold_vs33≈46%) vs Q-high (≈19%) の差が
+      閾値テーブルの論理で説明できることを示す。

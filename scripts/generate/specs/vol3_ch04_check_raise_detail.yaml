@@ -1,0 +1,107 @@
+volume: "Vol3"
+chapter_num: "04"
+title: "チェックレイズ詳細"
+street: "flop"
+
+summary: |
+  OOP CR の詳細フレームワーク: テクスチャ別 CR 頻度と手の選択。
+  バリュー CR vs ブラフ CR のバランス管理。
+  IP の CBet レンジが wide ほど CR の EV が高くなる。
+
+key_formulas:
+  "テクスチャ別 CR 頻度 (理論推定)":
+    |
+    dry K/A-high (rainbow_ak, B=62): CR 5-10%
+      理由: バリュー (set/2pair) のみ; ブラフ候補少ない
+      → IP がフォールドしやすい → CR value effective
+
+    wet 2tone (FD あり, B=56): CR 12-20%
+      理由: FD/OESD が CR ブラフ候補として機能
+      → IP がコールしても equity がある
+
+    mono board (B=70): CR 15-25%
+      理由: フラッシュ完成 + FD が両方 CR range に入る
+      → IP は flush の可能性を常に警戒
+
+    connected/semi-broadway (B=67): CR 10-18%
+      理由: straight ブラフ + set/2pair バリュー
+      → connected boards で OOP がより多く CR
+
+    ※ 実測値は cr_river_study 完了後に確認・更新予定
+
+  "CR バリュー vs ブラフの割り当て":
+    |
+    バリュー CR ハンド (常時CR):
+      set (HS=90+): always CR (pot最大化)
+      2pair (HS=72): always CR
+      flush (mono/FD complete): CR
+      TPTK+FD (HS≥70): CR (バリュー + ブラフ保護)
+
+    ブラフ CR ハンド (均衡ベース):
+      FD (9 outs, HS=50): wet board → CR ブラフ候補
+      OESD (8 outs, HS=44): connected → CR ブラフ
+      combo draw (FD+OESD, HS=70): almost always CR
+
+    回避:
+      weak pair (HS=30): CR のメリットなし (バリューが薄い)
+      gutshot only (HS=32): CR → リスクが高い
+
+  "CR 後のポット計算":
+    |
+    CR サイズ別:
+      vs 33% CBet (2bb): 3× CR → 6bb, pot=14bb
+      vs 75% CBet (4.5bb): 3× CR → 13.5bb, pot=24bb
+
+    SPR 計算 (初期 stack=94bb):
+      vs 33% CR: remaining = 94-6=88bb → SPR = 88/14 = 6.3 (large)
+      vs 75% CR: remaining = 94-13.5=80.5bb → SPR = 80.5/24 = 3.4 (medium)
+
+examples:
+  - hand: "JTs"
+    board: "Qc,8c,5d"
+  - hand: "AQs"
+    board: "Qc,8c,5d"
+  - hand: "77"
+    board: "Jc,Td,5s"
+  - hand: "AKs"
+    board: "Kc,Kd,7s"
+  - hand: "65s"
+    board: "Jc,Td,5s"
+
+gto_reference:
+  source: "cr_river_study (進行中) — 実測値追記予定"
+  notes: |
+    cr_study 15 ボード完了後: cr_K72r, cr_A82r の dry_high を確認。
+    cr_K83fd, cr_Q85fd で 2tone CR 頻度確認。
+    cr_JT4fd, cr_JT5r で connected CR 頻度確認。
+    期待: dry < wet < mono の順で CR 頻度が上昇する仮説。
+
+key_points:
+  - "dry board CR: バリューのみ (set/2pair) → IP フォールドが多い → EV 高"
+  - "wet 2tone CR: FD/OESD がブラフとして機能 → CR 頻度が増える"
+  - "mono CR: フラッシュ保有が最強バリュー → aggressive CR が正解"
+  - "CR ratio: バリュー 2-3 に対しブラフ 1 が均衡ベース"
+  - "CR ブラフ候補: draws + ナッツブロッカー保有が最優先"
+
+sections:
+  - title: "テクスチャ別 CR 頻度の使い方"
+    summary: |
+      CR 頻度の暗記は不要: テクスチャから推定するだけ。
+      dry → CR 少 (バリューのみ)。wet/mono → CR 多 (draws が加わる)。
+      実戦: 「このボードで私は CR できる手を何持っているか?」と自問。
+  - title: "FD のチェックレイズ"
+    summary: |
+      FD は CR ブラフ の代表的な候補: equity があるので失敗しても損害が少ない。
+      FD CR の利点: IP のチェックバックを防ぎ、pot をフラッシュ完成時に大きくする。
+      FD CR の欠点: IP がコールし turn でミスすると、SDV がない。
+  - title: "バリュー CR vs SDV 守備"
+    summary: |
+      set/2pair は「CR して pot を大きくする」が GTO 的に正解。
+      TPTK (HS=65): CR or call で迷う — IP のベット frequency で判断。
+      IP が T1/T2/T3 全部 CBet (95%+) → TPTK の CR EV が上がる。
+  - title: "CR 後のターン計画"
+    summary: |
+      IP がコールして CR pot が形成 → ターンで SPR が下がる。
+      SPR=6: まだ large → 追加のベット/CR が可能。
+      SPR=3 (vs 75% CR): medium → コミット判断が近い。
+      CR したなら「ターンもバレルするか?」まで事前に計画する。

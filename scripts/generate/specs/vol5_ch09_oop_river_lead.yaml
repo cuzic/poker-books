@@ -1,0 +1,124 @@
+volume: "Vol5"
+chapter_num: "09"
+title: "OOPリバーリード：完成カードで主導権が入れ替わる"
+street: "river"
+
+summary: |
+  OOP がリバーで先にベットする「リバーリード (ドンク)」の条件と戦略。
+  SC/FC ボード (ストレート/フラッシュ完成) で OOP レンジにナッツが集中するとき
+  OOP は「チェックして待つ」より「先にリードする」方が GTO に近い。
+  GTO 実測: SC ボードで OOP donk 46-53%, FC ボードで 28%。
+
+key_formulas:
+  "OOP リード条件":
+    |
+    classify_river_board(5_card_board) → board_type:
+      SC: 2枚以下ホールカードで完成する窓 ≥ 3 個
+      FC: ボード上の同スーツカード ≥ 4 枚
+
+    OOP リード = board_type ∈ {SC, FC} AND HS ≥ 70 (V バケット)
+
+    実装: calc_river_oop_lead(hand_score, board_type)
+
+  "OOP リード頻度 (GTO)":
+    |
+    board_type | OOP donk rate
+    -----------|-------------
+    SC (ストレート完成) | 46-53%
+    FC (フラッシュ完成) | 28%
+    PB (ペアボード)     | 16-18%  ← lead でなく check-call/check-raise
+    標準 blank          | 15-25%
+
+  "リードするハンド選択":
+    |
+    V バケット (HS ≥ 70) でリードする:
+      ナッツストレート (SC ボード): リードの主力
+      ナッツフラッシュ (FC ボード): リードの主力
+      セット/2ペア (SC ボード): 一部リード (IP の continuation をブロック)
+
+    M+/M- でのリード: ほぼなし (M+ は check-call、M- は check-fold)
+
+    ブラフとしてのリード:
+      SC/FC ボードでブロッカー保有の B バケット → まれにブラフリード
+      例: ストレートブロッカー保有の弱ハンド on SC ボード
+
+  "リードサイズ":
+    |
+    board_score ≥ 83 (paired_high) → 100% pot
+    SC/FC 標準               → 50% pot
+    ナッツアドバンテージ大    → 75% pot (overbet 候補は ch10)
+
+  "IP の対応":
+    |
+    OOP が リードしてきた場合:
+      IP の強い V (ナッツ or near-ナッツ): raise
+      IP の M+: call (SDV + position で後手に回る)
+      IP の M-: call or fold (ポットオッズ次第)
+      IP の B (ブラフ): fold (OOP リードはナッツ多い)
+
+    注意: OOP リードは「相手レンジにナッツが多い」シグナル
+    → IP はシングルトップペアで自動コールしない。
+
+examples:
+  - hand: "98s"
+    board: "Jc,Td,5s,9d,2h"
+  - hand: "AKs"
+    board: "Jc,Td,5s,9d,2h"
+  - hand: "87s"
+    board: "9s,8d,7c,6h,3d"
+  - hand: "Ks,3s"
+    board: "Ks,7s,5s,3s,8h"
+  - hand: "77"
+    board: "9s,8d,7c,6h,3d"
+  - hand: "AKo"
+    board: "Jc,Td,5s,9d,Qh"
+
+gto_reference:
+  source: "river_snap 12 scenarios (2026-05-12 完了)"
+  notes: |
+    GTO 実測 OOP donk rate:
+      9876-3 (SC): 53%  (ストレート完成ボード、OOP にストレートが濃い)
+      JT59-2 (SC): 46%  (コネクテッドボード、7,8 系 BB レンジに多い)
+      K♠7♠5♠-3♠-8h (FC): 28% (スーテッドホールドが OOP に多い)
+      A72-Kh-7d (PB): 16%  (FH警戒、チェックが主体)
+      K72-Ah-Jd (blank): 15-25%
+
+    SC の仕組み: BTN が tight レンジで raise → BTN は broadway 多め。
+                  BB が wide で defend → BB は suited connector / one-gapper 多め。
+                  → JT59-2 ボードで 7,8 系は BB に集中 → BB が donk で主導権。
+
+key_points:
+  - "OOP リード = SC/FC ボード + V バケット (HS≥70)"
+  - "SC ボードで OOP は 46-53% リード: IP より OOP のほうがストレートが多い"
+  - "FC ボードで OOP は 28% リード: フラッシュ保有者が先制"
+  - "PB ボードでは OOP はリードしない → check-call/check-raise で待つ"
+  - "IP は OOP リードに対しシングル TP では自動コールせず、ポットオッズ+レンジ考慮"
+  - "章タイトル別称: 一般名はドンクベット。本書ではリードと呼ぶ"
+
+sections:
+  - title: "「OOP はチェックするもの」という思い込みを壊す"
+    summary: |
+      フロップ/ターンでは IP が主導権を持つのが基本。
+      しかしリバーでは「どちらにナッツが多いか」が主導権を決める。
+      SC/FC ボードでは OOP のディフェンスレンジにナッツが集中する。
+      → OOP は先にリードすることで IP のブラフを防ぎ、バリューを取れる。
+  - title: "リードしやすいボードを見分ける"
+    summary: |
+      SC ボード: ストレートが完成しやすい mid-card connected ボード (JT9, 987 系)。
+        BB のプリフロップレンジには suited connector が豊富 → ストレートが BB 側に集中。
+      FC ボード: フラッシュが完成 (ボード同スーツ 4 枚以上)。
+        BB がスーテッドハンドを wide に defend → フラッシュが BB 側に多い。
+      PB/blank ボード: リードしない。IP のバレルを受けてから判断する。
+  - title: "何でリードするか"
+    summary: |
+      主力: ナッツ/準ナッツ (ストレート/フラッシュ/セット) → V バケット (HS≥70)。
+      ブラフ候補: ブロッカー付き弱ハンド (例: ストレートブロッカー保有のエア)。
+      チェックする V ハンドもある: SC ボードでセットはリードより check-raise が高 EV なケースも。
+      M+/M- ハンドはリードしない → check-call で SDV/ブラフキャッチャーとして機能。
+  - title: "IP は OOP リードにどう対応するか"
+    summary: |
+      OOP リードの意味: 「私のレンジにナッツが多い」という明確なシグナル。
+      IP は単純なルールで対応: ナッツ or near-ナッツ → raise、M+ → call、B → fold。
+      注意: IP の TPTK は SC ボードで「check」することが多い (ch03) →
+        OOP がリードしてきたらさらに fold/call の判断が必要。
+      「相手がリードしたら、IP のトップペアは要注意」が実戦の結論。

@@ -1,0 +1,119 @@
+volume: "Vol5"
+chapter_num: "04"
+title: "M帯の分岐：薄いバリューか、ショーダウンか"
+street: "river"
+
+summary: |
+  M+(55-69) と M-(35-54) の判断体系。「いつ打ち、いつチェックバックするか」。
+  TPTK(65) のリバーベット率はボードタイプで 0〜99% まで変化する。
+  M+ は「ボードタイプで判断」、M- は「原則 SDV」というシンプルな分類で実戦に対応。
+
+key_formulas:
+  "M+ vs M- の行動分界":
+    |
+    M+ (55-69): 薄いバリュー候補 OR 強いSDV
+      → IP: river_tag を確認してベット/チェックを決める
+      → blank/OC: BET (threshold 55/60)
+      → SC/FC/PB: check
+
+    M- (35-54): 純粋なSDV
+      → IP/OOP: ほぼ check-back
+      → 例外: OOP がブラフを多く持つ場合は check-call で守備
+
+    判断ツリー (M+ IP):
+      1. HS ≥ 55? → M+ 以上 (先に進む)
+      2. river_tag = PB? → check (FH 警戒)
+      3. river_tag = SC or FC? → check (完成系に勝てない)
+      4. river_tag = OC? → HS ≥ 60 ならbet (TPGK+)
+      5. river_tag = blank? → bet (M+ は全員ベット)
+
+  "TPTK(HS=65) のボードタイプ別ベット率":
+    |
+    ボードタイプ     | TPTK ベット率(GTO) | 本書判断
+    --------------|-----------------|--------
+    Connected blank (JT59-2) | 99% | BET (blank, threshold=55)
+    Blank mid (K73-As-Jd)    | 62% | BET (blank, threshold=55)
+    SC+OC (JT59-Q)           | 42% | check (SC, threshold=70)
+    PB (A72-Kh-7d)           | 0%  | check (PB, threshold=80)
+
+    → 本書フレームワーク: 「SC/FC/PB ならチェック、それ以外ならベット」で
+      0% と 99% のケースを正確に分類できる。
+
+  "M- (35-54) のSDV判断":
+    |
+    M- ハンドのチェックバック条件:
+      TPWK (HS=50): OOP にブラフが少ない → check-back でポットを守る
+      2nd pair (HS=38): ショーダウンで勝てるが thin すぎてベット不可
+      bottom pair (HS=30): SDV = 0 に近い → check or fold
+
+    M- をベットするケース (例外):
+      相手のコールレンジに TPWK 以下が多い → TPWK でベット可
+      ただし thin value すぎるためサイズは 33% 以下
+
+  "「薄いバリュー」の境界":
+    |
+    betするかチェックするかの境界手順:
+      1. 相手のレンジに「こちらより弱くコールするハンド」があるか?
+      2. あれば → bet (thin value あり)
+      3. なければ → check-back (SDV で守る)
+
+    TPTK on blank: OOP に TPMK/TPWK/2ndペアが残っている → コールあり → BET
+    TPTK on PB:   OOP に FH が多い → コールするより強い → check
+
+examples:
+  - hand: "AKs"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "KQo"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "T9s"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "AQo"
+    board: "Kc,7d,2s,9h,3d"
+  - hand: "AKs"
+    board: "Jc,Td,5s,9d,Qh"
+  - hand: "AKs"
+    board: "Ac,7d,2s,Kh,7h"
+
+gto_reference:
+  source: "river_snap 12 scenarios (2026-05-12 完了)"
+  notes: |
+    GTO 実測より TPTK ベット率:
+      Connected blank 99% / Blank mid 62% / SC+OC 42% / PB 0%
+    M+ 分界線 HS=55 の根拠: TPMK(55) が blank で V に次ぐ高頻度ベット手。
+    M- 分界線 HS=35 は旧来の MDF 理論から (35 未満 = 相手 33% bet に対して fold で最適)。
+    TPWK(50) の動作: 概ね check-back だが HS=55 境界なので M- として扱う (保守的)。
+
+key_points:
+  - "M+ (55-69): blank/OC→BET、SC/FC/PB→check。ボードタイプが判断のすべて"
+  - "M- (35-54): ほぼ check-back。ベットは thin すぎて赤字になりやすい"
+  - "TPTK(65): PB で 0%, blank で 62-99%。M+ の中でも幅がある"
+  - "判断ツリー: PB? → check。SC/FC? → check。OC で HS≥60? → bet。blank? → bet"
+  - "M- の check-back = 弱さではなく SDV を守る合理的戦略"
+
+sections:
+  - title: "TPTK はいつ打ち、いつ打たないか"
+    summary: |
+      TPTK(HS=65) はリバーの最重要判断ハンド。
+      「M バケット → IP はベット」という旧ルールでは 0〜99% の揺れを説明できない。
+      答え: river_tag を確認する。SC/FC/PB は脅威が多い → check。blank/OC → bet。
+      4つのボードタイプを覚えるだけで TPTK の判断が完結する。
+  - title: "M+ と M- の違いを感じる"
+    summary: |
+      M+(55-69) = TPMK/TPGK/TPTK: 「打てる場面がある」薄いバリュー候補。
+      M-(35-54) = TPWK/セカンドペア: 「打てる場面がほぼない」SDV 専門ハンド。
+      分界線 HS=55 の直感: TPMK(55) は blank ボードで悪いハンドからコールを取れる。
+      TPWK(50) は blank でも相手のコールレンジが限定的 → check が最善。
+  - title: "M- の SDV 戦略"
+    summary: |
+      SDV = ショーダウンでの勝率。チェックバックでポットを守る。
+      M-(35-54) は相手のコールレンジを考えると ほぼ always check-back。
+      例外: 相手が多くのブラフを持つ場合 → check-call で守備。
+      M- でベットするのは rare case。原則はチェックバックして SDV を確保。
+  - title: "「薄いバリュー」のチェックリスト"
+    summary: |
+      M+ IP が bet を選ぶための4チェック:
+      1. PB ではない (FH 警戒なし)
+      2. SC/FC ではない (完成系レンジが少ない)
+      3. OC でも HS ≥ 60 (TPGK 以上)
+      4. blank なら HS ≥ 55 (全 M+ ベット)
+      このチェックを通れば bet。通らなければ check。

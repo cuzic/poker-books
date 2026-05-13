@@ -1,0 +1,86 @@
+{
+  "c_estimates": {
+    "33": 17.848596491228072,
+    "50": 26.87456140350877,
+    "75": 37.772456140350876
+  },
+  "a_results": [
+    {
+      "texture": "paired_high",
+      "a_book": 8,
+      "a_estimated": 9.6,
+      "fold_vs33": 28.2,
+      "match": true
+    },
+    {
+      "texture": "rainbow_ak",
+      "a_book": 12,
+      "a_estimated": 7.9,
+      "fold_vs33": 29.9,
+      "match": false
+    },
+    {
+      "texture": "rainbow",
+      "a_book": 12,
+      "a_estimated": 17.7,
+      "fold_vs33": 20.2,
+      "match": false
+    },
+    {
+      "texture": "rainbow_q",
+      "a_book": 6,
+      "a_estimated": 14.6,
+      "fold_vs33": 23.3,
+      "match": false
+    },
+    {
+      "texture": "mono",
+      "a_book": 4,
+      "a_estimated": 13.9,
+      "fold_vs33": 24.0,
+      "match": false
+    },
+    {
+      "texture": "2tone_ak",
+      "a_book": 6,
+      "a_estimated": 12.7,
+      "fold_vs33": 25.2,
+      "match": false
+    },
+    {
+      "texture": "paired_low",
+      "a_book": 8,
+      "a_estimated": 8.9,
+      "fold_vs33": 29.0,
+      "match": true
+    },
+    {
+      "texture": "rainbow_connected",
+      "a_book": 0,
+      "a_estimated": 5.7,
+      "fold_vs33": 32.2,
+      "match": false
+    },
+    {
+      "texture": "2tone",
+      "a_book": 4,
+      "a_estimated": 20.2,
+      "fold_vs33": 17.6,
+      "match": false
+    },
+    {
+      "texture": "rainbow_lowconn",
+      "a_book": 0,
+      "a_estimated": 22.6,
+      "fold_vs33": 15.3,
+      "match": false
+    },
+    {
+      "texture": "2tone_conn",
+      "a_book": 0,
+      "a_estimated": 16.0,
+      "fold_vs33": 21.8,
+      "match": false
+    }
+  ]
+}

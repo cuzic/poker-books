@@ -1,0 +1,100 @@
+volume: "Vol3"
+chapter_num: "09"
+title: "マルチストリート展望"
+street: "flop"
+
+summary: |
+  フロップでの判断はターンとリバーを「予測」してから行う。
+  SPR とレンジ構成から「このアクションがどこへ向かうか」を逆算。
+  フロップ CBet サイズ選択がターン・リバーの構造を決める。
+
+key_formulas:
+  "フロップ CBet サイズ別の未来":
+    |
+    33% CBet (保守的):
+      pot after call = 10bb, stack = 92bb → SPR = 9.2
+      ターン: 余裕がある. T1/T2 全て barrel 可能
+      リバー: まだ large SPR → selective value bet
+
+    75% CBet (積極的):
+      pot after call = 15bb, stack = 91.5bb → SPR = 6.1
+      ターン: medium-large SPR. T1 は barrel, T2 は慎重
+      リバー: small-medium SPR → commit 判断が来る
+
+    50% CBet (paired/mono ボード):
+      pot after call = 12bb, stack = 94bb → SPR = 7.8
+      中間的。T2 は ターンで判断要
+
+  "SPR とフロップ判断の連動":
+    |
+    大 SPR (≥8) フロップ:
+      → 3 ストリート全て使う余裕 → semi-bluff も OK
+      → 33% CBet が optimal: wide range 維持
+
+    中 SPR (4-7) フロップ (3BP など):
+      → 2 ストリートで終わる → T1 (≥65) のみ push
+      → 75% CBet: T2 以下は参加できない
+
+  "フロップレンジとターンの制約":
+    |
+    フロップ CBet → ターンバレル:
+      T1 (65+): 全ボードでターン barrel
+      T2 (20-64): B=50/55 ボードはフロップ check → ターン bet
+      T3 (<20): B≥62 のみフロップ bet → ターンも B≥62 で継続
+
+examples:
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+  - hand: "JTs"
+    board: "Qc,9c,3d"
+  - hand: "65o"
+    board: "Kc,7d,2s"
+
+spr_examples:
+  - label: "SRP フロップ 33% CBet 後"
+    stack: 92
+    pot: 10
+  - label: "SRP フロップ 75% CBet 後"
+    stack: 91
+    pot: 15
+  - label: "3BP フロップ 75% CBet 後"
+    stack: 85
+    pot: 30
+
+gto_reference:
+  source: "range_read 30 シナリオ (完了)"
+  notes: |
+    フロップ → ターン継続ライン: range_read で各ハンドカテゴリの
+    ip_bet → ip_bet ライン vs ip_bet → ip_check ラインを確認済み。
+    T1 の barrel→barrel 率: 80%+. T2 の barrel→check 率: 30%+。
+
+key_points:
+  - "33% フロップ → 3 street structure: wide range で 3 ストリート全部使える"
+  - "75% フロップ → 2 street structure: commit が早く来る (3BP は 1 street)"
+  - "フロップ CBet のサイズ選択 = ターン以降の戦略的布石"
+  - "T2 のフロップ check (B<58) → ターンで delayed bet が有効"
+  - "SPR < 3 で T2 以下は実質フォールドを検討 (commit できない)"
+
+sections:
+  - title: "フロップ CBet サイズの戦略的意味"
+    summary: |
+      33%: 「まだ 3 ストリートある」という信号。wide range を維持。
+      75%: 「ここで強さを主張する」という信号。ポーラーレンジで push。
+      50% (paired/mono): バランスを取りながら相手にプレッシャー。
+  - title: "ターンバレルの予測"
+    summary: |
+      フロップ後の SPR からターンで何%ベットできるかを計算。
+      33% フロップ: ターン SPR=9.2 → ターン 33% でも stack は余る。
+      75% フロップ: ターン SPR=6.1 → ターン 75% でリバー SPR ≈ 2 (commit)。
+  - title: "3BP でのマルチストリート"
+    summary: |
+      3BP pot=30bb → フロップ SPR ≈ 2.3 (small SPR)。
+      フロップ 75% CBet → ターン commit を意識。
+      T1 (≥65) のみ push; T2 は EV がぎりぎり。
+  - title: "draw の扱い"
+    summary: |
+      FD (HS=32-36): フロップ T2 → ターンで hit なら V バケット。
+      semi-bluff の継続価値: フロップ bet → ターンでフラッシュ hit → V bucket bet。
+      draw miss → ターン check-back → リバーで bluff or fold。

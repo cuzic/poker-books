@@ -1,0 +1,92 @@
+volume: "Vol2"
+chapter_num: "09"
+title: "Check-check と弱いゲーム"
+street: "flop"
+
+summary: |
+  IP が CBet をチェックバックする場面。T2 でも B<58 の 2 ボードではチェックが最善。
+  チェックバックの意味: ブラフしない宣言ではなく、レンジ全体のバランスを取る行動。
+
+key_formulas:
+  "IP チェックバック条件":
+    |
+    T2 (HS ≥ 20) × B < 58 → check-back
+      B=50 (2tone): T2 はチェック
+      B=55 (rainbow): T2 はチェック
+      B=56 (2tone_AK): T2 はチェック — ただし境界 (GTO でも close)
+
+    T3 (HS < 20) × B < 67 → check-back
+      almost always check (pure bluff 非成立)
+
+  "チェックバックの意味":
+    |
+    IP check-back ≠ giving up
+
+    チェックバック後:
+      ターン: OOP が bet → IP のレンジ優位を測る
+      ターン: OOP が check → IP が bet-or-check 判断 (T1/T2→bet, T3→check)
+
+    ショーダウン価値 (SDV):
+      SDV が高いハンドはチェックバックでショーダウンを狙う
+      例: TP weak kicker (TPWK, HS=50) on 2tone board → check back, face-up at SD
+
+  "SDV とブラフの分離":
+    |
+    高 SDV ハンド → check-back (SDV を守る)
+    低 SDV ハンド → bet (ブラフ or ショーダウン不要)
+
+    例外: 高 SDV でも T1 なら必ずベット (エクイティを守る方が重要)
+
+examples:
+  # T2 check situations
+  - hand: "AQo"
+    board: "Jc,Td,5s"
+  - hand: "AQo"
+    board: "9c,7d,2s"
+  - hand: "KQo"
+    board: "9c,8d,3s"
+  # T3 check situations (almost all)
+  - hand: "65o"
+    board: "9c,8d,3s"
+  - hand: "T6o"
+    board: "Kc,7d,2s"
+  # T2 with SDV consideration
+  - hand: "KJs"
+    board: "Kc,7d,2s"
+  - hand: "ATs"
+    board: "Kc,7d,2s"
+
+gto_reference:
+  source: "pot10 accuracy30 study (running)"
+  notes: |
+    予測: 2tone/rainbow ボードで T2 の CBet 率が低下することを確認予定。
+    B=56 (2tone_AK) での T2 CBet 率はおそらく 50-60% (境界ケース)。
+
+key_points:
+  - "チェックバックは「弱い」ではなく「SDV 保護 or バランス維持」の意思決定"
+  - "T2 がチェックするのは 2tone と rainbow の 2 テクスチャのみ (B=50,55)"
+  - "チェック後にターンでブラフする選択肢も残る — complete check は rare"
+  - "SDV ハンドのチェックバックはナッツ比率を高める (レンジ強化)"
+  - "実戦では 2tone/rainbow で T2 がベットする人が多い → -EV の最多パターン"
+
+sections:
+  - title: "なぜ 2tone/rainbow でチェックするか"
+    summary: |
+      OOP は 2tone/rainbow ボードでドローを多く保有できる。
+      TP+FD, 2OC+GS など「守備が安い」ハンドが多い → OOP MDF が高くなる。
+      IP は T2 でベットしても fold 率が低く、EV が下がる。
+  - title: "ショーダウン価値 (SDV)"
+    summary: |
+      SDV = ショーダウンまで行って勝てる確率。
+      TPWK (HS=50) は SDV あり → ターンで呼び続けてショーダウン狙い。
+      ブラフ頻度を下げることで相手のチェックレイズを減らす (exploitative side).
+  - title: "ターンでの立て直し"
+    summary: |
+      チェックバック後にターンで blank が来れば → T2 でも bet 可能。
+      ターン barrel 判断 (Vol4): T1/T2 は常時バレル (HS ≥ 20 で OK)。
+      フロップ check-back → ターン bet は「遅延 CBet」として機能。
+  - title: "OOP から見たチェックバック"
+    summary: |
+      OOP は IP が check-back した後、ターンで「IP は弱い」と読んで bet してくる。
+      IP はこれをコールするレンジ (merged) と、raise するレンジ (polar) を持つ。
+      → 完全チェックバックはしない: 一部の T1 をチェックバックに残してバランスする。

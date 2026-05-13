@@ -1,0 +1,105 @@
+volume: "Vol4"
+chapter_num: "11"
+title: "ターンオーバーベット入門"
+street: "turn"
+
+summary: |
+  オーバーベット (100%+): 特定の条件でのみ有効。通常の 33% より高い EV。
+  条件: ナッツ優位 + ポーラーレンジ + OOP がコールしにくい。
+  ターンオーバーベット: 主に IP が大きなナッツアドバンテージを持つとき。
+
+key_formulas:
+  "オーバーベットの条件":
+    |
+    必要条件:
+      1. IP のナッツアドバンテージが大 (強いハンドが多い)
+      2. OOP がコールするレンジが弱い (FD/OESD が少ない)
+      3. リバーでも継続できる SPR がある (SPR ≥ 6 推奨)
+
+    turn_tag との関係:
+      PB ターン (ペア): IP の FH/set 急増 → ナッツアドバンテージ大 → OB 候補
+      OC ターン (A落ち): IP の AK/AA 急強化 → OB 候補
+      blank/SC/FC: OB よりも 33% 標準が基本
+
+  "オーバーベットサイズと V:B 比":
+    |
+    サイズ → α → 必要 V:B 比 (相手を indifferent にする条件)
+    100% bet: α = 0.50 → V:B = 1:1 (バリュー:ブラフ = 1:1)
+    150% bet: α = 0.60 → V:B = 2:3 (バリュー 40%, ブラフ 60%)
+
+    通常 V:B:
+    75% bet:  α = 0.43 → V:B = 3:2 (バリュー 60%, ブラフ 40%)
+    33% bet:  α = 0.25 → V:B = 3:1 (バリュー 75%, ブラフ 25%)
+
+  "ターン 150% の SPR 計算":
+    |
+    pot=10, bet=15bb (150%) → new_pot=25, stack=77
+    リバー SPR = 77/25 ≈ 3.1 → medium-small (still committable)
+
+    vs 33% (3.3bb): new_pot=16.6, stack=86 → リバー SPR ≈ 5.2 (large)
+    → 150% は SPR を急激に削る: リバーの選択肢が狭まる
+
+  "ターン OB の実装条件":
+    |
+    calc_turn_barrel_v2(hand_score, board_score, turn_tag):
+      OB 候補: turn_tag ∈ {PB, OC} AND HS ≥ 80 (strong V)
+        → 100%+ bet を検討
+      通常バレル: HS ≥ 65 (T1), size=33%
+      OB は HS ≥ 80 (ナッツ or near-ナッツ) に限定
+
+examples:
+  - hand: "AA"
+    board: "Kc,Kd,7s,Ah"
+  - hand: "77"
+    board: "7c,7d,2s,Kh"
+  - hand: "AKs"
+    board: "Kc,Kd,7s,Ah"
+  - hand: "65o"
+    board: "Kc,Kd,7s,Ah"
+  - hand: "AA"
+    board: "Kc,7d,2s,Ah"
+
+spr_examples:
+  - label: "ターン OB 後 (150%)"
+    stack: 77
+    pot: 25
+  - label: "ターン 33% 後 (normal)"
+    stack: 86
+    pot: 16
+
+gto_reference:
+  source: "range_read 30 シナリオ (完了)"
+  notes: |
+    GTO オーバーベット頻度: paired_high ターンで IP 100%+ベット率が高い。
+    PB ターン barrel 96% が示す通り, IP はアグレッシブ。
+    OB (100%+) は paired/OC ターンでの T1 最上位 (HS≥80) ハンドに限定。
+    リバーOB の詳細は Vol5 ch10。
+
+key_points:
+  - "OB = 100%+ ポットサイズ: 通常は HS≥80 の強V のみ"
+  - "PB/OC ターンが主要ユースケース: IP ナッツアドバンテージが最大化"
+  - "150% bet: α=0.60 → ブラフ比率 60% で相手を indifferent にできる"
+  - "SPR 管理: 150% bet 後リバー SPR ≈ 3 → コミット判断が必要"
+  - "33% が基本: OB は turn_tag = PB/OC の HS≥80 限定"
+
+sections:
+  - title: "なぜ 33% でなく 100%+ か"
+    summary: |
+      33%: wide range を維持しながら小さく攻める (T1/T2 全て)。
+      100%+: レンジをポーラーに絞る (ナッツか ブラフのみ)。
+      ナッツが多いとき → 大サイズで相手の full range をペナルティ化できる。
+  - title: "ナッツアドバンテージの測り方"
+    summary: |
+      turn_tag = PB: IP の FH/set が急増 → ナッツアドバンテージ最大。
+      turn_tag = OC: IP の AK/AQ/AA が強化 → IP が有利。
+      SC/FC ターン: OOP のナッツが完成 → OB は逆効果。
+  - title: "V:B バランスの調整"
+    summary: |
+      100% bet: 相手を indifferent にするには V:B = 1:1。
+      実際には IP のバリューが多い → ブラフを追加して balance を保つ。
+      バランスが取れないなら mix: 一部 100%, 残り 33%。
+  - title: "SPR とオーバーベットの相互作用"
+    summary: |
+      Large SPR (≥6) でのみ 150% bet が機能する (リバーも continuation できる)。
+      SPR < 4 で 150% は事実上オールイン → HS ≥ 80 が必要。
+      リバーOB の設計は Vol5 ch10 参照。

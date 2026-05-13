@@ -1,0 +1,100 @@
+volume: "Vol4"
+chapter_num: "12"
+title: "リバーを逆算する (intro)"
+street: "turn"
+
+summary: |
+  ターンのアクションはリバーを「セットアップ」する。
+  ターンチェックバック後のリバー、ターンバレル後のリバー — それぞれ異なる期待値。
+  逆算思考: リバーで何をしたいかを決めてからターンのアクションを選ぶ。
+
+key_formulas:
+  "ターン後のリバー期待値":
+    |
+    ターン barrel (33%) 後にリバーコール:
+      pot = 16.6bb, stack = 86.7bb → リバー SPR ≈ 5.2
+      IP は V バケット → bet 33% か 75% かを選択
+
+    ターン check-back 後にリバー:
+      pot = 10bb, stack = 92bb → リバー SPR = 9.2 (large)
+      IP は T1 を残してレンジをバランス → ターン show-of-weakness → delayed bet value
+
+  "逆算フロー":
+    |
+    Step 1: リバーで何をしたいか?
+      V (≥70): bet 50%+ → ターンでも barrel してサイズを積み上げる
+      M (35-69): check → ターン check-back で pot を小さく保つ
+      B (<35): fold/bluff → ターンでは bluff or check (both work)
+
+    Step 2: ターンのアクションを決める
+      V → barrel (SPR を削って リバー commit)
+      M → check-back (リバーで SDV を守る)
+      B → B≥62 なら barrel, それ以外はcheck
+
+  "line の組み合わせ":
+    |
+    Barrel → Barrel (2-street aggression): T1 ハンド中心
+    Barrel → Check: T2 ハンドのリバー SDV 保護
+    Check → Bet: 遅延 CBet (delayed C-bet); M/B ハンドの "trap" line
+    Check → Check: T3 非ブラフボードの give up
+
+examples:
+  # V bucket turn → river barrel
+  - hand: "AA"
+    board: "Kc,7d,2s,9h"
+  - hand: "77"
+    board: "Kc,7d,2s,7h"
+  # M bucket turn → river check-back
+  - hand: "AKs"
+    board: "Kc,7d,2s,9h"
+  - hand: "KQo"
+    board: "Kc,7d,2s,9h"
+  # B bucket turn → check or bluff
+  - hand: "65o"
+    board: "Kc,7d,2s,9h"
+  - hand: "AQo"
+    board: "9s,8d,7c,2h"
+
+spr_examples:
+  - label: "ターン barrel 後リバー"
+    stack: 87
+    pot: 17
+  - label: "ターン check-back 後リバー"
+    stack: 92
+    pot: 10
+
+gto_reference:
+  source: "range_read 30 シナリオ (完了)"
+  notes: |
+    range_read から: IP check → river IP bet は遅延 CBet ライン。
+    barrel → check のラインは M ハンドの SDV 保護として有効。
+    実測: ip_check → oop_check → ip_bet シーケンスの頻度は中程度。
+
+key_points:
+  - "逆算思考: リバーでのゴールからターンのアクションを決める"
+  - "barrel→barrel: T1 (V) ハンドの基本ライン。pot が大きくなる"
+  - "barrel→check: T2 (M) ハンドのリバー SDV 保護ライン"
+  - "check→bet: 遅延 CBet。IP が T1 ハンドの一部で check-back → リバーでバリュー"
+  - "check→check: T3 give up (B ≥ 62 以外). 最低コストでショーダウン"
+
+sections:
+  - title: "ターンアクションとリバーの関係"
+    summary: |
+      ターン barrel: ポットが膨らむ → リバーで大きなバリューを取れる。
+      ターン check-back: ポットが小さいまま → リバーで SDV で勝てる確率が高い。
+      どちらが EV が高いかはハンドのカテゴリによる。
+  - title: "V バケット ハンドのライン"
+    summary: |
+      V (≥70): barrel → barrel → 最大バリュー。
+      例: AA on K72r → turn barrel 33% → river barrel 50%。
+      3 ストリートで合計 ≈ 15bb を積み上げる。
+  - title: "M バケット ハンドのライン"
+    summary: |
+      M (35-69): barrel → check → SDV で勝てる。
+      例: AK (TPTK, HS=65) on K72r: turn barrel → river check-back。
+      OOP が TP 以下の range → SDV 勝率 ≈ 65%。
+  - title: "遅延 CBet の活用"
+    summary: |
+      IP check-back → OOP check → IP river bet = delayed C-bet。
+      T1 の一部 (AA, 77) を check-back に残すことで balance を保つ。
+      OOP は IP の check を "weakness" と読む → delayed bet が効く。
