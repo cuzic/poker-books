@@ -97,7 +97,7 @@ BB 有利ボード:
 > B ≈ 55（low connected rainbow）、HS = A-high + 2OC ≈ 49 → T2
 > しかし BB はこのボードでコネクターや小ペアを多く保有している。
 > SB は OOP のため T2 でのベットは不利 → **チェックが有力**
-
+>
 > **例：SB が K♠Q♣ を保有、ボード K♣7♦2♠**
 >
 > B = 62（rainbow A/K-high）、HS = TPTK ≈ 65 → T1

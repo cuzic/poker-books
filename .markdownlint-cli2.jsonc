@@ -145,6 +145,7 @@
     "digest/chapters/**/*.md"
   ],
   "ignores": [
-    "node_modules/**"
+    "node_modules/**",
+    "**/chapters/generated/**"
   ]
 }
