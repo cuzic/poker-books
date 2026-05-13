@@ -80,7 +80,7 @@ B は第01章で学んだボードスコアです。テクスチャ別の B 値�
 |---|---|---|
 | paired_high（KK7 など） | 83 | ベット（B ≥ 58） |
 | mono（7s5s2s 全スーツ同色） | 70 | ベット（B ≥ 58） |
-| rainbow_connected（987r など） | 67 | ベット（B ≥ 58） |
+| rainbow_connected（JT8r など、top≥J） | 67 | ベット（B ≥ 58） |
 | rainbow_ak（K72r など高カード系） | 62 | ベット（B ≥ 58） |
 | rainbow_q（Q53r など Q 高） | 58 | ベット（B ≥ 58, ちょうど境界） |
 | rainbow（J84r など mid/low） | 55 | **チェック**（B < 58） |
