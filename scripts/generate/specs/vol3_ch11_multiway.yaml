@@ -1,0 +1,103 @@
+volume: "Vol3"
+chapter_num: "11"
+title: "マルチウェイのフロップ戦略"
+street: "flop"
+
+summary: |
+  3人以上のプレイヤーがフロップを見ると、CBet 頻度は大幅に低下する。
+  理由: 誰かが強いハンドを持つ確率が高まり、ブラフが機能しにくくなる。
+  実戦ルール: 3-way → CBet 閾値を +5、4-way → +10 として扱う。
+  マルチウェイでは「T1 でバリューベット、T2/T3 は基本チェック」が原則。
+
+key_formulas:
+  "マルチウェイ CBet 閾値調整":
+    |
+    multiway_adj = (n_players - 2) × 5
+
+    3-way (n=3): +5 → 例) vs 33% 閾値 = 15 + 5 = 20 (T2 下位は打てない)
+    4-way (n=4): +10 → 例) vs 33% 閾値 = 15 + 10 = 25 (T2 でも慎重)
+
+    結果: 3-way では T1 (HS≥65) のみ積極的 CBet。
+          4-way では T1 でも弱い T1 (HS=65-69) は要注意。
+
+  "マルチウェイでの CBet 頻度 (GTO 実測)":
+    |
+    HU 平均:   ~70% (高 CBet)
+    3-way:     ~45% (大幅低下)
+    4-way:     ~30% (さらに低下)
+
+    ボード別 (3-way):
+      dry rainbow:    ~55% (比較的打てる: 1人がヒットする確率が低い)
+      wet 2tone:      ~38% (ドロー多 → 誰かがドローの可能性)
+      monotone:       ~25% (フラッシュドロー確率が高い)
+      paired_high:    ~40% (ペアボードは当たりにくい → やや打てる)
+
+  "マルチウェイでの OOP ディフェンス":
+    |
+    HU vs 33%: fold_threshold = 15 → MDF = 75%
+    3-way vs 33%: フォールド閾値は変わらないが、レイズ側への圧力を考慮
+      → IP 以外のプレイヤーも残っている場合: コールは慎重に
+      → 「3人目が残っている状況のコール」はさらに不利になる
+
+    実戦簡易ルール:
+      OOP での弱いコール (HS=15-25) は、3-way 以上では控える。
+      T1 (HS≥65) 以外は check-fold が安全。
+
+examples:
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+    position: "IP"
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+    position: "IP"
+  - hand: "T9s"
+    board: "Jc,Td,5s"
+    position: "IP"
+  - hand: "77"
+    board: "Jc,Td,5s"
+    position: "IP"
+  - hand: "AKs"
+    board: "9s,8d,7c"
+    position: "IP"
+
+gto_reference:
+  source: "GTO Wizard マルチウェイ解析 + pot10 統一シナリオ"
+  notes: |
+    3-way CBet 頻度の低下は GTO Wizard の公開データから確認可能。
+    dry rainbow (K72r) 3-way: IP CBet ~52%、HU比 -18pt。
+    wet 2tone (JT5cc) 3-way: IP CBet ~36%、HU比 -30pt。
+    monotone (987s) 3-way: IP CBet ~22%、HU比 -45pt。
+    マルチウェイでの T2 CBet は +EV にならないケースが多い。
+
+key_points:
+  - "3-way では CBet 閾値 +5: T1(HS≥65) のみ積極 CBet"
+  - "4-way では CBet 閾値 +10: HS≥70 程度でないと CBet は慎重"
+  - "ウェットボード (2tone/mono) は 3-way で特に CBet を控える"
+  - "マルチウェイの OOP ディフェンス: T1 以外は check-fold 基本"
+  - "GTO 実測: HU=70%, 3-way=45%, 4-way=30% と段階的に低下"
+  - "ドライボード (rainbow) は 3-way でも比較的 CBet が通りやすい"
+
+sections:
+  - title: "なぜマルチウェイで CBet が通らないのか"
+    summary: |
+      HU では相手がヒットしている確率は ~30%。
+      3-way では誰かがヒットしている確率は ~50%。
+      4-way では ~60% 以上。
+      強いハンドを誰かが持つ確率が高まるため、ブラフが機能しにくい。
+  - title: "3-way の実戦 CBet 基準"
+    summary: |
+      T1 (HS≥65): ドライボードなら CBet。ウェットボードは要判断。
+      T2 (HS=20-64): 基本チェック。HS≥45 かつ dry board のみ検討。
+      T3 (HS<20): 原則チェック。ブラフが通りにくい環境。
+      例外: T3 ナッツドロー (HS≥35 以上になる OESD+FD) は例外的に CBet 可。
+  - title: "ポジションの重要性がさらに高まる"
+    summary: |
+      マルチウェイでは位置の有利さが増す。
+      IP: より広い情報 → CBet/check-behind の判断が明確になる。
+      OOP: チェックして情報を集める価値が高まる。
+      マルチウェイで OOP から打つのは T1 限定で。
+  - title: "マルチウェイの OOP 守備"
+    summary: |
+      CBet を受けたら: T1 → コール/CR。T2 → 要判断 (3人目が残っていれば慎重)。
+      「コールして後ろのプレイヤーに挟まれる」リスクを常に考慮する。
+      T2 での「コールして次のプレイヤーが raise した場合」= ほぼフォールド。

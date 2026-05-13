@@ -1,0 +1,115 @@
+volume: "Vol3"
+chapter_num: "14"
+title: "SB vs BB — ブラインド対決のフロップ"
+street: "flop"
+
+summary: |
+  SB vs BB は唯一の「PFR が OOP になる」ポスト構造。
+  SB はプリフロップ最終アグレッサーだが、フロップでは OOP (先に行動する)。
+  BB は広いディフェンスレンジを持つが IP (後に行動する)。
+  SB の CBet 頻度は BTN の ~70% より低く ~50% が GTO 均衡。
+  low board は BB 有利、high board (A/K) は SB 有利。
+
+key_formulas:
+  "SB vs BB のポスト構造":
+    |
+    プリフロップ: SB レイズ → BB コール (SRP として成立)
+    フロップ: SB が先に行動 (OOP) → BB が後に行動 (IP)
+
+    ※ 通常の SRP と逆: PFR が OOP になる唯一のシチュエーション
+
+    ポット例: SB 2.5bb → BB call: pot = 5bb, stacks ≈ 97.5bb → SPR ≈ 19.5
+    (SPR は BTN vs BB と同程度)
+
+  "SB CBet 頻度 (GTO 実測)":
+    |
+    BTN vs BB CBet:  ~68% (IP advantage 有り)
+    SB vs BB CBet:   ~50% (OOP のため低下)
+
+    ボード別 SB CBet 頻度:
+      A-high dry (A72r): ~70% (SB の AK/AQ が有利)
+      K-high dry (K72r): ~60% (SB のレンジが当たりやすい)
+      low connected (543r): ~35% (BB のレンジが当たりやすい)
+      low paired (722r): ~45% (BB にペアが多い)
+      monotone (987s): ~30% (OOP でドローも危ない)
+
+  "ボード別 レンジ有利判定":
+    |
+    SB 有利ボード:
+      A-high: SB が AK/AQ/AA を多く保有
+      K-high: SB が KK/KQ を多く保有
+      → SB は積極 CBet
+
+    BB 有利ボード:
+      low board (2-7): BB が 22〜77 等の小ペアを多く保有
+      connected (JT9, 876): BB が広くコール → コネクターを保有
+      → SB は CBet を控え、チェックして情報収集
+
+  "SB のチェック後の行動":
+    |
+    SB チェック → BB ベット (donk またはチェックレイズ):
+      SB はコールまたはフォールドの選択
+      BB の donk は low board/connected board で特に多い
+      → SB の fold threshold = 通常より -5 (OOP での情報不利を補正)
+
+    SB チェック → BB チェック:
+      ターンで SB が先行動。low board では引き続き慎重。
+
+examples:
+  - hand: "AKs"
+    board: "Ac,7d,2s"
+  - hand: "KQo"
+    board: "Kc,7d,2s"
+  - hand: "AJo"
+    board: "5c,4d,3s"
+  - hand: "77"
+    board: "Kc,7d,2s"
+  - hand: "AQs"
+    board: "9s,8d,7c"
+  - hand: "KK"
+    board: "Ac,7d,2s"
+
+gto_reference:
+  source: "GTO Wizard SB vs BB solution (A-high / low board 比較)"
+  notes: |
+    SB vs BB の GTO 解析では:
+    A-high board で SB CBet ~68% (BTN vs BB に近い)
+    Low board (543r) で SB CBet ~32% (大幅低下)
+    BB の donk bet 頻度: low board で ~15-25% (BTN vs BB の ~5% より高い)
+    理由: BB は low board で レンジ優位 → donk lead が +EV になりやすい
+
+    SB の最適 CBet サイズ: 33% が最多 (IP ではないため小サイズ)
+    BTN は 75% を多く使うが SB は 33-50% が中心。
+
+key_points:
+  - "SB vs BB の特殊性: PFR が OOP になる唯一のシチュエーション"
+  - "SB CBet 頻度 ~50%: BTN (~70%) より 20pt 低い"
+  - "A/K-high ボード: SB 有利 → 積極 CBet"
+  - "low/connected ボード: BB 有利 → SB はチェックが基本"
+  - "BB の donk: low board で増加 → SB は適切に対応 (コール閾値 -5)"
+  - "SB CBet サイズ: 33% が主体 (OOP のため大サイズは危険)"
+
+sections:
+  - title: "SB vs BB が特殊な理由"
+    summary: |
+      通常: IP = PFR (コンティニュエーションベット権利あり)
+      SB vs BB: PFR (SB) が OOP → ポジション不利のままベットする。
+      この構造が CBet 頻度を下げる主因。
+      OOP でのベットは「情報を先に開示する」リスクを伴う。
+  - title: "ボード別 SB CBet 判断"
+    summary: |
+      A/K-high dry: SB のレンジが強い → CBet 70%。T1/T2 で積極。
+      low board (543, 762): BB がレンジ優位 → SB はチェック。T1 のみ CBet。
+      connected (JT9): 両者ともコネクターあり → SB は 33% small bet か check。
+      monotone: SB は IP でないため OOP で 75% は危険 → 33% or check。
+  - title: "BB の donk bet に対応する"
+    summary: |
+      low board で BB がドンクしてきた場合: BB は高確率でバリュー。
+      SB の対応: T1 (HS≥65) → コール。T2 以下 → 基本フォールド。
+      注意: BTN vs BB よりも BB の donk 率が高い → 「BB チェック = 弱い」とは限らない。
+  - title: "SB の守備計画"
+    summary: |
+      SB は OOP で CBet → BB が raise してきた場合が最も危険。
+      CB レイズへの対応: T1 のみコール (TPTK 以上)。T2 はほぼフォールド。
+      SB のチェックレイズ機会: チェック後に BB がベットしてきた場合のみ。
+      low board での SB チェックレイズ: T1+ドロー (HS≥80) のみ。

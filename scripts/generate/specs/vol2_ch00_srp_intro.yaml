@@ -1,0 +1,99 @@
+volume: "Vol2"
+chapter_num: "00"
+title: "フロップを制するとは — SRP 標準状況"
+street: "flop"
+
+summary: |
+  SRP (Single Raised Pot) のフロップが全フロップ判断の基礎。
+  BTN 3× open → BB call → pot=6bb, stack=97bb。
+  この標準状況から全ての計算式が導かれる。
+
+key_formulas:
+  "SRP フロップ標準状況":
+    |
+    BTN open 3× (3bb) → BB call (3bb) → pot=6bb
+    Effective stack = 100 - 3 = 97bb
+
+    フロップ CBet (33%): bet=2bb → pot=10bb, stack=95bb (if call)
+    フロップ CBet (75%): bet=4.5bb → pot=15bb, stack=92.5bb (if call)
+
+    SPR at flop:
+      Before CBet: 97/6 = 16.2 (very large)
+      After 33% CBet call: 95/10 = 9.5 (large)
+      After 75% CBet call: 92.5/15 = 6.2 (medium-large)
+
+  "フロップの基本判断フロー":
+    |
+    1. Board Score B を計算 (9ルール, 1秒以内)
+    2. Hand Score HS を計算 (role + draw + 2OC)
+    3. Tier 判定: T1≥65, T2≥20, T3<20
+    4. CBet 判断:
+       T1 → bet (always)
+       T2 → bet if B≥58
+       T3 → bet if B≥62
+    5. CBet サイズ: mono→75%, 2tone/connected/paired→50%, dry rainbow→33%
+
+  "OOP の守備フロー":
+    |
+    1. HS を計算
+    2. 閾値: vs33%→15, vs75%→35 (+2tone+5, -mono5, -paired10)
+    3. HS < 閾値 → fold
+    4. HS ≥ 閾値 → call (or check-raise if HS ≥ 40+ and SPR≥6)
+
+examples:
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "AQo"
+    board: "Kc,7d,2s"
+  - hand: "JTs"
+    board: "Qc,9c,3d"
+  - hand: "65o"
+    board: "9s,8d,7c"
+
+spr_examples:
+  - label: "SRP フロップ (CBet 前)"
+    stack: 97
+    pot: 6
+  - label: "SRP フロップ after 33% CBet+call"
+    stack: 95
+    pot: 10
+  - label: "SRP フロップ after 75% CBet+call"
+    stack: 92
+    pot: 15
+
+gto_reference:
+  source: "pot10 accuracy30 study (running)"
+  notes: |
+    pot=10bb (33% CBet after) が「標準ターン状況」の基点。
+    この pot サイズで Vol4-5 のターン/リバー計算が構築される。
+    BTN CBet 総合率 90-100%: K72r=99.9%, Q53r=95.6%。
+
+key_points:
+  - "SRP フロップ = BTN vs BB, pot=6bb, stack=97bb が標準"
+  - "Vol2 の全式は この 1 シナリオから導かれる: B, HS, Tier, CBet, Fold"
+  - "33% CBet → pot=10bb がターン基点 (Vol4 の「ゴールデン標準」)"
+  - "5 ステップフロー: B計算 → HS計算 → Tier → CBet → Size"
+  - "GTO CBet 総合率 90-100%: 計算式はほぼ完璧に GTO を再現"
+
+sections:
+  - title: "なぜ SRP が基本か"
+    summary: |
+      ポーカーのほとんどの hand は 3bet+ に進まない。
+      SRP (シングルレイズポット) = 最も頻度の高い状況。
+      SRP の判断を体系化することで 70%+ の実戦手を網羅できる。
+  - title: "pot=6bb の成り立ち"
+    summary: |
+      BTN open 3bb + BB call 3bb = pot 6bb。
+      スモールブラインドを含むと実際は 6.5bb だが、
+      本書では 6bb を「round number」として使用。
+  - title: "5 ステップフローの概要"
+    summary: |
+      B → HS → Tier → CBet → Size の 5 ステップは暗算で回せる。
+      各ステップの詳細: 章 01-05 で順に解説。
+      最終的には 1 つの統合フロー図 (ch10) で全体を見渡す。
+  - title: "Vol2 の構成と学習の流れ"
+    summary: |
+      ch01-02: 計算式の定義 (B, HS)。
+      ch03-05: 判断フロー (Tier, CBet, Size)。
+      ch06-09: OOP の守備 + チェックレイズ + チェックバック。
+      ch10: 統合フロー図。

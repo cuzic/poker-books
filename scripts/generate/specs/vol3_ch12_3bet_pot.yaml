@@ -1,0 +1,106 @@
+volume: "Vol3"
+chapter_num: "12"
+title: "3-bet ポットのフロップ戦略"
+street: "flop"
+
+summary: |
+  3-bet ポットは SRP と根本的に異なる: ポットが大きく SPR が低い。
+  SPR ≈ 5 (100BB 基準) → トップペアで「コミット」に近い判断が必要。
+  IP (3-bettor): ほぼ全ハンドで CBet (range bet 戦略)。
+  OOP (caller): ポットオッズが有利 → 広めにコール、しかしドンクは限定的。
+  キー: SPR が低いと「フォールドエクイティ」が減り、バリューベットの価値が最大化。
+
+key_formulas:
+  "3-bet ポットの SPR 計算":
+    |
+    標準的な 3-bet ポット (100BB スタート):
+      BTN 2.5bb → BB 9bb → BTN call: pot=18.5bb, stacks=91bb → SPR ≈ 4.9
+      CO 2.5bb → BTN 9bb → CO call: pot=18.5bb, stacks=91bb → SPR ≈ 4.9
+      UTG 2.5bb → 3-bet 9bb → UTG call: pot=18.5bb, stacks=91bb → SPR ≈ 4.9
+
+    ※ 3-bet サイズが大きいほど SPR が下がる:
+      vs 12bb 3-bet: pot=24.5bb, stacks=88bb → SPR ≈ 3.6 (よりコミットしやすい)
+
+  "SPR と コミット判断 (3-bet ポット版)":
+    |
+    SPR < 3 → トップペア以上でオールイン計画 (コミット)
+    SPR 3-6 → トップペア強 (TPTK/TPGK+) でバリュー、ターンで完結
+    SPR 6-9 → SRP と同様の多ストリート計画が必要 (deep 3-bet ポット)
+
+    3-bet ポット (SPR≈5): TPTK 以上 → コール方向で計画。
+    セット → フロップでオールイン (ポット比 200-300% になっても OK)。
+
+  "3-bet ポットでの IP CBet 戦略":
+    |
+    IP (3-bettor) のレンジは QQ+, AK, AQ+ 等の premium が多い
+    → ほぼ全ボードで IP が range advantage
+    → IP は高頻度 CBet (GTO: ~80-90%)
+
+    CBet サイズ:
+      dry board (rainbow, low): 33% pot (small CBet で頻度維持)
+      wet board (2tone, connected): 50% pot (charge ドロー)
+
+  "3-bet ポットでの OOP 守備 (caller)":
+    |
+    OOP caller のレンジ: TT-QQ, AQs, AJs+ 等のスペキュラティブも含む
+    → ボードによっては OOP がレンジ有利 (A-high boards で AK vs QQ)
+    → OOP は IP CBet に対して広めにコール可能 (pot が大きい = ポットオッズ有利)
+
+    OOP fold threshold (vs 33% CBet):
+      SRP 閾値 (HS < 15) → 3-bet ポットでは HS < 20 に引き上げ
+      理由: ポットが大きいため OOP も多くコールすべき (MDF は変わらない)
+      ※ MDF = 1 - α は関係なく SPR で変化するわけではない。閾値は同じ。
+
+examples:
+  - hand: "AKs"
+    board: "Qc,7d,2s"
+  - hand: "QQ"
+    board: "Kc,7d,2s"
+  - hand: "AAs"
+    board: "Kc,7d,2s"
+  - hand: "AKo"
+    board: "Jc,Td,5s"
+  - hand: "KK"
+    board: "Ac,7d,2s"
+  - hand: "TT"
+    board: "Kc,7d,2s"
+
+gto_reference:
+  source: "GTO Wizard 3-bet pot solution + SPR commit theory"
+  notes: |
+    3-bet ポットの IP CBet 頻度: GTO Wizard では BTN 3-bet vs BB call で
+    dry board (K72r) → CBet ~87%、wet board (JT5cc) → CBet ~76%。
+    SRP vs 3-bet pot のサイズ変化: SRP では 75% が多いが 3-bet pot では
+    33% の small bet が最頻 (range bet)。
+    SPR ≈ 5: GTO では TPTK → コール, TPGK → コール/フォールドの境界。
+
+key_points:
+  - "3-bet ポット SPR ≈ 5: TPTK 以上でバリューコール計画"
+  - "IP (3-bettor): ほぼ全ボードで high freq CBet (~80-90%)"
+  - "CBet サイズ: dry=33%, wet=50% (SRP より小サイズが中心)"
+  - "OOP (caller): TPTK 以上でコール、TPWK 以下はポットサイズ注意"
+  - "セット on 3-bet pot: フロップでオールイン計画"
+  - "SPR < 3 の deep 3-bet: トップペアがコミット閾値"
+
+sections:
+  - title: "3-bet ポットは別ゲーム"
+    summary: |
+      SRP との最大の違いは SPR。SPR≈5 では「強いハンド = コミット」が近い。
+      TPTK (HS=65) が SRP では「バリューベット」だが、3-bet pot では「コール側」。
+      スタック深度の意識: 91bb が 3-4 ストリートで消えるペースを計算する。
+  - title: "IP の range bet 戦略"
+    summary: |
+      3-bet したレンジは premium が多い → ほぼ全ボードで IP が有利。
+      small CBet (33%) を全ハンドに打つ「range bet」が GTO 均衡に近い。
+      ブラフと バリューを区別せずに打てる → OOP がディフェンスしにくい。
+  - title: "OOP の守備計画"
+    summary: |
+      OOP caller はスペキュラティブハンドも多い → ボード次第でレンジ優位。
+      A-high board: AQs caller が有利 → donk lead が成立することも。
+      low board (722): IP の AK/KK が弱い → OOP 有利 → 積極守備可。
+  - title: "コミットラインの把握"
+    summary: |
+      SPR ≈ 5 でのコミットライン: フロップで 50% pot × ターンで 75% pot
+      = 残りスタックを全部使う計算。
+      TPTK なら 2 ストリートでコミット。セットなら 1 ストリートでもOK。
+      ハーフポット以上をコールする場合は「ターンでオールインになる」覚悟で。
