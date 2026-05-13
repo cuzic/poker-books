@@ -1,0 +1,21 @@
+{
+  "ip_cbet_pct": 73.24,
+  "ip_cbet_overpair": 100.0,
+  "ip_cbet_air": 67.18,
+  "oop_fold_vs33": 8.08,
+  "oop_call_vs33": 76.81,
+  "oop_cr_vs33": 15.11,
+  "oop_cr_set_vs33": 100.0,
+  "oop_cr_two_pair_vs33": 47.93,
+  "oop_cr_air_vs33": 12.07,
+  "oop_fold_vs75": 33.24,
+  "oop_call_vs75": 53.85,
+  "oop_cr_vs75": 12.92,
+  "oop_cr_set_vs75": 100.0,
+  "oop_cr_two_pair_vs75": 41.95,
+  "oop_cr_air_vs75": 8.81,
+  "elapsed_s": 173.0,
+  "board": "Kc,Kd,7s",
+  "texture": "paired_high",
+  "id": "cr_KK7r"
+}

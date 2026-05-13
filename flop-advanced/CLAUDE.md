@@ -49,9 +49,9 @@ SPR<3 → CR閾値=75 / T1 常時 75% / コミット前提
 | 01-range-advantage.md | 第01章 | フロップでのレンジ優位 |
 | 02-cbet-by-category.md | 第02章 | ハンドカテゴリ別 CBet 分析 |
 | 03-texture-accuracy.md | 第03章 | ボードテクスチャ × CBet 精度 |
-| 04-check-raise-detail.md | 第04章 | チェックレイズ詳細 ★GTO概算 |
-| 05-check-raise-range.md | 第05章 | チェックレイズレンジ構築 ★GTO概算 |
-| 06-donk-bet.md | 第06章 | ドンクベット ★GTO概算 |
+| 04-check-raise-detail.md | 第04章 | チェックレイズ詳細 |
+| 05-check-raise-range.md | 第05章 | チェックレイズレンジ構築 |
+| 06-donk-bet.md | 第06章 | ドンクベット |
 | 07-oop-calling.md | 第07章 | OOP コーリングレンジ |
 | 08-size-tell.md | 第08章 | サイズ・テル |
 | 09-multistreet-flop.md | 第09章 | マルチストリート展望 |
@@ -62,7 +62,7 @@ SPR<3 → CR閾値=75 / T1 常時 75% / コミット前提
 | 14-sb-vs-bb.md | 第14章 | SB vs BB |
 | 15-4bet-pot.md | 第15章 | 4-bet ポットのフロップ戦略 |
 
-★ 第04-06章は CR/donk study (27シナリオ) 未実施のため概算値を使用
+第04-05章: 15 ボード GTO 実測値（TexasSolver）で更新済み（2026-05-13）。第06章ドンクベットは Vol4 で詳細扱い。
 
 ## ビルド
 
