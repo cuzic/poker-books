@@ -1,0 +1,1 @@
+{"id": "acc30_Kc4d4s", "tag": "accuracy30", "board": "Kc,4d,4s", "n_board": 3, "pot_bb": 6, "effective_stack_bb": 94, "flop_bet_sizes": "33,75", "turn_bet_sizes": "33,75", "ip_cbet_pct": 99.9, "cbet_overpair": 99.83, "cbet_top_pair": 99.83, "cbet_air": 99.98, "ip_cbet_33": 61.32, "ip_cbet_75": 38.57, "oop_fold_vs33": 45.67, "oop_fold_vs75": 55.24, "elapsed_s": 422.8}

@@ -1,0 +1,1 @@
+{"id": "rr_T86r_Ah", "tag": "range_read", "board": "Tc,8d,6s,Ah", "n_board": 4, "turn_type": "OC_ace", "pot_bb": 10, "effective_stack_bb": 92, "flop_bet_sizes": "33,75", "turn_bet_sizes": "33,75", "ip_cbet_pct": 85.75, "cbet_top_pair": 88.48, "cbet_air": 90.73, "ip_cbet_33": 54.85, "ip_cbet_75": 30.9, "oop_fold_vs33": 18.22, "oop_fold_vs75": 39.57, "elapsed_s": 14.1}

@@ -1,0 +1,1 @@
+{"id": "rr_AKTr_Qh", "tag": "range_read", "board": "Ac,Kd,Ts,Qh", "n_board": 4, "turn_type": "straight", "pot_bb": 10, "effective_stack_bb": 92, "flop_bet_sizes": "33,75", "turn_bet_sizes": "33,75", "ip_cbet_pct": 99.55, "cbet_top_pair": 99.84, "cbet_air": 99.81, "ip_cbet_33": 73.24, "ip_cbet_75": 26.31, "oop_fold_vs33": 30.63, "oop_fold_vs75": 54.89, "elapsed_s": 12.3}

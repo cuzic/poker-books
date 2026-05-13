@@ -1,0 +1,1 @@
+{"id": "rr_K75m_As", "tag": "range_read", "board": "Ks,7s,5s,As", "n_board": 4, "turn_type": "flush_hit", "pot_bb": 10, "effective_stack_bb": 92, "flop_bet_sizes": "33,75", "turn_bet_sizes": "33,75", "ip_cbet_pct": 93.56, "cbet_top_pair": 96.55, "cbet_air": 97.26, "ip_cbet_33": 71.25, "ip_cbet_75": 22.31, "oop_fold_vs33": 24.2, "oop_fold_vs75": 47.42, "elapsed_s": 13.6}

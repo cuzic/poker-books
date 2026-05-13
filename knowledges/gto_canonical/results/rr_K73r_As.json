@@ -1,0 +1,1 @@
+{"id": "rr_K73r_As", "tag": "range_read", "board": "Kc,7d,2s,Ah", "n_board": 4, "turn_type": "OC_ace", "pot_bb": 10, "effective_stack_bb": 92, "flop_bet_sizes": "33,75", "turn_bet_sizes": "33,75", "ip_cbet_pct": 95.3, "cbet_top_pair": 95.76, "cbet_air": 95.04, "ip_cbet_33": 60.02, "ip_cbet_75": 35.28, "oop_fold_vs33": 35.07, "oop_fold_vs75": 54.58, "elapsed_s": 14.7}

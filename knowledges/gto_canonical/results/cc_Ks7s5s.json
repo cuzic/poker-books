@@ -1,0 +1,1 @@
+{"id": "cc_Ks7s5s", "tag": "c_coef", "board": "Ks,7s,5s", "n_board": 3, "pot_bb": 6, "effective_stack_bb": 94, "flop_bet_sizes": "33,75", "turn_bet_sizes": "33,75", "ip_cbet_pct": 99.21, "cbet_overpair": 98.45, "cbet_top_pair": 98.34, "cbet_air": 99.27, "ip_cbet_33": 74.53, "ip_cbet_75": 24.68, "oop_fold_vs33": 30.86, "oop_fold_vs75": 46.07, "elapsed_s": 688.2}

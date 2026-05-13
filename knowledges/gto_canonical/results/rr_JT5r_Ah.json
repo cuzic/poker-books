@@ -1,0 +1,1 @@
+{"id": "rr_JT5r_Ah", "tag": "range_read", "board": "Jc,Td,5s,Ah", "n_board": 4, "turn_type": "OC_ace", "pot_bb": 10, "effective_stack_bb": 92, "flop_bet_sizes": "33,75", "turn_bet_sizes": "33,75", "ip_cbet_pct": 99.68, "cbet_top_pair": 99.86, "cbet_air": 99.91, "ip_cbet_33": 80.54, "ip_cbet_75": 19.14, "oop_fold_vs33": 23.63, "oop_fold_vs75": 50.87, "elapsed_s": 16.1}

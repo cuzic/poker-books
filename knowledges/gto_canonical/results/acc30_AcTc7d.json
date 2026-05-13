@@ -1,0 +1,1 @@
+{"id": "acc30_AcTc7d", "tag": "accuracy30", "board": "Ac,Tc,7d", "n_board": 3, "pot_bb": 6, "effective_stack_bb": 94, "flop_bet_sizes": "33,75", "turn_bet_sizes": "33,75", "ip_cbet_pct": 90.28, "cbet_top_pair": 89.22, "cbet_air": 91.53, "ip_cbet_33": 67.22, "ip_cbet_75": 23.05, "oop_fold_vs33": 23.03, "oop_fold_vs75": 39.45, "elapsed_s": 841.8}
