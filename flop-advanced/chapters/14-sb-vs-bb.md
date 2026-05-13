@@ -24,7 +24,8 @@ PFR（SB）が OOP になる唯一のポスト構造が SB vs BB です。この
 
 ```
 SB 2bb レイズ → BB コール（1bb 追加）:
-  pot = 2 + 2 = 4bb（BB は 1bb = 2bb へ、SB は 2bb）
+  SB: 0.5bb ポスト済み + 1.5bb 追加 = 2bb、BB: 1bb ポスト済み + 1bb 追加 = 2bb
+  pot = 2 + 2 = 4bb
   ※ アンテなしの場合
   stack ≈ 98bb（SB）/ 98bb（BB）
   SPR ≈ 98 / 4 ≈ 24.5
@@ -133,10 +134,10 @@ SB vs BB では BB の donk bet（フロップで IP から先にベットする
 
 ```
 BTN vs BB での BB donk 頻度: ≈ 5%
-SB vs BB での BB donk 頻度:  ≈ 15〜25%（low board で増加）
+SB vs BB での BB donk 頻度:  ≈ 5〜25%（GTO ツールによって差があり、low board で増加）
 ```
 
-BB が donk bet をしてくるのは「自分のレンジ優位があるボード」です。Low board や connected board でこの傾向が強くなります。
+BB が donk bet をしてくるのは「自分のレンジ優位があるボード」です。Low board や connected board でこの傾向が強くなります。また SB は OOP のため CBet 頻度が BTN より低く（約 50%）、SB のチェック頻度が高い状況が多くなります。BB はこれを認識し、SB がチェックしやすい low/connected ボードで donk bet 頻度を高めます。BTN vs BB より頻度が高い根本理由は「SB という OOP アグレッサーのチェック頻度の高さ」にあります。
 
 ### BB のフロップ判断
 

@@ -29,7 +29,7 @@ STEP 1: Board Score B を計算
      |
      v
 STEP 2: Hand Score HS を計算
-  役スコア + ドローボーナス(FD+30/OESD+24/GS+12/BDFD+6) + 2OC ボーナス
+  役スコア + ドローボーナス(NFD+33/FD+30/OESD+24/GS+12/BDFD+6) + 2OC ボーナス
      |
      v
 STEP 3: Tier 判定
@@ -40,8 +40,8 @@ STEP 3: Tier 判定
      v
 STEP 4: CBet サイズ選択
   B=70（mono）→ 75% ポット
-  B=83（paired_high）→ 50% ポット
-  その他（B=71/67/62/58/56/55/50 を含む）→ 33% ポット
+  2tone/rainbow_connected/paired（B=50〜83 の湿系）→ 50% ポット
+  dry rainbow（B ≤ 62）→ 33% ポット
      |
      v
 STEP 5: C 値検証（任意、余裕があれば）
@@ -72,7 +72,7 @@ STEP 5: C 値検証（任意、余裕があれば）
 ```
 HS = 役スコア + ドローボーナス + 2OC ボーナス（+BDFD）
 
-役スコア: セット以上=85 / オーバーペア=60 / 2ペア=75 / TPTK=65 / TPGK=60
+役スコア: セット以上=85 / オーバーペア(AA-QQ=80/JJ-TT=75/99-=70) / 2ペア=75 / TPTK=65 / TPGK=60
           TPMK=55 / TPWK=50 / セカンドペア強=42 / セカンドペア弱=38
           ボトムペア=30 / A-high=25 / K-high=20 / Q-high=15 / エアー=10
 
@@ -95,12 +95,12 @@ T3（HS < 20）: B ≥ 62 なら CBet / B < 62 ならチェック
 **STEP 4：サイズ選択（第05章）**
 
 ```
-B=70（モノトーン）  → 75% ポット
-B=83（ペアボード高）→ 50% ポット
-その他（B ≤ 67）   → 33% ポット（レンジベット）
+B=70（モノトーン）                          → 75% ポット
+2tone/rainbow_connected/paired（湿系）      → 50% ポット
+dry rainbow（B ≤ 62、2tone/connected 以外） → 33% ポット（レンジベット）
 ```
 
-簡易基準: mono（B=70）→ 75%、paired_high（B=83）→ 50%、それ以外 → 33%。
+簡易基準: mono→75%、2tone・rainbow_connected・paired→50%、dry rainbow（B≤62）→33%。
 
 ---
 
@@ -172,8 +172,8 @@ STEP 3: HS と閾値を比較
 | 9♠8♦7♣ | rainbow | 55 | ✗ | ✗ | — |
 | 9♣7♦2♠ | rainbow | 55 | ✗ | ✗ | — |
 | K♣9♦2♥ | rainbow_ak | 62 | ◯ | ◯ | 33% |
-| A♥K♦Q♠ | rainbow_connected | 67 | ◯ | ◯ | 33% |
-| J♣T♦9♠ | rainbow_connected | 67 | ◯ | ◯ | 33% |
+| A♥K♦Q♠ | rainbow_connected | 67 | ◯ | ◯ | 50% |
+| J♣T♦9♠ | rainbow_connected | 67 | ◯ | ◯ | 50% |
 | Q♣8♥5♦ | 2tone | 50 | ✗ | ✗ | — |
 | K♠7♠2♦ | 2tone | 50 | ✗ | ✗ | — |
 | A♣K♠7♦ | 2tone_ak | 56 | ✗（境界） | ✗ | — |
@@ -181,14 +181,14 @@ STEP 3: HS と閾値を比較
 | Q♣8♠5♣ | 2tone | 50 | ✗ | ✗ | — |
 | K♠K♦7♣ | paired_high | 83 | ◯ | ◯ | 50% |
 | A♣A♦2♠ | paired_high | 83 | ◯ | ◯ | 50% |
-| 7♣7♦2♠ | paired_low | 71 | ◯ | ◯ | 33% |
-| 5♠5♦2♣ | paired_low | 71 | ◯ | ◯ | 33% |
+| 7♣7♦2♠ | paired_low | 71 | ◯ | ◯ | 50% |
+| 5♠5♦2♣ | paired_low | 71 | ◯ | ◯ | 50% |
 | K♠7♠5♠ | mono | 70 | ◯ | ◯ | 75% |
 | 9♠8♠6♠ | mono | 70 | ◯ | ◯ | 75% |
 | T♠9♠2♠ | mono | 70 | ◯ | ◯ | 75% |
-| J♦T♣9♠ | rainbow_connected | 67 | ◯ | ◯ | 33% |
-| K♣Q♦J♠ | rainbow_connected | 67 | ◯ | ◯ | 33% |
-| Q♠J♦T♥ | rainbow_connected | 67 | ◯ | ◯ | 33% |
+| J♦T♣9♠ | rainbow_connected | 67 | ◯ | ◯ | 50% |
+| K♣Q♦J♠ | rainbow_connected | 67 | ◯ | ◯ | 50% |
+| Q♠J♦T♥ | rainbow_connected | 67 | ◯ | ◯ | 50% |
 | A♣5♦3♠ | rainbow_ak | 62 | ◯ | ◯ | 33% |
 | K♣3♦2♠ | rainbow_ak | 62 | ◯ | ◯ | 33% |
 | Q♥J♣3♠ | rainbow_q | 58 | ◯（ちょうど） | ✗ | 33% |
@@ -246,7 +246,7 @@ STEP 1 と STEP 2 が自動化されると、STEP 3（Tier 判定）以降は自
 - STEP 2: TPTK（役スコア=65）= **HS = 65** → T1
   （TPTK の HS=65 なので T1 に入ります）
 - STEP 3: HS = 65 ≥ 65 → **T1 → 常にベット**
-- STEP 4: B = 50 < 70 → **50% ポット（3bb）**
+- STEP 4: 2トーンボード → **50% ポット（3bb）**
 
 **結論**: T1 はボード問わずベット。2トーンでも 50% でベットします。
 
@@ -342,4 +342,4 @@ OOP として、相手（IP）が 75% ポットのベットを打ってきまし
 
 **【GTO とのズレ】**
 
-本書のフローは GTO との整合率が約 92.6% です。主なズレは 3 点あります。第一に、T1 の「常にベット」原則——GTO では TPTK を一部チェックバックに混ぜます。第二に、サイズ選択——本書の簡略基準（mono→75% / paired_high→50% / その他→33%）では GTO が選ぶ 50% や 66% のサイズが再現できません。第三に、OOP の CR 頻度——本書はシンプルに「HS ≥ 40（SPR≥6）なら CR 検討」としていますが、GTO では FD や OESD の CR ブラフも大量に含まれます。これらの精密化は巻③で扱います。
+本書のフローは GTO との整合率が約 92.6% です。主なズレは 3 点あります。第一に、T1 の「常にベット」原則——GTO では TPTK を一部チェックバックに混ぜます。第二に、サイズ選択——本書の 3 分類（mono→75% / 2tone・connected・paired→50% / dry rainbow→33%）は GTO が混在させる 50% や 66% の細かいバリエーションを捨象しています。第三に、OOP の CR 頻度——本書はシンプルに「HS ≥ 40（SPR≥6）なら CR 検討」としていますが、GTO では FD や OESD の CR ブラフも大量に含まれます。これらの精密化は巻③で扱います。
