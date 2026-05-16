@@ -73,7 +73,7 @@ vs 75%: pot = 15bb, stack ≈ 91.5bb → SPR ≈ 6.1
 - OOP fold vs33%: 26.9% ≈ MDF 25% ✅
 - OOP fold vs75%: 45.2% ≈ MDF 43% ✅
 
-旧設計 (paired_high/mono → 50%, 他 → 75%) は dry board のデフォルトが逆転していた。
+旧設計 (paired_high/mono → 50%, ほか → 75%) は dry board のデフォルトが逆転していた。
 正しくは dry board で 33% が GTO 均衡。
 
 
@@ -100,7 +100,7 @@ mono → 75% (チャージ)
 
 K72r, Q53r, A52r など high-card 単スート非連続ボード。
 GTO は 78% の時間 33% を使用 → range bet 戦略の証左。
-IP は Air を含め全ハンドをベット → 小サイズで整合性を保つ。
+IP は AIr を含め全ハンドをベット → 小サイズで整合性を保つ。
 33% CBet → pot=10bb, stack=96bb → SPR=9.6 (複数ストリート計画可)
 
 

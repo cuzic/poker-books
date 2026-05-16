@@ -6,7 +6,7 @@
 
 SRP (Single Raised Pot) のフロップが全フロップ判断の基礎。
 BTN 3× open → BB call → pot=6bb, stack=97bb。
-この標準状況から全ての計算式が導かれる。
+この標準状況からすべての計算式が導かれる。
 
 
 ## 核心式

@@ -84,7 +84,7 @@ GTO は 2tone で圧倒的に 33% preferred → 簡易式 (75% default) は 2ton
 ### GTO サイズ選択の実態
 
 GTO は multiple sizes を使う: 単純に「33% or 75%」ではない。
-しかし dominant size が板によって明確: dry で 33%/75% 拮抗, wet で 33% 主流。
+しかし dominant size が板によって明確: dry で 33%/75% 拮抗、 wet で 33% 主流。
 実戦: 相手の dominant size pattern を読む。
 
 

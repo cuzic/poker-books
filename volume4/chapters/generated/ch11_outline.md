@@ -78,7 +78,7 @@ calc_turn_barrel_v2(hand_score, board_score, turn_tag):
 
 ソース: `range_read 30 シナリオ (完了)`
 > GTO オーバーベット頻度: paired_high ターンで IP 100%+ベット率が高い。
-PB ターン barrel 96% が示す通り, IP はアグレッシブ。
+PB ターン barrel 96% が示す通り、 IP はアグレッシブ。
 OB (100%+) は paired/OC ターンでの T1 最上位 (HS≥80) ハンドに限定。
 リバーOB の詳細は Vol5 ch10。
 
@@ -95,7 +95,7 @@ OB (100%+) は paired/OC ターンでの T1 最上位 (HS≥80) ハンドに限�
 
 ### なぜ 33% でなく 100%+ か
 
-33%: wide range を維持しながら小さく攻める (T1/T2 全て)。
+33%: wide range を維持しながら小さく攻める (T1/T2 すべて)。
 100%+: レンジをポーラーに絞る (ナッツか ブラフのみ)。
 ナッツが多いとき → 大サイズで相手の full range をペナルティ化できる。
 

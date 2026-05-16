@@ -83,7 +83,7 @@ BB range は GTO solver の BB defend range から。
 1. レンジ思考: 1 ハンドではなく「全 range の平均 HS」でボードを評価
 2. BTN vs BB: K72r で BTN の strong hand (HS≥65) は 20% vs BB の 8%
 3. ナッツアドバンテージ = T1 の密度差。この差が CBet 頻度を決める
-4. BB は wide range: 多くの弱いハンドを含むが, draws も多い
+4. BB は wide range: 多くの弱いハンドを含むが、 draws も多い
 5. レンジ交差: ボードが BTN か BB か どちらの range に「より合うか」を考える
 
 ## 節構成 (概要)
@@ -111,7 +111,7 @@ BB の強みは: 多様性 (draws, pairs, odd suited connectors) にある。
 
 ### ボードでのレンジ評価
 
-ボードを見たとき: 「このボードは自分の range (BTN) に合うか?」。
+ボードを見たとき: 「このボードは自分の range (BTN) に合うか？」。
 K72r: BTN のAK/AA/77 が多くヒット → aggressive CBet が正当化。
 JT5r: BTN のAK/KQ も JJ/TT もヒット、だが BB の 98s/KJ も hits。
 

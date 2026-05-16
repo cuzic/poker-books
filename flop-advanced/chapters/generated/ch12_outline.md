@@ -79,7 +79,7 @@ OOP fold threshold (vs 33% CBet):
 dry board (K72r) → CBet ~87%、wet board (JT5cc) → CBet ~76%。
 SRP vs 3-bet pot のサイズ変化: SRP では 75% が多いが 3-bet pot では
 33% の small bet が最頻 (range bet)。
-SPR ≈ 5: GTO では TPTK → コール, TPGK → コール/フォールドの境界。
+SPR ≈ 5: GTO では TPTK → コール、 TPGK → コール/フォールドの境界。
 
 
 ## 章のポイント (執筆ガイド)

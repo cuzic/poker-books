@@ -86,7 +86,7 @@ BTN が 33% CBet した場合の標準的な ターン pot=10bb を確認。
 ### ターンカード 5 分類
 
 各ターンカードタイプとその HS への影響。
-blank: レンジ変化小, OC: AKs が急上昇, pair: Sets 急増, straight/flush: 完成ハンド急増
+blank: レンジ変化小、 OC: AKs が急上昇、 pair: Sets 急増、 straight/flush: 完成ハンド急増
 
 
 ### バレル判断: T1/T2 は常時

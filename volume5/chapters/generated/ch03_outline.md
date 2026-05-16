@@ -89,7 +89,7 @@ GTO 実測 Set(85-90) bet rate:
 2. M+(55-69): blank→BET, SC/FC/PB→check。これが M+ の核心判断
 3. TPTK(65): PB で 0%、blank で 62-99%。同じ HS でも 0〜99% のレンジ
 4. river_tag がベット閾値を決める: blank=55, OC=60, SC/FC=70, PB=80
-5. サイズ: paired_high(B=83)→100%, その他→50%
+5. サイズ: paired_high(B=83)→100%, そのほか→50%
 
 ## 節構成 (概要)
 
