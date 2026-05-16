@@ -59,7 +59,7 @@ Board Score B（9ルール、50〜83、IPのナッツアドバンテージ評価
 
 HandScore（ハンドの強さ 0〜100、equity %）:
   HandScore = 役スコア + ドロー加点 + ブロッカー加点
-  役スコア例: セット以上=85-95 / OP=68-78 / TPTK=70 / TPGK=62 / TPMK=50 / TPWK=45
+  役スコア例: セット以上=85-95 / OP=68-78 / TPTK=70 / TPGK=66（42+Q×2）/ TPMK=50 / TPWK=45
 
 CBet統合式（フロップCBet判断）:
   CBetスコア = HandScore + (Board Score B − 67) / 3 + ポジション係数
