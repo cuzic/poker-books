@@ -128,6 +128,9 @@ Step 5: Score_BB < T_call                      → FOLD
 | vs HJ  | **32** | **23** |
 | vs CO  | **28** | **22** |
 | vs BTN | **28** | **18** |
+| vs SB  | **32** | **18** |
+
+注: BB vs SB は BB がフロップ IP になる（SB が先行動）。T_3bet=32 は SB が HJ 相当の tightness（T_open=22）による。T_call=18 は IP 優位で広く call できる点で BTN 対比と同値。GTO 精度 82.2%。GTO の二極化 bluff レンジ（Score_BB<28 の low-suited / offsuit blocker 系）は式では再現不可。
 
 ### 2.4 4-bet （vs 3-bet） — 通常スコア使用
 
@@ -174,14 +177,56 @@ knowledges/preflop/gto-charts.json に対する v2 (2026-05-09) 検証結果:
 | RFI (4 ポジ + SB) | 89.5% |
 | 対 RFI 3-bet (CO/HJ/SB) | 95.5% |
 | 対 RFI 3-bet (BTN) | 85.4% |
-| **BB defense (4 シナリオ)** | **84.5%** |
+| **BB defense (5 シナリオ)** | **83.4%** |
 | 4-bet | 100% (本書ルール一致) |
-| **全体平均** | **89.6%** |
+| **全体平均** | **89.1%** |
 
 実装は `scripts/generate/core/preflop_score.py`、検証は `/tmp/verify_actual_accuracy.py`。
 
 詳細データ: `/tmp/calibrate_unified.py` の出力。
 原始データ: `knowledges/preflop/gto-charts.json`
+
+### 3.1 既知の誤差ケース（境界ハンド一覧）
+
+以下のハンドは GTO との不一致が頻発する。本書では「境界ハンド」として注記 or 補助ルールで対応。
+
+#### ① QJs（Score=27）: 3-bet 見逃し
+
+GTO は多くのシナリオで QJs を 3-bet するが、T_3bet=28 の閾値 1 点未満で式では 3-bet できない。
+**対応**: 補助ルール「QJs は BTN/CO ポジから CO/HJ オープンに対し 3-bet 候補」として本文に記載。
+
+#### ② A スーテッド系（A8s, A9s など Score=28-29）: 誤 3-bet
+
+A ブロッカー(+3) + スーテッド(+3) で Score が膨らみ、GTO がフォールドすべき場面で式が 3-bet と判定。
+特に HJ/CO ヒーローが UTG/HJ オープンに対する場面で顕著。
+
+| ハンド | Score | 問題シナリオ | GTO | 式 |
+|---|---|---|---|---|
+| A9s | 29 | HJ vs UTG, CO vs UTG | FOLD | **3BET(誤)** |
+| A8s | 28 | CO vs UTG, HJ vs UTG | FOLD | **3BET(誤)** |
+
+**対応**: 補助ルール「A9s 以下の A スーテッドは vs UTG では 3-bet せずフォールド」として注記。
+
+#### ③ BTN vs CO（T_3bet=T_call=24）: 誤 3-bet 多発
+
+BTN vs CO は CALL レンジを持たない設計（T_3bet=24 で純粋 3-bet or fold）のため、Score=24-27 帯のハンドが全て誤 3-bet になる。GTO はこのレンジを広くコールする。
+不一致ハンド数: **17 件**（スコア 24-27 帯の GTO コール推奨ハンド）。
+
+**対応**: 本書では「BTN vs CO は 3-bet or fold、コールは原則しない」として単純化。GTO コールレンジは【GTO とのズレ】コラムで言及。
+
+#### ④ 88, 99（Score=26, 28）: シナリオ依存の誤判定
+
+| ハンド | Score | 問題シナリオ | GTO | 式 |
+|---|---|---|---|---|
+| 88 | 26 | BTN vs UTG (T_3bet=32) | CALL | **FOLD(誤)** |
+| 99 | 28 | BTN vs UTG (T_3bet=32) | CALL | **FOLD(誤)** |
+
+これは 4.1 の set mining 補助ルールで部分補完（コール額 × 15 ≤ 相手スタックなら CALL）。
+
+#### ⑤ BB vs SB（Score_BB ベース）: GTO 二極化ブラフレンジ未再現
+
+GTO は BB vs SB で Score_BB < 28 のブラフハンド（J7o, Q6o, 54s など）を 3-bet するが、線形スコアでは再現不可能。
+T_3bet=32, T_call=18 で 82.2% 精度。残 17.8% はブラフ 3-bet 未再現が主因。
 
 ---
 
