@@ -86,7 +86,7 @@ T_3bet/T_call（BTN vs UTG 例）: 32/28（二段閾値）
 T_4bet=33（QQ+/AKs のみ）/ T_5bet=39（AA のみ）
 
 BB defense は Score_BB（係数強化版）+ 5 ステップフロー
-  T_3bet/T_call: vs UTG=34/24, HJ=32/23, CO=28/22, BTN=28/18
+  T_3bet/T_call: vs UTG=34/24, HJ=32/23, CO=28/22, BTN=28/18, SB=32/18
 ```
 
 ### HandScore（フロップ・ターン共通の役・ドロー強度、0-100 equity %）

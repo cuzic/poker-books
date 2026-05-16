@@ -91,7 +91,7 @@ Score = H + L
 | RFI (open) | UTG=24 / HJ=22 / CO=20 / BTN=18 / SB=22 |
 | 対 RFI 3-bet (BTN のみ二段) | vs UTG: T_3bet=32, T_call=28 / vs HJ: 32/27 / vs CO: 24 |
 | 対 RFI 3-bet (CO/HJ/SB は単一) | 28-30 (詳細表は SPEC) |
-| BB defense (二段、Score_BB 使用) | vs UTG: 34/24, HJ: 32/23, CO: 28/22, BTN: 28/18 |
+| BB defense (二段、Score_BB 使用) | vs UTG: 34/24, HJ: 32/23, CO: 28/22, BTN: 28/18, SB: 32/18 |
 | 4-bet (vs 3-bet) | T_4bet=33 (全ポジ共通) |
 | 5-bet (vs 4-bet) | T_5bet=39 (全ポジ共通) |
 | Squeeze | T_3bet (vs オープナー) + 3 × コール数 |
@@ -102,7 +102,7 @@ Score = H + L
 - 0.5L 重み: H と L を等価に扱う
 
 ### 検証精度 (knowledges/preflop/gto-charts.json)
-- RFI: 91.1% / 対RFI 3-bet: 92.7% / BB defense: 74.3% / 4-bet: 100%
+- RFI: 89.5% / 対RFI 3-bet (CO/HJ/SB): 95.5% / BB defense (5 シナリオ): 83.4% / 4-bet: 100% / 全体: 89.1%
 
 ### 補助ルール (約 7-8% の境界ケースを補完)
 - 小ペア set mining: コール額 × 15 ≤ 相手スタック → CALL

@@ -95,7 +95,7 @@ Score_BB = 通常スコア式で
 
 T_3bet / T_call:
   vs UTG: 34 / 24    vs HJ:  32 / 23
-  vs CO:  28 / 22    vs BTN: 28 / 18
+  vs CO:  28 / 22    vs BTN: 28 / 18    vs SB: 32 / 18
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 【Squeeze (1 オープン + 1 コール後の 3-bet)】
