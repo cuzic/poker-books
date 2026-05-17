@@ -7,7 +7,7 @@
 
 ---
 
-<figure><img src="images/p22-fig1-utg-range-chart.jpg" alt="しきい値23基準のUTGオープンレンジを色分けした13×13マトリクスチャート" /><figcaption>しきい値23基準のUTGオープンレンジを色分けした13×13マトリクスチャート</figcaption></figure>
+<figure><img src="images/p22-fig1-utg-range-chart.jpg" alt="しきい値24基準のUTGオープンレンジを色分けした13×13マトリクスチャート" /><figcaption>しきい値24基準のUTGオープンレンジを色分けした13×13マトリクスチャート</figcaption></figure>
 
 <figure><img src="images/p22-fig2-btn-range-chart.jpg" alt="しきい値18基準のBTNオープンレンジを色分けした13×13マトリクスチャート（全体の41%）" /><figcaption>しきい値18基準のBTNオープンレンジを色分けした13×13マトリクスチャート（全体の41%）</figcaption></figure>
 
