@@ -185,8 +185,10 @@ T3 ハンド（HS=15）が CBet（ブラフ）できるボードとして正し�
 
 ### 解答
 
+<!-- textlint-disable ja-technical-writing/sentence-length -->
 - **問1**: 正解は **1**（Q♣T♣8♦ は2枚が♣で1枚が♦ → 2トーン。top は Q だが、9ルールの優先順位は「2トーン × top A/K → B=56」が先。top は Q なので「2トーン（そのほか）→ ルール5 → B=50」。B=50 < 58 なので T2 はチェックです）
 - **問2**: 正解は **2**（T3 の CBet 条件は B≥62。選択肢2: K♠9♥4♣ はレインボー × top K → ルール7 → B=62。B≥62 を満たすため T3 ブラフが可能。選択肢1: J-high レインボーで spread=11-2=9 → ルール9 → B=55 → 不可。選択肢3: 2トーン → B=50 → 不可。選択肢4: レインボー top T → T は A/K/Q でもなく、spread≤3 の条件も確認すると T(10)-4(4)=6 → 不可 → ルール9 → B=55 → 不可）
+<!-- textlint-enable ja-technical-writing/sentence-length -->
 
 ---
 
