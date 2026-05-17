@@ -14,7 +14,7 @@
 
 <figure><img src="images/p12-fig1-3bet-score-formula.jpg" alt="プリフロップスコア式の構造と各コンポーネントの説明図（3-bet 判定への適用）" /><figcaption>プリフロップスコア式の構造と各コンポーネントの説明図（3-bet 判定への適用）</figcaption></figure>
 
-<figure><img src="images/p12-fig2-3bet-threshold-ladder.jpg" alt="対UTG〜対SBオープン者別の3betしきい値ラダー（26 → 20）" /><figcaption>対UTG〜対SBオープン者別の3betしきい値ラダー（26 → 20）</figcaption></figure>
+<figure><img src="images/p12-fig2-3bet-threshold-ladder.jpg" alt="対UTG〜対SBオープン者別の3betしきい値ラダー（T_3bet=32〜24 / T_call=28〜18）" /><figcaption>対UTG〜対SBオープン者別の3betしきい値ラダー（T_3bet=32〜24 / T_call=28〜18）</figcaption></figure>
 
 <figure><img src="images/p12-fig3-blocker-effect.jpg" alt="AK保有時に相手のAA/KK/AKコンボが16→12に減少するブロッカー効果の視覚化" /><figcaption>AK保有時に相手のAA/KK/AKコンボが16→12に減少するブロッカー効果の視覚化</figcaption></figure>
 
