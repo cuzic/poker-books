@@ -109,7 +109,9 @@ ICM ベースのプッシュ/フォールド計算に特化したオンライン
 
 ### Malmuth-Harville（マルムース・ハービル）
 
-ICM の計算アルゴリズムの正式名称。各プレイヤーの着順確率をチップ比率の積として再帰的に計算します。n 人なら n! 通りの完了順を網羅するため、手計算は困難ですが概念の理解に3人計算が有効です。詳細は第4章参照。
+<!-- textlint-disable ja-technical-writing/no-exclamation-question-mark -->
+ICM の計算アルゴリズムの正式名称。各プレイヤーの着順確率をチップ比率の積として再帰的に計算します。n 人なら n の階乗（n!）通りの完了順を網羅するため、手計算は困難ですが概念の理解に3人計算が有効です。詳細は第4章参照。
+<!-- textlint-enable ja-technical-writing/no-exclamation-question-mark -->
 
 ### MTT（Multi-Table Tournament）
 

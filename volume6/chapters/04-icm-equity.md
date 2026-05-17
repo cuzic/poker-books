@@ -69,7 +69,9 @@ P(完了順 j₁, j₂, j₃, …) = (sⱼ₁ ÷ S)
 ICM equity(i) = Σ [全完了順 σ] P(σ) × 賞金(σ における i の順位)
 ```
 
-n 人なら n! 通りの完了順が存在します。3人なら6通り、9人なら 362,880 通りです。手計算は現実的ではありませんが、構造を理解するには3人の例が最適です。
+<!-- textlint-disable ja-technical-writing/no-exclamation-question-mark -->
+n 人なら n の階乗（n!）通りの完了順が存在します。3人なら6通り、9人なら 362,880 通りです。手計算は現実的ではありませんが、構造を理解するには3人の例が最適です。
+<!-- textlint-enable ja-technical-writing/no-exclamation-question-mark -->
 
 ---
 
