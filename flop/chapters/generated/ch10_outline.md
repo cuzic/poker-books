@@ -98,7 +98,7 @@ check-raise 頻度: cr_river_study 完了後に追記予定。
 1. IP: HS (Tier) × B (Board Score) の 2 次元マトリクスで CBet 決定
 2. T1 (HS≥65): ボード問わず常時CBet — 例外なし
 3. T2 (HS 20-64): B≥58 でCBet — 乾燥rainbowでもbet
-4. T3 (HS<20): B≥62 でのみCBet — A/K-high dryのみ
+4. T3 (HS<20): B≥62 限定CBet — A/K-high dry board のみ
 5. OOP: MDF閾値を超えるかどうかで fold/call 判断
 6. サイズ: wet(B≥70)→75%, dry(B<70)→33% が原則
 
