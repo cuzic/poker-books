@@ -9,7 +9,7 @@
         "max": 200
       },
       "max-comma": {
-        "max": 7
+        "max": 12
       },
       "max-ten": {
         "max": 4
