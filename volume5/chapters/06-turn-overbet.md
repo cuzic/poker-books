@@ -299,7 +299,7 @@ BBのハンド: K♦Q♥
 **ボード確認**: A♠,K♥ + A♥,K♦,7♣,2♠
 
 - hand A,K + board A,K,7,2 = A,A,K,K,7 → 2ペア（Aces & Kings）
-- broadway確認: A-K-Q-J-T のうち A,K のみ → 連続2枚のみ、ストレート不成立 ✓
+- broadway確認: A-K-Q-J-T のうち A,K の連続2枚のみ → ストレート不成立 ✓
 
 **判断**:
 
