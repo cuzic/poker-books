@@ -61,7 +61,7 @@
 
 **特徴**：最もタイト。Score 24 以上のハンドのみ。プリフロップスコアが A・K ブロッカーを織り込むため、AJo / ATo / KQo も Score ≥ 24 で自動的にオープン域に入ります。
 
-### HJ（T_open=22、別名 HJ）
+### HJ（T_open=22）
 
 UTG のハンドに加えて：
 
@@ -273,11 +273,11 @@ K ブロッカー +2。差4以上ペナルティは A 免除なし。
 - **EQR**：Equity Realization。実現率。生エクイティを実際にEVとして回収できる比率
 - **EV**：Expected Value。期待値
 - **GTO**：Game Theoretic Optimal。ゲーム理論的最適戦略
-- **HJ**：Hijack。6-maxの2番目のポジション（本書ではMPとも）
+- **HJ**：Hijack。6-maxの2番目のポジション（旧称 MP）
 - **ICM**：Independent Chip Model。トーナメントの賞金構造を反映したチップ価値モデル
 - **IP**：In Position。相手より後に行動できる有利な位置
 - **MDF**（英語: Minimum Defense Frequency / MDF、最低防衛頻度）：相手のベットに対してフォールドしすぎないための限界値。文脈に応じて「MDFライン」（守る対象）「MDF」（数値）と使い分ける
-- **HJ**：Middle Position。6-maxの2番目のポジション（本書ではHJと同じ）
+- **MP**：Middle Position。6-maxの2番目のポジション（本書ではHJと同じ）
 - **OOP**：Out Of Position。相手より先に行動しなければならない不利な位置
 - **PFR**：Preflop Raise。プリフロップでレイズした割合
 - **RFI**：Raise First In。最初にレイズする頻度
