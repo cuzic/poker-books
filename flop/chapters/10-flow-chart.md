@@ -291,6 +291,8 @@ STEP 1 と STEP 2 が自動化されると、STEP 3（Tier 判定）以降は自
 
 ---
 
+<!-- textlint-disable ja-technical-writing/sentence-length -->
+
 ## ミニクイズ
 
 ### 問1
