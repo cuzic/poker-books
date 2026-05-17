@@ -72,7 +72,7 @@ forward thinking の出発点はプリフロップです。巻①で学んだオ
 
 ### Board Score B がフロップの特性を決める
 
-フロップで最初に評価すべきことはボードの特性です。巻②・巻③で学んだ Board Score B と T1/T2/T3 が、フロップCBet判断を通じてこの評価を行いました。
+フロップで最初に評価すべきことはボードの特性です。巻②・巻③で学んだ Board Score B と T1/T2/T3 が、フロップCBet判断を通じてこの評価をしました。
 
 ```
 Board Score B の目安:
@@ -374,12 +374,23 @@ forward thinking と backward induction の正しい処理順序はどれです�
 
 ### 解答
 
+<!-- textlint-disable ja-technical-writing/sentence-length -->
+
 - **問1**: 1（forward thinking の3レイヤーは「プリフロップ情報（ベースレンジとレイズ歴）」「フロップ情報（Board Score B + T1/T2/T3 によるボード特性の評価とCapped/Uncappedの確立）」「ターン視点でのレンジ更新（ターンカードの5分類とハンドエボリューション）」の3段階です。バレルスコア・α 式・後手スコアは暗算式であり、forward thinking のレイヤーではなく、その出力を使って計算する別のツールです）
 
-- **問2**: 2（BBはフロップCBetコールの時点でCappedが確立しています。AAはプリフロップ3-bet済みでほぼ不在、KKも同様です。フロップCRに強いハンドを使った残りがコールレンジとなっています。ターンにK♣が落ちることでBBのコールレンジ内のKx系（KQ・KJ・KTs等）がセカンドペア以上に昇格しますが、ナッツ（AK等の2ペア・KK のトップセット）はBTNのUncappedレンジのほうが多く含まれます。BBはCappedの状態が継続していると評価します）
+- **問2**: 2（BBはフロップCBetコールの時点でCappedが確立しています。AAはプリフロップ3-bet済みでほぼ不在、KKも同様です。
+  フロップCRに強いハンドを使った残りがコールレンジとなっています。
+  ターンにK♣が落ちることでBBのコールレンジ内のKx系（KQ・KJ・KTs等）がセカンドペア以上に昇格しますが、
+  ナッツ（AK等の2ペア・KKのトップセット）はBTNのUncappedレンジのほうが多く含まれます。
+  BBはCappedの状態が継続していると評価します）
 
-- **問3**: 2（forward thinking が先、backward induction が後という順序が正しいです。backward induction では「相手がどのハンドでコールするか」という相手レンジの評価が必要です。この前提をforward thinking で確定させないと、backward induction の精度が下がります。「現在のレンジを確定してから、リバーを先読みする」という順序が3軸統合の処理フローです）
+- **問3**: 2（forward thinking が先、backward induction が後という順序が正しいです。
+  backward induction では「相手がどのハンドでコールするか」という相手レンジの評価が必要です。
+  この前提をforward thinking で確定させないと、backward induction の精度が下がります。
+  「現在のレンジを確定してから、リバーを先読みする」という順序が3軸統合の処理フローです）
 
+
+<!-- textlint-enable ja-technical-writing/sentence-length -->
 ---
 
 > **本章まとめ**
