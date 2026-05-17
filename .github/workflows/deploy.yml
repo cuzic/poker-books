@@ -43,7 +43,7 @@ jobs:
         with:
           name: epub-files
           path: dist/*/mayowanai-poker-*.epub
-          retention-days: 90
+          retention-days: 30
           if-no-files-found: error
 
       - name: Setup Pages
@@ -53,6 +53,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist/site'
+          retention-days: 1
 
   deploy:
     environment:
