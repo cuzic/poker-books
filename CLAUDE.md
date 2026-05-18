@@ -15,6 +15,8 @@
 | ⑤ | 迷わないポーカー⑤ ターン・リバー[応用] | `volume5/` | 公開済み |
 | ⑥ | 迷わないポーカー⑥ トーナメント | `volume6/` | 公開済み |
 | — | 迷わないポーカー ダイジェスト（全 6 巻の地図） | `digest/` | 公開済み |
+| — | 迷わないポーカー フロップ〜リバー基礎（短縮版） | `vol2/` | 初稿完了 (KDP未登録) |
+| — | エクスプロイト・ポーカー — 相手タイプ別に崩す技術 | `tell/` | 初稿完了 (KDP未登録) |
 
 ## 共通の設計思想
 
@@ -134,6 +136,8 @@ knowledges/<book>/reviews/review_<scope>.md
 - ターン・リバー[応用]: https://gistpreview.github.io/?f1c3973e0576af76f29ecf9a91fddb5b
 - トーナメント編: https://gistpreview.github.io/?0923d0ef729f7a18aa11682402b3ef7b
 - ダイジェスト版: https://gistpreview.github.io/?2abb4d163ac9e989333eb6db2a11f364
+- フロップ〜リバー基礎（vol2）: https://gistpreview.github.io/?d50e33d174d918b1bbe9b7821ca8d1bb
+- エクスプロイト・ポーカー（tell）: https://gistpreview.github.io/?519b2350329278e7be6f09e5be449cd9
 
 加えて GitHub Pages 経由で全巻を公開済み: <https://cuzic.github.io/poker-books/>
 （`.github/workflows/deploy.yml` で main push 時に自動デプロイ）
