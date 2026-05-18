@@ -264,6 +264,220 @@ URL: https://blog.gtowizard.com/how_pros_use_solvers_to_crush_pool_leaks/
 
 ---
 
+## 7. 会話Tell（Verbal Poker Tells）
+
+調査日: 2026-05-18 / 出典: Zachary Elwood "Verbal Poker Tells"(2014)、888poker、PokerNews
+
+### 主要知見
+
+**基本原則：強い手は黙る、弱い手は話す**
+
+ポットが小さく判断が残っている段階では、強い手（AA/KK/フロップナッツ）を持つプレイヤーはほぼ必ず沈黙する。理由：「相手を怖がらせたくない」心理と「最大バリューを取るための集中」が重なる。逆に普段は饒舌なプレイヤーが突然黙れば強い手のシグナル、寡黙なプレイヤーが急に話し始めれば弱い手（ブラフ）を示唆する。
+
+**Elwoodの分類（WSOP・Poker After Dark等の実際のハンドを分析）**
+
+| カテゴリ | 内容 |
+|---------|------|
+| 弱い手の発言 | ブラフ中に話題を変える、「どれくらい持っているの？」など |
+| 強い手の発言 | 少ない（黙るのが基本） |
+| 誘導・ミスリード系 | 意図的な「弱い手演技」発言 |
+| 話量・沈黙パターン | 急な沈黙→強い、急な多弁→弱い |
+
+**信頼度と限界**
+
+- 身体Tellより意識的にコントロールしやすい → 信頼度は低〜中
+- 「自発的な発言」のみ有効。質問への返答は判断材料にならない
+- 経験豊富なプレイヤーは意図的に逆演技（弱い手で黙り、強い手で話す）
+- Elwood自身も「複数シグナルと文脈の組み合わせが必須」と強調
+
+出典:
+- Zachary Elwood "Verbal Poker Tells" https://www.readingpokertells.com/products/verbal-poker-tells/
+- 888poker解説 https://www.888poker.com/magazine/strategy/verbal-poker-tells
+
+---
+
+## 8. アイソレートレイズ（Isolation Raise）
+
+調査日: 2026-05-18 / 出典: BlackRain79、888poker、Upswing Poker
+
+### 目的と構造
+
+フィッシュ・CSのリンプに対してiso-raiseを行う目的：ヘッズアップで不利な相手と対峙し、マルチウェイのセット・二ペアリスクを排除しつつエクイティアドバンテージを最大化する。
+
+### サイズ公式
+
+| 環境 | 公式 |
+|------|------|
+| オンライン | 3BB + 1BB × リンパー数 |
+| ライブ | 4BB + 1BB × リンパー数 |
+| OOPの場合 | 上記 + 1BB |
+
+例：ライブでリンパー2人、OOP → 4 + 2 + 1 = **7BB**
+
+### 後ろのプレイヤーのタイプによる調整
+
+- **後ろがニット** → 標準サイズで問題なし（コールドコールリスク低）
+- **後ろがLAG/マニアック** → スクイズを警戒。iso-raiseを諦めてコールにとどめるか、さらに大きいサイズで圧力
+
+### ポストフロップ方針
+
+CSはベットサイズへの感度が低く、ポット50%も67%も同様にコール。→ 通常より大きめのバリューベットが推奨。ブラフ頻度を下げ、強い手で大きく取る。
+
+出典:
+- BlackRain79 https://www.blackrain79.com/2015/11/isolating-fish-complete-how-to-guide.html
+- 888poker https://www.888poker.com/magazine/strategy/iso-raising-poker-all-you-need-know
+- Upswing Poker https://upswingpoker.com/vs-multiple-limpers/
+
+---
+
+## 9. 遅延CBet・遅延ブラフ（Delayed C-Bet）
+
+調査日: 2026-05-18 / 出典: GTO Wizard Blog、Upswing Poker
+
+### 定義
+
+プリフロップ・アグレッサーがフロップをチェックした後にターンでベットする行動。通常のCBetを「遅らせた」形。
+
+| アクション | 定義 |
+|---------|------|
+| 遅延CBet | アグレッサーがフロップチェック後にターンベット |
+| プローブ | OOP側がアグレッサーのチェックバックに乗じてターンをリード |
+| フロート | 相手のCBetをコールし、ターンで奪いに行く |
+
+### ボード別有効性
+
+- **ドライ・レインボーフロップ**：遅延CBetが最も機能。相手がコネクトしにくくターンチェックが弱い
+- **コネクテッド・ウェットフロップ**：ベット頻度はやや落ちる。オーバーベットは少ない
+
+### ニット相手に特に有効な理由（GTO Wizard "Exploiting the Nit"）
+
+ニットはフロップをコールするとき非常に強い手しか持っていない → ターンをチェックすると残るのは弱い部分のみ。この非対称性により、遅延CBetが高確率でフォールドを取れる。GTO Wizard分析：543rボードでニットにチェックを強制 → BTNのベット頻度が**45%→20%**に急落し、遅延アプローチが正当化される。
+
+### セミブラフとしての活用
+
+フラッシュドローやストレートドローと組み合わせて遅延ブラフ：フォールドされれば即利益、コールされてもアウツでバックアップ。Upswing Poker：「フロップチェック後のターンベットはブラフとしての成功率が通常のCBetより高い場面がある」
+
+出典:
+- GTO Wizard: Delayed C-Betting https://blog.gtowizard.com/delayed-c-betting/
+- GTO Wizard: The Turn Probe Bet https://blog.gtowizard.com/the-turn-probe-bet/
+- Upswing Poker: Delayed C-Bet Strategy https://upswingpoker.com/delayed-continuation-bet-c-bet-strategy/
+
+---
+
+## 10. ベットサイズTell（Sizing Tell）
+
+調査日: 2026-05-18 / 出典: Upswing Poker、GTO Wizard Blog、Phil Galfond
+
+### プリフロップのサイジングリーク（ライブで頻出）
+
+低ステークスライブ（$1/$3 等）では少なくとも3人以上がハンド強度に応じてサイズを変える傾向がある（Upswing Poker）。
+
+| オープンサイズ | 示す傾向のあるハンド |
+|--------------|------------------|
+| リンプ（コール） | 弱いAx、低ポケットペア、スーテッドコネクタ（投機的） |
+| 小さいレイズ（2〜3BB） | オフスーツブロードウェイ、低〜中ポケットペア |
+| 大きいレイズ（4〜5BB） | スーテッドブロードウェイ、TT-88、ATs-AJs |
+| 巨大レイズ（5BB超） | JJ-AA、AKs/AKo |
+
+オンラインではこのリークは薄れるが、ライブの弱いプレイヤーには高頻度で観察される。
+
+### ポストフロップのベットサイズと手の強さ（GTO Wizard "The Mechanics of C-Bet Sizing"）
+
+**ベットサイズの主要ドライバーはナッツアドバンテージとフォールドエクイティ**
+
+- **大ベット（ポット75%超 / オーバーベット）**: 一方のレンジにナッツが偏っている（ポラライズ）とき。ナッツ or 強いブラフで使う
+- **小ベット（ポット25〜33%）**: マージドレンジ（中程度のハンドが多い）のとき。ナッツアドバンテージではなく中程度ハンドの優位性がある場合に機能（GTO Wizard "Pushing Equity With Small Bets"）
+- **スーパーウェットボード（Q♦J♦T♦等）では逆説的に小ベット**: 両者ともナッツを持てるためナッツアドバンテージが消え、大ベットのメリットが低下
+
+搾取可能なリーク例（Phil Galfond）: AA・AK・KQで75%ポットを好み、セット・KJ・KTで25%ポットを好む癖。GTOでは全ハンドで複数サイズを混在させる必要がある。
+
+### ストリート別サイズパターン（複数ストリートで読む）
+
+| パターン | よくある意味 |
+|---------|------------|
+| フロップ大 → ターン大（ダブルバレル） | 強い継続バレル。ナッツ or ドロー継続 |
+| フロップ大 → ターン小 | 確信が弱まったサイン or 薄いバリュー維持。「自信減衰パターン」 |
+| フロップ大 → ターン大 → リバー急縮小 | ドロー外れのオートパイロットブラフの典型 |
+| リバーのオーバーベット（ポット超） | ポラライズ極大（ナッツ or 強いブラフ）のジオメトリックサイジング |
+
+出典:
+- Upswing Poker: How to Spot Preflop Sizing Tells https://upswingpoker.com/preflop-sizing-tells/
+- GTO Wizard: The Mechanics of C-Bet Sizing https://blog.gtowizard.com/the-mechanics-of-c-bet-sizing/
+- GTO Wizard: Pushing Equity With Small Bets https://blog.gtowizard.com/pushing-equity-with-small-bets/
+
+---
+
+## 11. ベッティングラインTell（Betting Line Tell）
+
+調査日: 2026-05-18 / 出典: GTO Wizard Blog、BlackRain79、PokerPro
+
+### 主要パターンと意味
+
+| ベッティングライン | よくある意味 | 対応策 |
+|----------------|------------|--------|
+| CBet → チェック（失速） | ターンに弱い部分が多い（キャップ状態）| フロート or プローブで攻める |
+| チェック → コール → リバーレイズ（CR） | ほぼナッツ（スロープレイ後のトラップ） | フォールド推奨 |
+| CBet → CBet → チェック | バリュー薄め（リバーで勇気がなくなった）| リバープローブが有効 |
+| チェック → チェック → リバーベット | バックドロー完成 or ドロー外れブラフ | タイプで判断 |
+| フロップ大 → ターン大 → リバー急縮小 | ドロー外れのオートパイロットブラフ | レイズ or ライトコール |
+| ドンクベット（フロップ） | 中程度以下のハンド or ドロー試し打ち | レイズで圧力 |
+
+### 特記事項
+
+- **チェックレイズ（特にリバー）はほぼナッツ**: BlackRain79「マイクロステークスのチェックレイズは常に非常に強いハンド」。リバーCRにコールするのは危険
+- **フロップCBet後のターンチェック = キャップ**: 相手のナッツ級がフロップで現れていない。OOPからのプローブ、IPからのフロートが有効
+- **ドロー外れのサイン**: チェックコールを早くして、リバーでタンクしてからベット → ドロー外れブラフの典型
+
+出典:
+- GTO Wizard: Delayed C-Betting https://blog.gtowizard.com/delayed-c-betting/
+- BlackRain79: Poker Timing Tells and Betting Patterns https://www.blackrain79.com/2014/10/online-poker-timing-tells-and-betting.html
+- PokerPro: The Stories Bluffs Tell https://www.poker.pro/strategy/the-stories-bluffs-tell-how-to-read-betting-patterns/
+
+---
+
+## 12. タイミングTell（Timing Tell）
+
+調査日: 2026-05-18 / 出典: Zachary Elwood、Poker Academy、BlackRain79
+
+### Elwoodのスナップコール定理（readingpokertells.com, 2013）
+
+**スナップコールはレイズの選択肢を即座に排除したことを意味する**
+
+- **ウェット・低いボードでのスナップコール**: 強いドロー（フラッシュドロー等）の可能性が高い
+- **高いボード（A/K/Qフロップ）でのスナップコール**: トップペア弱キッカーなど「コールするほど強いがレイズするほどでない」マージナルハンドを示唆
+
+### 数値データ（Poker Academy タイミングテル研究）
+
+| アクション | 数値 |
+|---------|------|
+| 1.5秒以内の即RFI → 3ベット対応率 | 47%（強いレンジ） |
+| 9秒以上の遅いRFI → フォールド率 | 55%に上昇（弱いレンジ） |
+| 4秒以内の3ベットコール → その後フォールド率 | 35% |
+| 10秒超の3ベットコール → その後フォールド率 | 45% |
+
+### タイムバンク活用パターン（オンライン、PokerStrategy分析）
+
+- **タイムバンク使用後に素早くベット** → ハリウッディング（演技）の可能性。強いハンドのサインである可能性が高い
+- **タイムバンクが残りわずかになってからオールイン** → 非常に強いハンドのサイン（ライブ・オンライン共通）
+- **本当の迷いのある決断 → 全タイムバンクを消費する傾向**
+
+### ライブとオンラインの違い
+
+| 観点 | ライブ | オンライン |
+|------|--------|---------|
+| 主な情報源 | 身体的Tell＋タイミング | タイミングがほぼ唯一の行動指標 |
+| タイムバンク | 意図的な演技が多い | パターン分析が有効 |
+| スナップコール | 身体言語と組み合わせて判断 | 数値データが主軸 |
+
+**BlackRain79の補足**: フロップでの即座のCBetは中程度以下のハンドの傾向。「大きなハンドや微妙な判断が必要な場面では人は考える時間をとる」という基本原理が機能する。ただし熟練プレイヤーは複数場面で一貫したパターンを確認することが精度向上に不可欠。
+
+出典:
+- Zachary Elwood スナップコール定理 https://www.readingpokertells.com/2013/01/elwoods-snap-call-theorem/
+- Poker Academy: The Hidden Power of Timing Tells https://poker.academy/blog/post/the-hidden-power-of-timing-tells
+- BlackRain79: Poker Timing Tells and Betting Patterns https://www.blackrain79.com/2014/10/online-poker-timing-tells-and-betting.html
+
+---
+
 ## 6. 主要参考文献リスト
 
 ### 書籍
