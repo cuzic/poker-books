@@ -84,17 +84,20 @@ Score = H + L
       − ペナルティ: 差4以上−1 (A 含むと免除) / 両カード 9 未満 −1
 ```
 
-### 閾値表
+### 閾値表（v3 2026-05-19、GTO Wizard 3betV2 検証済）
 
 | シーン | 閾値 |
 |---|---|
-| RFI (open) | UTG=24 / HJ=22 / CO=20 / BTN=18 / SB=22 |
-| 対 RFI 3-bet (BTN のみ二段) | vs UTG: T_3bet=32, T_call=28 / vs HJ: 32/27 / vs CO: 24 |
-| 対 RFI 3-bet (CO/HJ/SB は単一) | 28-30 (詳細表は SPEC) |
-| BB defense (二段、Score_BB 使用) | vs UTG: 34/24, HJ: 32/23, CO: 28/22, BTN: 28/18, SB: 32/18 |
+| RFI (open) | UTG=24 / HJ=22 / CO=20 / BTN=18 / SB=18※ |
+| 対 RFI 3-bet (BTN は二段) | vs UTG: T_3bet=32, T_call=29 / vs HJ: 28/26 / vs CO: 25 |
+| 対 RFI 3-bet (HJ/CO は単一) | vs UTG: 29 / vs HJ: 29 |
+| 対 RFI 3-bet (SB は単一) | vs UTG: 29 / vs HJ: 29 / vs CO: 28 / vs BTN: 24 |
+| BB defense (二段、Score_BB 使用) | vs UTG: 33/25, HJ: 32/24, CO: 32/24, BTN: 28/22, SB: 30/19 |
 | 4-bet (vs 3-bet) | T_4bet=33 (全ポジ共通) |
 | 5-bet (vs 4-bet) | T_5bet=39 (全ポジ共通) |
 | Squeeze | T_3bet (vs オープナー) + 3 × コール数 |
+
+※ SB T_open=18 はレイズ or フォールドモデルの最適値。Score 14〜17 はリンプ検討。
 
 ### 廃止された概念
 - Score₃ (= H + 0.5L + ブロッカー...): プリフロップスコアに吸収
