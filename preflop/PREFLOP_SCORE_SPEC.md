@@ -310,22 +310,33 @@ MW では「ベットレベル（何回目の bet か）」× 「参加人数」
 
 ```
 T_raise (squeeze) = T_3bet(vs opener) + 3 × N_callers
-T_call  (IP)      = implied odds zone のみ (Score ≤ 16、4.2 参照)
+T_call  (IP)      = N=1: Score ≤ 16 implied odds のみ (4.2 参照) / N=2: FOLD
 T_call  (OOP/BB)  = Score_BB を使った 2.3 の判定を適用（例外2縮小あり、後述）
 ```
 
+> ⚠️ **スコープ**: 本仕様は N≤2（キャッシュゲームで現実的な範囲）のみ扱う。
+> N≥3 のシナリオ（トーナメント序盤の多人数ポット等）は **プリフロップ トーナメント編** で別途扱う。
+
 **IP (BTN/CO) の判定フロー:**
 ```
-Step 1: Score ≥ T_squeeze                            → raise (スクイーズ)
-Step 2: Score ≤ 16 + suited + gap≤1 + IP + ≥100BB   → cold call (implied odds)
-Step 3: それ以外                                      → FOLD
+[N=1: open + 1 cold call]
+  Step 1: Score ≥ T_squeeze                            → raise (スクイーズ)
+  Step 2: Score ≤ 16 + suited + gap≤1 + IP + ≥100BB   → cold call (implied odds)
+  Step 3: それ以外                                      → FOLD
+
+[N=2: open + 2 cold calls]
+  Step 1: Score ≥ T_squeeze (T_3bet + 6)               → raise (スクイーズ)
+  Step 2: FOLD  ← N=2 では IP でも implied odds 不適用
 ```
+
+N=2 で implied odds を取らない理由: 5 人が関わるポットで BTN/CO が低 SC でコールすると
+reverse implied odds（後ろから再スクイーズ）リスクが増大し、期待値がマイナス転化する。
 
 **中〜高 SC が消える理由**: JTs(25)/T9s(23)/QJs(27) は通常の T_call=29 未満なのでもとより
 fold 寄り。HU では 4.2 implied odds で救われていたが、MW では同ルールが適用されなくなる。
 スクイーズ閾値(T_squeeze=35 前後)にも届かない → fold 確定。
 
-GTO 実測（BTN vs UTG+HJ/CO）:
+GTO 実測（BTN vs UTG+HJ/CO, N=1）:
 
 | ハンド | Score | HU 参加率 | MW 参加率 | MW 判定 |
 |--------|-------|---------|---------|--------|
@@ -338,34 +349,40 @@ GTO 実測（BTN vs UTG+HJ/CO）:
 
 ---
 
-**BB defense MW Level 1 — 例外2の縮小:**
+**BB defense MW — 例外2のN スケール縮小:**
 
 HU BB defense では「スーテッド差≤4 → 常に CALL」(例外2) が広い参加を保証している。
-MW では 2G (gap=3) ハンドの suited premium が劇的に低下するため、例外2 を縮小する。
+MW では 2G (gap=3) ハンドの suited premium が劇的に低下するため、例外2 を N に応じて縮小する。
 
 ```
-BB defense MW Level 1 (open + N cold calls):
-  例外1: ペアハンド (22-AA) → CALL  （HU と同じ）
-  例外2: スーテッドで差≤2 → CALL   （HU の差≤4 → MW では差≤2 に縮小）
-  差3以上の suited → 通常 Score_BB vs T_call 判定に戻る
-  T_call (BB) は HU と同じ値を使用
+例外2 の適用閾値: diff ≤ max(0, 2 - N_callers)
+
+  HU (N=0): diff≤4   （変更なし）
+  N=1:      diff≤1   （SC のみ — gap=1 の suited）
+  N≥2:      例外なし  （純粋 Score_BB vs T_call 判定）
 ```
 
-**判定ロジック変化の例（BB vs UTG + BTN cold call、T_call=25）:**
+直感: N が増えるほどポットが多人数化し、suited draw の実現率が下がる。
+SC(diff=1) は最も連結性が高く MW でも価値を維持するが、1G 以上は OOP では実現率不足。
 
-| ハンド | Score_BB | HU 例外2 | MW 例外2 | MW Score判定 | GTO MW | 判定 |
+**N=1 検証（BB vs UTG + BTN cold call、T_call=25）:**
+
+| ハンド | Score_BB | HU 例外2(diff≤4) | MW N=1 例外2(diff≤1) | Score判定 | GTO MW | 精度 |
 |--------|----------|---------|---------|------------|--------|------|
-| J9s    | 28       | diff=2→CALL | diff=2→CALL | 28≥25→CALL | 100%   | ✓ |
-| T8s    | 26       | diff=2→CALL | diff=2→CALL | 26≥25→CALL | 100%   | ✓ |
-| 97s    | 24       | diff=2→CALL | diff=2→CALL | 24<25 (例外) | 96%  | ✓ |
-| 86s    | 22       | diff=2→CALL | diff=2→CALL | 22<25 (例外) | 100% | ✓ |
+| J9s    | 28       | diff=2→CALL | diff=2 → Score | 28≥25→CALL | 100%   | ✓ |
+| T8s    | 26       | diff=2→CALL | diff=2 → Score | 26≥25→CALL | 100%   | ✓ |
+| 97s    | 24       | diff=2→CALL | diff=2 → Score | 24<25→FOLD | 96%    | △ |
+| 86s    | 22       | diff=2→CALL | diff=2 → Score | 22<25→FOLD | 100%   | ✗ |
+| 87s    | 25       | diff=1→CALL | diff=1→CALL(例外) | — | 100%   | ✓ |
+| 76s    | 22       | diff=1→CALL | diff=1→CALL(例外) | — | 100%   | ✓ |
 | **J8s** | **27** | diff=3→CALL | diff=3 → Score | **27≥25→CALL** | **41%** | **✓** |
 | **T7s** | **25** | diff=3→CALL | diff=3 → Score | **25=25→border** | **9%**  | **△** |
 | **96s** | **23** | diff=3→CALL | diff=3 → Score | **23<25→FOLD** | **0%**  | **✓** |
 | **85s** | **21** | diff=3→CALL | diff=3 → Score | **21<25→FOLD** | **0%**  | **✓** |
 | J7s    | 23       | diff=4→CALL | diff=4 → Score | 23<25→FOLD  | 0%   | ✓ |
 
-*T7s は borderline(Score_BB=T_call)。GTO の 9% 参加は「ほぼ fold」として formula 精度の誤差範囲。*
+*97s(24)/86s(22) は GTO 上 CALL だが、diff≤1 例外に入らずスコア不足でFOLD → 誤差約2件。*
+*タイトな設計として許容範囲（Formula はシンプルさ優先）。*
 
 ---
 
@@ -417,11 +434,13 @@ T_raise (5bet) = T_5bet + 3 × N_callers = 39 + 3 × N
 
 **ベットレベル別まとめ**:
 
-| MW レベル | 構造 | T_raise | T_call (IP) | T_call (BB) |
-|----------|------|--------|------------|------------|
-| Level 1  | open + N calls  | T_3bet + 3N | Score ≤ 16 implied odds のみ | HU と同じ T_call（例外2縮小: diff≤2） |
-| Level 2  | 3bet + N calls  | T_4bet + 3N | 要検証（implied odds なし） | 要検証 |
-| Level 3  | 4bet + N calls  | T_5bet + 3N | ほぼなし | ほぼなし |
+| MW レベル | N | 構造 | T_raise | T_call (IP) | T_call (BB) |
+|----------|---|------|--------|------------|------------|
+| Level 1  | 1 | open + 1 call | T_3bet + 3 | Score ≤ 16 (54s-76s) | HU と同じ T_call (例外2: diff≤1) |
+| Level 1  | 2 | open + 2 calls | T_3bet + 6 | FOLD (implied odds 不適用) | HU と同じ T_call (例外2なし) |
+| Level 1  | ≥3 | — | — | **トーナメント編スコープ** | **トーナメント編スコープ** |
+| Level 2  | — | 3bet + N calls | T_4bet + 3N | 要検証 | 要検証 |
+| Level 3  | — | 4bet + N calls | T_5bet + 3N | ほぼなし | ほぼなし |
 
 ---
 
