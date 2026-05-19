@@ -82,7 +82,7 @@ Score_BB = H + L
 
 ---
 
-## 2. 閾値表（シーン別、v2 タイト寄り）
+## 2. 閾値表（シーン別、v3 2026-05-19 GTO Wizard 3betV2 再検証）
 
 ### 2.1 RFI （オープン or フォールド）
 
@@ -92,9 +92,11 @@ Score_BB = H + L
 | HJ  | **22** |
 | CO  | **20** |
 | BTN | **18** |
-| SB  | **22** |
+| SB  | **18** ※ |
 
 判定: `Score ≥ T_open → Open Raise` / 未満 → Fold
+
+※ SB は BB との 1 対 1。GTO ではリンプ（コール）も選択肢。T_open=18 は「レイズ or フォールド」モデルでの最適値。実戦では Score 14〜17 のハンドをリンプ検討。
 
 ### 2.2 対 RFI （3-bet / Call / Fold） — 通常スコア使用
 
@@ -104,33 +106,44 @@ T_call 省略は CALL レンジなし (3-bet or fold pure)。
 
 | 自分↓ \ レイザー→ | UTG | HJ | CO | BTN |
 |---|---|---|---|---|
-| HJ  | 28 | — | — | — |
-| CO  | 28 | 28 | — | — |
-| BTN | **32 / 28** | **32 / 27** | 24 | — |
-| SB  | 30 | 30 | 28 | 24 |
+| HJ  | 29 | — | — | — |
+| CO  | 29 | 29 | — | — |
+| BTN | **32 / 29** | **28 / 26** | 25 | — |
+| SB  | 29 | 29 | 28 | 24 |
 
 太字 = 二段閾値あり。BTN は CALL レンジが広い。
 
 ### 2.3 BB defense — Score_BB 使用 + 例外ルール
 
-BB defense フロー:
+BB defense フロー（HU）:
 ```
 Step 1: Score_BB ≥ T_3bet                      → 3-bet
 Step 2: ペアハンド (22-AA)                      → CALL  ← 例外1
-Step 3: スーテッドで差≤4 (32s, 43s, ..., AKs)  → CALL  ← 例外2
+Step 3: スーテッドで差≤4 (32s, 43s, ..., AKs)  → CALL  ← 例外2 (HU)
 Step 4: T_call ≤ Score_BB < T_3bet             → CALL
 Step 5: Score_BB < T_call                      → FOLD
 ```
 
+BB defense フロー（MW Level 1 — open + N cold calls）:
+```
+Step 1: Score_BB ≥ T_3bet + 3 × N_callers      → 3-bet (squeeze)
+Step 2: ペアハンド (22-AA)                      → CALL  ← 例外1 変更なし
+Step 3: スーテッドで差≤2                        → CALL  ← 例外2 MW (差3以上は通常判定)
+Step 4: T_call ≤ Score_BB < T_squeeze          → CALL
+Step 5: Score_BB < T_call                      → FOLD
+```
+*T_call (BB) は MW でも HU と同じ値を使う。例外2だけ diff≤4→diff≤2 に縮小。*
+*詳細検証: セクション 4.5 参照。*
+
 | レイザー | T_3bet | T_call |
 |---|---|---|
-| vs UTG | **34** | **24** |
-| vs HJ  | **32** | **23** |
-| vs CO  | **28** | **22** |
-| vs BTN | **28** | **18** |
-| vs SB  | **32** | **18** |
+| vs UTG | **33** | **25** |
+| vs HJ  | **32** | **24** |
+| vs CO  | **32** | **24** |
+| vs BTN | **28** | **22** |
+| vs SB  | **30** | **19** |
 
-注: BB vs SB は BB がフロップ IP になる（SB が先行動）。T_3bet=32 は SB が HJ 相当の tightness（T_open=22）による。T_call=18 は IP 優位で広く call できる点で BTN 対比と同値。GTO 精度 82.2%。GTO の二極化 bluff レンジ（Score_BB<28 の low-suited / offsuit blocker 系）は式では再現不可。
+注: BB vs SB は BB がフロップ IP になる（SB が先行動）。T_3bet=30 は BvB では SB が広くオープン（T_open=18）するため BB も広く 3-bet。T_call=19 は IP 優位で広く call できる点を反映。GTO 精度 79.9%。GTO の二極化 bluff レンジ（Score_BB<28 の low-suited 系）は式では再現不可。
 
 ### 2.4 4-bet （vs 3-bet） — 通常スコア使用
 
@@ -170,21 +183,25 @@ Step 5: Score_BB < T_call                      → FOLD
 
 ## 3. 検証精度（GTO チャート整合）
 
-knowledges/preflop/gto-charts.json に対する v2 (2026-05-09) 検証結果:
+GTO Wizard `Cash6m500zGeneral25Open3betV2` (3bet サイズ R7.5/R10-R11) に対する v3 (2026-05-19) 検証結果:
 
 | シーン | 平均精度 |
 |---|---|
-| RFI (4 ポジ + SB) | 89.5% |
-| 対 RFI 3-bet (CO/HJ/SB) | 95.5% |
-| 対 RFI 3-bet (BTN) | 85.4% |
-| **BB defense (5 シナリオ)** | **83.4%** |
+| RFI (LJ〜BTN) | 89.6% |
+| RFI (SB) | 82.2% |
+| 対 RFI 3-bet (HJ/CO) | 95.9〜97.0% |
+| 対 RFI 3-bet (BTN) | 87.0〜89.9% |
+| 対 RFI 3-bet (SB) | 91.7〜94.7% |
+| **BB defense (4 シナリオ)** | **83.4〜88.2%** |
+| **BB vs SB raise (BvB)** | **79.9%** |
 | 4-bet | 100% (本書ルール一致) |
-| **全体平均** | **89.1%** |
+| **全体平均** | **89.7%** |
 
-実装は `scripts/generate/core/preflop_score.py`、検証は `/tmp/verify_actual_accuracy.py`。
+検証スクリプト: `poker-drill/scripts/precompute/verify_formula.py`
+生データ: `poker-drill/scripts/precompute/raw_ranges_3betv2/`
 
-詳細データ: `/tmp/calibrate_unified.py` の出力。
-原始データ: `knowledges/preflop/gto-charts.json`
+旧精度 (v2, R13.5 3bet サイズ): 全体 85.3%
+主な改善: ベットサイズを R10-R11 (3betV2) に統一することで BB defense の精度が +10% 改善。
 
 ### 3.1 既知の誤差ケース（境界ハンド一覧）
 
@@ -240,15 +257,40 @@ T_3bet=32, T_call=18 で 82.2% 精度。残 17.8% はブラフ 3-bet 未再現�
 例: 3BB に 33 でコール、相手 45BB+ あれば CALL。
 
 ### 4.2 スーテッドコネクター 暗黙オッズ
-SC (54s-T9s) で `Score < T_call` でも、IP かつ深スタックなら CALL:
+
+SC で `Score < T_call` でも implied odds が成立する場合は参加可。
+**HU と MW で適用範囲が異なる。**
+
 ```
-IP かつ 相手スタック ≥ 100bb → CALL 寄り
+【HU (1 対 1)】
+  IP かつ Score ≤ 23 (54s〜T9s) かつ 相手スタック ≥ 100BB → CALL
+
+【MW Level 1 (open + cold call、IP から)】
+  IP かつ Score ≤ 16 (54s〜76s) かつ 相手スタック ≥ 100BB → cold call のみ可
+  Score 17〜23 (87s〜T9s) は implied odds ルール不適用 → FOLD
+
+【MW Level 1 (open + cold call、OOP から: BB/SB)】
+  OOP では BB/SB の squeeze ルールおよび Score_BB 判定を使う（2.3 / 2.6）
 ```
-GTO 上は wide IP defense range の一部。
+
+スコア対照（参考）:
+
+| ハンド | Score | HU implied odds | MW IP implied odds |
+|--------|-------|----------------|-------------------|
+| 54s    | 12    | ✓              | ✓                 |
+| 65s    | 14    | ✓              | ✓                 |
+| 76s    | 16    | ✓              | ✓（ギリギリ）      |
+| 87s    | 18    | ✓              | ✗                 |
+| 98s    | 20    | ✓              | ✗                 |
+| T9s    | 23    | ✓              | ✗                 |
+| JTs    | 25    | ✓（4.3 参照）  | ✗                 |
+
+GTO 実測（BTN vs UTG open + HJ cold call): 65s=55%・76s=14% 参加、87s〜JTs ≈ 0%。
 
 ### 4.3 3-bet ブラフコンボ（上級者向け）
 A2s-A5s (wheel suited), K9s, QJs などはGTO上でブラフ 3-bet 候補。
 本書では「上級者向けの混合戦略」として別章で扱う。本式では fold 扱い。
+MW スクイーズでは A3s/A4s が IP squeeze 候補として浮上するが、T_squeeze 閾値に委ねる（閾値を超えれば自動的に raise 判定）。
 
 ### 4.4 BB defense wide call
 BB は 1bb 払い済 → ポットオッズが好い。式の T_call よりさらに広く CALL:
@@ -256,6 +298,130 @@ BB は 1bb 払い済 → ポットオッズが好い。式の T_call よりさ�
 BB は IP オープンに対し suited 系を T_call − 3 まで広く CALL
 ```
 精度 74% の主な誤分類はこの BB の wide call。
+
+### 4.5 マルチウェイ (MW) での参加判断 — ベットレベル別
+
+MW では「ベットレベル（何回目の bet か）」× 「参加人数」で閾値が変わる。
+二段閾値（T_call / T_raise）はそのまま使い、閾値値のみ以下のルールで決定する。
+
+#### Level 1 MW: open + N cold calls（3bet 前）
+
+例: UTG open → HJ cold call → BTN の判断
+
+```
+T_raise (squeeze) = T_3bet(vs opener) + 3 × N_callers
+T_call  (IP)      = implied odds zone のみ (Score ≤ 16、4.2 参照)
+T_call  (OOP/BB)  = Score_BB を使った 2.3 の判定を適用（例外2縮小あり、後述）
+```
+
+**IP (BTN/CO) の判定フロー:**
+```
+Step 1: Score ≥ T_squeeze                            → raise (スクイーズ)
+Step 2: Score ≤ 16 + suited + gap≤1 + IP + ≥100BB   → cold call (implied odds)
+Step 3: それ以外                                      → FOLD
+```
+
+**中〜高 SC が消える理由**: JTs(25)/T9s(23)/QJs(27) は通常の T_call=29 未満なのでもとより
+fold 寄り。HU では 4.2 implied odds で救われていたが、MW では同ルールが適用されなくなる。
+スクイーズ閾値(T_squeeze=35 前後)にも届かない → fold 確定。
+
+GTO 実測（BTN vs UTG+HJ/CO）:
+
+| ハンド | Score | HU 参加率 | MW 参加率 | MW 判定 |
+|--------|-------|---------|---------|--------|
+| 65s    | 14    | 62%     | 55%     | Step2 cold call ✓ |
+| 76s    | 16    | 76%     | 15%     | Step2 cold call ✓ |
+| 87s    | 18    | 41%     | 0%      | fold ✓ |
+| T9s    | 23    | 100%    | 0%      | fold ✓ |
+| JTs    | 25    | 100%    | 2%      | fold ✓ |
+| A4s    | 23    | 100%    | 100%    | Step1 squeeze ✓ |
+
+---
+
+**BB defense MW Level 1 — 例外2の縮小:**
+
+HU BB defense では「スーテッド差≤4 → 常に CALL」(例外2) が広い参加を保証している。
+MW では 2G (gap=3) ハンドの suited premium が劇的に低下するため、例外2 を縮小する。
+
+```
+BB defense MW Level 1 (open + N cold calls):
+  例外1: ペアハンド (22-AA) → CALL  （HU と同じ）
+  例外2: スーテッドで差≤2 → CALL   （HU の差≤4 → MW では差≤2 に縮小）
+  差3以上の suited → 通常 Score_BB vs T_call 判定に戻る
+  T_call (BB) は HU と同じ値を使用
+```
+
+**判定ロジック変化の例（BB vs UTG + BTN cold call、T_call=25）:**
+
+| ハンド | Score_BB | HU 例外2 | MW 例外2 | MW Score判定 | GTO MW | 判定 |
+|--------|----------|---------|---------|------------|--------|------|
+| J9s    | 28       | diff=2→CALL | diff=2→CALL | 28≥25→CALL | 100%   | ✓ |
+| T8s    | 26       | diff=2→CALL | diff=2→CALL | 26≥25→CALL | 100%   | ✓ |
+| 97s    | 24       | diff=2→CALL | diff=2→CALL | 24<25 (例外) | 96%  | ✓ |
+| 86s    | 22       | diff=2→CALL | diff=2→CALL | 22<25 (例外) | 100% | ✓ |
+| **J8s** | **27** | diff=3→CALL | diff=3 → Score | **27≥25→CALL** | **41%** | **✓** |
+| **T7s** | **25** | diff=3→CALL | diff=3 → Score | **25=25→border** | **9%**  | **△** |
+| **96s** | **23** | diff=3→CALL | diff=3 → Score | **23<25→FOLD** | **0%**  | **✓** |
+| **85s** | **21** | diff=3→CALL | diff=3 → Score | **21<25→FOLD** | **0%**  | **✓** |
+| J7s    | 23       | diff=4→CALL | diff=4 → Score | 23<25→FOLD  | 0%   | ✓ |
+
+*T7s は borderline(Score_BB=T_call)。GTO の 9% 参加は「ほぼ fold」として formula 精度の誤差範囲。*
+
+---
+
+**SB MW Level 1 — cold caller のポジションで挙動が分岐:**
+
+GTO 実測（N=1 cold call）による SB の suited connector 参加率変化：
+
+| SB シナリオ | HU→MW SC Δ | HU→MW 1G Δ | 傾向 |
+|------------|-----------|-----------|------|
+| vs UTG / MW:+BTN | −0.296 | −0.013 | SC 大幅減（BTN+HJ の2人がいるため） |
+| vs UTG / MW:+CO  | −0.330 | −0.013 | SC 大幅減 |
+| vs HJ  / MW:+BTN | +0.133 | +0.106 | **SC 増加** |
+| vs CO  / MW:+BTN | +0.092 | +0.079 | **SC 増加** |
+| vs UTG / MW:+BTN（再掲） | +0.130 | +0.064 | SC 増加 |
+
+**解釈**: cold caller が BTN (wide range) の場合、SB は低 SC (54s-76s) を**ブラフスクイーズ**として使用。
+cold caller が HJ/CO (tight range vs UTG) の場合は BTN/CO IP と同様に SC が消える。
+
+簡易ルール（上級者向け）:
+```
+SB MW Level 1 — cold caller が BTN/CO (IP) の場合:
+  Score ≤ 16 + suited + gap≤1 → ブラフスクイーズ候補
+  T_squeeze 式の範囲外だが folding equity で成立
+```
+
+通常の T_squeeze = T_3bet + 3N ルールでは捕捉不能なため、本書では「上級補助ルール」として注記。
+
+#### Level 2 MW: raise + 3bet + N cold calls（4bet 前）
+
+例: UTG open → HJ 3bet → CO cold flat → BTN の判断
+
+```
+T_raise (4bet squeeze) = T_4bet + 3 × N_callers = 33 + 3 × N
+T_call  = 未検証。概算: T_4bet - 4 程度の narrow zone + implied odds なし
+```
+
+コール額が大きくなるため low SC の implied odds は成立しにくい。
+GTO データ未取得のため概算値。
+
+#### Level 3 MW: raise + 3bet + 4bet + N cold calls（5bet 前）
+
+```
+T_raise (5bet) = T_5bet + 3 × N_callers = 39 + 3 × N
+```
+
+実質 AA のみ。
+
+---
+
+**ベットレベル別まとめ**:
+
+| MW レベル | 構造 | T_raise | T_call (IP) | T_call (BB) |
+|----------|------|--------|------------|------------|
+| Level 1  | open + N calls  | T_3bet + 3N | Score ≤ 16 implied odds のみ | HU と同じ T_call（例外2縮小: diff≤2） |
+| Level 2  | 3bet + N calls  | T_4bet + 3N | 要検証（implied odds なし） | 要検証 |
+| Level 3  | 4bet + N calls  | T_5bet + 3N | ほぼなし | ほぼなし |
 
 ---
 
