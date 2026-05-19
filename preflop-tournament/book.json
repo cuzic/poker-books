@@ -1,12 +1,12 @@
 {
   "title": "迷わないポーカー MTTプリフロップ編",
   "titleRomaji": "Mayowanai Poker MTT Preflop",
-  "subtitle": "スタック深度で変わる参加基準を暗算で決める",
+  "subtitle": "6-max / 9-max MTT のプリフロップ判断を暗算で決める",
   "author": "川西智也",
   "language": "ja",
   "identifier": "urn:uuid:b3c4d5e6-f7a8-9b0c-1d2e-3f4a5b6c7d8e",
   "publisher": "川西智也",
-  "description": "『迷わないポーカー』シリーズ・トーナメントプリフロップ特化版。MTT 専用スコア式（v4）を中心に、ショートスタック Push/Fold ゾーン（SBR 8〜14BB）・移行帯（14〜20BB）・オープンレイズゾーン（20〜40BB）の3段階で判断を整理。BB/SB ディフェンス、IP コールドコール、3-bet 対処、スクイーズ、多人数ポットまで GTO Wizard 実測データをもとに設計した数値フレームワークを網羅。8-max BB アンテありトーナメントを主対象とし、暗算で回せる式と早見表で即戦力の判断力を養う。",
+  "description": "『迷わないポーカー』シリーズ・トーナメントプリフロップ特化版。MTT 専用スコア式 v5final（精度 93.6%）を軸に、6-max と 9-max を第 1 部・第 2 部として体系化。ショートスタック Push/Fold ゾーン（SBR 8〜14）・移行帯（14〜20）・オープンレイズゾーン（20〜40）の 3 段階で判断を整理。BB ディフェンス、IP コールドコール、3-bet/4-bet、スクイーズ、多人数ポットを網羅し、第 3 部では ICM 圧力（バブル・ファイナルテーブル）によるレンジ調整を詳述。GTO Wizard MTTGeneralV2（9m）/ MTT6mGeneral（6m）実測データをもとに設計。BB アンテありトーナメントで即実践できる早見表付き。",
   "cover": "chapters/images/cover.jpg",
   "kdp": {
     "keywords": [
@@ -17,7 +17,7 @@
       "MTT ショートスタック",
       "ポーカー BB アンテ",
       "テキサスホールデム 参加基準",
-      "MTT 8-max 戦略",
+      "MTT 9-max 6-max 戦略",
       "ポーカー 暗算 フォーミュラ",
       "ポーカー トーナメント 初中級"
     ],

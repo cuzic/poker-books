@@ -1,350 +1,336 @@
-# 迷わないポーカー MTTプリフロップ編 — 目次・執筆ガイド
+# 迷わないポーカー MTTプリフロップ編 — 目次・執筆ガイド（改訂版）
 
-**対象**: 8-max MTT、BB アンテあり、SBR 8〜40BB  
-**スコア式**: v4（MTT 専用 — キャッシュゲーム式とは別物）  
-**データソース**: GTO Wizard MTTGeneral 実測 (2026-05-19)
+**対象**: 6-max / 9-max MTT、BB アンテあり、SBR 8〜40  
+**スコア式**: v5final（MTT 専用 — キャッシュゲーム式とは別物）  
+**データソース**: GTO Wizard MTTGeneralV2（9m） + MTT6mGeneral（6m） + ICM stages（2026-05-19）
 
 ---
 
 ## 核心フレームワーク（全章共通の参照軸）
 
-### MTT スコア式 v4
+### MTT スコア式 v5final（精度 93.6%）
 
 ```
-非ペア:
-  基本       : H + L
-  スーテッド  : +5
-  オフスーツ  : -3（L < 10 のみ。KJo/ATo/QJo など L≥10 は無罰）
-  gap=1      : +2
-  gap=2      : +1
-  gap=3      : -0.5
-  gap=4      : -1.5, gap=5: -2, gap≥6: -3（A 以外）
-  A-ブロッカー: +3（L≤3 はさらに -2）
-  低カード補正: H<9 かつ L<9 → -1
-
-ペア: H + L + 10（AA は +3, KK は +2 追加）
+ペア:    H + L + 12
+suited:  H + L + 5 - gap_cap + Aブロッカー(+3)
+  gap_cap: A→0, K→min(gap,2), Q→min(gap,3), J→min(gap,4), T以下→gap全額
+offsuit: H + L - (L<10 なら -3) - gap + Aブロッカー(+3)   ← v4 互換
 ```
+
+v4 との違い: ①ペアボーナス +10→+12 ②K/Q/J suited のギャップ補正に上限（K≤2, Q≤3, J≤4）
 
 ### ゾーン定義
 
 | ゾーン | SBR 範囲 | 主な行動 |
 |--------|---------|---------|
-| **Zone P** | 8〜14BB | Push / Fold（min-raise ほぼなし） |
-| **Zone T** | 14〜20BB | Push + min-raise 混在（移行帯） |
-| **Zone O** | 20〜40BB | min-raise 主体（push は一部のみ） |
+| **Zone P** | 8〜14 | Push / Fold（min-raise なし） |
+| **Zone T** | 14〜20 | Push + min-raise 混在（移行帯） |
+| **Zone O** | 20〜40 | min-raise 主体 |
 
-### T_open 早見表（非ペア閾値・v4 スコア）
+### T_open 閾値表（v5final、chip-EV）
 
-| SBR | UTG  | UTG1 | UTG2 | HJ   | CO   | BTN  |
-|-----|------|------|------|------|------|------|
-| 20  | 23.5 | 23   | 21   | 19   | 17   | 14   |
-| 25  | 22.5 | 22   | 21   | 17   | 15   | 14   |
-| 30  | 22   | 21   | 19   | 17   | 17   | 13   |
-| 40  | 21   | 21   | 17   | 17   | 15   | 13   |
+**9-max:**
 
-### 最低オープンペア表（ペアはスコア計算不要・直接参照）
+| SBR | UTG | UTG1 | UTG2 | LJ | HJ | CO | BTN | SB |
+|-----|-----|------|------|----|----|----|----|-----|
+| 8  | 24 | 23 | 23 | 22 | 21 | 20 | 18 | N/A |
+| 10 | 25 | 24 | 23 | 23 | 21 | 21 | 18 | N/A |
+| 12 | 25 | 25 | 23 | 23 | 23 | 21 | 19 | 40 |
+| 14 | 25 | 25 | 23 | 23 | 23 | 21 | 19 | 40 |
+| 17 | 24 | 24 | 23 | 22 | 21 | 21 | 17 | 34 |
+| 20 | 24 | 24 | 22 | 22 | 21 | 19 | 17 | 30 |
+| 25 | 24 | 23 | 22 | 22 | 20 | 19 | 16 | 29 |
+| 40 | 24 | 24 | 22 | 22 | 20 | 18 | 14 | 29 |
 
-| SBR | UTG | UTG1 | UTG2 | HJ  | CO  | BTN |
-|-----|-----|------|------|-----|-----|-----|
-| 8   | 22+ | 22+  | 22+  | 22+ | 22+ | 22+ |
-| 10  | 44+ | 33+  | 22+  | 22+ | 22+ | 22+ |
-| 12  | 55+ | 44+  | 33+  | 22+ | 22+ | 22+ |
-| 14  | 66+ | 55+  | 44+  | 22+ | 22+ | 22+ |
-| 17  | 66+ | 66+  | 66+  | 55+ | 22+ | 22+ |
-| 20  | 66+ | 66+  | 55+  | 55+ | 44+ | 22+ |
-| 25  | 55+ | 55+  | 44+  | 44+ | 44+ | 44+ |
-| 30  | 44+ | 44+  | 33+  | 33+ | 33+ | 33+ |
-| 40  | 44+ | 33+  | 22+  | 33+ | 33+ | 22+ |
+**6-max:**
+
+| SBR | UTG | HJ | CO | BTN | SB |
+|-----|-----|----|----|-----|-----|
+| 8  | 22 | 21 | 20 | 18 | N/A |
+| 10 | 23 | 22 | 21 | 18 | 40 |
+| 12 | 23 | 23 | 21 | 19 | 36 |
+| 14 | 23 | 22 | 21 | 19 | 38 |
+| 17 | 22 | 22 | 20 | 19 | 34 |
+| 20 | 22 | 21 | 19 | 16 | 34 |
+| 25 | 22 | 20 | 19 | 16 | 29 |
+| 40 | 22 | 20 | 18 | 14 | 30 |
+
+### ICM 効果（9-max、SBR=25）
+
+| ステージ | UTG | HJ | CO | BTN | BB vs UTG fold |
+|---------|-----|----|----|-----|---------------|
+| chip-EV | 24 | 20 | 19 | 16 | 17% |
+| PCT50   | 24 | 21 | 19 | 17 | 28% |
+| PCT37   | 25 | 21 | 19 | 17 | 33% |
+| **FT**  | 25 | 23 | 21 | 19 | **44%** |
 
 ---
 
-## 章構成（17 章 + 3 付録 = 20 ファイル）
+## 章構成（14 章 + 3 付録）
 
-### Part I: 基礎（2 章）
+### 基礎（2 章）
 
 #### Ch00: はじめに — MTT プリフロップ判断の特殊性
 `chapters/00-introduction.md`
 
 **主要トピック**:
-- キャッシュゲームとの 3 つの違い（スタック深度の変動・ICM 圧力・BB アンテ効果）
-- 本書の使い方（ゾーン判定 → 該当章を参照）
-- GTO Wizard MTTGeneral データについて（8-max, BB ante, chip EV）
+- 本書の前提: 9-max が主、6-max が副（第1部/第2部）
+- ICM を独立した第3部で扱う理由
+- キャッシュゲームとの 3 つの違い（スタック深度・ICM 圧力・BB アンテ効果）
+- SBR とゾーンの説明
+- データ出典（GTO Wizard MTTGeneralV2/MTT6mGeneral, 2026-05）
 
-**字数目安**: 3,000 字
+**字数目安**: 3,500 字
 
 ---
 
-#### Ch01: MTT スコア式（v4）
+#### Ch01: MTT スコア式 v5final
 `chapters/01-score-formula.md`
 
 **主要トピック**:
-- v4 フォーミュラの設計思想（なぜキャッシュと別式が必要か）
-- 非ペア計算手順（H+L → suited/offsuit補正 → gap補正 → ブロッカー → 低カード補正）
-- ペアの扱い（スコア不要・最低ペア表を直接参照）
-- 主要境界ハンドのスコア例（T8s=24, K7s=22, A9o=23 など）
-- 式の精度（UTG 96%, HJ 87%, CO 85%）と限界（BTN は 2 段階ルール推奨）
+- v5final 設計思想（キャッシュ式との違い、K-ブロッカー廃止、pair +12）
+- 非ペア計算手順（5 ステップ）
+- ペアの扱い（pair +12 で 66+ が UTG からオープン）
+- suited face-card gap cap の意味（K7s が fold, K8s が open の境界）
+- 主要スコア早見表（AA=40, KK=38, 77=26, 66=24, K8s=24, T9s=24, 98s=22）
+- 式の精度 93.6% と境界ハンドの扱い
 
 **核心式**:
-- score_mtt(h) = H + L [+ suited bonus] [± gap/blocker/low adjustments]
-
-**字数目安**: 5,000 字
-
----
-
-### Part II: ゾーンシステム（1 章）
-
-#### Ch02: ゾーン P/T/O — スタック深度で判断を切り替える
-`chapters/02-zone-system.md`
-
-**主要トピック**:
-- Zone P（SBR ≤ 14BB）の特徴: min-raise がほぼ存在しない push/fold 世界
-- Zone T（SBR 14〜20BB）の特徴: push と min-raise が混在する移行帯
-- Zone O（SBR 20〜40BB）の特徴: min-raise 主体、push は AA/KK 等のごく一部
-- SBR の計算方法（自分のチップ ÷ BB サイズ）
-- 実戦での判断フロー（SBR を見る → ゾーン確認 → 該当フレームワーク適用）
-- BB アンテがゾーン境界に与える影響
-
-**字数目安**: 4,000 字
-
----
-
-### Part III: Zone P — ショートスタック Push/Fold（3 章）
-
-#### Ch03: Zone P 全体像 — ペア表と T_push 閾値（SBR 8〜14）
-`chapters/03-zone-p-overview.md`
-
-**主要トピック**:
-- Push/Fold の基本原則（コールされる手でも全額投入）
-- ペアの push 境界（最低オープンペア表の読み方）
-  - SBR=10: UTG は 44+ / BTN は 22+ （全ペア）
-  - SBR=12: UTG は 55+ / BTN は 22+
-- 非ペアの T_push（全ポジション × SBR 表）
-- UTG の特殊性（T_push=27 at SBR=12 vs BTN=14）
-- 精度の現実（EP は 93-99%、LP は 60-76%）
-
-**字数目安**: 5,000 字
-
----
-
-#### Ch04: EP の Push 判断（UTG/UTG1）
-`chapters/04-ep-push.md`
-
-**主要トピック**:
-- UTG T_push の SBR 別変化（SBR=8: 22 → SBR=12: 27 → SBR=14: 25）
-- SBR=8 の特殊パターン（T=22 だが K8s/T8s は折れる → "Ax 全手 + KJo+ + JTs/QTs + 22+" で暗記）
-- SBR=14: push vs min-raise の分岐（AJo/KQs は push、A9s/T9s は min-raise）
-- 非ペア push 確定リスト（SBR=10, 12, 14 別）
-- UTG1 との差（UTG より 1-2 ポイント広め）
-- 【GTO とのズレ】コラム: ICM バブル・FT では EP さらに tight
+```
+ペア:   H + L + 12
+suited: H + L + 5 - min(gap, 15-H)[H≥11] or 0[H=14] or gap[H≤10] + A→+3
+off:    H + L - [L<10:-3] - gap[H<14] + A→+3
+```
 
 **字数目安**: 5,500 字
 
 ---
 
-#### Ch05: LP の Push 判断（CO/BTN/SB）
-`chapters/05-lp-push.md`
+### 第1部: 6-max MTT（4 章）
+
+#### Ch02: 6m Zone P — Push/Fold（SBR 8〜14）
+`chapters/02-6m-zone-p.md`
 
 **主要トピック**:
-- CO/BTN は SBR=8〜12 でほぼ全手 push（T_push ≈ 13-15）
-- BTN の実用ルール（「ゴミ hand 以外は全部 push」）
-- SB の 2 モード: push vs limp（T_push は純 push 閾値、リンプは別節）
-- SB リンプ罠（Limp Trap）: SBR≤12 でプレミアム手（AA/KK/AKs/QQ/JTs 等）はリンプ
-  - 理由: push ではフォールドエクイティが小さく、BB 誘い込みでスタック全額取りを狙う
-- BB ディフェンス vs push（push に直面した BB の判断）
-  - call: 22/33, 弱いスーテッド
-  - re-push: 44+ 以上のペア、Ax 全般
-  - fold: 純ゴミ手のみ
+- 6m の特徴: UTG=HJ ≈ 9m の CO相当。EP 格差が小さい
+- Zone P 全体像（T_push: UTG=22-23, HJ=21-22, CO=20-21, BTN=18-19）
+- ペアの push 境界（最低ペア表 6m版）
+- 6m の SB: OOP でも参加基準がゆるい（UTG より広い）
+- SBR=8/10/12/14 詳細
+- 【GTO とのズレ】: 6m FT では短スタックで特に tight
+
+**字数目安**: 5,000 字
+
+---
+
+#### Ch03: 6m Zone O — オープンレンジ（SBR 17〜40）
+`chapters/03-6m-zone-o.md`
+
+**主要トピック**:
+- 6m vs 9m の開き（UTG が 2 点広い: 22 vs 24）
+- SBR=20/25/40 の T_open 全ポジション詳細
+- ペアの最低オープン表（6m 版）
+- HJ/CO/BTN の比較（9m と HJ/CO は類似、BTN は同等）
+- 6m ではポジションの価値がより高い
+- オープンサイズ（R2.1〜2.3）
 
 **字数目安**: 5,500 字
 
 ---
 
-### Part IV: Zone T — 移行帯（1 章）
-
-#### Ch06: Zone T — push と min-raise が混在する SBR 14〜20
-`chapters/06-zone-t-transition.md`
+#### Ch04: 6m BB ディフェンス & SB vs BTN
+`chapters/04-6m-defense.md`
 
 **主要トピック**:
-- SBR=14 の構造: EP は strong hand を push、中程度を min-raise
-  - push確定: AKo/AQo/KQs/KJs/KTs/QJs/JTs/AJo（score≥28）
-  - min-raise: A9s/A8s/A7s/A5s/T9s/K9s
-  - fold: A3s 以下、QJo 以下
-- SBR=17 の変化: 全ポジションで push がほぼ消え min-raise 主体に
-- SBR=14〜20 の T_open（K-3 表）
-- 移行帯でのペア判断（SBR=14 で UTG は 88 を push、SBR=17 では min-raise）
-- SB のリンプ比率変化（SBR=14 で 53%、SBR=20 後も継続）
+- 6m BB defense vs 各ポジション（call/3-bet/fold 率表）
+- 6m SB vs BTN: 3-bet か fold（コールは稀）
+- SBR=25 BB vs UTG: 3-bet=7%, call=74%, fold=19%
+- SBR=25 BB vs BTN: 3-bet=20%, call=72%, fold=8%
 
 **字数目安**: 4,500 字
 
 ---
 
-### Part V: Zone O — オープンレイズゾーン（3 章）
-
-#### Ch07: Zone O — 全ポジション T_open と基本判断（SBR 20〜40）
-`chapters/07-zone-o-open.md`
+#### Ch05: 6m コールドコール & 3-bet & 4-bet
+`chapters/05-6m-ip-actions.md`
 
 **主要トピック**:
-- オープンサイズの変化（SBR≤20: R2 / SBR=25-30: R2.1 / SBR=40: R2.3）
-- T_open 全ポジション × SBR 表（H-3 表の書籍版）
-- MTT の T_open がキャッシュより低い理由（BB ante 効果で pot odds が改善）
-  - UTG: MTT=21 vs キャッシュ=24（差-3）
-  - HJ: MTT=17 vs キャッシュ=22（差-5）
-  - BTN: MTT=14 vs キャッシュ=18（差-4）
-- ペア別最低オープン表（スコア計算不要）
-- BTN のほぼ全手参加（T=14 ≈ 弱いオフスーツ以外すべて）
-- K-ブロッカーの限界（K7s がスコア高くても折れる — RFI では blocker 価値が低い）
-- 【GTO とのズレ】コラム: アンテなし・9-maxへの調整
-
-**字数目安**: 5,500 字
-
----
-
-#### Ch08: BB ディフェンス（vs 各ポジション）
-`chapters/08-bb-defense.md`
-
-**主要トピック**:
-- BB の基本方針: 「fold は最低限のゴミ手のみ、3-bet は価値ハンドと少数ブラフのみ、残りはコール」
-- フォールド条件（スーテッドは常にコール、low connector もコール）
-  - T_fold ≈ 12 vs UTG / 8 vs BTN
-- T_3bet_value = 27〜28（ATo/KQo 以上の非ペア）
-- 3-bet 確定リスト vs UTG（4 手）と vs BTN（14 手）
-- ブラフ 3-bet の補完（vs BTN: T9s/T8s/98s + K6-7s）
-- ペアの判断（99+ → 3-bet vs UTG; 22+ → 3-bet/push vs BTN）
-- BB vs SB open の特殊性（SB は大きいサイズで開く → T_call が低い=広くコール）
-- SBR 別変化（SBR=17/20/25/30 の T_fold・T_3bet 表）
-- MW での BB 参加縮小（cold caller が増えるほど Axo/Kxo 弱が fold 転換）
-
-**字数目安**: 6,000 字
-
----
-
-#### Ch09: SB ディフェンス（vs BTN オープン）
-`chapters/09-sb-defense.md`
-
-**主要トピック**:
-- SB の特殊性: OOP のため fold 65%（キャッシュより tight）
-- 3-bet 28 手の構成（Ax suited / Ax offsuit strong / Broadway / KQo-KJo）
-- コール 19 手の構成（K5-KJs / suited connector gap≤4 / Broadway offsuit / A7-8s 例外）
-- ペアは全部 push（22-AA）
-- fold 109 手（全体の 65%）
-- 記憶補助: "3-bet = Ax か strong Broadway、コール = K-suited か suited mid connector か Broadway offsuit"
-- SBR 別コール範囲の変化（SBR=17: 11手 → SBR=25: 19手）
-- SB vs 他ポジションオープン（UTG/HJ/CO への 3-bet 閾値）
-
-**字数目安**: 5,500 字
-
----
-
-### Part VI: IP の行動パターン（3 章）
-
-#### Ch10: IP コールドコール（HJ/CO/BTN/SB が先行オープンに直面）
-`chapters/10-ip-cold-call.md`
-
-**主要トピック**:
-- IP コールドコールの価値（position + pot odds）
-- T_3bet(IP) ≈ 30 vs UTG（全ポジション共通 — BB より tight）
-  - vs HJ/CO は緩む: BTN は T_3bet=16、SB は T_3bet=14
-- 代表的な IP 3-bet ハンド（AA/KK/AKs/AKo 確定、QQ/JJ/AQo 混在）
-- BTN コールドコール vs UTG の 2 段階ルール:
-  - スーテッド/ペア: score ≥ 20
-  - オフスーツ: score ≥ 27 (かつ L ≥ 10)
-- HJ cold call の注意（SBR<25 ではツリー未計算 = 実戦でも稀なシナリオ）
-- BTN vs HJ/CO の広いコール（T_3bet が低く = cold callが多い）
-- BB vs SB: T_call=7-10（SB の大きいオープンサイズで BB は広くコール）
-
-**字数目安**: 5,500 字
-
----
-
-#### Ch11: 3-bet に直面したら（fold/call/shove）
-`chapters/11-facing-3bet.md`
-
-**主要トピック**:
-- Zone O での 4-bet: サイズなし → fold/call/shove（オールイン）のみ
-- UTG vs BB 3-bet（SBR=25 T_shove=27, T_call=22）
-  - shove: KK/AKs/AKo（6 手）
-  - call: AA + QQ/JJ/TT 一部 + AQs/AQo（22 手）
-  - fold: UTG の残りオープンレンジ（T9s など低スコアのほとんど）
-- BTN vs BB 3-bet（T_shove=16, T_call=16 → T=16 以上で shove or call）
-  - UTG より大幅に広い対処（51 手）
-- CO/HJ vs 3-bet（中間の閾値）
-- SBR 別安定性（UTG T_shove=26-27 across SBR=20/25/30）
-- 実戦フロー（T_shove と T_call の 2 閾値で 3 分割）
-- 【GTO とのズレ】コラム: ICM バブルでは fold が増える
-
-**字数目安**: 5,500 字
-
----
-
-#### Ch12: スクイーズ（オープン + コールドコールへの参入）
-`chapters/12-squeeze.md`
-
-**主要トピック**:
-- スクイーズの有利性（cold caller が手の強さを絞り込んでいる + pot が大きい）
-- BTN スクイーズ（UTG/HJ 絡み）: T_sq ≈ 27-28（高い要件）
-  - 代表手: AA/KK/AK/AQ/JJ+
-- SB スクイーズ（UTG 起点）: T_sq ≈ 25-26
-- SB スクイーズ（CO/HJ 起点）: T_sq ≈ 20-22（ポットが小さくより入りやすい）
-- BB 2 つのモード:
-  1. Tight（UTG/HJ 起点）: T_sq=22-26, 価値ハンドのみ
-  2. Wide/Polar（BTN+SB）: T_sq=14, 広いポーラー range（ペア全部 + Axo ブラフ）
-- SBR 別安定性（SB T_sq は SBR によらず 24-25.5 で安定）
-- スクイーズ vs 単純コール/fold の選択基準
+- 6m IP cold call レンジ（BTN vs UTG / BTN vs HJ）
+- 6m 3-bet レンジ
+- 4-bet 閾値
+- 6m の ICM への切り替え: FT では UTG+2-3, HJ+3-4 タイト
 
 **字数目安**: 5,000 字
 
 ---
 
-### Part VII: 多人数ポット（1 章）
+### 第2部: 9-max MTT（6 章）
 
-#### Ch13: MW（多人数ポット）での BB/SB 参加基準
-`chapters/13-multiway.md`
+#### Ch06: 9m Zone P — Push/Fold（SBR 8〜14）
+`chapters/06-9m-zone-p.md`
 
 **主要トピック**:
-- MW の基本原則（cold caller の増加で参加範囲を絞る）
-- BB の MW 縮小パターン（HU: 82% → UTG+HJ+CO: 60.4%）
-  - fold 転換する手: Ax offsuit 弱、Qx offsuit、Kx offsuit 弱、Jx offsuit 弱
-  - ルール: "MW Level 1（cold caller 2人以上）では弱いオフスーツ全般を fold"
-- BB の 3-bet サイズ拡大（HU=R7.5 → MW 2 callers=R8.6 スクイーズ効果）
-- SB の MW 参加縮小（SB vs UTG+BTN: T_sq=25.5 安定）
-- BTN のコールドコール範囲 MW 調整（既存 caller がいれば fold ポイントが上がる）
-- MTTMRonly との比較（SB リンプあり vs なしで cold call 構造が変わる）
+- 9m Zone P 全体像（T_push: UTG=24-25, LJ=22-23, HJ=21-23, CO=20-21, BTN=18-19, SB=38-40）
+- ペアの push 境界（最低ペア表 9m版）
+- EP（UTG/UTG1/UTG2）の tight 要件（SBR=12 UTG は 55+)
+- SB のリンプ trap（プレミアム手はリンプ→誘い込み）
+- SBR=8/10/12/14 詳細
+
+**字数目安**: 5,500 字
+
+---
+
+#### Ch07: 9m Zone O — オープンレンジ（SBR 17〜40）
+`chapters/07-9m-zone-o.md`
+
+**主要トピック**:
+- 9m の T_open 全ポジション（SBR=17/20/25/40）
+- UTG 24 を基準とした相対記憶（UTG1=-1, LJ=-2, HJ=-4, CO=-5, BTN=-8）
+- K8s=24 で UTG からオープン（v5final の主要境界）
+- ペアの最低オープン表（9m: 66+ from UTG at SBR=25）
+- BTN の広いオープン（T=16 ≈ ゴミ以外全部）
+- SB のオープン（SBR=25: T=29 ≈ suited Broadway + strong Ax のみ）
+
+**字数目安**: 5,500 字
+
+---
+
+#### Ch08: 9m マルチウェイポット
+`chapters/08-9m-multiway.md`
+
+**主要トピック**:
+- MW の基本原則（caller が増えると squeeze 閾値が急騰）
+- BTN/CO squeeze: 2-way=35 → 4-way=32（+コールは 2-way のみ）
+- SB squeeze: 2-way=34 → 4-way=32
+- BB defense fold 率の急増:
+  - 2-way (UTG): fold=17%
+  - 3-way (UTG+BTN): fold=23%
+  - 4-way (UTG+HJ+BTN): fold=45%
+  - 4-way (UTG+LJ+HJ): fold=58%
+  - 4-way LP (HJ+CO+BTN): fold=35%
+- BB の参加縮小パターン（offsuit 弱から順に fold）
+- SBR 別安定性（SBR=17〜40 で類似したパターン）
+
+**字数目安**: 5,000 字
+
+---
+
+#### Ch09: 9m BB ディフェンス
+`chapters/09-9m-bb-defense.md`
+
+**主要トピック**:
+- SBR=8 のショートスタック BB（3-bet=0, call=24-39%、ほぼ fold or call with odds）
+- SBR=10-14 への遷移（3-bet 登場、fold 率改善）
+- SBR=17-40: 3-bet/call/fold の安定形
+  - vs UTG(SBR=25): 3bet=7%, call=76%, fold=17%
+  - vs CO(SBR=25): 3bet=16%, call=75%, fold=10%
+  - vs BTN(SBR=25): 3bet=20%, call=73%, fold=7%
+  - vs SB(SBR=25): 3bet=10%, call=72%, fold=18%
+- BB defense vs SB push（SBR=12: push に直面する BB）
+
+**字数目安**: 5,000 字
+
+---
+
+#### Ch10: 9m IP コールドコール & 3-bet & 4-bet
+`chapters/10-9m-ip-actions.md`
+
+**主要トピック**:
+- IP cold call（BTN vs UTG, BTN vs CO, HJ vs UTG）
+- BTN cold call vs UTG: suited score≥20, offsuit score≥27
+- 3-bet レンジ（BB vs UTG: T_3bet=28）
+- 4-bet 閾値（UTG vs BB 3-bet: SBR=25 T_4bet=34）
+- スクイーズ閾値（BTN/SB vs UTG+cold caller）
+
+**字数目安**: 5,000 字
+
+---
+
+#### Ch11: 9m Zone T — 移行帯（SBR 14〜20）
+`chapters/11-9m-zone-t.md`
+
+**主要トピック**:
+- Zone T の構造（push と min-raise の混在）
+- SBR=14: EP は strong 手を push、中程度を min-raise
+- SBR=17: push がほぼ消えて min-raise 主体
+- SBR=20 からの T_open への接続
+- SB のリンプ比率の変化
 
 **字数目安**: 4,500 字
 
 ---
 
-### Part VIII: 総括とドリル（1 章）
+### 第3部: ICM 戦略（3 章）
 
-#### Ch14: 実戦フロー確認と境界ハンド一覧
-`chapters/14-drill.md`
+#### Ch12: ICM 基礎とバブル戦略
+`chapters/12-icm-bubble.md`
 
 **主要トピック**:
-- 意思決定フロー全体像（SBR → ゾーン → ポジション → スコア計算 → 閾値比較）
-- 各ゾーン境界ハンドの確認問題（SBR=10 UTG で A9o は？ / SBR=25 BTN で T8s は？）
-- よくある判断ミス Top 5（SB リンプ trap 忘れ、BTN が広すぎる push など）
+- ICM 圧力とは（チップの非線形価値）
+- バブル段階別（PCT50 → PCT37 の変化）
+- バブルでの T_open 変化（9m SBR=25）:
+  - chip-EV: UTG=24, HJ=20, BTN=16
+  - PCT37:   UTG=25, HJ=21, BTN=17
+  → バブルは chip-EV より +1 程度（軽微）
+- バブルでの BB defense 変化:
+  - chip-EV fold=17% → PCT37 fold=33%（UTG vs BB、SBR=25）
+- 6m vs 9m のバブル差異
+- 実戦での意思決定: 「バブルでの BTN open は +1 点要求」
+
+**字数目安**: 5,000 字
+
+---
+
+#### Ch13: ファイナルテーブル戦略
+`chapters/13-icm-ft.md`
+
+**主要トピック**:
+- FT のタイト化の本質（トップフィニッシュのプレミアム）
+- 9m FT T_open（SBR=25）: UTG=25, HJ=23, CO=21, BTN=19 → **全体+3〜5点**
+- 6m FT T_open（SBR=25）: UTG=23, HJ=21, CO=21, BTN=19 → 類似のタイト化
+- 6m FT SBR=20: UTG=25, HJ=25 → 極端なタイト化
+- FT BB defense（SBR=25 vs UTG）:
+  - chip-EV: fold=17% → **FT: fold=44%**
+  - SBR=20: chip-EV fold=16% → **FT: fold=47%**
+- FT での MW: squeeze 閾値がさらに上昇
+- 実戦フロー: 「FT に入ったら BTN/CO も +3-5 点要求に切り替え」
+
+**字数目安**: 5,500 字
+
+---
+
+#### Ch14: 実戦フロー確認と総括
+`chapters/14-summary.md`
+
+**主要トピック**:
+- 6m vs 9m の比較一覧（どう使い分けるか）
+- chip-EV vs ICM の切り替えタイミング
+- 意思決定フロー全体像（SBR → ゾーン → format → chip-EV or ICM → ポジション → スコア → 閾値）
+- よくある判断ミス Top 5
 - GTO Wizard との精度ギャップの受け入れ方
+- 境界ハンドクイズ（10 問）
 
-**字数目安**: 4,000 字
+**字数目安**: 4,500 字
 
 ---
 
 ### 付録
 
-#### 付録 A: MTT スコア v4 早見表（主要 169 手）
+#### 付録 A: MTT スコア v5final 早見表
 `chapters/appendix-a-score-table.md`
 
-**内容**: 全 169 手のスコア一覧表（スーテッド/オフスーツ別）
+**内容**: ペア+主要 suited+offsuit の全スコア一覧（グループ別）
 **字数目安**: 2,500 字
 
 ---
 
-#### 付録 B: SBR 別参照カード（Zone P/O の閾値まとめ）
-`chapters/appendix-b-reference-cards.md`
+#### 付録 B: ポジション別閾値カード（6m / 9m / ICM）
+`chapters/appendix-b-threshold-cards.md`
 
 **内容**:
-- Zone P: T_push 表 + 最低オープンペア表（SBR=8/10/12/14）
-- Zone O: T_open 表（SBR=20/25/30/40）+ BB/SB defense 要約
+- 6m: T_open 全ポジション × SBR 表
+- 9m: T_open 全ポジション × SBR 表
+- ICM: FT/バブル差分表（chip-EV との差を示す）
 **字数目安**: 3,000 字
 
 ---
@@ -353,11 +339,11 @@
 `chapters/appendix-c-boundary-hands.md`
 
 **内容**:
-- SBR=25 UTG: 最低オープン非ペア（98s, T8s, K8s あたり）
-- SBR=25 BTN: スーテッド score=14 境界
-- SBR=12 SB: リンプ trap 対象ハンド
-- BB 3-bet 確定リスト（vs UTG / vs BTN）
-- SB コール 19 手リスト
+- K8s=24（9m UTG SBR=25 の境界）
+- 66=24（ペアの 9m UTG 境界 at SBR=25）
+- T9s=24, 98s=22（suited connector の位置づけ）
+- SBR 別最低オープンペア（9m/6m）
+- BB 3-bet 確定リスト
 **字数目安**: 2,500 字
 
 ---
@@ -366,35 +352,32 @@
 
 | Part | 章数 | 目安字数 |
 |------|-----|---------|
-| I 基礎 | 2 | 8,000 |
-| II ゾーンシステム | 1 | 4,000 |
-| III Zone P | 3 | 16,000 |
-| IV Zone T | 1 | 4,500 |
-| V Zone O | 3 | 17,000 |
-| VI IP 行動 | 3 | 16,000 |
-| VII MW | 1 | 4,500 |
-| VIII ドリル | 1 | 4,000 |
+| 基礎 | 2 | 9,000 |
+| 第1部: 6-max | 4 | 20,000 |
+| 第2部: 9-max | 6 | 30,500 |
+| 第3部: ICM | 3 | 15,000 |
+| ドリル・まとめ | 1 | 4,500 |
 | 付録 | 3 | 8,000 |
-| **合計** | **18** | **82,000** |
+| **合計** | **19** | **87,000** |
 
 ---
 
 ## 執筆上の注意事項
 
-1. **式の表記統一**: スコア変数は `score_mtt(h)` で統一（キャッシュの `preflop_score` とは別）
-2. **SBR 表記**: 常に「SBR=25BB」ではなく「SBR=25」（BB は省略）
-3. **ポジション表記**: 8-max を前提。UTG=UTG、UTG1、UTG2、HJ、CO、BTN、SB、BB
-4. **精度表記**: 「式の精度は 96%（誤分類 6/169 手）」のように具体的に
-5. **GTO とのズレ コラム**: 各章末に設置。ICM 補正（Elite 必要）の注意書きを記載
-6. **Zone P は SBR 前後の BB アンテ有無に注意**: SBR=8 は depth=8.125 (BB ante 0.125)
-7. **SB のリンプ**: MTTGeneral では SB のリンプが存在する（MTTMRonly はリンプなし）
+1. **式の表記統一**: `score_mtt(h)` または単に「スコア」で統一。キャッシュの `preflop_score` とは別
+2. **SBR 表記**: 「SBR=25」（BB は省略）
+3. **9m ポジション**: UTG, UTG1, UTG2, LJ, HJ, CO, BTN, SB, BB（9人制）
+4. **6m ポジション**: UTG(=LJ), HJ, CO, BTN, SB, BB（6人制）
+5. **ICM ステージ表記**: chip-EV / PCT50 / PCT37(bubble) / FT
+6. **精度表記**: 「式の精度は 93.6%（全 SBR × ポジション × 10,478 手中 9,811 手一致）」
+7. **GTO とのズレ コラム**: 各章末に設置
+8. **スコア例**: K8s=24（K高suited gap cap 適用例）、66=24（pair +12 例）を必ず示す
 
 ---
 
-## データソース一覧
+## データソース
 
-- `preflop-tournament/PHASE1_2_FINDINGS.md`: Section A-K（Zone P/O/T 全データ）
-- `preflop-tournament/PHASE1_2_FINDINGS.md`: Section L-N（IP cold call / 3-bet / squeeze）
-- `preflop-tournament/PHASE3_5_FINDINGS.md`: Section B（MW データ）
-- `poker-drill/scripts/precompute/verify_formula_tournament.py`: 分析スクリプト（再現可能）
-- `poker-drill/scripts/precompute/fetch_tournament.py`: データ収集スクリプト
+- `poker-drill/scripts/precompute/raw_ranges_tournament_9m/`: 9m chip-EV データ
+- `poker-drill/scripts/precompute/raw_ranges_icm/`: 6m chip-EV + 全 ICM データ
+- `poker-drill/scripts/precompute/analyze_tournament_9m.py`: 9m 分析スクリプト
+- `poker-drill/scripts/precompute/analyze_icm_stages.py`: ICM 比較スクリプト
