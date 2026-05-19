@@ -83,6 +83,54 @@ BTN と SB を合わせて整理すると、「MW スクイーズ閾値の全体
 
 ---
 
+## 8-3a CO/HJ のコールドコール判断
+
+ここまで BTN と SB のスクイーズ側を見てきましたが、UTG オープンに対して HJ や CO がコールドコールする側の判断も整理が必要です。「コール・3-bet・fold」の 3 択を持つ HJ/CO は、MW が始まる起点でもあります。
+
+### fold か cold call かの判断（T_coldcall）
+
+GTO Wizard MTTGeneralV2 の実測では、SBR=25 において HJ/CO が UTG オープンにコールドコールするための最低スコアは次の通りです。
+
+| ポジション | T_coldcall（vs UTG） | 主な cold call 対象 |
+|-----------|-------------------|-------------------|
+| HJ | 22 | suited connectors、suited Ax、中ペア（66〜JJ） |
+| CO | 21 | + suited one-gapers、小ペア（55〜JJ） |
+
+HJ の T_coldcall=22 は、第 7 章で確認した HJ の T_open=22 と同じ水準です。これには直感的な整合性があります。「HJ が自分でオープンできる最低ライン ≒ UTG オープンに対してコールできる最低ライン」という関係で、UTG のタイトなレンジに対してもポジションアドバンテージがある分、参加価値を維持できるためです。
+
+スコアが T_coldcall を下回るハンドは fold です。スコアがわずかに上回る「グレーゾーン」（T_coldcall〜T_coldcall+2 程度）のハンドは、後ろに BTN・SB・BB のアクションが残っているため squeeze リスクを考慮して fold 寄りに判断します。
+
+### 3-bet か cold call かの判断（T_3bet）
+
+HJ/CO から UTG オープンに対して 3-bet するハンドの閾値は T_3bet≒32 です（AKs・AKo・AA・KK が中心）。
+
+- score ≥ 32 → 3-bet
+- 22〜31（HJ）/ 21〜31（CO） → cold call
+- HJ は 21 以下、CO は 20 以下 → fold
+
+| アクション | HJ | CO |
+|----------|----|----|
+| 3-bet | score ≥ 32 | score ≥ 32 |
+| cold call | 22〜31 | 21〜31 |
+| fold | ≤ 21 | ≤ 20 |
+
+### squeeze リスクの考慮
+
+HJ/CO がコールドコールすると、BTN・SB・BB に squeeze を誘発するリスクがあります。特にリスクが高いのは次の 2 つの条件が重なる場合です。
+
+- BTN がアクション前で「広くスクイーズできる位置」にいる
+- 自分のハンドが 3-bet を受けた後に降りることになる弱いハンド（suited connector、small pair など）
+
+実戦でのルールは 2 点です。
+
+**ルール 1**: suited connector や small pair を cold call する場合は「BTN/SB から squeeze されたら fold」を前提として入ります。リスク込みで参加価値があるかを判断します。
+
+**ルール 2**: squeeze されても降りられない強いハンド（T_3bet≥32 の AKs、AA、KK など）は cold call ではなく 3-bet で参入します。
+
+> **HJ/CO cold call の実戦記憶法**: 「score≥22（HJ）/ score≥21（CO）かつ score<32 なら cold call。32 以上なら 3-bet。squeeze リスクが高い場面では 1〜2 ポイント上乗せして判断。」
+
+---
+
 ## 8-4 BB の fold 率急増 — 急変点は 4-way EP
 
 MW でプレイヤーが最も苦しむのが BB のディフェンス判断です。BB は既に 1BB を投資しているため通常は広いコールができますが、MW になると fold 率が大きく上がります。
@@ -192,6 +240,14 @@ SBR=25、9-max の BTN です。UTG がオープン（R2.1）し、HJ と CO が
 2. スクイーズ（スコア 30 があれば十分と判断して入る）
 3. フォールド（4-way T_sq=32 に対してスコア 30 は届かない）
 
+### 問 1.5
+
+SBR=25、9-max の HJ です。UTG がオープンしました。あなたのハンドは 87s（スコア = 21）です。あなたのアクションは？
+
+1. フォールド（score=21 は HJ T_coldcall=22 を下回るため）
+2. コールドコール（suited connector は参加価値がある）
+3. 3-bet（スクイーズを狙う）
+
 ### 問 2
 
 SBR=25、9-max の BB です。UTG がオープンし、LJ と HJ がコールドコールして 4-way EP になりました。あなたのハンドは K7o（スコア = 13 + 7 − 3 = 17）です。あなたのアクションは？
@@ -214,6 +270,8 @@ SBR=25、9-max の SB です。UTG がオープンし、HJ がコールドコー
 
 - **問 1**: **3. フォールド**。BTN の 4-way T_sq=32 に対して、KQs のスコアは 30（K=13、Q=12、suited: 13+12+5-0=30）です。30 < 32 なので閾値に届かず、スクイーズはできません。コールドコールについても、4-way EP の状況では BTN がフラットコールで 5-way ポストフロップを戦うのは不利なため、fold が正解です。KQs は強いハンドですが、UTG のタイトなレンジと複数 caller を前にして閾値には届きません。
 
+- **問 1.5**: **1. フォールド**。score=21 は HJ vs UTG の T_coldcall=22 を 1 点下回ります。BTN・SB・BB のアクションが後ろに残っており squeeze リスクもある状況では、グレーゾーンは fold 寄りに判断するのが原則です。HJ からの cold call ゾーンは score=22 からで、98s や T8s（score=22）が最低ラインになります。3-bet は T_3bet≥32 が基準なので score=21 では対象外です。
+
 - **問 2**: **2. フォールド**。4-way EP（UTG + LJ + HJ）では BB fold 率は 51〜58% に達します。K7o は Kx offsuit 弱（K2o〜K9o）の範囲に入り、4-way EP では fold に転換するカテゴリです。ポットオッズは表面上よく見えますが、EP のタイトなレンジと複数 caller の存在が BB の参加価値を大きく下げます。
 
 - **問 3**: **3. スクイーズ**。SB の 3-way T_sq=32 で、JJ のスコアは 34 です。34 ≥ 32 を満たすためスクイーズが正解です。cold caller が 1 人入った時点で SB の閾値は 34 → 32 に下がっており、JJ がスクイーズ圏内に入ります。3-way でコールドコールすることも考えられますが、OOP（アウトオブポジション）でポストフロップを戦うリスクを考えると、スクイーズしてフォールドエクイティを発揮する方が EV が高くなります。
@@ -225,6 +283,7 @@ SBR=25、9-max の SB です。UTG がオープンし、HJ がコールドコー
 > - 9-max MW では cold caller が 2 人（4-way）になると BTN/SB スクイーズ閾値が 32 に収束する
 > - BTN の T_sq: 2-way=35 → 3-way=34 → 4-way=32（変動幅は 3 点と小さい）
 > - SB の T_sq: 2-way=34 → 3-way=32 → 4-way=32（3-way から固定）
+> - HJ/CO の cold call 閾値: HJ≥22 / CO≥21 vs UTG。score≥32 は 3-bet に転換
 > - BB fold 率の急変点は「4-way EP」: UTG opener + EP/LP callers 2 人で fold が 40〜66% に急増
 > - 4-way LP（HJ/CO/BTN 組み合わせ）では fold 率は 20〜35% にとどまる
 > - BB の実戦ルール: 「3-way → 弱 offsuit 1 層カット、4-way EP → offsuit 弱手を全 fold、suited とペアは維持」
