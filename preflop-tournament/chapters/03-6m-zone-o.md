@@ -1,4 +1,4 @@
-# 6m Zone O — オープンレンジ（SBR 17〜40）
+# 第 3 章（6m）　Zone O — オープンレンジ（SBR 17〜40）
 
 <!-- markdownlint-disable MD026 MD033 MD036 MD040 MD060 -->
 
