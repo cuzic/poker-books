@@ -4,20 +4,17 @@
 
 テキサスホールデムを「暗算できる判断フロー」で決める書籍シリーズ。
 
-## シリーズ構成
+## シリーズ構成（新体制）
 
-| 巻 | 書名 | ディレクトリ | 状態 |
-|----|-----|------------|------|
-| ① | 迷わないポーカー① プリフロップ | `preflop/` | 公開済み |
-| ② | 迷わないポーカー② フロップ[基礎] | `flop/` | 公開済み |
-| ③ | 迷わないポーカー③ フロップ[応用] | `flop-advanced/` | 公開済み |
-| ④ | 迷わないポーカー④ ターン・リバー[基礎] | `volume4/` | 公開済み |
-| ⑤ | 迷わないポーカー⑤ ターン・リバー[応用] | `volume5/` | 公開済み |
-| ⑥ | 迷わないポーカー⑥ トーナメント | `volume6/` | 公開済み |
-| — | 迷わないポーカー ダイジェスト（全 6 巻の地図） | `digest/` | 公開済み |
-| — | 迷わないポーカー フロップ〜リバー基礎（短縮版） | `vol2/` | 初稿完了 (KDP未登録) |
-| — | エクスプロイト・ポーカー — 相手タイプ別に崩す技術 | `tell/` | 初稿完了 (KDP未登録) |
-| — | 迷わないポーカー MTTプリフロップ編 | `preflop-tournament/` | 初稿完了 (KDP未登録) |
+| 巻 | テーマ | ディレクトリ | 状態 |
+|----|--------|------------|------|
+| vol1 | キャッシュ プリフロップ | `cash-preflop/` | 初稿完了 |
+| vol2 | キャッシュ ポストフロップ | `cash-postflop/` | 初稿完了 |
+| vol3 | MTT プリフロップ | `mtt-preflop/` | 初稿完了 |
+| vol4 | MTT ポストフロップ | `mtt-postflop/` | 執筆中 |
+| vol5 | エクスプロイト（相手タイプ別） | `tell/` | 初稿完了 |
+
+旧シリーズ（①〜⑥ + ダイジェスト）は `_archive/` に移動済み。
 
 ## 共通の設計思想
 
@@ -29,45 +26,24 @@
 ## Directory Structure
 
 ```
-poker-books/                     ルートディレクトリ
-├── preflop/                      プリフロップ編
-│   ├── chapters/                # 本文（00〜21）
-│   ├── toc.md                   # 目次・執筆ガイド
-│   ├── book.json                # 書誌
-│   ├── source.txt               # 原典メモ
-│   └── CLAUDE.md                # 編固有の方針
-│
-├── flop/                         フロップ編
-│   ├── chapters/                # 本文（執筆中）
-│   ├── toc.md
-│   ├── book.json
-│   ├── source.txt
-│   └── CLAUDE.md
-│
-├── knowledges/                   リサーチ成果
-│   ├── preflop/                 # プリフロップ編リサーチ
-│   │   ├── 01_*.md 〜 20_*.md
-│   │   └── reviews/
-│   └── flop/                    # フロップ編リサーチ
-│       └── reviews/
-│
+poker-books/
+├── cash-preflop/    vol1: キャッシュ プリフロップ
+├── cash-postflop/   vol2: キャッシュ ポストフロップ
+├── mtt-preflop/     vol3: MTT プリフロップ
+├── mtt-postflop/    vol4: MTT ポストフロップ（執筆中）
+├── tell/            vol5: エクスプロイト
+├── _archive/        旧シリーズ（flop/volume4-5/volume6/digest 等）
 ├── scripts/
-│   └── build.sh                 # 書籍指定式ビルドスクリプト
-│
-├── dist/                         ビルド成果物
-│   ├── preflop/book.html
-│   └── flop/book.html
-│
-├── CLAUDE.md                     このファイル（プロジェクト全体）
-└── README.md                     シリーズ紹介
+│   └── build.ts    ビルドスクリプト（bun で実行）
+└── dist/           ビルド成果物
 ```
 
 ## ビルド
 
 ```bash
-bash scripts/build.sh preflop    # プリフロップ編のみ
-bash scripts/build.sh flop       # フロップ編のみ
-bash scripts/build.sh all        # 両方
+bun run scripts/build.ts cash-preflop   # vol1 のみ
+bun run scripts/build.ts mtt-preflop    # vol3 のみ
+bun run scripts/build.ts all            # 全巻
 ```
 
 ## 執筆ワークフロー（全巻共通）
@@ -128,18 +104,21 @@ knowledges/<book>/reviews/review_<scope>.md
 
 ## ライセンスと公開
 
-各巻の gist URL は書籍固有（`book.json` 内の `identifier` とは別）。公開済みの gist：
+各巻の gist URL は書籍固有（`book.json` 内の `identifier` とは別）。現行シリーズの gist：
 
-- プリフロップ編: https://gistpreview.github.io/?a263151bbdee0ac9cbaa4a4e97483edb
-- フロップ編[基礎]: https://gistpreview.github.io/?5883292a2b687db842b4117f384c3aad
-- フロップ編[応用]: https://gistpreview.github.io/?e90c50f9dcdf09a311445db723c56fd6
-- ターン・リバー[基礎]: https://gistpreview.github.io/?6c4006bb24b6350517a0ae8e5a52061a
-- ターン・リバー[応用]: https://gistpreview.github.io/?f1c3973e0576af76f29ecf9a91fddb5b
-- トーナメント編: https://gistpreview.github.io/?0923d0ef729f7a18aa11682402b3ef7b
+- vol1 キャッシュ プリフロップ: https://gistpreview.github.io/?a263151bbdee0ac9cbaa4a4e97483edb
+- vol2 キャッシュ ポストフロップ: https://gistpreview.github.io/?d50e33d174d918b1bbe9b7821ca8d1bb
+- vol3 MTT プリフロップ: https://gistpreview.github.io/?e59b0bf5d62ac0e84f0176b390c50ca7
+- vol4 MTT ポストフロップ: （未公開）
+- vol5 エクスプロイト: https://gistpreview.github.io/?519b2350329278e7be6f09e5be449cd9
+
+旧シリーズ gist（参照用）：
+- 旧②フロップ[基礎]: https://gistpreview.github.io/?5883292a2b687db842b4117f384c3aad
+- 旧③フロップ[応用]: https://gistpreview.github.io/?e90c50f9dcdf09a311445db723c56fd6
+- 旧④ターン・リバー[基礎]: https://gistpreview.github.io/?6c4006bb24b6350517a0ae8e5a52061a
+- 旧⑤ターン・リバー[応用]: https://gistpreview.github.io/?f1c3973e0576af76f29ecf9a91fddb5b
+- 旧⑥トーナメント編: https://gistpreview.github.io/?0923d0ef729f7a18aa11682402b3ef7b
 - ダイジェスト版: https://gistpreview.github.io/?2abb4d163ac9e989333eb6db2a11f364
-- フロップ〜リバー基礎（vol2）: https://gistpreview.github.io/?d50e33d174d918b1bbe9b7821ca8d1bb
-- エクスプロイト・ポーカー（tell）: https://gistpreview.github.io/?519b2350329278e7be6f09e5be449cd9
-- MTTプリフロップ編: https://gistpreview.github.io/?e59b0bf5d62ac0e84f0176b390c50ca7
 
 加えて GitHub Pages 経由で全巻を公開済み: <https://cuzic.github.io/poker-books/>
 （`.github/workflows/deploy.yml` で main push 時に自動デプロイ）

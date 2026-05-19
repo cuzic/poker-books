@@ -32,25 +32,20 @@ interface Chapter {
 }
 
 type OutputFormat = "html" | "xhtml" | "epub" | "site" | "all";
-type BookId = "preflop" | "flop" | "flop-advanced" | "volume4" | "volume5" | "volume6" | "digest" | "vol2" | "tell" | "preflop-tournament";
+type BookId = "cash-preflop" | "cash-postflop" | "mtt-preflop" | "mtt-postflop" | "tell";
 
 const ROOT = join(import.meta.dir, "..");
-const BOOKS: BookId[] = ["preflop", "flop", "flop-advanced", "volume4", "volume5", "volume6", "digest", "vol2", "tell", "preflop-tournament"];
+const BOOKS: BookId[] = ["cash-preflop", "cash-postflop", "mtt-preflop", "mtt-postflop", "tell"];
 
 // 各 book ID とディレクトリの対応（同名でない場合のみ記載）
 const BOOK_DIRS: Partial<Record<BookId, string>> = {};
 
 const EPUB_FILENAMES: Record<BookId, string> = {
-  preflop: "mayowanai-poker-01-preflop.epub",
-  flop: "mayowanai-poker-02-flop.epub",
-  "flop-advanced": "mayowanai-poker-03-flop-advanced.epub",
-  volume4: "mayowanai-poker-04-turn-river-basic.epub",
-  volume5: "mayowanai-poker-05-turn-river-advanced.epub",
-  volume6: "mayowanai-poker-06-tournament.epub",
-  digest: "mayowanai-poker-digest.epub",
-  vol2: "mayowanai-poker-vol2-flop-river-basics.epub",
-  tell: "exploit-poker-player-types.epub",
-  "preflop-tournament": "mayowanai-poker-mtt-preflop.epub",
+  "cash-preflop": "vol1-cash-preflop.epub",
+  "cash-postflop": "vol2-cash-postflop.epub",
+  "mtt-preflop": "vol3-mtt-preflop.epub",
+  "mtt-postflop": "vol4-mtt-postflop.epub",
+  tell: "vol5-tell.epub",
 };
 
 function bookDir(bookId: BookId): string {
@@ -595,12 +590,14 @@ async function main(): Promise<void> {
   }
 
   let bookArg: BookId | "all" = "all";
+  const validIds = [...BOOKS, "all"] as string[];
   const bookIndex = args.indexOf("--book");
   if (bookIndex !== -1 && args[bookIndex + 1]) {
-    const requested = args[bookIndex + 1] as BookId | "all";
-    if (["preflop", "flop", "flop-advanced", "volume4", "volume5", "volume6", "digest", "all"].includes(requested)) {
-      bookArg = requested;
-    }
+    const requested = args[bookIndex + 1];
+    if (validIds.includes(requested)) bookArg = requested as BookId | "all";
+  } else {
+    const positional = args.find(a => !a.startsWith("--"));
+    if (positional && validIds.includes(positional)) bookArg = positional as BookId | "all";
   }
 
   const targets: BookId[] = bookArg === "all" ? BOOKS : [bookArg];

@@ -1,0 +1,1 @@
+{"stage": "chip_ev", "gt": "MTTGeneral", "depth": "25.125", "board": "Ks7d2c", "btn_cbet_actions": [{"code": "X", "freq": 0.2014}, {"code": "R1.15", "freq": 0.68}, {"code": "R1.9", "freq": 0.1068}, {"code": "R3.15", "freq": 0.0106}, {"code": "R4.75", "freq": 0.0012}, {"code": "R7.1", "freq": 0.0001}, {"code": "RAI", "freq": 0.0}]}
