@@ -10,6 +10,7 @@
     "build:volume5": "bun run scripts/build.ts --book volume5",
     "build:volume6": "bun run scripts/build.ts --book volume6",
     "build:digest": "bun run scripts/build.ts --book digest",
+    "build:preflop-tournament": "bun run scripts/build.ts --book preflop-tournament",
     "build:epub": "bun run scripts/build.ts --book all --format epub",
     "build:site": "bun run scripts/build.ts --book all --format all",
     "lint": "bun run lint:md && bun run lint:text",

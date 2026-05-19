@@ -96,26 +96,46 @@ RAI = all-in
 
 ---
 
-## 現在のサブスクリプション状況
+## 現在のサブスクリプション状況（確定版 2026-05-19）
 
-**現在のプラン: STARTER**
+**現在のプラン: PREMIUM ($79/月)**
 
-| カテゴリ | アクセス可否 |
-|---|---|
-| Cash 6m（3betV2 等） | ✅ アクセス可能（実績あり） |
-| **MTT（全種）** | ❌ **PERMISSION_DENIED** |
-| Spins | ❌ 未確認（おそらく不可） |
-| HuSng | ❌ 未確認 |
+### Preflop Spot Solution API アクセス結果
 
-### MTT へのアクセスに必要な対応
+| ゲームタイプ | アクセス | 備考 |
+|---|---|---|
+| `MTTGeneral` (8-max, BB ante) | ✅ 完全アクセス可能 | SBR 8〜100、Phase 1/2/5 収集完了 |
+| `MTTMRonlyGeneral` (8-max, MR-only) | ✅ アクセス可能 | SBR 8〜25 収集済み（126ファイル） |
+| `MTTGeneral` depth=整数 (no ante) | ❌ PERMISSION_DENIED | Classic/no-ante 比較不可 |
+| `MTTGeneralV2` | ❌ PERMISSION_DENIED | — |
+| `MTTGeneral_8m` / `_7m` / `_5m` / `_3m` | ❌ PERMISSION_DENIED | 異テーブルサイズ不可 |
+| `MTT6mGeneral` / `MTT6mSimple` | ❌ PERMISSION_DENIED | 6-max 不可 |
+| `MTT9mGeneral` / `MTT9mMRonlyGeneral` | ❌ PERMISSION_DENIED | 9-max 不可 |
+| `MTTHUGeneral` | ❌ 400 Bad Request | HU 不可 |
+| **ICM 全種** (`MTTGeneral_ICM*`) | ❌ **PERMISSION_DENIED** | Elite/Ultra プラン必要 |
+| `MTTGeneral_ICM8m200PTBUBBLEEARLY/LATE` | ⚠ 404 NOT_FOUND | プリフロップ解が未計算 |
+| `MTTGeneral_ICM8m200PTBUBBLEMID/FT/START/T2/T3/PCT75` | ❌ PERMISSION_DENIED | 存在するが権限なし |
+| `MTTGeneral_ICMPKO*` | ❌ PERMISSION_DENIED | PKO 不可 |
+| `MTTSimpleTest_ICM*` | ❌ PERMISSION_DENIED | テストバリアント不可 |
 
-GTO Wizard の MTT ソリューションには **上位プランへのアップグレードが必要**。
+### 重要な知見
 
-GTO Wizard のプラン構成（2024〜2025 時点の一般情報）:
-- **Starter**: 一部の Cash ソリューション（限定）
-- **Essential / Pro / Elite**: MTT ソリューション含む
+- **"75,000+ ICM solutions"（Premium 特典）は Postflop ICM のみ**。Preflop ICM ソリューション（`/v4/solutions/spot-solution/` 経由）は別権限が必要。
+- ICM Preflop 解を取得するには Elite ($139) または Ultra ($229) プランへのアップグレードが必要と推定。
+- BURBBLEEARLY/LATE は game-modes API には存在するが、Preflop ソリューション自体が未計算（404）。
 
-**次のアクション**: GTO Wizard のプラン設定ページで MTT へのアクセスを確認・アップグレード。
+### 実用上の結論
+
+**現プランで取得可能なデータで書ける内容:**
+- Push/Fold ゾーン（SBR 8〜20BB）: ChipEV 8-max, BB ante
+- Open-Raise ゾーン（SBR 20〜40BB）: 同上
+- MW 多人数ポット（3〜4way）: 同上
+- SB リンプ効果（MTTGeneral vs MTTMRonlyGeneral 比較）
+
+**ICM の扱い:**
+- GTO Wizard Preflop ICM データは取得不可（Premium プランの壁）
+- vol6 既存 ICM 理論（BF=1.875、M値）は維持
+- 「ICM 補正は +X BB に相当」はチップEV データから理論計算で推定
 
 ---
 

@@ -32,10 +32,10 @@ interface Chapter {
 }
 
 type OutputFormat = "html" | "xhtml" | "epub" | "site" | "all";
-type BookId = "preflop" | "flop" | "flop-advanced" | "volume4" | "volume5" | "volume6" | "digest" | "vol2" | "tell";
+type BookId = "preflop" | "flop" | "flop-advanced" | "volume4" | "volume5" | "volume6" | "digest" | "vol2" | "tell" | "preflop-tournament";
 
 const ROOT = join(import.meta.dir, "..");
-const BOOKS: BookId[] = ["preflop", "flop", "flop-advanced", "volume4", "volume5", "volume6", "digest", "vol2", "tell"];
+const BOOKS: BookId[] = ["preflop", "flop", "flop-advanced", "volume4", "volume5", "volume6", "digest", "vol2", "tell", "preflop-tournament"];
 
 // 各 book ID とディレクトリの対応（同名でない場合のみ記載）
 const BOOK_DIRS: Partial<Record<BookId, string>> = {};
@@ -50,6 +50,7 @@ const EPUB_FILENAMES: Record<BookId, string> = {
   digest: "mayowanai-poker-digest.epub",
   vol2: "mayowanai-poker-vol2-flop-river-basics.epub",
   tell: "exploit-poker-player-types.epub",
+  "preflop-tournament": "mayowanai-poker-mtt-preflop.epub",
 };
 
 function bookDir(bookId: BookId): string {
