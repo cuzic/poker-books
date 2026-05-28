@@ -1,7 +1,7 @@
 {
-  "title": "迷わないポーカー MTTフロップ〜リバー編",
-  "titleRomaji": "Mayowanai Poker MTT Postflop",
-  "subtitle": "SBR × ICM × ボード7分類でフロップ以降の全判断を暗算で決める",
+  "title": "迷わないポーカー Vol3: MTT Postflop + Full UCBS-v2",
+  "titleRomaji": "Mayowanai Poker Vol3: MTT Postflop + Full UCBS-v2",
+  "subtitle": "13 context × 5 軸で全 depth/SPR を網羅",
   "author": "川西智也",
   "language": "ja",
   "identifier": "urn:uuid:e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b",

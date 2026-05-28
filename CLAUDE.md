@@ -4,17 +4,16 @@
 
 テキサスホールデムを「暗算できる判断フロー」で決める書籍シリーズ。
 
-## シリーズ構成（新体制）
+## シリーズ構成（4 巻体制）
 
-| 巻 | テーマ | ディレクトリ | 状態 |
-|----|--------|------------|------|
-| vol1 | キャッシュ プリフロップ | `cash-preflop/` | 初稿完了 |
-| vol2 | キャッシュ ポストフロップ | `cash-postflop/` | 初稿完了 |
-| vol3 | MTT プリフロップ | `mtt-preflop/` | 初稿完了 |
-| vol4 | MTT ポストフロップ | `mtt-postflop/` | 執筆中 |
-| vol5 | エクスプロイト（相手タイプ別） | `tell/` | 初稿完了 |
+| 巻 | テーマ | ディレクトリ | 主要式 | 状態 |
+|----|--------|------------|--------|------|
+| Vol1 | プリフロップ完全版（Cash+MTT統合） | `vol1-preflop/` | Score_BB v7 | 初稿生成中 |
+| Vol2 | キャッシュ ポストフロップ + 簡易版 | `vol2-cash-postflop/` | Light UCBS v2 + Light DCBS | 新規執筆 |
+| Vol3 | MTT ポストフロップ + 精緻版 | `vol3-mtt-postflop/` | Full UCBS-v2 + Full DCBS | 新規執筆 |
+| Vol4 | エクスプロイト（相手タイプ別） | `vol4-tell/` | プレイヤータイプ別補正 | 初稿完了 |
 
-旧シリーズ（①〜⑥ + ダイジェスト）は `_archive/` に移動済み。
+旧シリーズ・分割版は `_archive/` に移動済み（`cash-preflop/`, `mtt-preflop/` は vol1-preflop に統合済）。
 
 ## 共通の設計思想
 
@@ -27,23 +26,26 @@
 
 ```
 poker-books/
-├── cash-preflop/    vol1: キャッシュ プリフロップ
-├── cash-postflop/   vol2: キャッシュ ポストフロップ
-├── mtt-preflop/     vol3: MTT プリフロップ
-├── mtt-postflop/    vol4: MTT ポストフロップ（執筆中）
-├── tell/            vol5: エクスプロイト
-├── _archive/        旧シリーズ（flop/volume4-5/volume6/digest 等）
+├── vol1-preflop/         Vol1: プリフロップ完全版（Cash+MTT統合、4係数スコア式）
+├── vol2-cash-postflop/   Vol2: キャッシュ ポストフロップ（Light UCBS v2 + Light DCBS）
+├── vol3-mtt-postflop/    Vol3: MTT ポストフロップ（Full UCBS-v2 + Full DCBS、13 context）
+├── vol4-tell/            Vol4: エクスプロイト（プレイヤータイプ別）
+├── _archive/             旧シリーズ（cash-preflop/, mtt-preflop/, flop/, volume4-6/, digest/ 等）
 ├── scripts/
-│   └── build.ts    ビルドスクリプト（bun で実行）
+│   ├── build.ts            ビルドスクリプト（bun で実行）
+│   └── generate/
+│       └── preflop_book_generator.py  章原稿自動生成（GTO データから）
 └── dist/           ビルド成果物
 ```
 
 ## ビルド
 
 ```bash
-bun run scripts/build.ts cash-preflop   # vol1 のみ
-bun run scripts/build.ts mtt-preflop    # vol3 のみ
-bun run scripts/build.ts all            # 全巻
+bun run scripts/build.ts vol1-preflop          # Vol1 のみ
+bun run scripts/build.ts vol2-cash-postflop    # Vol2 のみ
+bun run scripts/build.ts vol3-mtt-postflop     # Vol3 のみ
+bun run scripts/build.ts vol4-tell             # Vol4 のみ
+bun run scripts/build.ts all                   # 全巻
 ```
 
 ## 執筆ワークフロー（全巻共通）
@@ -106,11 +108,10 @@ knowledges/<book>/reviews/review_<scope>.md
 
 各巻の gist URL は書籍固有（`book.json` 内の `identifier` とは別）。現行シリーズの gist：
 
-- vol1 キャッシュ プリフロップ: https://gistpreview.github.io/?a263151bbdee0ac9cbaa4a4e97483edb
-- vol2 キャッシュ ポストフロップ: https://gistpreview.github.io/?d50e33d174d918b1bbe9b7821ca8d1bb
-- vol3 MTT プリフロップ: https://gistpreview.github.io/?e59b0bf5d62ac0e84f0176b390c50ca7
-- vol4 MTT ポストフロップ: （未公開）
-- vol5 エクスプロイト: https://gistpreview.github.io/?519b2350329278e7be6f09e5be449cd9
+- Vol1 プリフロップ完全版: （旧 cash-preflop: https://gistpreview.github.io/?a263151bbdee0ac9cbaa4a4e97483edb）
+- Vol2 キャッシュ ポストフロップ: https://gistpreview.github.io/?d50e33d174d918b1bbe9b7821ca8d1bb
+- Vol3 MTT ポストフロップ: （未公開）
+- Vol4 エクスプロイト: https://gistpreview.github.io/?519b2350329278e7be6f09e5be449cd9
 
 旧シリーズ gist（参照用）：
 - 旧②フロップ[基礎]: https://gistpreview.github.io/?5883292a2b687db842b4117f384c3aad

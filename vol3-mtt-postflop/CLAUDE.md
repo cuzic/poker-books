@@ -1,9 +1,11 @@
-# postflop-tournament (vol4) 執筆方針
+# vol3-mtt-postflop 執筆方針
 
 ## 本書の位置づけ
 
-- **依存関係**: vol2（キャッシュポストフロップ）+ vol3（MTTプリフロップ）を既読前提
-- **核心**: SBR → SPR 変換 × ICM補正 × ボード7分類（vol2流用）
+- **本巻**: 『迷わないポーカー Vol3: MTT Postflop + Full UCBS-v2』
+- **主要式**: Full UCBS-v2（13 context × 5 軸）+ Full DCBS（4 context）
+- **依存関係**: Vol1（プリフロップ）+ Vol2（Cash Light UCBS/DCBS）を既読前提
+- **核心**: Full UCBS-v2 の Confidence × Size × Context 三軸 × SBR × ICM 補正
 
 ## 前提知識（読者がすでに知っていること）
 
