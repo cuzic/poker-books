@@ -56,3 +56,15 @@ GTO Wizard データ（Cash 58 シナリオ / MTT 435 シナリオ）との一�
 4 係数でフル版と **1% 以内** の差しかない。
 残り 7% は GTO が混合戦略（raise/call を混ぜる）を使う境界帯で、
 式の限界ではなく GTO の性質による。
+
+## 本書を読み終えたら
+
+本書はプリフロップに特化しています。
+ポストフロップ戦略はシリーズ続巻で扱います。
+
+- **Vol2** — Cash 100bb Postflop（Light UCBS / DCBS で暗算判定）
+- **Vol3** — MTT Postflop（Full UCBS-v2、25〜200bb の全 depth 対応）
+- **Vol4** — Tell / Exploit（相手タイプ別の搾取戦略）
+
+Cash プレイヤーは Vol2 へ、MTT プレイヤーは Vol3 へ進んでください。
+Vol2 / Vol3 で使う HP / DP / CBS / 型 1〜7 の用語は第 12 章 12.5 節で先取り定義しています。
