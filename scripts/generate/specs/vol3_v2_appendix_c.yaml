@@ -1,0 +1,109 @@
+volume: "Vol3"
+chapter_num: "付録C"
+title: "UCBS-v2 公式チートシート（1 ページ版）"
+
+summary: |
+  実戦で 30 秒以内に参照できる凝縮版チートシートです。
+  5 ステップ判定 → HP/DP → Confidence → freq の流れをこの 1 枚で完結させます。
+
+sections:
+  - type: heading
+    level: 2
+    text: "統一式（5 軸）"
+
+  - type: prose
+    body: |
+      ```
+      CBS = HP[hand] + DP[draw]
+
+      freq = base_freq[(conf, direction, size)]
+           + α                      # context 均一シフト
+           + β · I(CBS ≥ 7)        # 強い役帯 lift（ターンは β≈0）
+           + offset[category]       # slowplay/trash/premium 補正
+           + pos_lift[position]     # SB/BTN/CO/HJ/UTG 補正
+           + ax_range_bet           # A-x range bet（MTT BTN/CO のみ）
+
+      freq = clamp(freq, 0.02, 0.98)
+      ```
+
+      **閾値 T = 5（全 context 共通）**
+      direction = (CBS ≥ T) → true = bet 寄り / false = check 寄り
+
+  - type: table
+    template: hp_buckets
+    title: "HP テーブル"
+
+  - type: table
+    template: dp_table
+    title: "DP テーブル"
+
+  - type: table
+    template: hand_category_table
+    title: "ハンドカテゴリ（offset 区分）"
+
+  - type: table
+    template: full_context_params
+    title: "13 context パラメータ早見表（±%pt）"
+
+  - type: table
+    template: dcbs_table
+    title: "DCBS 守備 continue freq"
+
+  - type: heading
+    level: 2
+    text: "5 ステップ判定フロー"
+
+  - type: prose
+    body: |
+      **Step 1: context を選ぶ**
+      - SRP → スタック深度で mtt_25/50/100/200bb または cash_100bb
+      - 3BP IP → SPR で mtt_3bp_20/25/50/100bb
+      - ターン継続 → フロップ context の _turn 版
+
+      **Step 2: CBS を計算する**
+      - CBS = HP + DP（上表参照）
+      - T=5 と比較して direction を決める
+
+      **Step 3: Confidence を決める**
+      - |CBS − T| ≥ 3 → HIGH（distance 大）
+      - 型1 かつ distance ≤ 2 → HIGH（型1 特権）
+      - 型7 かつ distance = 0 → HIGH / distance = 1 → LOW
+      - distance = 2 → MID
+      - 型5（モノトーン）→ MID 固定
+      - 型3/型4 → LOW
+      - その他 → MID
+
+      **Step 4: freq を計算する**
+      - base_freq[(conf, direction, 33)] から開始（MTT は常に size=33）
+      - α + β·I(CBS≥7) + offset[category] + pos_lift + ax_lift を加算
+
+      **Step 5: 例外 4 ルールを確認する**
+
+      **例外①** 型6 board（ペア rank ≥ Q）→ Confidence を 1 段 up（LOW→MID / MID→HIGH）
+
+      **例外②** mono board（cash のみ）→ Confidence を 1 段 down（HIGH→MID / MID→LOW）
+
+      **例外③** A-x range bet（MTT BTN/CO のみ）→ is_ax_dry_or_paired が true なら ax_range_bet を加算
+      - is_ax_dry_or_paired = (high_card=A) かつ (paired OR gap ≥ 8)
+
+      **例外④** Turn shift → α から −35pt、β を 0 に設定（_turn context 選択で自動適用）
+
+  - type: heading
+    level: 2
+    text: "精度サマリ（WRMSE）"
+
+  - type: prose
+    body: |
+      | 精度帯 | Contexts |
+      |---|---|
+      | < 10%（極良） | mtt_3bp_50bb (8.62%), mtt_25bb_turn (7.02%) |
+      | 10–15%（良） | mtt_50bb (12.96%), mtt_3bp_100bb (13.37%), mtt_200bb (14.10%), mtt_50bb_turn (14.44%), mtt_25bb (15.46%) |
+      | 15–20%（許容） | cash_100bb (16.43%), cash_turn (16.11%), mtt_3bp_25bb (18.65%) |
+      | 20%+（注意） | mtt_100bb (21.95%), mtt_3bp_20bb (23.08%), mtt_100bb_turn (26.95%) |
+
+      **平均 WRMSE ≈ 16%**（cbet + DCBS 全体）。
+      WRMSE 20%+ の context は結果を ±10pt 幅で解釈してください。
+
+      ---
+      **暗記対象**: HP 6値 + DP 4値 + BASE_FREQ 8セル = 18 数値（共通）
+      + context パラメータ約 78 数値 + DCBS 32 数値 = **総計 128 数値 + 1 式 + 4 例外**

@@ -1,0 +1,170 @@
+volume: "Vol3"
+chapter_num: "03"
+title: "Size 軸——33% vs Overbet 116% の選択基準"
+
+summary: |
+  cbet サイズは 33%（ハーフポット以下）と 116%（オーバーbet）の 2 択です。
+  MTT では常に 33%（polarize_enabled=False）を選びます。
+  cash_100bb のみ polarize_enabled=True となり、6 条件を満たすボードで 116% が適用されます。
+  Overbet は信頼度に応じて HIGH（bet 方向）で base_freq が 89%、
+  MID（bet 方向）で 55% となります。
+
+sections:
+  - type: heading
+    level: 2
+    text: "サイズ選択の優先順位——MTT は 33% 固定"
+
+  - type: prose
+    body: |
+      実戦でのサイズ選択フローは 3 ステップです。
+
+      ステップ1: context を確認します（MTT か cash か）。
+      ステップ2: MTT（Tier 1/3/4）なら即 size=33%（フロー終了）。
+      ステップ3: cash_100bb なら is_polarize_board() 判定を行い、該当すれば size=116%、
+      それ以外は 33% を使います。
+
+      「MTT = 33% 固定」と一律に覚えて問題ありません。
+      mtt_25bb/50bb/100bb/200bb、mtt_3bp_20/25/50/100bb、turn 4 種のすべてで
+      polarize_enabled=False が設定されています。
+
+  - type: heading
+    level: 2
+    text: "Polarize 板の 6 条件——overbet が機能する形（cash のみ）"
+
+  - type: prose
+    body: |
+      polarize board の判定条件を説明します。
+      以下の 6 条件のいずれかを満たすボードが overbet（116%）の対象です。
+      ただし paired board または mono（3 同スーツ）は必ず除外されます。
+
+      条件1（mid-rank connected）: top ≤ 9 かつ gap（top - low）≤ 4
+        例: 8♠7♦5♣（gap=3）、9♥6♦4♠（gap=5→不適合... 9-4=5 なら不適合?）
+        注: top≤9 かつ connected の組み合わせでストレートドロー密集が生じます。
+
+      条件2（K-high J+ mid, wide spread）: high=K かつ mid ≥ J かつ gap ≥ 3
+        例: K♠J♦4♣（mid=J≥J, gap=9-4=? → K-4=9≥3 ✓）、K♥Q♦6♠
+
+      条件3（K-high 9+ mid, very wide）: high=K かつ mid ≥ 9 かつ gap ≥ 5
+        例: K♠9♦2♣（gap=K-2=11≥5 ✓）、K♥T♦3♠
+
+      条件4（A-high 8-J mid, spread）: high=A かつ mid ∈ {8,9,T,J} かつ gap ≥ 4
+        例: A♠J♦6♣（gap=J-6=5≥4 ✓）、A♥T♦3♠（gap=T-3=7≥4 ✓）
+
+      条件5（Q-high 8-J mid, spread）: high=Q かつ mid ∈ {8,9,T,J} かつ gap ≥ 4
+        例: Q♠J♦6♣（gap=J-6=5≥4 ✓）、Q♥T♦3♠
+
+      条件6（JT-high 6-9 mid, spread）: high ∈ {J,T} かつ mid ∈ {6,7,8,9} かつ gap ≥ 3
+        例: J♠8♦4♣（gap=8-4=4≥3 ✓）、T♥7♦3♠
+
+  - type: heading
+    level: 2
+    text: "Overbet 加算のメカニズム——+20 / +15 の意味"
+
+  - type: prose
+    body: |
+      Overbet（116%ベット）は単にサイズが大きいだけでなく、
+      BASE_FREQ テーブルの「size=116 セル」を参照することで周波数自体が変わります。
+
+      bet 方向（direction=true）でのサイズ別 base_freq:
+      - HIGH × bet × 33%: 68%
+      - HIGH × bet × 116%: 89%（+21pt の効果）
+      - MID × bet × 33%: 40%
+      - MID × bet × 116%: 55%（+15pt の効果）
+
+      check 方向（direction=false）ではサイズによる差がほぼありません:
+      - HIGH × check × 33%: 46% / 116%: 44%（≈ 同等）
+      - MID × check × 33%: 33% / 116%: 30%（≈ 同等）
+      - LOW × bet × 33%: 25% / 116%: 27%（≈ 同等）
+
+      「overbet は強い役で bet する場合のみ freq が大幅 UP する」設計です。
+      空気やマージナル、または check 方向の手はサイズを変えても頻度がほとんど変わりません。
+
+  - type: heading
+    level: 2
+    text: "MTT では overbet 不使用——polarize_enabled=False の理由"
+
+  - type: prose
+    body: |
+      MTT でオーバーベットを使わない理由は 3 点です。
+
+      理由1「SPR 圧縮リスク」:
+      MTT の SRP SPR は 25bb で ≈9、50bb で ≈18 と cash（≈16〜20）より浅い傾向があります。
+      116% ポットベットをすると相手のコール後に SPR が急落し、
+      ターンでコミット圏に入るリスクが高まります。
+
+      理由2「ICM コスト」:
+      オーバーベットへのコールを強制するには相手が大きなリスクを負う必要があります。
+      MTT では相手が ICM を意識してコールを絞るため、
+      overbet の fold equity が cash より低くなります。
+
+      理由3「GTO 実測の最適化結果」:
+      MTT6mSimple tree ではベットサイズが 33% と 116% の 2 択しか設定されていませんが、
+      solver が 33% を支持する頻度が圧倒的に高く、
+      polarize_enabled=False が最適化結果として導き出されました。
+
+  - type: heading
+    level: 2
+    text: "cash で polarize 板 vs non-polarize 板の対比"
+
+  - type: examples
+    framework: full
+    title: "Overbet 適用 vs 非適用の計算例（cash_100bb 4 ケース）"
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        board: "Ks7d2c"
+        scenario: BTN
+        context: cash_100bb
+      - hand: top_pair
+        draw: no_draw
+        board: "9s7d5c"
+        scenario: BTN
+        context: cash_100bb
+      - hand: overpair
+        draw: no_draw
+        board: "Ah9d5c"
+        scenario: BTN
+        context: cash_100bb
+      - hand: top_pair
+        draw: no_draw
+        board: "Kh7h2h"
+        scenario: BTN
+        context: cash_100bb
+
+  - type: prose
+    body: |
+      上記の例から読み取れることをまとめます。
+
+      Ks7d2c（K-high dry、条件外 → size=33%）: K-high rainbow で条件1〜6 に非該当。
+      9s7d5c（mid-rank connected、条件1 該当 → size=116%）: top=9≤9、gap=9-5=4≤4 で overbet。
+      Ah9d5c（A-high mid spread、条件4 該当 → size=116%）: high=A、mid=9∈{8-J}、gap=9-5=4≥4 で overbet。
+      Kh7h2h（mono → 除外 → size=33%）: 3 枚同スーツで overbet 除外。
+
+      MTT の same hands on same boards は size=33% のみ使用されます。
+      overbet のメカニズムは cash のみの概念として理解してください。
+
+  - type: heading
+    level: 2
+    text: "暗記ショートカット——polarize 板の 5 パターン（cash 用）"
+
+  - type: prose
+    body: |
+      6 条件を 5 パターンで覚えると整理しやすくなります。
+
+      Pattern 1「mid narrow」: 9 以下トップ + gap 4 以内（条件1）
+      低位コネクテッドでナッツが二極化します。
+
+      Pattern 2「K-wide」: K-high + mid≥9 + gap≥3（条件2+3 の統合）
+      K と mid の spread があるボードです。
+
+      Pattern 3「A-mid spread」: A-high + mid∈{8-J} + gap≥4（条件4）
+      A とミッドカードの開きがあるボードです。
+
+      Pattern 4「Q-mid spread」: Q-high + mid∈{8-J} + gap≥4（条件5）
+      Q 版の A-mid spread です。
+
+      Pattern 5「JT-mid spread」: J/T-high + mid∈{6-9} + gap≥3（条件6）
+      低めのコネクテッド spread です。
+
+      除外キーワード: ペア板 / mono はどのパターンでも除外です。
+      暗記語呂: 「mid-narrow / K-wide / Amid / Qmid / JTmid」

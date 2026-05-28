@@ -1,0 +1,192 @@
+volume: "Vol3"
+chapter_num: "06"
+title: "MTT 25bb 終盤 cbet——push 圏直前の戦略"
+
+summary: |
+  MTT 終盤の 25bb（SBR 約 20-25）は、オールインプッシュが現実的な選択肢として視野に入る局面です。
+  このコンテキストでは α=+6、β=+31 という設定により、全体的にやや積極的でありながら強い役の追加 lift が大きいのが特徴です。
+  WRMSE 15.46% は MTT depth 系列の中で 2 番目に高い精度を示しています。
+
+sections:
+  - type: heading
+    level: 2
+    text: "mtt_25bb context の特徴"
+
+  - type: prose
+    body: |
+      mtt_25bb は MTT ポストフロップで最も多く遭遇するスタック帯です。
+      スタック深度が 25BB というのは「まだ有効にポストフロップができる、しかし残りスタック意識が必要」という境界線上にあります。
+
+      この context の核心パラメータは以下のとおりです。
+
+      | パラメータ | 値 | 意味 |
+      |---|---:|---|
+      | α（全体 lift） | **+6pt** | 全体的にやや積極的 |
+      | β（CBS≥7 追加 lift） | **+31pt** | 強い役の大幅追加 |
+      | off_slowplay | **-28pt** | セット/ツーペア/ストレートは大幅 check 傾向 |
+      | off_trash（low_pair） | **-23pt** | 弱いペアは控えめ |
+      | off_premium（overpair/underpair） | **+15pt** | ペア強化役は積極的 |
+      | SB lift | **-10pt** | SB からのベットは控えめ |
+      | wide lift（CO/HJ/UTG） | **+13pt** | 広いレンジから積極的 |
+      | A-x range bet | **+30pt** | Aハイ乾燥/ペアボードで大幅 up |
+
+      WRMSE（加重二乗平均誤差）は **15.46%** です。
+      これは「誤差が平均 15pt 程度」という意味で、実戦判断の参考として十分な精度です。
+
+  - type: heading
+    level: 2
+    text: "Slowplay -28 が示す戦略意図"
+
+  - type: prose
+    body: |
+      mtt_25bb で最も注目すべきパラメータは off_slowplay = **-28pt** です。
+      セット（HP=8）や ツーペア/フラッシュ/ストレート（HP=9）の役は、base_freq に -28pt が加算されます。
+
+      なぜこれほど強くスローplayを促すのでしょうか。
+
+      25bb スタックでは SPR が約 4.5 程度です。
+      この SPR では、相手がフロップで call した場合、ターンかリバーには commit 圏に入りやすくなります。
+      強い役でベットを続けると相手が早期 fold してしまい、スタック全額を取りきれない機会損失が発生します。
+
+      反対に、チェックバックしてターンでの価値最大化を狙う方が EV が高いのです。
+
+      **実戦への示唆**:
+      - セット/ストレート/フラッシュ → まずチェック検討
+      - トップペア/オーバーペア（β+31 で大幅 up）→ 積極的 bet
+      - ロー・ポケットペア（trash -23pt）→ 慎重に bet を絞る
+
+  - type: heading
+    level: 2
+    text: "β=+31 と SB/wide lift の構造"
+
+  - type: prose
+    body: |
+      mtt_25bb の β=+31pt は MTT depth 系列の中で最大の値です（200bb は +11pt）。
+
+      CBS ≥ 7 に該当するのはトップペア、オーバーペア、セット、ツーペア以上です。
+      ただし slowplay カテゴリ（セット/ツーペア/ストレート/フラッシュ）には -28pt の offset が同時に適用されるため、
+      実質的に β=+31 が最も効いてくるのは **トップペアとオーバーペア** です。
+
+      ポジション補正については以下の特徴があります。
+
+      - **SB lift = -10pt**: OOP（アウトオブポジション）であるSBはベット頻度を控えめにします。
+        BTN（0pt）との差は 10pt です。
+      - **wide lift = +13pt**: CO/HJ/UTGなど広いレンジからオープンしたポジションは追加 +13pt。
+        これは「広いレンジから cbet する MTT 的な戦略」を反映しています。
+
+      **A-x range bet +30pt**: Aハイのペアド/ドライボード（gap ≥ 8）で BTN/CO ポジションに限り +30pt 加算されます。
+      例えば A♠8♦2♣（gap=6 < 8 なので非適用）と A♠4♦2♣（gap=10 ≥ 8 で適用）の差に注意が必要です。
+
+  - type: heading
+    level: 2
+    text: "WRMSE 15.46% の精度評価"
+
+  - type: prose
+    body: |
+      mtt_25bb の WRMSE は **15.46%** で、MTT depth 系列（25/50/100/200bb）の中では mtt_50bb（12.96%）に次ぐ 2 位です。
+
+      精度帯の目安は以下のとおりです。
+
+      | WRMSE | 評価 | 活用方針 |
+      |---|---|---|
+      | < 10% | 極良 | 式どおりに従う |
+      | 10-15% | 良 | 基本的に信頼できる |
+      | **15-20%** | **許容** | **±15pt の誤差を想定して使う** |
+      | 20%+ | 注意 | 補正や別判断が必要 |
+
+      15.46% は「許容」の下限近くに位置します。
+      実戦では「計算結果から ±10-15pt の幅を見る」という使い方が適切です。
+
+      特に精度が落ちやすいケースは low_pair + oesd などの「中間的な手」です。
+      境界値（freq ≈ 40-60%）付近では誤差が大きくなりやすいため、
+      明確な強手（≥70%）または明確な弱手（≤30%）で判断するのが賢明です。
+
+  - type: heading
+    level: 2
+    text: "実戦例題 7 問"
+
+  - type: prose
+    body: |
+      以下の計算例で mtt_25bb context の判断フローを体得しましょう。
+      各例題は「ボード × ハンド × ポジション」の組み合わせで、
+      実際の UCBS-v2 計算値を generator から取得しています。
+
+  - type: examples
+    framework: full
+    title: "BTN から cbet（標準ポジション）"
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        board: "Ks7d2c"
+        scenario: BTN
+        context: mtt_25bb
+
+      - hand: overpair
+        draw: no_draw
+        board: "Jd8c3s"
+        scenario: BTN
+        context: mtt_25bb
+
+      - hand: low_pair
+        draw: no_draw
+        board: "Ah7s3c"
+        scenario: BTN
+        context: mtt_25bb
+
+      - hand: set
+        draw: no_draw
+        board: "Ks7d7c"
+        scenario: BTN
+        context: mtt_25bb
+
+      - hand: ace_high
+        draw: fd
+        board: "Jd8c3d"
+        scenario: BTN
+        context: mtt_25bb
+
+      - hand: second_pair
+        draw: gutshot
+        board: "Kh8d5c"
+        scenario: CO
+        context: mtt_25bb
+
+      - hand: top_pair
+        draw: no_draw
+        board: "As4c2d"
+        scenario: BTN
+        context: mtt_25bb
+
+  - type: heading
+    level: 2
+    text: "SB からの cbet"
+
+  - type: examples
+    framework: full
+    title: "SB ポジション（OOP）での判断"
+    cases:
+      - hand: overpair
+        draw: no_draw
+        board: "Jd8c3s"
+        scenario: SB
+        context: mtt_25bb
+
+      - hand: top_pair
+        draw: no_draw
+        board: "Ks7d2c"
+        scenario: SB
+        context: mtt_25bb
+
+  - type: heading
+    level: 2
+    text: "まとめ：mtt_25bb の 5 原則"
+
+  - type: prose
+    body: |
+      mtt_25bb context を実戦で使うための 5 原則をまとめます。
+
+      1. **強い役（セット/ストレート/フラッシュ）はチェック優先**: off_slowplay=-28pt が指示する GTO の傾向。相手を引きつける slowplay が有効。
+      2. **トップペア/オーバーペアは積極的 bet**: β=+31pt で CBS≥7 の役に大幅 lift。特に BTN/CO では高頻度 bet。
+      3. **ロー・ポケットペアは慎重に**: off_trash=-23pt で弱いペアは bet 頻度を下げる。ボードがドライで相手が fold しやすい場合のみ bet 検討。
+      4. **SB は BTN より -10pt**: OOP のため全ハンドで bet 頻度を控えめに設定。
+      5. **Aハイドライ/ペアボードでは range bet**: ax_range_bet=+30pt が有効な条件（BTN/CO + gap≥8 or paired）を確認してから適用。

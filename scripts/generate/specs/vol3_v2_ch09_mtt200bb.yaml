@@ -1,0 +1,180 @@
+volume: "Vol3"
+chapter_num: "09"
+title: "MTT 200bb 深スタック cbet——FT 直後の深打ち"
+
+summary: |
+  MTT 200bb（SBR 150+）はファイナルテーブル直後や序盤のディープスタック局面です。
+  α=-4、β=+11、SB lift=-34pt という設定で「控えめだが強い役は積極的」という構造を持ちます。
+  WRMSE 14.10% は「良」の精度帯に位置し、信頼して使えるコンテキストです。
+
+sections:
+  - type: heading
+    level: 2
+    text: "mtt_200bb context の全パラメータ"
+
+  - type: prose
+    body: |
+      mtt_200bb は 50bb と構造が似ていますが、SB の抑制が最大になる点が特徴的です。
+
+      | パラメータ | mtt_200bb | mtt_50bb | 差 |
+      |---|---:|---:|---:|
+      | α（全体 lift） | **-4pt** | -4pt | 0 |
+      | β（CBS≥7 追加 lift） | **+11pt** | +19pt | -8 |
+      | off_slowplay | **-15pt** | -12pt | -3 |
+      | off_trash（low_pair） | **-31pt** | -35pt | +4 |
+      | off_premium（overpair/underpair） | **+14pt** | +20pt | -6 |
+      | SB lift | **-34pt** | -29pt | -5 |
+      | wide lift（CO/HJ/UTG） | **+1pt** | 0pt | +1 |
+      | A-x range bet | **+9pt** | +11pt | -2 |
+
+      WRMSE = **14.10%**（精度帯「良」、mtt_50bb の 12.96% に次ぐ）
+
+      50bb との最大の違いは **SB lift の -34pt** です。
+      深スタックになるほど SB は OOP でのポストフロップを避ける傾向が強まります。
+
+  - type: heading
+    level: 2
+    text: "FT 直後の深打ち——200bb の戦略的背景"
+
+  - type: prose
+    body: |
+      200bb スタックが現れる典型的なシナリオはファイナルテーブル直後です。
+
+      ファイナルテーブル（FT）では：
+      - 参加者が 9 人から始まる
+      - 巨大な賞金差が存在する（上位 3 着で賞金が大幅に集中）
+      - 序盤は「サバイバル」よりも「チップ収集」が重要
+
+      FT 序盤の 200bb では ICM プレッシャーは中程度です。
+      ただし FT という舞台であるため、完全に無視はできません。
+
+      mtt_200bb の α=-4pt は「やや控えめ」の設定です。
+      100bb の α=+15pt と対比すると、深スタックでの慎重さが読み取れます。
+
+      **200bb と 50bb の構造的類似**:
+      両者は α=-4pt と wide lift ≈ 0pt を共有します。
+      これは「中程度のスタックでは wide lift が効かない」という GTO の傾向を示しています。
+      レンジの広さではなく CBS（役の強さ）が主要な判断基準になる深さです。
+
+  - type: heading
+    level: 2
+    text: "SB lift -34pt——深スタックほど SB は fold 傾向"
+
+  - type: prose
+    body: |
+      mtt_200bb の SB lift = **-34pt** は MTT depth 系列で最大の絶対値です。
+
+      | depth | SB lift |
+      |---|---:|
+      | mtt_25bb | -10pt |
+      | mtt_50bb | -29pt |
+      | mtt_100bb | -11pt |
+      | **mtt_200bb** | **-34pt** |
+
+      深いスタックになるほど SB が保守的になる傾向は直感に反するように見えます。
+      しかし以下の理由から合理的です。
+
+      1. **deeper SPR = 大きな decision**: 200bb での SPR は ≈ 36 程度。ポットに対してスタックが非常に大きいため、一度 bet すると commitしにくい。
+      2. **OOP の不利が積み重なる**: ターン・リバーと 3 streets で OOP を戦うのは大きなディスアドバンテージ。深スタックほどこの不利が拡大する。
+      3. **チェックバックで情報収集**: SB はチェックして IP（BTN）の反応を見る方が expected value が高いケースが多い。
+
+      **実戦への示唆**: 200bb のポットで SB を持っている場合、CBetは最強のハンドのみに絞りましょう。
+      top_pair 程度でも BTN なら bet する局面で、SB ではチェックが推奨されるケースが多くなります。
+
+  - type: heading
+    level: 2
+    text: "β=+11 と Slowplay の穏やかな抑制"
+
+  - type: prose
+    body: |
+      mtt_200bb の β = **+11pt**（CBS≥7 に適用）は MTT depth 系列の中で 200bb 固有の値です。
+
+      | depth | β |
+      |---:|---:|
+      | 25bb | +31pt |
+      | 50bb | +19pt |
+      | 100bb | +9pt |
+      | 200bb | +11pt |
+
+      depth が深くなるにつれて β が低下します。
+      25bb の「強い役を積極的に bet」から 200bb の「強い役でも慎重に」への転換です。
+
+      off_slowplay = **-15pt** は 25bb の -28pt と比較して穏やかな抑制です。
+      200bb では SPR が深いため、セット/ストレートをスローplayする必要性が下がります。
+      SPR ≈ 36 では相手に 3 streets を通じて価値を積み上げる余地が十分あるからです。
+
+      ただし off_slowplay = -15pt という値は「チェックを完全に否定しない」ことも示しています。
+      特にフラッシュ/ストレート完成時は引き続きチェックが有力です。
+
+  - type: heading
+    level: 2
+    text: "WRMSE 14.10%——200bb の信頼性"
+
+  - type: prose
+    body: |
+      mtt_200bb の WRMSE = **14.10%** は「良」の精度帯（10-15%）に位置します。
+
+      特筆すべきは **SB からの予測精度が高い**点です。
+      UCBS_V2_DCBS_FINAL.md によれば SB での予測精度は WRMSE ≈ 8.10% と極めて高い値を示しています。
+
+      これは SB が -34pt という大きな負の補正で「チェックが圧倒的多数」という明確なパターンを取るためです。
+      GTO が予測しやすい一方向の挙動が精度を高めています。
+
+      **全体 14.10% の内訳イメージ**:
+      - BTN/CO（wide ≈ 0pt）: 標準的な精度
+      - SB: 高精度（WRMSE ≈ 8%）
+      - HJ/UTG: やや低精度
+
+      実戦では mtt_200bb の判断は「信頼できる」レベルです。
+      境界値付近の手（40-60%）でも mtt_50bb と同様に比較的自信を持って使えます。
+
+  - type: heading
+    level: 2
+    text: "実戦例題 5 問"
+
+  - type: examples
+    framework: full
+    title: "mtt_200bb の BTN/SB 比較"
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        board: "Ks7d2c"
+        scenario: BTN
+        context: mtt_200bb
+
+      - hand: overpair
+        draw: no_draw
+        board: "Jd8c3s"
+        scenario: BTN
+        context: mtt_200bb
+
+      - hand: set
+        draw: no_draw
+        board: "Ks7d7c"
+        scenario: BTN
+        context: mtt_200bb
+
+      - hand: top_pair
+        draw: no_draw
+        board: "Ks7d2c"
+        scenario: SB
+        context: mtt_200bb
+
+      - hand: low_pair
+        draw: no_draw
+        board: "Ah7s3c"
+        scenario: BTN
+        context: mtt_200bb
+
+  - type: heading
+    level: 2
+    text: "まとめ：mtt_200bb の 4 原則"
+
+  - type: prose
+    body: |
+      mtt_200bb context を実戦で使うための 4 原則をまとめます。
+
+      1. **WRMSE 14.10% は「良」精度**: mtt_50bb と同様に信頼して使える。境界値でも基本は計算結果に従う。
+      2. **SB は最大 -34pt で check 多用**: depth 系列最大の SB 抑制。200bb の SB では top_pair 以外はほぼチェック推奨。
+      3. **β=+11pt でも適度な強み補正**: 強い役（top_pair/overpair）には +11pt の追加 lift。25bb ほど急進的ではない。
+      4. **50bb との構造類似を活用**: α=-4pt + wide lift ≈ 0pt の共通構造。50bb での判断が参考になる。
