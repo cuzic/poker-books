@@ -1,0 +1,11 @@
+{"board": "Ks7d2c", "sbr": "SBR25", "flop_seq": "X-R1.15-C", "turn": "Ks", "label": "K (トップペア, ボードペア)", "actions": {}, "bet_pct": 0}
+{"board": "Ks7d2c", "sbr": "SBR25", "flop_seq": "X-R1.15-C", "turn": "7s", "label": "7 (ミドルカード, ボードペア)", "actions": {"X": 38.4, "R1.6": 47.5, "R4": 14.0, "RAI": 0.0}, "bet_pct": 61.5}
+{"board": "Ks7d2c", "sbr": "SBR25", "flop_seq": "X-R1.15-C", "turn": "Tc", "label": "T (オーバーカード)", "actions": {"X": 99.8, "R1.6": 0.1, "R4": 0.0, "RAI": 0.0}, "bet_pct": 0.1}
+{"board": "Ks7d2c", "sbr": "SBR25", "flop_seq": "X-R1.15-C", "turn": "6d", "label": "6 (アンダーカード, ブランク)", "actions": {"X": 98.2, "R1.6": 1.7, "R4": 0.1, "RAI": 0.0}, "bet_pct": 1.8}
+{"board": "Ks7d2c", "sbr": "SBR25", "flop_seq": "X-R1.15-C", "turn": "3h", "label": "3 (完全ブランク)", "actions": {"X": 97.8, "R1.6": 2.2, "R4": 0.0, "RAI": 0.0}, "bet_pct": 2.2}
+{"board": "Th9s8d", "sbr": "SBR25", "flop_seq": "X-R1.9-C", "turn": "As", "label": "A (オーバーカード)", "actions": {"X": 100.0, "R1.9": 0.0, "R4.75": 0.0, "RAI": 0.0}, "bet_pct": 0.0}
+{"board": "Th9s8d", "sbr": "SBR25", "flop_seq": "X-R1.9-C", "turn": "Jc", "label": "J (ストレート完成カード!)", "actions": {"X": 95.7, "R1.9": 4.1, "R4.75": 0.3, "RAI": 0.0}, "bet_pct": 4.4}
+{"board": "Th9s8d", "sbr": "SBR25", "flop_seq": "X-R1.9-C", "turn": "7h", "label": "7 (ストレート完成カード!)", "actions": {"X": 70.8, "R1.9": 22.5, "R4.75": 6.8, "RAI": 0.0}, "bet_pct": 29.3}
+{"board": "Th9s8d", "sbr": "SBR25", "flop_seq": "X-R1.9-C", "turn": "Kd", "label": "K (オーバーカード高)", "actions": {"X": 100.0, "R1.9": 0.0, "R4.75": 0.0, "RAI": 0.0}, "bet_pct": 0.0}
+{"board": "Th9s8d", "sbr": "SBR25", "flop_seq": "X-R1.9-C", "turn": "2c", "label": "2 (完全ブランク)", "actions": {"X": 99.3, "R1.9": 0.7, "R4.75": 0.0, "RAI": 0.0}, "bet_pct": 0.7}
+{"board": "Th9s8d", "sbr": "SBR25", "flop_seq": "X-R1.9-C", "turn": "Td", "label": "T (ボードペア)", "actions": {"X": 98.9, "R1.9": 1.0, "R4.75": 0.1, "RAI": 0.0}, "bet_pct": 1.1}

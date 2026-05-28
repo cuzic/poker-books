@@ -1,0 +1,127 @@
+# 付録 早見表・チートシート — spec YAML
+# Task #37 / Gen-12f / 2026-05-23
+# NOTE: appendix uses custom rendering; generate_mtt_chapter is invoked but
+# the "scenarios" here map to appendix sections (A/B/C).
+
+chapter_num: "付録"
+title: "早見表・チートシート一覧"
+
+summary: |
+  本付録は本書全体で登場した数値と判断基準を、ひとつの場所で確認できるよう整理したものです。
+  実戦中に手元に置いて参照してください。
+
+scenarios:
+  # ─── 付録A: SBR→SPR 変換表 ───
+  - id: AppA
+    title: "付録A　SBR→SPR 変換早見表"
+    description: |
+      SBR（Stack-to-Blind Ratio）からフロップ時のSPR（スタックポット比）を素早く求めるための表です。
+      SRP（シングルレイズポット）と3BP（3ベットポット）ではSPRが大きく異なるため、
+      どちらのポットかを必ず確認してください。
+    decision_table:
+      - board_type: "SBR 30+（60BB+）"
+        sbr25: "SRP SPR≥10 / コミット: HS≥65（TPTK）"
+        sbr20: "3BP SPR≈3〜4 / コミット: HS≥42"
+        note: "序盤想定。キャッシュ同等の自由度"
+      - board_type: "SBR 25（50BB）"
+        sbr25: "SRP SPR≈8 / コミット: HS≥65（TPTK）"
+        sbr20: "3BP SPR≈2.7 / コミット: HS≥42"
+        note: "標準MTT中盤"
+      - board_type: "SBR 20（40BB）"
+        sbr25: "SRP SPR≈6 / コミット: HS≥55（TPMK）"
+        sbr20: "3BP SPR≈2.0 / コミット: HS≥30"
+        note: "やや浅い中盤"
+      - board_type: "SBR 15（30BB）"
+        sbr25: "SRP SPR≈4.5 / コミット: HS≥42（2ndペア強）"
+        sbr20: "3BP SPR≈1.4 / コミット: TP以上で即AI"
+        note: "Short SPR圏に入る"
+      - board_type: "SBR 10（20BB）"
+        sbr25: "SRP SPR≈3 / コミット: HS≥30（TP弱）"
+        sbr20: "3BP SPR≈コミット圏"
+        note: "フロップ着地でほぼコミット"
+      - board_type: "SBR 7（14BB）"
+        sbr25: "SRP SPR≈1.5 / TP以上でコミット"
+        sbr20: "3BP: —（プリフロップで完結）"
+        note: "プッシュ/フォールド圏"
+    decision_caption: "SBR→SPR変換（SRP・3BP別、BBアンテあり前提）"
+
+  # ─── 付録B: コミットライン統合表 ───
+  - id: AppB
+    title: "付録B　コミットライン統合表"
+    description: |
+      SPRとステージ（バブル・FT）の組み合わせで、コミットに必要な最低HSをまとめた表です。
+      ここでいう「コミット」はポットの40%以上を投入する判断を指します。
+      マルチウェイでは各閾値に+10〜15 HSを加算してください。
+    decision_table:
+      - board_type: "SPR≥8（SBR25+）"
+        sbr25: "通常: HS≥65（TPTK）"
+        sbr20: "バブル: HS≥75（2ペア）/ FT: HS≥73"
+        note: "1段引き上げで2ペア以上が必要"
+      - board_type: "SPR 4〜8（SBR15〜25）"
+        sbr25: "通常: HS≥55（TPMK）"
+        sbr20: "バブル: HS≥65（TPTK）/ FT: HS≥65"
+        note: "バブルでTPTK必須"
+      - board_type: "SPR 2〜4（SBR10〜15）"
+        sbr25: "通常: HS≥42（2ndペア強）"
+        sbr20: "バブル: HS≥52（TPMK弱）/ FT: HS≥52"
+        note: "2ndペアでも降りになる"
+      - board_type: "SPR<2（SBR<10）"
+        sbr25: "通常: HS≥30（TP弱）"
+        sbr20: "バブル: HS≥50（TP）/ FT: HS≥50"
+        note: "フロップ着地でTP以上なら即コミット"
+    decision_caption: "コミットライン（SPR×ステージ別）"
+    flow_title: "FT人数・スタック別の追加補正"
+    flow_steps:
+      - "9人残り: ビッグ+3〜4HS / ミドル+7〜8HS / ショート+11〜13HS"
+      - "5人残り: ビッグ+3〜4HS / ミドル+11〜13HS / ショート+14〜16HS"
+      - "3人残り: ビッグ+2〜3HS / ミドル+7〜8HS / ショート+14〜16HS"
+    flow_notes:
+      - "ビッグスタック=チップリーダー。ミドル=平均付近。ショート=平均50%以下"
+      - "3way補正+10〜12HS、4way以上+12〜15HS をさらに加算"
+
+  # ─── 付録C: ステージ別チートシート ───
+  - id: AppC
+    title: "付録C　ステージ別チートシート"
+    description: |
+      本書の全判断を1枚に凝縮した早見表です。
+      HS（HandScore）の閾値は中盤の通常コミットラインに各ステージのICM補正を加算したものです。
+    decision_table:
+      - board_type: "序盤（ICM+1%相当）"
+        sbr25: "SBR25: HS≥65 / SBR20: HS≥56 / SBR15: HS≥43"
+        sbr20: "SBR10: HS≥31 / SBR<10: HS≥51"
+        note: "vol2準拠。ICM補正ほぼ無視可"
+      - board_type: "中盤（ICM+4%相当）"
+        sbr25: "SBR25: HS≥65 / SBR20: HS≥58 / SBR15: HS≥45"
+        sbr20: "SBR10: HS≥33 / SBR<10: HS≥53"
+        note: "小幅タイト化"
+      - board_type: "バブル（ICM+12%相当）"
+        sbr25: "SBR25: HS≥75 / SBR20: HS≥67 / SBR15: HS≥54"
+        sbr20: "SBR10: HS≥42 / SBR<10: HS≥62"
+        note: "1〜2段引き上げ。2ペア以上が基準"
+      - board_type: "FT-9人（ICM+10%相当）"
+        sbr25: "SBR25: HS≥73 / SBR20: HS≥63 / SBR15: HS≥50"
+        sbr20: "SBR10: HS≥38 / SBR<10: HS≥58"
+        note: "ミドルスタック基準"
+      - board_type: "FT-5人（ICM+15%相当）"
+        sbr25: "SBR25: HS≥75 / SBR20: HS≥67 / SBR15: HS≥54"
+        sbr20: "SBR10: HS≥42 / SBR<10: HS≥62"
+        note: "バブルと同等の圧力"
+    decision_caption: "コミット閾値クロス表（HS以上でコミット）"
+    flow_title: "CBet・α補正 早見表"
+    flow_steps:
+      - "CBet エアー許可ボード型: 序盤=型1/6のみ、中盤=型1/6（型2はビッグスタックのみ追加）"
+      - "バブル CBet拡大: vsショートスタックで型1〜4拡大。型5〜7は通常通り"
+      - "α補正: 中盤=×1.0, バブル=×0.7, FT=×0.6〜0.8"
+      - "SBR×ステージ要約: SBR30+ 序盤=vol2準拠, バブル以降=コミット+10〜15HS"
+      - "SBR15〜25: 中盤=SPR確認→コミット, バブル=1段上コミット適用"
+      - "SBR10〜15: コミット or 降りの二択。中途半端コール最大損失"
+    flow_notes:
+      - "補正%はequityの加算分をHS換算（1%≈0.75HS）した概算"
+      - "マルチウェイの場合は+10〜15HSをさらに加算"
+
+summary_card:
+  - "付録A: SBR→SPR変換。SRP=SBR×0.33程度、3BP=SBR×0.11程度が目安"
+  - "付録B: SPR×ステージのコミットライン。バブル・FTは1〜2段引き上げ"
+  - "付録C: 全ステージ×SBRクロス表。CBetとα補正を1枚で確認"
+  - "マルチウェイ補正: 全閾値に+10〜15HS（3way+10〜12、4way以上+12〜15）"
+  - "バブルCBet拡大: vsショートスタックのみ。相手がICM恐怖でオーバーフォールドする場合限定"

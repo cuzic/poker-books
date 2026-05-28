@@ -1,0 +1,428 @@
+# vol4 MTT ポストフロップ シナリオ仕様 インデックス
+# Task #32 / Gen-12a / 2026-05-22
+
+meta:
+  book: vol4-mtt-postflop
+  total_scenarios: 26
+  format_version: 1.0
+  last_updated: 2026-05-22
+  scope:
+    in:
+      - HU SRP（BTN/CO vs BB/SB）
+      - HU 3BP（一部）
+      - SBR 10〜40+
+      - Flop / Turn / River
+      - 序盤・中盤・バブル・FT
+    out:
+      - マルチウェイ（3人以上）
+      - SBR<10 詳細（push/fold で完結）
+      - 4BP（フロップ着地で全イン）
+
+# シナリオID 命名規則
+# 形式: <ストリート><番号><ポット種>
+#   ストリート: F=Flop, T=Turn, R=River
+#   番号: 01〜10（街路ごと連番）
+#   ポット種: B=SRP BTN vs BB, S=SRP SB vs BB, 3=3BP, M=Multi（参考のみ）
+# 例: F01B = Flop-01, BTN vs BB（SRP）
+
+scenarios:
+  # ─────────────── FLOP（10 シナリオ） ───────────────
+  - id: F01B
+    street: flop
+    position: ip
+    actor: btn
+    villain: bb
+    situation: btn_vs_bb_srp
+    description: "BTN フロップ CBet vs BB（SRP）"
+    sbr_range: [15, 40]
+    spr_range: [4.5, 10]
+    spec_file: specs/F01B.yaml
+    chapters: [03, 04, 05]
+
+  - id: F02B
+    street: flop
+    position: oop
+    actor: bb
+    villain: btn
+    situation: bb_defense_vs_btn_cbet
+    description: "BB フロップディフェンス vs BTN CBet（SRP）"
+    sbr_range: [15, 40]
+    spr_range: [4.5, 10]
+    spec_file: specs/F02B.yaml
+    chapters: [03, 04, 05]
+
+  - id: F03B
+    street: flop
+    position: oop
+    actor: bb
+    villain: btn
+    situation: bb_cr_vs_btn_cbet
+    description: "BB フロップ CR vs BTN CBet（SRP）"
+    sbr_range: [20, 40]
+    spr_range: [6, 10]
+    spec_file: specs/F03B.yaml
+    chapters: [03, 04]
+
+  - id: F04B
+    street: flop
+    position: ip
+    actor: btn
+    villain: bb
+    situation: btn_response_to_cr
+    description: "BTN フロップ CR への対応（SRP）"
+    sbr_range: [20, 40]
+    spr_range: [6, 10]
+    spec_file: specs/F04B.yaml
+    chapters: [03, 04]
+
+  - id: F05S
+    street: flop
+    position: oop
+    actor: sb
+    villain: bb
+    situation: sb_vs_bb_srp
+    description: "SB フロップ CBet vs BB（SRP）"
+    sbr_range: [15, 40]
+    spr_range: [4.5, 10]
+    spec_file: specs/F05S.yaml
+    chapters: [03, 04]
+
+  - id: F06S
+    street: flop
+    position: ip
+    actor: bb
+    villain: sb
+    situation: bb_defense_vs_sb_cbet
+    description: "BB フロップディフェンス vs SB CBet（SRP）"
+    sbr_range: [15, 40]
+    spr_range: [4.5, 10]
+    spec_file: specs/F06S.yaml
+    chapters: [03, 04]
+
+  - id: F07_3
+    street: flop
+    position: ip
+    actor: btn
+    villain: bb
+    situation: btn_3bp_cbet
+    description: "BTN フロップ CBet vs BB（3BP・IP）"
+    sbr_range: [20, 40]
+    spr_range: [1.5, 4]
+    spec_file: specs/F07_3.yaml
+    chapters: [10]
+
+  - id: F08_3
+    street: flop
+    position: oop
+    actor: bb
+    villain: btn
+    situation: bb_3bp_defense
+    description: "BB フロップディフェンス vs BTN（3BP・OOP）"
+    sbr_range: [20, 40]
+    spr_range: [1.5, 4]
+    spec_file: specs/F08_3.yaml
+    chapters: [10]
+
+  - id: F09_3
+    street: flop
+    position: oop
+    actor: sb
+    villain: btn
+    situation: sb_3bp_cbet_vs_btn
+    description: "SB フロップ CBet vs BTN コール（3BP・OOP）"
+    sbr_range: [20, 40]
+    spr_range: [1.5, 4]
+    spec_file: specs/F09_3.yaml
+    chapters: [10]
+
+  - id: F10S
+    street: flop
+    position: oop
+    actor: short
+    villain: any
+    situation: short_stack_flop
+    description: "Very Short（SBR<10）フロップ着地時の挙動"
+    sbr_range: [5, 10]
+    spr_range: [0.5, 3]
+    spec_file: specs/F10S.yaml
+    chapters: [05, 06]
+
+  # ─────────────── TURN（10 シナリオ） ───────────────
+  - id: T01B
+    street: turn
+    position: ip
+    actor: btn
+    villain: bb
+    situation: btn_turn_barrel
+    description: "BTN ターンバレル後の継続（SRP）"
+    sbr_range: [15, 40]
+    spr_range: [4.5, 10]
+    spec_file: specs/T01B.yaml
+    chapters: [03, 04, 12]
+
+  - id: T02B
+    street: turn
+    position: oop
+    actor: bb
+    villain: btn
+    situation: bb_turn_defense
+    description: "BB ターンディフェンス（SRP、フロップコール後）"
+    sbr_range: [15, 40]
+    spr_range: [4.5, 10]
+    spec_file: specs/T02B.yaml
+    chapters: [03, 04, 12]
+
+  - id: T03B
+    street: turn
+    position: ip
+    actor: btn
+    villain: bb
+    situation: btn_turn_after_check
+    description: "BTN ターン（フロップ check 後）"
+    sbr_range: [15, 40]
+    spr_range: [4.5, 10]
+    spec_file: specs/T03B.yaml
+    chapters: [03, 04, 12]
+
+  - id: T04B
+    street: turn
+    position: oop
+    actor: bb
+    villain: btn
+    situation: bb_turn_lead
+    description: "BB ターンリード（probe・donk）"
+    sbr_range: [20, 40]
+    spr_range: [6, 10]
+    spec_file: specs/T04B.yaml
+    chapters: [03, 12]
+
+  - id: T05B
+    street: turn
+    position: oop
+    actor: bb
+    villain: btn
+    situation: bb_cr_continuation
+    description: "BB CR-continuation（フロップ CR コール後のターン）"
+    sbr_range: [20, 40]
+    spr_range: [6, 10]
+    spec_file: specs/T05B.yaml
+    chapters: [12]
+
+  - id: T06B
+    street: turn
+    position: ip
+    actor: btn
+    villain: bb
+    situation: btn_vs_cr_turn
+    description: "BTN ターン（フロップ CR コール後）"
+    sbr_range: [20, 40]
+    spr_range: [6, 10]
+    spec_file: specs/T06B.yaml
+    chapters: [12]
+
+  - id: T07S
+    street: turn
+    position: ip
+    actor: bb
+    villain: sb
+    situation: bb_turn_vs_sb_cbet
+    description: "BB ターン vs SB（SRP、IP 視点）"
+    sbr_range: [15, 40]
+    spr_range: [4.5, 10]
+    spec_file: specs/T07S.yaml
+    chapters: [03, 04, 12]
+
+  - id: T08_3
+    street: turn
+    position: ip
+    actor: btn
+    villain: bb
+    situation: btn_3bp_turn_barrel
+    description: "BTN ターン（3BP・IP・しばしばAI圏）"
+    sbr_range: [20, 40]
+    spr_range: [0.5, 2.5]
+    spec_file: specs/T08_3.yaml
+    chapters: [10, 12]
+
+  - id: T09_3
+    street: turn
+    position: oop
+    actor: bb
+    villain: btn
+    situation: bb_3bp_turn_defense
+    description: "BB ターンディフェンス（3BP・OOP）"
+    sbr_range: [20, 40]
+    spr_range: [0.5, 2.5]
+    spec_file: specs/T09_3.yaml
+    chapters: [10, 12]
+
+  - id: T10S
+    street: turn
+    position: any
+    actor: short
+    villain: any
+    situation: short_turn
+    description: "Short/VeryShort ターン（事実上 AI 圏）"
+    sbr_range: [7, 15]
+    spr_range: [0.3, 4]
+    spec_file: specs/T10S.yaml
+    chapters: [05, 06, 12]
+
+  # ─────────────── RIVER（6 シナリオ） ───────────────
+  - id: R01B
+    street: river
+    position: ip
+    actor: btn
+    villain: bb
+    situation: btn_river_value
+    description: "BTN リバーバリュー（SRP、ターンバレル後）"
+    sbr_range: [15, 40]
+    spr_range: [0.5, 4]
+    spec_file: specs/R01B.yaml
+    chapters: [03, 04, 12]
+
+  - id: R02B
+    street: river
+    position: oop
+    actor: bb
+    villain: btn
+    situation: bb_river_defense
+    description: "BB リバーディフェンス（SRP）"
+    sbr_range: [15, 40]
+    spr_range: [0.5, 4]
+    spec_file: specs/R02B.yaml
+    chapters: [03, 04, 12]
+
+  - id: R03B
+    street: river
+    position: oop
+    actor: bb
+    villain: btn
+    situation: bb_river_lead
+    description: "BB リバーリード/donk（SRP）"
+    sbr_range: [20, 40]
+    spr_range: [1, 4]
+    spec_file: specs/R03B.yaml
+    chapters: [12]
+
+  - id: R04B
+    street: river
+    position: ip
+    actor: btn
+    villain: bb
+    situation: btn_river_bluff_decision
+    description: "BTN リバーブラフ判断（α 式 × ICM 係数）"
+    sbr_range: [20, 40]
+    spr_range: [1, 4]
+    spec_file: specs/R04B.yaml
+    chapters: [12]
+
+  - id: R05_3
+    street: river
+    position: any
+    actor: any
+    villain: any
+    situation: river_3bp
+    description: "リバー（3BP、しばしば AI 同等）"
+    sbr_range: [20, 40]
+    spr_range: [0.2, 1.5]
+    spec_file: specs/R05_3.yaml
+    chapters: [10, 12]
+
+  - id: R04S
+    street: river
+    position: any
+    actor: any
+    villain: any
+    situation: river_short_spr
+    description: "リバー Short-SPR（コミット圧・α 式 MTT 補正）"
+    sbr_range: [10, 20]
+    spr_range: [0.5, 4]
+    spec_file: specs/R04S.yaml
+    chapters: [05, 12]
+
+# ─────────────── インデックスとメタ参照 ───────────────
+
+axes:
+  street:
+    - flop
+    - turn
+    - river
+  position:
+    - ip
+    - oop
+    - any
+  actor:
+    - btn
+    - sb
+    - bb
+    - co
+    - short
+    - any
+  situation:
+    - btn_vs_bb_srp
+    - bb_defense_vs_btn_cbet
+    - bb_cr_vs_btn_cbet
+    - btn_response_to_cr
+    - sb_vs_bb_srp
+    - bb_defense_vs_sb_cbet
+    - btn_3bp_cbet
+    - bb_3bp_defense
+    - sb_3bp_cbet_vs_btn
+    - short_stack_flop
+    - btn_turn_barrel
+    - bb_turn_defense
+    - btn_turn_after_check
+    - bb_turn_lead
+    - bb_cr_continuation
+    - btn_vs_cr_turn
+    - bb_turn_vs_sb_cbet
+    - btn_3bp_turn_barrel
+    - bb_3bp_turn_defense
+    - short_turn
+    - btn_river_value
+    - bb_river_defense
+    - bb_river_lead
+    - btn_river_bluff_decision
+    - river_3bp
+    - river_short_spr
+
+# データソース（GTO findings 紐付け）
+data_sources:
+  - file: findings/mtt_flop_cbet_SBR20_BTN_BB.json
+    scenarios: [F01B, F02B]
+  - file: findings/mtt_flop_cbet_SBR25_BTN_BB.json
+    scenarios: [F01B, F02B]
+  - file: findings/mtt_check_raise_SBR20.json
+    scenarios: [F03B, F04B, T05B, T06B]
+  - file: findings/mtt_check_raise_SBR25.json
+    scenarios: [F03B, F04B, T05B, T06B]
+  - file: findings/mtt_turn_barrel_SBR20.json
+    scenarios: [T01B, T02B]
+  - file: findings/mtt_turn_barrel_SBR25.json
+    scenarios: [T01B, T02B]
+  - file: findings/mtt_sb_bb_SBR20.json
+    scenarios: [F05S, F06S, T07S]
+  - file: findings/mtt_sb_bb_SBR25.json
+    scenarios: [F05S, F06S, T07S]
+  - file: findings/s4_turn_barrel.jsonl
+    scenarios: [T01B, T02B, T08_3]
+  - file: findings/s6_sb_vs_bb.jsonl
+    scenarios: [F05S, F06S]
+
+# 章 → シナリオ マッピング（キーは "ch03" 形式の文字列で統一）
+# ch05 新設（フロップ守備章、2026-05-25）に伴い ch05-ch14 を ch06-ch15 に繰り下げ
+chapter_scenarios:
+  ch03: [F01B, F02B, F03B, F04B, F05S, F06S, T01B, T02B, T03B, T04B, R01B, R02B]
+  ch04: [F01B, F05S, T01B, T03B, R01B]  # 攻撃に特化（守備はch05へ）
+  ch05: [F02B, F03B, F04B, F06S]  # OOPフロップ守備章
+  ch06: [F01B, F02B, F03B, F04B, F05S, F06S, T01B, T02B, T03B, T07S, R01B, R02B]
+  ch07: [F01B, F02B, F10S, T10S, R04S]
+  ch08: [F10S, T10S]
+  ch09: []  # 中盤章は ICM 補正のみ、シナリオ非依存
+  ch10: []  # バブル章は ICM 補正のみ
+  ch11: []  # FT 章も同上
+  ch12: [F07_3, F08_3, F09_3, T08_3, T09_3, R05_3]
+  ch13: []  # マルチウェイは out of scope（補正ルールのみ）
+  ch14: [T01B, T02B, T03B, T04B, T05B, T06B, T07S, T08_3, T09_3, R01B, R02B, R03B, R04B, R05_3, R04S]
+  ch15: []  # クイズは全シナリオ横断
