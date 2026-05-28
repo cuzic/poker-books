@@ -14,15 +14,15 @@ CBS (Combined Board Score) という 1 本の数値と 25 セル表を使えば�
 
 本書はこの 2 つの問いに、CBS という 1 本の数値と 25 セル表という道具で答えます。CBS でハンドの強さを数値化し、25 セル表でベット頻度の目安を引く。この 2 ステップを身につければ、5-7 秒以内に判断を完了できます。
 
-## 本書の主役 — Light UCBS v2 と Light DCBS
+## 本書の主役 — Light UCBS v2 と DCBS (cash 版)
 
 本書で使う計算システムは 2 つあります。
 
 **Light UCBS v2** は、フロップで cbet を打つかどうかを決めるための攻撃側システムです。CBS (Combined Board Score) を計算し、5 つの context (状況) と 5 つの CBS バンド (強さ区分) から成る 25 セル表に照らしてベット頻度の目安を得ます。頻度が 50% 以上ならベット推奨、50% 未満ならチェック寄りと判断します。
 
-**Light DCBS** は、BB が cbet を受けたときに fold するか continue するかを決めるための守備側システムです。HP (Hand Power) の値と context に応じた continue freq (コール + レイズの合計頻度) を参照し、50% 以上なら continue、50% 未満なら fold を選択します。
+**DCBS (cash 版)** は、BB が cbet を受けたときに fold するか continue するかを決めるための守備側システムです。HP (Hand Power) の値と context に応じた continue freq (コール + レイズの合計頻度) を参照し、50% 以上なら continue、50% 未満なら fold を選択します。
 
-この 2 つのシステムを組み合わせると、フロップでの攻守両面の判断が暗算で完結します。攻撃 (cbet 判断) に Light UCBS v2 を使い、守備 (cbet を受けたときの判断) に Light DCBS を使います。
+この 2 つのシステムを組み合わせると、フロップでの攻守両面の判断が暗算で完結します。攻撃 (cbet 判断) に Light UCBS v2 を使い、守備 (cbet を受けたときの判断) に DCBS (cash 版) を使います。
 
 ## 暗算フロー 6 ステップの全体像
 
@@ -72,7 +72,7 @@ Cash context (Cash 100bb SRP) が本書のメインです。strong/nut バンド
 
 **ch07: 3-bet pot** — SPR ~5 の特殊状況での Light UCBS 適用 (ch07) を学びます。コミット判断が近い 3bp context の特徴を理解します。
 
-**ch08: 守備** — Light DCBS による OOP の fold/continue 判断 (ch08) を学びます。HP 別 continue freq 表を使って 3-5 秒で守備判断を完了します。
+**ch08: 守備** — DCBS (cash 版) による OOP の fold/continue 判断 (ch08) を学びます。HP 別 continue freq 表を使って 3-5 秒で守備判断を完了します。
 
 **ch09-10: ターン〜マルチストリート** — ターン 2nd barrel の α=-0.35 シフト (ch09) と 3 ストリート連携の設計 (ch10) を学びます。
 

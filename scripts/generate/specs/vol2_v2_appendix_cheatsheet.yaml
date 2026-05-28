@@ -44,7 +44,7 @@ sections:
 
   - type: heading
     level: 2
-    text: "Light DCBS — cash 100bb continue freq 表"
+    text: "DCBS (cash 版) — cash 100bb continue freq 表"
 
   - type: table
     template: dcbs_table
@@ -92,12 +92,12 @@ sections:
 
   - type: heading
     level: 2
-    text: "暗算フロー 3-5 ステップ (守備側 — Light DCBS)"
+    text: "暗算フロー 3-5 ステップ (守備側 — DCBS (cash 版))"
 
   - type: prose
     body: |
       ```
-      [Light DCBS — 暗算フロー]
+      [DCBS (cash 版) — 暗算フロー]
 
       Step 1: HP 確認
         hand type → HP テーブル → HP 値

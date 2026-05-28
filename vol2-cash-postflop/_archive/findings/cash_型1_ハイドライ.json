@@ -1,0 +1,671 @@
+{
+  "label": "型1_ハイドライ",
+  "board": "Ks7d2c",
+  "gametype": "Cash6mGeneral_6mNL25R25",
+  "depth": 100.0,
+  "action_solutions": [
+    {
+      "code": "X",
+      "type": "CHECK",
+      "betsize_by_pot": null,
+      "total_frequency": 0.26530367136001587,
+      "total_combos": 129.07036891780714,
+      "hand_categories": [
+        {
+          "name": "no_made_hand",
+          "index": 0,
+          "display_order": 16,
+          "total_combos": 40.22408941032336,
+          "total_frequency": 0.3116446290741301,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "king_high",
+          "index": 1,
+          "display_order": 15,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "ace_high",
+          "index": 2,
+          "display_order": 14,
+          "total_combos": 45.37287635356188,
+          "total_frequency": 0.3515359434737913,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "low_pair",
+          "index": 3,
+          "display_order": 13,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "third_pair",
+          "index": 4,
+          "display_order": 12,
+          "total_combos": 8.82476462671275,
+          "total_frequency": 0.06837172796390446,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "second_pair",
+          "index": 5,
+          "display_order": 11,
+          "total_combos": 6.012898686807603,
+          "total_frequency": 0.04658620265570395,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "underpair",
+          "index": 6,
+          "display_order": 10,
+          "total_combos": 9.106327474117279,
+          "total_frequency": 0.07055319559752404,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "top_pair",
+          "index": 7,
+          "display_order": 9,
+          "total_combos": 18.30671123904176,
+          "total_frequency": 0.14183511217519726,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "overpair",
+          "index": 8,
+          "display_order": 8,
+          "total_combos": 0.6247749291360378,
+          "total_frequency": 0.004840575732099616,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "two_pair",
+          "index": 9,
+          "display_order": 7,
+          "total_combos": 0.534892458235845,
+          "total_frequency": 0.004144192303298668,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "trips",
+          "index": 10,
+          "display_order": 6,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "set",
+          "index": 11,
+          "display_order": 5,
+          "total_combos": 0.06304068519239081,
+          "total_frequency": 0.0004884210243506343,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "straight",
+          "index": 12,
+          "display_order": 4,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "flush",
+          "index": 13,
+          "display_order": 3,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "fullhouse",
+          "index": 14,
+          "display_order": 2,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "quads",
+          "index": 15,
+          "display_order": 1,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "straight_flush",
+          "index": 16,
+          "display_order": 0,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        }
+      ],
+      "equity_buckets_advanced": [
+        {
+          "name": "hands_90_100",
+          "index": 0,
+          "display_order": 0,
+          "total_combos": 0.7428007203197922,
+          "total_frequency": 0.005755005479394328,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "hands_80_90",
+          "index": 1,
+          "display_order": 1,
+          "total_combos": 18.786618591286242,
+          "total_frequency": 0.14555329575555184,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "hands_70_80",
+          "index": 2,
+          "display_order": 2,
+          "total_combos": 7.149087609257549,
+          "total_frequency": 0.05538906632486072,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "hands_60_70",
+          "index": 3,
+          "display_order": 3,
+          "total_combos": 7.970138551667333,
+          "total_frequency": 0.06175033192836727,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "hands_50_60",
+          "index": 4,
+          "display_order": 4,
+          "total_combos": 14.264206438006113,
+          "total_frequency": 0.1105149523476434,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "hands_25_50",
+          "index": 5,
+          "display_order": 5,
+          "total_combos": 75.0936694778502,
+          "total_frequency": 0.5818040660041337,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "hands_0_25",
+          "index": 6,
+          "display_order": 6,
+          "total_combos": 5.0638544747416745,
+          "total_frequency": 0.03923328216004869,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        }
+      ]
+    },
+    {
+      "code": "R1.8",
+      "type": "RAISE",
+      "betsize_by_pot": "0.3272727272727272727272727273",
+      "total_frequency": 0.7346963286399841,
+      "total_combos": 357.4301316450337,
+      "hand_categories": [
+        {
+          "name": "no_made_hand",
+          "index": 0,
+          "display_order": 16,
+          "total_combos": 111.81751704637804,
+          "total_frequency": 0.31283739934190985,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "king_high",
+          "index": 1,
+          "display_order": 15,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "ace_high",
+          "index": 2,
+          "display_order": 14,
+          "total_combos": 98.62713104486465,
+          "total_frequency": 0.2759340038630255,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "low_pair",
+          "index": 3,
+          "display_order": 13,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "third_pair",
+          "index": 4,
+          "display_order": 12,
+          "total_combos": 18.96033643874034,
+          "total_frequency": 0.053046271271459146,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "second_pair",
+          "index": 5,
+          "display_order": 11,
+          "total_combos": 24.203402530401945,
+          "total_frequency": 0.06771505666411688,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "underpair",
+          "index": 6,
+          "display_order": 10,
+          "total_combos": 20.89307349920273,
+          "total_frequency": 0.05845358536300708,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "top_pair",
+          "index": 7,
+          "display_order": 9,
+          "total_combos": 65.67169204354286,
+          "total_frequency": 0.18373294177837599,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "overpair",
+          "index": 8,
+          "display_order": 8,
+          "total_combos": 5.374025106430054,
+          "total_frequency": 0.015035175907156,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "two_pair",
+          "index": 9,
+          "display_order": 7,
+          "total_combos": 4.951207667589188,
+          "total_frequency": 0.013852238640640582,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "trips",
+          "index": 10,
+          "display_order": 6,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "set",
+          "index": 11,
+          "display_order": 5,
+          "total_combos": 6.931759744882584,
+          "total_frequency": 0.019393327170308956,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "straight",
+          "index": 12,
+          "display_order": 4,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "flush",
+          "index": 13,
+          "display_order": 3,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "fullhouse",
+          "index": 14,
+          "display_order": 2,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "quads",
+          "index": 15,
+          "display_order": 1,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "straight_flush",
+          "index": 16,
+          "display_order": 0,
+          "total_combos": 0.0,
+          "total_frequency": 0.0,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        }
+      ],
+      "equity_buckets_advanced": [
+        {
+          "name": "hands_90_100",
+          "index": 0,
+          "display_order": 0,
+          "total_combos": 15.738099992275238,
+          "total_frequency": 0.044031260952827576,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "hands_80_90",
+          "index": 1,
+          "display_order": 1,
+          "total_combos": 67.19058457016945,
+          "total_frequency": 0.18798242254365397,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "hands_70_80",
+          "index": 2,
+          "display_order": 2,
+          "total_combos": 14.850313186645508,
+          "total_frequency": 0.04154745588561192,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "hands_60_70",
+          "index": 3,
+          "display_order": 3,
+          "total_combos": 30.246162842959166,
+          "total_frequency": 0.08462118614151204,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "hands_50_60",
+          "index": 4,
+          "display_order": 4,
+          "total_combos": 42.52089642676219,
+          "total_frequency": 0.11896281555167898,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "hands_25_50",
+          "index": 5,
+          "display_order": 5,
+          "total_combos": 181.49544242024422,
+          "total_frequency": 0.5077787783072375,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        },
+        {
+          "name": "hands_0_25",
+          "index": 6,
+          "display_order": 6,
+          "total_combos": 5.38864568297663,
+          "total_frequency": 0.015076080617478026,
+          "actions_total_combos": {},
+          "actions_total_frequencies": {}
+        }
+      ]
+    }
+  ],
+  "btn_hand_categories": [
+    {
+      "name": "no_made_hand",
+      "index": 0,
+      "display_order": 16,
+      "total_combos": 152.04159992255154,
+      "total_frequency": 0.3125209526951195,
+      "actions_total_combos": {
+        "X": 40.22408941032336,
+        "R1.8": 111.81751704637804
+      },
+      "actions_total_frequencies": {
+        "X": 0.26455976147852367,
+        "R1.8": 0.7354402814975425
+      }
+    },
+    {
+      "name": "king_high",
+      "index": 1,
+      "display_order": 15,
+      "total_combos": 0.0,
+      "total_frequency": 0.0,
+      "actions_total_combos": {},
+      "actions_total_frequencies": {}
+    },
+    {
+      "name": "ace_high",
+      "index": 2,
+      "display_order": 14,
+      "total_combos": 144.0,
+      "total_frequency": 0.29599147345871973,
+      "actions_total_combos": {
+        "X": 45.37287635356188,
+        "R1.8": 98.62713104486465
+      },
+      "actions_total_frequencies": {
+        "X": 0.3150894191219575,
+        "R1.8": 0.6849106322560046
+      }
+    },
+    {
+      "name": "low_pair",
+      "index": 3,
+      "display_order": 13,
+      "total_combos": 0.0,
+      "total_frequency": 0.0,
+      "actions_total_combos": {},
+      "actions_total_frequencies": {}
+    },
+    {
+      "name": "third_pair",
+      "index": 4,
+      "display_order": 12,
+      "total_combos": 27.78510000793176,
+      "total_frequency": 0.05711217146906672,
+      "actions_total_combos": {
+        "X": 8.82476462671275,
+        "R1.8": 18.96033643874034
+      },
+      "actions_total_frequencies": {
+        "X": 0.31760780505355607,
+        "R1.8": 0.682392233007179
+      }
+    },
+    {
+      "name": "second_pair",
+      "index": 5,
+      "display_order": 11,
+      "total_combos": 30.21629999577999,
+      "total_frequency": 0.06210949415431686,
+      "actions_total_combos": {
+        "X": 6.012898686807603,
+        "R1.8": 24.203402530401945
+      },
+      "actions_total_frequencies": {
+        "X": 0.19899520085673508,
+        "R1.8": 0.8010048395661346
+      }
+    },
+    {
+      "name": "underpair",
+      "index": 6,
+      "display_order": 10,
+      "total_combos": 29.99940025806427,
+      "total_frequency": 0.061663657536544035,
+      "actions_total_combos": {
+        "X": 9.106327474117279,
+        "R1.8": 20.89307349920273
+      },
+      "actions_total_frequencies": {
+        "X": 0.30355031753241024,
+        "R1.8": 0.6964497063099243
+      }
+    },
+    {
+      "name": "top_pair",
+      "index": 7,
+      "display_order": 9,
+      "total_combos": 83.97840017080307,
+      "total_frequency": 0.17261729448098614,
+      "actions_total_combos": {
+        "X": 18.30671123904176,
+        "R1.8": 65.67169204354286
+      },
+      "actions_total_frequencies": {
+        "X": 0.21799309348365617,
+        "R1.8": 0.7820069435708905
+      }
+    },
+    {
+      "name": "overpair",
+      "index": 8,
+      "display_order": 8,
+      "total_combos": 5.998800158500671,
+      "total_frequency": 0.012330511790965384,
+      "actions_total_combos": {
+        "X": 0.6247749291360378,
+        "R1.8": 5.374025106430054
+      },
+      "actions_total_frequencies": {
+        "X": 0.10414998210111952,
+        "R1.8": 0.8958499974056857
+      }
+    },
+    {
+      "name": "two_pair",
+      "index": 9,
+      "display_order": 7,
+      "total_combos": 5.486100018024445,
+      "total_frequency": 0.011276658526923364,
+      "actions_total_combos": {
+        "X": 0.534892458235845,
+        "R1.8": 4.951207667589188
+      },
+      "actions_total_frequencies": {
+        "X": 0.09749958193953248,
+        "R1.8": 0.9025004377102347
+      }
+    },
+    {
+      "name": "trips",
+      "index": 10,
+      "display_order": 6,
+      "total_combos": 0.0,
+      "total_frequency": 0.0,
+      "actions_total_combos": {},
+      "actions_total_frequencies": {}
+    },
+    {
+      "name": "set",
+      "index": 11,
+      "display_order": 5,
+      "total_combos": 6.99480003118515,
+      "total_frequency": 0.014377785887358274,
+      "actions_total_combos": {
+        "X": 0.06304068519239081,
+        "R1.8": 6.931759744882584
+      },
+      "actions_total_frequencies": {
+        "X": 0.009012507135491283,
+        "R1.8": 0.9909875498911317
+      }
+    },
+    {
+      "name": "straight",
+      "index": 12,
+      "display_order": 4,
+      "total_combos": 0.0,
+      "total_frequency": 0.0,
+      "actions_total_combos": {},
+      "actions_total_frequencies": {}
+    },
+    {
+      "name": "flush",
+      "index": 13,
+      "display_order": 3,
+      "total_combos": 0.0,
+      "total_frequency": 0.0,
+      "actions_total_combos": {},
+      "actions_total_frequencies": {}
+    },
+    {
+      "name": "fullhouse",
+      "index": 14,
+      "display_order": 2,
+      "total_combos": 0.0,
+      "total_frequency": 0.0,
+      "actions_total_combos": {},
+      "actions_total_frequencies": {}
+    },
+    {
+      "name": "quads",
+      "index": 15,
+      "display_order": 1,
+      "total_combos": 0.0,
+      "total_frequency": 0.0,
+      "actions_total_combos": {},
+      "actions_total_frequencies": {}
+    },
+    {
+      "name": "straight_flush",
+      "index": 16,
+      "display_order": 0,
+      "total_combos": 0.0,
+      "total_frequency": 0.0,
+      "actions_total_combos": {},
+      "actions_total_frequencies": {}
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# Light UCBS v2 + Light DCBS — 書籍向け公式リファレンス
+# Light UCBS v2 + DCBS (cash 版) — 書籍向け公式リファレンス
 
 作成日: 2026-05-28
 ソース: `ucbs_light_v2.py` / `dcbs.py` / `UCBS_V2_DCBS_FINAL.md`
@@ -83,7 +83,7 @@
 
 ---
 
-## 6. DCBS — Light DCBS (cash 100bb) continue freq 表
+## 6. DCBS — DCBS (cash 版) (cash 100bb) continue freq 表
 
 ソース: `dcbs.py` `DCBS_CONTEXTS["cash_100bb"]` (行 57-64)
 
@@ -173,7 +173,7 @@ HP=2 (air) のハンドに対して、以下のキッカー補正を加算しま
 
 ---
 
-## 9. 暗算フロー — Light DCBS (3-5 ステップ)
+## 9. 暗算フロー — DCBS (cash 版) (3-5 ステップ)
 
 ```
 [Step 1] HP 確認 (DCBS 用)

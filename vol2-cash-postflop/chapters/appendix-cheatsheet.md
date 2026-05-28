@@ -52,7 +52,7 @@
 
 **例外**: `low_pair` -10pt (context 共通)
 
-## Light DCBS — cash 100bb continue freq 表
+## DCBS (cash 版) — cash 100bb continue freq 表
 
 ### DCBS HP 別 continue freq (全 4 context)
 
@@ -115,10 +115,10 @@ Step 6: 例外補正 → 判断
 
 **所要時間**: 慣れると 5-7 秒で完了します。
 
-## 暗算フロー 3-5 ステップ (守備側 — Light DCBS)
+## 暗算フロー 3-5 ステップ (守備側 — DCBS (cash 版))
 
 ```
-[Light DCBS — 暗算フロー]
+[DCBS (cash 版) — 暗算フロー]
 
 Step 1: HP 確認
   hand type → HP テーブル → HP 値

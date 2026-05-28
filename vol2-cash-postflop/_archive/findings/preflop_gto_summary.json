@@ -1,0 +1,156 @@
+{
+  "source": "GTO Wizard Cash6mGeneral_6mNL25R25 100BB",
+  "date": "2026-05-20",
+  "rfi": {
+    "UTG": {
+      "gto_raise_pct": 17.5,
+      "gto_50pct_hands": 39,
+      "t_open": 24,
+      "false_positives": [
+        "A9o",
+        "A8o",
+        "A7o",
+        "K9o"
+      ],
+      "false_negatives": [
+        "A2s",
+        "A3s",
+        "K5s",
+        "K6s"
+      ]
+    },
+    "HJ": {
+      "gto_raise_pct": 21.7,
+      "gto_50pct_hands": 45,
+      "t_open": 22,
+      "false_positives": [
+        "A7o",
+        "K9o",
+        "A6o",
+        "J8s",
+        "JTo",
+        "K8o"
+      ],
+      "false_negatives": [
+        "K4s"
+      ]
+    },
+    "CO": {
+      "gto_raise_pct": 27.9,
+      "gto_50pct_hands": 57,
+      "t_open": 20,
+      "false_positives": [
+        "A6o",
+        "K8o",
+        "Q9o",
+        "A4o",
+        "K7o",
+        "Q7s",
+        "J9o",
+        "T7s"
+      ],
+      "false_negatives": [
+        "44"
+      ]
+    },
+    "BTN": {
+      "gto_raise_pct": 40.6,
+      "gto_50pct_hands": 83,
+      "t_open": 18,
+      "false_positives": [
+        "K6o",
+        "Q8o",
+        "J8o",
+        "A2o",
+        "K5o",
+        "96s",
+        "98o",
+        "J7o"
+      ],
+      "false_negatives": [
+        "33",
+        "76s",
+        "65s",
+        "86s",
+        "Q3s",
+        "54s"
+      ]
+    },
+    "SB": {
+      "gto_raise_pct": 34.4,
+      "gto_50pct_hands": 76,
+      "t_open": 22,
+      "note": "SB can also call (limp ~10%). Raise action = R3.5",
+      "false_negatives_raise": [
+        "86s",
+        "K2s",
+        "K3s",
+        "K4s",
+        "Q4s",
+        "Q6s",
+        "97s",
+        "Q5s"
+      ]
+    }
+  },
+  "bb_defense": {
+    "vs_UTG": {
+      "fold": 77.4,
+      "call": 17.5,
+      "threebet": 5.1,
+      "mdf": 22.6
+    },
+    "vs_HJ": {
+      "fold": 73.8,
+      "call": 19.2,
+      "threebet": 7.0,
+      "mdf": 26.2
+    },
+    "vs_CO": {
+      "fold": 68.5,
+      "call": 22.6,
+      "threebet": 8.9,
+      "mdf": 31.5
+    },
+    "vs_BTN": {
+      "fold": 60.6,
+      "call": 26.5,
+      "threebet": 12.9,
+      "mdf": 39.4
+    }
+  },
+  "sb_defense": {
+    "vs_UTG": {
+      "fold": 90.6,
+      "call": 2.9,
+      "threebet": 6.5,
+      "mdf": 9.4
+    },
+    "vs_HJ": {
+      "fold": 88.9,
+      "call": 3.6,
+      "threebet": 7.4,
+      "mdf": 11.1
+    },
+    "vs_CO": {
+      "fold": 87.2,
+      "call": 3.2,
+      "threebet": 9.6,
+      "mdf": 12.8
+    },
+    "vs_BTN": {
+      "fold": 83.8,
+      "call": 2.3,
+      "threebet": 13.8,
+      "mdf": 16.2
+    }
+  },
+  "key_insights": [
+    "UTG GTO hand count (39) very close to book formula (37) — threshold accurate",
+    "BTN GTO hand count (83) close to book (80) — threshold accurate",
+    "Formula systematically undervalues: suited low kings (K2s-K5s at UTG/SB), small suited connectors (65s, 76s at BTN), small pairs (33, 44)",
+    "Formula systematically overvalues: weak Axo at UTG (A7o-A9o), weak Kxo at HJ-CO (K7o-K9o), offsuit connectors at BTN (J8o, Q8o)",
+    "BB defense: actual GTO = 23-39% (not 29-57% as previously stated from blog sources)",
+    "SB does have small call component (2-4%) but 3bet-or-fold simplification is correct"
+  ]
+}

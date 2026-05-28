@@ -1,0 +1,247 @@
+{
+  "BTN_BB": {
+    "Th9s8d": {
+      "JTs": {
+        "combos": 3.0,
+        "bet_pct": 52.7,
+        "eq": 73.8,
+        "ev": 4.255,
+        "desc": "top_pair + OESD (J-T-9-8 needs Q/7)"
+      },
+      "97s": {
+        "combos": 3.0,
+        "bet_pct": 36.3,
+        "eq": 63.9,
+        "ev": 3.216,
+        "desc": "second_pair + OESD (7-8-9-T needs J/6)"
+      },
+      "87s": {
+        "combos": 3.0,
+        "bet_pct": 30.6,
+        "eq": 59.8,
+        "ev": 2.932,
+        "desc": "third_pair + OESD (7-8-9-T needs J/6)"
+      },
+      "J9s": {
+        "combos": 3.0,
+        "bet_pct": 52.2,
+        "eq": 68.7,
+        "ev": 3.734,
+        "desc": "no_pair + OESD (8-9-T-J needs Q/7)"
+      },
+      "AJs": {
+        "combos": 4.0,
+        "bet_pct": 76.8,
+        "eq": 55.3,
+        "ev": 2.926,
+        "desc": "overcards + gutshot"
+      },
+      "QJs": {
+        "combos": 4.0,
+        "bet_pct": 76.2,
+        "eq": 92.6,
+        "ev": 10.831,
+        "desc": "overcards + gutshot (9-T-J-Q needs K/8)"
+      },
+      "55": {
+        "combos": 6.0,
+        "bet_pct": 0.1,
+        "eq": 35.8,
+        "ev": 1.115,
+        "desc": "underpair, no draw"
+      },
+      "AKo": {
+        "combos": 12.0,
+        "bet_pct": 58.9,
+        "eq": 38.1,
+        "ev": 1.222,
+        "desc": "overcards, no draw"
+      }
+    },
+    "Qh8d3s": {},
+    "Jd7s5c": {
+      "86s": {
+        "combos": 3.51,
+        "bet_pct": 65.9,
+        "eq": 43.8,
+        "ev": 4.724,
+        "desc": "no_pair + OESD (5-6-7-8 needs 9/4)"
+      },
+      "87s": {
+        "combos": 3.0,
+        "bet_pct": 0.5,
+        "eq": 64.5,
+        "ev": 3.407,
+        "desc": "no_pair + OESD (5-6-7-8? board 7 pairs) → second_pair + OESD"
+      },
+      "98s": {
+        "combos": 4.0,
+        "bet_pct": 70.7,
+        "eq": 45.6,
+        "ev": 5.301,
+        "desc": "no_pair + gutshot (7-8-9-J needs T)"
+      },
+      "TT": {
+        "combos": 6.0,
+        "bet_pct": 0.0,
+        "eq": 68.7,
+        "ev": 3.54,
+        "desc": "overpair, no draw"
+      },
+      "AKo": {
+        "combos": 12.0,
+        "bet_pct": 0.0,
+        "eq": 49.9,
+        "ev": 1.79,
+        "desc": "overcards, no draw"
+      }
+    }
+  },
+  "CO_BTN": {
+    "Th9s8d": {
+      "JTs": {
+        "combos": 0.91,
+        "bet_pct": 94.3,
+        "eq": 68.6,
+        "ev": 4.296,
+        "desc": "top_pair + OESD (J-T-9-8 needs Q/7)"
+      },
+      "AJs": {
+        "combos": 2.92,
+        "bet_pct": 97.5,
+        "eq": 51.7,
+        "ev": 3.024,
+        "desc": "overcards + gutshot"
+      },
+      "QJs": {
+        "combos": 1.38,
+        "bet_pct": 98.8,
+        "eq": 92.1,
+        "ev": 12.225,
+        "desc": "overcards + gutshot (9-T-J-Q needs K/8)"
+      },
+      "55": {
+        "combos": 0.5,
+        "bet_pct": 95.7,
+        "eq": 33.5,
+        "ev": 1.483,
+        "desc": "underpair, no draw"
+      }
+    },
+    "Qh8d3s": {},
+    "Jd7s5c": {
+      "TT": {
+        "combos": 2.77,
+        "bet_pct": 30.9,
+        "eq": 65.6,
+        "ev": 3.11,
+        "desc": "overpair, no draw"
+      }
+    }
+  },
+  "BTN_3BP": {
+    "Th9s8d": {
+      "JTs": {
+        "combos": 3.0,
+        "bet_pct": 48.4,
+        "eq": 79.4,
+        "ev": 18.803,
+        "desc": "top_pair + OESD (J-T-9-8 needs Q/7)"
+      },
+      "97s": {
+        "combos": 3.0,
+        "bet_pct": 79.5,
+        "eq": 69.8,
+        "ev": 13.03,
+        "desc": "second_pair + OESD (7-8-9-T needs J/6)"
+      },
+      "87s": {
+        "combos": 3.0,
+        "bet_pct": 39.7,
+        "eq": 65.1,
+        "ev": 11.522,
+        "desc": "third_pair + OESD (7-8-9-T needs J/6)"
+      },
+      "J9s": {
+        "combos": 3.0,
+        "bet_pct": 8.2,
+        "eq": 75.3,
+        "ev": 16.101,
+        "desc": "no_pair + OESD (8-9-T-J needs Q/7)"
+      },
+      "AJs": {
+        "combos": 4.0,
+        "bet_pct": 39.7,
+        "eq": 61.5,
+        "ev": 12.411,
+        "desc": "overcards + gutshot"
+      },
+      "QJs": {
+        "combos": 4.0,
+        "bet_pct": 42.8,
+        "eq": 95.2,
+        "ev": 37.492,
+        "desc": "overcards + gutshot (9-T-J-Q needs K/8)"
+      },
+      "55": {
+        "combos": 6.0,
+        "bet_pct": 0.0,
+        "eq": 42.4,
+        "ev": 5.192,
+        "desc": "underpair, no draw"
+      },
+      "AKo": {
+        "combos": 12.0,
+        "bet_pct": 0.1,
+        "eq": 45.1,
+        "ev": 6.086,
+        "desc": "overcards, no draw"
+      }
+    },
+    "Qh8d3s": {},
+    "Jd7s5c": {
+      "86s": {
+        "combos": 4.0,
+        "bet_pct": 59.4,
+        "eq": 47.9,
+        "ev": 13.918,
+        "desc": "no_pair + OESD (5-6-7-8 needs 9/4)"
+      },
+      "64s": {
+        "combos": 4.0,
+        "bet_pct": 47.5,
+        "eq": 43.6,
+        "ev": 12.782,
+        "desc": "no_pair + OESD (4-5-6-7 needs 8/3)"
+      },
+      "87s": {
+        "combos": 3.0,
+        "bet_pct": 39.6,
+        "eq": 70.0,
+        "ev": 12.821,
+        "desc": "no_pair + OESD (5-6-7-8? board 7 pairs) → second_pair + OESD"
+      },
+      "98s": {
+        "combos": 4.0,
+        "bet_pct": 24.9,
+        "eq": 52.0,
+        "ev": 15.049,
+        "desc": "no_pair + gutshot (7-8-9-J needs T)"
+      },
+      "TT": {
+        "combos": 6.0,
+        "bet_pct": 0.6,
+        "eq": 72.0,
+        "ev": 13.382,
+        "desc": "overpair, no draw"
+      },
+      "AKo": {
+        "combos": 12.0,
+        "bet_pct": 14.1,
+        "eq": 52.4,
+        "ev": 7.699,
+        "desc": "overcards, no draw"
+      }
+    }
+  }
+}

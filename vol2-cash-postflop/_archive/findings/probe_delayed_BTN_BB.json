@@ -1,0 +1,672 @@
+{
+  "scenario": "SRP BTN vs BB",
+  "results": [
+    {
+      "type": "型1_ハイドライ",
+      "flop": "Ks7d2c",
+      "desc": "K高・レインボー",
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "4c",
+          "desc": "ブランク",
+          "oop_probe": {
+            "total_bet_pct": 50.1,
+            "bet_codes": [
+              "bet33"
+            ],
+            "by_category": [
+              {
+                "hc": "set",
+                "total": 860.0,
+                "share": 280.0,
+                "check": 46.1,
+                "bet33": 53.9
+              },
+              {
+                "hc": "two_pair",
+                "total": 530.0,
+                "share": 170.0,
+                "check": 15.4,
+                "bet33": 84.6
+              },
+              {
+                "hc": "top_pair",
+                "total": 4160.0,
+                "share": 1350.0,
+                "check": 27.7,
+                "bet33": 72.3
+              },
+              {
+                "hc": "second_pair",
+                "total": 2710.0,
+                "share": 880.0,
+                "check": 31.9,
+                "bet33": 68.1
+              },
+              {
+                "hc": "underpair",
+                "total": 1100.0,
+                "share": 360.0,
+                "check": 42.1,
+                "bet33": 57.9
+              },
+              {
+                "hc": "third_pair",
+                "total": 2500.0,
+                "share": 810.0,
+                "check": 46.0,
+                "bet33": 54.0
+              },
+              {
+                "hc": "low_pair",
+                "total": 970.0,
+                "share": 310.0,
+                "check": 40.5,
+                "bet33": 59.5
+              },
+              {
+                "hc": "ace_high",
+                "total": 7900.0,
+                "share": 2560.0,
+                "check": 78.5,
+                "bet33": 21.5
+              },
+              {
+                "hc": "no_made_hand",
+                "total": 10120.0,
+                "share": 3280.0,
+                "check": 46.4,
+                "bet33": 53.6
+              }
+            ]
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": 33.9,
+            "bet_codes": [
+              "bet33"
+            ],
+            "by_category": [
+              {
+                "hc": "set",
+                "total": 110.0,
+                "share": 90.0,
+                "check": 11.2,
+                "bet33": 88.8
+              },
+              {
+                "hc": "two_pair",
+                "total": 130.0,
+                "share": 110.0,
+                "check": 8.6,
+                "bet33": 91.4
+              },
+              {
+                "hc": "overpair",
+                "total": 60.0,
+                "share": 50.0,
+                "check": 77.6,
+                "bet33": 22.4
+              },
+              {
+                "hc": "top_pair",
+                "total": 1710.0,
+                "share": 1360.0,
+                "check": 60.5,
+                "bet33": 39.5
+              },
+              {
+                "hc": "second_pair",
+                "total": 600.0,
+                "share": 480.0,
+                "check": 38.0,
+                "bet33": 62.0
+              },
+              {
+                "hc": "underpair",
+                "total": 910.0,
+                "share": 720.0,
+                "check": 64.5,
+                "bet33": 35.5
+              },
+              {
+                "hc": "third_pair",
+                "total": 900.0,
+                "share": 710.0,
+                "check": 37.9,
+                "bet33": 62.1
+              },
+              {
+                "hc": "low_pair",
+                "total": 240.0,
+                "share": 190.0,
+                "check": 15.8,
+                "bet33": 84.2
+              },
+              {
+                "hc": "ace_high",
+                "total": 4190.0,
+                "share": 3320.0,
+                "check": 90.8,
+                "bet33": 9.2
+              },
+              {
+                "hc": "no_made_hand",
+                "total": 3770.0,
+                "share": 2980.0,
+                "check": 59.4,
+                "bet33": 40.6
+              }
+            ]
+          }
+        },
+        {
+          "tag": "TA+_2nd",
+          "card": "7h",
+          "desc": "2ndカードペア",
+          "oop_probe": {
+            "total_bet_pct": 23.6,
+            "bet_codes": [
+              "bet100"
+            ],
+            "by_category": [
+              {
+                "hc": "quads",
+                "total": 90.0,
+                "share": 30.0,
+                "check": 0.2,
+                "bet100": 99.8
+              },
+              {
+                "hc": "fullhouse",
+                "total": 400.0,
+                "share": 130.0,
+                "check": 41.1,
+                "bet100": 58.9
+              },
+              {
+                "hc": "trips",
+                "total": 1960.0,
+                "share": 640.0,
+                "check": 25.2,
+                "bet100": 74.8
+              },
+              {
+                "hc": "top_pair",
+                "total": 4430.0,
+                "share": 1450.0,
+                "check": 75.8,
+                "bet100": 24.2
+              },
+              {
+                "hc": "underpair",
+                "total": 1100.0,
+                "share": 360.0,
+                "check": 100.0,
+                "bet100": 0.0
+              },
+              {
+                "hc": "third_pair",
+                "total": 2440.0,
+                "share": 800.0,
+                "check": 100.0,
+                "bet100": 0.0
+              },
+              {
+                "hc": "ace_high",
+                "total": 8360.0,
+                "share": 2740.0,
+                "check": 100.0,
+                "bet100": 0.0
+              },
+              {
+                "hc": "no_made_hand",
+                "total": 11770.0,
+                "share": 3850.0,
+                "check": 63.2,
+                "bet100": 36.8
+              }
+            ]
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA+_3rd",
+          "card": "2s",
+          "desc": "3rdカードペア",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA-_OC",
+          "card": "Ah",
+          "desc": "オーバーカード(A)",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "型2_ハイウェット",
+      "flop": "Qh8d3s",
+      "desc": "Q高・2トーン",
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "5d",
+          "desc": "ブランク",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA+_2nd",
+          "card": "8c",
+          "desc": "2ndカードペア",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA+_3rd",
+          "card": "3d",
+          "desc": "3rdカードペア",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA-_OC",
+          "card": "Ah",
+          "desc": "オーバーカード(A)",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "型3_ロードライ",
+      "flop": "Jd7s5c",
+      "desc": "J中・レインボー",
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "2c",
+          "desc": "ブランク",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA+_2nd",
+          "card": "7h",
+          "desc": "2ndカードペア",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA+_3rd",
+          "card": "5h",
+          "desc": "3rdカードペア",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA-_OC",
+          "card": "Ah",
+          "desc": "オーバーカード(A)",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "型4_ローウェット",
+      "flop": "Th9s8d",
+      "desc": "低連携・2トーン",
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "2c",
+          "desc": "ブランク",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA+_pair",
+          "card": "Th",
+          "desc": "1stカードペア",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "danger",
+          "card": "6c",
+          "desc": "SC(低)",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "danger",
+          "card": "7c",
+          "desc": "SC(高)",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "型5_モノトーン",
+      "flop": "Ah9h5h",
+      "desc": "A高モノトーン",
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "2c",
+          "desc": "ブランク(非ハート)",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA+_2nd",
+          "card": "9d",
+          "desc": "2ndカードペア(非ハート)",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "danger",
+          "card": "4h",
+          "desc": "FC(4thハート)",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA-_OC",
+          "card": "Kd",
+          "desc": "オーバーカード(非ハート)",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "型6_ペア高",
+      "flop": "AsAcKd",
+      "desc": "AAKペアボード",
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "2c",
+          "desc": "ブランク",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA+_3rd",
+          "card": "Ks",
+          "desc": "3rdカードペア(K)",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA-_OC",
+          "card": "Qd",
+          "desc": "準OC(Q)",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "danger",
+          "card": "Jd",
+          "desc": "J絡み",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "型7_ペア低",
+      "flop": "7s7d2c",
+      "desc": "77低ペアボード",
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "3c",
+          "desc": "ブランク",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA+_3rd",
+          "card": "2h",
+          "desc": "3rdカードペア(2)",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA-_OC",
+          "card": "Ah",
+          "desc": "OC(A)",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        },
+        {
+          "tag": "TA-_OC2",
+          "card": "Kh",
+          "desc": "OC(K)",
+          "oop_probe": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          },
+          "ip_delayed_cbet": {
+            "total_bet_pct": null,
+            "bet_codes": [],
+            "by_category": []
+          }
+        }
+      ]
+    }
+  ]
+}

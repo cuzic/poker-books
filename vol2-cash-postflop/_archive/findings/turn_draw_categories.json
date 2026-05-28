@@ -1,0 +1,2234 @@
+{
+  "BTN_BB": {
+    "型4_ローウェット": {
+      "2c": {
+        "turn_tag": "blank",
+        "turn_desc": "ブランク",
+        "board4": "Th9s8d2c",
+        "flop_bet": "R1.8",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 93.1,
+            "bet_pct": 55.6
+          },
+          "gutshot": {
+            "combos": 51.1,
+            "bet_pct": 68.9
+          },
+          "oesd": {
+            "combos": 57.9,
+            "bet_pct": 74.0
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 77.1,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 41.9,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 70.5,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 18.2,
+            "bet_pct": 71.6
+          },
+          "king_high": {
+            "combos": 30.8,
+            "bet_pct": 75.2
+          },
+          "ace_high": {
+            "combos": 51.7,
+            "bet_pct": 42.9
+          },
+          "low_pair": {
+            "combos": 4.9,
+            "bet_pct": 59.5
+          },
+          "third_pair": {
+            "combos": 6.8,
+            "bet_pct": 30.3
+          },
+          "second_pair": {
+            "combos": 18.0,
+            "bet_pct": 41.7
+          },
+          "top_pair": {
+            "combos": 26.0,
+            "bet_pct": 72.5
+          },
+          "overpair": {
+            "combos": 14.7,
+            "bet_pct": 90.2
+          },
+          "two_pair": {
+            "combos": 7.5,
+            "bet_pct": 70.8
+          },
+          "set": {
+            "combos": 7.2,
+            "bet_pct": 88.8
+          },
+          "straight": {
+            "combos": 16.3,
+            "bet_pct": 93.3
+          }
+        }
+      },
+      "7c": {
+        "turn_tag": "completing",
+        "turn_desc": "ストレート完成(低)",
+        "board4": "Th9s8d7c",
+        "flop_bet": "R1.8",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 157.7,
+            "bet_pct": 60.3
+          },
+          "gutshot": {
+            "combos": 43.1,
+            "bet_pct": 61.1
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 148.0,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 30.2,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 7.0,
+            "bet_pct": 89.0
+          },
+          "king_high": {
+            "combos": 18.0,
+            "bet_pct": 46.5
+          },
+          "ace_high": {
+            "combos": 31.4,
+            "bet_pct": 54.6
+          },
+          "low_pair": {
+            "combos": 15.6,
+            "bet_pct": 57.8
+          },
+          "third_pair": {
+            "combos": 4.9,
+            "bet_pct": 16.5
+          },
+          "second_pair": {
+            "combos": 12.4,
+            "bet_pct": 0.9
+          },
+          "top_pair": {
+            "combos": 19.0,
+            "bet_pct": 53.2
+          },
+          "overpair": {
+            "combos": 10.4,
+            "bet_pct": 96.7
+          },
+          "two_pair": {
+            "combos": 11.3,
+            "bet_pct": 82.8
+          },
+          "set": {
+            "combos": 6.6,
+            "bet_pct": 74.3
+          },
+          "straight": {
+            "combos": 64.3,
+            "bet_pct": 70.7
+          }
+        }
+      },
+      "6c": {
+        "turn_tag": "completing",
+        "turn_desc": "ストレート完成(高)",
+        "board4": "Th9s8d6c",
+        "flop_bet": "R1.8",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 123.1,
+            "bet_pct": 17.9
+          },
+          "gutshot": {
+            "combos": 41.8,
+            "bet_pct": 31.7
+          },
+          "oesd": {
+            "combos": 35.3,
+            "bet_pct": 23.7
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 114.4,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 31.6,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 37.2,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 8.6,
+            "bet_pct": 99.6
+          },
+          "king_high": {
+            "combos": 28.2,
+            "bet_pct": 46.4
+          },
+          "ace_high": {
+            "combos": 39.1,
+            "bet_pct": 0.4
+          },
+          "low_pair": {
+            "combos": 13.7,
+            "bet_pct": 21.7
+          },
+          "third_pair": {
+            "combos": 5.8,
+            "bet_pct": 0.9
+          },
+          "second_pair": {
+            "combos": 16.9,
+            "bet_pct": 0.0
+          },
+          "top_pair": {
+            "combos": 23.2,
+            "bet_pct": 4.0
+          },
+          "overpair": {
+            "combos": 14.7,
+            "bet_pct": 0.0
+          },
+          "two_pair": {
+            "combos": 7.6,
+            "bet_pct": 0.0
+          },
+          "set": {
+            "combos": 6.5,
+            "bet_pct": 44.1
+          },
+          "straight": {
+            "combos": 35.9,
+            "bet_pct": 41.9
+          }
+        }
+      }
+    },
+    "型3_ロードライ": {
+      "2c": {
+        "turn_tag": "blank",
+        "turn_desc": "ブランク",
+        "board4": "Jd7s5c2c",
+        "flop_bet": "R6.4",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 116.0,
+            "bet_pct": 46.9
+          },
+          "gutshot": {
+            "combos": 20.3,
+            "bet_pct": 47.3
+          },
+          "oesd": {
+            "combos": 3.9,
+            "bet_pct": 75.4
+          },
+          "flush_draw": {
+            "combos": 14.3,
+            "bet_pct": 83.7
+          },
+          "nut_flush_draw": {
+            "combos": 2.1,
+            "bet_pct": 70.1
+          },
+          "combo_draw": {
+            "combos": 3.1,
+            "bet_pct": 92.7
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 81.0,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 6.8,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 8.1,
+            "bet_pct": 0
+          },
+          "flush_draw": {
+            "combos": 11.5,
+            "bet_pct": 0
+          },
+          "nut_flush_draw": {
+            "combos": 2.0,
+            "bet_pct": 0
+          },
+          "combo_draw": {
+            "combos": 5.0,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 41.0,
+            "bet_pct": 31.5
+          },
+          "king_high": {
+            "combos": 38.8,
+            "bet_pct": 46.0
+          },
+          "ace_high": {
+            "combos": 22.1,
+            "bet_pct": 59.7
+          },
+          "low_pair": {
+            "combos": 1.0,
+            "bet_pct": 65.5
+          },
+          "third_pair": {
+            "combos": 2.0,
+            "bet_pct": 3.8
+          },
+          "second_pair": {
+            "combos": 8.2,
+            "bet_pct": 22.3
+          },
+          "top_pair": {
+            "combos": 20.5,
+            "bet_pct": 56.0
+          },
+          "overpair": {
+            "combos": 14.0,
+            "bet_pct": 100.0
+          },
+          "two_pair": {
+            "combos": 4.1,
+            "bet_pct": 100.0
+          },
+          "set": {
+            "combos": 7.9,
+            "bet_pct": 89.6
+          }
+        }
+      },
+      "4c": {
+        "turn_tag": "completing",
+        "turn_desc": "ストレート完成(4-5-6-7-8)",
+        "board4": "Jd7s5c4c",
+        "flop_bet": "R6.4",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 94.9,
+            "bet_pct": 45.1
+          },
+          "gutshot": {
+            "combos": 21.8,
+            "bet_pct": 34.8
+          },
+          "oesd": {
+            "combos": 21.9,
+            "bet_pct": 43.8
+          },
+          "flush_draw": {
+            "combos": 9.0,
+            "bet_pct": 90.5
+          },
+          "nut_flush_draw": {
+            "combos": 1.8,
+            "bet_pct": 52.8
+          },
+          "combo_draw": {
+            "combos": 7.5,
+            "bet_pct": 60.0
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 69.6,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 14.1,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 12.2,
+            "bet_pct": 0
+          },
+          "flush_draw": {
+            "combos": 7.7,
+            "bet_pct": 0
+          },
+          "nut_flush_draw": {
+            "combos": 2.0,
+            "bet_pct": 0
+          },
+          "combo_draw": {
+            "combos": 6.3,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 37.1,
+            "bet_pct": 26.0
+          },
+          "king_high": {
+            "combos": 36.6,
+            "bet_pct": 39.8
+          },
+          "ace_high": {
+            "combos": 16.3,
+            "bet_pct": 46.8
+          },
+          "low_pair": {
+            "combos": 7.8,
+            "bet_pct": 61.0
+          },
+          "third_pair": {
+            "combos": 2.0,
+            "bet_pct": 48.3
+          },
+          "second_pair": {
+            "combos": 8.2,
+            "bet_pct": 37.4
+          },
+          "top_pair": {
+            "combos": 20.5,
+            "bet_pct": 32.2
+          },
+          "overpair": {
+            "combos": 14.0,
+            "bet_pct": 85.2
+          },
+          "two_pair": {
+            "combos": 4.1,
+            "bet_pct": 100.0
+          },
+          "set": {
+            "combos": 7.9,
+            "bet_pct": 100.0
+          },
+          "straight": {
+            "combos": 2.3,
+            "bet_pct": 100.0
+          }
+        }
+      },
+      "7h": {
+        "turn_tag": "TA+",
+        "turn_desc": "ペア(中段)",
+        "board4": "Jd7s5c7h",
+        "flop_bet": "R6.4",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 139.2,
+            "bet_pct": 28.4
+          },
+          "gutshot": {
+            "combos": 10.9,
+            "bet_pct": 14.6
+          },
+          "oesd": {
+            "combos": 5.1,
+            "bet_pct": 50.6
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 9.9,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 0.6,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 0.3,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 41.0,
+            "bet_pct": 19.5
+          },
+          "king_high": {
+            "combos": 39.2,
+            "bet_pct": 19.4
+          },
+          "ace_high": {
+            "combos": 22.8,
+            "bet_pct": 31.2
+          },
+          "third_pair": {
+            "combos": 2.0,
+            "bet_pct": 0.1
+          },
+          "top_pair": {
+            "combos": 22.5,
+            "bet_pct": 13.3
+          },
+          "overpair": {
+            "combos": 14.0,
+            "bet_pct": 46.1
+          },
+          "trips": {
+            "combos": 6.7,
+            "bet_pct": 99.5
+          },
+          "fullhouse": {
+            "combos": 6.0,
+            "bet_pct": 81.7
+          },
+          "quads": {
+            "combos": 1.0,
+            "bet_pct": 1.2
+          }
+        }
+      }
+    },
+    "型5_モノトーン": {
+      "2c": {
+        "turn_tag": "blank",
+        "turn_desc": "ブランク(非ハート)",
+        "board4": "Ah9h5h2c",
+        "flop_bet": "R1.8",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 105.7,
+            "bet_pct": 31.7
+          },
+          "gutshot": {
+            "combos": 17.0,
+            "bet_pct": 33.1
+          },
+          "flush_draw": {
+            "combos": 32.9,
+            "bet_pct": 50.0
+          },
+          "nut_flush_draw": {
+            "combos": 13.4,
+            "bet_pct": 69.2
+          },
+          "combo_draw": {
+            "combos": 3.7,
+            "bet_pct": 30.6
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 116.0,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 14.2,
+            "bet_pct": 0
+          },
+          "flush_draw": {
+            "combos": 38.7,
+            "bet_pct": 0
+          },
+          "nut_flush_draw": {
+            "combos": 5.4,
+            "bet_pct": 0
+          },
+          "combo_draw": {
+            "combos": 6.0,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 41.2,
+            "bet_pct": 23.2
+          },
+          "king_high": {
+            "combos": 29.8,
+            "bet_pct": 42.2
+          },
+          "low_pair": {
+            "combos": 5.0,
+            "bet_pct": 83.9
+          },
+          "third_pair": {
+            "combos": 7.0,
+            "bet_pct": 49.7
+          },
+          "second_pair": {
+            "combos": 14.5,
+            "bet_pct": 13.3
+          },
+          "underpair": {
+            "combos": 5.4,
+            "bet_pct": 0.1
+          },
+          "top_pair": {
+            "combos": 41.6,
+            "bet_pct": 37.3
+          },
+          "two_pair": {
+            "combos": 8.6,
+            "bet_pct": 56.1
+          },
+          "set": {
+            "combos": 5.8,
+            "bet_pct": 72.3
+          },
+          "flush": {
+            "combos": 13.8,
+            "bet_pct": 70.5
+          }
+        }
+      },
+      "4h": {
+        "turn_tag": "completing",
+        "turn_desc": "フラッシュ完成(4th♥)",
+        "board4": "Ah9h5h4h",
+        "flop_bet": "R1.8",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 169.8,
+            "bet_pct": 27.6
+          },
+          "gutshot": {
+            "combos": 1.7,
+            "bet_pct": 6.3
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 173.7,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 1.9,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 29.1,
+            "bet_pct": 44.9
+          },
+          "king_high": {
+            "combos": 14.3,
+            "bet_pct": 68.8
+          },
+          "low_pair": {
+            "combos": 3.9,
+            "bet_pct": 39.9
+          },
+          "third_pair": {
+            "combos": 5.2,
+            "bet_pct": 30.5
+          },
+          "second_pair": {
+            "combos": 10.2,
+            "bet_pct": 0.2
+          },
+          "top_pair": {
+            "combos": 30.1,
+            "bet_pct": 0.0
+          },
+          "two_pair": {
+            "combos": 11.1,
+            "bet_pct": 0.0
+          },
+          "set": {
+            "combos": 6.0,
+            "bet_pct": 50.8
+          },
+          "flush": {
+            "combos": 61.7,
+            "bet_pct": 29.1
+          }
+        }
+      },
+      "9d": {
+        "turn_tag": "TA+",
+        "turn_desc": "2ndペア",
+        "board4": "Ah9h5h9d",
+        "flop_bet": "R1.8",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 113.3,
+            "bet_pct": 11.5
+          },
+          "gutshot": {
+            "combos": 4.4,
+            "bet_pct": 21.8
+          },
+          "flush_draw": {
+            "combos": 35.9,
+            "bet_pct": 8.1
+          },
+          "nut_flush_draw": {
+            "combos": 12.8,
+            "bet_pct": 37.1
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 110.7,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 6.0,
+            "bet_pct": 0
+          },
+          "flush_draw": {
+            "combos": 44.7,
+            "bet_pct": 0
+          },
+          "nut_flush_draw": {
+            "combos": 4.7,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 41.2,
+            "bet_pct": 5.1
+          },
+          "king_high": {
+            "combos": 31.5,
+            "bet_pct": 28.0
+          },
+          "low_pair": {
+            "combos": 4.5,
+            "bet_pct": 17.6
+          },
+          "third_pair": {
+            "combos": 7.0,
+            "bet_pct": 0.1
+          },
+          "underpair": {
+            "combos": 5.4,
+            "bet_pct": 0.0
+          },
+          "top_pair": {
+            "combos": 45.3,
+            "bet_pct": 0.1
+          },
+          "trips": {
+            "combos": 9.7,
+            "bet_pct": 23.3
+          },
+          "flush": {
+            "combos": 13.8,
+            "bet_pct": 16.6
+          },
+          "fullhouse": {
+            "combos": 7.5,
+            "bet_pct": 70.7
+          },
+          "quads": {
+            "combos": 0.5,
+            "bet_pct": 0.2
+          }
+        }
+      }
+    }
+  },
+  "UTG_BB": {
+    "型4_ローウェット": {
+      "2c": {
+        "turn_tag": "blank",
+        "turn_desc": "ブランク",
+        "board4": "Th9s8d2c",
+        "flop_bet": "R1.8",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 54.8,
+            "bet_pct": 49.6
+          },
+          "gutshot": {
+            "combos": 27.9,
+            "bet_pct": 64.6
+          },
+          "oesd": {
+            "combos": 32.7,
+            "bet_pct": 69.6
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 33.6,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 32.5,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 36.5,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 0.6,
+            "bet_pct": 88.4
+          },
+          "king_high": {
+            "combos": 27.3,
+            "bet_pct": 64.8
+          },
+          "ace_high": {
+            "combos": 38.8,
+            "bet_pct": 40.7
+          },
+          "low_pair": {
+            "combos": 3.7,
+            "bet_pct": 17.0
+          },
+          "third_pair": {
+            "combos": 1.1,
+            "bet_pct": 7.3
+          },
+          "second_pair": {
+            "combos": 3.0,
+            "bet_pct": 33.0
+          },
+          "top_pair": {
+            "combos": 12.9,
+            "bet_pct": 64.7
+          },
+          "overpair": {
+            "combos": 15.3,
+            "bet_pct": 82.9
+          },
+          "set": {
+            "combos": 6.4,
+            "bet_pct": 82.3
+          },
+          "straight": {
+            "combos": 5.9,
+            "bet_pct": 95.9
+          }
+        }
+      },
+      "7c": {
+        "turn_tag": "completing",
+        "turn_desc": "ストレート完成(低)",
+        "board4": "Th9s8d7c",
+        "flop_bet": "R1.8",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 88.1,
+            "bet_pct": 48.6
+          },
+          "gutshot": {
+            "combos": 26.9,
+            "bet_pct": 43.5
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 71.8,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 24.8,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "king_high": {
+            "combos": 12.5,
+            "bet_pct": 47.7
+          },
+          "ace_high": {
+            "combos": 30.4,
+            "bet_pct": 29.9
+          },
+          "low_pair": {
+            "combos": 5.6,
+            "bet_pct": 50.0
+          },
+          "third_pair": {
+            "combos": 1.0,
+            "bet_pct": 4.8
+          },
+          "second_pair": {
+            "combos": 3.0,
+            "bet_pct": 2.3
+          },
+          "top_pair": {
+            "combos": 11.2,
+            "bet_pct": 27.9
+          },
+          "overpair": {
+            "combos": 11.7,
+            "bet_pct": 73.0
+          },
+          "two_pair": {
+            "combos": 0.3,
+            "bet_pct": 98.2
+          },
+          "set": {
+            "combos": 7.0,
+            "bet_pct": 65.2
+          },
+          "straight": {
+            "combos": 32.2,
+            "bet_pct": 61.8
+          }
+        }
+      },
+      "6c": {
+        "turn_tag": "completing",
+        "turn_desc": "ストレート完成(高)",
+        "board4": "Th9s8d6c",
+        "flop_bet": "R1.8",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 63.4,
+            "bet_pct": 28.7
+          },
+          "gutshot": {
+            "combos": 26.9,
+            "bet_pct": 42.8
+          },
+          "oesd": {
+            "combos": 25.4,
+            "bet_pct": 37.7
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 49.2,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 24.8,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 24.5,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "king_high": {
+            "combos": 24.1,
+            "bet_pct": 45.1
+          },
+          "ace_high": {
+            "combos": 38.9,
+            "bet_pct": 16.4
+          },
+          "low_pair": {
+            "combos": 0.5,
+            "bet_pct": 95.4
+          },
+          "third_pair": {
+            "combos": 1.0,
+            "bet_pct": 10.2
+          },
+          "second_pair": {
+            "combos": 3.0,
+            "bet_pct": 38.3
+          },
+          "top_pair": {
+            "combos": 12.9,
+            "bet_pct": 19.1
+          },
+          "overpair": {
+            "combos": 15.3,
+            "bet_pct": 38.0
+          },
+          "set": {
+            "combos": 6.4,
+            "bet_pct": 50.7
+          },
+          "straight": {
+            "combos": 13.1,
+            "bet_pct": 64.4
+          }
+        }
+      }
+    },
+    "型3_ロードライ": {
+      "2c": {
+        "turn_tag": "blank",
+        "turn_desc": "ブランク",
+        "board4": "Jd7s5c2c",
+        "flop_bet": "R6.4",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 38.4,
+            "bet_pct": 52.9
+          },
+          "gutshot": {
+            "combos": 1.5,
+            "bet_pct": 61.6
+          },
+          "flush_draw": {
+            "combos": 3.4,
+            "bet_pct": 76.3
+          },
+          "nut_flush_draw": {
+            "combos": 2.0,
+            "bet_pct": 93.5
+          },
+          "combo_draw": {
+            "combos": 0.3,
+            "bet_pct": 99.0
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 23.4,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 1.3,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 1.8,
+            "bet_pct": 0
+          },
+          "flush_draw": {
+            "combos": 2.6,
+            "bet_pct": 0
+          },
+          "nut_flush_draw": {
+            "combos": 1.5,
+            "bet_pct": 0
+          },
+          "combo_draw": {
+            "combos": 1.1,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 2.3,
+            "bet_pct": 22.7
+          },
+          "king_high": {
+            "combos": 16.1,
+            "bet_pct": 51.9
+          },
+          "ace_high": {
+            "combos": 9.2,
+            "bet_pct": 43.0
+          },
+          "low_pair": {
+            "combos": 2.1,
+            "bet_pct": 32.5
+          },
+          "second_pair": {
+            "combos": 1.4,
+            "bet_pct": 29.7
+          },
+          "top_pair": {
+            "combos": 4.7,
+            "bet_pct": 59.7
+          },
+          "overpair": {
+            "combos": 5.7,
+            "bet_pct": 99.2
+          },
+          "set": {
+            "combos": 3.9,
+            "bet_pct": 95.7
+          }
+        }
+      },
+      "4c": {
+        "turn_tag": "completing",
+        "turn_desc": "ストレート完成(4-5-6-7-8)",
+        "board4": "Jd7s5c4c",
+        "flop_bet": "R6.4",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 32.5,
+            "bet_pct": 41.8
+          },
+          "gutshot": {
+            "combos": 4.8,
+            "bet_pct": 22.7
+          },
+          "oesd": {
+            "combos": 2.7,
+            "bet_pct": 54.9
+          },
+          "flush_draw": {
+            "combos": 2.4,
+            "bet_pct": 77.8
+          },
+          "nut_flush_draw": {
+            "combos": 1.3,
+            "bet_pct": 77.3
+          },
+          "combo_draw": {
+            "combos": 2.8,
+            "bet_pct": 41.4
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 20.8,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 2.9,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 2.8,
+            "bet_pct": 0
+          },
+          "flush_draw": {
+            "combos": 2.3,
+            "bet_pct": 0
+          },
+          "nut_flush_draw": {
+            "combos": 1.5,
+            "bet_pct": 0
+          },
+          "combo_draw": {
+            "combos": 1.0,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 2.3,
+            "bet_pct": 28.4
+          },
+          "king_high": {
+            "combos": 16.1,
+            "bet_pct": 34.6
+          },
+          "ace_high": {
+            "combos": 11.6,
+            "bet_pct": 31.8
+          },
+          "low_pair": {
+            "combos": 0.4,
+            "bet_pct": 0.2
+          },
+          "second_pair": {
+            "combos": 1.4,
+            "bet_pct": 50.5
+          },
+          "top_pair": {
+            "combos": 4.7,
+            "bet_pct": 34.7
+          },
+          "overpair": {
+            "combos": 5.7,
+            "bet_pct": 66.3
+          },
+          "set": {
+            "combos": 3.9,
+            "bet_pct": 100.0
+          }
+        }
+      },
+      "7h": {
+        "turn_tag": "TA+",
+        "turn_desc": "ペア(中段)",
+        "board4": "Jd7s5c7h",
+        "flop_bet": "R6.4",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 44.7,
+            "bet_pct": 33.9
+          },
+          "gutshot": {
+            "combos": 0.3,
+            "bet_pct": 1.4
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 15.4,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 0.8,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 0.5,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 2.3,
+            "bet_pct": 13.0
+          },
+          "king_high": {
+            "combos": 16.1,
+            "bet_pct": 24.0
+          },
+          "ace_high": {
+            "combos": 12.1,
+            "bet_pct": 30.4
+          },
+          "top_pair": {
+            "combos": 4.7,
+            "bet_pct": 4.8
+          },
+          "overpair": {
+            "combos": 5.7,
+            "bet_pct": 73.2
+          },
+          "trips": {
+            "combos": 1.3,
+            "bet_pct": 100.0
+          },
+          "fullhouse": {
+            "combos": 1.9,
+            "bet_pct": 65.9
+          },
+          "quads": {
+            "combos": 0.7,
+            "bet_pct": 64.3
+          }
+        }
+      }
+    },
+    "型5_モノトーン": {
+      "2c": {
+        "turn_tag": "blank",
+        "turn_desc": "ブランク(非ハート)",
+        "board4": "Ah9h5h2c",
+        "flop_bet": "R1.8",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 69.5,
+            "bet_pct": 38.2
+          },
+          "gutshot": {
+            "combos": 1.1,
+            "bet_pct": 21.9
+          },
+          "flush_draw": {
+            "combos": 15.9,
+            "bet_pct": 34.9
+          },
+          "nut_flush_draw": {
+            "combos": 10.1,
+            "bet_pct": 81.5
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 58.9,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 6.2,
+            "bet_pct": 0
+          },
+          "flush_draw": {
+            "combos": 27.2,
+            "bet_pct": 0
+          },
+          "nut_flush_draw": {
+            "combos": 3.4,
+            "bet_pct": 0
+          },
+          "combo_draw": {
+            "combos": 5.7,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 7.5,
+            "bet_pct": 34.1
+          },
+          "king_high": {
+            "combos": 28.7,
+            "bet_pct": 41.7
+          },
+          "third_pair": {
+            "combos": 6.1,
+            "bet_pct": 47.2
+          },
+          "second_pair": {
+            "combos": 3.5,
+            "bet_pct": 0.1
+          },
+          "underpair": {
+            "combos": 6.6,
+            "bet_pct": 15.1
+          },
+          "top_pair": {
+            "combos": 28.6,
+            "bet_pct": 36.3
+          },
+          "two_pair": {
+            "combos": 4.7,
+            "bet_pct": 73.8
+          },
+          "set": {
+            "combos": 4.9,
+            "bet_pct": 69.9
+          },
+          "flush": {
+            "combos": 6.0,
+            "bet_pct": 82.3
+          }
+        }
+      },
+      "4h": {
+        "turn_tag": "completing",
+        "turn_desc": "フラッシュ完成(4th♥)",
+        "board4": "Ah9h5h4h",
+        "flop_bet": "R1.8",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 96.8,
+            "bet_pct": 35.3
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 98.9,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 0.8,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 6.6,
+            "bet_pct": 3.5
+          },
+          "king_high": {
+            "combos": 18.0,
+            "bet_pct": 83.7
+          },
+          "third_pair": {
+            "combos": 4.0,
+            "bet_pct": 54.1
+          },
+          "second_pair": {
+            "combos": 3.5,
+            "bet_pct": 29.8
+          },
+          "underpair": {
+            "combos": 0.6,
+            "bet_pct": 0.9
+          },
+          "top_pair": {
+            "combos": 22.3,
+            "bet_pct": 0.0
+          },
+          "two_pair": {
+            "combos": 4.9,
+            "bet_pct": 0.0
+          },
+          "set": {
+            "combos": 4.9,
+            "bet_pct": 49.7
+          },
+          "flush": {
+            "combos": 32.0,
+            "bet_pct": 41.0
+          }
+        }
+      },
+      "9d": {
+        "turn_tag": "TA+",
+        "turn_desc": "2ndペア",
+        "board4": "Ah9h5h9d",
+        "flop_bet": "R1.8",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 67.3,
+            "bet_pct": 45.7
+          },
+          "flush_draw": {
+            "combos": 15.9,
+            "bet_pct": 30.1
+          },
+          "nut_flush_draw": {
+            "combos": 10.1,
+            "bet_pct": 74.5
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 56.9,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 2.7,
+            "bet_pct": 0
+          },
+          "flush_draw": {
+            "combos": 33.9,
+            "bet_pct": 0
+          },
+          "nut_flush_draw": {
+            "combos": 3.4,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 7.5,
+            "bet_pct": 40.4
+          },
+          "king_high": {
+            "combos": 28.7,
+            "bet_pct": 38.4
+          },
+          "third_pair": {
+            "combos": 6.1,
+            "bet_pct": 28.5
+          },
+          "underpair": {
+            "combos": 6.6,
+            "bet_pct": 5.6
+          },
+          "top_pair": {
+            "combos": 31.7,
+            "bet_pct": 52.8
+          },
+          "trips": {
+            "combos": 2.3,
+            "bet_pct": 73.7
+          },
+          "flush": {
+            "combos": 6.0,
+            "bet_pct": 83.4
+          },
+          "fullhouse": {
+            "combos": 3.6,
+            "bet_pct": 82.6
+          },
+          "quads": {
+            "combos": 0.8,
+            "bet_pct": 61.7
+          }
+        }
+      }
+    }
+  },
+  "BTN_3BP": {
+    "型4_ローウェット": {
+      "2c": {
+        "turn_tag": "blank",
+        "turn_desc": "ブランク",
+        "board4": "Th9s8d2c",
+        "flop_bet": "R11.2",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 131.7,
+            "bet_pct": 56.4
+          },
+          "gutshot": {
+            "combos": 58.6,
+            "bet_pct": 74.5
+          },
+          "oesd": {
+            "combos": 116.1,
+            "bet_pct": 56.4
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 200.3,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 104.5,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 196.5,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 88.8,
+            "bet_pct": 58.7
+          },
+          "king_high": {
+            "combos": 33.4,
+            "bet_pct": 31.6
+          },
+          "ace_high": {
+            "combos": 25.6,
+            "bet_pct": 53.4
+          },
+          "low_pair": {
+            "combos": 32.1,
+            "bet_pct": 26.5
+          },
+          "third_pair": {
+            "combos": 3.5,
+            "bet_pct": 21.7
+          },
+          "second_pair": {
+            "combos": 13.4,
+            "bet_pct": 6.7
+          },
+          "top_pair": {
+            "combos": 41.9,
+            "bet_pct": 74.9
+          },
+          "overpair": {
+            "combos": 23.7,
+            "bet_pct": 97.7
+          },
+          "two_pair": {
+            "combos": 9.7,
+            "bet_pct": 89.2
+          },
+          "set": {
+            "combos": 2.2,
+            "bet_pct": 99.4
+          },
+          "straight": {
+            "combos": 32.2,
+            "bet_pct": 98.4
+          }
+        }
+      },
+      "7c": {
+        "turn_tag": "completing",
+        "turn_desc": "ストレート完成(低)",
+        "board4": "Th9s8d7c",
+        "flop_bet": "R11.2",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 249.8,
+            "bet_pct": 21.2
+          },
+          "gutshot": {
+            "combos": 47.8,
+            "bet_pct": 24.8
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 417.2,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 74.4,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 54.0,
+            "bet_pct": 35.1
+          },
+          "king_high": {
+            "combos": 20.7,
+            "bet_pct": 5.4
+          },
+          "ace_high": {
+            "combos": 11.1,
+            "bet_pct": 12.0
+          },
+          "low_pair": {
+            "combos": 31.4,
+            "bet_pct": 34.9
+          },
+          "third_pair": {
+            "combos": 0.7,
+            "bet_pct": 4.9
+          },
+          "second_pair": {
+            "combos": 6.6,
+            "bet_pct": 0.1
+          },
+          "top_pair": {
+            "combos": 21.5,
+            "bet_pct": 0.0
+          },
+          "overpair": {
+            "combos": 17.7,
+            "bet_pct": 0.0
+          },
+          "two_pair": {
+            "combos": 24.9,
+            "bet_pct": 0.0
+          },
+          "set": {
+            "combos": 2.2,
+            "bet_pct": 25.6
+          },
+          "straight": {
+            "combos": 106.8,
+            "bet_pct": 29.8
+          }
+        }
+      },
+      "6c": {
+        "turn_tag": "completing",
+        "turn_desc": "ストレート完成(高)",
+        "board4": "Th9s8d6c",
+        "flop_bet": "R11.2",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 210.5,
+            "bet_pct": 65.2
+          },
+          "gutshot": {
+            "combos": 41.6,
+            "bet_pct": 53.6
+          },
+          "oesd": {
+            "combos": 52.1,
+            "bet_pct": 51.6
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 305.9,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 78.4,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 112.4,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 69.7,
+            "bet_pct": 67.0
+          },
+          "king_high": {
+            "combos": 26.8,
+            "bet_pct": 65.8
+          },
+          "ace_high": {
+            "combos": 19.1,
+            "bet_pct": 29.2
+          },
+          "low_pair": {
+            "combos": 26.1,
+            "bet_pct": 64.3
+          },
+          "third_pair": {
+            "combos": 1.1,
+            "bet_pct": 99.6
+          },
+          "second_pair": {
+            "combos": 7.7,
+            "bet_pct": 96.3
+          },
+          "top_pair": {
+            "combos": 29.5,
+            "bet_pct": 3.2
+          },
+          "overpair": {
+            "combos": 23.7,
+            "bet_pct": 50.4
+          },
+          "two_pair": {
+            "combos": 10.1,
+            "bet_pct": 2.0
+          },
+          "set": {
+            "combos": 2.2,
+            "bet_pct": 5.5
+          },
+          "straight": {
+            "combos": 88.2,
+            "bet_pct": 88.4
+          }
+        }
+      }
+    },
+    "型3_ロードライ": {
+      "2c": {
+        "turn_tag": "blank",
+        "turn_desc": "ブランク",
+        "board4": "Jd7s5c2c",
+        "flop_bet": "R11.2",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 292.2,
+            "bet_pct": 59.0
+          },
+          "gutshot": {
+            "combos": 21.2,
+            "bet_pct": 38.6
+          },
+          "oesd": {
+            "combos": 22.1,
+            "bet_pct": 0.5
+          },
+          "flush_draw": {
+            "combos": 13.2,
+            "bet_pct": 49.0
+          },
+          "nut_flush_draw": {
+            "combos": 1.5,
+            "bet_pct": 85.3
+          },
+          "combo_draw": {
+            "combos": 4.2,
+            "bet_pct": 28.2
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 425.4,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 71.3,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 35.5,
+            "bet_pct": 0
+          },
+          "flush_draw": {
+            "combos": 23.5,
+            "bet_pct": 0
+          },
+          "nut_flush_draw": {
+            "combos": 6.9,
+            "bet_pct": 0
+          },
+          "combo_draw": {
+            "combos": 9.1,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 133.8,
+            "bet_pct": 44.5
+          },
+          "king_high": {
+            "combos": 28.5,
+            "bet_pct": 49.3
+          },
+          "ace_high": {
+            "combos": 8.9,
+            "bet_pct": 3.1
+          },
+          "low_pair": {
+            "combos": 25.3,
+            "bet_pct": 0.1
+          },
+          "third_pair": {
+            "combos": 11.6,
+            "bet_pct": 0.0
+          },
+          "second_pair": {
+            "combos": 31.2,
+            "bet_pct": 41.6
+          },
+          "underpair": {
+            "combos": 3.8,
+            "bet_pct": 73.5
+          },
+          "top_pair": {
+            "combos": 67.5,
+            "bet_pct": 87.3
+          },
+          "overpair": {
+            "combos": 18.0,
+            "bet_pct": 99.9
+          },
+          "two_pair": {
+            "combos": 24.4,
+            "bet_pct": 90.5
+          },
+          "set": {
+            "combos": 1.4,
+            "bet_pct": 65.7
+          }
+        }
+      },
+      "4c": {
+        "turn_tag": "completing",
+        "turn_desc": "ストレート完成(4-5-6-7-8)",
+        "board4": "Jd7s5c4c",
+        "flop_bet": "R11.2",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 186.1,
+            "bet_pct": 52.8
+          },
+          "gutshot": {
+            "combos": 74.6,
+            "bet_pct": 58.5
+          },
+          "oesd": {
+            "combos": 70.2,
+            "bet_pct": 38.4
+          },
+          "flush_draw": {
+            "combos": 7.6,
+            "bet_pct": 56.3
+          },
+          "nut_flush_draw": {
+            "combos": 1.5,
+            "bet_pct": 64.4
+          },
+          "combo_draw": {
+            "combos": 8.3,
+            "bet_pct": 24.3
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 331.8,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 103.5,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 92.1,
+            "bet_pct": 0
+          },
+          "flush_draw": {
+            "combos": 17.1,
+            "bet_pct": 0
+          },
+          "nut_flush_draw": {
+            "combos": 4.9,
+            "bet_pct": 0
+          },
+          "combo_draw": {
+            "combos": 14.6,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 110.6,
+            "bet_pct": 42.7
+          },
+          "king_high": {
+            "combos": 25.0,
+            "bet_pct": 71.4
+          },
+          "ace_high": {
+            "combos": 6.3,
+            "bet_pct": 33.0
+          },
+          "low_pair": {
+            "combos": 39.0,
+            "bet_pct": 20.6
+          },
+          "third_pair": {
+            "combos": 11.6,
+            "bet_pct": 0.0
+          },
+          "second_pair": {
+            "combos": 30.0,
+            "bet_pct": 6.4
+          },
+          "underpair": {
+            "combos": 3.8,
+            "bet_pct": 62.7
+          },
+          "top_pair": {
+            "combos": 65.4,
+            "bet_pct": 63.9
+          },
+          "overpair": {
+            "combos": 18.0,
+            "bet_pct": 98.6
+          },
+          "two_pair": {
+            "combos": 26.8,
+            "bet_pct": 95.9
+          },
+          "set": {
+            "combos": 1.4,
+            "bet_pct": 67.0
+          },
+          "straight": {
+            "combos": 10.6,
+            "bet_pct": 100.0
+          }
+        }
+      },
+      "7h": {
+        "turn_tag": "TA+",
+        "turn_desc": "ペア(中段)",
+        "board4": "Jd7s5c7h",
+        "flop_bet": "R11.2",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 302.7,
+            "bet_pct": 29.0
+          },
+          "gutshot": {
+            "combos": 23.7,
+            "bet_pct": 2.1
+          },
+          "oesd": {
+            "combos": 19.9,
+            "bet_pct": 11.1
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 423.6,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 74.7,
+            "bet_pct": 0
+          },
+          "oesd": {
+            "combos": 35.7,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 166.8,
+            "bet_pct": 22.1
+          },
+          "king_high": {
+            "combos": 28.8,
+            "bet_pct": 10.7
+          },
+          "ace_high": {
+            "combos": 9.0,
+            "bet_pct": 0.1
+          },
+          "third_pair": {
+            "combos": 11.6,
+            "bet_pct": 0.0
+          },
+          "underpair": {
+            "combos": 3.8,
+            "bet_pct": 0.0
+          },
+          "top_pair": {
+            "combos": 75.3,
+            "bet_pct": 27.0
+          },
+          "overpair": {
+            "combos": 18.0,
+            "bet_pct": 55.9
+          },
+          "trips": {
+            "combos": 21.0,
+            "bet_pct": 95.1
+          },
+          "fullhouse": {
+            "combos": 11.6,
+            "bet_pct": 1.5
+          }
+        }
+      }
+    },
+    "型5_モノトーン": {
+      "2c": {
+        "turn_tag": "blank",
+        "turn_desc": "ブランク(非ハート)",
+        "board4": "Ah9h5h2c",
+        "flop_bet": "R3.7",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 328.1,
+            "bet_pct": 21.0
+          },
+          "gutshot": {
+            "combos": 133.0,
+            "bet_pct": 36.7
+          },
+          "flush_draw": {
+            "combos": 143.5,
+            "bet_pct": 21.0
+          },
+          "nut_flush_draw": {
+            "combos": 23.7,
+            "bet_pct": 19.0
+          },
+          "combo_draw": {
+            "combos": 91.9,
+            "bet_pct": 39.5
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 415.2,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 112.6,
+            "bet_pct": 0
+          },
+          "flush_draw": {
+            "combos": 209.1,
+            "bet_pct": 0
+          },
+          "nut_flush_draw": {
+            "combos": 32.0,
+            "bet_pct": 0
+          },
+          "combo_draw": {
+            "combos": 134.1,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 249.2,
+            "bet_pct": 32.6
+          },
+          "king_high": {
+            "combos": 65.8,
+            "bet_pct": 10.3
+          },
+          "low_pair": {
+            "combos": 66.2,
+            "bet_pct": 25.0
+          },
+          "third_pair": {
+            "combos": 84.0,
+            "bet_pct": 6.1
+          },
+          "second_pair": {
+            "combos": 74.0,
+            "bet_pct": 2.5
+          },
+          "underpair": {
+            "combos": 13.3,
+            "bet_pct": 0.1
+          },
+          "top_pair": {
+            "combos": 76.4,
+            "bet_pct": 16.4
+          },
+          "two_pair": {
+            "combos": 40.2,
+            "bet_pct": 53.8
+          },
+          "set": {
+            "combos": 8.4,
+            "bet_pct": 64.0
+          },
+          "straight": {
+            "combos": 11.4,
+            "bet_pct": 100.0
+          },
+          "flush": {
+            "combos": 31.2,
+            "bet_pct": 83.7
+          }
+        }
+      },
+      "4h": {
+        "turn_tag": "completing",
+        "turn_desc": "フラッシュ完成(4th♥)",
+        "board4": "Ah9h5h4h",
+        "flop_bet": "R3.7",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 698.0,
+            "bet_pct": 43.4
+          },
+          "gutshot": {
+            "combos": 19.3,
+            "bet_pct": 55.0
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 751.1,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 8.5,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 143.5,
+            "bet_pct": 47.3
+          },
+          "king_high": {
+            "combos": 38.9,
+            "bet_pct": 26.5
+          },
+          "low_pair": {
+            "combos": 51.7,
+            "bet_pct": 45.3
+          },
+          "third_pair": {
+            "combos": 53.3,
+            "bet_pct": 7.6
+          },
+          "second_pair": {
+            "combos": 55.8,
+            "bet_pct": 2.7
+          },
+          "underpair": {
+            "combos": 4.5,
+            "bet_pct": 0.2
+          },
+          "top_pair": {
+            "combos": 53.4,
+            "bet_pct": 40.7
+          },
+          "two_pair": {
+            "combos": 36.4,
+            "bet_pct": 70.9
+          },
+          "set": {
+            "combos": 7.5,
+            "bet_pct": 65.7
+          },
+          "straight": {
+            "combos": 7.9,
+            "bet_pct": 97.8
+          },
+          "flush": {
+            "combos": 264.0,
+            "bet_pct": 55.2
+          },
+          "straight_flush": {
+            "combos": 0.3,
+            "bet_pct": 99.9
+          }
+        }
+      },
+      "9d": {
+        "turn_tag": "TA+",
+        "turn_desc": "2ndペア",
+        "board4": "Ah9h5h9d",
+        "flop_bet": "R3.7",
+        "ip_draw": {
+          "no_draw": {
+            "combos": 411.0,
+            "bet_pct": 12.6
+          },
+          "gutshot": {
+            "combos": 45.8,
+            "bet_pct": 36.9
+          },
+          "flush_draw": {
+            "combos": 209.5,
+            "bet_pct": 10.1
+          },
+          "nut_flush_draw": {
+            "combos": 26.8,
+            "bet_pct": 25.0
+          },
+          "combo_draw": {
+            "combos": 21.9,
+            "bet_pct": 19.8
+          }
+        },
+        "oop_draw": {
+          "no_draw": {
+            "combos": 454.5,
+            "bet_pct": 0
+          },
+          "gutshot": {
+            "combos": 54.0,
+            "bet_pct": 0
+          },
+          "flush_draw": {
+            "combos": 301.9,
+            "bet_pct": 0
+          },
+          "nut_flush_draw": {
+            "combos": 38.0,
+            "bet_pct": 0
+          },
+          "combo_draw": {
+            "combos": 35.4,
+            "bet_pct": 0
+          }
+        },
+        "ip_hand": {
+          "no_made_hand": {
+            "combos": 338.2,
+            "bet_pct": 15.2
+          },
+          "king_high": {
+            "combos": 73.3,
+            "bet_pct": 6.3
+          },
+          "low_pair": {
+            "combos": 6.0,
+            "bet_pct": 0.0
+          },
+          "third_pair": {
+            "combos": 92.3,
+            "bet_pct": 0.0
+          },
+          "underpair": {
+            "combos": 13.3,
+            "bet_pct": 0.0
+          },
+          "top_pair": {
+            "combos": 90.1,
+            "bet_pct": 4.2
+          },
+          "trips": {
+            "combos": 54.5,
+            "bet_pct": 42.2
+          },
+          "flush": {
+            "combos": 31.2,
+            "bet_pct": 40.7
+          },
+          "fullhouse": {
+            "combos": 15.2,
+            "bet_pct": 33.1
+          },
+          "quads": {
+            "combos": 0.9,
+            "bet_pct": 0.5
+          }
+        }
+      }
+    }
+  }
+}

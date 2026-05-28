@@ -1,6 +1,6 @@
 # 第11章 例題集 — cash 100bb 代表 20 スポット
 
-本章は cash 100bb の代表的な 20 スポットで Light UCBS v2 と Light DCBS の暗算フローを練習します。
+本章は cash 100bb の代表的な 20 スポットで Light UCBS v2 と DCBS (cash 版) の暗算フローを練習します。
 Light framework (IP cbet) 10 問・Full framework (Full UCBS-v2 参考) 5 問・DCBS (OOP defense) 5 問の 3 部構成です。
 各問に「CBS 計算 → context → freq → 判断」の解答例を記載します。
 全問を通すことで、本書の 3 つのフレームワークを cash context で横断的に確認できます。
@@ -17,7 +17,7 @@ CBS = HP + DP → CBS バンド → LIGHT_V2_BASE["cash"][band] → freq → 判
 Full UCBS-v2 (board テクスチャ・confidence・size 等) を使った詳細計算の例です。
 Light v2 との差分 (α, β項, offset) がどのように働くかを確認します。
 
-**部 3: Light DCBS — OOP defense 5 問**
+**部 3: DCBS (cash 版) — OOP defense 5 問**
 BB として IP の cbet を受けたとき、continue か fold かを HP 別 continue freq で判断します。
 
 **解答フォーマット**:
@@ -173,9 +173,9 @@ BB として IP の cbet を受けたとき、continue か fold かを HP 別 co
 6. α = +0, β·I(CBS≥7) = -2, offset(slowplay) = +2
 → **frequency = 68%**
 
-## 部 3: Light DCBS — OOP defense 5 問
+## 部 3: DCBS (cash 版) — OOP defense 5 問
 
-### Light DCBS 守備例 (cash_100bb)
+### DCBS (cash 版) 守備例 (cash_100bb)
 
 **例**: Aハイ (ace_high) を cash_100bb で defense
 
@@ -232,7 +232,7 @@ T98s は型4 連結 → non-polarize → size=33%。
 Light v2 との差: K72r の top_pair は Light 60% vs Full では confidence・α補正で異なる値になります。
 Full v2 は精度 WRMSE 16.43% (Light ~19%) と 2-3pt 精度が高い代わりに計算が複雑です。
 
-**部 3 解説 (Light DCBS)**:
+**部 3 解説 (DCBS (cash 版))**:
 
 ace_high (HP=2) は 40%+5pt=45% → fold 寄り (境界判断)。
 underpair (HP=3) は 85% → call 推奨。
@@ -253,7 +253,7 @@ DCBS は「守備側の続けるか畳むか」を HP から素早く判断す�
 |---|---|---:|---:|
 | Light UCBS v2 | IP cbet freq | ~19% | 5-7 秒 |
 | Full UCBS-v2 | IP cbet freq | 16.43% | 15-30 秒 |
-| Light DCBS | OOP continue freq | ~15% | 3-5 秒 |
+| DCBS (cash 版) | OOP continue freq | ~15% | 3-5 秒 |
 
 **解釈**:
 Light v2 は Full v2 より 2-3pt 誤差が大きいですが、暗算 5 秒以内の代償として許容できます。

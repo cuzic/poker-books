@@ -1,6 +1,6 @@
 volume: "Vol2"
 chapter_num: "08"
-title: "Light DCBS — 守備の暗算式"
+title: "DCBS (cash 100bb 版) — 守備の暗算式"
 
 summary: |
   BB が IP の cbet を受けたとき、continue (call + raise) か fold かを
@@ -20,7 +20,7 @@ sections:
       BB として IP の cbet を受けたとき、どこまで守るべきかは難しい判断です。
 
       旧システムでは HandScore (HS) 閾値テーブルで守備判断をしていました。
-      Light DCBS v2 では **HP 別 continue freq 表** に切り替えます。
+      DCBS (cash 版) v2 では **HP 別 continue freq 表** に切り替えます。
       HP は CBS の構成要素 (HP + DP) なので、計算の流れが統一されます。
 
       「攻撃 (UCBS) も守備 (DCBS) も HP テーブルから」という一貫性が本書の強みです。
@@ -75,7 +75,7 @@ sections:
 
   - type: table
     template: dcbs_table
-    title: "Light DCBS — context 別 continue freq"
+    title: "DCBS (cash 版) — context 別 continue freq"
 
   - type: heading
     level: 2
@@ -86,7 +86,7 @@ sections:
       実戦での判断手順は以下の通りです。
 
       ```
-      [Light DCBS 暗算フロー]
+      [DCBS (cash 版) 暗算フロー]
 
       Step 1: HP 確認
         hand type → HP テーブル → HP 値 (2/3/5/7/8/9)
@@ -164,7 +164,7 @@ sections:
 
   - type: examples
     framework: dcbs
-    title: "Light DCBS 守備例 (cash_100bb)"
+    title: "DCBS (cash 版) 守備例 (cash_100bb)"
     cases:
       - hand: ace_high
         context: cash_100bb

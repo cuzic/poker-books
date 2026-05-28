@@ -3,7 +3,7 @@
 フロップ → ターン → リバーを 1 ストリートずつ独立して考えると、一貫性のない行動になりがちです。
 本章では「3 ストリートを通した計画」の立て方を習得します。
 主要ライン (cbet+barrel / cbet+check / check+probe) を CBS × context の組み合わせで分類し、
-各ラインで Light UCBS v2 と Light DCBS をどう更新するかを整理します。
+各ラインで Light UCBS v2 と DCBS (cash 版) をどう更新するかを整理します。
 SPR とベット回数の関係を理解することで、リバーのポットコミット判定まで見通せます。
 
 ## マルチストリート設計の考え方
@@ -176,7 +176,7 @@ CBS が strong (7-8) または nut (9+) の場合にプローブを選択しま�
 CBS が mid 以下の場合はチェックが基本です。
 
 **defense 側 (IP) の対応**:
-BB のプローブに対して IP は、Light DCBS ではなく通常の cash context での判断に近い形で対応します。
+BB のプローブに対して IP は、DCBS (cash 版) ではなく通常の cash context での判断に近い形で対応します。
 HP=7+ は call / raise。HP=5 は call。HP=3 以下は fold が多い。
 
 ### probe 受け側 (IP) の defense 例

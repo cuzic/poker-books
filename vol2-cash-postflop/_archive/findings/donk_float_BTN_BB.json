@@ -1,0 +1,106 @@
+{
+  "scenario": "SRP BTN vs BB",
+  "results": [
+    {
+      "type": "型1_ハイドライ",
+      "flop": "Ks7d2c",
+      "desc": "K高・レインボー",
+      "donk_bet_code": "R6.4",
+      "donk_rate_pct": 0.1,
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "4c",
+          "desc": "ブランク",
+          "ip_float_pct": null,
+          "oop_turn_cont_pct": null,
+          "ip_float_by_cat": []
+        },
+        {
+          "tag": "TA+_2nd",
+          "card": "7h",
+          "desc": "2ndペア",
+          "ip_float_pct": null,
+          "oop_turn_cont_pct": null,
+          "ip_float_by_cat": []
+        },
+        {
+          "tag": "TA-_OC",
+          "card": "Ah",
+          "desc": "OC(A)",
+          "ip_float_pct": null,
+          "oop_turn_cont_pct": null,
+          "ip_float_by_cat": []
+        }
+      ]
+    },
+    {
+      "type": "型2_ハイウェット",
+      "flop": "Qh8d3s",
+      "desc": "Q高・2トーン",
+      "donk_bet_code": "R1.8",
+      "donk_rate_pct": 0.1,
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "5d",
+          "desc": "ブランク",
+          "ip_float_pct": null,
+          "oop_turn_cont_pct": null,
+          "ip_float_by_cat": []
+        },
+        {
+          "tag": "TA+_2nd",
+          "card": "8c",
+          "desc": "2ndペア",
+          "ip_float_pct": null,
+          "oop_turn_cont_pct": null,
+          "ip_float_by_cat": []
+        },
+        {
+          "tag": "TA-_OC",
+          "card": "Ah",
+          "desc": "OC(A)",
+          "ip_float_pct": null,
+          "oop_turn_cont_pct": null,
+          "ip_float_by_cat": []
+        }
+      ]
+    },
+    {
+      "type": "型3_ロードライ",
+      "flop": "Jd7s5c",
+      "desc": "J中・レインボー",
+      "donk_bet_code": null,
+      "turns": []
+    },
+    {
+      "type": "型4_ローウェット",
+      "flop": "Th9s8d",
+      "desc": "低連携・2トーン",
+      "donk_bet_code": null,
+      "turns": []
+    },
+    {
+      "type": "型5_モノトーン",
+      "flop": "Ah9h5h",
+      "desc": "A高モノトーン",
+      "donk_bet_code": null,
+      "turns": []
+    },
+    {
+      "type": "型6_ペア高",
+      "flop": "AsAcKd",
+      "desc": "AAKペアボード",
+      "donk_bet_code": null,
+      "turns": []
+    },
+    {
+      "type": "型7_ペア低",
+      "flop": "7s7d2c",
+      "desc": "77低ペアボード",
+      "donk_bet_code": null,
+      "turns": []
+    }
+  ]
+}

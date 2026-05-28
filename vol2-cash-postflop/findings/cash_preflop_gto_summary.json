@@ -1,0 +1,128 @@
+{
+  "cash_preflop_gto": {
+    "rfi": {
+      "UTG": 17.5,
+      "HJ": 21.7,
+      "CO": 27.9,
+      "BTN": 40.6,
+      "SB": 34.4
+    },
+    "vs_open": {
+      "BB vs UTG": {
+        "squeeze_pct": 5.1
+      },
+      "BB vs HJ": {
+        "squeeze_pct": 7.0
+      },
+      "BB vs CO": {
+        "squeeze_pct": 8.9
+      },
+      "BB vs BTN": {
+        "squeeze_pct": 12.9
+      },
+      "BB vs SB": {
+        "squeeze_pct": 17.5
+      },
+      "SB vs UTG": {
+        "squeeze_pct": 6.5
+      },
+      "SB vs HJ": {
+        "squeeze_pct": 7.4
+      },
+      "SB vs CO": {
+        "squeeze_pct": 9.6
+      },
+      "SB vs BTN": {
+        "squeeze_pct": 13.8
+      },
+      "BTN vs UTG": {
+        "squeeze_pct": 7.5
+      },
+      "CO vs UTG": {
+        "squeeze_pct": 7.3
+      },
+      "BTN vs HJ": {
+        "squeeze_pct": 8.8
+      }
+    },
+    "vs_3bet": {
+      "UTG vs HJ 3bet": {
+        "fourbet_pct": 22.2
+      },
+      "UTG vs CO 3bet": {
+        "fourbet_pct": 23.1
+      },
+      "UTG vs BTN 3bet": {
+        "fourbet_pct": 24.2
+      },
+      "UTG vs SB 3bet": {
+        "fourbet_pct": 17.5
+      },
+      "UTG vs BB 3bet": {
+        "fourbet_pct": 0.0
+      },
+      "HJ vs BTN 3bet": {
+        "fourbet_pct": 24.2
+      },
+      "HJ vs BB 3bet": {
+        "fourbet_pct": 0.0
+      },
+      "CO vs BTN 3bet": {
+        "fourbet_pct": 23.5
+      },
+      "CO vs BB 3bet": {
+        "fourbet_pct": 0.0
+      },
+      "BTN vs SB 3bet": {
+        "fourbet_pct": 16.1
+      },
+      "BTN vs BB 3bet": {
+        "fourbet_pct": 0.0
+      },
+      "SB vs BB 3bet": {
+        "fourbet_pct": 0.0
+      }
+    },
+    "multiway": {
+      "CO vs UTG+HJ": {
+        "squeeze_pct": 6.3
+      },
+      "BTN vs UTG+HJ": {
+        "squeeze_pct": 6.2
+      },
+      "SB vs UTG+HJ": {
+        "squeeze_pct": 6.0
+      },
+      "HJ vs UTG (probe)": {
+        "fold": 91.5,
+        "call": 1.4,
+        "raise": 7.1
+      },
+      "BTN vs UTG+CO [C]": {
+        "fold": 89.7,
+        "call": 3.7,
+        "raise": 6.6
+      },
+      "SB vs UTG+BTN [C]": {
+        "fold": 89.7,
+        "call": 3.6,
+        "raise": 6.7
+      },
+      "BB vs UTG+BTN [C]": {
+        "fold": 81.0,
+        "call": 11.7,
+        "raise": 7.3
+      },
+      "BB vs CO+BTN [C]": {
+        "fold": 76.8,
+        "call": 12.6,
+        "raise": 10.6
+      },
+      "BB vs UTG+CO [C]": {
+        "fold": 82.1,
+        "call": 11.9,
+        "raise": 6.0
+      }
+    }
+  }
+}

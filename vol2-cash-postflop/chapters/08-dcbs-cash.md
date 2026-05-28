@@ -1,4 +1,4 @@
-# 第08章 Light DCBS — 守備の暗算式
+# 第08章 DCBS (cash 100bb 版) — 守備の暗算式
 
 BB が IP の cbet を受けたとき、continue (call + raise) か fold かを
 HP 別 continue freq 表から即判断します。
@@ -12,7 +12,7 @@ HP=2 内はキッカー補正 (ace_high +5pt、no_made_hand -3pt) で細分化�
 BB として IP の cbet を受けたとき、どこまで守るべきかは難しい判断です。
 
 旧システムでは HandScore (HS) 閾値テーブルで守備判断をしていました。
-Light DCBS v2 では **HP 別 continue freq 表** に切り替えます。
+DCBS (cash 版) v2 では **HP 別 continue freq 表** に切り替えます。
 HP は CBS の構成要素 (HP + DP) なので、計算の流れが統一されます。
 
 「攻撃 (UCBS) も守備 (DCBS) も HP テーブルから」という一貫性が本書の強みです。
@@ -55,7 +55,7 @@ no_made_hand (67o on K72r のような完全ミス) は 37% で fold 推奨で�
 
 ## DCBS テーブル — 全 4 context 比較
 
-### Light DCBS — context 別 continue freq
+### DCBS (cash 版) — context 別 continue freq
 
 ### DCBS HP 別 base continue freq
 
@@ -82,7 +82,7 @@ no_made_hand (67o on K72r のような完全ミス) は 37% で fold 推奨で�
 実戦での判断手順は以下の通りです。
 
 ```
-[Light DCBS 暗算フロー]
+[DCBS (cash 版) 暗算フロー]
 
 Step 1: HP 確認
   hand type → HP テーブル → HP 値 (2/3/5/7/8/9)
@@ -148,7 +148,7 @@ CR は稀です。ペアが改善した場合 (turn でセットなど) に小�
 
 ## 計算例 — cash 100bb での守備判断
 
-### Light DCBS 守備例 (cash_100bb)
+### DCBS (cash 版) 守備例 (cash_100bb)
 
 **例**: Aハイ (ace_high) を cash_100bb で defense
 

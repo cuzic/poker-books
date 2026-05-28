@@ -1,4 +1,4 @@
-# Vol2 — Cash Postflop 完全ガイド (Light UCBS v2 + Light DCBS) 目次
+# Vol2 — Cash Postflop 完全ガイド (Light UCBS v2 + DCBS (cash 版)) 目次
 
 作成日: 2026-05-28
 ベース計画: `/home/cuzic/poker-books/RESTRUCTURE_PLAN.md` L52-91
@@ -18,7 +18,7 @@
 | 05 | サイズ判別 (33% vs Overbet) | 4k | 02-cbet-ip 2-1 節 | △ |
 | 06 | Position 補正 | 4k | なし | — |
 | 07 | 3-bet pot postflop (cash) | 6k | 04-cbet-3bp-4bp | △ |
-| 08 | Light DCBS: 守備の暗算式 | 6k | 06-defense | ○ |
+| 08 | DCBS (cash 版): 守備の暗算式 | 6k | 06-defense | ○ |
 | 09 | Turn 2nd barrel: α=-0.35 シフト | 5k | 07-turn-barrel | △ |
 | 10 | Multistreet plan | 6k | 08-turn-plan-defense + 11-multistreet-plan | ○ |
 | 11 | 例題集 (cash 100bb 20 spots) | 8k | なし | — |
@@ -37,9 +37,9 @@
 - H3: 「強さがわからない」「打つべきかわからない」の 2 源
 - H3: 本書の解答: CBS 値 1 本 + 25 セル表
 
-### H2: 本書の主役 — Light UCBS v2 と Light DCBS
+### H2: 本書の主役 — Light UCBS v2 と DCBS (cash 版)
 - H3: 25 セル表 (5 context × 5 CBS バンド) の概要
-- H3: Light DCBS (HP × 4 context continue freq 表) の概要
+- H3: DCBS (cash 版) (HP × 4 context continue freq 表) の概要
 
 ### H2: 読み方ガイド — 暗算フロー全体像
 - H3: 6 ステップの暗算フロー図
@@ -253,7 +253,7 @@
 
 ---
 
-## ch08 — Light DCBS: 守備の暗算式
+## ch08 — DCBS (cash 版): 守備の暗算式
 
 **目標字数**: 6k 字
 **目的**: BB が cbet を受けたとき、continue (call + raise) か fold かを HP 別 continue freq 表から即判断できる。
@@ -388,7 +388,7 @@
 - H3: % 表 (パーセント形式)
 - H3: 「打つ (≥50%)/打たない (<50%)」二値化版
 
-### H2: Light DCBS — cash 100bb continue freq 表
+### H2: DCBS (cash 版) — cash 100bb continue freq 表
 - H3: HP=2/3/5/7 の continue freq
 - H3: Kicker offset (ace_high/king_high/no_made_hand/low_pair)
 

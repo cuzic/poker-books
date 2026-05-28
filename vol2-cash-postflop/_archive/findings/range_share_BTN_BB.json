@@ -1,0 +1,745 @@
+{
+  "scenario": "SRP BTN vs BB",
+  "results": {
+    "型1_ハイドライ": {
+      "type": "型1_ハイドライ",
+      "flop": "Ks7d2c",
+      "desc": "K高・レインボー",
+      "ip_range": [
+        {
+          "hc": "set",
+          "combos": 7.0,
+          "share": 1.44
+        },
+        {
+          "hc": "two_pair",
+          "combos": 5.5,
+          "share": 1.13
+        },
+        {
+          "hc": "overpair",
+          "combos": 6.0,
+          "share": 1.23
+        },
+        {
+          "hc": "top_pair",
+          "combos": 84.0,
+          "share": 17.26
+        },
+        {
+          "hc": "second_pair",
+          "combos": 30.2,
+          "share": 6.21
+        },
+        {
+          "hc": "underpair",
+          "combos": 30.0,
+          "share": 6.17
+        },
+        {
+          "hc": "third_pair",
+          "combos": 27.8,
+          "share": 5.71
+        },
+        {
+          "hc": "ace_high",
+          "combos": 144.0,
+          "share": 29.6
+        },
+        {
+          "hc": "no_made_hand",
+          "combos": 152.0,
+          "share": 31.25
+        }
+      ],
+      "oop_range": [
+        {
+          "hc": "set",
+          "combos": 5.8,
+          "share": 1.82
+        },
+        {
+          "hc": "two_pair",
+          "combos": 2.0,
+          "share": 0.63
+        },
+        {
+          "hc": "top_pair",
+          "combos": 44.3,
+          "share": 13.93
+        },
+        {
+          "hc": "second_pair",
+          "combos": 29.3,
+          "share": 9.22
+        },
+        {
+          "hc": "underpair",
+          "combos": 11.1,
+          "share": 3.47
+        },
+        {
+          "hc": "third_pair",
+          "combos": 24.4,
+          "share": 7.66
+        },
+        {
+          "hc": "ace_high",
+          "combos": 83.7,
+          "share": 26.28
+        },
+        {
+          "hc": "no_made_hand",
+          "combos": 117.8,
+          "share": 36.99
+        }
+      ],
+      "ip_nut_share": 3.8,
+      "oop_nut_share": 2.45,
+      "ip_top3_share": 3.8,
+      "oop_top3_share": 2.45,
+      "range_advantage": "IP",
+      "nut_advantage_score": 1.35
+    },
+    "型2_ハイウェット": {
+      "type": "型2_ハイウェット",
+      "flop": "Qh8d3s",
+      "desc": "Q高・2トーン",
+      "ip_range": [
+        {
+          "hc": "set",
+          "combos": 9.0,
+          "share": 1.86
+        },
+        {
+          "hc": "two_pair",
+          "combos": 3.7,
+          "share": 0.76
+        },
+        {
+          "hc": "overpair",
+          "combos": 12.0,
+          "share": 2.49
+        },
+        {
+          "hc": "top_pair",
+          "combos": 72.0,
+          "share": 14.92
+        },
+        {
+          "hc": "second_pair",
+          "combos": 40.5,
+          "share": 8.4
+        },
+        {
+          "hc": "underpair",
+          "combos": 18.0,
+          "share": 3.73
+        },
+        {
+          "hc": "third_pair",
+          "combos": 39.0,
+          "share": 8.08
+        },
+        {
+          "hc": "low_pair",
+          "combos": 2.0,
+          "share": 0.41
+        },
+        {
+          "hc": "ace_high",
+          "combos": 133.0,
+          "share": 27.56
+        },
+        {
+          "hc": "king_high",
+          "combos": 70.5,
+          "share": 14.62
+        },
+        {
+          "hc": "no_made_hand",
+          "combos": 82.9,
+          "share": 17.17
+        }
+      ],
+      "oop_range": [
+        {
+          "hc": "set",
+          "combos": 6.0,
+          "share": 1.89
+        },
+        {
+          "hc": "two_pair",
+          "combos": 2.6,
+          "share": 0.83
+        },
+        {
+          "hc": "top_pair",
+          "combos": 39.6,
+          "share": 12.52
+        },
+        {
+          "hc": "second_pair",
+          "combos": 31.6,
+          "share": 9.99
+        },
+        {
+          "hc": "underpair",
+          "combos": 5.1,
+          "share": 1.61
+        },
+        {
+          "hc": "third_pair",
+          "combos": 30.3,
+          "share": 9.57
+        },
+        {
+          "hc": "low_pair",
+          "combos": 6.0,
+          "share": 1.9
+        },
+        {
+          "hc": "ace_high",
+          "combos": 77.4,
+          "share": 24.48
+        },
+        {
+          "hc": "king_high",
+          "combos": 45.5,
+          "share": 14.37
+        },
+        {
+          "hc": "no_made_hand",
+          "combos": 72.2,
+          "share": 22.84
+        }
+      ],
+      "ip_nut_share": 5.11,
+      "oop_nut_share": 2.72,
+      "ip_top3_share": 5.11,
+      "oop_top3_share": 2.72,
+      "range_advantage": "IP",
+      "nut_advantage_score": 2.39
+    },
+    "型3_ロードライ": {
+      "type": "型3_ロードライ",
+      "flop": "Jd7s5c",
+      "desc": "J中・レインボー",
+      "ip_range": [
+        {
+          "hc": "set",
+          "combos": 9.0,
+          "share": 1.86
+        },
+        {
+          "hc": "two_pair",
+          "combos": 4.1,
+          "share": 0.86
+        },
+        {
+          "hc": "overpair",
+          "combos": 18.0,
+          "share": 3.72
+        },
+        {
+          "hc": "top_pair",
+          "combos": 66.0,
+          "share": 13.62
+        },
+        {
+          "hc": "second_pair",
+          "combos": 31.9,
+          "share": 6.59
+        },
+        {
+          "hc": "underpair",
+          "combos": 18.0,
+          "share": 3.72
+        },
+        {
+          "hc": "third_pair",
+          "combos": 28.9,
+          "share": 5.97
+        },
+        {
+          "hc": "low_pair",
+          "combos": 14.0,
+          "share": 2.89
+        },
+        {
+          "hc": "ace_high",
+          "combos": 133.0,
+          "share": 27.46
+        },
+        {
+          "hc": "king_high",
+          "combos": 80.0,
+          "share": 16.51
+        },
+        {
+          "hc": "no_made_hand",
+          "combos": 81.5,
+          "share": 16.82
+        }
+      ],
+      "oop_range": [
+        {
+          "hc": "set",
+          "combos": 4.7,
+          "share": 1.51
+        },
+        {
+          "hc": "two_pair",
+          "combos": 4.1,
+          "share": 1.33
+        },
+        {
+          "hc": "top_pair",
+          "combos": 44.7,
+          "share": 14.33
+        },
+        {
+          "hc": "second_pair",
+          "combos": 27.4,
+          "share": 8.77
+        },
+        {
+          "hc": "underpair",
+          "combos": 11.1,
+          "share": 3.54
+        },
+        {
+          "hc": "third_pair",
+          "combos": 27.1,
+          "share": 8.68
+        },
+        {
+          "hc": "low_pair",
+          "combos": 17.6,
+          "share": 5.65
+        },
+        {
+          "hc": "ace_high",
+          "combos": 64.5,
+          "share": 20.69
+        },
+        {
+          "hc": "king_high",
+          "combos": 47.5,
+          "share": 15.22
+        },
+        {
+          "hc": "no_made_hand",
+          "combos": 63.2,
+          "share": 20.28
+        }
+      ],
+      "ip_nut_share": 6.44,
+      "oop_nut_share": 2.84,
+      "ip_top3_share": 6.44,
+      "oop_top3_share": 2.84,
+      "range_advantage": "IP",
+      "nut_advantage_score": 3.6
+    },
+    "型4_ローウェット": {
+      "type": "型4_ローウェット",
+      "flop": "Th9s8d",
+      "desc": "低連携・2トーン",
+      "ip_range": [
+        {
+          "hc": "set",
+          "combos": 9.0,
+          "share": 1.92
+        },
+        {
+          "hc": "straight",
+          "combos": 24.0,
+          "share": 5.11
+        },
+        {
+          "hc": "two_pair",
+          "combos": 14.5,
+          "share": 3.09
+        },
+        {
+          "hc": "overpair",
+          "combos": 24.0,
+          "share": 5.11
+        },
+        {
+          "hc": "top_pair",
+          "combos": 54.0,
+          "share": 11.49
+        },
+        {
+          "hc": "second_pair",
+          "combos": 51.0,
+          "share": 10.85
+        },
+        {
+          "hc": "third_pair",
+          "combos": 35.6,
+          "share": 7.58
+        },
+        {
+          "hc": "low_pair",
+          "combos": 32.0,
+          "share": 6.81
+        },
+        {
+          "hc": "ace_high",
+          "combos": 133.0,
+          "share": 28.31
+        },
+        {
+          "hc": "king_high",
+          "combos": 58.5,
+          "share": 12.46
+        },
+        {
+          "hc": "no_made_hand",
+          "combos": 34.2,
+          "share": 7.29
+        }
+      ],
+      "oop_range": [
+        {
+          "hc": "set",
+          "combos": 5.5,
+          "share": 1.82
+        },
+        {
+          "hc": "straight",
+          "combos": 16.8,
+          "share": 5.52
+        },
+        {
+          "hc": "two_pair",
+          "combos": 8.8,
+          "share": 2.9
+        },
+        {
+          "hc": "top_pair",
+          "combos": 38.3,
+          "share": 12.61
+        },
+        {
+          "hc": "second_pair",
+          "combos": 38.4,
+          "share": 12.66
+        },
+        {
+          "hc": "third_pair",
+          "combos": 27.7,
+          "share": 9.12
+        },
+        {
+          "hc": "low_pair",
+          "combos": 32.3,
+          "share": 10.65
+        },
+        {
+          "hc": "ace_high",
+          "combos": 53.6,
+          "share": 17.64
+        },
+        {
+          "hc": "king_high",
+          "combos": 36.9,
+          "share": 12.16
+        },
+        {
+          "hc": "no_made_hand",
+          "combos": 45.3,
+          "share": 14.92
+        }
+      ],
+      "ip_nut_share": 15.23,
+      "oop_nut_share": 10.24,
+      "ip_top3_share": 10.12,
+      "oop_top3_share": 4.72,
+      "range_advantage": "IP",
+      "nut_advantage_score": 5.4
+    },
+    "型5_モノトーン": {
+      "type": "型5_モノトーン",
+      "flop": "Ah9h5h",
+      "desc": "A高モノトーン",
+      "ip_range": [
+        {
+          "hc": "set",
+          "combos": 9.0,
+          "share": 1.98
+        },
+        {
+          "hc": "flush",
+          "combos": 25.7,
+          "share": 5.65
+        },
+        {
+          "hc": "two_pair",
+          "combos": 18.0,
+          "share": 3.96
+        },
+        {
+          "hc": "top_pair",
+          "combos": 111.8,
+          "share": 24.57
+        },
+        {
+          "hc": "second_pair",
+          "combos": 54.0,
+          "share": 11.87
+        },
+        {
+          "hc": "underpair",
+          "combos": 24.0,
+          "share": 5.28
+        },
+        {
+          "hc": "third_pair",
+          "combos": 32.1,
+          "share": 7.07
+        },
+        {
+          "hc": "low_pair",
+          "combos": 14.0,
+          "share": 3.08
+        },
+        {
+          "hc": "king_high",
+          "combos": 77.5,
+          "share": 17.04
+        },
+        {
+          "hc": "no_made_hand",
+          "combos": 88.7,
+          "share": 19.51
+        }
+      ],
+      "oop_range": [
+        {
+          "hc": "set",
+          "combos": 4.4,
+          "share": 1.48
+        },
+        {
+          "hc": "flush",
+          "combos": 23.5,
+          "share": 7.84
+        },
+        {
+          "hc": "two_pair",
+          "combos": 13.6,
+          "share": 4.53
+        },
+        {
+          "hc": "top_pair",
+          "combos": 56.5,
+          "share": 18.81
+        },
+        {
+          "hc": "second_pair",
+          "combos": 36.0,
+          "share": 12.0
+        },
+        {
+          "hc": "third_pair",
+          "combos": 37.5,
+          "share": 12.49
+        },
+        {
+          "hc": "low_pair",
+          "combos": 17.6,
+          "share": 5.87
+        },
+        {
+          "hc": "king_high",
+          "combos": 39.7,
+          "share": 13.21
+        },
+        {
+          "hc": "no_made_hand",
+          "combos": 71.4,
+          "share": 23.77
+        }
+      ],
+      "ip_nut_share": 11.59,
+      "oop_nut_share": 13.85,
+      "ip_top3_share": 5.94,
+      "oop_top3_share": 6.01,
+      "range_advantage": "中立",
+      "nut_advantage_score": -0.07
+    },
+    "型6_ペア高": {
+      "type": "型6_ペア高",
+      "flop": "AsAcKd",
+      "desc": "AAKペアボード",
+      "ip_range": [
+        {
+          "hc": "quads",
+          "combos": 1.0,
+          "share": 0.24
+        },
+        {
+          "hc": "fullhouse",
+          "combos": 9.0,
+          "share": 2.19
+        },
+        {
+          "hc": "trips",
+          "combos": 82.5,
+          "share": 20.09
+        },
+        {
+          "hc": "second_pair",
+          "combos": 79.9,
+          "share": 19.45
+        },
+        {
+          "hc": "third_pair",
+          "combos": 62.0,
+          "share": 15.09
+        },
+        {
+          "hc": "no_made_hand",
+          "combos": 176.3,
+          "share": 42.93
+        }
+      ],
+      "oop_range": [
+        {
+          "hc": "trips",
+          "combos": 49.2,
+          "share": 17.16
+        },
+        {
+          "hc": "second_pair",
+          "combos": 47.3,
+          "share": 16.5
+        },
+        {
+          "hc": "third_pair",
+          "combos": 43.4,
+          "share": 15.12
+        },
+        {
+          "hc": "no_made_hand",
+          "combos": 146.9,
+          "share": 51.21
+        }
+      ],
+      "ip_nut_share": 22.52,
+      "oop_nut_share": 17.16,
+      "ip_top3_share": 0,
+      "oop_top3_share": 0,
+      "range_advantage": "中立",
+      "nut_advantage_score": 0
+    },
+    "型7_ペア低": {
+      "type": "型7_ペア低",
+      "flop": "7s7d2c",
+      "desc": "77低ペアボード",
+      "ip_range": [
+        {
+          "hc": "quads",
+          "combos": 1.0,
+          "share": 0.2
+        },
+        {
+          "hc": "fullhouse",
+          "combos": 1.0,
+          "share": 0.2
+        },
+        {
+          "hc": "trips",
+          "combos": 23.4,
+          "share": 4.63
+        },
+        {
+          "hc": "overpair",
+          "combos": 42.0,
+          "share": 8.3
+        },
+        {
+          "hc": "second_pair",
+          "combos": 6.8,
+          "share": 1.34
+        },
+        {
+          "hc": "underpair",
+          "combos": 24.0,
+          "share": 4.74
+        },
+        {
+          "hc": "ace_high",
+          "combos": 160.0,
+          "share": 31.61
+        },
+        {
+          "hc": "king_high",
+          "combos": 96.0,
+          "share": 18.96
+        },
+        {
+          "hc": "no_made_hand",
+          "combos": 152.0,
+          "share": 30.04
+        }
+      ],
+      "oop_range": [
+        {
+          "hc": "quads",
+          "combos": 0.9,
+          "share": 0.29
+        },
+        {
+          "hc": "fullhouse",
+          "combos": 3.0,
+          "share": 0.93
+        },
+        {
+          "hc": "trips",
+          "combos": 21.6,
+          "share": 6.71
+        },
+        {
+          "hc": "overpair",
+          "combos": 11.1,
+          "share": 3.44
+        },
+        {
+          "hc": "second_pair",
+          "combos": 3.7,
+          "share": 1.14
+        },
+        {
+          "hc": "underpair",
+          "combos": 20.7,
+          "share": 6.45
+        },
+        {
+          "hc": "ace_high",
+          "combos": 83.7,
+          "share": 26.03
+        },
+        {
+          "hc": "king_high",
+          "combos": 59.1,
+          "share": 18.39
+        },
+        {
+          "hc": "no_made_hand",
+          "combos": 117.8,
+          "share": 36.63
+        }
+      ],
+      "ip_nut_share": 13.33,
+      "oop_nut_share": 11.37,
+      "ip_top3_share": 8.3,
+      "oop_top3_share": 3.44,
+      "range_advantage": "IP",
+      "nut_advantage_score": 4.86
+    }
+  }
+}

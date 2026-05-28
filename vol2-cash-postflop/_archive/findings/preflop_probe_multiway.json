@@ -1,0 +1,32 @@
+{
+  "HJ vs UTG (probe)": {
+    "fold": 91.5,
+    "call": 1.4,
+    "raise": 7.1
+  },
+  "BTN vs UTG+CO [C]": {
+    "fold": 89.7,
+    "call": 3.7,
+    "raise": 6.6
+  },
+  "SB vs UTG+BTN [C]": {
+    "fold": 89.7,
+    "call": 3.6,
+    "raise": 6.7
+  },
+  "BB vs UTG+BTN [C]": {
+    "fold": 81.0,
+    "call": 11.7,
+    "raise": 7.3
+  },
+  "BB vs CO+BTN [C]": {
+    "fold": 76.8,
+    "call": 12.6,
+    "raise": 10.6
+  },
+  "BB vs UTG+CO [C]": {
+    "fold": 82.1,
+    "call": 11.9,
+    "raise": 6.0
+  }
+}

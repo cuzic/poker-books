@@ -1,4 +1,4 @@
-# Vol2 用語定義 — Light UCBS v2 + Light DCBS
+# Vol2 用語定義 — Light UCBS v2 + DCBS (cash 版)
 
 作成日: 2026-05-28
 用途: Vol1 (preflop) / Vol3 (MTT Full) / Vol4 (Tell) との整合確認。章執筆前の用語ロック。
@@ -80,12 +80,12 @@
 
 ---
 
-## 4. Light DCBS
+## 4. DCBS (cash 版)
 
 **定義**: BB が cbet を受けたときの continue freq (call + raise) を HP × context で求める守備側モデル。
 フル DCBS の 4 context をそのまま使うが、Vol2 では cash_100bb を主役とする。
 
-- 名称: Light DCBS (または DCBS)
+- 名称: DCBS (cash 版) (または DCBS)
 - 主要テーブル: `DCBS_CONTEXTS["cash_100bb"]["base"]` (HP → continue freq)
 - kicker offset: `DCBS_CONTEXTS["cash_100bb"]["kicker"]`
 - ソース: `dcbs.py`
@@ -140,7 +140,7 @@
 **定義**: 相手のブラフを採算割れにするために、OOP が守らなければならない最低ディフェンス頻度。
 `MDF = 1 - α = pot / (pot + bet)`
 
-**Vol2 での位置づけ**: ch08 (Light DCBS) の設計根拠として説明します。対局中に MDF 計算は不要で、DCBS テーブルで代替します。
+**Vol2 での位置づけ**: ch08 (DCBS (cash 版)) の設計根拠として説明します。対局中に MDF 計算は不要で、DCBS テーブルで代替します。
 
 **旧用語との整合**: 旧 ch06 では「後手下限」という表現が使われていましたが、これは廃棄済み。MDF で統一します (グローバルフィードバック: `feedback_mdf_terminology.md` 参照)。
 
@@ -205,7 +205,7 @@ Vol4 はプレイヤータイプ別補正を扱い、ポストフロップの基
 | Combined Board Score | CBS | ch01 | CBS = HP + DP |
 | CBS バンド | バンド | ch01 | air/weak/mid/strong/nut |
 | Light UCBS v2 | Light v2 | ch02 | 5 context × 5 band の 25 セル表 |
-| Light DCBS | DCBS | ch08 | HP 別 continue freq 表 |
+| DCBS (cash 版) | DCBS | ch08 | HP 別 continue freq 表 |
 | Minimum Defense Frequency | MDF | ch08 | 最低守備頻度 |
 | Turn Advantage | TA | ch09 | ターンカードのレンジ有利性 |
 | ボード型 | 型1-7 | ch04 | フロップ 7 分類 |
