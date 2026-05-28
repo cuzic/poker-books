@@ -1,0 +1,259 @@
+volume: "Vol3"
+chapter_num: "04"
+title: "Context スイッチング——13 context の使い分け"
+
+summary: |
+  Full UCBS-v2 の 13 context を「どの状況でどれを選ぶか」の木構造で覚えます。
+  選択の軸は「SRP か 3BP か Turn か」「depth（SBR）はいくつか」「cash か MTT か」の 3 点です。
+  Tier 1 の depth 別特徴、Tier 3 の SPR 基準選択、Tier 4 の α シフトを段階的に習得します。
+
+sections:
+  - type: heading
+    level: 2
+    text: "Context 選択の木——SRP か 3BP か Turn かで分岐"
+
+  - type: prose
+    body: |
+      13 context の選択は 3 ステップの分岐で絞り込みます。
+
+      ステップ1: Turn か否かを確認します。
+      ターンで 2nd barrel を検討しているなら Tier 4 へ直行します。
+      この時点で depth を合わせて 4 context から 1 つを選びます（mtt_25bb_turn_btn / mtt_50bb_turn_btn / mtt_100bb_turn_btn / cash_100bb_turn_btn）。
+
+      ステップ2: 3BP か SRP かを確認します。
+      フロップが 3bet pot（プリフロップで 3bet が成立）なら Tier 3 へ直行します。
+      3BP ではSBR よりも SPR で context を選ぶのがポイントです（SPR≈2.5 → mtt_3bp_20bb、SPR≈2.7 → mtt_3bp_25bb、SPR≈5.5 → mtt_3bp_50bb、SPR≈11 → mtt_3bp_100bb）。
+
+      ステップ3: cash か MTT かを確認します。
+      SRP のフロップなら、cash → Tier 0（cash_100bb）、MTT → depth で Tier 1 の 4 context（mtt_25/50/100/200bb）から 1 つを選びます。
+
+  - type: heading
+    level: 2
+    text: "SBR → context マッピング早見表"
+
+  - type: prose
+    body: |
+      実戦で迷わないための SBR → context クイックリファレンスです。
+
+      SBR ≤ 25（終盤、push 圏直前）:
+        SRP → mtt_25bb（α=+0.06、β=+0.31、WRMSE=15.46%）
+        3BP → mtt_3bp_25bb（SPR≈2.7、WRMSE=18.65%）
+
+      SBR 26〜70（中盤、バブル前後）:
+        SRP → mtt_50bb（α=-0.04、β=+0.19、WRMSE=12.96%）
+        3BP → mtt_3bp_50bb（SPR≈5.5、WRMSE=8.62%）
+
+      SBR 71〜150（序盤〜中盤）:
+        SRP → mtt_100bb（α=+0.15、β=+0.09、WRMSE=21.95%）
+        3BP → mtt_3bp_100bb（SPR≈11、WRMSE=13.37%）
+
+      SBR 151+（深スタック、FT 直後など）:
+        SRP → mtt_200bb（α=-0.04、β=+0.11、WRMSE=14.10%）
+        3BP → mtt_3bp_100bb で代用（200bb 専用 3BP context なし）
+
+      Turn（2nd barrel 検討時）:
+        フロップの depth context の _turn_btn 版を使います。
+        mtt_25bb → mtt_25bb_turn_btn（α=-0.41、WRMSE=7.02%）
+        mtt_50bb → mtt_50bb_turn_btn（α=-0.37、WRMSE=14.44%）
+        mtt_100bb → mtt_100bb_turn_btn（α=-0.26、WRMSE=26.95%）
+        cash → cash_100bb_turn_btn（α=-0.37、WRMSE=16.11%）
+
+  - type: heading
+    level: 2
+    text: "Tier 0: cash_100bb——基準 context"
+
+  - type: prose
+    body: |
+      cash_100bb は UCBS-v2 の設計基準 context です。
+      α=0.00（均等）で、他の全 context はここからの偏差として理解できます。
+      polarize_enabled=True（6 条件を満たすボードで 116% 適用）。
+      mono_conf_down=True（cash のみの Confidence down 例外ルール）。
+      WRMSE=16.43%（SRP 系では中程度の精度）。
+
+  - type: heading
+    level: 2
+    text: "Tier 1: MTT depth 4 種——25/50/100/200bb の差"
+
+  - type: prose
+    body: |
+      4 つの MTT SRP depth context の特徴を覚えます。
+
+      mtt_25bb（終盤、push 圏直前）:
+      α=+0.06（わずかに wide）、β=+0.31（強い役の lift が最大）。
+      SB lift=-0.10（BTN より 10pt 低い）、wide lift=+0.13（CO/HJ/UTG）。
+      WRMSE=15.46%。終盤ほどストロングハンドが価値を持ちやすく β が高い。
+
+      mtt_50bb（中盤、最高精度 SRP）:
+      α=-0.04（わずかに tight）、β=+0.19。
+      SB lift=-0.29（SB は大幅マイナス、全 Tier 1 で最大）、wide lift=0.00（位置均等化）。
+      WRMSE=12.96%（SRP 系最高精度）。バブル前の主戦場。
+
+      mtt_100bb（序盤、注意）:
+      α=+0.15（全 context 中突出して wide）、β=+0.09。
+      wide lift=+0.17（序盤最高の wide lift）。
+      WRMSE=21.95%（精度低め）。「信頼度低め」で使用し、他の指標も参考にする。
+
+      mtt_200bb（深スタック、FT 直後など）:
+      α=-0.04（50bb と同じ）、β=+0.11。
+      SB lift=-0.34（全 Tier 1 で最大の SB 抑制）、wide lift=+0.01（ほぼなし）。
+      WRMSE=14.10%（信頼性良好）。
+
+  - type: heading
+    level: 3
+    text: "depth 系列の発見——α と β の変動"
+
+  - type: prose
+    body: |
+      depth 系列を比較すると 3 つの発見があります。
+
+      発見1「α の異常値（mtt_100bb）」:
+      mtt_100bb の α=+0.15 は突出して高く、MTT6mSimple の wide cbet 特性を反映しています。
+      この wide cbet は solver の設定（33%/116% の 2 択）による特性で、
+      実際の GTO とはやや乖離があります。WRMSE 21.95% の主要因です。
+
+      発見2「β の depth 依存（浅ほど高い）」:
+      強い役の追加 lift（β）は depth が浅いほど高くなります（25bb: +0.31 → 200bb: +0.11）。
+      浅いスタックでは top_pair 以上の役が「コミット圏に入りやすい」ため、
+      より積極的に bet できる根拠があります。
+
+      発見3「mtt_50bb と mtt_200bb の構造的類似」:
+      α（-0.04）と wide lift（≈0）が同じ値です。
+      SB lift の強さが異なる（-0.29 vs -0.34）だけで、全体構造が似ています。
+      「50bb と 200bb は兄弟 context」と覚えると整理しやすいです。
+
+  - type: heading
+    level: 2
+    text: "Tier 3: 3BP IP 4 種——SPR が支配する世界"
+
+  - type: prose
+    body: |
+      3BP context では SBR でなく SPR で選択します。
+      3BP のフロップポットは SRP より大きい（3bet サイズ分）ため、
+      同じ SBR でも 3BP の SPR は SRP の 3〜4 分の 1 程度になります。
+
+      mtt_3bp_20bb（SPR≈2.5）:
+      低 SPR でコミット寄り。trash=-0.03（ほぼ bet）、slowplay=-0.40。
+      off_premium=-0.04（オーバーペアは特別扱いなし）。
+      WRMSE=23.08%（精度低め）。
+
+      mtt_3bp_25bb（SPR≈2.7）:
+      slowplay=-0.66（全 context 中最大の slowplay 抑制）。
+      セット/ツーペアはほぼ全力でチェック（SPR 圧縮でオールインを誘う戦略）。
+      WRMSE=18.65%。
+
+      mtt_3bp_50bb（SPR≈5.5）:
+      WRMSE=8.62%（全 13 context 中最高精度）。
+      premium=+0.14（complete polarize の始まり）、trash=-0.45。
+      「SPR≈5 が linear vs polarize の境界」となるのがこの context です。
+
+      mtt_3bp_100bb（SPR≈11）:
+      premium=+0.20（最大 premium lift）、trash=-0.48（最大 trash 抑制）。
+      完全な polarize（ナッツだけ bet、空気は check）。
+      WRMSE=13.37%（信頼性良好）。
+
+  - type: heading
+    level: 3
+    text: "「SPR≤3 は linear, SPR≥5 は polarize」の判断木"
+
+  - type: prose
+    body: |
+      3BP での context 選択に迷ったとき、SPR を目安に 2 種類の戦略で考えます。
+
+      SPR ≤ 3（linear range の middle bet 多）:
+      セットも trash もそれほど差がない頻度で bet します（mtt_3bp_20bb）。
+      ただし 25bb（SPR≈2.7）は slowplay の抑制が極端に強い例外です。
+
+      SPR ≥ 5（polarize が始まる）:
+      premium が上昇し、trash が極端に下がります（mtt_3bp_50bb、mtt_3bp_100bb）。
+      「ナッツで大きく、空気は check」という教科書的 polarize が成立します。
+
+  - type: heading
+    level: 2
+    text: "Tier 4: Turn cbet 4 context——α≈-0.35 の意味"
+
+  - type: prose
+    body: |
+      Turn context は Tier 1 の各 context に α シフト（≈-0.35）を適用した variant です。
+      ターンでは全体的に bet 頻度が約 35pt 低下するため、この大きなマイナスになります。
+
+      全 Turn context の共通特性:
+      - α ≈ -0.35〜-0.41（フロップ比で全体 bet 率が約 35pt 低下）
+      - β ≈ 0（強い役への追加 lift が消える）
+      - SB lift = 0（ポジション補正なし）
+      - ax_range_bet = 0（A-x range bet なし）
+
+      フロップ context を選んだ後、Turn に進むならその depth のまま Tier 4 を使います。
+      mtt_25bb フロップ → mtt_25bb_turn_btn（α=-0.41、WRMSE=7.02%）
+      mtt_50bb フロップ → mtt_50bb_turn_btn（α=-0.37、WRMSE=14.44%）
+      mtt_100bb フロップ → mtt_100bb_turn_btn（α=-0.26、WRMSE=26.95%）
+      cash_100bb フロップ → cash_100bb_turn_btn（α=-0.37、WRMSE=16.11%）
+
+      Turn context の「β≈0」は重要なポイントです。
+      フロップでは top_pair（CBS=7）以上に β の追加 lift があり、
+      25bb なら +0.31 も加算されました。
+      ターンでは強い役への追加 lift が廃止されるため、
+      「役の強さよりもボード変化との相性」が支配的になります。
+
+  - type: heading
+    level: 2
+    text: "SPR 計算——SBR から context を決める実際の流れ"
+
+  - type: prose
+    body: |
+      実戦での SBR → context の流れを整理します。
+
+      SRP の場合:
+      フロップポット ≈ 5.5BB（BTN 2.5BB open + BB call 2.5BB + 1BB アンテ）。
+      SPR = 実効スタック ÷ 5.5BB。
+      SBR=25 → 実効 50BB → SPR ≈ 9.1 → context: mtt_25bb。
+      SBR=50 → 実効 100BB → SPR ≈ 18.2 → context: mtt_50bb。
+      SBR=100 → 実効 200BB → SPR ≈ 36.4 → context: mtt_100bb。
+      SBR=200 → 実効 400BB → SPR ≈ 72.7 → context: mtt_200bb。
+
+      3BP の場合:
+      3BP pot ≈ 18BB（open 2.5BB + 3bet 8BB + call 8BB + 1BB アンテ）。
+      SBR=25 → 実効 42BB（50-8=42） → SPR ≈ 42/18 ≈ 2.3 → context: mtt_3bp_25bb。
+      SBR=50 → 実効 92BB（100-8=92） → SPR ≈ 92/18 ≈ 5.1 → context: mtt_3bp_50bb。
+      SBR=100 → 実効 192BB → SPR ≈ 192/18 ≈ 10.7 → context: mtt_3bp_100bb。
+
+  - type: examples
+    framework: full
+    title: "context 選択と計算例（5 ケース）"
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        board: "Ks7d2c"
+        scenario: BTN
+        context: mtt_25bb
+      - hand: top_pair
+        draw: no_draw
+        board: "Ks7d2c"
+        scenario: BTN
+        context: mtt_50bb
+      - hand: top_pair
+        draw: no_draw
+        board: "Ks7d2c"
+        scenario: BTN
+        context: mtt_100bb
+      - hand: overpair
+        draw: no_draw
+        board: "9c7d5s"
+        scenario: BTN
+        context: mtt_3bp_25bb
+      - hand: top_pair
+        draw: no_draw
+        board: "Ks7d2c"
+        scenario: BTN
+        context: mtt_25bb_turn_btn
+
+  - type: prose
+    body: |
+      上記の計算例から、同じハンド・ボードでも context によって大きく頻度が変わることがわかります。
+      mtt_25bb: β=+0.31 が top_pair（CBS=7 ≥ 7）に加算されるため高頻度。
+      mtt_50bb: α=-0.04 と SB lift の影響（BTN なら +0）で mtt_25bb と異なる値。
+      mtt_100bb: α=+0.15 の「wide cbet 特性」が全体を押し上げます。
+      mtt_3bp_25bb: 3BP の slowplay 補正が強く働き、セットは全力 check になります。
+      mtt_25bb_turn_btn: α=-0.41 のシフトで全体が大幅に低下します。
+
+      context 選択を間違えると頻度が大きくズレます。
+      実戦ではまず「SRP か 3BP か Turn か」を確認し、次に depth を特定します。

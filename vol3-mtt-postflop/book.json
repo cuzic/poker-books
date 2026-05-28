@@ -1,0 +1,52 @@
+{
+  "title": "迷わないポーカー Vol3: MTT Postflop + Full UCBS-v2",
+  "titleRomaji": "Mayowanai Poker Vol3: MTT Postflop + Full UCBS-v2",
+  "subtitle": "13 context × 5 軸で全 depth/SPR を網羅",
+  "author": "川西智也",
+  "language": "ja",
+  "identifier": "urn:uuid:e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b",
+  "publisher": "川西智也",
+  "description": "MTT 全 depth/SPR をカバーする精緻な postflop 判断式。\n\nFull UCBS-v2 (HP + DP + Confidence + Size + Context の 5 軸、13 context) と Full DCBS (4 context × HP × kicker offset) を 16 章で完全展開。MTT 25/50/100/200bb のフロップ cbet、3-bet pot SPR シリーズ (20/25/50/100bb)、ターン 2nd barrel、BB defense までを context 別パラメータで網羅。WRMSE は最高 7.02% (mtt_25bb_turn_btn)、3bp_50bb で 8.62%、平均 約 16%。\n\n巻末に 13 context パラメータ完全表 + Full DCBS 早見表 + 5 軸チートシートの 3 付録を収録。Vol2 (Cash Light) の知識を MTT 全 depth に拡張する書。",
+  "cover": "chapters/images/cover.jpg",
+  "kdp": {
+    "keywords": [
+      "MTT フロップ",
+      "ポーカー トーナメント ポストフロップ",
+      "ICM フロップ",
+      "MTT コミットメント",
+      "ポーカー ショートスタック ポストフロップ",
+      "MTT バブル フロップ",
+      "テキサスホールデム トーナメント 戦略",
+      "ポーカー 暗算 フォーミュラ",
+      "MTT SPR コミット",
+      "ポーカー トーナメント 中上級"
+    ],
+    "categories": [
+      "Kindle Store > 趣味・実用 > ゲーム",
+      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム",
+      "Kindle Store > ノンフィクション > 科学・テクノロジー"
+    ],
+    "bisac": [
+      "GAM004000",
+      "GAM002000",
+      "SPO047000"
+    ],
+    "bisacLabels": [
+      "GAMES & ACTIVITIES / Card Games / Poker",
+      "GAMES & ACTIVITIES / Card Games / General",
+      "SPORTS & RECREATION / Gambling"
+    ],
+    "targetAudience": "MTTプリフロップ編を読了した中級者。キャッシュpostflop（vol2）の式を知っている読者が前提。",
+    "pageReadDirection": "ltr",
+    "aiContentDisclosure": {
+      "textAssisted": true,
+      "imageGenerated": true,
+      "note": "Claude Code（Anthropic）を執筆補助ツールとして使用。最終的な編集・監修は著者が実施。"
+    },
+    "pricing": {
+      "currency": "JPY",
+      "listPrice": 980,
+      "kdpSelect": true
+    }
+  }
+}

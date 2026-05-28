@@ -1,0 +1,83 @@
+volume: "Vol2"
+chapter_num: "01"
+title: "CBS の式: HP + DP (テスト)"
+
+summary: |
+  CBS (Combined Board Score) は HP (Hand Power) と DP (Draw Power) の和です。
+
+sections:
+  - type: heading
+    level: 2
+    text: "HP テーブル"
+
+  - type: prose
+    body: |
+      HP は役の強さを 6 段階に整理した数値です。
+
+  - type: table
+    template: hp_buckets
+
+  - type: heading
+    level: 2
+    text: "DP テーブル"
+
+  - type: table
+    template: dp_table
+
+  - type: heading
+    level: 2
+    text: "計算例"
+
+  - type: examples
+    framework: light
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        context: cash
+      - hand: low_pair
+        draw: no_draw
+        context: mtt_short
+      - hand: ace_high
+        draw: oesd
+        context: 3bp
+
+  - type: heading
+    level: 2
+    text: "25 セル表"
+
+  - type: table
+    template: 25cell_table
+
+  - type: heading
+    level: 2
+    text: "Full UCBS 計算例"
+
+  - type: examples
+    framework: full
+    cases:
+      - hand: top_pair
+        board: "Ks7d2c"
+        scenario: BTN
+        context: cash_100bb
+
+  - type: heading
+    level: 2
+    text: "DCBS 例"
+
+  - type: examples
+    framework: dcbs
+    cases:
+      - hand: ace_high
+        context: mtt_25bb
+      - hand: top_pair
+        context: cash_100bb
+
+  - type: table
+    template: dcbs_table
+
+  - type: heading
+    level: 2
+    text: "Full context パラメータ表"
+
+  - type: table
+    template: full_context_params

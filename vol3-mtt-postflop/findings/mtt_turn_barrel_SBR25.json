@@ -1,0 +1,356 @@
+{
+  "scenario": "SRP BTN vs BB (Middle-Deep(SBR25))",
+  "sbr": "25",
+  "results": [
+    {
+      "type": "型1_ハイドライ",
+      "flop": "Ks7d2c",
+      "desc": "K高・レインボー",
+      "cbet_code": "R1.9",
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "4h",
+          "board4": "Ks7d2c4h",
+          "ip_barrel": {
+            "total_bet_pct": 1.2,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 30.1,
+            "fold_pct": 39.1,
+            "raise_pct": 30.8
+          }
+        },
+        {
+          "tag": "TA+_2nd",
+          "card": "7h",
+          "board4": "Ks7d2c7h",
+          "ip_barrel": {
+            "total_bet_pct": 78.0,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 56.8,
+            "fold_pct": 43.2,
+            "raise_pct": 0.0
+          }
+        },
+        {
+          "tag": "TA-_OC",
+          "card": "Ah",
+          "board4": "Ks7d2cAh",
+          "ip_barrel": {
+            "total_bet_pct": 0.0,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 38.0,
+            "fold_pct": 36.4,
+            "raise_pct": 25.6
+          }
+        }
+      ]
+    },
+    {
+      "type": "型2_ハイウェット",
+      "flop": "Qh8d3s",
+      "desc": "Q高・2トーン",
+      "cbet_code": "R1.9",
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "5c",
+          "board4": "Qh8d3s5c",
+          "ip_barrel": {
+            "total_bet_pct": 3.8,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 45.6,
+            "fold_pct": 32.5,
+            "raise_pct": 21.9
+          }
+        },
+        {
+          "tag": "TA+_2nd",
+          "card": "8h",
+          "board4": "Qh8d3s8h",
+          "ip_barrel": {
+            "total_bet_pct": 96.1,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 63.7,
+            "fold_pct": 36.3,
+            "raise_pct": 0.0
+          }
+        },
+        {
+          "tag": "TA-_OC",
+          "card": "Ac",
+          "board4": "Qh8d3sAc",
+          "ip_barrel": {
+            "total_bet_pct": 0.0,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 28.8,
+            "fold_pct": 27.2,
+            "raise_pct": 44.0
+          }
+        }
+      ]
+    },
+    {
+      "type": "型3_ロードライ",
+      "flop": "Jd7s5c",
+      "desc": "J中・レインボー",
+      "cbet_code": "R1.9",
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "2h",
+          "board4": "Jd7s5c2h",
+          "ip_barrel": {
+            "total_bet_pct": 0.4,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 32.7,
+            "fold_pct": 29.6,
+            "raise_pct": 37.7
+          }
+        },
+        {
+          "tag": "TA+_2nd",
+          "card": "5h",
+          "board4": "Jd7s5c5h",
+          "ip_barrel": {
+            "total_bet_pct": 82.0,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 61.2,
+            "fold_pct": 30.9,
+            "raise_pct": 7.9
+          }
+        },
+        {
+          "tag": "TA-_OC",
+          "card": "Kc",
+          "board4": "Jd7s5cKc",
+          "ip_barrel": {
+            "total_bet_pct": 0.0,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 21.0,
+            "fold_pct": 25.4,
+            "raise_pct": 53.6
+          }
+        }
+      ]
+    },
+    {
+      "type": "型4_ローウェット",
+      "flop": "Th9s8d",
+      "desc": "低連携・2トーン",
+      "cbet_code": "R1.9",
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "2c",
+          "board4": "Th9s8d2c",
+          "ip_barrel": {
+            "total_bet_pct": 0.7,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 46.0,
+            "fold_pct": 25.6,
+            "raise_pct": 28.5
+          }
+        },
+        {
+          "tag": "TA+_board",
+          "card": "9h",
+          "board4": "Th9s8d9h",
+          "ip_barrel": {
+            "total_bet_pct": 15.3,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 70.6,
+            "fold_pct": 25.4,
+            "raise_pct": 4.1
+          }
+        },
+        {
+          "tag": "TA-_OC",
+          "card": "Ac",
+          "board4": "Th9s8dAc",
+          "ip_barrel": {
+            "total_bet_pct": 0.0,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 27.8,
+            "fold_pct": 22.3,
+            "raise_pct": 49.9
+          }
+        }
+      ]
+    },
+    {
+      "type": "型5_モノトーン",
+      "flop": "Ah9h5h",
+      "desc": "A高モノトーン",
+      "cbet_code": "R1.9",
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "2c",
+          "board4": "Ah9h5h2c",
+          "ip_barrel": {
+            "total_bet_pct": 3.5,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 45.9,
+            "fold_pct": 29.4,
+            "raise_pct": 24.7
+          }
+        },
+        {
+          "tag": "TA+_4th",
+          "card": "Kh",
+          "board4": "Ah9h5hKh",
+          "ip_barrel": {
+            "total_bet_pct": 77.5,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 61.0,
+            "fold_pct": 39.0,
+            "raise_pct": 0.0
+          }
+        },
+        {
+          "tag": "TA-_pair",
+          "card": "5c",
+          "board4": "Ah9h5h5c",
+          "ip_barrel": {
+            "total_bet_pct": 31.8,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 69.8,
+            "fold_pct": 28.0,
+            "raise_pct": 2.3
+          }
+        }
+      ]
+    },
+    {
+      "type": "型6_ペア高",
+      "flop": "AsAcKd",
+      "desc": "AAKペアボード",
+      "cbet_code": "R1.9",
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "2h",
+          "board4": "AsAcKd2h",
+          "ip_barrel": {
+            "total_bet_pct": 1.6,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 42.6,
+            "fold_pct": 41.3,
+            "raise_pct": 16.1
+          }
+        },
+        {
+          "tag": "TA+_mid",
+          "card": "Qh",
+          "board4": "AsAcKdQh",
+          "ip_barrel": {
+            "total_bet_pct": 2.4,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 32.6,
+            "fold_pct": 46.8,
+            "raise_pct": 20.6
+          }
+        },
+        {
+          "tag": "TA-_mid",
+          "card": "9h",
+          "board4": "AsAcKd9h",
+          "ip_barrel": {
+            "total_bet_pct": 2.9,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 52.4,
+            "fold_pct": 35.6,
+            "raise_pct": 12.0
+          }
+        }
+      ]
+    },
+    {
+      "type": "型7_ペア低",
+      "flop": "7s7d2c",
+      "desc": "77低ペアボード",
+      "cbet_code": "R1.9",
+      "turns": [
+        {
+          "tag": "blank",
+          "card": "3h",
+          "board4": "7s7d2c3h",
+          "ip_barrel": {
+            "total_bet_pct": 0.0,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 45.6,
+            "fold_pct": 26.6,
+            "raise_pct": 27.8
+          }
+        },
+        {
+          "tag": "TA+_mid",
+          "card": "8h",
+          "board4": "7s7d2c8h",
+          "ip_barrel": {
+            "total_bet_pct": 0.0,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 74.7,
+            "fold_pct": 19.3,
+            "raise_pct": 6.0
+          }
+        },
+        {
+          "tag": "TA-_OC",
+          "card": "Ah",
+          "board4": "7s7d2cAh",
+          "ip_barrel": {
+            "total_bet_pct": 1.3,
+            "bet_code": "R4.75"
+          },
+          "oop_defense": {
+            "call_pct": 58.4,
+            "fold_pct": 30.5,
+            "raise_pct": 11.0
+          }
+        }
+      ]
+    }
+  ]
+}

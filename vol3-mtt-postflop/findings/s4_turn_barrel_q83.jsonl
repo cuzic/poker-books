@@ -1,0 +1,8 @@
+{"board": "Qh8d3s", "turn": "Ah", "label": "A (オーバーカード最高)", "actions": {"X": 100.0, "R1.6": 0.0, "R4": 0.0, "RAI": 0.0}, "bet_pct": 0.0}
+{"board": "Qh8d3s", "turn": "Kc", "label": "K (オーバーカード)", "actions": {"X": 99.8, "R1.6": 0.2, "R4": 0.0, "RAI": 0.0}, "bet_pct": 0.2}
+{"board": "Qh8d3s", "turn": "Qd", "label": "Q (ボードペア)", "actions": {"X": 94.9, "R1.6": 4.8, "R4": 0.3, "RAI": 0.0}, "bet_pct": 5.1}
+{"board": "Qh8d3s", "turn": "8c", "label": "8 (ボードペア 中)", "actions": {"X": 27.3, "R1.6": 53.4, "R4": 19.3, "RAI": 0.0}, "bet_pct": 72.7}
+{"board": "Qh8d3s", "turn": "3d", "label": "3 (ボードペア 低)", "actions": {"X": 21.0, "R1.6": 58.7, "R4": 20.3, "RAI": 0.0}, "bet_pct": 79.0}
+{"board": "Qh8d3s", "turn": "5h", "label": "5 (完全ブランク)", "actions": {"X": 91.8, "R1.6": 6.7, "R4": 1.5, "RAI": 0.0}, "bet_pct": 8.2}
+{"board": "Qh8d3s", "turn": "Js", "label": "J (オーバーカード中)", "actions": {"X": 99.9, "R1.6": 0.1, "R4": 0.0, "RAI": 0.0}, "bet_pct": 0.1}
+{"board": "Qh8d3s", "turn": "2c", "label": "2 (完全ブランク低)", "actions": {"X": 97.7, "R1.6": 2.2, "R4": 0.1, "RAI": 0.0}, "bet_pct": 2.3}

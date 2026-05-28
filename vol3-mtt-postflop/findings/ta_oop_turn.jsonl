@@ -1,0 +1,12 @@
+{"role": "OOP_SB", "board": "型1_K72", "turn": "7s", "label": "2ndペア", "bet_pct": 23.5, "check_pct": 76.4}
+{"role": "OOP_SB", "board": "型1_K72", "turn": "2s", "label": "3rdペア", "bet_pct": 29.9, "check_pct": 70.1}
+{"role": "OOP_SB", "board": "型1_K72", "turn": "As", "label": "OC高", "bet_pct": 24.3, "check_pct": 75.7}
+{"role": "OOP_SB", "board": "型1_K72", "turn": "Jd", "label": "ブランク", "bet_pct": 29.3, "check_pct": 70.7}
+{"role": "OOP_SB", "board": "型2_Q83", "turn": "8c", "label": "2ndペア", "bet_pct": 42.2, "check_pct": 57.8}
+{"role": "OOP_SB", "board": "型2_Q83", "turn": "3d", "label": "3rdペア", "bet_pct": 32.9, "check_pct": 67.0}
+{"role": "OOP_SB", "board": "型2_Q83", "turn": "Ah", "label": "OC高", "bet_pct": 31.3, "check_pct": 68.7}
+{"role": "OOP_SB", "board": "型2_Q83", "turn": "Kc", "label": "OC", "bet_pct": 26.0, "check_pct": 74.0}
+{"role": "OOP_SB", "board": "型4_T98", "turn": "7h", "label": "低接続", "bet_pct": 32.2, "check_pct": 67.8}
+{"role": "OOP_SB", "board": "型4_T98", "turn": "Jc", "label": "直結", "bet_pct": 14.9, "check_pct": 85.1}
+{"role": "OOP_SB", "board": "型4_T98", "turn": "As", "label": "OC高", "bet_pct": 57.4, "check_pct": 42.6}
+{"role": "OOP_SB", "board": "型4_T98", "turn": "2c", "label": "ブランク", "bet_pct": 44.8, "check_pct": 55.2}

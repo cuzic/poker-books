@@ -1,0 +1,44 @@
+{
+  "title": "迷わないポーカー プリフロップ完全版",
+  "titleRomaji": "Mayowanai Poker: Preflop Complete Edition",
+  "subtitle": "Vol1: Cash & MTT を4係数で制す",
+  "author": "川西智也",
+  "language": "ja",
+  "identifier": "urn:uuid:a1b2c3d4-e5f6-7a8b-9c0d-e1f2a3b4c5d6",
+  "publisher": "川西智也",
+  "description": "キャッシュゲームもトーナメントも、たった4つの係数から導けるスコア式でプリフロップ判断を完全攻略。\n\n169ハンド × ポジション × コンテキストをすべて「Score = H + L + pair_bonus + suit_bonus − gap + a_bonus」の一式で統一。GTO データ（全シナリオ 94%+ 精度）に基づく係数設計で、Cash と MTT の違いも pair_bonus の差（+6）だけで説明できます。\n\nSBR別閾値テーブル、ICMフェーズ補正、9max補正まですべて網羅。20問のドリルと1枚チートシートで式を実戦レベルまで定着させる構成です。",
+  "cover": "chapters/images/cover.jpg",
+  "chapters": [
+    "chapters/00-introduction.md",
+    "chapters/01-score-formula.md",
+    "chapters/02-thresholds.md",
+    "chapters/03-cash-rfi.md",
+    "chapters/04-cash-defense.md",
+    "chapters/05-cash-multiway.md",
+    "chapters/06-mtt-coefficients.md",
+    "chapters/07-mtt-sbr.md",
+    "chapters/08-mtt-icm.md",
+    "chapters/09-mtt-9max.md",
+    "chapters/10-drills.md",
+    "chapters/11-boundary-hands.md",
+    "chapters/appendix-cheatsheet.md"
+  ],
+  "kdp": {
+    "keywords": [
+      "テキサスホールデム プリフロップ",
+      "ポーカー レンジ表",
+      "ポーカー 計算式",
+      "MTT トーナメント プリフロップ",
+      "GTO プリフロップ",
+      "ポーカー SBR ICM",
+      "ポジション ポーカー",
+      "オープンレイズ ポーカー",
+      "3ベット ポーカー",
+      "プリフロップ 暗算"
+    ],
+    "categories": [
+      "Kindle Store > 趣味・実用 > ゲーム",
+      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム"
+    ]
+  }
+}

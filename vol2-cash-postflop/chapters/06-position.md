@@ -1,0 +1,159 @@
+# 第06章 Position 補正 — SB と BTN の差を数値で理解する
+
+Light UCBS v2 では pos_lift (ポジション補正) を 4 値で管理します。
+BTN を基準 (0pt) に SB は -8pt、CO/HJ は +10pt、UTG は 0pt です。
+cash の標準 context (BTN vs BB) ではそのまま 25 セル表を使えますが、
+SB から cbet する場合は freq から 8pt を引いて判断します。
+詳細なドンクベット・プローブ戦略は Vol3 へ誘導します。
+
+## ポジション補正の直感
+
+ポーカーで「ポジションは最強の武器」と言われます。
+IP (In Position) のプレイヤーは相手のアクションを見てから行動できるため、情報優位があります。
+
+Light UCBS v2 ではこの有利不利を **pos_lift** (ポジション補正) という数値で定量化しました。
+BTN を基準 (0pt) に置き、OOP の SB は -8pt の不利、ワイドレンジの CO/HJ は +10pt の有利です。
+補正は 25 セル表の freq に直接加算します。
+
+## pos_lift — 4 値の定義
+
+| ポジション | pos_lift | 理由 |
+|---|---:|---|
+| BTN | 0pt | 基準。Light UCBS v2 の 25 セル表がそのまま適用 |
+| SB | -8pt | OOP 不利。守備コストが増加 |
+| CO / HJ | +10pt | ワイドオープンレンジからの cbet → 信頼度 up |
+| UTG | 0pt | タイトオープン。オフセット不要 |
+
+freq の補正式:
+
+```
+補正後 freq = LIGHT_V2_BASE[context][band] + pos_lift
+```
+
+例: SB から cash context の air バンドで cbet する場合。
+base freq = 45%、pos_lift = -8pt。
+補正後 freq = 45% - 8% = **37%** → チェック推奨。
+
+## cash 標準 context の使い方
+
+Vol2 の大半は「BTN ip-cbet vs BB」が舞台です。
+BTN の場合、pos_lift = 0 なので LIGHT_V2_BASE["cash"][band] をそのまま参照し、
+low_pair offset (-10pt) だけ気をつければ終わりです。
+
+6 ステップフローの Step 6 で追加補正なしに判断できるため、最も簡単なケースです。
+
+| バンド | cash base | BTN (pos_lift=0) 後 |
+|---|---:|---:|
+| air | 45% | 45% |
+| weak | 40% | 40% |
+| mid | 40% | 40% |
+| strong | 60% | 60% |
+| nut | 60% | 60% |
+
+## SB cbet の注意点
+
+SB は OOP 不利を数値化した **-8pt** を 25 セル表に加えます。
+
+SB からの cbet は「バリューは打ち、ブラフは慎重に」が基本方針です。
+
+| バンド | cash base | SB 補正後 | 判断 |
+|---|---:|---:|---|
+| air | 45% | 37% | チェック推奨 |
+| weak | 40% | 32% | チェック推奨 |
+| mid | 40% | 32% | チェック推奨 |
+| strong | 60% | 52% | ベット継続 |
+| nut | 60% | 52% | ベット継続 |
+
+strong と nut は -8pt でも 52% を超えるため、依然としてベット推奨です。
+air と weak は 50% を下回るため、SB からのブラフ cbet は控えます。
+
+**型1/2/6 (SB 有利ボード) の例外**: ナッツアドバンテージが高いボードでは、
+型の有利が pos_lift の不利を相殺することがあります。
+その場合は strong / nut のベットを維持してください。
+
+## CO/HJ の wide lift
+
+CO/HJ は BTN より狭いが UTG より広いレンジでオープンします。
+ワイドレンジでオープン → フロップでのヒット率が多様 → air でも一定頻度でベットが GTO です。
+これが **+10pt** の数学的根拠です (GTO シミュレーション由来)。
+
+| バンド | cash base | CO/HJ 補正後 | 判断 |
+|---|---:|---:|---|
+| air | 45% | 55% | ベット推奨に移動 |
+| weak | 40% | 50% | ちょうど境界 |
+| mid | 40% | 50% | ちょうど境界 |
+| strong | 60% | 70% | ベット推奨 |
+| nut | 60% | 70% | ベット推奨 |
+
+air バンドが 55% でベット推奨に移動するのは反直感的ですが、
+「ワイドレンジには空振りが多く、ブラフのベット頻度も高くて良い」
+という GTO の結論を反映しています。
+
+## UTG の特殊性
+
+UTG は pos_lift = 0 で BTN と同じ補正ですが、開始レンジの質が異なります。
+
+UTG はタイトなオープンレンジのため、ヒットした場合の強度が高くなります。
+miss した場合の cbet ブラフが逆に読まれやすいため、slowplay 比率が増えます。
+
+pos_lift は 0 であっても、UTG からのベットは「強いハンドのシグナル」と解釈されやすいです。
+Light UCBS v2 ではこの効果を数値化せず、Vol3 の上級トピックに委ねます。
+
+## 計算例 — ポジション別の判断
+
+### ポジション補正の適用例 (cash context)
+
+**例**: Aハイ (ace_high) + ドローなし on Cash 100bb
+
+1. HP = **2** (ace_high のバケット)
+2. DP = **0** (ドローなし)
+3. CBS = HP + DP = 2 + 0 = **2**
+4. CBS バンド: エアー (CBS 0-2)
+5. base = LIGHT_V2_BASE[cash][air] = **45%**
+→ **連続 bet 頻度 ≈ 45%**
+
+**例**: トップペア (top_pair) + ドローなし on Cash 100bb
+
+1. HP = **7** (top_pair のバケット)
+2. DP = **0** (ドローなし)
+3. CBS = HP + DP = 7 + 0 = **7**
+4. CBS バンド: 強ペア (CBS 7-8)
+5. base = LIGHT_V2_BASE[cash][strong] = **60%**
+→ **連続 bet 頻度 ≈ 60%**
+
+**例**: セカンドペア (second_pair) + フラッシュドロー on Cash 100bb
+
+1. HP = **5** (second_pair のバケット)
+2. DP = **2** (フラッシュドロー)
+3. CBS = HP + DP = 5 + 2 = **7**
+4. CBS バンド: 強ペア (CBS 7-8)
+5. base = LIGHT_V2_BASE[cash][strong] = **60%**
+→ **連続 bet 頻度 ≈ 60%**
+
+**例**: オーバーペア (overpair) + ドローなし on Cash 100bb
+
+1. HP = **7** (overpair のバケット)
+2. DP = **0** (ドローなし)
+3. CBS = HP + DP = 7 + 0 = **7**
+4. CBS バンド: 強ペア (CBS 7-8)
+5. base = LIGHT_V2_BASE[cash][strong] = **60%**
+→ **連続 bet 頻度 ≈ 60%**
+
+## 深掘りは Vol3 へ
+
+ドンクベット・プローブ・SB vs BB の細かいレンジ構成は Vol3 (Full UCBS-v2) のトピックです。
+
+Vol2 の目標は「BTN vs BB + pos_lift 4 値で 95% の状況を正確に判断すること」です。
+まず BTN baseline を体得し、SB/CO-HJ の補正を追加するステップで学びましょう。
+
+**Light UCBS v2 の設計思想**: BTN baseline で 80% の状況をカバーし、
+SB / CO-HJ の 2 補正を加えることで 95% をカバーします。
+残りの 5% (マルチウェイ / ドンク / SB vs BB 攻防) は Vol3 へ。
+
+## まとめ
+
+- cash 標準 (BTN vs BB) では pos_lift = 0 → 25 セル表をそのまま使う。
+- SB cbet: pos_lift = -8pt を freq に足す。air / weak はチェック方向に移動。
+- CO/HJ cbet: pos_lift = +10pt → mid バンドも 50% 近辺でベット候補に。
+- UTG cbet: pos_lift = 0 だが、レンジ強度が高いため slowplay 比率が増える。
+- 詳細なポジション戦略 (ドンクベット / probe / SB vs BB 等) は Vol3 へ。

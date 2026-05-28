@@ -1,0 +1,222 @@
+chapter_num: 2
+slug: 02-cbs-system
+title: "CBSシステム——フロップCBet判断を暗算で決める"
+output: "chapters/02-cbs-system.md"
+
+summary: |
+  CBS（CBet Score）はHP（ハンドポテンシャル）とDP（ドロウポテンシャル）の和で、
+  フロップでベットするかチェックするかを一発で決める数値です。
+  BTNはCBS≥5、SB/LIMPはCBS≥7がベット方向の閾値です。
+  閾値からの距離と板の型でコンフィデンス（HIGH/MID/LOW）が決まり、具体的なベット頻度を導きます。
+
+sections:
+  - type: text
+    content: |
+      ## 2-1　CBSシステムとは
+
+      CBSシステムはフロップCBetの判断を1つの数値で行うための仕組みです。
+
+      ```
+      CBS = HP + DP
+      ```
+
+      - **HP（Hand Potential）**: 手の種類から決まる固定値
+      - **DP（Draw Potential）**: ドロー種類から決まる加算値
+
+      計算後、**閾値**と比較します。
+
+      | ポジション | 閾値 | 意味 |
+      |---------|------|------|
+      | BTN（IP） | CBS≥5 | これ以上なら基本ベット方向 |
+      | SB（OOP） | CBS≥7 | OOPのため閾値が高い |
+      | LIMP     | CBS≥7 | SBと同じ閾値 |
+
+      閾値を超えた手がすべて高頻度でCBetするわけではありません。
+      超えた距離（コンフィデンス）と板の型によって、実際のベット頻度が変わります。
+
+  - type: hp_table
+    title: "HPテーブル（GTO実測値付き）"
+
+  - type: text
+    content: |
+      ## 2-2　DPテーブル
+
+      ドローの強さを0〜3の値で表します。
+
+      | ドロー種別 | DP | 説明 |
+      |---------|----|----|
+      | no_draw | 0 | ドローなし |
+      | onecard_bdfd | 0 | バックドアFD（1枚） |
+      | twocards_bdfd | 0 | バックドアFD（2枚） |
+      | gutshot | 1 | 腸直線ドロー |
+      | flush_draw | 2 | フラッシュドロー |
+      | nut_flush_draw | 2 | ナッツFD |
+      | oesd | 2 | 両面ストレートドロー |
+      | combo_draw | 3 | コンボドロー（FD+ストレート等）|
+
+      **エア逆説ルール（Air Paradox）**
+
+      `no_made_hand + oesd` の場合のみ、CBS = HP - 2 となります。
+      エアーにOESDが付くと、強いエクイティのため逆にチェックバックが適切になるためです。
+      HP=5、通常DP=2なら CBS=7になるはずが、逆説ルールで CBS=3（BTN閾値5未満）になります。
+      GTO実測でも、エアー+OESDはBTN約51%とほぼ均等分布（閾値ギリギリ）を示しています。
+
+  - type: cbs_examples
+    title: "CBS計算例（BTN vs BB SRP）"
+    examples:
+      - hand: "A♠K♦"
+        board: "K♣8♦5♠"
+        hand_type: "top_pair"
+        draw_type: "no_draw"
+        scenario: "BTN"
+        label: "トップペア"
+        threshold: "BTN(5)"
+      - hand: "J♠T♠"
+        board: "K♣8♦5♠"
+        hand_type: "no_made_hand"
+        draw_type: "gutshot"
+        scenario: "BTN"
+        label: "エアー+GS"
+        threshold: "BTN(5)"
+      - hand: "9♠8♠"
+        board: "K♣8♦5♠"
+        hand_type: "second_pair"
+        draw_type: "no_draw"
+        scenario: "BTN"
+        label: "セカンドペア"
+        threshold: "BTN(5)"
+      - hand: "A♠5♠"
+        board: "K♣8♦5♠"
+        hand_type: "low_pair"
+        draw_type: "no_draw"
+        scenario: "BTN"
+        label: "ロウペア（5のペア）"
+        threshold: "BTN(5)"
+      - hand: "Q♠Q♦"
+        board: "K♣8♦5♠"
+        hand_type: "overpair"
+        draw_type: "no_draw"
+        scenario: "BTN"
+        label: "オーバーペア（QQ）"
+        threshold: "BTN(5)"
+      - hand: "6♠5♠"
+        board: "K♣8♦5♠"
+        hand_type: "low_pair"
+        draw_type: "oesd"
+        scenario: "BTN"
+        label: "ロウペア+OESD"
+        threshold: "BTN(5)"
+      - hand: "A♠2♦"
+        board: "K♣8♦5♠"
+        hand_type: "ace_high"
+        draw_type: "no_draw"
+        scenario: "SB"
+        label: "Aハイ（SB視点）"
+        threshold: "SB(7)"
+      - hand: "K♠J♦"
+        board: "K♣8♦5♠"
+        hand_type: "top_pair"
+        draw_type: "no_draw"
+        scenario: "SB"
+        label: "トップペア（SB視点）"
+        threshold: "SB(7)"
+
+  - type: text
+    content: |
+      ## 2-3　コンフィデンスシステム
+
+      CBSが閾値を超えても、超えた距離と板の型によってCBet頻度が変わります。
+      この「確信度」をコンフィデンスと呼びます。
+
+      **コンフィデンス判定ルール**
+
+      ```
+      距離 = |CBS - 閾値|
+
+      HIGH: 距離≥3、または（距離0〜1かつ板型1/7）
+      MID:  距離2、または（距離0〜1かつ板型5）
+      LOW:  距離0〜1かつ板型3/4
+      ```
+
+      **コンフィデンス別ベット頻度表（GTO実測）**
+
+      | コンフィデンス | ベット方向 | 推奨頻度 | チェック時頻度 |
+      |-------------|---------|---------|-------------|
+      | HIGH        | Yes     | 79%     | —           |
+      | HIGH        | No      | —       | 34%ベット残し |
+      | MID         | Yes     | 67%     | —           |
+      | MID         | No      | —       | 45%ベット残し |
+      | LOW         | Yes     | 58%     | —           |
+      | LOW         | No      | —       | 41%ベット残し |
+
+      > チェック方向でも「ベット残し」が34〜45%残る理由は、GTO上チェックはレンジ全体を守備する必要があるためです。
+      > 実戦では「HI GH=ほぼ確実」「MID=6〜7割」「LOW=半々よりやや多め」と覚えれば十分です。
+
+  - type: confidence_examples
+    title: "コンフィデンス実例（同じ手を異なるボードで）"
+    cases:
+      - hand_type: "second_pair"
+        draw_type: "no_draw"
+        scenario: "BTN"
+        hand_label: "セカンドペア(CBS=5、距離0)"
+        boards:
+          - board_id: "A72_dry"
+            label: "A72ドライ"
+          - board_id: "K98_rain"
+            label: "K98レイン"
+          - board_id: "T98_conn"
+            label: "T98コネクテッド"
+      - hand_type: "top_pair"
+        draw_type: "no_draw"
+        scenario: "BTN"
+        hand_label: "トップペア(CBS=7、距離2)"
+        boards:
+          - board_id: "A72_dry"
+            label: "A72ドライ"
+          - board_id: "K98_rain"
+            label: "K98レイン"
+          - board_id: "T54_conn"
+            label: "T54コネクテッド"
+
+  - type: text
+    content: |
+      ## 2-4　SBポジションでの閾値調整
+
+      SBはOOP（アウトオブポジション）のため、BTNより厳しい閾値（CBS≥7）を使います。
+
+      SBでのCBS計算とGTO実測値の対照を見ると、トップペア（CBS=7）がちょうど閾値上に位置し、
+      GTO実測約78%のベット率となります。セカンドペア（CBS=5）はSB閾値7未満のため、
+      GTO実測も約50%と均等に近い値になっています。
+
+      **SBがBTNより厳しい理由**
+
+      1. OOPではポジションの優位性がないため、弱いハンドでのCBetが相手に情報を与えやすい
+      2. SBのレンジはBTNより広いため（リンプや3bet率が異なる）、レンジ防御の必要性が高い
+      3. GTO実測でSBのCBet率はBTNより低く、特にエアー・ロウペアゾーンでの差が顕著
+
+      ## 2-5　LIMPポットでの適用
+
+      LIMPポット（SBがリンプでBBに進行）ではさらに難しい判断が必要です。
+      閾値はSBと同じCBS≥7ですが、GTO実測値ではより低いCBet率を示します。
+
+      LIMPではBBのレンジがチェックだけで広い範囲を保持するため、エアーCBetの価値がさらに下がります。
+      LIMPポットでCBetする場合は、CBS≥9（トップペア+draw以上）に絞るのが安全です。
+
+      ## 2-6　まとめ：CBSシステムの暗算手順
+
+      ```
+      Step 1: ハンド種別を確認 → HPを取得
+      Step 2: ドロー有無を確認 → DPを加算
+      Step 3: CBS = HP + DP（例外: エアー+OESD = HP-2）
+      Step 4: ポジション閾値と比較（BTN≥5、SB/LIMP≥7）
+      Step 5: コンフィデンス確認（距離と板型）→ 頻度調整
+      ```
+
+      この5ステップが暗算できれば、フロップCBet判断は完了です。
+
+summary_card:
+  - "CBSシステム: HP＋DP＝CBS。BTN≥5でベット、SB/LIMP≥7でベット"
+  - "HP: トップペア=7、セカンドペア=5、エアー=5、セット=5（スロープレイ）"
+  - "DP: コンボドロー=3、FD/OESD=2、GS=1、ドローなし/BDFD=0"
+  - "エア逆説: no_made_hand＋oesd → CBS=HP-2（強いエクイティで逆にチェック）"
+  - "コンフィデンス: 距離≥3=HIGH(79%)、距離2=MID(67%)、距離0-1かつ型3/4=LOW(58%)"

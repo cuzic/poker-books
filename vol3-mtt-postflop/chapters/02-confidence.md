@@ -1,0 +1,199 @@
+# 第02章 Confidence の判定——型 1-7 × 距離 × 例外
+
+Confidence（信頼度）は CBS と閾値 T=5 の距離（distance = |CBS - T|）と
+ボードの型（型1-7）から決まる 3 段階（HIGH/MID/LOW）です。
+本章では全分類ルールと例外（型6 up / mono down）を習得し、
+実戦で 5 秒以内に Confidence を決定できるようにします。
+
+## CBS 距離の読み方——T=5 からの乖離
+
+distance = |CBS - 5| が Confidence の基本指標です。
+距離が大きいほど「CBS が閾値から遠い = 役の強弱がはっきりしている」ため、
+信頼度が高くなります。
+
+各 distance の意味を整理します。
+distance 0（CBS=5）は閾値ちょうどで、役の強弱が判断しにくい水準です。多くは MID になります。
+distance 1（CBS=4 or 6）はわずかな乖離で、ボード型によって MID または LOW になります。
+distance 2（CBS=3 or 7）は中程度の乖離で、多くの場合 MID になります（ルール5）。
+distance 3+（CBS≤2 or CBS≥8）は大きな乖離で、型に関わらず常に HIGH になります（ルール1）。
+
+CBS=2 は「役なし+ドローなし」の最弱、CBS=9 は「ツーペア以上のナッツ」の最強です。
+どちらも distance ≥ 3 となり、迷わず HIGH と判断できます。
+
+## 型1-7 × distance の Confidence 分類表
+
+Confidence の判定ルールを 8 つのルールとして整理します。
+優先順位は ルール1 > ルール2 > ルール3/4 > ルール5 > ルール6/7 > ルール8 です。
+
+ルール1: distance ≥ 3 → HIGH（最優先、型に関わらず）
+ルール2: 型1 かつ distance ≤ 2 → HIGH（型1 は常に HIGH）
+ルール3: 型7 かつ distance = 0 → HIGH（型7 の特例）
+ルール4: 型7 かつ distance = 1 → LOW（型7 の変則特例）
+ルール5: distance = 2 → MID
+ルール6: 型5（モノトーン）→ MID（distance によらず固定）
+ルール7: 型3 または 型4 → LOW
+ルール8: 上記以外 → MID
+
+### 型別の Confidence 傾向まとめ
+
+型1（ハイドライ: top≥Q かつ rainbow かつ spread>3）:
+distance を問わず常に HIGH です。
+理由は K72r などのドライ高ランク板では IP のレンジ優位が強く、
+閾値との距離が小さくても bet の根拠が強いからです。
+
+型2（ハイウェット: top≥Q かつ 2-tone or spread≤3）:
+distance 0/1 は MID、distance 2 は MID（ルール5）、distance 3+ は HIGH（ルール1）です。
+
+型3（ロードライ: top<Q かつ rainbow かつ spread>3）:
+distance 0/1 は LOW（ルール7）、distance 2 は MID（ルール5 優先）、distance 3+ は HIGH（ルール1）です。
+
+型4（ローウェット: top<Q かつ 2-tone or spread≤3）:
+型3 と同じパターンです。
+
+型5（モノトーン: 3 枚同スーツ）:
+全 distance で MID 固定（ルール6）です。ただし distance ≥ 3 なら HIGH（ルール1 が優先）です。
+
+型6（ペア高 rank≥Q: KK7/QQ4/AA9 など）:
+基本値は distance 0/1/2 で MID、distance 3+ で HIGH です。
+ただし例外O4 で全体を 1 段 up するため、distance 0/1/2 が HIGH になります。
+
+型7（ペア低 rank<Q: 77J/44K など）:
+変則的なパターンです。distance 0 → HIGH、distance 1 → LOW、distance 2 → MID、distance 3+ → HIGH です。
+「distance=0 が HIGH、distance=1 が LOW」と覚えておきましょう。
+
+## 例外ルール——型6 up と mono down
+
+### 例外O4: 型6 信頼度 up（全 context 共通）
+
+型6 ボード（ペア rank ≥ Q: KK7/QQ4/AA9 など）では、
+calc_confidence() の計算結果から 1 段階上の Confidence を使います。
+LOW → MID、MID → HIGH の変換です（HIGH はそのまま変化なし）。
+
+全 13 context に共通で適用します。
+
+GTO 根拠: 型6 ボードでは IP（開幕者）のオーバーペアやナッツペアの保有率が
+BB より圧倒的に高くなります。
+GTO Wizard の実測で型6 ボードの cbet freq は他の型より平均 +8〜12pt 高く、
+信頼度を 1 段 up することで WRMSE が 2.2pt 改善しました。
+
+覚え方: 「高ランクペア板は自信 UP。KK・QQ が出たら Confidence を 1 段強気に」
+
+### 例外O5: mono board 信頼度 down（cash のみ）
+
+mono board（3 枚同スーツ: Kh7h2h など）かつ cash_100bb の場合のみ、
+Confidence を 1 段下げます。
+HIGH → MID、MID → LOW の変換です（LOW はそのまま変化なし）。
+
+MTT（全 Tier 1/3/4 context）ではこのルールを適用しません（mono_conf_down=False）。
+
+GTO 根拠: cash では mono board は「フラッシュドロー完成型」として
+IP のレンジが polarize（ナッツ系とブラフ系に二極化）します。
+中間的なハンドの bet 根拠が弱まり、Confidence を 1 段下げることで
+mono board の WRMSE が 3.6pt 改善しました。
+MTT では bet サイズ 33% 固定で polarize の影響が小さいため適用しません。
+
+覚え方: 「3 枚同色（cash）は自信 DOWN。MTT ではこのルール不要」
+
+## calc_confidence の決定木
+
+実戦での Confidence 判定の決定木を示します。
+
+distance ≥ 3 かどうかを最初に確認します。
+YES の場合は HIGH（終了）です。
+NO の場合は型を確認します。
+
+型1 なら HIGH（終了）です。
+型7 なら distance=0 は HIGH、distance=1 は LOW、それ以外は MID（終了）です。
+型5 なら MID（終了）です。
+型3 または型4 なら LOW（終了）です（ただし distance=2 はルール5 で MID）。
+上記以外（型2/型6/型7 の一部）なら distance=2 は MID、距離 0/1 は MID です。
+
+この後に例外を適用します。
+型6 なら 1 段 up（LOW→MID、MID→HIGH）。
+cash かつ mono なら 1 段 down（HIGH→MID、MID→LOW）。
+
+## 実戦フロー——5 秒で Confidence を決める
+
+実戦での計算ステップは 6 つです。
+
+ステップ1: CBS を計算（HP + DP）
+ステップ2: distance = |CBS - 5| を確認
+ステップ3: board_type（型1-7）を確認
+ステップ4: 決定木で Confidence を判定
+ステップ5: 型6 ボード（KK/QQ ペア）なら 1 段 up
+ステップ6: cash かつ mono なら 1 段 down（MTT は不要）
+
+ショートカットとして以下を覚えておくと素早く判定できます。
+「distance ≥ 3 なら即 HIGH（型を見なくていい）」
+「型1 なら distance に関わらず HIGH」
+「型3/4 は distance ≤ 1 なら LOW」
+「型6 は O4 で 1 段 up、最終的に HIGH が多い」
+「型7 の distance=0→HIGH、distance=1→LOW は変則、要注意」
+
+## 型別の例題——ボード → 型 → distance → Confidence
+
+### Confidence 判定例（各型 1 ケース）
+
+**例**: トップペア (top_pair) on `Ks7d2c` (BTN, context=mtt_25bb)
+
+1. HP = 7, DP = 0, CBS = **7**
+2. threshold = 5, |CBS-T| → confidence = **HIGH**
+3. direction = (CBS≥T) = **True**
+4. size = **33%** (small)
+5. base_freq[(HIGH, True, 33)] = **68%**
+6. α = +6, β·I(CBS≥7) = +31, offset(default) = +0
+→ **frequency = 98%**
+
+**例**: セカンドペア (second_pair) on `Qc9c3d` (BTN, context=mtt_50bb)
+
+1. HP = 5, DP = 1, CBS = **6**
+2. threshold = 5, |CBS-T| → confidence = **HIGH**
+3. direction = (CBS≥T) = **True**
+4. size = **33%** (small)
+5. base_freq[(HIGH, True, 33)] = **68%**
+6. α = -4, β·I(CBS≥7) = +0, offset(default) = +0
+→ **frequency = 64%**
+
+**例**: アンダーペア (underpair) on `9s8d7c` (BTN, context=mtt_25bb)
+
+1. HP = 3, DP = 0, CBS = **3**
+2. threshold = 5, |CBS-T| → confidence = **HIGH**
+3. direction = (CBS≥T) = **False**
+4. size = **33%** (small)
+5. base_freq[(HIGH, False, 33)] = **45%**
+6. α = +6, β·I(CBS≥7) = +0, offset(premium) = +15
+→ **frequency = 66%**
+
+**例**: Aハイ (ace_high) on `Kh7h2h` (BTN, context=mtt_100bb)
+
+1. HP = 2, DP = 0, CBS = **2**
+2. threshold = 5, |CBS-T| → confidence = **HIGH**
+3. direction = (CBS≥T) = **False**
+4. size = **33%** (small)
+5. base_freq[(HIGH, False, 33)] = **45%**
+6. α = +15, β·I(CBS≥7) = +0, offset(default) = +0
+→ **frequency = 60%**
+
+**例**: アンダーペア (underpair) on `KcKd7h` (BTN, context=mtt_25bb)
+
+1. HP = 3, DP = 0, CBS = **3**
+2. threshold = 5, |CBS-T| → confidence = **HIGH**
+3. direction = (CBS≥T) = **False**
+4. size = **33%** (small)
+5. base_freq[(HIGH, False, 33)] = **45%**
+6. α = +6, β·I(CBS≥7) = +0, offset(premium) = +15
+→ **frequency = 66%**
+
+## 覚え方ショートカット——型別の Confidence 傾向
+
+型別の Confidence 傾向を一言で覚えます。
+
+型1「高ドライ → 常に HIGH」: K72r など。distance に関わらず高確信。
+型2「高ウェット → distance 大きければ HIGH、小さければ MID」: KJ6s など。
+型3/4「ロー系 → distance 小さければ LOW、大きければ HIGH」: 97s など。
+型5「モノトーン → 常に MID（ただし distance≥3 は HIGH 優先）」: Kh7h2h。
+型6「高ランクペア → 基本値から 1 段 UP（O4）」: KK7/QQ4。
+型7「低ランクペア → distance=0→HIGH、1→LOW と変則」: 77J/44K。
+
+最重要ルール: distance≥3 は型に関わらず HIGH（ルール1 最優先）。
+これさえ覚えれば CBS=2（最弱の役なし）でも CBS=9（ナッツ）でも即 HIGH と判定できます。

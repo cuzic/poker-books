@@ -1,0 +1,2199 @@
+{
+  "gametype": "MTTGeneral",
+  "sbr": "25",
+  "depth": 25.125,
+  "phase": "vs_3bet",
+  "open_size": "2.1",
+  "results": {
+    "vs_3bet": {
+      "CO vs BTN 3bet": {
+        "pf": "F-F-F-F-R2.1-R5-F-F",
+        "actor": "CO",
+        "codes": {
+          "fold": "F",
+          "call": "C",
+          "raise_allin": "RAI"
+        },
+        "raise_pct": 20.9,
+        "rows": [
+          {
+            "hc": "A8o",
+            "total": 11.6,
+            "fold": 0.9690721599999997,
+            "call": 0.030927834999999997,
+            "raise": 5.000000264515636e-09,
+            "share": 2.7
+          },
+          {
+            "hc": "QJo",
+            "total": 11.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 2.7
+          },
+          {
+            "hc": "A7o",
+            "total": 11.5,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.7
+          },
+          {
+            "hc": "JTo",
+            "total": 11.5,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.7
+          },
+          {
+            "hc": "KQo",
+            "total": 11.5,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 2.7
+          },
+          {
+            "hc": "AKo",
+            "total": 11.4,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 2.7
+          },
+          {
+            "hc": "A5o",
+            "total": 11.3,
+            "fold": 0.0,
+            "call": 0.63404256,
+            "raise": 0.36595743999999997,
+            "share": 2.6
+          },
+          {
+            "hc": "AJo",
+            "total": 11.3,
+            "fold": 0.0,
+            "call": 0.34893617,
+            "raise": 0.65106383,
+            "share": 2.6
+          },
+          {
+            "hc": "KTo",
+            "total": 11.3,
+            "fold": 0.7754237,
+            "call": 0.22457626,
+            "raise": 3.999999995119019e-08,
+            "share": 2.6
+          },
+          {
+            "hc": "QTo",
+            "total": 11.3,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.6
+          },
+          {
+            "hc": "K9o",
+            "total": 11.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.6
+          },
+          {
+            "hc": "A9o",
+            "total": 11.1,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 2.6
+          },
+          {
+            "hc": "AQo",
+            "total": 11.1,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 2.6
+          },
+          {
+            "hc": "ATo",
+            "total": 11.1,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 2.6
+          },
+          {
+            "hc": "KJo",
+            "total": 11.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 2.6
+          },
+          {
+            "hc": "Q9o",
+            "total": 8.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.1
+          },
+          {
+            "hc": "A6o",
+            "total": 7.6,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.8
+          },
+          {
+            "hc": "J9o",
+            "total": 6.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.6
+          },
+          {
+            "hc": "AA",
+            "total": 6.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.4
+          },
+          {
+            "hc": "KK",
+            "total": 5.9,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 1.4
+          },
+          {
+            "hc": "TT",
+            "total": 5.9,
+            "fold": 0.0,
+            "call": 0.5553279,
+            "raise": 0.4446721,
+            "share": 1.4
+          },
+          {
+            "hc": "55",
+            "total": 5.8,
+            "fold": 0.0,
+            "call": 0.925,
+            "raise": 0.07499999999999996,
+            "share": 1.4
+          },
+          {
+            "hc": "88",
+            "total": 5.8,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 1.4
+          },
+          {
+            "hc": "99",
+            "total": 5.8,
+            "fold": 0.0,
+            "call": 0.67083335,
+            "raise": 0.32916665,
+            "share": 1.4
+          },
+          {
+            "hc": "JJ",
+            "total": 5.8,
+            "fold": 0.0,
+            "call": 0.3195021,
+            "raise": 0.6804979,
+            "share": 1.4
+          },
+          {
+            "hc": "QQ",
+            "total": 5.8,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 1.4
+          },
+          {
+            "hc": "66",
+            "total": 5.7,
+            "fold": 0.0,
+            "call": 0.47033896999999997,
+            "raise": 0.52966103,
+            "share": 1.3
+          },
+          {
+            "hc": "77",
+            "total": 5.6,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 1.3
+          },
+          {
+            "hc": "44",
+            "total": 4.7,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.1
+          },
+          {
+            "hc": "T9o",
+            "total": 4.6,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.1
+          },
+          {
+            "hc": "A6s",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 0.014141414,
+            "raise": 0.985858586,
+            "share": 0.9
+          },
+          {
+            "hc": "AJs",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "AKs",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.9
+          },
+          {
+            "hc": "ATs",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "Q6s",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "76s",
+            "total": 3.9,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "97s",
+            "total": 3.9,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "J8s",
+            "total": 3.9,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "Q8s",
+            "total": 3.9,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "65s",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "86s",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "98s",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "A9s",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "AQs",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.9
+          },
+          {
+            "hc": "J9s",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "K5s",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "K6s",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "K7s",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "K8s",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "KJs",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "KQs",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "Q7s",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "Q9s",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "T7s",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "T8s",
+            "total": 3.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "A7s",
+            "total": 3.7,
+            "fold": 0.0,
+            "call": 0.33045357,
+            "raise": 0.66954643,
+            "share": 0.9
+          },
+          {
+            "hc": "J7s",
+            "total": 3.7,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "K4s",
+            "total": 3.7,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "K9s",
+            "total": 3.7,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "T9s",
+            "total": 3.7,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "75s",
+            "total": 3.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "87s",
+            "total": 3.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "A4s",
+            "total": 3.6,
+            "fold": 0.0,
+            "call": 0.30549452,
+            "raise": 0.69450548,
+            "share": 0.8
+          },
+          {
+            "hc": "A5s",
+            "total": 3.6,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.8
+          },
+          {
+            "hc": "A8s",
+            "total": 3.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "JTs",
+            "total": 3.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "K3s",
+            "total": 3.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "KTs",
+            "total": 3.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "Q5s",
+            "total": 3.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "A3s",
+            "total": 3.5,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "QTs",
+            "total": 3.3,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "A2s",
+            "total": 3.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "QJs",
+            "total": 3.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "J6s",
+            "total": 2.4,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "54s",
+            "total": 2.1,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.5
+          },
+          {
+            "hc": "96s",
+            "total": 1.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.3
+          },
+          {
+            "hc": "Q4s",
+            "total": 0.7,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.2
+          }
+        ]
+      },
+      "BTN vs SB 3bet": {
+        "pf": "F-F-F-F-F-R2.1-R6-F",
+        "actor": "BTN",
+        "codes": {
+          "fold": "F",
+          "call": "C",
+          "raise_large": "RAI"
+        },
+        "raise_pct": 21.7,
+        "rows": [
+          {
+            "hc": "A5o",
+            "total": 12.0,
+            "fold": 0.0,
+            "call": 0.82,
+            "raise": 0.18000000000000005,
+            "share": 2.4
+          },
+          {
+            "hc": "A6o",
+            "total": 12.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.4
+          },
+          {
+            "hc": "QTo",
+            "total": 12.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.4
+          },
+          {
+            "hc": "AJo",
+            "total": 11.8,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 2.3
+          },
+          {
+            "hc": "KQo",
+            "total": 11.8,
+            "fold": 0.0,
+            "call": 0.1097561,
+            "raise": 0.8902439,
+            "share": 2.3
+          },
+          {
+            "hc": "T9o",
+            "total": 11.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.2
+          },
+          {
+            "hc": "J9o",
+            "total": 10.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.1
+          },
+          {
+            "hc": "ATo",
+            "total": 10.7,
+            "fold": 0.0,
+            "call": 0.10561798000000001,
+            "raise": 0.89438202,
+            "share": 2.1
+          },
+          {
+            "hc": "98o",
+            "total": 10.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.0
+          },
+          {
+            "hc": "KTo",
+            "total": 10.2,
+            "fold": 0.24000000000000002,
+            "call": 0.7600000000000001,
+            "raise": 0.0,
+            "share": 2.0
+          },
+          {
+            "hc": "JTo",
+            "total": 9.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.9
+          },
+          {
+            "hc": "K9o",
+            "total": 9.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.9
+          },
+          {
+            "hc": "AKo",
+            "total": 9.7,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 1.9
+          },
+          {
+            "hc": "A4o",
+            "total": 9.6,
+            "fold": 0.43467337,
+            "call": 0.5653266300000002,
+            "raise": 0.0,
+            "share": 1.9
+          },
+          {
+            "hc": "A7o",
+            "total": 9.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.9
+          },
+          {
+            "hc": "KJo",
+            "total": 9.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.9
+          },
+          {
+            "hc": "AQo",
+            "total": 9.4,
+            "fold": 0.0,
+            "call": 0.08928572,
+            "raise": 0.91071428,
+            "share": 1.9
+          },
+          {
+            "hc": "QJo",
+            "total": 9.4,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.9
+          },
+          {
+            "hc": "J8o",
+            "total": 9.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.8
+          },
+          {
+            "hc": "K7o",
+            "total": 9.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.8
+          },
+          {
+            "hc": "Q9o",
+            "total": 9.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.8
+          },
+          {
+            "hc": "A8o",
+            "total": 9.0,
+            "fold": 0.0,
+            "call": 0.10933334,
+            "raise": 0.8906666599999999,
+            "share": 1.8
+          },
+          {
+            "hc": "T8o",
+            "total": 8.3,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.7
+          },
+          {
+            "hc": "A3o",
+            "total": 8.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.6
+          },
+          {
+            "hc": "K8o",
+            "total": 7.9,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.6
+          },
+          {
+            "hc": "Q8o",
+            "total": 7.9,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.6
+          },
+          {
+            "hc": "A9o",
+            "total": 7.6,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 1.5
+          },
+          {
+            "hc": "55",
+            "total": 6.0,
+            "fold": 0.0,
+            "call": 0.58,
+            "raise": 0.42000000000000004,
+            "share": 1.2
+          },
+          {
+            "hc": "66",
+            "total": 6.0,
+            "fold": 0.0,
+            "call": 0.9499999999999998,
+            "raise": 0.050000000000000155,
+            "share": 1.2
+          },
+          {
+            "hc": "88",
+            "total": 6.0,
+            "fold": 0.0,
+            "call": 0.855,
+            "raise": 0.14500000000000002,
+            "share": 1.2
+          },
+          {
+            "hc": "99",
+            "total": 5.9,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 1.2
+          },
+          {
+            "hc": "QQ",
+            "total": 5.9,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 1.2
+          },
+          {
+            "hc": "44",
+            "total": 5.7,
+            "fold": 0.0,
+            "call": 0.3551797,
+            "raise": 0.6448203,
+            "share": 1.1
+          },
+          {
+            "hc": "KK",
+            "total": 5.5,
+            "fold": 0.0,
+            "call": 0.55021834,
+            "raise": 0.44978165999999997,
+            "share": 1.1
+          },
+          {
+            "hc": "AA",
+            "total": 5.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.0
+          },
+          {
+            "hc": "TT",
+            "total": 5.2,
+            "fold": 0.0,
+            "call": 0.9560184999999999,
+            "raise": 0.04398150000000012,
+            "share": 1.0
+          },
+          {
+            "hc": "JJ",
+            "total": 4.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "K6o",
+            "total": 4.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "75s",
+            "total": 4.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "A8s",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "A9s",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 0.565,
+            "raise": 0.43500000000000005,
+            "share": 0.8
+          },
+          {
+            "hc": "AKs",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.8
+          },
+          {
+            "hc": "AQs",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "J6s",
+            "total": 4.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "J7s",
+            "total": 4.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "JTs",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "K5s",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "K8s",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "KJs",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "Q5s",
+            "total": 4.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "Q6s",
+            "total": 4.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "T7s",
+            "total": 4.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "K6s",
+            "total": 3.9,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "95s",
+            "total": 3.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "77",
+            "total": 3.7,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "85s",
+            "total": 3.7,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "76s",
+            "total": 3.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "K4s",
+            "total": 3.5,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "Q4s",
+            "total": 3.5,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "T8s",
+            "total": 3.5,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "KQs",
+            "total": 3.4,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.7
+          },
+          {
+            "hc": "54s",
+            "total": 3.3,
+            "fold": 0.9590362,
+            "call": 0.040963855,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "87s",
+            "total": 3.3,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "T6s",
+            "total": 3.3,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "98s",
+            "total": 3.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "J8s",
+            "total": 3.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "64s",
+            "total": 3.1,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "ATs",
+            "total": 3.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "J5s",
+            "total": 3.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "QJs",
+            "total": 3.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "86s",
+            "total": 2.9,
+            "fold": 0.569863,
+            "call": 0.43013698,
+            "raise": 1.9999999989472883e-08,
+            "share": 0.6
+          },
+          {
+            "hc": "96s",
+            "total": 2.9,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "97s",
+            "total": 2.9,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "AJs",
+            "total": 2.9,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.6
+          },
+          {
+            "hc": "A6s",
+            "total": 2.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "Q7s",
+            "total": 2.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "K3s",
+            "total": 2.7,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.5
+          },
+          {
+            "hc": "65s",
+            "total": 2.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.5
+          },
+          {
+            "hc": "A4s",
+            "total": 2.6,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.5
+          },
+          {
+            "hc": "Q8s",
+            "total": 2.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.5
+          },
+          {
+            "hc": "T5s",
+            "total": 2.6,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.5
+          },
+          {
+            "hc": "A2s",
+            "total": 2.4,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.5
+          },
+          {
+            "hc": "J9s",
+            "total": 2.4,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.5
+          },
+          {
+            "hc": "T9s",
+            "total": 2.3,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.5
+          },
+          {
+            "hc": "A3s",
+            "total": 2.2,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.4
+          },
+          {
+            "hc": "A5s",
+            "total": 2.2,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.4
+          },
+          {
+            "hc": "Q3s",
+            "total": 2.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "J4s",
+            "total": 2.1,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "K7s",
+            "total": 2.1,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "Q9s",
+            "total": 2.1,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "K2s",
+            "total": 2.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "A7s",
+            "total": 1.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "K9s",
+            "total": 1.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "KTs",
+            "total": 1.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.3
+          },
+          {
+            "hc": "33",
+            "total": 1.4,
+            "fold": 0.8898305,
+            "call": 0.0,
+            "raise": 0.11016950000000003,
+            "share": 0.3
+          },
+          {
+            "hc": "A2o",
+            "total": 0.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.2
+          }
+        ]
+      },
+      "BTN vs BB 3bet": {
+        "pf": "F-F-F-F-F-R2.1-F-R6.3",
+        "actor": "BTN",
+        "codes": {
+          "fold": "F",
+          "call": "C",
+          "raise_large": "RAI"
+        },
+        "raise_pct": 14.5,
+        "rows": [
+          {
+            "hc": "A5o",
+            "total": 12.0,
+            "fold": 0.0,
+            "call": 0.79,
+            "raise": 0.20999999999999996,
+            "share": 2.4
+          },
+          {
+            "hc": "A6o",
+            "total": 12.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.4
+          },
+          {
+            "hc": "QTo",
+            "total": 12.0,
+            "fold": 0.4000000000000001,
+            "call": 0.6,
+            "raise": 0.0,
+            "share": 2.4
+          },
+          {
+            "hc": "AJo",
+            "total": 11.8,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 2.3
+          },
+          {
+            "hc": "KQo",
+            "total": 11.8,
+            "fold": 0.0,
+            "call": 0.7099391,
+            "raise": 0.29006089999999995,
+            "share": 2.3
+          },
+          {
+            "hc": "T9o",
+            "total": 11.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.2
+          },
+          {
+            "hc": "J9o",
+            "total": 10.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.1
+          },
+          {
+            "hc": "ATo",
+            "total": 10.7,
+            "fold": 0.0,
+            "call": 0.22471910000000003,
+            "raise": 0.7752808999999999,
+            "share": 2.1
+          },
+          {
+            "hc": "98o",
+            "total": 10.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.0
+          },
+          {
+            "hc": "KTo",
+            "total": 10.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 2.0
+          },
+          {
+            "hc": "JTo",
+            "total": 9.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.9
+          },
+          {
+            "hc": "K9o",
+            "total": 9.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.9
+          },
+          {
+            "hc": "AKo",
+            "total": 9.7,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 1.9
+          },
+          {
+            "hc": "A4o",
+            "total": 9.6,
+            "fold": 0.0,
+            "call": 0.9346733700000001,
+            "raise": 0.06532662999999994,
+            "share": 1.9
+          },
+          {
+            "hc": "A7o",
+            "total": 9.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.9
+          },
+          {
+            "hc": "KJo",
+            "total": 9.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.9
+          },
+          {
+            "hc": "AQo",
+            "total": 9.4,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 1.9
+          },
+          {
+            "hc": "QJo",
+            "total": 9.4,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.9
+          },
+          {
+            "hc": "J8o",
+            "total": 9.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.8
+          },
+          {
+            "hc": "K7o",
+            "total": 9.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.8
+          },
+          {
+            "hc": "Q9o",
+            "total": 9.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.8
+          },
+          {
+            "hc": "A8o",
+            "total": 9.0,
+            "fold": 0.0,
+            "call": 0.59466666,
+            "raise": 0.40533334,
+            "share": 1.8
+          },
+          {
+            "hc": "T8o",
+            "total": 8.3,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.7
+          },
+          {
+            "hc": "A3o",
+            "total": 8.2,
+            "fold": 0.37536656999999995,
+            "call": 0.6246334299999999,
+            "raise": 1.1102230246251565e-16,
+            "share": 1.6
+          },
+          {
+            "hc": "K8o",
+            "total": 7.9,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.6
+          },
+          {
+            "hc": "Q8o",
+            "total": 7.9,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.6
+          },
+          {
+            "hc": "A9o",
+            "total": 7.6,
+            "fold": 0.0,
+            "call": 0.9400631,
+            "raise": 0.05993689999999996,
+            "share": 1.5
+          },
+          {
+            "hc": "55",
+            "total": 6.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.2
+          },
+          {
+            "hc": "66",
+            "total": 6.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.2
+          },
+          {
+            "hc": "88",
+            "total": 6.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.2
+          },
+          {
+            "hc": "99",
+            "total": 5.9,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.2
+          },
+          {
+            "hc": "QQ",
+            "total": 5.9,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.2
+          },
+          {
+            "hc": "44",
+            "total": 5.7,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.1
+          },
+          {
+            "hc": "KK",
+            "total": 5.5,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.1
+          },
+          {
+            "hc": "AA",
+            "total": 5.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.0
+          },
+          {
+            "hc": "TT",
+            "total": 5.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 1.0
+          },
+          {
+            "hc": "JJ",
+            "total": 4.6,
+            "fold": 0.0,
+            "call": 0.80526316,
+            "raise": 0.19473684000000002,
+            "share": 0.9
+          },
+          {
+            "hc": "K6o",
+            "total": 4.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "75s",
+            "total": 4.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "A8s",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "A9s",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "AKs",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.8
+          },
+          {
+            "hc": "AQs",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.8
+          },
+          {
+            "hc": "J6s",
+            "total": 4.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "J7s",
+            "total": 4.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "JTs",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "K5s",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "K8s",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "KJs",
+            "total": 4.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "Q5s",
+            "total": 4.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "Q6s",
+            "total": 4.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "T7s",
+            "total": 4.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "K6s",
+            "total": 3.9,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "95s",
+            "total": 3.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.8
+          },
+          {
+            "hc": "77",
+            "total": 3.7,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "85s",
+            "total": 3.7,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "76s",
+            "total": 3.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "K4s",
+            "total": 3.5,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "Q4s",
+            "total": 3.5,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "T8s",
+            "total": 3.5,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "KQs",
+            "total": 3.4,
+            "fold": 0.0,
+            "call": 0.49052134,
+            "raise": 0.5094786600000001,
+            "share": 0.7
+          },
+          {
+            "hc": "54s",
+            "total": 3.3,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "87s",
+            "total": 3.3,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "T6s",
+            "total": 3.3,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "98s",
+            "total": 3.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "J8s",
+            "total": 3.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "64s",
+            "total": 3.1,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "ATs",
+            "total": 3.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "J5s",
+            "total": 3.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "QJs",
+            "total": 3.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "86s",
+            "total": 2.9,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "96s",
+            "total": 2.9,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "97s",
+            "total": 2.9,
+            "fold": 0.39452055,
+            "call": 0.6054795,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "AJs",
+            "total": 2.9,
+            "fold": 0.0,
+            "call": 0.43055555,
+            "raise": 0.56944445,
+            "share": 0.6
+          },
+          {
+            "hc": "A6s",
+            "total": 2.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "Q7s",
+            "total": 2.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.6
+          },
+          {
+            "hc": "K3s",
+            "total": 2.7,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.5
+          },
+          {
+            "hc": "65s",
+            "total": 2.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.5
+          },
+          {
+            "hc": "A4s",
+            "total": 2.6,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.5
+          },
+          {
+            "hc": "Q8s",
+            "total": 2.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.5
+          },
+          {
+            "hc": "T5s",
+            "total": 2.6,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.5
+          },
+          {
+            "hc": "A2s",
+            "total": 2.4,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.5
+          },
+          {
+            "hc": "J9s",
+            "total": 2.4,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.5
+          },
+          {
+            "hc": "T9s",
+            "total": 2.3,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.5
+          },
+          {
+            "hc": "A3s",
+            "total": 2.2,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.4
+          },
+          {
+            "hc": "A5s",
+            "total": 2.2,
+            "fold": 0.0,
+            "call": 0.0,
+            "raise": 1.0,
+            "share": 0.4
+          },
+          {
+            "hc": "Q3s",
+            "total": 2.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "J4s",
+            "total": 2.1,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "K7s",
+            "total": 2.1,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "Q9s",
+            "total": 2.1,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "K2s",
+            "total": 2.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "A7s",
+            "total": 1.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "K9s",
+            "total": 1.8,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "KTs",
+            "total": 1.6,
+            "fold": 0.0,
+            "call": 0.065,
+            "raise": 0.935,
+            "share": 0.3
+          },
+          {
+            "hc": "33",
+            "total": 1.4,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.3
+          },
+          {
+            "hc": "A2o",
+            "total": 0.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.2
+          }
+        ]
+      }
+    }
+  }
+}

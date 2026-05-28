@@ -1,0 +1,36 @@
+{
+  "scenario": "BTN vs BB SRP: BTN CBet → BB Check-Raise → BTN response",
+  "note": "V=Value(HS≥65) M=Marginal(35-64) A=Air(≤34)",
+  "boards": {
+    "型1_ハイドライ_Ks7d2c": {
+      "btn_bet": "R1.8(33%)", "bb_cr": "R10(100%)",
+      "V": {"fold": 0, "call": 100, "4bet": 0},
+      "M": {"fold": 6, "call": 94, "4bet": 0},
+      "A": {"fold": 88, "call": 12, "4bet": 0}
+    },
+    "型2_ハイウェット_Qh8d3s": {
+      "btn_bet": "R1.8(33%)", "bb_cr": "R10(100%)",
+      "V": {"fold": 0, "call": 100, "4bet": 0},
+      "M": {"fold": 12, "call": 88, "4bet": 0},
+      "A": {"fold": 79, "call": 21, "4bet": 0}
+    },
+    "型3_ロードライ_Jd7s5c": {
+      "btn_bet": "R6.4(100%)", "bb_cr": "R17.6(50%)",
+      "V": {"fold": 0, "call": 49, "4bet": 51},
+      "M": {"fold": 2, "call": 75, "4bet": 23},
+      "A": {"fold": 82, "call": 13, "4bet": 5}
+    },
+    "型6_ペア高_AsAcKd": {
+      "btn_bet": "R1.8(33%)", "bb_cr": "R4.8(33%)",
+      "V": {"fold": 0, "call": 63, "4bet": 37},
+      "M": {"fold": 14, "call": 75, "4bet": 11},
+      "A": {"fold": 46, "call": 36, "4bet": 19}
+    },
+    "型7_ペア低_7s7d2c": {
+      "btn_bet": "R1.8(33%)", "bb_cr": "R4.8(33%)",
+      "V": {"fold": 0, "call": 90, "4bet": 10},
+      "M": {"fold": 0, "call": 92, "4bet": 8},
+      "A": {"fold": 33, "call": 60, "4bet": 8}
+    }
+  }
+}

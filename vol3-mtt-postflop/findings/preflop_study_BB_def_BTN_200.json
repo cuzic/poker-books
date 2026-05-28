@@ -1,0 +1,1564 @@
+{
+  "scenario": "BB_def_BTN_200",
+  "label": "BB def vs BTN 2.6x 200BB",
+  "depth": 200.125,
+  "pf_actions": "F-F-F-R2.6-F",
+  "pos": "BB",
+  "role": "defend_vs_BTN",
+  "n_hands": 169,
+  "action_codes": [
+    "F",
+    "C",
+    "R13.65",
+    "RAI"
+  ],
+  "action_meta": {
+    "F": {
+      "type": "FOLD",
+      "betsize": "0",
+      "total_frequency": 0.24708325385091318,
+      "total_ev": 0.8495353
+    },
+    "C": {
+      "type": "CALL",
+      "betsize": "2.6",
+      "total_frequency": 0.630914784298613,
+      "total_ev": 0.8495353
+    },
+    "R13.65": {
+      "type": "RAISE",
+      "betsize": "13.65",
+      "total_frequency": 0.12199743696388637,
+      "total_ev": 0.8495353
+    },
+    "RAI": {
+      "type": "RAISE",
+      "betsize": "200.000",
+      "total_frequency": 4.524886587390505e-06,
+      "total_ev": 0.8495353
+    }
+  },
+  "hands": [
+    {
+      "idx": 0,
+      "name": "hand_000",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 1.3221
+    },
+    {
+      "idx": 1,
+      "name": "hand_001",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 2,
+      "name": "hand_002",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.2749
+    },
+    {
+      "idx": 3,
+      "name": "hand_003",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 1.4209
+    },
+    {
+      "idx": 4,
+      "name": "hand_004",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 5,
+      "name": "hand_005",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.3538
+    },
+    {
+      "idx": 6,
+      "name": "hand_006",
+      "fold": 0.8926,
+      "call": 0.1074,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 7,
+      "name": "hand_007",
+      "fold": 0.0,
+      "call": 0.8301,
+      "raise": 0.1699,
+      "allin": 0.0,
+      "ev": 0.5264
+    },
+    {
+      "idx": 8,
+      "name": "hand_008",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 1.583
+    },
+    {
+      "idx": 9,
+      "name": "hand_009",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 10,
+      "name": "hand_010",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.3889
+    },
+    {
+      "idx": 11,
+      "name": "hand_011",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0333
+    },
+    {
+      "idx": 12,
+      "name": "hand_012",
+      "fold": 0.0,
+      "call": 0.8903,
+      "raise": 0.1097,
+      "allin": 0.0,
+      "ev": 0.5884
+    },
+    {
+      "idx": 13,
+      "name": "hand_013",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.1966
+    },
+    {
+      "idx": 14,
+      "name": "hand_014",
+      "fold": 0.0,
+      "call": 0.0226,
+      "raise": 0.9774,
+      "allin": 0.0,
+      "ev": 0.8121
+    },
+    {
+      "idx": 15,
+      "name": "hand_015",
+      "fold": 0.0,
+      "call": 0.9596,
+      "raise": 0.0404,
+      "allin": 0.0,
+      "ev": 1.8108
+    },
+    {
+      "idx": 16,
+      "name": "hand_016",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 17,
+      "name": "hand_017",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.1651
+    },
+    {
+      "idx": 18,
+      "name": "hand_018",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 19,
+      "name": "hand_019",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.3863
+    },
+    {
+      "idx": 20,
+      "name": "hand_020",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0337
+    },
+    {
+      "idx": 21,
+      "name": "hand_021",
+      "fold": 0.0,
+      "call": 0.8049,
+      "raise": 0.1951,
+      "allin": 0.0,
+      "ev": 0.6139
+    },
+    {
+      "idx": 22,
+      "name": "hand_022",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.1963
+    },
+    {
+      "idx": 23,
+      "name": "hand_023",
+      "fold": 0.0,
+      "call": 0.3047,
+      "raise": 0.6953,
+      "allin": 0.0,
+      "ev": 0.8088
+    },
+    {
+      "idx": 24,
+      "name": "hand_024",
+      "fold": 0.0,
+      "call": 0.7296,
+      "raise": 0.2704,
+      "allin": 0.0,
+      "ev": 2.0962
+    },
+    {
+      "idx": 25,
+      "name": "hand_025",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 26,
+      "name": "hand_026",
+      "fold": 0.0003,
+      "call": 0.9997,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0715
+    },
+    {
+      "idx": 27,
+      "name": "hand_027",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 28,
+      "name": "hand_028",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.2222
+    },
+    {
+      "idx": 29,
+      "name": "hand_029",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 30,
+      "name": "hand_030",
+      "fold": 0.0,
+      "call": 0.9997,
+      "raise": 0.0003,
+      "allin": 0.0,
+      "ev": 0.4464
+    },
+    {
+      "idx": 31,
+      "name": "hand_031",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0583
+    },
+    {
+      "idx": 32,
+      "name": "hand_032",
+      "fold": 0.0,
+      "call": 0.5207,
+      "raise": 0.4793,
+      "allin": 0.0,
+      "ev": 0.6561
+    },
+    {
+      "idx": 33,
+      "name": "hand_033",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.2038
+    },
+    {
+      "idx": 34,
+      "name": "hand_034",
+      "fold": 0.0,
+      "call": 0.1791,
+      "raise": 0.8209,
+      "allin": 0.0,
+      "ev": 0.8233
+    },
+    {
+      "idx": 35,
+      "name": "hand_035",
+      "fold": 0.0,
+      "call": 0.7007,
+      "raise": 0.2993,
+      "allin": 0.0,
+      "ev": 2.4232
+    },
+    {
+      "idx": 36,
+      "name": "hand_036",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 37,
+      "name": "hand_037",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.1304
+    },
+    {
+      "idx": 38,
+      "name": "hand_038",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 39,
+      "name": "hand_039",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.1519
+    },
+    {
+      "idx": 40,
+      "name": "hand_040",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 41,
+      "name": "hand_041",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.3218
+    },
+    {
+      "idx": 42,
+      "name": "hand_042",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 43,
+      "name": "hand_043",
+      "fold": 0.0,
+      "call": 0.9994,
+      "raise": 0.0006,
+      "allin": 0.0,
+      "ev": 0.551
+    },
+    {
+      "idx": 44,
+      "name": "hand_044",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.1109
+    },
+    {
+      "idx": 45,
+      "name": "hand_045",
+      "fold": 0.0,
+      "call": 0.5693,
+      "raise": 0.4307,
+      "allin": 0.0,
+      "ev": 0.7208
+    },
+    {
+      "idx": 46,
+      "name": "hand_046",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.2852
+    },
+    {
+      "idx": 47,
+      "name": "hand_047",
+      "fold": 0.0,
+      "call": 0.2957,
+      "raise": 0.7043,
+      "allin": 0.0,
+      "ev": 0.92
+    },
+    {
+      "idx": 48,
+      "name": "hand_048",
+      "fold": 0.0,
+      "call": 0.7788,
+      "raise": 0.2212,
+      "allin": 0.0,
+      "ev": 2.8189
+    },
+    {
+      "idx": 49,
+      "name": "hand_049",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 50,
+      "name": "hand_050",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.2329
+    },
+    {
+      "idx": 51,
+      "name": "hand_051",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 52,
+      "name": "hand_052",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.2738
+    },
+    {
+      "idx": 53,
+      "name": "hand_053",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 54,
+      "name": "hand_054",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.2931
+    },
+    {
+      "idx": 55,
+      "name": "hand_055",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 56,
+      "name": "hand_056",
+      "fold": 0.0,
+      "call": 0.9999,
+      "raise": 0.0001,
+      "allin": 0.0,
+      "ev": 0.4572
+    },
+    {
+      "idx": 57,
+      "name": "hand_057",
+      "fold": 0.1146,
+      "call": 0.8854,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0013
+    },
+    {
+      "idx": 58,
+      "name": "hand_058",
+      "fold": 0.0,
+      "call": 0.4101,
+      "raise": 0.5899,
+      "allin": 0.0,
+      "ev": 0.6205
+    },
+    {
+      "idx": 59,
+      "name": "hand_059",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.2392
+    },
+    {
+      "idx": 60,
+      "name": "hand_060",
+      "fold": 0.0,
+      "call": 0.4827,
+      "raise": 0.5173,
+      "allin": 0.0,
+      "ev": 0.8705
+    },
+    {
+      "idx": 61,
+      "name": "hand_061",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.456
+    },
+    {
+      "idx": 62,
+      "name": "hand_062",
+      "fold": 0.0,
+      "call": 0.371,
+      "raise": 0.629,
+      "allin": 0.0,
+      "ev": 1.1045
+    },
+    {
+      "idx": 63,
+      "name": "hand_063",
+      "fold": 0.0,
+      "call": 0.6713,
+      "raise": 0.3287,
+      "allin": 0.0,
+      "ev": 3.3772
+    },
+    {
+      "idx": 64,
+      "name": "hand_064",
+      "fold": 0.0,
+      "call": 0.9999,
+      "raise": 0.0001,
+      "allin": 0.0,
+      "ev": 0.4196
+    },
+    {
+      "idx": 65,
+      "name": "hand_065",
+      "fold": 0.0,
+      "call": 0.7711,
+      "raise": 0.2289,
+      "allin": 0.0,
+      "ev": 1.5298
+    },
+    {
+      "idx": 66,
+      "name": "hand_066",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.5316
+    },
+    {
+      "idx": 67,
+      "name": "hand_067",
+      "fold": 0.0,
+      "call": 0.4524,
+      "raise": 0.5476,
+      "allin": 0.0,
+      "ev": 1.6467
+    },
+    {
+      "idx": 68,
+      "name": "hand_068",
+      "fold": 0.0,
+      "call": 0.8277,
+      "raise": 0.1723,
+      "allin": 0.0,
+      "ev": 0.6185
+    },
+    {
+      "idx": 69,
+      "name": "hand_069",
+      "fold": 0.0,
+      "call": 0.4956,
+      "raise": 0.5044,
+      "allin": 0.0,
+      "ev": 1.7293
+    },
+    {
+      "idx": 70,
+      "name": "hand_070",
+      "fold": 0.0,
+      "call": 0.7456,
+      "raise": 0.2544,
+      "allin": 0.0,
+      "ev": 0.7326
+    },
+    {
+      "idx": 71,
+      "name": "hand_071",
+      "fold": 0.0,
+      "call": 0.5301,
+      "raise": 0.4699,
+      "allin": 0.0,
+      "ev": 1.8416
+    },
+    {
+      "idx": 72,
+      "name": "hand_072",
+      "fold": 0.0,
+      "call": 0.9715,
+      "raise": 0.0285,
+      "allin": 0.0,
+      "ev": 0.5863
+    },
+    {
+      "idx": 73,
+      "name": "hand_073",
+      "fold": 0.0,
+      "call": 0.9353,
+      "raise": 0.0647,
+      "allin": 0.0,
+      "ev": 1.6973
+    },
+    {
+      "idx": 74,
+      "name": "hand_074",
+      "fold": 0.0,
+      "call": 0.9166,
+      "raise": 0.0834,
+      "allin": 0.0,
+      "ev": 0.7588
+    },
+    {
+      "idx": 75,
+      "name": "hand_075",
+      "fold": 0.0,
+      "call": 0.9944,
+      "raise": 0.0056,
+      "allin": 0.0,
+      "ev": 1.8955
+    },
+    {
+      "idx": 76,
+      "name": "hand_076",
+      "fold": 0.0,
+      "call": 0.9991,
+      "raise": 0.0009,
+      "allin": 0.0,
+      "ev": 0.9667
+    },
+    {
+      "idx": 77,
+      "name": "hand_077",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 2.1162
+    },
+    {
+      "idx": 78,
+      "name": "hand_078",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 1.1984
+    },
+    {
+      "idx": 79,
+      "name": "hand_079",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 2.3254
+    },
+    {
+      "idx": 80,
+      "name": "AA",
+      "fold": 0.0,
+      "call": 0.0,
+      "raise": 1.0,
+      "allin": 0.0,
+      "ev": 16.4026
+    },
+    {
+      "idx": 81,
+      "name": "hand_081",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 2.2071
+    },
+    {
+      "idx": 82,
+      "name": "hand_082",
+      "fold": 0.0,
+      "call": 0.0112,
+      "raise": 0.9888,
+      "allin": 0.0,
+      "ev": 3.3214
+    },
+    {
+      "idx": 83,
+      "name": "hand_083",
+      "fold": 0.0,
+      "call": 0.0,
+      "raise": 0.9997,
+      "allin": 0.0003,
+      "ev": 4.1947
+    },
+    {
+      "idx": 84,
+      "name": "TT",
+      "fold": 0.0,
+      "call": 0.0,
+      "raise": 1.0,
+      "allin": 0.0,
+      "ev": 5.5807
+    },
+    {
+      "idx": 85,
+      "name": "hand_085",
+      "fold": 0.0,
+      "call": 0.6401,
+      "raise": 0.3599,
+      "allin": 0.0,
+      "ev": 2.6465
+    },
+    {
+      "idx": 86,
+      "name": "hand_086",
+      "fold": 0.0,
+      "call": 0.0,
+      "raise": 1.0,
+      "allin": 0.0,
+      "ev": 4.0778
+    },
+    {
+      "idx": 87,
+      "name": "hand_087",
+      "fold": 0.0,
+      "call": 0.9955,
+      "raise": 0.0045,
+      "allin": 0.0,
+      "ev": 1.8475
+    },
+    {
+      "idx": 88,
+      "name": "hand_088",
+      "fold": 0.0,
+      "call": 0.9412,
+      "raise": 0.0588,
+      "allin": 0.0,
+      "ev": 2.9468
+    },
+    {
+      "idx": 89,
+      "name": "hand_089",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 90,
+      "name": "hand_090",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.5424
+    },
+    {
+      "idx": 91,
+      "name": "hand_091",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 92,
+      "name": "hand_092",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.5908
+    },
+    {
+      "idx": 93,
+      "name": "hand_093",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 94,
+      "name": "hand_094",
+      "fold": 0.0,
+      "call": 0.9954,
+      "raise": 0.0046,
+      "allin": 0.0,
+      "ev": 0.6317
+    },
+    {
+      "idx": 95,
+      "name": "hand_095",
+      "fold": 0.4484,
+      "call": 0.5516,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 96,
+      "name": "hand_096",
+      "fold": 0.0,
+      "call": 0.8059,
+      "raise": 0.1941,
+      "allin": 0.0,
+      "ev": 0.6714
+    },
+    {
+      "idx": 97,
+      "name": "hand_097",
+      "fold": 0.8021,
+      "call": 0.1979,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 98,
+      "name": "hand_098",
+      "fold": 0.0,
+      "call": 0.9505,
+      "raise": 0.0495,
+      "allin": 0.0,
+      "ev": 0.6698
+    },
+    {
+      "idx": 99,
+      "name": "hand_099",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.1419
+    },
+    {
+      "idx": 100,
+      "name": "hand_100",
+      "fold": 0.0,
+      "call": 0.7665,
+      "raise": 0.2335,
+      "allin": 0.0,
+      "ev": 0.8701
+    },
+    {
+      "idx": 101,
+      "name": "hand_101",
+      "fold": 0.0,
+      "call": 0.9972,
+      "raise": 0.0028,
+      "allin": 0.0,
+      "ev": 0.3818
+    },
+    {
+      "idx": 102,
+      "name": "hand_102",
+      "fold": 0.0,
+      "call": 0.2521,
+      "raise": 0.7479,
+      "allin": 0.0,
+      "ev": 1.141
+    },
+    {
+      "idx": 103,
+      "name": "hand_103",
+      "fold": 0.0,
+      "call": 0.9996,
+      "raise": 0.0004,
+      "allin": 0.0,
+      "ev": 0.7165
+    },
+    {
+      "idx": 104,
+      "name": "hand_104",
+      "fold": 0.0,
+      "call": 0.2054,
+      "raise": 0.7946,
+      "allin": 0.0,
+      "ev": 1.5017
+    },
+    {
+      "idx": 105,
+      "name": "JJ",
+      "fold": 0.0,
+      "call": 0.0,
+      "raise": 1.0,
+      "allin": 0.0,
+      "ev": 5.2791
+    },
+    {
+      "idx": 106,
+      "name": "hand_106",
+      "fold": 0.0,
+      "call": 0.9766,
+      "raise": 0.0234,
+      "allin": 0.0,
+      "ev": 1.2899
+    },
+    {
+      "idx": 107,
+      "name": "hand_107",
+      "fold": 0.0,
+      "call": 0.0015,
+      "raise": 0.9985,
+      "allin": 0.0,
+      "ev": 2.0682
+    },
+    {
+      "idx": 108,
+      "name": "hand_108",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0328
+    },
+    {
+      "idx": 109,
+      "name": "hand_109",
+      "fold": 0.0,
+      "call": 0.988,
+      "raise": 0.012,
+      "allin": 0.0,
+      "ev": 0.9268
+    },
+    {
+      "idx": 110,
+      "name": "hand_110",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0719
+    },
+    {
+      "idx": 111,
+      "name": "hand_111",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.9677
+    },
+    {
+      "idx": 112,
+      "name": "hand_112",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.1171
+    },
+    {
+      "idx": 113,
+      "name": "hand_113",
+      "fold": 0.0,
+      "call": 0.6854,
+      "raise": 0.3146,
+      "allin": 0.0,
+      "ev": 1.0285
+    },
+    {
+      "idx": 114,
+      "name": "hand_114",
+      "fold": 0.0,
+      "call": 0.963,
+      "raise": 0.037,
+      "allin": 0.0,
+      "ev": 0.1766
+    },
+    {
+      "idx": 115,
+      "name": "hand_115",
+      "fold": 0.0,
+      "call": 0.4987,
+      "raise": 0.5013,
+      "allin": 0.0,
+      "ev": 1.1004
+    },
+    {
+      "idx": 116,
+      "name": "hand_116",
+      "fold": 0.0,
+      "call": 0.9003,
+      "raise": 0.0997,
+      "allin": 0.0,
+      "ev": 0.1976
+    },
+    {
+      "idx": 117,
+      "name": "hand_117",
+      "fold": 0.0,
+      "call": 0.5701,
+      "raise": 0.4299,
+      "allin": 0.0,
+      "ev": 1.1219
+    },
+    {
+      "idx": 118,
+      "name": "hand_118",
+      "fold": 0.0,
+      "call": 0.8676,
+      "raise": 0.1324,
+      "allin": 0.0,
+      "ev": 0.3123
+    },
+    {
+      "idx": 119,
+      "name": "hand_119",
+      "fold": 0.0,
+      "call": 0.9713,
+      "raise": 0.0287,
+      "allin": 0.0,
+      "ev": 1.252
+    },
+    {
+      "idx": 120,
+      "name": "hand_120",
+      "fold": 0.0,
+      "call": 0.8667,
+      "raise": 0.1333,
+      "allin": 0.0,
+      "ev": 0.4559
+    },
+    {
+      "idx": 121,
+      "name": "hand_121",
+      "fold": 0.0,
+      "call": 0.9981,
+      "raise": 0.0019,
+      "allin": 0.0,
+      "ev": 1.4161
+    },
+    {
+      "idx": 122,
+      "name": "hand_122",
+      "fold": 0.0,
+      "call": 0.917,
+      "raise": 0.083,
+      "allin": 0.0,
+      "ev": 0.7812
+    },
+    {
+      "idx": 123,
+      "name": "hand_123",
+      "fold": 0.0,
+      "call": 0.9994,
+      "raise": 0.0006,
+      "allin": 0.0,
+      "ev": 1.7571
+    },
+    {
+      "idx": 124,
+      "name": "hand_124",
+      "fold": 0.0,
+      "call": 0.912,
+      "raise": 0.088,
+      "allin": 0.0,
+      "ev": 1.6554
+    },
+    {
+      "idx": 125,
+      "name": "hand_125",
+      "fold": 0.0,
+      "call": 0.494,
+      "raise": 0.506,
+      "allin": 0.0,
+      "ev": 2.5943
+    },
+    {
+      "idx": 126,
+      "name": "KK",
+      "fold": 0.0,
+      "call": 0.0,
+      "raise": 1.0,
+      "allin": 0.0,
+      "ev": 11.012
+    },
+    {
+      "idx": 127,
+      "name": "hand_127",
+      "fold": 0.0,
+      "call": 0.7779,
+      "raise": 0.2221,
+      "allin": 0.0,
+      "ev": 1.9953
+    },
+    {
+      "idx": 128,
+      "name": "hand_128",
+      "fold": 0.0,
+      "call": 0.1725,
+      "raise": 0.8275,
+      "allin": 0.0,
+      "ev": 2.9189
+    },
+    {
+      "idx": 129,
+      "name": "hand_129",
+      "fold": 0.0,
+      "call": 0.8382,
+      "raise": 0.1618,
+      "allin": 0.0,
+      "ev": 1.3862
+    },
+    {
+      "idx": 130,
+      "name": "hand_130",
+      "fold": 0.0,
+      "call": 0.9549,
+      "raise": 0.0451,
+      "allin": 0.0,
+      "ev": 2.3565
+    },
+    {
+      "idx": 131,
+      "name": "hand_131",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 132,
+      "name": "hand_132",
+      "fold": 0.0,
+      "call": 0.9996,
+      "raise": 0.0004,
+      "allin": 0.0,
+      "ev": 0.7129
+    },
+    {
+      "idx": 133,
+      "name": "hand_133",
+      "fold": 0.6378,
+      "call": 0.3622,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 134,
+      "name": "hand_134",
+      "fold": 0.0,
+      "call": 0.931,
+      "raise": 0.069,
+      "allin": 0.0,
+      "ev": 0.7557
+    },
+    {
+      "idx": 135,
+      "name": "hand_135",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0322
+    },
+    {
+      "idx": 136,
+      "name": "hand_136",
+      "fold": 0.0,
+      "call": 0.9979,
+      "raise": 0.0021,
+      "allin": 0.0,
+      "ev": 0.7995
+    },
+    {
+      "idx": 137,
+      "name": "hand_137",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0591
+    },
+    {
+      "idx": 138,
+      "name": "hand_138",
+      "fold": 0.0,
+      "call": 0.4712,
+      "raise": 0.5288,
+      "allin": 0.0,
+      "ev": 0.82
+    },
+    {
+      "idx": 139,
+      "name": "hand_139",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0663
+    },
+    {
+      "idx": 140,
+      "name": "hand_140",
+      "fold": 0.0,
+      "call": 0.8904,
+      "raise": 0.1096,
+      "allin": 0.0,
+      "ev": 0.8379
+    },
+    {
+      "idx": 141,
+      "name": "hand_141",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.1315
+    },
+    {
+      "idx": 142,
+      "name": "hand_142",
+      "fold": 0.0,
+      "call": 0.9384,
+      "raise": 0.0616,
+      "allin": 0.0,
+      "ev": 0.9013
+    },
+    {
+      "idx": 143,
+      "name": "hand_143",
+      "fold": 0.0,
+      "call": 0.9638,
+      "raise": 0.0362,
+      "allin": 0.0,
+      "ev": 0.3397
+    },
+    {
+      "idx": 144,
+      "name": "hand_144",
+      "fold": 0.0,
+      "call": 0.9145,
+      "raise": 0.0855,
+      "allin": 0.0,
+      "ev": 1.1644
+    },
+    {
+      "idx": 145,
+      "name": "hand_145",
+      "fold": 0.0,
+      "call": 0.948,
+      "raise": 0.052,
+      "allin": 0.0,
+      "ev": 0.6788
+    },
+    {
+      "idx": 146,
+      "name": "hand_146",
+      "fold": 0.0,
+      "call": 0.7809,
+      "raise": 0.2191,
+      "allin": 0.0,
+      "ev": 1.527
+    },
+    {
+      "idx": 147,
+      "name": "hand_147",
+      "fold": 0.0,
+      "call": 0.8567,
+      "raise": 0.1433,
+      "allin": 0.0,
+      "ev": 1.4595
+    },
+    {
+      "idx": 148,
+      "name": "hand_148",
+      "fold": 0.0,
+      "call": 0.3163,
+      "raise": 0.6837,
+      "allin": 0.0,
+      "ev": 2.2775
+    },
+    {
+      "idx": 149,
+      "name": "QQ",
+      "fold": 0.0,
+      "call": 0.0,
+      "raise": 0.9996,
+      "allin": 0.0004,
+      "ev": 7.4229
+    },
+    {
+      "idx": 150,
+      "name": "hand_150",
+      "fold": 0.0,
+      "call": 0.8322,
+      "raise": 0.1678,
+      "allin": 0.0,
+      "ev": 1.2667
+    },
+    {
+      "idx": 151,
+      "name": "hand_151",
+      "fold": 0.0,
+      "call": 0.7149,
+      "raise": 0.2851,
+      "allin": 0.0,
+      "ev": 2.1079
+    },
+    {
+      "idx": 152,
+      "name": "hand_152",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 153,
+      "name": "hand_153",
+      "fold": 0.0,
+      "call": 0.9998,
+      "raise": 0.0002,
+      "allin": 0.0,
+      "ev": 0.4055
+    },
+    {
+      "idx": 154,
+      "name": "hand_154",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 155,
+      "name": "hand_155",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.4435
+    },
+    {
+      "idx": 156,
+      "name": "hand_156",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 157,
+      "name": "hand_157",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.4839
+    },
+    {
+      "idx": 158,
+      "name": "hand_158",
+      "fold": 1.0,
+      "call": 0.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0
+    },
+    {
+      "idx": 159,
+      "name": "hand_159",
+      "fold": 0.0,
+      "call": 0.9983,
+      "raise": 0.0017,
+      "allin": 0.0,
+      "ev": 0.4991
+    },
+    {
+      "idx": 160,
+      "name": "hand_160",
+      "fold": 0.4071,
+      "call": 0.5929,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.0004
+    },
+    {
+      "idx": 161,
+      "name": "hand_161",
+      "fold": 0.0,
+      "call": 0.6215,
+      "raise": 0.3785,
+      "allin": 0.0,
+      "ev": 0.6308
+    },
+    {
+      "idx": 162,
+      "name": "hand_162",
+      "fold": 0.0,
+      "call": 1.0,
+      "raise": 0.0,
+      "allin": 0.0,
+      "ev": 0.2015
+    },
+    {
+      "idx": 163,
+      "name": "hand_163",
+      "fold": 0.0,
+      "call": 0.2423,
+      "raise": 0.7577,
+      "allin": 0.0,
+      "ev": 0.8698
+    },
+    {
+      "idx": 164,
+      "name": "hand_164",
+      "fold": 0.0,
+      "call": 0.9988,
+      "raise": 0.0012,
+      "allin": 0.0,
+      "ev": 0.485
+    },
+    {
+      "idx": 165,
+      "name": "hand_165",
+      "fold": 0.0,
+      "call": 0.0216,
+      "raise": 0.9784,
+      "allin": 0.0,
+      "ev": 1.2068
+    },
+    {
+      "idx": 166,
+      "name": "hand_166",
+      "fold": 0.0,
+      "call": 0.9821,
+      "raise": 0.0179,
+      "allin": 0.0,
+      "ev": 0.7951
+    },
+    {
+      "idx": 167,
+      "name": "hand_167",
+      "fold": 0.0,
+      "call": 0.0008,
+      "raise": 0.9992,
+      "allin": 0.0,
+      "ev": 1.5289
+    },
+    {
+      "idx": 168,
+      "name": "hand_168",
+      "fold": 0.0,
+      "call": 0.5031,
+      "raise": 0.4969,
+      "allin": 0.0,
+      "ev": 4.2696
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{"board": "型1_K72_50%CBet", "turn": "7s", "label": "2ndペア", "flop_seq": "X-R1.9-C", "bet_pct": 81.9}
+{"board": "型1_K72_50%CBet", "turn": "2s", "label": "3rdペア", "flop_seq": "X-R1.9-C", "bet_pct": 49.1}
+{"board": "型1_K72_50%CBet", "turn": "As", "label": "OC高", "flop_seq": "X-R1.9-C", "bet_pct": 0.0}
+{"board": "型1_K72_50%CBet", "turn": "Jd", "label": "ブランク", "flop_seq": "X-R1.9-C", "bet_pct": 0.3}
+{"board": "型1_K72_50%CBet", "turn": "3h", "label": "ブランク", "flop_seq": "X-R1.9-C", "bet_pct": 1.2}
+{"board": "型2_Q83_50%CBet", "turn": "8c", "label": "2ndペア", "flop_seq": "X-R1.9-C", "bet_pct": 95.9}
+{"board": "型2_Q83_50%CBet", "turn": "3d", "label": "3rdペア", "flop_seq": "X-R1.9-C", "bet_pct": 78.4}
+{"board": "型2_Q83_50%CBet", "turn": "Ah", "label": "OC高", "flop_seq": "X-R1.9-C", "bet_pct": 0.0}
+{"board": "型2_Q83_50%CBet", "turn": "Kc", "label": "OC", "flop_seq": "X-R1.9-C", "bet_pct": 0.0}
+{"board": "型2_Q83_50%CBet", "turn": "5h", "label": "ブランク", "flop_seq": "X-R1.9-C", "bet_pct": 4.5}
+{"board": "型1_K72_75%CBet", "turn": "7s", "label": "2ndペア", "flop_seq": "X-R3.15-C", "bet_pct": 88.4}
+{"board": "型1_K72_75%CBet", "turn": "2s", "label": "3rdペア", "flop_seq": "X-R3.15-C", "bet_pct": 43.4}
+{"board": "型1_K72_75%CBet", "turn": "As", "label": "OC高", "flop_seq": "X-R3.15-C", "bet_pct": 2.1}
+{"board": "型1_K72_75%CBet", "turn": "Jd", "label": "ブランク", "flop_seq": "X-R3.15-C", "bet_pct": 3.6}

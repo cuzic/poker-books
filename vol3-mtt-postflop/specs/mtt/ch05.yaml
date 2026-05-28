@@ -1,0 +1,413 @@
+chapter_num: 5
+slug: 05-flop-defense
+title: "OOPフロップ守備——3択を体系化する"
+output: "chapters/05-flop-defense.md"
+
+summary: |
+  BBがBTN/CO/HJ/UTG/SBのCBetを受けたとき、コール／CR／フォールドの3択を体系的に判定する章です。
+  3択は「フォールド判定」と「CR/コール判定」の2問題に分解でき、それぞれ独立した判定軸を持ちます。
+  特に重要なのは「相手のopen位置でfold境界が変わる」点で、これを無視すると30%以上の誤判定が出ます。
+  全SRP-OOP守備データ（n=114254）から導出した予測精度91.6%のルール体系を提示します。
+
+sections:
+  - type: text
+    content: |
+      ## 5-1　守備は3択（raise / call / fold）
+
+      攻撃（CBet）は「ベットするか／チェックするか」の2択でした。
+      守備は **raise（CR） / call / fold** の3択になります。これが攻撃と根本的に違う点です。
+
+      しかし、この3択は実は **独立した2問題に分解**できます。これを理解するのが本章の核心です。
+
+      ```
+         ┌──────────────────────────────────────────────┐
+         │ Step 1: フォールドする？                       │
+         │   判定軸: ショーダウン価値 + 相手レンジの広さ │
+         │   入力: hand × draw × board × 相手 open 位置 │
+         └────────────┬─────────────────────────────────┘
+                      │ No（fold しない）
+                      ▼
+         ┌──────────────────────────────────────────────┐
+         │ Step 2: CR か call か                        │
+         │   判定軸: TP の脆弱性（エース支配原理）       │
+         │   入力: board_type のみ                       │
+         └──────────────────────────────────────────────┘
+      ```
+
+      Step 1 と Step 2 は **完全に独立**しています。
+      - ペア以上・強ドローは Step 1 で「fold しない」が確定 → Step 2 に進む
+      - 弱い手（エアー・A/Kハイ）は Step 1 で fold が決まる → Step 2 不要
+
+      ## 5-2　なぜ攻撃CBSは守備に使えないか
+
+      攻撃の CBS（Hand Power + Draw Power）スコアは、守備の fold 判定には使えません。
+      理由は **HP=5 の手が広すぎる**ことにあります。
+
+      | hand_type | HP | 攻撃判定 | 守備判定 |
+      |-----------|----|---------|---------|
+      | no_made_hand (純エアー) | 5 | エアーCBet候補 | ほぼフォールド |
+      | ace_high (Aハイ) | 5 | エアーCBet候補 | 大半フォールド |
+      | king_high (Kハイ) | 5 | エアーCBet候補 | 全型フォールド |
+      | underpair | 5 | バリュー薄 | コール |
+      | second_pair | 5 | バリュー薄 | コール |
+
+      攻撃では「HP=5 のエアー族」が一括処理できますが、守備では
+      **同じ HP=5 でもペア有無・ハイカード強さで判断が真逆**になります。
+      別の判定軸が必要です。
+
+  - type: text
+    content: |
+      ## 5-3　Step 1: フォールド判定の核心
+
+      「フォールドするかどうか」を決める軸は2つあります：
+
+      1. **手のショーダウン価値**: ペアがあるか、ドローがあるか、ハイカードか
+      2. **相手レンジの広さ**: 相手の open 位置が広いか狭いか
+
+      多くのプレイヤーは1だけを見て判断しますが、これでは精度70%程度。
+      2を考慮すると精度91%まで上がります。
+
+      **相手レンジの広さ（open 位置別）**
+
+      | 相手 open | 想定レンジ広さ | BB の戦略傾向 |
+      |----------|------------|-------------|
+      | UTG/UTG1/LJ/HJ（tight） | 15-22% | 中堅手は撤退、弱手はブラフキャッチで残す |
+      | CO（mid） | 25% | 中間判断 |
+      | BTN（wide） | 45% | 弱手は捨て、強い手で守る |
+      | SB（HU 構造） | 40% + OOP | 最大限コール（CBet 頻度が低いため） |
+
+      **なぜ相手 open 位置で判断が変わるのか**
+
+      相手の CBet レンジが強い（tight open）と、自分の中堅手は負け確率が高い → fold 寄り。
+      相手の CBet レンジが弱い（wide open）と、ブラフが含まれる → call/CR でキャッチ。
+      ただし「A/Kハイ × 型6」だけは逆転（次節で詳述）。
+
+      ## 5-4　絶対ライン: 相手位置に依存しないハンド
+
+      まず、相手 open 位置に関係なく判定が確定する「絶対ライン」のハンドから覚えます。
+
+      **常 fold（相手の open 位置に関係なくフォールド）**:
+
+      | hand × draw | board_type | F% 範囲 |
+      |-----------|------------|---------|
+      | 純エアー × no_draw | 全型 | 89-100% |
+      | Aハイ × no_draw | 型2/3/4/7 | 62-100% |
+      | Kハイ × no_draw | 型1/2/3/4/5 | 65-100% |
+      | ガットショット単独 | 型3 | 89-94% |
+      | A/Kハイ + BDFD | 型3 | 80-100% |
+      | 純エアー + BDFD | 型1/2/3/4/5 | 61-100% |
+
+      **常 call（相手位置に関係なくコール）**:
+
+      | hand × draw | board_type | F% 範囲 |
+      |-----------|------------|---------|
+      | TP 以上 | 全型 | 0-12% |
+      | 2nd ペア | 型1/2/5/6/7 | 0-13% |
+      | 3rd ペア | 型1/2/5/6 | 0-29% |
+      | 強ドロー（FD/OESD/Combo） | 全型 | 0-25% |
+      | ガットショット単独 | 型1/2/5/6 | 0-30% |
+      | OESD | 型2/4/5/6 | 0-13% |
+      | Aハイ × no_draw | 型6 のみ | 0-32%（CO/BTN だけ混合） |
+
+  - type: text
+    content: |
+      ## 5-5　境界ライン: 相手 open 位置で動くハンド
+
+      この節が本章の核心です。同じハンド × 同じボードでも、**相手の open 位置で判定が変わる**13個の境界パターンがあります。
+
+      **パターンA: 「相手 tight ほど fold↑」（中堅手の撤退）**
+
+      相手のレンジが狭く強い場合、自分の中堅手は負け確率が上がるため fold します。
+
+      | hand × draw | board_type | vs BTN | vs CO | vs HJ/EP |
+      |------------|------------|--------|-------|---------|
+      | 2nd ペア × no_draw | 型3 コネクト | 5% | 21% | 51-64% |
+      | 3rd ペア × no_draw | 型3/4 | 0-64% | 61-67% | 65-83% |
+      | OESD × 純エアー | 型3 | 18% | 26% | 34-56% |
+      | ガットショット単独 | 型4 | 37% | 62% | 89-96% |
+      | A/Kハイ × no_draw | 型5 | 63-70% | 70-77% | 85-94% |
+      | A/Kハイ + BDFD | 型1/4/5 | 18-29% | 56-64% | 41-100% |
+
+      これらは「相手の手が強くなる→自分の手は相対的に弱くなる」という素直なパターン。
+
+      **パターンB: 「相手 wide ほど fold↑」（A/K ハイ × 型6 の逆転）**
+
+      たった2-3個のパターンですが、**直感と真逆**なので要注意です。
+
+      | hand × draw | board_type | vs BTN | vs CO | vs HJ/EP |
+      |------------|------------|--------|-------|---------|
+      | Aハイ × no_draw | 型6 ロードライ | 32% | 41% | 0% |
+      | Kハイ × no_draw | 型6 ロードライ | 68% | 74% | 46-55% |
+      | 純エアー + BDFD | 型6 | 40% | 52% | 3% |
+
+      **なぜ逆転するか**:
+      BTN/CO の wide open レンジには Ax コンボが多く含まれます。
+      BB の Aハイ単独（A5o 等）はキッカー負けの確率が高く、fold せざるを得ない。
+      一方、UTG/HJ の tight open には Ax が少ないため、A5o でもエクイティ十分で call できます。
+
+      → **「ボード上の A/K に対するキッカー価値は相手レンジに依存する」**
+
+  - type: defense_position_matrix
+    title: "OOP守備 — オープナー別 fold% 詳細マトリクス（18 境界ハンド × 7 位置）"
+    openers: ['utg','utg1','lj','hj','co','btn','sb']
+
+  - type: text
+    content: |
+      **マトリクスの読み方**
+
+      左から右へ：UTG（最 tight）→ SB（HU 的）の順。
+      ●=fold優位(F≥60%)、○=混合(30-60%)、空白=コール優位(F<30%)。
+
+      横方向に色が揃っていれば「絶対ライン」、左右で違いがあれば「境界ライン」です。
+
+      ## 5-6　Step 2: エース支配原理（CR vs call）
+
+      Step 1 を通過した手（ペア以上 + 強ドロー）について、CR と call のどちらにするかを決めます。
+
+      ここで使うのが **エース支配原理（Ace Dominance Principle）** です。
+
+  - type: defense_conf_table
+    title: "OOP守備：ボード型別CR Confidence（エース支配原理）"
+    scenario: "SRP25_OOP"
+
+  - type: text
+    content: |
+      **CR 判定の核心**
+
+      - 守備 Conf = **HIGH** のボード（型2/5/6）: OOP の TP は相手レンジに支配される → 即 CR で守る
+      - 守備 Conf = **LOW** のボード（型1/3/4）: TP がほぼナッツ or ドロー多 → call でトラップ／ポット管理
+      - HP（hand power）≥ 7 が必要（= TP 以上）。HP < 7 なら HIGH ボードでも call に留める
+
+      **攻撃 Confidence と守備 Confidence は別物**
+
+      攻撃 Confidence は **RAS（レンジ優位）** で決まり、守備 Confidence は **TP 脆弱性**で決まります。
+      両者は独立した指標で、ボード型によって以下の組み合わせが生じます：
+
+      | ボード型 | 攻撃 Conf（RAS基準） | 守備 Conf（TP脆弱性基準） |
+      |---------|--------------------|----------------------|
+      | 型1 A 高 | **HIGH**（エアー CBet） | **LOW**（コールトラップ） |
+      | 型2 K/Q 高 | MID | **HIGH**（即 CR） |
+      | 型3 コネクト | LOW | LOW |
+      | 型5 J/T 高 | MID | **HIGH** |
+      | 型6 ロードライ | **HIGH** | **HIGH** |
+
+      型1 と型2 は完全に逆転、型6 だけ攻守両方 HIGH。これが「攻撃 HIGH = 守備 HIGH」ではない理由です。
+
+      ## 5-7　守備3択 判断フロー（完成形）
+
+      ```
+      Step 0: 相手の open 位置を確認
+        UTG/UTG1/LJ/HJ → tight ロジック
+        CO            → mid ロジック
+        BTN           → wide ロジック（BTN-specific）
+        SB            → SB 専用ロジック（HU 的）
+
+      Step 1: should_fold(hand, draw, board, opener) を判定
+        ペア以上                         → 次へ（fold しない）
+        FD / OESD / Combo               → 次へ
+        ガットショット型3                 → fold
+        ガットショット型4（tight 相手）    → fold
+        Aハイ × 型2-5/7                 → fold
+        Aハイ × 型6（CO だけ混合）       → call
+        Kハイ × 全型                    → fold
+        純エアー × no_draw              → fold
+
+      Step 2: CR / call 判定（fold しない場合）
+        HP ≥ 7 かつ ボード型 2/5/6     → CR（即守備）
+        HP ≥ 7 かつ ボード型 1/3/4     → call（トラップ／ポット管理）
+        HP < 7 かつ ボード型 2/5/6     → call（CR 閾値未満）
+        HP < 7 かつ ボード型 1/3/4     → call
+        ペア板（型7）                  → second_pair 例外参照
+      ```
+
+  - type: defense_opener_compare
+    title: "境界ハンド: 相手 open 別の予測 vs GTO 実測"
+    openers: ['utg','hj','co','btn','sb']
+    examples:
+      - hand: "A♠5♦"
+        board: "K♣9♦4♠"
+        hand_type: "ace_high"
+        draw_type: "no_draw"
+        board_type: 2
+        label: "Aハイ"
+      - hand: "A♠5♦"
+        board: "J♦7♣3♠"
+        hand_type: "ace_high"
+        draw_type: "no_draw"
+        board_type: 5
+        label: "Aハイ"
+      - hand: "A♠5♦"
+        board: "7♣4♦2♠"
+        hand_type: "ace_high"
+        draw_type: "no_draw"
+        board_type: 6
+        label: "Aハイ"
+      - hand: "Q♠J♦"
+        board: "K♣9♦4♠"
+        hand_type: "king_high"
+        draw_type: "no_draw"
+        board_type: 2
+        label: "Kハイ"
+      - hand: "K♠T♦"
+        board: "7♣4♦2♠"
+        hand_type: "king_high"
+        draw_type: "no_draw"
+        board_type: 6
+        label: "Kハイ"
+      - hand: "9♠8♦"
+        board: "T♣8♥6♠"
+        hand_type: "second_pair"
+        draw_type: "no_draw"
+        board_type: 3
+        label: "2ndペア"
+      - hand: "Q♠J♠"
+        board: "T♣8♦6♠"
+        hand_type: "no_made_hand"
+        draw_type: "gutshot"
+        board_type: 3
+        label: "GS単独"
+      - hand: "T♠9♠"
+        board: "8♣6♦4♥"
+        hand_type: "no_made_hand"
+        draw_type: "gutshot"
+        board_type: 4
+        label: "GS単独"
+      - hand: "T♠9♦"
+        board: "Q♣J♥3♠"
+        hand_type: "no_made_hand"
+        draw_type: "oesd"
+        board_type: 3
+        label: "OESD"
+
+  - type: text
+    content: |
+      **読み方**: `予測/実測` の形式。`F=フォールド`, `C=コール`, ●≥60%fold, ○30-60%, 空白<30%。
+
+      予測と実測が一致しない境界ケースが3-5個出ます。それは GTO 自体が混合戦略（30-60% fold）の領域で、
+      binary classifier が「最良の単一判断」を出した結果です。実戦ではどちらを選んでも EV 差は小さく、
+      迷ったらコール寄りで OK。
+
+  - type: defense_examples
+    title: "実戦判断例（vs BTN open、Deep SBR≥25）"
+    scenario: "SRP25_OOP"
+    spr_scenario: "SRP25"
+    opener: "btn"
+    examples:
+      - hand: "A♠9♦"
+        board: "A♣7♦2♠"
+        hand_type: "top_pair"
+        draw_type: "no_draw"
+        board_type: 1
+        label: "TPTK（型1 A-high）"
+      - hand: "K♠Q♦"
+        board: "K♣9♦4♠"
+        hand_type: "top_pair"
+        draw_type: "no_draw"
+        board_type: 2
+        label: "TPTK（型2 K-high）"
+      - hand: "T♠9♠"
+        board: "T♣8♦6♠"
+        hand_type: "top_pair"
+        draw_type: "no_draw"
+        board_type: 3
+        label: "TPWK（型3 コネクト）"
+      - hand: "J♠9♦"
+        board: "J♣7♦3♠"
+        hand_type: "top_pair"
+        draw_type: "no_draw"
+        board_type: 5
+        label: "TPMK（型5 J-high）"
+      - hand: "7♠6♦"
+        board: "7♣4♦2♠"
+        hand_type: "top_pair"
+        draw_type: "no_draw"
+        board_type: 6
+        label: "TPWK（型6 ロードライ）"
+      - hand: "9♠8♦"
+        board: "K♣9♦4♠"
+        hand_type: "second_pair"
+        draw_type: "no_draw"
+        board_type: 2
+        label: "セカンドペア（型2）"
+      - hand: "Q♠J♦"
+        board: "K♣9♦4♠"
+        hand_type: "king_high"
+        draw_type: "no_draw"
+        board_type: 2
+        label: "Kハイ（型2）"
+      - hand: "A♠5♦"
+        board: "K♣9♦4♠"
+        hand_type: "ace_high"
+        draw_type: "no_draw"
+        board_type: 2
+        label: "Aハイ（型2）"
+      - hand: "Q♠J♠"
+        board: "T♣8♦6♠"
+        hand_type: "no_made_hand"
+        draw_type: "gutshot"
+        board_type: 3
+        label: "ガットショット（型3 コネクト）"
+      - hand: "K♠Q♠"
+        board: "J♣8♦4♠"
+        hand_type: "no_made_hand"
+        draw_type: "gutshot"
+        board_type: 5
+        label: "ガットショット（型5）"
+
+  - type: text
+    content: |
+      ## 5-8　暗記すべき5つの境界
+
+      本章で学んだ内容のうち、実戦で迷いやすい5つの境界を抽出します。
+      これだけ覚えれば SRP 守備の8割をカバーできます。
+
+      1. **2nd ペア × 型3 コネクト**: BTN/SB call ↔ HJ/UTG fold
+      2. **3rd ペア × 型3/4**: BTN/SB call ↔ CO 以降 fold
+      3. **OESD 単独 × 型3**: BTN/SB/CO call ↔ HJ/UTG 混合〜fold
+      4. **ガットショット単独 × 型4**: BTN call ↔ CO 以降 fold
+      5. **Aハイ × 型6 ロードライ**: UTG/HJ/SB call ↔ CO/BTN 混合（キッカー逆転）
+
+      ## 5-9　直感を更新するための3つの誤解
+
+      **誤解1**: 「フォールドが多すぎる」
+
+      → レンジ全体で fold = 45-50% は事実ですが、その大半は**純エアー（戦いに参加しない手）**。
+      ペア以上はほぼ全部コール。直感「強い手は捨てない」は正しいです。
+
+      **誤解2**: 「BB ステアル相手は強気でコール」
+
+      → 半分正解。BTN/SB（wide）相手は確かに弱手を捨てて強手で守る方針。
+      しかし「A ハイ・K ハイ・GS 単独は意外と捨てる」ことも忘れずに。
+
+      **誤解3**: 「相手 tight なら降りる」
+
+      → 半分正解。中堅手（2nd/3rd ペア + コネクト板）は確かに捨てる。
+      しかし A/K ハイ × 型6 ロードライは逆に**残す**（相手レンジに Ax が少なく、A/K ハイがほぼナッツ）。
+
+      ## 5-10　精度実績
+
+      本章のロジックは GTO 実測データ n=114254 で検証済み：
+
+      | 相手 open | WRMSE | 2値分類精度 |
+      |----------|-------|------------|
+      | BTN | 19.8% | **96.0%** |
+      | UTG1 | 26.9% | 92.0% |
+      | LJ | 27.4% | 91.1% |
+      | CO | 27.5% | 90.5% |
+      | UTG | 27.8% | 90.4% |
+      | HJ | 30.0% | 90.0% |
+      | SB | 28.0% | 88.3% |
+      | **全体** | **26.7%** | **91.6%** |
+
+      BTN-BB は本書が最も想定する局面で 96% 精度。SB は HU 動学のため精度がやや低いですが、
+      それでも 88% でランダム判定を大幅に上回ります。
+
+summary_card:
+  - "守備は raise/call/fold の3択。これは独立した2問題（fold判定 + CR/call判定）に分解できる"
+  - "Step 1（fold）: ショーダウン価値 + 相手レンジで判定。相手 open 位置で境界が動く"
+  - "Step 2（CR/call）: エース支配原理（ボード型のみで決定、HP≥7 必要）"
+  - "絶対ライン（相手位置非依存）: 純エアー全 fold、TP以上全 call、強ドロー全 call"
+  - "境界A『tight ほど fold↑』: 2nd/3rd ペア型3-4、GS型4、A/Kハイ+BDFD、A/Kハイ型5"
+  - "境界B『wide ほど fold↑』（逆転）: A/Kハイ × 型6 ロードライ（キッカー価値）"
+  - "暗記5境界: 2ndペア型3 / 3rdペア型3-4 / OESD型3 / GS型4 / Aハイ型6"
+  - "BTN-BB SRP で予測精度96%。全シナリオ平均 91.6%（n=114254 検証）"

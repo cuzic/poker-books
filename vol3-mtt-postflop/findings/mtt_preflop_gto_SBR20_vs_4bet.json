@@ -1,0 +1,411 @@
+{
+  "gametype": "MTTGeneral",
+  "sbr": "20",
+  "depth": 20.125,
+  "phase": "vs_4bet",
+  "open_size": "2",
+  "results": {
+    "vs_4bet": {
+      "BB vs BTN shove": {
+        "pf": "F-F-F-F-F-R2-F-R5-RAI",
+        "actor": "BB",
+        "codes": {
+          "fold": "F",
+          "call": "C"
+        },
+        "raise_pct": 0.0,
+        "rows": [
+          {
+            "hc": "AA",
+            "total": 6.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 13.3
+          },
+          {
+            "hc": "KK",
+            "total": 5.3,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 11.7
+          },
+          {
+            "hc": "QQ",
+            "total": 3.3,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 7.3
+          },
+          {
+            "hc": "A6o",
+            "total": 2.6,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 5.8
+          },
+          {
+            "hc": "ATs",
+            "total": 2.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 4.9
+          },
+          {
+            "hc": "T9s",
+            "total": 2.1,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 4.6
+          },
+          {
+            "hc": "87s",
+            "total": 2.0,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 4.4
+          },
+          {
+            "hc": "AKs",
+            "total": 1.9,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 4.2
+          },
+          {
+            "hc": "AJs",
+            "total": 1.6,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 3.5
+          },
+          {
+            "hc": "J5o",
+            "total": 1.6,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 3.5
+          },
+          {
+            "hc": "98s",
+            "total": 1.4,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 3.1
+          },
+          {
+            "hc": "A7o",
+            "total": 1.3,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.9
+          },
+          {
+            "hc": "J7o",
+            "total": 1.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.7
+          },
+          {
+            "hc": "K4o",
+            "total": 1.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.7
+          },
+          {
+            "hc": "Q3o",
+            "total": 1.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.7
+          },
+          {
+            "hc": "A8o",
+            "total": 1.1,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.4
+          },
+          {
+            "hc": "Q4o",
+            "total": 1.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.2
+          },
+          {
+            "hc": "Q5o",
+            "total": 1.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.2
+          },
+          {
+            "hc": "T6o",
+            "total": 1.0,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.2
+          },
+          {
+            "hc": "JTs",
+            "total": 0.9,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 2.0
+          },
+          {
+            "hc": "K3o",
+            "total": 0.9,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 2.0
+          },
+          {
+            "hc": "Q2o",
+            "total": 0.8,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.8
+          },
+          {
+            "hc": "K5o",
+            "total": 0.6,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 1.3
+          },
+          {
+            "hc": "J4o",
+            "total": 0.4,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "JJ",
+            "total": 0.4,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "K2o",
+            "total": 0.4,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "K6o",
+            "total": 0.4,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.9
+          },
+          {
+            "hc": "44",
+            "total": 0.3,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.7
+          },
+          {
+            "hc": "55",
+            "total": 0.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "A5o",
+            "total": 0.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "J6o",
+            "total": 0.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "J9s",
+            "total": 0.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 0.4
+          },
+          {
+            "hc": "A4o",
+            "total": 0.1,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.2
+          },
+          {
+            "hc": "J3o",
+            "total": 0.1,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.2
+          },
+          {
+            "hc": "Q6o",
+            "total": 0.1,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 0.2
+          }
+        ]
+      },
+      "SB vs BTN shove": {
+        "pf": "F-F-F-F-F-R2-R5-F-RAI",
+        "actor": "SB",
+        "codes": {
+          "fold": "F",
+          "call": "C"
+        },
+        "raise_pct": 0.0,
+        "rows": [
+          {
+            "hc": "AA",
+            "total": 0.5,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 20.8
+          },
+          {
+            "hc": "KK",
+            "total": 0.4,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 16.7
+          },
+          {
+            "hc": "A6o",
+            "total": 0.3,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 12.5
+          },
+          {
+            "hc": "A3o",
+            "total": 0.2,
+            "fold": 1.0,
+            "call": 0.0,
+            "raise": 0.0,
+            "share": 8.3
+          },
+          {
+            "hc": "AKs",
+            "total": 0.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 8.3
+          },
+          {
+            "hc": "JTo",
+            "total": 0.2,
+            "fold": 0.5,
+            "call": 0.5,
+            "raise": 0.0,
+            "share": 8.3
+          },
+          {
+            "hc": "Q9s",
+            "total": 0.2,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 8.3
+          },
+          {
+            "hc": "44",
+            "total": 0.1,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 4.2
+          },
+          {
+            "hc": "A7o",
+            "total": 0.1,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 4.2
+          },
+          {
+            "hc": "A8s",
+            "total": 0.1,
+            "fold": 0.0,
+            "call": 1.0,
+            "raise": 0.0,
+            "share": 4.2
+          },
+          {
+            "hc": "QTo",
+            "total": 0.1,
+            "fold": 0.8,
+            "call": 0.2,
+            "raise": 0.0,
+            "share": 4.2
+          }
+        ]
+      },
+      "BTN vs CO shove": {
+        "pf": "F-F-F-F-R2-R4.5-F-F-RAI",
+        "actor": "BTN",
+        "codes": {
+          "fold": "F",
+          "call": "C"
+        },
+        "raise_pct": 0.0,
+        "rows": []
+      }
+    }
+  }
+}

@@ -1,0 +1,3330 @@
+{
+  "BTN_BB": {
+    "Ks7d2c": {
+      "type": "型1_ハイドライ",
+      "board": "Ks7d2c",
+      "desc": "K高・レインボー",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 152.0,
+          "bet_pct": 73.5
+        },
+        "ace_high": {
+          "combos": 144.0,
+          "bet_pct": 68.5
+        },
+        "third_pair": {
+          "combos": 27.8,
+          "bet_pct": 68.2
+        },
+        "second_pair": {
+          "combos": 30.2,
+          "bet_pct": 80.1
+        },
+        "underpair": {
+          "combos": 30.0,
+          "bet_pct": 69.6
+        },
+        "top_pair": {
+          "combos": 84.0,
+          "bet_pct": 78.2
+        },
+        "overpair": {
+          "combos": 6.0,
+          "bet_pct": 89.6
+        },
+        "two_pair": {
+          "combos": 5.5,
+          "bet_pct": 90.3
+        },
+        "set": {
+          "combos": 7.0,
+          "bet_pct": 99.1
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 363.3,
+          "bet_pct": 72.6
+        },
+        "twocards_bdfd": {
+          "combos": 123.2,
+          "bet_pct": 76.1
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 80.9,
+          "combos": 102.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 72.8,
+          "combos": 88.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 76.1,
+          "combos": 123.0
+        },
+        "エアー": {
+          "bet_pct": 71.1,
+          "combos": 296.0
+        }
+      }
+    },
+    "Qh8d3s": {
+      "type": "型2_ハイウェット",
+      "board": "Qh8d3s",
+      "desc": "Q高・2トーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 82.9,
+          "bet_pct": 76.9
+        },
+        "king_high": {
+          "combos": 70.5,
+          "bet_pct": 79.1
+        },
+        "ace_high": {
+          "combos": 133.0,
+          "bet_pct": 68.1
+        },
+        "low_pair": {
+          "combos": 2.0,
+          "bet_pct": 80.1
+        },
+        "third_pair": {
+          "combos": 39.0,
+          "bet_pct": 62.2
+        },
+        "second_pair": {
+          "combos": 40.5,
+          "bet_pct": 74.0
+        },
+        "underpair": {
+          "combos": 18.0,
+          "bet_pct": 68.4
+        },
+        "top_pair": {
+          "combos": 72.0,
+          "bet_pct": 79.8
+        },
+        "overpair": {
+          "combos": 12.0,
+          "bet_pct": 93.0
+        },
+        "two_pair": {
+          "combos": 3.7,
+          "bet_pct": 99.8
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 99.5
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 319.9,
+          "bet_pct": 74.0
+        },
+        "twocards_bdfd": {
+          "combos": 114.7,
+          "bet_pct": 73.2
+        },
+        "gutshot": {
+          "combos": 48.0,
+          "bet_pct": 81.1
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 84.0,
+          "combos": 97.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 68.2,
+          "combos": 98.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 75.5,
+          "combos": 163.0
+        },
+        "エアー": {
+          "bet_pct": 73.4,
+          "combos": 288.0
+        }
+      }
+    },
+    "Jd7s5c": {
+      "type": "型3_ロードライ",
+      "board": "Jd7s5c",
+      "desc": "J中・レインボー",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 81.5,
+          "bet_pct": 50.3
+        },
+        "king_high": {
+          "combos": 80.0,
+          "bet_pct": 49.0
+        },
+        "ace_high": {
+          "combos": 133.0,
+          "bet_pct": 17.2
+        },
+        "low_pair": {
+          "combos": 14.0,
+          "bet_pct": 0.0
+        },
+        "third_pair": {
+          "combos": 28.9,
+          "bet_pct": 7.0
+        },
+        "second_pair": {
+          "combos": 31.9,
+          "bet_pct": 25.6
+        },
+        "underpair": {
+          "combos": 18.0,
+          "bet_pct": 0.0
+        },
+        "top_pair": {
+          "combos": 66.0,
+          "bet_pct": 31.1
+        },
+        "overpair": {
+          "combos": 18.0,
+          "bet_pct": 78.0
+        },
+        "two_pair": {
+          "combos": 4.1,
+          "bet_pct": 99.9
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 87.8
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 343.5,
+          "bet_pct": 29.0
+        },
+        "twocards_bdfd": {
+          "combos": 110.9,
+          "bet_pct": 39.9
+        },
+        "gutshot": {
+          "combos": 22.6,
+          "bet_pct": 48.4
+        },
+        "oesd": {
+          "combos": 7.5,
+          "bet_pct": 68.5
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 48.0,
+          "combos": 97.0
+        },
+        "ドロー": {
+          "bet_pct": 68.5,
+          "combos": 8.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 12.9,
+          "combos": 79.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 41.3,
+          "combos": 134.0
+        },
+        "エアー": {
+          "bet_pct": 33.4,
+          "combos": 308.0
+        }
+      }
+    },
+    "Th9s8d": {
+      "type": "型4_ローウェット",
+      "board": "Th9s8d",
+      "desc": "低連携・2トーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 34.2,
+          "bet_pct": 53.2
+        },
+        "king_high": {
+          "combos": 58.5,
+          "bet_pct": 57.0
+        },
+        "ace_high": {
+          "combos": 133.0,
+          "bet_pct": 41.0
+        },
+        "low_pair": {
+          "combos": 32.0,
+          "bet_pct": 7.3
+        },
+        "third_pair": {
+          "combos": 35.6,
+          "bet_pct": 19.2
+        },
+        "second_pair": {
+          "combos": 51.0,
+          "bet_pct": 35.3
+        },
+        "top_pair": {
+          "combos": 54.0,
+          "bet_pct": 48.2
+        },
+        "overpair": {
+          "combos": 24.0,
+          "bet_pct": 61.2
+        },
+        "two_pair": {
+          "combos": 14.5,
+          "bet_pct": 52.0
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 71.6
+        },
+        "straight": {
+          "combos": 24.0,
+          "bet_pct": 68.0
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 186.2,
+          "bet_pct": 38.9
+        },
+        "twocards_bdfd": {
+          "combos": 52.9,
+          "bet_pct": 43.4
+        },
+        "gutshot": {
+          "combos": 112.0,
+          "bet_pct": 45.6
+        },
+        "oesd": {
+          "combos": 118.8,
+          "bet_pct": 48.8
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 56.6,
+          "combos": 126.0
+        },
+        "ドロー": {
+          "bet_pct": 48.8,
+          "combos": 119.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 28.7,
+          "combos": 87.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 44.9,
+          "combos": 165.0
+        },
+        "エアー": {
+          "bet_pct": 42.1,
+          "combos": 258.0
+        }
+      }
+    },
+    "Ah9h5h": {
+      "type": "型5_モノトーン",
+      "board": "Ah9h5h",
+      "desc": "A高モノトーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 88.7,
+          "bet_pct": 46.4
+        },
+        "king_high": {
+          "combos": 77.5,
+          "bet_pct": 40.7
+        },
+        "low_pair": {
+          "combos": 14.0,
+          "bet_pct": 32.3
+        },
+        "third_pair": {
+          "combos": 32.1,
+          "bet_pct": 21.6
+        },
+        "second_pair": {
+          "combos": 54.0,
+          "bet_pct": 26.8
+        },
+        "underpair": {
+          "combos": 24.0,
+          "bet_pct": 22.3
+        },
+        "top_pair": {
+          "combos": 111.8,
+          "bet_pct": 37.6
+        },
+        "two_pair": {
+          "combos": 18.0,
+          "bet_pct": 46.3
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 60.8
+        },
+        "flush": {
+          "combos": 25.7,
+          "bet_pct": 53.8
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 334.5,
+          "bet_pct": 35.7
+        },
+        "gutshot": {
+          "combos": 8.6,
+          "bet_pct": 50.5
+        },
+        "flush_draw": {
+          "combos": 90.2,
+          "bet_pct": 40.6
+        },
+        "nut_flush_draw": {
+          "combos": 21.6,
+          "bet_pct": 62.2
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 42.4,
+          "combos": 164.0
+        },
+        "ドロー": {
+          "bet_pct": 44.8,
+          "combos": 112.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 24.3,
+          "combos": 110.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 50.5,
+          "combos": 9.0
+        },
+        "エアー": {
+          "bet_pct": 42.9,
+          "combos": 180.0
+        }
+      }
+    },
+    "AsAcKd": {
+      "type": "型6_ペア高",
+      "board": "AsAcKd",
+      "desc": "AAKペア",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 176.3,
+          "bet_pct": 69.3
+        },
+        "third_pair": {
+          "combos": 62.0,
+          "bet_pct": 53.4
+        },
+        "second_pair": {
+          "combos": 79.9,
+          "bet_pct": 50.4
+        },
+        "trips": {
+          "combos": 82.5,
+          "bet_pct": 74.4
+        },
+        "fullhouse": {
+          "combos": 9.0,
+          "bet_pct": 83.5
+        },
+        "quads": {
+          "combos": 1.0,
+          "bet_pct": 30.3
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 262.4,
+          "bet_pct": 63.1
+        },
+        "twocards_bdfd": {
+          "combos": 100.3,
+          "bet_pct": 60.3
+        },
+        "gutshot": {
+          "combos": 48.0,
+          "bet_pct": 80.5
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 74.8,
+          "combos": 92.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 51.7,
+          "combos": 142.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 66.8,
+          "combos": 148.0
+        },
+        "エアー": {
+          "bet_pct": 69.3,
+          "combos": 176.0
+        }
+      }
+    },
+    "7s7d2c": {
+      "type": "型7_ペア低",
+      "board": "7s7d2c",
+      "desc": "77低ペア",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 152.0,
+          "bet_pct": 55.7
+        },
+        "king_high": {
+          "combos": 96.0,
+          "bet_pct": 38.9
+        },
+        "ace_high": {
+          "combos": 160.0,
+          "bet_pct": 50.3
+        },
+        "second_pair": {
+          "combos": 6.8,
+          "bet_pct": 81.4
+        },
+        "underpair": {
+          "combos": 24.0,
+          "bet_pct": 70.3
+        },
+        "overpair": {
+          "combos": 42.0,
+          "bet_pct": 65.1
+        },
+        "trips": {
+          "combos": 23.4,
+          "bet_pct": 78.5
+        },
+        "fullhouse": {
+          "combos": 1.0,
+          "bet_pct": 75.0
+        },
+        "quads": {
+          "combos": 1.0,
+          "bet_pct": 68.5
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 379.0,
+          "bet_pct": 53.0
+        },
+        "twocards_bdfd": {
+          "combos": 127.2,
+          "bet_pct": 55.9
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 69.9,
+          "combos": 67.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 72.8,
+          "combos": 31.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 55.9,
+          "combos": 127.0
+        },
+        "エアー": {
+          "bet_pct": 49.6,
+          "combos": 408.0
+        }
+      }
+    }
+  },
+  "CO_BB": {
+    "Ks7d2c": {
+      "type": "型1_ハイドライ",
+      "board": "Ks7d2c",
+      "desc": "K高・レインボー",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 76.2,
+          "bet_pct": 78.0
+        },
+        "ace_high": {
+          "combos": 110.6,
+          "bet_pct": 71.3
+        },
+        "third_pair": {
+          "combos": 19.0,
+          "bet_pct": 72.8
+        },
+        "second_pair": {
+          "combos": 11.4,
+          "bet_pct": 84.8
+        },
+        "underpair": {
+          "combos": 30.0,
+          "bet_pct": 66.5
+        },
+        "top_pair": {
+          "combos": 70.5,
+          "bet_pct": 79.7
+        },
+        "overpair": {
+          "combos": 6.0,
+          "bet_pct": 91.9
+        },
+        "two_pair": {
+          "combos": 2.9,
+          "bet_pct": 94.7
+        },
+        "set": {
+          "combos": 6.0,
+          "bet_pct": 97.5
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 249.1,
+          "bet_pct": 75.0
+        },
+        "twocards_bdfd": {
+          "combos": 83.6,
+          "bet_pct": 78.1
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 82.3,
+          "combos": 85.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 71.9,
+          "combos": 60.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 78.1,
+          "combos": 84.0
+        },
+        "エアー": {
+          "bet_pct": 74.0,
+          "combos": 187.0
+        }
+      }
+    },
+    "Qh8d3s": {
+      "type": "型2_ハイウェット",
+      "board": "Qh8d3s",
+      "desc": "Q高・2トーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 28.0,
+          "bet_pct": 70.1
+        },
+        "king_high": {
+          "combos": 59.8,
+          "bet_pct": 72.8
+        },
+        "ace_high": {
+          "combos": 107.8,
+          "bet_pct": 62.3
+        },
+        "third_pair": {
+          "combos": 27.2,
+          "bet_pct": 55.4
+        },
+        "second_pair": {
+          "combos": 21.7,
+          "bet_pct": 68.5
+        },
+        "underpair": {
+          "combos": 18.0,
+          "bet_pct": 59.5
+        },
+        "top_pair": {
+          "combos": 52.0,
+          "bet_pct": 73.1
+        },
+        "overpair": {
+          "combos": 12.0,
+          "bet_pct": 88.6
+        },
+        "two_pair": {
+          "combos": 2.0,
+          "bet_pct": 99.5
+        },
+        "set": {
+          "combos": 6.4,
+          "bet_pct": 94.7
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 234.4,
+          "bet_pct": 67.7
+        },
+        "twocards_bdfd": {
+          "combos": 76.4,
+          "bet_pct": 66.3
+        },
+        "gutshot": {
+          "combos": 24.0,
+          "bet_pct": 76.0
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 78.3,
+          "combos": 72.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 60.8,
+          "combos": 67.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 68.6,
+          "combos": 100.0
+        },
+        "エアー": {
+          "bet_pct": 66.6,
+          "combos": 196.0
+        }
+      }
+    },
+    "Jd7s5c": {
+      "type": "型3_ロードライ",
+      "board": "Jd7s5c",
+      "desc": "J中・レインボー",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 34.3,
+          "bet_pct": 57.1
+        },
+        "king_high": {
+          "combos": 59.8,
+          "bet_pct": 58.3
+        },
+        "ace_high": {
+          "combos": 98.6,
+          "bet_pct": 23.0
+        },
+        "low_pair": {
+          "combos": 4.0,
+          "bet_pct": 0.0
+        },
+        "third_pair": {
+          "combos": 22.4,
+          "bet_pct": 20.4
+        },
+        "second_pair": {
+          "combos": 13.3,
+          "bet_pct": 46.1
+        },
+        "underpair": {
+          "combos": 18.0,
+          "bet_pct": 3.9
+        },
+        "top_pair": {
+          "combos": 54.0,
+          "bet_pct": 33.4
+        },
+        "overpair": {
+          "combos": 18.0,
+          "bet_pct": 75.5
+        },
+        "two_pair": {
+          "combos": 0.8,
+          "bet_pct": 100.0
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 84.8
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 242.3,
+          "bet_pct": 34.4
+        },
+        "twocards_bdfd": {
+          "combos": 81.0,
+          "bet_pct": 49.5
+        },
+        "gutshot": {
+          "combos": 5.9,
+          "bet_pct": 53.3
+        },
+        "oesd": {
+          "combos": 3.0,
+          "bet_pct": 61.1
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 49.0,
+          "combos": 82.0
+        },
+        "ドロー": {
+          "bet_pct": 61.1,
+          "combos": 3.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 21.2,
+          "combos": 54.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 49.8,
+          "combos": 87.0
+        },
+        "エアー": {
+          "bet_pct": 39.2,
+          "combos": 197.0
+        }
+      }
+    },
+    "Th9s8d": {
+      "type": "型4_ローウェット",
+      "board": "Th9s8d",
+      "desc": "低連携・2トーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 3.3,
+          "bet_pct": 41.6
+        },
+        "king_high": {
+          "combos": 53.8,
+          "bet_pct": 57.0
+        },
+        "ace_high": {
+          "combos": 95.8,
+          "bet_pct": 32.1
+        },
+        "low_pair": {
+          "combos": 22.0,
+          "bet_pct": 1.0
+        },
+        "third_pair": {
+          "combos": 21.0,
+          "bet_pct": 8.7
+        },
+        "second_pair": {
+          "combos": 25.5,
+          "bet_pct": 6.8
+        },
+        "top_pair": {
+          "combos": 48.0,
+          "bet_pct": 22.6
+        },
+        "overpair": {
+          "combos": 24.0,
+          "bet_pct": 23.1
+        },
+        "two_pair": {
+          "combos": 4.5,
+          "bet_pct": 41.6
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 50.9
+        },
+        "straight": {
+          "combos": 18.0,
+          "bet_pct": 69.0
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 127.2,
+          "bet_pct": 24.9
+        },
+        "twocards_bdfd": {
+          "combos": 44.7,
+          "bet_pct": 46.0
+        },
+        "gutshot": {
+          "combos": 72.4,
+          "bet_pct": 32.1
+        },
+        "oesd": {
+          "combos": 80.6,
+          "bet_pct": 32.7
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 34.1,
+          "combos": 104.0
+        },
+        "ドロー": {
+          "bet_pct": 32.7,
+          "combos": 81.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 7.7,
+          "combos": 46.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 37.4,
+          "combos": 117.0
+        },
+        "エアー": {
+          "bet_pct": 36.0,
+          "combos": 175.0
+        }
+      }
+    },
+    "Ah9h5h": {
+      "type": "型5_モノトーン",
+      "board": "Ah9h5h",
+      "desc": "A高モノトーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 55.0,
+          "bet_pct": 61.5
+        },
+        "king_high": {
+          "combos": 61.3,
+          "bet_pct": 52.0
+        },
+        "low_pair": {
+          "combos": 4.0,
+          "bet_pct": 50.3
+        },
+        "third_pair": {
+          "combos": 22.4,
+          "bet_pct": 31.3
+        },
+        "second_pair": {
+          "combos": 18.8,
+          "bet_pct": 50.4
+        },
+        "underpair": {
+          "combos": 24.0,
+          "bet_pct": 33.0
+        },
+        "top_pair": {
+          "combos": 83.9,
+          "bet_pct": 49.6
+        },
+        "two_pair": {
+          "combos": 18.0,
+          "bet_pct": 58.4
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 74.1
+        },
+        "flush": {
+          "combos": 14.8,
+          "bet_pct": 67.8
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 232.3,
+          "bet_pct": 49.6
+        },
+        "gutshot": {
+          "combos": 0.4,
+          "bet_pct": 87.1
+        },
+        "flush_draw": {
+          "combos": 62.0,
+          "bet_pct": 53.3
+        },
+        "nut_flush_draw": {
+          "combos": 16.5,
+          "bet_pct": 74.7
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 54.8,
+          "combos": 126.0
+        },
+        "ドロー": {
+          "bet_pct": 57.8,
+          "combos": 78.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 37.4,
+          "combos": 65.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 87.1,
+          "combos": 0.0
+        },
+        "エアー": {
+          "bet_pct": 56.3,
+          "combos": 120.0
+        }
+      }
+    },
+    "AsAcKd": {
+      "type": "型6_ペア高",
+      "board": "AsAcKd",
+      "desc": "AAKペア",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 78.3,
+          "bet_pct": 86.9
+        },
+        "third_pair": {
+          "combos": 52.0,
+          "bet_pct": 68.8
+        },
+        "second_pair": {
+          "combos": 62.8,
+          "bet_pct": 68.9
+        },
+        "trips": {
+          "combos": 63.9,
+          "bet_pct": 86.7
+        },
+        "fullhouse": {
+          "combos": 9.0,
+          "bet_pct": 88.8
+        },
+        "quads": {
+          "combos": 1.0,
+          "bet_pct": 20.5
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 164.4,
+          "bet_pct": 77.3
+        },
+        "twocards_bdfd": {
+          "combos": 54.6,
+          "bet_pct": 73.9
+        },
+        "gutshot": {
+          "combos": 48.0,
+          "bet_pct": 90.3
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 86.1,
+          "combos": 74.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 68.9,
+          "combos": 115.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 81.6,
+          "combos": 103.0
+        },
+        "エアー": {
+          "bet_pct": 86.9,
+          "combos": 78.0
+        }
+      }
+    },
+    "7s7d2c": {
+      "type": "型7_ペア低",
+      "board": "7s7d2c",
+      "desc": "77低ペア",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 76.2,
+          "bet_pct": 58.0
+        },
+        "king_high": {
+          "combos": 78.0,
+          "bet_pct": 45.9
+        },
+        "ace_high": {
+          "combos": 126.6,
+          "bet_pct": 51.6
+        },
+        "second_pair": {
+          "combos": 4.3,
+          "bet_pct": 75.5
+        },
+        "underpair": {
+          "combos": 16.0,
+          "bet_pct": 63.9
+        },
+        "overpair": {
+          "combos": 42.0,
+          "bet_pct": 68.2
+        },
+        "trips": {
+          "combos": 9.6,
+          "bet_pct": 82.9
+        },
+        "quads": {
+          "combos": 1.0,
+          "bet_pct": 83.9
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 261.3,
+          "bet_pct": 55.3
+        },
+        "twocards_bdfd": {
+          "combos": 92.6,
+          "bet_pct": 56.1
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 71.2,
+          "combos": 53.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 66.4,
+          "combos": 20.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 56.1,
+          "combos": 93.0
+        },
+        "エアー": {
+          "bet_pct": 51.8,
+          "combos": 281.0
+        }
+      }
+    }
+  },
+  "HJ_BB": {
+    "Ks7d2c": {
+      "type": "型1_ハイドライ",
+      "board": "Ks7d2c",
+      "desc": "K高・レインボー",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 40.2,
+          "bet_pct": 92.0
+        },
+        "ace_high": {
+          "combos": 92.2,
+          "bet_pct": 87.9
+        },
+        "third_pair": {
+          "combos": 12.6,
+          "bet_pct": 85.4
+        },
+        "second_pair": {
+          "combos": 3.5,
+          "bet_pct": 94.1
+        },
+        "underpair": {
+          "combos": 30.0,
+          "bet_pct": 84.2
+        },
+        "top_pair": {
+          "combos": 63.5,
+          "bet_pct": 92.4
+        },
+        "overpair": {
+          "combos": 6.0,
+          "bet_pct": 98.0
+        },
+        "two_pair": {
+          "combos": 2.0,
+          "bet_pct": 91.8
+        },
+        "set": {
+          "combos": 6.0,
+          "bet_pct": 99.5
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 187.3,
+          "bet_pct": 89.3
+        },
+        "twocards_bdfd": {
+          "combos": 68.5,
+          "bet_pct": 90.8
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 93.4,
+          "combos": 78.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 85.3,
+          "combos": 46.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 90.8,
+          "combos": 68.0
+        },
+        "エアー": {
+          "bet_pct": 89.1,
+          "combos": 132.0
+        }
+      }
+    },
+    "Qh8d3s": {
+      "type": "型2_ハイウェット",
+      "board": "Qh8d3s",
+      "desc": "Q高・2トーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 9.8,
+          "bet_pct": 71.3
+        },
+        "king_high": {
+          "combos": 52.0,
+          "bet_pct": 72.8
+        },
+        "ace_high": {
+          "combos": 88.8,
+          "bet_pct": 64.2
+        },
+        "third_pair": {
+          "combos": 18.8,
+          "bet_pct": 55.1
+        },
+        "second_pair": {
+          "combos": 8.6,
+          "bet_pct": 71.2
+        },
+        "underpair": {
+          "combos": 18.0,
+          "bet_pct": 63.3
+        },
+        "top_pair": {
+          "combos": 45.2,
+          "bet_pct": 73.3
+        },
+        "overpair": {
+          "combos": 12.0,
+          "bet_pct": 85.6
+        },
+        "two_pair": {
+          "combos": 1.3,
+          "bet_pct": 95.9
+        },
+        "set": {
+          "combos": 6.1,
+          "bet_pct": 93.6
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 186.4,
+          "bet_pct": 68.3
+        },
+        "twocards_bdfd": {
+          "combos": 66.6,
+          "bet_pct": 70.2
+        },
+        "gutshot": {
+          "combos": 7.6,
+          "bet_pct": 80.0
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 78.0,
+          "combos": 65.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 61.4,
+          "combos": 45.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 71.2,
+          "combos": 74.0
+        },
+        "エアー": {
+          "bet_pct": 67.6,
+          "combos": 151.0
+        }
+      }
+    },
+    "Jd7s5c": {
+      "type": "型3_ロードライ",
+      "board": "Jd7s5c",
+      "desc": "J中・レインボー",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 16.6,
+          "bet_pct": 40.9
+        },
+        "king_high": {
+          "combos": 48.6,
+          "bet_pct": 46.7
+        },
+        "ace_high": {
+          "combos": 85.4,
+          "bet_pct": 19.3
+        },
+        "low_pair": {
+          "combos": 0.7,
+          "bet_pct": 0.0
+        },
+        "third_pair": {
+          "combos": 18.4,
+          "bet_pct": 8.6
+        },
+        "second_pair": {
+          "combos": 6.5,
+          "bet_pct": 46.4
+        },
+        "underpair": {
+          "combos": 18.0,
+          "bet_pct": 2.5
+        },
+        "top_pair": {
+          "combos": 40.4,
+          "bet_pct": 23.9
+        },
+        "overpair": {
+          "combos": 18.0,
+          "bet_pct": 55.6
+        },
+        "set": {
+          "combos": 7.4,
+          "bet_pct": 75.3
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 186.8,
+          "bet_pct": 24.8
+        },
+        "twocards_bdfd": {
+          "combos": 71.5,
+          "bet_pct": 40.4
+        },
+        "gutshot": {
+          "combos": 1.7,
+          "bet_pct": 57.9
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 38.4,
+          "combos": 66.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 11.8,
+          "combos": 43.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 40.8,
+          "combos": 73.0
+        },
+        "エアー": {
+          "bet_pct": 30.4,
+          "combos": 151.0
+        }
+      }
+    },
+    "Th9s8d": {
+      "type": "型4_ローウェット",
+      "board": "Th9s8d",
+      "desc": "低連携・2トーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 1.7,
+          "bet_pct": 44.9
+        },
+        "king_high": {
+          "combos": 48.6,
+          "bet_pct": 55.3
+        },
+        "ace_high": {
+          "combos": 78.9,
+          "bet_pct": 46.4
+        },
+        "low_pair": {
+          "combos": 15.6,
+          "bet_pct": 10.4
+        },
+        "third_pair": {
+          "combos": 10.6,
+          "bet_pct": 16.9
+        },
+        "second_pair": {
+          "combos": 17.9,
+          "bet_pct": 25.7
+        },
+        "top_pair": {
+          "combos": 33.2,
+          "bet_pct": 43.8
+        },
+        "overpair": {
+          "combos": 24.0,
+          "bet_pct": 52.5
+        },
+        "two_pair": {
+          "combos": 0.8,
+          "bet_pct": 96.8
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 59.6
+        },
+        "straight": {
+          "combos": 16.5,
+          "bet_pct": 68.1
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 98.3,
+          "bet_pct": 45.8
+        },
+        "twocards_bdfd": {
+          "combos": 37.8,
+          "bet_pct": 42.6
+        },
+        "gutshot": {
+          "combos": 64.1,
+          "bet_pct": 42.8
+        },
+        "oesd": {
+          "combos": 56.5,
+          "bet_pct": 50.1
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 53.3,
+          "combos": 84.0
+        },
+        "ドロー": {
+          "bet_pct": 50.1,
+          "combos": 56.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 22.4,
+          "combos": 28.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 42.7,
+          "combos": 102.0
+        },
+        "エアー": {
+          "bet_pct": 45.5,
+          "combos": 145.0
+        }
+      }
+    },
+    "Ah9h5h": {
+      "type": "型5_モノトーン",
+      "board": "Ah9h5h",
+      "desc": "A高モノトーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 27.7,
+          "bet_pct": 70.9
+        },
+        "king_high": {
+          "combos": 57.5,
+          "bet_pct": 64.2
+        },
+        "low_pair": {
+          "combos": 0.7,
+          "bet_pct": 30.5
+        },
+        "third_pair": {
+          "combos": 22.3,
+          "bet_pct": 44.8
+        },
+        "second_pair": {
+          "combos": 8.7,
+          "bet_pct": 59.4
+        },
+        "underpair": {
+          "combos": 24.0,
+          "bet_pct": 38.4
+        },
+        "top_pair": {
+          "combos": 68.6,
+          "bet_pct": 58.6
+        },
+        "two_pair": {
+          "combos": 14.4,
+          "bet_pct": 66.3
+        },
+        "set": {
+          "combos": 7.4,
+          "bet_pct": 79.9
+        },
+        "flush": {
+          "combos": 10.9,
+          "bet_pct": 74.8
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 181.4,
+          "bet_pct": 58.2
+        },
+        "gutshot": {
+          "combos": 0.4,
+          "bet_pct": 62.6
+        },
+        "flush_draw": {
+          "combos": 45.4,
+          "bet_pct": 59.7
+        },
+        "nut_flush_draw": {
+          "combos": 15.0,
+          "bet_pct": 80.8
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 63.0,
+          "combos": 101.0
+        },
+        "ドロー": {
+          "bet_pct": 64.9,
+          "combos": 60.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 44.3,
+          "combos": 55.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 62.6,
+          "combos": 0.0
+        },
+        "エアー": {
+          "bet_pct": 66.1,
+          "combos": 86.0
+        }
+      }
+    },
+    "AsAcKd": {
+      "type": "型6_ペア高",
+      "board": "AsAcKd",
+      "desc": "AAKペア",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 40.7,
+          "bet_pct": 95.8
+        },
+        "third_pair": {
+          "combos": 45.6,
+          "bet_pct": 92.0
+        },
+        "second_pair": {
+          "combos": 54.5,
+          "bet_pct": 90.1
+        },
+        "trips": {
+          "combos": 50.1,
+          "bet_pct": 96.6
+        },
+        "fullhouse": {
+          "combos": 9.0,
+          "bet_pct": 97.0
+        },
+        "quads": {
+          "combos": 1.0,
+          "bet_pct": 53.8
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 133.9,
+          "bet_pct": 93.4
+        },
+        "twocards_bdfd": {
+          "combos": 38.6,
+          "bet_pct": 90.7
+        },
+        "gutshot": {
+          "combos": 28.3,
+          "bet_pct": 97.4
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 95.9,
+          "combos": 60.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 91.0,
+          "combos": 100.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 93.5,
+          "combos": 67.0
+        },
+        "エアー": {
+          "bet_pct": 95.8,
+          "combos": 41.0
+        }
+      }
+    },
+    "7s7d2c": {
+      "type": "型7_ペア低",
+      "board": "7s7d2c",
+      "desc": "77低ペア",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 40.2,
+          "bet_pct": 54.7
+        },
+        "king_high": {
+          "combos": 68.6,
+          "bet_pct": 47.1
+        },
+        "ace_high": {
+          "combos": 108.2,
+          "bet_pct": 48.8
+        },
+        "second_pair": {
+          "combos": 3.0,
+          "bet_pct": 57.4
+        },
+        "underpair": {
+          "combos": 9.6,
+          "bet_pct": 47.5
+        },
+        "overpair": {
+          "combos": 42.0,
+          "bet_pct": 62.2
+        },
+        "trips": {
+          "combos": 4.3,
+          "bet_pct": 91.2
+        },
+        "quads": {
+          "combos": 1.0,
+          "bet_pct": 95.1
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 200.3,
+          "bet_pct": 53.0
+        },
+        "twocards_bdfd": {
+          "combos": 76.5,
+          "bet_pct": 49.9
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 65.5,
+          "combos": 47.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 49.9,
+          "combos": 13.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 49.9,
+          "combos": 76.0
+        },
+        "エアー": {
+          "bet_pct": 49.4,
+          "combos": 217.0
+        }
+      }
+    }
+  },
+  "UTG_BB": {
+    "Ks7d2c": {
+      "type": "型1_ハイドライ",
+      "board": "Ks7d2c",
+      "desc": "K高・レインボー",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 20.1,
+          "bet_pct": 96.9
+        },
+        "ace_high": {
+          "combos": 76.0,
+          "bet_pct": 95.6
+        },
+        "third_pair": {
+          "combos": 6.3,
+          "bet_pct": 91.9
+        },
+        "second_pair": {
+          "combos": 3.4,
+          "bet_pct": 94.1
+        },
+        "underpair": {
+          "combos": 30.0,
+          "bet_pct": 92.2
+        },
+        "top_pair": {
+          "combos": 55.3,
+          "bet_pct": 96.5
+        },
+        "overpair": {
+          "combos": 6.0,
+          "bet_pct": 99.3
+        },
+        "two_pair": {
+          "combos": 1.9,
+          "bet_pct": 98.9
+        },
+        "set": {
+          "combos": 5.2,
+          "bet_pct": 99.6
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 143.5,
+          "bet_pct": 95.3
+        },
+        "twocards_bdfd": {
+          "combos": 60.8,
+          "bet_pct": 96.3
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 97.0,
+          "combos": 68.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 92.3,
+          "combos": 40.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 96.3,
+          "combos": 61.0
+        },
+        "エアー": {
+          "bet_pct": 95.9,
+          "combos": 96.0
+        }
+      }
+    },
+    "Qh8d3s": {
+      "type": "型2_ハイウェット",
+      "board": "Qh8d3s",
+      "desc": "Q高・2トーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 6.6,
+          "bet_pct": 59.7
+        },
+        "king_high": {
+          "combos": 41.6,
+          "bet_pct": 58.7
+        },
+        "ace_high": {
+          "combos": 76.0,
+          "bet_pct": 47.6
+        },
+        "third_pair": {
+          "combos": 10.5,
+          "bet_pct": 37.1
+        },
+        "second_pair": {
+          "combos": 6.1,
+          "bet_pct": 61.5
+        },
+        "underpair": {
+          "combos": 18.0,
+          "bet_pct": 47.9
+        },
+        "top_pair": {
+          "combos": 34.4,
+          "bet_pct": 60.3
+        },
+        "overpair": {
+          "combos": 12.0,
+          "bet_pct": 72.1
+        },
+        "set": {
+          "combos": 6.0,
+          "bet_pct": 85.2
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 145.6,
+          "bet_pct": 52.6
+        },
+        "twocards_bdfd": {
+          "combos": 61.3,
+          "bet_pct": 58.0
+        },
+        "gutshot": {
+          "combos": 4.5,
+          "bet_pct": 73.6
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 65.9,
+          "combos": 52.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 47.0,
+          "combos": 35.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 59.1,
+          "combos": 66.0
+        },
+        "エアー": {
+          "bet_pct": 52.0,
+          "combos": 124.0
+        }
+      }
+    },
+    "Jd7s5c": {
+      "type": "型3_ロードライ",
+      "board": "Jd7s5c",
+      "desc": "J中・レインボー",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 7.8,
+          "bet_pct": 29.7
+        },
+        "king_high": {
+          "combos": 37.8,
+          "bet_pct": 42.5
+        },
+        "ace_high": {
+          "combos": 73.4,
+          "bet_pct": 16.5
+        },
+        "low_pair": {
+          "combos": 0.4,
+          "bet_pct": 0.0
+        },
+        "third_pair": {
+          "combos": 10.9,
+          "bet_pct": 2.5
+        },
+        "second_pair": {
+          "combos": 6.3,
+          "bet_pct": 21.7
+        },
+        "underpair": {
+          "combos": 18.0,
+          "bet_pct": 0.4
+        },
+        "top_pair": {
+          "combos": 31.9,
+          "bet_pct": 14.6
+        },
+        "overpair": {
+          "combos": 18.0,
+          "bet_pct": 31.7
+        },
+        "set": {
+          "combos": 5.8,
+          "bet_pct": 66.7
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 146.2,
+          "bet_pct": 19.7
+        },
+        "twocards_bdfd": {
+          "combos": 63.6,
+          "bet_pct": 27.3
+        },
+        "gutshot": {
+          "combos": 0.5,
+          "bet_pct": 64.1
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 25.6,
+          "combos": 56.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 4.9,
+          "combos": 35.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 27.6,
+          "combos": 64.0
+        },
+        "エアー": {
+          "bet_pct": 25.5,
+          "combos": 119.0
+        }
+      }
+    },
+    "Th9s8d": {
+      "type": "型4_ローウェット",
+      "board": "Th9s8d",
+      "desc": "低連携・2トーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 1.8,
+          "bet_pct": 32.9
+        },
+        "king_high": {
+          "combos": 42.6,
+          "bet_pct": 64.0
+        },
+        "ace_high": {
+          "combos": 74.7,
+          "bet_pct": 56.3
+        },
+        "low_pair": {
+          "combos": 7.6,
+          "bet_pct": 17.2
+        },
+        "third_pair": {
+          "combos": 6.1,
+          "bet_pct": 18.1
+        },
+        "second_pair": {
+          "combos": 9.5,
+          "bet_pct": 32.1
+        },
+        "top_pair": {
+          "combos": 26.2,
+          "bet_pct": 49.2
+        },
+        "overpair": {
+          "combos": 24.0,
+          "bet_pct": 63.8
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 71.6
+        },
+        "straight": {
+          "combos": 7.0,
+          "bet_pct": 85.2
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 68.5,
+          "bet_pct": 55.7
+        },
+        "twocards_bdfd": {
+          "combos": 33.9,
+          "bet_pct": 51.6
+        },
+        "gutshot": {
+          "combos": 52.9,
+          "bet_pct": 52.7
+        },
+        "oesd": {
+          "combos": 53.3,
+          "bet_pct": 61.2
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 61.3,
+          "combos": 66.0
+        },
+        "ドロー": {
+          "bet_pct": 61.2,
+          "combos": 53.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 26.6,
+          "combos": 16.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 52.3,
+          "combos": 87.0
+        },
+        "エアー": {
+          "bet_pct": 56.2,
+          "combos": 127.0
+        }
+      }
+    },
+    "Ah9h5h": {
+      "type": "型5_モノトーン",
+      "board": "Ah9h5h",
+      "desc": "A高モノトーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 12.0,
+          "bet_pct": 62.8
+        },
+        "king_high": {
+          "combos": 48.0,
+          "bet_pct": 59.8
+        },
+        "low_pair": {
+          "combos": 0.4,
+          "bet_pct": 8.7
+        },
+        "third_pair": {
+          "combos": 16.2,
+          "bet_pct": 37.7
+        },
+        "second_pair": {
+          "combos": 5.8,
+          "bet_pct": 60.2
+        },
+        "underpair": {
+          "combos": 24.0,
+          "bet_pct": 27.6
+        },
+        "top_pair": {
+          "combos": 66.0,
+          "bet_pct": 44.0
+        },
+        "two_pair": {
+          "combos": 8.0,
+          "bet_pct": 55.5
+        },
+        "set": {
+          "combos": 6.6,
+          "bet_pct": 73.7
+        },
+        "flush": {
+          "combos": 8.8,
+          "bet_pct": 67.9
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 148.5,
+          "bet_pct": 47.6
+        },
+        "gutshot": {
+          "combos": 0.4,
+          "bet_pct": 20.0
+        },
+        "flush_draw": {
+          "combos": 33.2,
+          "bet_pct": 47.9
+        },
+        "nut_flush_draw": {
+          "combos": 13.7,
+          "bet_pct": 73.8
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 49.6,
+          "combos": 89.0
+        },
+        "ドロー": {
+          "bet_pct": 55.5,
+          "combos": 47.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 35.3,
+          "combos": 46.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 20.0,
+          "combos": 0.0
+        },
+        "エアー": {
+          "bet_pct": 60.1,
+          "combos": 60.0
+        }
+      }
+    },
+    "AsAcKd": {
+      "type": "型6_ペア高",
+      "board": "AsAcKd",
+      "desc": "AAKペア",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 20.6,
+          "bet_pct": 96.5
+        },
+        "third_pair": {
+          "combos": 37.6,
+          "bet_pct": 93.7
+        },
+        "second_pair": {
+          "combos": 46.2,
+          "bet_pct": 91.9
+        },
+        "trips": {
+          "combos": 42.0,
+          "bet_pct": 97.0
+        },
+        "fullhouse": {
+          "combos": 9.0,
+          "bet_pct": 98.0
+        },
+        "quads": {
+          "combos": 1.0,
+          "bet_pct": 60.1
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 111.0,
+          "bet_pct": 94.6
+        },
+        "twocards_bdfd": {
+          "combos": 30.9,
+          "bet_pct": 92.4
+        },
+        "gutshot": {
+          "combos": 14.6,
+          "bet_pct": 97.6
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 96.5,
+          "combos": 52.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 92.7,
+          "combos": 84.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 94.1,
+          "combos": 46.0
+        },
+        "エアー": {
+          "bet_pct": 96.5,
+          "combos": 21.0
+        }
+      }
+    },
+    "7s7d2c": {
+      "type": "型7_ペア低",
+      "board": "7s7d2c",
+      "desc": "77低ペア",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 20.1,
+          "bet_pct": 56.1
+        },
+        "king_high": {
+          "combos": 57.7,
+          "bet_pct": 47.1
+        },
+        "ace_high": {
+          "combos": 92.0,
+          "bet_pct": 49.5
+        },
+        "second_pair": {
+          "combos": 3.0,
+          "bet_pct": 64.3
+        },
+        "underpair": {
+          "combos": 3.3,
+          "bet_pct": 48.0
+        },
+        "overpair": {
+          "combos": 42.0,
+          "bet_pct": 59.5
+        },
+        "trips": {
+          "combos": 4.2,
+          "bet_pct": 89.6
+        },
+        "quads": {
+          "combos": 0.7,
+          "bet_pct": 99.9
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 155.8,
+          "bet_pct": 53.4
+        },
+        "twocards_bdfd": {
+          "combos": 67.3,
+          "bet_pct": 50.3
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 62.8,
+          "combos": 47.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 55.8,
+          "combos": 6.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 50.3,
+          "combos": 67.0
+        },
+        "エアー": {
+          "bet_pct": 49.5,
+          "combos": 170.0
+        }
+      }
+    }
+  },
+  "SB_BB": {
+    "Ks7d2c": {
+      "type": "型1_ハイドライ",
+      "board": "Ks7d2c",
+      "desc": "K高・レインボー",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 576.0,
+          "bet_pct": 44.8
+        },
+        "ace_high": {
+          "combos": 144.0,
+          "bet_pct": 36.4
+        },
+        "third_pair": {
+          "combos": 144.0,
+          "bet_pct": 56.8
+        },
+        "second_pair": {
+          "combos": 120.0,
+          "bet_pct": 52.1
+        },
+        "underpair": {
+          "combos": 30.0,
+          "bet_pct": 42.7
+        },
+        "top_pair": {
+          "combos": 120.0,
+          "bet_pct": 59.3
+        },
+        "overpair": {
+          "combos": 6.0,
+          "bet_pct": 57.7
+        },
+        "two_pair": {
+          "combos": 27.0,
+          "bet_pct": 85.4
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 95.9
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 978.0,
+          "bet_pct": 47.1
+        },
+        "twocards_bdfd": {
+          "combos": 198.0,
+          "bet_pct": 57.2
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 65.6,
+          "combos": 162.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 53.4,
+          "combos": 294.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 57.2,
+          "combos": 198.0
+        },
+        "エアー": {
+          "bet_pct": 43.1,
+          "combos": 720.0
+        }
+      }
+    },
+    "Qh8d3s": {
+      "type": "型2_ハイウェット",
+      "board": "Qh8d3s",
+      "desc": "Q高・2トーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 448.0,
+          "bet_pct": 50.0
+        },
+        "king_high": {
+          "combos": 128.0,
+          "bet_pct": 30.3
+        },
+        "ace_high": {
+          "combos": 144.0,
+          "bet_pct": 37.2
+        },
+        "low_pair": {
+          "combos": 6.0,
+          "bet_pct": 1.4
+        },
+        "third_pair": {
+          "combos": 144.0,
+          "bet_pct": 51.0
+        },
+        "second_pair": {
+          "combos": 120.0,
+          "bet_pct": 47.9
+        },
+        "underpair": {
+          "combos": 18.0,
+          "bet_pct": 44.2
+        },
+        "top_pair": {
+          "combos": 120.0,
+          "bet_pct": 53.8
+        },
+        "overpair": {
+          "combos": 12.0,
+          "bet_pct": 68.5
+        },
+        "two_pair": {
+          "combos": 27.0,
+          "bet_pct": 87.0
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 99.8
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 939.0,
+          "bet_pct": 45.6
+        },
+        "twocards_bdfd": {
+          "combos": 189.0,
+          "bet_pct": 55.4
+        },
+        "gutshot": {
+          "combos": 48.0,
+          "bet_pct": 58.3
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 62.7,
+          "combos": 168.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 49.2,
+          "combos": 282.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 56.0,
+          "combos": 237.0
+        },
+        "エアー": {
+          "bet_pct": 43.6,
+          "combos": 726.0
+        }
+      }
+    },
+    "Jd7s5c": {
+      "type": "型3_ロードライ",
+      "board": "Jd7s5c",
+      "desc": "J中・レインボー",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 448.0,
+          "bet_pct": 45.2
+        },
+        "king_high": {
+          "combos": 128.0,
+          "bet_pct": 33.6
+        },
+        "ace_high": {
+          "combos": 144.0,
+          "bet_pct": 8.0
+        },
+        "low_pair": {
+          "combos": 18.0,
+          "bet_pct": 0.0
+        },
+        "third_pair": {
+          "combos": 126.0,
+          "bet_pct": 5.7
+        },
+        "second_pair": {
+          "combos": 120.0,
+          "bet_pct": 23.2
+        },
+        "underpair": {
+          "combos": 18.0,
+          "bet_pct": 1.8
+        },
+        "top_pair": {
+          "combos": 120.0,
+          "bet_pct": 47.8
+        },
+        "overpair": {
+          "combos": 18.0,
+          "bet_pct": 87.8
+        },
+        "two_pair": {
+          "combos": 27.0,
+          "bet_pct": 92.9
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 99.9
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 861.0,
+          "bet_pct": 26.2
+        },
+        "twocards_bdfd": {
+          "combos": 171.0,
+          "bet_pct": 46.1
+        },
+        "gutshot": {
+          "combos": 96.0,
+          "bet_pct": 70.3
+        },
+        "oesd": {
+          "combos": 48.0,
+          "bet_pct": 57.7
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 61.6,
+          "combos": 174.0
+        },
+        "ドロー": {
+          "bet_pct": 57.7,
+          "combos": 48.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 13.4,
+          "combos": 264.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 54.8,
+          "combos": 267.0
+        },
+        "エアー": {
+          "bet_pct": 34.8,
+          "combos": 738.0
+        }
+      }
+    },
+    "Th9s8d": {
+      "type": "型4_ローウェット",
+      "board": "Th9s8d",
+      "desc": "低連携・2トーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 400.0,
+          "bet_pct": 40.9
+        },
+        "king_high": {
+          "combos": 128.0,
+          "bet_pct": 43.3
+        },
+        "ace_high": {
+          "combos": 144.0,
+          "bet_pct": 24.6
+        },
+        "low_pair": {
+          "combos": 36.0,
+          "bet_pct": 0.2
+        },
+        "third_pair": {
+          "combos": 120.0,
+          "bet_pct": 20.0
+        },
+        "second_pair": {
+          "combos": 120.0,
+          "bet_pct": 31.5
+        },
+        "top_pair": {
+          "combos": 120.0,
+          "bet_pct": 44.5
+        },
+        "overpair": {
+          "combos": 24.0,
+          "bet_pct": 73.8
+        },
+        "two_pair": {
+          "combos": 27.0,
+          "bet_pct": 47.7
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 79.3
+        },
+        "straight": {
+          "combos": 48.0,
+          "bet_pct": 70.7
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 483.0,
+          "bet_pct": 31.7
+        },
+        "twocards_bdfd": {
+          "combos": 93.0,
+          "bet_pct": 41.6
+        },
+        "gutshot": {
+          "combos": 276.0,
+          "bet_pct": 37.0
+        },
+        "oesd": {
+          "combos": 324.0,
+          "bet_pct": 45.6
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 54.9,
+          "combos": 228.0
+        },
+        "ドロー": {
+          "bet_pct": 45.6,
+          "combos": 324.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 25.8,
+          "combos": 240.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 38.2,
+          "combos": 369.0
+        },
+        "エアー": {
+          "bet_pct": 35.9,
+          "combos": 708.0
+        }
+      }
+    },
+    "Ah9h5h": {
+      "type": "型5_モノトーン",
+      "board": "Ah9h5h",
+      "desc": "A高モノトーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 540.0,
+          "bet_pct": 20.0
+        },
+        "king_high": {
+          "combos": 135.0,
+          "bet_pct": 10.1
+        },
+        "low_pair": {
+          "combos": 18.0,
+          "bet_pct": 0.1
+        },
+        "third_pair": {
+          "combos": 138.0,
+          "bet_pct": 3.8
+        },
+        "second_pair": {
+          "combos": 120.0,
+          "bet_pct": 0.0
+        },
+        "underpair": {
+          "combos": 24.0,
+          "bet_pct": 0.1
+        },
+        "top_pair": {
+          "combos": 120.0,
+          "bet_pct": 12.9
+        },
+        "two_pair": {
+          "combos": 27.0,
+          "bet_pct": 32.4
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 75.2
+        },
+        "flush": {
+          "combos": 45.0,
+          "bet_pct": 39.9
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 732.0,
+          "bet_pct": 11.5
+        },
+        "gutshot": {
+          "combos": 54.0,
+          "bet_pct": 69.6
+        },
+        "flush_draw": {
+          "combos": 315.0,
+          "bet_pct": 9.2
+        },
+        "nut_flush_draw": {
+          "combos": 39.0,
+          "bet_pct": 41.6
+        },
+        "combo_draw": {
+          "combos": 36.0,
+          "bet_pct": 25.3
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 24.4,
+          "combos": 201.0
+        },
+        "ドロー": {
+          "bet_pct": 13.9,
+          "combos": 390.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 1.9,
+          "combos": 282.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 69.6,
+          "combos": 54.0
+        },
+        "エアー": {
+          "bet_pct": 17.6,
+          "combos": 693.0
+        }
+      }
+    },
+    "AsAcKd": {
+      "type": "型6_ペア高",
+      "board": "AsAcKd",
+      "desc": "AAKペア",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 880.0,
+          "bet_pct": 35.0
+        },
+        "third_pair": {
+          "combos": 66.0,
+          "bet_pct": 22.2
+        },
+        "second_pair": {
+          "combos": 132.0,
+          "bet_pct": 35.1
+        },
+        "trips": {
+          "combos": 88.0,
+          "bet_pct": 52.3
+        },
+        "fullhouse": {
+          "combos": 9.0,
+          "bet_pct": 77.1
+        },
+        "quads": {
+          "combos": 1.0,
+          "bet_pct": 98.2
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 939.0,
+          "bet_pct": 32.6
+        },
+        "twocards_bdfd": {
+          "combos": 189.0,
+          "bet_pct": 44.0
+        },
+        "gutshot": {
+          "combos": 48.0,
+          "bet_pct": 69.9
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 55.0,
+          "combos": 98.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 30.8,
+          "combos": 198.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 49.2,
+          "combos": 237.0
+        },
+        "エアー": {
+          "bet_pct": 35.0,
+          "combos": 880.0
+        }
+      }
+    },
+    "7s7d2c": {
+      "type": "型7_ペア低",
+      "board": "7s7d2c",
+      "desc": "77低ペア",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 576.0,
+          "bet_pct": 46.6
+        },
+        "king_high": {
+          "combos": 144.0,
+          "bet_pct": 18.2
+        },
+        "ace_high": {
+          "combos": 160.0,
+          "bet_pct": 38.3
+        },
+        "second_pair": {
+          "combos": 132.0,
+          "bet_pct": 56.4
+        },
+        "underpair": {
+          "combos": 24.0,
+          "bet_pct": 74.9
+        },
+        "overpair": {
+          "combos": 42.0,
+          "bet_pct": 39.5
+        },
+        "trips": {
+          "combos": 88.0,
+          "bet_pct": 70.2
+        },
+        "fullhouse": {
+          "combos": 9.0,
+          "bet_pct": 44.7
+        },
+        "quads": {
+          "combos": 1.0,
+          "bet_pct": 64.4
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 978.0,
+          "bet_pct": 44.3
+        },
+        "twocards_bdfd": {
+          "combos": 198.0,
+          "bet_pct": 49.4
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 59.3,
+          "combos": 140.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 59.2,
+          "combos": 156.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 49.4,
+          "combos": 198.0
+        },
+        "エアー": {
+          "bet_pct": 40.4,
+          "combos": 880.0
+        }
+      }
+    }
+  },
+  "BTN_SB": {
+    "Ks7d2c": {
+      "type": "型1_ハイドライ",
+      "board": "Ks7d2c",
+      "desc": "K高・レインボー",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 152.0,
+          "bet_pct": 43.3
+        },
+        "ace_high": {
+          "combos": 144.0,
+          "bet_pct": 31.2
+        },
+        "third_pair": {
+          "combos": 27.8,
+          "bet_pct": 21.0
+        },
+        "second_pair": {
+          "combos": 30.2,
+          "bet_pct": 68.4
+        },
+        "underpair": {
+          "combos": 30.0,
+          "bet_pct": 44.1
+        },
+        "top_pair": {
+          "combos": 84.0,
+          "bet_pct": 58.8
+        },
+        "overpair": {
+          "combos": 6.0,
+          "bet_pct": 80.0
+        },
+        "two_pair": {
+          "combos": 5.5,
+          "bet_pct": 56.3
+        },
+        "set": {
+          "combos": 7.0,
+          "bet_pct": 94.5
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 363.3,
+          "bet_pct": 39.7
+        },
+        "twocards_bdfd": {
+          "combos": 123.2,
+          "bet_pct": 56.8
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 62.3,
+          "combos": 102.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 45.1,
+          "combos": 88.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 56.8,
+          "combos": 123.0
+        },
+        "エアー": {
+          "bet_pct": 37.4,
+          "combos": 296.0
+        }
+      }
+    },
+    "Qh8d3s": {
+      "type": "型2_ハイウェット",
+      "board": "Qh8d3s",
+      "desc": "Q高・2トーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 82.9,
+          "bet_pct": 46.8
+        },
+        "king_high": {
+          "combos": 70.5,
+          "bet_pct": 49.7
+        },
+        "ace_high": {
+          "combos": 133.0,
+          "bet_pct": 36.2
+        },
+        "low_pair": {
+          "combos": 2.0,
+          "bet_pct": 0.4
+        },
+        "third_pair": {
+          "combos": 39.0,
+          "bet_pct": 26.9
+        },
+        "second_pair": {
+          "combos": 40.5,
+          "bet_pct": 61.6
+        },
+        "underpair": {
+          "combos": 18.0,
+          "bet_pct": 37.9
+        },
+        "top_pair": {
+          "combos": 72.0,
+          "bet_pct": 55.5
+        },
+        "overpair": {
+          "combos": 12.0,
+          "bet_pct": 82.2
+        },
+        "two_pair": {
+          "combos": 3.7,
+          "bet_pct": 73.9
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 91.4
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 319.9,
+          "bet_pct": 41.8
+        },
+        "twocards_bdfd": {
+          "combos": 114.7,
+          "bet_pct": 54.4
+        },
+        "gutshot": {
+          "combos": 48.0,
+          "bet_pct": 60.0
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 62.9,
+          "combos": 97.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 43.3,
+          "combos": 98.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 56.1,
+          "combos": 163.0
+        },
+        "エアー": {
+          "bet_pct": 42.3,
+          "combos": 288.0
+        }
+      }
+    },
+    "Jd7s5c": {
+      "type": "型3_ロードライ",
+      "board": "Jd7s5c",
+      "desc": "J中・レインボー",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 81.5,
+          "bet_pct": 53.6
+        },
+        "king_high": {
+          "combos": 80.0,
+          "bet_pct": 55.4
+        },
+        "ace_high": {
+          "combos": 133.0,
+          "bet_pct": 15.9
+        },
+        "low_pair": {
+          "combos": 14.0,
+          "bet_pct": 0.1
+        },
+        "third_pair": {
+          "combos": 28.9,
+          "bet_pct": 5.4
+        },
+        "second_pair": {
+          "combos": 31.9,
+          "bet_pct": 34.2
+        },
+        "underpair": {
+          "combos": 18.0,
+          "bet_pct": 17.5
+        },
+        "top_pair": {
+          "combos": 66.0,
+          "bet_pct": 31.8
+        },
+        "overpair": {
+          "combos": 18.0,
+          "bet_pct": 80.9
+        },
+        "two_pair": {
+          "combos": 4.1,
+          "bet_pct": 59.1
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 80.3
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 343.5,
+          "bet_pct": 28.7
+        },
+        "twocards_bdfd": {
+          "combos": 110.9,
+          "bet_pct": 46.2
+        },
+        "gutshot": {
+          "combos": 22.6,
+          "bet_pct": 60.6
+        },
+        "oesd": {
+          "combos": 7.5,
+          "bet_pct": 85.5
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 46.6,
+          "combos": 97.0
+        },
+        "ドロー": {
+          "bet_pct": 85.5,
+          "combos": 8.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 19.8,
+          "combos": 79.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 48.6,
+          "combos": 134.0
+        },
+        "エアー": {
+          "bet_pct": 35.4,
+          "combos": 308.0
+        }
+      }
+    },
+    "Th9s8d": {
+      "type": "型4_ローウェット",
+      "board": "Th9s8d",
+      "desc": "低連携・2トーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 34.2,
+          "bet_pct": 20.5
+        },
+        "king_high": {
+          "combos": 58.5,
+          "bet_pct": 48.8
+        },
+        "ace_high": {
+          "combos": 133.0,
+          "bet_pct": 15.7
+        },
+        "low_pair": {
+          "combos": 32.0,
+          "bet_pct": 17.8
+        },
+        "third_pair": {
+          "combos": 35.6,
+          "bet_pct": 10.2
+        },
+        "second_pair": {
+          "combos": 51.0,
+          "bet_pct": 9.3
+        },
+        "top_pair": {
+          "combos": 54.0,
+          "bet_pct": 4.6
+        },
+        "overpair": {
+          "combos": 24.0,
+          "bet_pct": 12.8
+        },
+        "two_pair": {
+          "combos": 14.5,
+          "bet_pct": 32.9
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 59.8
+        },
+        "straight": {
+          "combos": 24.0,
+          "bet_pct": 56.0
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 186.2,
+          "bet_pct": 18.2
+        },
+        "twocards_bdfd": {
+          "combos": 52.9,
+          "bet_pct": 37.4
+        },
+        "gutshot": {
+          "combos": 112.0,
+          "bet_pct": 16.5
+        },
+        "oesd": {
+          "combos": 118.8,
+          "bet_pct": 23.2
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 23.2,
+          "combos": 126.0
+        },
+        "ドロー": {
+          "bet_pct": 23.2,
+          "combos": 119.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 9.7,
+          "combos": 87.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 23.2,
+          "combos": 165.0
+        },
+        "エアー": {
+          "bet_pct": 24.1,
+          "combos": 258.0
+        }
+      }
+    },
+    "Ah9h5h": {
+      "type": "型5_モノトーン",
+      "board": "Ah9h5h",
+      "desc": "A高モノトーン",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 88.7,
+          "bet_pct": 23.5
+        },
+        "king_high": {
+          "combos": 77.5,
+          "bet_pct": 29.9
+        },
+        "low_pair": {
+          "combos": 14.0,
+          "bet_pct": 34.0
+        },
+        "third_pair": {
+          "combos": 32.1,
+          "bet_pct": 20.9
+        },
+        "second_pair": {
+          "combos": 54.0,
+          "bet_pct": 6.4
+        },
+        "underpair": {
+          "combos": 24.0,
+          "bet_pct": 0.2
+        },
+        "top_pair": {
+          "combos": 111.8,
+          "bet_pct": 0.2
+        },
+        "two_pair": {
+          "combos": 18.0,
+          "bet_pct": 17.0
+        },
+        "set": {
+          "combos": 9.0,
+          "bet_pct": 39.6
+        },
+        "flush": {
+          "combos": 25.7,
+          "bet_pct": 43.6
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 334.5,
+          "bet_pct": 14.7
+        },
+        "gutshot": {
+          "combos": 8.6,
+          "bet_pct": 33.8
+        },
+        "flush_draw": {
+          "combos": 90.2,
+          "bet_pct": 13.0
+        },
+        "nut_flush_draw": {
+          "combos": 21.6,
+          "bet_pct": 60.3
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 11.0,
+          "combos": 164.0
+        },
+        "ドロー": {
+          "bet_pct": 22.1,
+          "combos": 112.0
+        },
+        "ブラフキャッチャー": {
+          "bet_pct": 9.3,
+          "combos": 110.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 33.8,
+          "combos": 9.0
+        },
+        "エアー": {
+          "bet_pct": 27.1,
+          "combos": 180.0
+        }
+      }
+    },
+    "AsAcKd": {
+      "type": "型6_ペア高",
+      "board": "AsAcKd",
+      "desc": "AAKペア",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 176.3,
+          "bet_pct": 44.4
+        },
+        "third_pair": {
+          "combos": 62.0,
+          "bet_pct": 42.6
+        },
+        "second_pair": {
+          "combos": 79.9,
+          "bet_pct": 37.8
+        },
+        "trips": {
+          "combos": 82.5,
+          "bet_pct": 64.7
+        },
+        "fullhouse": {
+          "combos": 9.0,
+          "bet_pct": 62.7
+        },
+        "quads": {
+          "combos": 1.0,
+          "bet_pct": 0.5
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 262.4,
+          "bet_pct": 43.3
+        },
+        "twocards_bdfd": {
+          "combos": 100.3,
+          "bet_pct": 44.2
+        },
+        "gutshot": {
+          "combos": 48.0,
+          "bet_pct": 75.1
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 63.8,
+          "combos": 92.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 39.9,
+          "combos": 142.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 54.2,
+          "combos": 148.0
+        },
+        "エアー": {
+          "bet_pct": 44.4,
+          "combos": 176.0
+        }
+      }
+    },
+    "7s7d2c": {
+      "type": "型7_ペア低",
+      "board": "7s7d2c",
+      "desc": "77低ペア",
+      "hand_cats": {
+        "no_made_hand": {
+          "combos": 152.0,
+          "bet_pct": 64.9
+        },
+        "king_high": {
+          "combos": 96.0,
+          "bet_pct": 69.0
+        },
+        "ace_high": {
+          "combos": 160.0,
+          "bet_pct": 47.5
+        },
+        "second_pair": {
+          "combos": 6.8,
+          "bet_pct": 73.9
+        },
+        "underpair": {
+          "combos": 24.0,
+          "bet_pct": 20.3
+        },
+        "overpair": {
+          "combos": 42.0,
+          "bet_pct": 82.3
+        },
+        "trips": {
+          "combos": 23.4,
+          "bet_pct": 89.5
+        },
+        "fullhouse": {
+          "combos": 1.0,
+          "bet_pct": 72.2
+        },
+        "quads": {
+          "combos": 1.0,
+          "bet_pct": 42.0
+        }
+      },
+      "draw_cats": {
+        "no_draw": {
+          "combos": 379.0,
+          "bet_pct": 59.3
+        },
+        "twocards_bdfd": {
+          "combos": 127.2,
+          "bet_pct": 65.0
+        }
+      },
+      "5cat": {
+        "バリュー": {
+          "bet_pct": 84.1,
+          "combos": 67.0
+        },
+        "ドロー": null,
+        "ブラフキャッチャー": {
+          "bet_pct": 32.1,
+          "combos": 31.0
+        },
+        "ウィークドロー": {
+          "bet_pct": 65.0,
+          "combos": 127.0
+        },
+        "エアー": {
+          "bet_pct": 59.0,
+          "combos": 408.0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1800 @@
+{
+  "scenario": "SRP BTN vs BB (Middle(SBR20))",
+  "sbr": "20",
+  "results": [
+    {
+      "type": "型1_ハイドライ",
+      "flop": "Ks7d2c",
+      "desc": "K高・レインボー",
+      "ip_cbet": {
+        "total_bet_pct": 68.6,
+        "bet_code": "R1.8",
+        "by_category": [
+          {
+            "hc": "set",
+            "total": 5.4,
+            "share": 1.6,
+            "check": 79.5,
+            "bet33": 19.2,
+            "bet50": 1.2,
+            "bet75": 0.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "two_pair",
+            "total": 5.1,
+            "share": 1.5,
+            "check": 26.8,
+            "bet33": 71.6,
+            "bet50": 1.3,
+            "bet75": 0.3,
+            "betover": 0.0
+          },
+          {
+            "hc": "overpair",
+            "total": 5.0,
+            "share": 1.5,
+            "check": 14.0,
+            "bet33": 83.8,
+            "bet50": 1.5,
+            "bet75": 0.8,
+            "betover": 0.0
+          },
+          {
+            "hc": "top_pair",
+            "total": 58.2,
+            "share": 17.3,
+            "check": 8.4,
+            "bet33": 85.7,
+            "bet50": 4.3,
+            "bet75": 1.6,
+            "betover": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 19.6,
+            "share": 5.8,
+            "check": 36.2,
+            "bet33": 61.6,
+            "bet50": 1.8,
+            "bet75": 0.4,
+            "betover": 0.0
+          },
+          {
+            "hc": "underpair",
+            "total": 23.9,
+            "share": 7.1,
+            "check": 38.4,
+            "bet33": 57.6,
+            "bet50": 2.9,
+            "bet75": 1.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "third_pair",
+            "total": 12.7,
+            "share": 3.8,
+            "check": 75.0,
+            "bet33": 24.7,
+            "bet50": 0.3,
+            "bet75": 0.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "ace_high",
+            "total": 84.6,
+            "share": 25.2,
+            "check": 36.5,
+            "bet33": 61.4,
+            "bet50": 1.8,
+            "bet75": 0.3,
+            "betover": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 121.5,
+            "share": 36.2,
+            "check": 30.9,
+            "bet33": 65.6,
+            "bet50": 2.6,
+            "bet75": 0.9,
+            "betover": 0.0
+          }
+        ]
+      },
+      "oop_defense": {
+        "call_pct": 19.9,
+        "cr_pct": 30.3,
+        "fold_pct": 49.8,
+        "by_category": [
+          {
+            "hc": "two_pair",
+            "total": 17.0,
+            "share": 2.1,
+            "fold": 0.0,
+            "call": 74.9,
+            "bet33": 24.7,
+            "bet50": 0.3,
+            "betover": 0.0
+          },
+          {
+            "hc": "top_pair",
+            "total": 95.8,
+            "share": 12.0,
+            "fold": 0.0,
+            "call": 12.2,
+            "bet33": 86.7,
+            "bet50": 1.1,
+            "betover": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 104.3,
+            "share": 13.1,
+            "fold": 0.0,
+            "call": 48.3,
+            "bet33": 51.4,
+            "bet50": 0.3,
+            "betover": 0.0
+          },
+          {
+            "hc": "third_pair",
+            "total": 51.9,
+            "share": 6.5,
+            "fold": 0.0,
+            "call": 58.4,
+            "bet33": 41.4,
+            "bet50": 0.2,
+            "betover": 0.0
+          },
+          {
+            "hc": "ace_high",
+            "total": 52.1,
+            "share": 6.5,
+            "fold": 10.1,
+            "call": 58.7,
+            "bet33": 30.7,
+            "bet50": 0.5,
+            "betover": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 477.4,
+            "share": 59.8,
+            "fold": 82.2,
+            "call": 4.8,
+            "bet33": 12.8,
+            "bet50": 0.1,
+            "betover": 0.0
+          }
+        ]
+      },
+      "ip_cr_response": {
+        "fold_pct": 32.2,
+        "call_pct": 56.8,
+        "reraised_pct": 11.1,
+        "by_category": [
+          {
+            "hc": "set",
+            "total": 1.0,
+            "share": 0.5,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "two_pair",
+            "total": 3.6,
+            "share": 1.7,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "overpair",
+            "total": 4.2,
+            "share": 1.9,
+            "fold": 0.0,
+            "call": 99.6,
+            "bet33": 0.4,
+            "bet75": 0.0
+          },
+          {
+            "hc": "top_pair",
+            "total": 49.9,
+            "share": 22.8,
+            "fold": 0.0,
+            "call": 70.4,
+            "bet33": 29.6,
+            "bet75": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 12.1,
+            "share": 5.5,
+            "fold": 0.0,
+            "call": 88.3,
+            "bet33": 11.7,
+            "bet75": 0.0
+          },
+          {
+            "hc": "underpair",
+            "total": 13.8,
+            "share": 6.3,
+            "fold": 0.0,
+            "call": 82.3,
+            "bet33": 17.7,
+            "bet75": 0.0
+          },
+          {
+            "hc": "third_pair",
+            "total": 3.1,
+            "share": 1.4,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "ace_high",
+            "total": 52.0,
+            "share": 23.7,
+            "fold": 37.0,
+            "call": 59.5,
+            "bet33": 3.5,
+            "bet75": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 79.7,
+            "share": 36.3,
+            "fold": 64.5,
+            "call": 30.8,
+            "bet33": 4.8,
+            "bet75": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "type": "型2_ハイウェット",
+      "flop": "Qh8d3s",
+      "desc": "Q高・2トーン",
+      "ip_cbet": {
+        "total_bet_pct": 56.7,
+        "bet_code": "R1.8",
+        "by_category": [
+          {
+            "hc": "set",
+            "total": 5.2,
+            "share": 1.6,
+            "check": 98.6,
+            "bet33": 0.5,
+            "bet50": 0.7,
+            "bet75": 0.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "two_pair",
+            "total": 3.8,
+            "share": 1.1,
+            "check": 10.6,
+            "bet33": 87.5,
+            "bet50": 1.0,
+            "bet75": 0.4,
+            "betover": 0.0
+          },
+          {
+            "hc": "overpair",
+            "total": 10.0,
+            "share": 3.0,
+            "check": 6.1,
+            "bet33": 73.8,
+            "bet50": 9.0,
+            "bet75": 9.5,
+            "betover": 0.0
+          },
+          {
+            "hc": "top_pair",
+            "total": 50.3,
+            "share": 15.1,
+            "check": 12.1,
+            "bet33": 71.1,
+            "bet50": 10.3,
+            "bet75": 4.7,
+            "betover": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 34.1,
+            "share": 10.2,
+            "check": 56.0,
+            "bet33": 39.1,
+            "bet50": 3.6,
+            "bet75": 1.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "underpair",
+            "total": 13.6,
+            "share": 4.1,
+            "check": 65.1,
+            "bet33": 32.0,
+            "bet50": 1.8,
+            "bet75": 0.8,
+            "betover": 0.0
+          },
+          {
+            "hc": "third_pair",
+            "total": 23.1,
+            "share": 6.9,
+            "check": 75.0,
+            "bet33": 23.9,
+            "bet50": 1.1,
+            "bet75": 0.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "ace_high",
+            "total": 82.3,
+            "share": 24.7,
+            "check": 45.4,
+            "bet33": 48.8,
+            "bet50": 3.9,
+            "bet75": 1.5,
+            "betover": 0.0
+          },
+          {
+            "hc": "king_high",
+            "total": 50.1,
+            "share": 15.0,
+            "check": 40.4,
+            "bet33": 49.6,
+            "bet50": 5.9,
+            "bet75": 3.5,
+            "betover": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 60.6,
+            "share": 18.2,
+            "check": 44.7,
+            "bet33": 48.8,
+            "bet50": 4.6,
+            "bet75": 1.5,
+            "betover": 0.0
+          }
+        ]
+      },
+      "oop_defense": {
+        "call_pct": 27.6,
+        "cr_pct": 24.2,
+        "fold_pct": 48.2,
+        "by_category": [
+          {
+            "hc": "two_pair",
+            "total": 18.8,
+            "share": 2.4,
+            "fold": 0.0,
+            "call": 98.7,
+            "bet33": 1.0,
+            "bet50": 0.3,
+            "betover": 0.0
+          },
+          {
+            "hc": "top_pair",
+            "total": 97.4,
+            "share": 12.4,
+            "fold": 0.0,
+            "call": 12.1,
+            "bet33": 83.0,
+            "bet50": 4.9,
+            "betover": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 91.2,
+            "share": 11.6,
+            "fold": 0.0,
+            "call": 77.6,
+            "bet33": 21.9,
+            "bet50": 0.5,
+            "betover": 0.0
+          },
+          {
+            "hc": "third_pair",
+            "total": 71.7,
+            "share": 9.1,
+            "fold": 0.0,
+            "call": 72.6,
+            "bet33": 26.9,
+            "bet50": 0.5,
+            "betover": 0.0
+          },
+          {
+            "hc": "ace_high",
+            "total": 51.0,
+            "share": 6.5,
+            "fold": 39.4,
+            "call": 44.2,
+            "bet33": 15.5,
+            "bet50": 1.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "king_high",
+            "total": 113.9,
+            "share": 14.5,
+            "fold": 63.3,
+            "call": 17.6,
+            "bet33": 18.1,
+            "bet50": 1.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 342.8,
+            "share": 43.6,
+            "fold": 83.7,
+            "call": 6.2,
+            "bet33": 9.6,
+            "bet50": 0.5,
+            "betover": 0.0
+          }
+        ]
+      },
+      "ip_cr_response": {
+        "fold_pct": 30.8,
+        "call_pct": 60.6,
+        "reraised_pct": 8.5,
+        "by_category": [
+          {
+            "hc": "two_pair",
+            "total": 3.3,
+            "share": 2.0,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "overpair",
+            "total": 7.4,
+            "share": 4.5,
+            "fold": 0.0,
+            "call": 97.9,
+            "bet33": 1.7,
+            "bet75": 0.4
+          },
+          {
+            "hc": "top_pair",
+            "total": 35.8,
+            "share": 21.8,
+            "fold": 0.0,
+            "call": 70.5,
+            "bet33": 28.7,
+            "bet75": 0.8
+          },
+          {
+            "hc": "second_pair",
+            "total": 13.3,
+            "share": 8.1,
+            "fold": 0.0,
+            "call": 99.1,
+            "bet33": 0.4,
+            "bet75": 0.5
+          },
+          {
+            "hc": "underpair",
+            "total": 4.4,
+            "share": 2.7,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "third_pair",
+            "total": 5.5,
+            "share": 3.4,
+            "fold": 0.0,
+            "call": 99.4,
+            "bet33": 0.6,
+            "bet75": 0.0
+          },
+          {
+            "hc": "ace_high",
+            "total": 40.1,
+            "share": 24.4,
+            "fold": 48.8,
+            "call": 47.0,
+            "bet33": 4.0,
+            "bet75": 0.2
+          },
+          {
+            "hc": "king_high",
+            "total": 24.8,
+            "share": 15.1,
+            "fold": 68.5,
+            "call": 29.8,
+            "bet33": 1.6,
+            "bet75": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 29.6,
+            "share": 18.0,
+            "fold": 47.5,
+            "call": 48.8,
+            "bet33": 3.5,
+            "bet75": 0.1
+          }
+        ]
+      }
+    },
+    {
+      "type": "型3_ロードライ",
+      "flop": "Jd7s5c",
+      "desc": "J中・レインボー",
+      "ip_cbet": {
+        "total_bet_pct": 54.7,
+        "bet_code": "R1.8",
+        "by_category": [
+          {
+            "hc": "set",
+            "total": 7.7,
+            "share": 2.3,
+            "check": 85.9,
+            "bet33": 13.9,
+            "bet50": 0.2,
+            "bet75": 0.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "two_pair",
+            "total": 4.1,
+            "share": 1.2,
+            "check": 4.4,
+            "bet33": 88.4,
+            "bet50": 7.2,
+            "bet75": 0.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "overpair",
+            "total": 15.3,
+            "share": 4.6,
+            "check": 9.8,
+            "bet33": 26.7,
+            "bet50": 50.5,
+            "bet75": 13.1,
+            "betover": 0.0
+          },
+          {
+            "hc": "top_pair",
+            "total": 48.7,
+            "share": 14.7,
+            "check": 1.9,
+            "bet33": 21.2,
+            "bet50": 57.3,
+            "bet75": 19.6,
+            "betover": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 21.9,
+            "share": 6.6,
+            "check": 57.9,
+            "bet33": 16.2,
+            "bet50": 25.2,
+            "bet75": 0.7,
+            "betover": 0.0
+          },
+          {
+            "hc": "underpair",
+            "total": 13.8,
+            "share": 4.2,
+            "check": 66.1,
+            "bet33": 13.8,
+            "bet50": 12.7,
+            "bet75": 7.4,
+            "betover": 0.0
+          },
+          {
+            "hc": "third_pair",
+            "total": 23.5,
+            "share": 7.1,
+            "check": 82.2,
+            "bet33": 9.3,
+            "bet50": 8.5,
+            "bet75": 0.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "ace_high",
+            "total": 79.1,
+            "share": 23.9,
+            "check": 57.4,
+            "bet33": 16.6,
+            "bet50": 20.7,
+            "bet75": 5.2,
+            "betover": 0.0
+          },
+          {
+            "hc": "king_high",
+            "total": 50.6,
+            "share": 15.3,
+            "check": 47.8,
+            "bet33": 16.6,
+            "bet50": 27.7,
+            "bet75": 7.9,
+            "betover": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 65.7,
+            "share": 19.9,
+            "check": 45.3,
+            "bet33": 20.6,
+            "bet50": 27.5,
+            "bet75": 6.6,
+            "betover": 0.0
+          }
+        ]
+      },
+      "oop_defense": {
+        "call_pct": 42.6,
+        "cr_pct": 22.0,
+        "fold_pct": 35.4,
+        "by_category": [
+          {
+            "hc": "two_pair",
+            "total": 25.1,
+            "share": 3.4,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet50": 0.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "top_pair",
+            "total": 91.8,
+            "share": 12.5,
+            "fold": 0.0,
+            "call": 15.4,
+            "bet33": 70.8,
+            "bet50": 13.8,
+            "betover": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 85.2,
+            "share": 11.6,
+            "fold": 0.0,
+            "call": 81.0,
+            "bet33": 16.8,
+            "bet50": 2.2,
+            "betover": 0.0
+          },
+          {
+            "hc": "third_pair",
+            "total": 100.0,
+            "share": 13.6,
+            "fold": 0.0,
+            "call": 89.0,
+            "bet33": 10.3,
+            "bet50": 0.6,
+            "betover": 0.0
+          },
+          {
+            "hc": "ace_high",
+            "total": 45.4,
+            "share": 6.2,
+            "fold": 36.4,
+            "call": 52.0,
+            "bet33": 10.3,
+            "bet50": 1.4,
+            "betover": 0.0
+          },
+          {
+            "hc": "king_high",
+            "total": 111.6,
+            "share": 15.2,
+            "fold": 78.7,
+            "call": 15.6,
+            "bet33": 4.9,
+            "bet50": 0.7,
+            "betover": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 277.0,
+            "share": 37.6,
+            "fold": 56.4,
+            "call": 27.2,
+            "bet33": 14.0,
+            "bet50": 2.3,
+            "betover": 0.0
+          }
+        ]
+      },
+      "ip_cr_response": {
+        "fold_pct": 28.3,
+        "call_pct": 57.3,
+        "reraised_pct": 14.4,
+        "by_category": [
+          {
+            "hc": "set",
+            "total": 1.1,
+            "share": 1.7,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "two_pair",
+            "total": 3.6,
+            "share": 5.9,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "overpair",
+            "total": 4.1,
+            "share": 6.6,
+            "fold": 0.0,
+            "call": 68.8,
+            "bet33": 16.4,
+            "bet75": 14.8
+          },
+          {
+            "hc": "top_pair",
+            "total": 10.3,
+            "share": 16.7,
+            "fold": 0.0,
+            "call": 47.2,
+            "bet33": 29.7,
+            "bet75": 23.1
+          },
+          {
+            "hc": "second_pair",
+            "total": 3.6,
+            "share": 5.8,
+            "fold": 0.0,
+            "call": 95.2,
+            "bet33": 2.0,
+            "bet75": 2.7
+          },
+          {
+            "hc": "underpair",
+            "total": 1.9,
+            "share": 3.1,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "third_pair",
+            "total": 2.2,
+            "share": 3.5,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "ace_high",
+            "total": 13.1,
+            "share": 21.2,
+            "fold": 56.5,
+            "call": 36.4,
+            "bet33": 3.6,
+            "bet75": 3.6
+          },
+          {
+            "hc": "king_high",
+            "total": 8.4,
+            "share": 13.6,
+            "fold": 64.2,
+            "call": 30.3,
+            "bet33": 3.1,
+            "bet75": 2.4
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 13.5,
+            "share": 21.9,
+            "fold": 34.9,
+            "call": 60.7,
+            "bet33": 3.0,
+            "bet75": 1.3
+          }
+        ]
+      }
+    },
+    {
+      "type": "型4_ローウェット",
+      "flop": "Th9s8d",
+      "desc": "低連携・2トーン",
+      "ip_cbet": {
+        "total_bet_pct": 72.3,
+        "bet_code": "R1.8",
+        "by_category": [
+          {
+            "hc": "set",
+            "total": 6.9,
+            "share": 2.1,
+            "check": 7.9,
+            "bet33": 71.3,
+            "bet50": 19.9,
+            "bet75": 0.9,
+            "betover": 0.0
+          },
+          {
+            "hc": "straight",
+            "total": 17.7,
+            "share": 5.5,
+            "check": 3.8,
+            "bet33": 71.8,
+            "bet50": 23.7,
+            "bet75": 0.7,
+            "betover": 0.0
+          },
+          {
+            "hc": "two_pair",
+            "total": 14.2,
+            "share": 4.4,
+            "check": 23.4,
+            "bet33": 51.9,
+            "bet50": 22.7,
+            "bet75": 2.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "overpair",
+            "total": 20.2,
+            "share": 6.3,
+            "check": 4.8,
+            "bet33": 24.0,
+            "bet50": 63.8,
+            "bet75": 7.4,
+            "betover": 0.0
+          },
+          {
+            "hc": "top_pair",
+            "total": 35.8,
+            "share": 11.1,
+            "check": 7.6,
+            "bet33": 50.0,
+            "bet50": 39.0,
+            "bet75": 3.3,
+            "betover": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 31.8,
+            "share": 9.9,
+            "check": 41.3,
+            "bet33": 38.5,
+            "bet50": 18.6,
+            "bet75": 1.6,
+            "betover": 0.0
+          },
+          {
+            "hc": "third_pair",
+            "total": 28.1,
+            "share": 8.7,
+            "check": 54.9,
+            "bet33": 31.7,
+            "bet50": 12.6,
+            "bet75": 0.8,
+            "betover": 0.0
+          },
+          {
+            "hc": "low_pair",
+            "total": 16.2,
+            "share": 5.0,
+            "check": 68.1,
+            "bet33": 19.5,
+            "bet50": 11.5,
+            "bet75": 0.8,
+            "betover": 0.0
+          },
+          {
+            "hc": "ace_high",
+            "total": 84.5,
+            "share": 26.3,
+            "check": 27.2,
+            "bet33": 43.7,
+            "bet50": 27.2,
+            "bet75": 2.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "king_high",
+            "total": 41.4,
+            "share": 12.9,
+            "check": 28.8,
+            "bet33": 48.7,
+            "bet50": 21.4,
+            "bet75": 1.1,
+            "betover": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 24.9,
+            "share": 7.7,
+            "check": 25.4,
+            "bet33": 45.9,
+            "bet50": 27.5,
+            "bet75": 1.3,
+            "betover": 0.0
+          }
+        ]
+      },
+      "oop_defense": {
+        "call_pct": 44.3,
+        "cr_pct": 19.0,
+        "fold_pct": 36.7,
+        "by_category": [
+          {
+            "hc": "straight",
+            "total": 46.5,
+            "share": 5.8,
+            "fold": 0.0,
+            "call": 42.7,
+            "bet33": 45.4,
+            "bet50": 11.9,
+            "betover": 0.0
+          },
+          {
+            "hc": "two_pair",
+            "total": 21.8,
+            "share": 2.7,
+            "fold": 0.0,
+            "call": 68.1,
+            "bet33": 21.6,
+            "bet50": 10.3,
+            "betover": 0.0
+          },
+          {
+            "hc": "top_pair",
+            "total": 79.5,
+            "share": 9.9,
+            "fold": 0.0,
+            "call": 41.2,
+            "bet33": 22.8,
+            "bet50": 22.0,
+            "betover": 13.9
+          },
+          {
+            "hc": "second_pair",
+            "total": 83.0,
+            "share": 10.3,
+            "fold": 0.0,
+            "call": 77.0,
+            "bet33": 7.8,
+            "bet50": 10.3,
+            "betover": 4.8
+          },
+          {
+            "hc": "third_pair",
+            "total": 89.1,
+            "share": 11.1,
+            "fold": 5.3,
+            "call": 83.9,
+            "bet33": 4.7,
+            "bet50": 3.2,
+            "betover": 2.8
+          },
+          {
+            "hc": "ace_high",
+            "total": 50.0,
+            "share": 6.2,
+            "fold": 68.4,
+            "call": 31.1,
+            "bet33": 0.4,
+            "bet50": 0.1,
+            "betover": 0.0
+          },
+          {
+            "hc": "king_high",
+            "total": 108.6,
+            "share": 13.5,
+            "fold": 65.9,
+            "call": 21.7,
+            "bet33": 4.9,
+            "bet50": 4.1,
+            "betover": 3.5
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 324.9,
+            "share": 40.4,
+            "fold": 56.7,
+            "call": 34.0,
+            "bet33": 6.9,
+            "bet50": 2.0,
+            "betover": 0.3
+          }
+        ]
+      },
+      "ip_cr_response": {
+        "fold_pct": 29.7,
+        "call_pct": 52.5,
+        "reraised_pct": 17.8,
+        "by_category": [
+          {
+            "hc": "set",
+            "total": 4.9,
+            "share": 3.5,
+            "fold": 0.0,
+            "call": 81.9,
+            "bet33": 3.4,
+            "bet75": 14.7
+          },
+          {
+            "hc": "straight",
+            "total": 12.7,
+            "share": 9.1,
+            "fold": 0.0,
+            "call": 85.9,
+            "bet33": 3.8,
+            "bet75": 10.3
+          },
+          {
+            "hc": "two_pair",
+            "total": 7.4,
+            "share": 5.2,
+            "fold": 0.0,
+            "call": 69.2,
+            "bet33": 2.5,
+            "bet75": 28.3
+          },
+          {
+            "hc": "overpair",
+            "total": 4.8,
+            "share": 3.4,
+            "fold": 0.0,
+            "call": 41.3,
+            "bet33": 11.8,
+            "bet75": 47.0
+          },
+          {
+            "hc": "top_pair",
+            "total": 17.9,
+            "share": 12.7,
+            "fold": 0.0,
+            "call": 43.3,
+            "bet33": 2.1,
+            "bet75": 54.6
+          },
+          {
+            "hc": "second_pair",
+            "total": 12.2,
+            "share": 8.7,
+            "fold": 3.0,
+            "call": 76.3,
+            "bet33": 1.4,
+            "bet75": 19.2
+          },
+          {
+            "hc": "third_pair",
+            "total": 8.9,
+            "share": 6.3,
+            "fold": 53.9,
+            "call": 45.8,
+            "bet33": 0.2,
+            "bet75": 0.1
+          },
+          {
+            "hc": "low_pair",
+            "total": 3.2,
+            "share": 2.2,
+            "fold": 67.1,
+            "call": 32.1,
+            "bet33": 0.8,
+            "bet75": 0.0
+          },
+          {
+            "hc": "ace_high",
+            "total": 36.9,
+            "share": 26.2,
+            "fold": 68.8,
+            "call": 19.8,
+            "bet33": 1.9,
+            "bet75": 9.5
+          },
+          {
+            "hc": "king_high",
+            "total": 20.2,
+            "share": 14.3,
+            "fold": 27.2,
+            "call": 71.4,
+            "bet33": 0.7,
+            "bet75": 0.7
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 11.4,
+            "share": 8.1,
+            "fold": 30.5,
+            "call": 69.3,
+            "bet33": 0.1,
+            "bet75": 0.1
+          }
+        ]
+      }
+    },
+    {
+      "type": "型5_モノトーン",
+      "flop": "Ah9h5h",
+      "desc": "A高モノトーン",
+      "ip_cbet": {
+        "total_bet_pct": 97.8,
+        "bet_code": "R1.8",
+        "by_category": [
+          {
+            "hc": "set",
+            "total": 7.1,
+            "share": 2.2,
+            "check": 2.4,
+            "bet33": 87.6,
+            "bet50": 9.8,
+            "bet75": 0.2,
+            "betover": 0.0
+          },
+          {
+            "hc": "flush",
+            "total": 16.0,
+            "share": 5.0,
+            "check": 2.4,
+            "bet33": 92.7,
+            "bet50": 4.9,
+            "bet75": 0.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "two_pair",
+            "total": 8.9,
+            "share": 2.8,
+            "check": 2.2,
+            "bet33": 96.5,
+            "bet50": 1.2,
+            "bet75": 0.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "top_pair",
+            "total": 68.4,
+            "share": 21.6,
+            "check": 1.3,
+            "bet33": 72.1,
+            "bet50": 24.0,
+            "bet75": 2.6,
+            "betover": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 41.5,
+            "share": 13.1,
+            "check": 1.2,
+            "bet33": 83.4,
+            "bet50": 15.1,
+            "bet75": 0.3,
+            "betover": 0.0
+          },
+          {
+            "hc": "underpair",
+            "total": 19.6,
+            "share": 6.2,
+            "check": 2.7,
+            "bet33": 80.6,
+            "bet50": 16.0,
+            "bet75": 0.7,
+            "betover": 0.0
+          },
+          {
+            "hc": "third_pair",
+            "total": 30.4,
+            "share": 9.6,
+            "check": 4.0,
+            "bet33": 84.8,
+            "bet50": 10.7,
+            "bet75": 0.4,
+            "betover": 0.0
+          },
+          {
+            "hc": "king_high",
+            "total": 54.4,
+            "share": 17.1,
+            "check": 2.5,
+            "bet33": 81.9,
+            "bet50": 14.3,
+            "bet75": 1.3,
+            "betover": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 70.7,
+            "share": 22.3,
+            "check": 2.3,
+            "bet33": 81.9,
+            "bet50": 14.6,
+            "bet75": 1.2,
+            "betover": 0.0
+          }
+        ]
+      },
+      "oop_defense": {
+        "call_pct": 42.9,
+        "cr_pct": 11.0,
+        "fold_pct": 46.0,
+        "by_category": [
+          {
+            "hc": "flush",
+            "total": 41.0,
+            "share": 5.0,
+            "fold": 0.0,
+            "call": 53.4,
+            "bet33": 42.2,
+            "bet50": 0.0,
+            "betover": 4.4
+          },
+          {
+            "hc": "two_pair",
+            "total": 17.6,
+            "share": 2.2,
+            "fold": 0.0,
+            "call": 81.3,
+            "bet33": 18.7,
+            "bet50": 0.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "top_pair",
+            "total": 42.3,
+            "share": 5.2,
+            "fold": 0.0,
+            "call": 79.4,
+            "bet33": 2.7,
+            "bet50": 0.0,
+            "betover": 17.9
+          },
+          {
+            "hc": "second_pair",
+            "total": 86.7,
+            "share": 10.7,
+            "fold": 0.0,
+            "call": 91.9,
+            "bet33": 1.0,
+            "bet50": 0.0,
+            "betover": 7.1
+          },
+          {
+            "hc": "third_pair",
+            "total": 108.7,
+            "share": 13.4,
+            "fold": 23.6,
+            "call": 59.5,
+            "bet33": 5.1,
+            "bet50": 0.0,
+            "betover": 11.8
+          },
+          {
+            "hc": "king_high",
+            "total": 118.9,
+            "share": 14.6,
+            "fold": 65.8,
+            "call": 24.7,
+            "bet33": 3.2,
+            "bet50": 0.0,
+            "betover": 6.3
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 397.4,
+            "share": 48.9,
+            "fold": 68.0,
+            "call": 26.5,
+            "bet33": 5.4,
+            "bet50": 0.0,
+            "betover": 0.0
+          }
+        ]
+      },
+      "ip_cr_response": {
+        "fold_pct": 33.3,
+        "call_pct": 43.4,
+        "reraised_pct": 23.4,
+        "by_category": [
+          {
+            "hc": "set",
+            "total": 6.2,
+            "share": 2.4,
+            "fold": 0.0,
+            "call": 72.3,
+            "bet33": 0.3,
+            "bet75": 27.4
+          },
+          {
+            "hc": "flush",
+            "total": 14.8,
+            "share": 5.8,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "two_pair",
+            "total": 8.6,
+            "share": 3.3,
+            "fold": 0.0,
+            "call": 57.4,
+            "bet33": 0.5,
+            "bet75": 42.0
+          },
+          {
+            "hc": "top_pair",
+            "total": 49.3,
+            "share": 19.1,
+            "fold": 0.5,
+            "call": 27.8,
+            "bet33": 22.6,
+            "bet75": 49.1
+          },
+          {
+            "hc": "second_pair",
+            "total": 34.6,
+            "share": 13.4,
+            "fold": 5.0,
+            "call": 85.0,
+            "bet33": 6.1,
+            "bet75": 4.0
+          },
+          {
+            "hc": "underpair",
+            "total": 15.8,
+            "share": 6.1,
+            "fold": 0.7,
+            "call": 74.1,
+            "bet33": 9.2,
+            "bet75": 15.9
+          },
+          {
+            "hc": "third_pair",
+            "total": 25.8,
+            "share": 10.0,
+            "fold": 56.4,
+            "call": 39.3,
+            "bet33": 1.1,
+            "bet75": 3.1
+          },
+          {
+            "hc": "king_high",
+            "total": 44.5,
+            "share": 17.3,
+            "fold": 65.6,
+            "call": 10.1,
+            "bet33": 9.0,
+            "bet75": 15.3
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 57.9,
+            "share": 22.5,
+            "fold": 68.7,
+            "call": 31.1,
+            "bet33": 0.1,
+            "bet75": 0.1
+          }
+        ]
+      }
+    },
+    {
+      "type": "型6_ペア高",
+      "flop": "AsAcKd",
+      "desc": "AAKペアボード",
+      "ip_cbet": {
+        "total_bet_pct": 84.7,
+        "bet_code": "R1.8",
+        "by_category": [
+          {
+            "hc": "quads",
+            "total": 0.8,
+            "share": 0.3,
+            "check": 40.9,
+            "bet33": 58.2,
+            "bet50": 0.2,
+            "bet75": 0.5,
+            "betover": 0.0
+          },
+          {
+            "hc": "fullhouse",
+            "total": 7.5,
+            "share": 2.6,
+            "check": 52.0,
+            "bet33": 47.5,
+            "bet50": 0.0,
+            "bet75": 0.4,
+            "betover": 0.0
+          },
+          {
+            "hc": "trips",
+            "total": 46.6,
+            "share": 16.0,
+            "check": 2.2,
+            "bet33": 83.0,
+            "bet50": 11.6,
+            "bet75": 2.3,
+            "betover": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 54.9,
+            "share": 18.8,
+            "check": 19.3,
+            "bet33": 71.8,
+            "bet50": 7.4,
+            "bet75": 1.1,
+            "betover": 0.0
+          },
+          {
+            "hc": "third_pair",
+            "total": 40.1,
+            "share": 13.7,
+            "check": 38.4,
+            "bet33": 58.7,
+            "bet50": 2.8,
+            "bet75": 0.1,
+            "betover": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 142.0,
+            "share": 48.6,
+            "check": 8.4,
+            "bet33": 81.7,
+            "bet50": 8.1,
+            "bet75": 1.2,
+            "betover": 0.0
+          }
+        ]
+      },
+      "oop_defense": {
+        "call_pct": 22.7,
+        "cr_pct": 8.9,
+        "fold_pct": 68.4,
+        "by_category": [
+          {
+            "hc": "trips",
+            "total": 35.0,
+            "share": 4.2,
+            "fold": 0.0,
+            "call": 28.8,
+            "bet33": 70.7,
+            "bet50": 0.4,
+            "betover": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 117.4,
+            "share": 14.2,
+            "fold": 0.0,
+            "call": 87.3,
+            "bet33": 12.6,
+            "bet50": 0.2,
+            "betover": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 676.3,
+            "share": 81.6,
+            "fold": 83.8,
+            "call": 11.2,
+            "bet33": 5.0,
+            "bet50": 0.0,
+            "betover": 0.0
+          }
+        ]
+      },
+      "ip_cr_response": {
+        "fold_pct": 35.3,
+        "call_pct": 64.7,
+        "reraised_pct": 0.0,
+        "by_category": [
+          {
+            "hc": "quads",
+            "total": 0.5,
+            "share": 0.2,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "fullhouse",
+            "total": 3.6,
+            "share": 1.6,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "trips",
+            "total": 38.6,
+            "share": 17.4,
+            "fold": 0.0,
+            "call": 99.9,
+            "bet33": 0.1,
+            "bet75": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 39.4,
+            "share": 17.8,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "third_pair",
+            "total": 23.5,
+            "share": 10.6,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 116.1,
+            "share": 52.4,
+            "fold": 67.3,
+            "call": 32.6,
+            "bet33": 0.0,
+            "bet75": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "type": "型7_ペア低",
+      "flop": "7s7d2c",
+      "desc": "77低ペアボード",
+      "ip_cbet": {
+        "total_bet_pct": 89.7,
+        "bet_code": "R1.8",
+        "by_category": [
+          {
+            "hc": "quads",
+            "total": 0.9,
+            "share": 0.3,
+            "check": 90.2,
+            "bet33": 9.5,
+            "bet50": 0.3,
+            "bet75": 0.0,
+            "betover": 0.0
+          },
+          {
+            "hc": "trips",
+            "total": 17.5,
+            "share": 5.0,
+            "check": 1.5,
+            "bet33": 93.9,
+            "bet50": 4.3,
+            "bet75": 0.3,
+            "betover": 0.0
+          },
+          {
+            "hc": "overpair",
+            "total": 34.0,
+            "share": 9.7,
+            "check": 7.1,
+            "bet33": 85.0,
+            "bet50": 7.2,
+            "bet75": 0.8,
+            "betover": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 2.2,
+            "share": 0.6,
+            "check": 0.0,
+            "bet33": 96.5,
+            "bet50": 2.1,
+            "bet75": 1.4,
+            "betover": 0.0
+          },
+          {
+            "hc": "underpair",
+            "total": 10.5,
+            "share": 3.0,
+            "check": 0.0,
+            "bet33": 82.6,
+            "bet50": 16.3,
+            "bet75": 1.1,
+            "betover": 0.0
+          },
+          {
+            "hc": "ace_high",
+            "total": 98.1,
+            "share": 28.1,
+            "check": 9.8,
+            "bet33": 79.7,
+            "bet50": 9.7,
+            "bet75": 0.8,
+            "betover": 0.0
+          },
+          {
+            "hc": "king_high",
+            "total": 64.2,
+            "share": 18.4,
+            "check": 17.5,
+            "bet33": 77.7,
+            "bet50": 4.5,
+            "bet75": 0.3,
+            "betover": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 121.5,
+            "share": 34.8,
+            "check": 9.5,
+            "bet33": 82.2,
+            "bet50": 7.5,
+            "bet75": 0.8,
+            "betover": 0.0
+          }
+        ]
+      },
+      "oop_defense": {
+        "call_pct": 15.4,
+        "cr_pct": 31.4,
+        "fold_pct": 53.2,
+        "by_category": [
+          {
+            "hc": "fullhouse",
+            "total": 1.0,
+            "share": 0.1,
+            "fold": 0.0,
+            "call": 43.6,
+            "bet33": 56.1,
+            "bet50": 0.3,
+            "betover": 0.0
+          },
+          {
+            "hc": "trips",
+            "total": 74.9,
+            "share": 9.4,
+            "fold": 0.0,
+            "call": 16.5,
+            "bet33": 83.1,
+            "bet50": 0.3,
+            "betover": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 63.8,
+            "share": 8.0,
+            "fold": 0.0,
+            "call": 0.0,
+            "bet33": 53.2,
+            "bet50": 46.8,
+            "betover": 0.0
+          },
+          {
+            "hc": "ace_high",
+            "total": 52.1,
+            "share": 6.5,
+            "fold": 0.0,
+            "call": 57.5,
+            "bet33": 35.8,
+            "bet50": 6.6,
+            "betover": 0.0
+          },
+          {
+            "hc": "king_high",
+            "total": 129.3,
+            "share": 16.2,
+            "fold": 39.3,
+            "call": 38.7,
+            "bet33": 19.0,
+            "bet50": 2.9,
+            "betover": 0.0
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 478.6,
+            "share": 59.8,
+            "fold": 78.3,
+            "call": 6.3,
+            "bet33": 14.4,
+            "bet50": 1.1,
+            "betover": 0.0
+          }
+        ]
+      },
+      "ip_cr_response": {
+        "fold_pct": 32.2,
+        "call_pct": 47.4,
+        "reraised_pct": 20.5,
+        "by_category": [
+          {
+            "hc": "trips",
+            "total": 16.5,
+            "share": 5.8,
+            "fold": 0.0,
+            "call": 100.0,
+            "bet33": 0.0,
+            "bet75": 0.0
+          },
+          {
+            "hc": "overpair",
+            "total": 28.9,
+            "share": 10.2,
+            "fold": 0.0,
+            "call": 96.3,
+            "bet33": 3.7,
+            "bet75": 0.0
+          },
+          {
+            "hc": "second_pair",
+            "total": 2.1,
+            "share": 0.7,
+            "fold": 0.0,
+            "call": 0.0,
+            "bet33": 91.5,
+            "bet75": 8.5
+          },
+          {
+            "hc": "underpair",
+            "total": 8.7,
+            "share": 3.1,
+            "fold": 0.0,
+            "call": 17.7,
+            "bet33": 69.0,
+            "bet75": 13.2
+          },
+          {
+            "hc": "ace_high",
+            "total": 78.1,
+            "share": 27.5,
+            "fold": 3.2,
+            "call": 44.0,
+            "bet33": 41.4,
+            "bet75": 11.3
+          },
+          {
+            "hc": "king_high",
+            "total": 49.9,
+            "share": 17.6,
+            "fold": 55.0,
+            "call": 42.8,
+            "bet33": 1.8,
+            "bet75": 0.4
+          },
+          {
+            "hc": "no_made_hand",
+            "total": 99.9,
+            "share": 35.2,
+            "fold": 61.4,
+            "call": 33.0,
+            "bet33": 4.3,
+            "bet75": 1.3
+          }
+        ]
+      }
+    }
+  ]
+}
