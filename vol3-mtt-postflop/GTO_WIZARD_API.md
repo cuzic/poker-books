@@ -304,7 +304,7 @@ SRP と 3BP では「second_pair の格」が根本的に異なる（レンジ�
 | ファイル | 目的 | 主な調査内容 |
 |---------|------|------------|
 | `mtt_flop_cbet.py` | フロップ CBet 分析 | 型別CBet率・守備率 |
-| `mtt_turn_barrel.py` | ターンバレル分析 | TA+/TA- 判定 |
+| `mtt_turn_barrel.py` | ターンバレル分析 | ターン IP/OOP 強化カード判定 |
 | `mtt_sb_bb.py` | SB vs BB 分析 | SBオープン後のポストフロップ |
 | `mtt_check_raise.py` | OOP チェックレイズ分析 | CR頻度・フォールド率 |
 | `equity_study.py` | ハンド別エクイティ調査 | TPTK/2ndP等のベット閾値 |

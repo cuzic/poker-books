@@ -4,13 +4,13 @@ collect_turn_expanded.py — ターンバレル拡張収集スクリプト (45�
 
 【目的】
   board_ras_collect.py の 45 ボードセットに対して、ターンバレル RAS を収集する。
-  各ボードで 3 種のターンカード (blank / TA+ / TA-) を定義し、
+  各ボードで 3 種のターンカード (blank / IP 強化 / OOP 強化) を定義し、
   フロップ CBet サイズを自動取得してからターン行動の RAS を収集する。
 
 【ターンカード定義】
-  blank: ボードに絡まない低ランクカード (最低ランク、非フラッシュスーツ)
-  TA+:   IP レンジを強化するカード (ミドルカードのペア)
-  TA-:   OOP レンジを強化するカード (ボードの最高カードへのオーバーカード)
+  blank:    ボードに絡まない低ランクカード (最低ランク、非フラッシュスーツ)
+  IP 強化:  IP レンジを強化するカード (ミドルカードのペア)
+  OOP 強化: OOP レンジを強化するカード (ボードの最高カードへのオーバーカード)
 
 【使い方】
   TOKEN=xxx GWCLIENTID=xxx uv run collect_turn_expanded.py --collect BTN_SBR25
@@ -24,6 +24,9 @@ collect_turn_expanded.py — ターンバレル拡張収集スクリプト (45�
                "turns":{"blank":{"card":"4h","barrel_pct":78.5,...},
                         "TA+":{"card":"7h","barrel_pct":85.2,...},
                         "TA-":{"card":"Ah","barrel_pct":65.3,...}}}
+
+  注: 出力 JSON のキー "TA+" / "TA-" は既存データとの互換性のため残置。
+      新規書籍では「IP 強化 / OOP 強化」用語を使う (研究 archive 扱い)。
 """
 
 import os, sys, json, time, argparse, requests
@@ -244,11 +247,12 @@ def _dominant_suit(suits: list[str]) -> str:
 
 def define_turn_cards(board: str) -> dict[str, str]:
     """
-    blank / TA+ / TA- のターンカードを定義する。
+    blank / IP 強化 / OOP 強化 のターンカードを定義する。
+    (出力 dict key の "TA+" / "TA-" は研究データの互換性のため残置)
 
-    blank: ボード最小ランクより低いランク、かつボードにないスーツ
-    TA+:   ボードのミドルカード (2番目に高いカード) と同ランク、別スーツ
-    TA-:   ボードの最高カードより高いオーバーカード（A未満）、別スーツ
+    blank:    ボード最小ランクより低いランク、かつボードにないスーツ
+    IP 強化:  ボードのミドルカード (2番目に高いカード) と同ランク、別スーツ
+    OOP 強化: ボードの最高カードより高いオーバーカード（A未満）、別スーツ
     """
     ranks, suits = _board_ranks_suits(board)
     board_rank_vals = [RANK_VAL[r] for r in ranks]
@@ -277,7 +281,7 @@ def define_turn_cards(board: str) -> dict[str, str]:
                 break
     blank_card = f"{blank_rank}{alt_suit}" if blank_rank else f"2{alt_suit}"
 
-    # TA+: ボードの2番目に高いカードと同ランク (ミドルのペア)
+    # IP 強化: ボードの2番目に高いカードと同ランク (ミドルのペア)
     sorted_vals = sorted(set(board_rank_vals), reverse=True)
     if len(sorted_vals) >= 2:
         mid_val = sorted_vals[1]
@@ -287,7 +291,7 @@ def define_turn_cards(board: str) -> dict[str, str]:
     # alt_suit が mid_rank と被っていなければ OK (ランクは被ってもスーツが違えば別カード)
     ta_plus_card = f"{mid_rank}{alt_suit}"
 
-    # TA-: ボード最高カードより高いオーバーカード
+    # OOP 強化: ボード最高カードより高いオーバーカード
     max_val = max(board_rank_vals)
     ta_minus_rank = None
     for r in RANKS:  # A から降順に探す
@@ -520,9 +524,9 @@ def analyze() -> None:
 
     print()
     print("  読み方:")
-    print("    blank : ターンがブランクカード → CBet 継続率")
-    print("    TA+   : ターンで IP レンジが強化 → バレル増加期待")
-    print("    TA-   : ターンで OOP レンジが強化 → バレル抑制期待")
+    print("    blank    : ターンがブランクカード → CBet 継続率")
+    print("    IP 強化  : ターンで IP レンジが強化 → バレル増加期待 (旧 TA+)")
+    print("    OOP 強化 : ターンで OOP レンジが強化 → バレル抑制期待 (旧 TA-)")
 
     # ボード別詳細 (最初の収集済みシナリオのみ)
     first_sc = next((k for k in SCENARIOS if any(r.get("scenario_key") == k for r in all_recs)), None)

@@ -655,7 +655,7 @@ SB OOP リバー守備（BB スタブに対して）
 | BTN リバー Nutted bet 91%（top_pair）| `findings/mtt_flop_cbet_SBR25` から外挿 | レンジ全体のバリュー化頻度（混合戦略）|
 | SB CBet 66.1%（SBR25 型1）| `mtt_sb_bb_SBR25.json` | SBvsBB の固有レンジ構成由来 |
 | OOP CR 比率（top_pair 59% / 2nd_pair 26% / 3rd_pair 14%）| `mtt_check_raise_SBR25.json` | フロップ実測から外挿、リバーは概ね -10〜20pt 低下 |
-| ターン barrel TA+ 78.0% / TA- 0.3% | `mtt_turn_barrel_SBR25.json` | TA フレームワーク既定 |
+| ターン barrel IP 強化 78.0% / OOP 強化 0.3% | `mtt_turn_barrel_SBR25.json` | ターン IP/OOP 強化カードのフレームワーク既定 |
 
 > これらは「カテゴリ × equity」では捉えきれない **レンジ構成・blocker・混合戦略** に由来する。本書では「GTO ベンチマーク」として表に併記する。
 

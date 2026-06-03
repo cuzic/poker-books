@@ -306,8 +306,8 @@
 - 4.1 ストレート/フラッシュ完成 turn の特殊判定（WRMSE 19-28%）
 - 5.1 例題①〜⑤
 
-**主要参照**: `knowledges/gto_wizard_study/draw_study_TURN_*.jsonl`、既存 14-turn-river.md
-**既存章流用**: △ 旧 14-turn-river の TA フレームワーク概念は参考可、数値体系は刷新
+**主要参照**: `knowledges/gto_wizard_study/draw_study_TURN_*.jsonl`、既存 `chapters/_legacy/14-turn-river.md`
+**既存章流用**: △ 旧 14-turn-river の「ターン IP/OOP 強化カード」概念は参考可、数値体系は刷新
 
 ---
 
@@ -480,7 +480,7 @@
 | 11-final-table.md | ch15 ICM 統合 | △ 部分流用 | FT 補正概念は流用可 |
 | 12-3bp.md | ch10 3BP | ✗ 書き換え | 旧体系（「ナッツだけ check/アーチ型」）→ UCBS-v2 4 context に |
 | 13-multiway.md | (省略) | ✗ スコープ外 | Vol3 のスコープ外（マルチウェイは ch14 限界節で言及） |
-| 14-turn-river.md | ch11 Turn | △ 部分流用 | TA フレームワーク概念は参考可、Turn context 数値は新規 |
+| 14-turn-river.md | ch11 Turn | △ 部分流用 | 旧「ターン IP/OOP 強化カード」フレームワーク概念は参考可、Turn context 数値は新規 |
 | 15-quiz.md | ch16 例題集 | ○ 流用 | 問題形式・解答形式を流用、数値は UCBS-v2 ベースに更新 |
 | appendix.md | App A-C | △ 分割 | 旧付録を 3 つに分割、数値を全面更新 |
 

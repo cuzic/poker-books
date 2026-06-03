@@ -299,9 +299,9 @@
 - H3: LIGHT_V2_BASE["turn"] の 5 値 (air 5%, nut 40%)
 - H3: フロップとの差分
 
-### H2: TA+ / TA- の判定 (簡素版)
-- H3: TA+ カード: IP のレンジが強くなるターン
-- H3: TA- カード: BB のレンジが強くなるターン
+### H2: ターン IP/OOP 強化カードの判定 (簡素版)
+- H3: IP 強化カード: IP のレンジが強くなるターン
+- H3: OOP 強化カード: BB のレンジが強くなるターン
 
 ### H2: ストレート / フラッシュ完成ターンの例外
 - H3: UCBS の精度低下 (WRMSE 19-28%)
@@ -309,10 +309,10 @@
 
 **主要参照**:
 - `findings/light_ucbs_v2_formula.md` (turn context)
-- `chapters/07-turn-barrel.md` (TA+/TA- 定義・実測データ)
+- `chapters/_legacy/07-turn-barrel.md` (旧 IP/OOP 強化カード定義・実測データ、archive)
 - UCBS_V2_DCBS_FINAL.md (Tier 4 観察)
 
-**既存章流用**: 07-turn-barrel の TA 概念・実測データを Light 文脈に簡素化 (△)
+**既存章流用**: 旧 07-turn-barrel の IP/OOP 強化カード概念・実測データを Light 文脈に簡素化 (△)
 
 ---
 
