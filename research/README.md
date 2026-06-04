@@ -20,11 +20,13 @@ GTO Wizard API には:
 ```
 research/
 ├── README.md                       ← 本ファイル
-├── RESEARCH_GAPS.md                ← 未調査領域 (調査優先順)
-├── RESEARCH_INVENTORY.md           ← 既存データ サマリ
-├── RESEARCH_INVENTORY_DETAIL.md    ← 全ファイル詳細
-├── inventory_scan.py               ← inventory 自動生成スクリプト (詳細版)
-├── inventory_summarize.py          ← inventory 自動生成スクリプト (集約版)
+├── RESEARCH_GAPS.md                ← ★ 未調査領域 (調査優先順) - 最初に読む
+├── RESEARCH_INVENTORY.md           ← 既存データ サマリ (ディレクトリ単位)
+├── RESEARCH_INVENTORY_DETAIL.md    ← 全 896 ファイル詳細
+├── RESEARCH_DEEP_INVENTORY.md      ← Phase/Depth/Opener/Actor 別の深堀り集計
+├── deep_inventory.py               ← 深堀り分析 (chips_on_table から構造推定)
+├── inventory_scan.py               ← 詳細 inventory 自動生成
+├── inventory_summarize.py          ← 集約 inventory 自動生成
 └── v3-additional/                  ← 新規調査作業ディレクトリ
     ├── .env                        ← GTO Wizard token (gitignored)
     ├── .gitignore
@@ -44,16 +46,28 @@ research/
 
 ## 既存研究データ全体像 (2026-06-04 時点)
 
-**合計 896 JSON ファイル** が分散保管:
+**合計 896 JSON ファイル** が分散保管 (deep_inventory.py で確認):
 
-| 場所 | ファイル数 | 主な内容 |
-|------|----------|---------|
-| `vol2-cash-postflop/findings/` | 6 | Cash 100bb postflop 集約 / 5-cat |
-| `vol3-mtt-postflop/findings/` | 138 | MTT 各 SBR postflop |
-| `vol3-mtt-postflop/findings/3bp{25,50,100}_raw/` | 72 (24×3) | 3BP postflop hand-level |
-| `vol3-mtt-postflop/findings/def_cash100_bb_*_raw/` | ~78 | Cash 100bb BB defense flop/turn/river |
-| `vol3-mtt-postflop/findings/def_mtt{25,50,100}_bb_*_raw/` | ~120 | MTT BB defense flop/turn/river |
-| `research/v3-additional/findings/` | 20 | Preflop hand-level (新規追加) |
+### Phase 別
+- **Turn**: 530 ファイル
+- **River**: 202 ファイル
+- **Preflop**: 164 ファイル
+
+### Depth 別
+- 100 bb: 301 ファイル / 50 bb: 234 / 200 bb: 120 / 25 bb: 80
+
+### 重要発見: BTN 以外の postflop も既存
+
+| シナリオ | ファイル数 | 場所 |
+|---------|---------|------|
+| BTN → BB postflop (cbet 対応) | 156+89+54 (Cash 100/50/25) | def_cash100/mtt25/50_bb_raw |
+| BTN → BTN cbet | 145 (4 depths) | BTN_BB ディレクトリ |
+| **CO → CO cbet** | 72 (3 depths × 24 board) | CO_BB ディレクトリ |
+| **HJ → HJ cbet** | 72 | HJ_BB ディレクトリ |
+| **UTG → LJ act (9-max)** | 72 | UTG_BB ディレクトリ |
+| **SB → SB cbet (BvB)** | 72 | SB_BB ディレクトリ |
+| **BB lead at turn (donk 含む?)** | 96 | def_*_bb_*_raw |
+| **BB lead at river** | 202 | def_*_bb_*_raw |
 
 ## カバー範囲の早見 (詳細は GAPS / INVENTORY 参照)
 
@@ -138,4 +152,5 @@ GTO Wizard preflop spot の `action_solutions[*].strategy` は **長さ 169 の 
 cd ~/poker-books
 python3 research/inventory_summarize.py > research/RESEARCH_INVENTORY.md
 python3 research/inventory_scan.py > research/RESEARCH_INVENTORY_DETAIL.md
+python3 research/deep_inventory.py > research/RESEARCH_DEEP_INVENTORY.md
 ```

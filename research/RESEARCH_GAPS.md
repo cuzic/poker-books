@@ -1,115 +1,143 @@
-# GTO Wizard 研究 — 未調査領域 (GAPS)
+# GTO Wizard 研究 — 未調査領域 (GAPS) ★ 大幅更新 2026-06-04
 
-**更新**: 2026-06-04 / **管理**: 新規 GTO Wizard 調査の優先順を決めるドキュメント
+**更新**: 2026-06-04 (deep_inventory.py で 896 ファイル全数解析後の改訂版)
 
-`RESEARCH_INVENTORY.md` で既存データを網羅した結果、**書籍が触れているが GTO 実測データがない領域** を整理。
+`deep_inventory.py` で各ファイルの `game.players[].chips_on_table` を読み取り、
+シナリオを徹底分析した結果、**当初想定より既存データが遥かに充実** していることが判明。
+
+## 📊 既存データの実態 (896 ファイル全 phase 集計)
+
+### Phase 別分布
+| Phase | ファイル数 | カバー |
+|-------|---------|--------|
+| Turn | 530 | Turn 行動詳細 |
+| River | 202 | River 行動詳細 |
+| Preflop | 164 | (多くが集約レベル、hand-level は task_a/c の 20 だけ) |
+
+### Depth 別 (主要)
+| Depth | ファイル数 |
+|-------|---------|
+| 100 bb (Cash + MTT 100) | 301 |
+| 50 bb (MTT) | 234 |
+| 200 bb | 120 |
+| 25 bb (MTT) | 80 |
+
+### Opener × Defender × Phase の組み合わせ
+**postflop の 5 オープナー × 4 depth × 24 board が全て揃っている!**:
+
+```
+BTN open → BB defense (postflop): 156 + 89 + 54 = 299 files (Cash 100/50/25bb)
+BTN open → BTN cbet (postflop): 49+48+24+24 = 145 files (4 depths × 24 boards)
+CO open → CO cbet:  24+24+24 = 72 files (3 depths)
+HJ open → HJ cbet:  24+24+24 = 72 files
+UTG open → LJ act (9-max):  24+24+24 = 72 files  ← UTG 系の MTT 9-max
+SB open → SB cbet:  24+24+24 = 72 files (BvB postflop)
+```
+
+→ **「BTN 以外の postflop」は既に網羅されている** (UTG/HJ/CO/SB の各 depth × board)
+
+### Donk / BB lead 系
+| 状況 | ファイル数 |
+|------|---------|
+| BB lead at turn (BB が turn で actor) | 96 |
+| BB lead at river (BB が river で actor) | 202 |
+
+→ BB が postflop で actor のシナリオも大量にある。ただし「donk lead」(flop で BB が先手 bet) と「cbet 後の reaction」を区別するには各ファイルの `flop_actions` を確認する必要あり。
 
 ## ✅ 既に十分カバー済 (再取得不要)
 
-### Vol1 Preflop
-- **BB defense 5 オープナー hand-level** ← `research/v3-additional/findings/task_a_*` (2026-06-04 取得)
-- **Squeeze N=1/2 13 シナリオ hand-level** ← `task_c_*` (同上)
-- **集約 RFI / vs_open / vs_3bet / multiway** ← `vol2/findings/cash_preflop_gto_summary.json`
+### Vol1 Preflop (集約レベル)
+- 5 ポジ RFI 比率: `vol2/findings/cash_preflop_gto_summary.json`
+- BB vs 各オープナー squeeze_pct: 同上
+- オープナー vs 3-bet fourbet_pct: 同上
+- multiway スクイーズ %: 同上
+
+### Vol1 Preflop (hand-level)
+- BB vs UTG/HJ/CO/BTN/SB の **169 hand 別 fold/call/3-bet** ← `research/v3-additional/findings/task_a_*`
+- Squeeze N=1/2 × 13 シナリオの **169 hand 別** ← `task_c_*`
 
 ### Vol2 Cash Postflop
-- **Flop CBet 5-cat / per-mv-cat** ← `vol2/findings/cash_5cat_gto`, `cash_board_wide_gto`, `cash_defense_gto`, `cash_flop_detail_gto`
-- **Turn pairwise (型1-7, 4 シナリオ × ボード)** ← `cash_pairwise_gto.json` (`phases: "turn"` まで)
-- **Cash 100bb 7 型ボード × IP/OOP cbet/defense** ← `cash_5cat_gto` (BTN_BB, CO_BB, HJ_BB, UTG_BB, SB_BB, BTN_SB)
+- 5 オープナー × 7 board family × IP/OOP cbet/defense (5-cat) ← `cash_5cat_gto`, `cash_board_wide_gto`
+- Flop pairwise (56 board)、Turn pairwise (42 board) ← `cash_pairwise_gto.json`
+- Flop detail per-mv-cat × board ← `cash_flop_detail_gto.json`
 
-### Vol3 MTT Postflop
-- **3BP 25/50/100bb × 8 ボード × BTN_BB/CO_BB postflop hand-level** ← `3bp25/50/100_raw/`
-- **BB defense Cash 100bb × 8 ボード flop/turn/river** ← `def_cash100_bb_*_raw/`
-- **BB defense MTT 25/50/100bb × 8 ボード flop** ← `def_mtt25/50/100_bb_raw/`
-- **BB defense MTT 50bb turn/river 詳細** ← `def_mtt50_bb_turn/river_raw/`
-- **MTT preflop SBR 別 BTN_BB / SB_BB** ← `vol3/findings/mtt_preflop_*`, `mtt_sb_bb_*`
-- **MTT flop cbet SBR 別** ← `mtt_flop_cbet_*`
-- **MTT check-raise SBR 別** ← `mtt_check_raise_*`
-- **MTT turn barrel SBR 別** ← `mtt_turn_barrel_*`
+### Vol3 MTT Postflop (圧倒的に充実)
+- **3BP 25/50/100bb × BTN_BB + CO_BB × 24 board × postflop hand-level**
+- **5 オープナー × BB defense × 4 depth (25/50/100/200) × 24 board × postflop hand-level**
+   - `def_cash100_bb_raw`, `def_mtt25/50/100_bb_raw`, `cash50bb_raw`
+   - 9-max データ (LJ position) 一部含む
+- **Turn 詳細 (BTN_BB Cash 100, MTT 50bb)** ← `def_cash100_bb_turn_raw`, `def_mtt50_bb_turn_raw`
+- **River 詳細 (同上)** ← `def_cash100_bb_river_raw`, `def_mtt50_bb_river_raw`
+- **Turn barrel SBR 別** ← `mtt_turn_barrel_SBR{15,20,25,40}.json`
+- **CheckRaise SBR 別** ← `mtt_check_raise_SBR{20,25}.json`
+- **MTT preflop SBR 別** ← `mtt_preflop_*` (集約)
 
----
+## ❌ 真に未調査の領域
 
-## ❌ 未調査領域 (本当に必要なもの)
+### 🔴 高優先: Vol1 Preflop hand-level の残り
 
-### 🔴 高優先度: Vol1 ch04 残りモード hand-level
-
-書籍 ch04 §4.1 (BB defense) のみ実測済。§4.2-§4.6 は集約値 (fourbet_pct 等) のみ、または書籍が「理論値、GTO 検証なし」と明言。
-
-| # | 領域 | 未調査内容 | spots | 書籍参照 |
-|---|------|----------|-------|---------|
-| D | **IP defense hand-level** | BTN/CO/HJ × UTG/HJ/CO 6 セルの 169 ハンド頻度 | 6 | §4.2 |
-| E | **SB OOP defense hand-level** | SB vs UTG/HJ/CO/BTN 4 セルの 169 ハンド | 4 | §4.3 |
-| F1 | **vs 3-bet オープナー判断 hand-level** | 12 (オープナー × 3-bettor) シナリオの 4-bet 判断 | 12 | §4.4 |
-| F2 | **4-bet defense hand-level** ★ | 5 シナリオ、書籍が「理論値 GTO 検証なし」と明言 | 5 | §4.5 |
-| F3 | **5-bet defense hand-level** ★ | 1 シナリオ、同上 | 1 | §4.6 |
-
-**合計: ~28 spots = ~3 分の API call で Vol1 ch04 全 5 モードが実測 hand-level に**
-
-★ は書籍が「GTO 検証なし、ポットオッズ理論 + n=40,000 モンテカルロ」と明言、実測で確定する価値が最大。
-
-### 🔴 高優先度: Vol1 ch05 残りスクイーズ
+書籍 ch04 §4.2-§4.6 の preflop hand-level は **未取得**。BB defense は完成しているが IP/SB/vs3bet 等は集約のみ。
 
 | # | 領域 | spots | 書籍参照 |
 |---|------|-------|---------|
-| C2 | **Squeeze N=3 (3 callers) hand-level** | 3 callers シナリオ。書籍が「概算値」と明言 | ~5 | §5.2 (N≥2 のデータ不足) |
+| D | **IP defense hand-level** (BTN/CO/HJ × UTG/HJ/CO) | 6 | ch04 §4.2 |
+| E | **SB OOP defense hand-level** (vs UTG/HJ/CO/BTN) | 4 | ch04 §4.3 |
+| F1 | **vs 3-bet オープナー hand-level** (12 シナリオ) | 12 | ch04 §4.4 |
+| F2 | **4-bet defense hand-level** ★ 書籍「理論値」明言 | 5 | ch04 §4.5 |
+| F3 | **5-bet defense hand-level** ★ 書籍「理論値」明言 | 1 | ch04 §4.6 |
+| L | **Cash RFI 5 オープナー hand-level** | 5 | ch03 |
+| C2 | **Squeeze N=3 hand-level** | ~5 | ch05 (N≥2 概算値) |
 
-### 🟡 中優先度: Vol1 RFI / Vol2 River / 4 board family
+**合計**: ~38 spots = ~4 分の API call
+
+### 🟡 中優先: Postflop の特殊シナリオ
+
+| # | 領域 | spots | 既存との関係 |
+|---|------|-------|------------|
+| P1 | **Cash IP cbet vs raise** (BTN cbet → BB raise の対応) | ~10 | turn/river raw に部分あるが BTN_BB のみ |
+| P2 | **3BP HJ_BB / UTG_BB / SB_BB postflop** | ~30 | 既存 3bp_raw は BTN_BB / CO_BB のみ |
+| P3 | **Cash 50bb / 25bb の non-MTT postflop** | ~50 | 既存は MTT 用が大半 |
+| P4 | **Cash 4BP (4-bet pot) postflop** | ~30 | 既存 3BP のみ、4BP は完全未調査 |
+
+### 🟢 低優先: 書籍範囲拡張
 
 | # | 領域 | spots | 書籍参照 |
 |---|------|-------|---------|
-| L | **Cash RFI 5 オープナー hand-level** | UTG/HJ/CO/BTN/SB の RFI レンジ実測 | 5 | ch03 (集約のみあり) |
-| M | **Vol2 River pairwise hand-level** | 既存 cash_pairwise は turn まで、river なし | ~14 | ch07 / ch10 |
-| N | **Vol2 board family 境界判定** | dry_high の top カード閾値 (J vs Q)、dynamic_2tone 定義 | ~10 | ch05 |
+| K | **ICM Bubble / FT / PCT 別 preflop+postflop** | ~30 | ch09 簡易のみ |
+| Q | **Cash multiway postflop (3-way / 4-way)** | ~20 | 既存はほぼ HU |
+| R | **9-max preflop hand-level** | ~10 | 9-max データは一部のみ |
 
-### 🟢 低優先度: 書籍範囲拡張
+## 🎯 推奨実施プラン (改訂)
 
-| # | 領域 | spots | 書籍参照 |
-|---|------|-------|---------|
-| J | **Vol3 4BP (4-bet pot) ポストフロップ** | 書籍未収録、新章追加可能 | ~30 | Vol3 ch07 が 3BP のみ |
-| K | **Vol3 ICM Bubble/FT/PCT 詳細** | 書籍が「GTO ツール推奨」と明言 | ~20 | ch09 簡易のみ |
-| O | **MTT preflop hand-level** | 集約のみ、ハンド別頻度なし | ~15 | Vol1 ch06-09 |
+### Phase α: Vol1 Preflop 完全実測化 (~38 spots / ~4 分)
+タスク D + E + F1 + F2 + F3 + L + C2 = 38 spots
+→ Vol1 preflop **全章** が hand-level 実測ベース化
+→ 書籍 §4.5/§4.6 の「理論値、GTO 検証なし」帯を実測で確定
 
----
+### Phase β: Postflop 特殊シナリオ補強 (~120 spots / ~12 分)
+タスク P1 + P2 + P3 + P4 = 約 120 spots
+→ 既存 postflop の盲点 (non-BTN 3BP / Cash 4BP 等) を埋める
 
-## 推奨実施プラン
+### Phase γ: 書籍範囲拡張 (~60 spots / ~6 分)
+タスク K + Q + R = 60 spots
+→ 新章追加候補 (ICM, multiway, 9-max)
 
-### Phase α (Vol1 ch04 完全化、~28 spots / ~3 分)
-タスク D + E + F1 + F2 + F3 = 28 spots
-→ 書籍 Vol1 ch04 を **「全モード実測 hand-level」**に格上げ
-→ 「理論値、GTO 検証なし」帯 (§4.5/§4.6) を実測で確定
+## 重要な再認識
 
-### Phase β (Vol1 ch03 RFI + Vol1 ch05 N=3、~10 spots / ~1 分)
-タスク L + C2 = 10 spots
-→ Vol1 preflop 全章で hand-level が揃う
+**当初は「IP defense / SB defense は未調査」と思っていたが、これは preflop の話。**
 
-### Phase γ (Vol2 River + Vol2 境界、~24 spots / ~2 分)
-タスク M + N = 24 spots
-→ Vol2 Tier 1 の精度を Tier 2 並みに
+**Postflop では UTG_BB / HJ_BB / CO_BB / SB_BB の全シナリオが既存** (Vol3 findings 配下に postflop hand-level あり)。
+→ Vol2 Tier 1 マトリックス (ch03-05) の検証には既存データで十分。
+→ Vol2 Tier 2 (ch08-11) も既存データで十分カバー。
 
-### Phase δ (Vol3 新章、~50 spots / ~5 分)
-タスク J + K = 50 spots
-→ 書籍に新章追加 (4BP、ICM 詳細)
+**「donk lead」(BB が flop で先手 bet)** は明示的な検出が必要だが、`def_*_bb_*_raw` に BB lead at turn/river の 96 + 202 ファイルがあり、これに含まれる可能性が高い。
 
-**全 Phase 合計: ~112 spots = 約 12 分の API call**
-
----
-
-## Vol4 (Tell/Exploit) について
-
-Vol4 はエクスプロイトベースで GTO Wizard データは間接的にしか使わない。
-GTO Wizard は「対 GTO」のレンジを返すが、Vol4 は「対 Nit/CS/LAG/Maniac/TAG」の補正値が主題。
-
-**Vol4 で GTO Wizard が役立つ場面**:
-- ch11-14 (タイプ別補正) の **GTO ベースライン** を確認 (補正前の T_open 等)
-- これは既に `cash_preflop_gto_summary.json` でカバー済み (RFI/vs_open/vs_3bet の集約)
-
-→ **Vol4 のための追加調査は不要**
-
----
+詳細確認は `deep_inventory.py` に flop_actions 解析を追加するか、特定ファイルを開いて検証。
 
 ## 使い方
 
-1. **新規調査を始める前に**: 本ドキュメントで「未調査領域」を確認
-2. **既存データの所在を知るには**: `RESEARCH_INVENTORY.md` (ディレクトリ単位サマリ)
-3. **個別ファイルの詳細は**: `RESEARCH_INVENTORY_DETAIL.md` (全 896 ファイル一覧)
+1. **新規調査を始める前に**: 本ドキュメントの 「✅ 既に十分カバー済」を確認
+2. **既存データの所在を知るには**: `RESEARCH_INVENTORY.md` (集約版) / `RESEARCH_DEEP_INVENTORY.md` (詳細)
+3. **個別ファイルの詳細**: `RESEARCH_INVENTORY_DETAIL.md`
 
-調査スクリプトは `research/v3-additional/` に集約。スクリプト名は `task_<letter>_<scenario>.py`。
+調査スクリプトは `research/v3-additional/` に集約。
