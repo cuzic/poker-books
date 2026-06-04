@@ -133,10 +133,35 @@ AA のみと読めるなら KK もフォールドが理論的に正しい。
 
 ## 【GTO とのズレ】
 
-BB defense は精度 87〜88%（本式最難関シナリオ）。
-主なズレ: suited の gap 処理（K7s vs K6s など）とオフスーツ低カード（93o, 84o など）。
+### シナリオ別の実測整合率
 
-IP defense: BTN vs CO は GTO が実際にはコールレンジを持つが、
+GTO Wizard hand-level の主アクション（50%+ frequency）と本式の予測を照合した結果：
+
+| シナリオ | 整合率 | 備考 |
+|---|---|---|
+| BB defense（補正なし） | **74.1%** | 22〜44 / 32s〜53s を取りこぼし |
+| BB defense（補正後） | 約 87% | 第 2 章 §2.5 の suited −2 補正適用 |
+| IP defense（BTN/CO/HJ） | **91.5%** | 本式が最も機能するシナリオ |
+| SB OOP defense | **89.8%** | BTN vs SB のみ T_3bet=T_call=25 |
+| vs 3-bet（4-bet or call or fold） | **90.3%** | 12 シナリオ平均 |
+
+### 各シナリオの主なズレ
+
+**BB defense**: 22 / 33 / 44 / 32s / 42s / 43s / 52s / 53s（Score 12〜21）が
+本式では fold だが GTO は 90〜100% call。原因は set mining と BB ポットオッズ。
+**第 2 章 §2.5 の suited −2 補正 + 低ペアコール推奨** で 74% → 87% に改善する。
+
+**IP defense**: BTN vs CO は GTO が実際にはコールレンジを持つが、
 本式では T_3bet ≈ T_call となり事実上 3-bet or fold に単純化される。
+それでも整合率 91.5% で本式が最もよく機能するシナリオ。
 
-4.5 / 4.6 は GTO ソルバー検証なし。ポットオッズ理論とモンテカルロ法（n=40,000）による近似値。
+**SB OOP defense**: BTN open に対しては T_3bet = T_call = 25（コールレンジなし）が GTO。
+他オープナーに対しては 3-bet と call を分ける。
+
+**vs 3-bet**: 12 シナリオすべてで 85〜93% の安定した精度。
+T_4bet = 37 / T_call = 31 という 2 段階閾値が機能している。
+
+### 検証対象外
+
+4.5（4-bet defense）/ 4.6（5-bet defense）は GTO ソルバー検証なし。
+ポットオッズ理論とモンテカルロ法（n=40,000）による近似値。
