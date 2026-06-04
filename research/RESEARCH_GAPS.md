@@ -72,6 +72,26 @@ SB open → SB cbet:  24+24+24 = 72 files (BvB postflop)
 - **CheckRaise SBR 別** ← `mtt_check_raise_SBR{20,25}.json`
 - **MTT preflop SBR 別** ← `mtt_preflop_*` (集約)
 
+## 🆕 attack / defense 偏り発見 (2026-06-04 再分析)
+
+`attack_vs_defense_coverage.py` で 732 postflop ファイルを spot_type (attack/defense) で分類:
+
+| Actor | attack | defense |
+|-------|--------|---------|
+| BB | 113 | **185** |
+| BTN | 146 | **0** |
+| CO | 72 | **0** |
+| HJ | 72 | **0** |
+| LJ (9m) | 72 | **0** |
+| **SB** | **72 (flop only)** | **0** |
+
+- **defense 185 ファイルは全て BB defender**
+- **IP defender (BTN/CO/HJ が BB lead を受ける) は 0 件**
+- **SB defender (BvB で BB の bet 受ける) は 0 件**
+- **SB の turn / river は 0 件** (SB は flop attack のみ)
+
+→ **defense 全般、特に IP defender / SB defender / SB の turn/river は完全未調査**
+
 ## ❌ 真に未調査の領域
 
 ### 🔴 高優先: Vol1 Preflop hand-level の残り
@@ -94,10 +114,15 @@ SB open → SB cbet:  24+24+24 = 72 files (BvB postflop)
 
 | # | 領域 | spots | 既存との関係 |
 |---|------|-------|------------|
-| P1 | **Cash IP cbet vs raise** (BTN cbet → BB raise の対応) | ~10 | turn/river raw に部分あるが BTN_BB のみ |
-| P2 | **3BP HJ_BB / UTG_BB / SB_BB postflop** | ~30 | 既存 3bp_raw は BTN_BB / CO_BB のみ |
-| P3 | **Cash 50bb / 25bb の non-MTT postflop** | ~50 | 既存は MTT 用が大半 |
-| P4 | **Cash 4BP (4-bet pot) postflop** | ~30 | 既存 3BP のみ、4BP は完全未調査 |
+| **S1** | **SB-BB BvB SRP postflop turn/river** ★ | ~48 | 既存は SB flop attack のみ、turn/river なし |
+| **S2** | **SB defender (BvB で BB lead 受ける)** ★ | ~24 | 完全 0、BvB の OOP→IP defense ライン |
+| **S3** | **IP defender (BTN/CO/HJ が BB lead 受ける)** ★ | ~30 | 完全 0、いわゆる「BB donk → IP fold/call/raise」 |
+| **S4** | **3BP postflop defense (3-bettor を caller が反撃)** | ~30 | 既存 3BP は cbet 側のみ |
+| **S5** | **Check-raise pot 後 (check-raise → call/raise)** | ~30 | 既存ほぼ全て raw single cbet line |
+| P1 | Cash IP cbet vs raise (BTN cbet → BB raise の対応) | ~10 | 既存 turn/river raw に部分あるが BTN_BB のみ |
+| P2 | 3BP HJ_BB / UTG_BB / SB_BB postflop | ~30 | 既存 3bp_raw は BTN_BB / CO_BB のみ |
+| P3 | Cash 50bb / 25bb の non-MTT postflop | ~50 | 既存は MTT 用が大半 |
+| P4 | Cash 4BP (4-bet pot) postflop | ~30 | 既存 3BP のみ、4BP は完全未調査 |
 
 ### 🟢 低優先: 書籍範囲拡張
 
@@ -114,13 +139,27 @@ SB open → SB cbet:  24+24+24 = 72 files (BvB postflop)
 → Vol1 preflop **全章** が hand-level 実測ベース化
 → 書籍 §4.5/§4.6 の「理論値、GTO 検証なし」帯を実測で確定
 
-### Phase β: Postflop 特殊シナリオ補強 (~120 spots / ~12 分)
+### Phase β: defense 不足 + SB 補強 (~162 spots / ~17 分) ★ 新規追加
+タスク S1 + S2 + S3 + S4 + S5 = 162 spots
+→ defense / SB の盲点を埋める。特に IP defender / SB defender / SB turn river
+
+### Phase γ: Postflop 特殊シナリオ補強 (~120 spots / ~12 分)
 タスク P1 + P2 + P3 + P4 = 約 120 spots
 → 既存 postflop の盲点 (non-BTN 3BP / Cash 4BP 等) を埋める
 
-### Phase γ: 書籍範囲拡張 (~60 spots / ~6 分)
+### Phase δ: 書籍範囲拡張 (~60 spots / ~6 分)
 タスク K + Q + R = 60 spots
 → 新章追加候補 (ICM, multiway, 9-max)
+
+## 全 Phase 合計
+
+| Phase | 内容 | spots |
+|-------|------|-------|
+| α | Vol1 Preflop hand-level の残り | 38 |
+| **β** | **defense 不足 + SB 補強** ★ 最重要 | 162 |
+| γ | Postflop 特殊シナリオ補強 | 120 |
+| δ | 書籍範囲拡張 | 60 |
+| **計** | | **380 spots** (~40 分の API call) |
 
 ## 重要な再認識
 
