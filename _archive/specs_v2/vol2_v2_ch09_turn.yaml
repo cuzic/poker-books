@@ -1,0 +1,188 @@
+volume: "Vol2"
+chapter_num: "09"
+title: "Turn 2nd barrel — α=-0.35 シフト"
+
+summary: |
+  フロップ cbet 後にターンへ進むとき、bet 頻度は A モデルの turn context に切り替えます。
+  turn context では air が 5%、weak が 5%、mid が 10%、strong が 30%、nut が 40% です。
+  これはフロップ cash context (air 45%) からおよそ -35pt シフトした水準で、「α=-0.35」と呼びます。
+  TA+ (IP レンジ強化) ターンではバレル継続を判断し、TA- (BB レンジ強化) では多くの場合チェックバックします。
+  ストレート・フラッシュ完成ターンは A モデル 精度が低下するため、別途例外ルールを適用します。
+
+sections:
+  - type: heading
+    level: 2
+    text: "ターンで何が変わるか"
+
+  - type: prose
+    body: |
+      フロップで cbet を打った後、相手がコールしてターンを向かえます。
+      この局面での 2nd barrel 判断は、フロップとは別の freq 設定が必要です。
+
+      **なぜフロップと同じ freq では駄目か**:
+      フロップで cbet した後にコールされたということは、相手はある程度の強さを持っている可能性が高くなります。
+      また、ターンカードによってレンジの強弱が大きく変化します。
+      そのため、ターンの bet 頻度は全体的にフロップより低く設定されます。
+
+      **α=-0.35 シフトの直感的意味**:
+      A モデルの cash context (フロップ) の各バンド値からおよそ 35pt 引いた水準が、ターンの目安になります。
+      例: cash context の strong バンドは 60% → ターンでは 60% - 30pt = 30% が目安 (実際の turn context は 30%)。
+      air バンドは 45% → ターンでは 5% (フォールドがほぼすべて) に大きく圧縮されます。
+
+  - type: heading
+    level: 2
+    text: "turn context の 25 セル表"
+
+  - type: table
+    template: 25cell_table
+    title: "A モデル — 全 context 25 セル表 (turn 行に注目)"
+
+  - type: prose
+    body: |
+      turn context (5 値) を単独で確認します。
+
+      | バンド | turn context | cash との差 |
+      |---|---:|---:|
+      | air (TV 0-2) | 5% | -40pt |
+      | weak (TV 3-4) | 5% | -35pt |
+      | mid (TV 5-6) | 10% | -30pt |
+      | strong (TV 7-8) | 30% | -30pt |
+      | nut (TV 9+) | 40% | -20pt |
+
+      **読み方**:
+      - nut バンド (TV 9+) でも 40% → ベット推奨は strong / nut バンドに限定
+      - air / weak / mid はほぼチェックバック (≤10%)
+      - ナッツ級でさえ「半分以下」に抑えるのがターンの特徴です
+
+      **なぜ nut も低いか**:
+      ターンは「リバーにもベットできる」ストリートです。
+      nut は slowplay してリバーバレルを積む計画も有効なため、ターンでは全体的に控えめな頻度になっています。
+
+  - type: heading
+    level: 2
+    text: "TA+ / TA- の判定 (簡素版)"
+
+  - type: prose
+    body: |
+      ターンカードが IP のレンジを強化するか (TA+)、BB のレンジを強化するか (TA-) によって、バレル判断を微調整します。
+
+      **TA+ カード (IP 有利)**:
+      - ブロードウェイカード (A・K・Q・J・T): IP のオープンレンジが強化される
+      - ペアカード (フロップのトップカードと同ランク): IP のセット/フルハウスが完成
+      - TP のキッカーが改善するカード
+
+      TA+ ターンでは turn context の freq をそのまま使います。
+      strong バンドなら 30%、nut バンドなら 40% でバレル継続を判断します。
+
+      **TA- カード (BB 有利)**:
+      - 小さなローカード (2〜6): BB のコール range (小さいペア・コネクター) が強化される
+      - ストレート完成カード: BB のコネクターが完成しやすい
+      - フラッシュ完成カード: BB のスーテッドハンドが完成しやすい
+
+      TA- ターンでは turn context の freq よりさらに低く、特に strong バンドでも 20% 前後を目安にします。
+      mid バンドはほぼチェックバックで問題ありません。
+
+      **簡易 TA 判定チャート**:
+      ```
+      ターンカードが A/K/Q/J/T → TA+ (バレル継続を検討)
+      ターンカードが 2/3/4/5/6 → TA- (チェックバック寄り)
+      ターンカードがペア (フロップと同ランク) → TA+ (セット完成考慮)
+      ターンカードがフラッシュ/ストレート完成 → 例外処理 (後述)
+      ```
+
+  - type: heading
+    level: 2
+    text: "turn 2nd barrel の暗算フロー"
+
+  - type: prose
+    body: |
+      フロップ cbet 後のターン 2nd barrel 判断は以下の手順で行います。
+
+      ```
+      [Turn 2nd barrel 暗算フロー]
+
+      Step 1: MV + DV を確認 (フロップ同様)
+        ターンで役が変わった場合は MV を更新
+
+      Step 2: TV バンド判定 (変わらない場合が多い)
+
+      Step 3: context を "turn" に切り替える
+        LIGHT_V2_BASE["turn"][band] → freq
+
+      Step 4: TA+/TA- 確認
+        TA+ → freq そのまま
+        TA- → freq - 10pt (目安) でチェック寄り
+
+      Step 5: 判断
+        freq ≥ 30% かつ strong/nut → バレル継続
+        freq < 30% または air/weak/mid → チェックバック
+      ```
+
+      **簡易判断**: air / weak / mid バンドはターン context で 5-10% なので、ほぼチェックバックで正解です。
+      判断が必要なのは strong (30%) と nut (40%) だけです。
+
+  - type: heading
+    level: 2
+    text: "ストレート / フラッシュ完成ターンの例外"
+
+  - type: prose
+    body: |
+      ターンカードがストレートまたはフラッシュを完成させた場合、A モデルの精度が低下します。
+
+      **なぜ精度が低下するか**:
+      フラッシュ完成ターンでは、IP と BB のフラッシュ保有比率が大きくレンジの強弱を決定します。
+      A モデルの TV バンドはこのレンジ構造を捉えられないため、WRMSE が 19-28% に拡大します。
+
+      **例外処理の簡易ルール**:
+
+      | ターンカード | 補正方向 | 理由 |
+      |---|---|---|
+      | 3 枚目の同スーツ (フラッシュ完成) | freq を -10pt | IP のフラッシュ密度次第 |
+      | ストレート完成 (連続 4 枚) | freq を -10pt | BB のコネクター完成優位 |
+      | ボードがモノトーン化 | さらに -5pt | フラッシュドロー価値の消滅 |
+
+      **実戦での扱い**:
+      フラッシュ完成ターンでは strong バンドでも「相手がフラッシュを持っているかどうか」を意識します。
+      相手がルースなコールレンジを持つ場合はフラッシュ完成でも strong バンドのバリューは生きています。
+      ただし A モデルの数値をそのまま適用するより、スポット判断が重要な局面です。
+
+      **精度参考**:
+      - 通常の turn context WRMSE: ~20%
+      - フラッシュ/ストレート完成ターン: WRMSE 25-28% に拡大
+      - このズレは「暗算 5 秒」の代償として許容する範囲ですが、境界ハンドは要注意です。
+
+  - type: heading
+    level: 2
+    text: "計算例 — turn context"
+
+  - type: examples
+    framework: light
+    title: "Turn 2nd barrel 計算例"
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        context: turn
+      - hand: second_pair
+        draw: no_draw
+        context: turn
+      - hand: overpair
+        draw: no_draw
+        context: turn
+      - hand: ace_high
+        draw: fd
+        context: turn
+      - hand: two_pair
+        draw: no_draw
+        context: turn
+
+  - type: heading
+    level: 2
+    text: "まとめ"
+
+  - type: prose
+    body: |
+      - turn context は cash context から全バンドで大きくシフトダウンする (air: 45% → 5%)。
+      - air / weak / mid バンドはターンでチェックバックがデフォルト (5-10%)。
+      - strong (30%) と nut (40%) のみバレル継続を検討する。
+      - TA+ ターンではそのまま、TA- ターンではさらに -10pt で調整。
+      - フラッシュ/ストレート完成ターンは A モデルの精度が下がるため、スポット判断を優先する。

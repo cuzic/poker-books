@@ -1,0 +1,48 @@
+{
+  "title": "迷わないポーカー Vol2: Cash ポストフロップ専門版",
+  "titleRomaji": "Mayowanai Poker Vol2: Cash Postflop Specialized",
+  "subtitle": "Cash 100bb を二層構造で完全攻略 (Tier 1 簡易 + Tier 2 詳細)",
+  "author": "川西智也",
+  "language": "ja",
+  "identifier": "urn:uuid:c3d4e5f6-7a8b-9c0d-1e2f-a3b4c5d6e7f8",
+  "publisher": "川西智也",
+  "description": "Cash 100bb のポストフロップ判断を **二層構造で完全攻略** する初心者〜上級者向け実践書。Vol3 (MTT 専門版) と独立した内容で、キャッシュゲーム専門プレイヤー向け。\n\n**Tier 1 (簡易、ch01-07)**: ハンド強さ 5 段階 (S/M/W/A/D) × ベットサイズ 4 段階 (s/m/l/o) の 20 セルマトリックス + 街補正 (Flop 3 / Turn 3 / River 4) で **always_CALL 比 huge_gap loss を平均 88% 削減** (Flop 84%, Turn 92%, River 87%、GTO 検証済み)。\n\n**Tier 2 (詳細、ch08-11)**: Cash 100bb 専用の詳細公式 — Flop v8 (low_pair/AIR 拡張)、Turn v8 (mv+dv 軸)、River v14 (bucket-based + mv override)、River attack v7 (polarization + slowplay)。**平均 93% 削減** (Turn 99%, River 97%)。\n\n14 章構成。ch01-02 で基礎分類、ch03-04 でマトリックス本体、ch05-07 で街補正 (Tier 1)、ch08-11 で詳細公式 (Tier 2)、ch12 で 50 問練習、ch13 で 2 ページ早見表。初心者は ch01-07 で実戦十分、上級者は ch08-11 で huge_gap セルを更に潰す。\n\nMTT (25-200bb) や stack depth 補正、ポジション別戦略、donk bet、3-bet pot 詳細は **Vol3 (MTT 専門版)** で独立して扱う。",
+  "kdp": {
+    "keywords": [
+      "Cash ポーカー ポストフロップ",
+      "テキサスホールデム Cbet",
+      "ポーカー リバー Bluff Catch",
+      "GTO ポーカー 暗算",
+      "Cash 100bb ポーカー戦略",
+      "ポーカー 簡易マトリックス",
+      "ポーカー huge_gap 削減",
+      "5×4 マトリックス ポーカー",
+      "Cash 専門 中上級",
+      "ポーカー 攻守 5段階"
+    ],
+    "categories": [
+      "Kindle Store > 趣味・実用 > ゲーム",
+      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム"
+    ],
+    "bisac": [
+      "GAM004000",
+      "GAM002000"
+    ],
+    "bisacLabels": [
+      "GAMES & ACTIVITIES / Card Games / Poker",
+      "GAMES & ACTIVITIES / Card Games / General"
+    ],
+    "targetAudience": "Cash 100bb プレイヤー初中級者から上級者まで。Tier 1 (ch01-07) は初心者向け、Tier 2 (ch08-11) は GTO ガチ整合を望む上級者向け。プリフロップは Vol1 または同等の知識を想定 (本書独立読了可能)。",
+    "pageReadDirection": "ltr",
+    "aiContentDisclosure": {
+      "textAssisted": true,
+      "imageGenerated": false,
+      "note": "Claude Code（Anthropic）を執筆補助ツールとして使用。最終的な編集・監修は著者が実施。"
+    },
+    "pricing": {
+      "currency": "JPY",
+      "listPrice": 880,
+      "kdpSelect": true
+    }
+  }
+}

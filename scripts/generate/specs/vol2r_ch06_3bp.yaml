@@ -1,0 +1,73 @@
+volume: "Vol2r"
+chapter_num: "06"
+title: "3BPポストフロップ"
+street: "flop"
+
+summary: |
+  3betポット（3BP）では SPR が低く（≈3-4）、コミットラインが下がる。
+  フロップで TPMK 以上なら全スタックを争える。CBet サイズは大きく。
+
+key_formulas:
+  "3BP SPR計算":
+    |
+    100BB スタート + BTN 3bet → BB コール
+    ポット ≈ 18-20BB (BTN 2.5BB → BB 3bet 9BB → BTN コール)
+    実効スタック ≈ 91BB
+    SPR ≈ 91 / 19 ≈ 4.8 → コミットライン HS ≥ 55 (TPMK以上)
+
+  "3BP コミットライン":
+    |
+    SPR ≥ 8:  HS ≥ 65 (TPTK 以上)
+    SPR 5-6:  HS ≥ 55 (TPMK 以上)
+    SPR 3-4:  HS ≥ 42 (セカンドペア強以上)
+    SPR 2-3:  HS ≥ 30 (TP弱以上)
+    SPR < 2:  HS ≥ 50 (フロップ着地即コミット)
+
+  "3BP CBet サイズ":
+    |
+    型1/2/6 (ハイボード): 50-75% pot
+    型3/4 (ローボード):  75-100% pot
+    型5 (モノトーン):    75-100% pot
+
+examples:
+  # 3BP context: SPR≈4-5
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "QQ"
+    board: "Jd,9s,4c"
+  - hand: "JTs"
+    board: "Qd,9c,3h"
+  - hand: "KQs"
+    board: "Kd,7c,2s"
+  - hand: "55"
+    board: "Kd,Tc,4s"
+  - hand: "AQo"
+    board: "9d,8c,7h"
+
+key_points:
+  - "3BPはSPRが低い → コミットラインが下がる（TPMK以上でスタックを争う）"
+  - "ブラフキャッチャーが3BPでRIOになりやすい（SPR低いとコールが正当化される）"
+  - "3BP CBetは大サイズ（50-75%）が基本（ポット拡大とエクイティ保護）"
+  - "SPR < 3 ではフロップでオールインレンジに入る手が増える"
+
+sections:
+  - title: "3BPのSPR計算と5分類への影響"
+    summary: |
+      SPR≈4-5でコミットラインがHS≥55まで下がる。
+      SRPでブラフキャッチャーだった手が3BPでバリュー/セミコミットになりうる。
+  - title: "3BP フロップ CBet 戦略"
+    summary: |
+      3bet側（IP）: 高頻度大サイズCBet。3BPはCBet権が明確。
+      コール側（OOP）: チェックが基本。バリューは厚め（コール/CR選択肢）。
+  - title: "3BP での RIO と スタック争い"
+    summary: |
+      SPR≈4: TPMK以上でスタック争い可 → 「コミットか即フォールド」の2択。
+      RIOハンド(低ペア+ウェット)はフォールドが多い。
+  - title: "4BPポットの概要"
+    summary: |
+      SPR < 2: ほぼ全スタックがプリフロップで入る。
+      フロップではTPTK以上がコミット圏。セミブラフもコミット候補。
+
+gto_reference:
+  source: "GTO Wizard Cash6mGeneral_6mNL25R25 100BB 3BP"
+  notes: "3BP CBet率: 高頻度（65-80%）。サイズ: 50-75%"

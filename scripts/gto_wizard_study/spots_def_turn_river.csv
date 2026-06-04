@@ -1,0 +1,43 @@
+id,topic,gametype,depth,stacks,preflop_actions,flop_actions,turn_actions,river_actions,board,note
+# Turn defense — BB facing turn cbet after flop call
+# Line: BTN open 2.5x, BB call → flop cbet 33% (1.8) called → turn cbet (varies)
+# Bet sizes turn: 33% pot (~3.0), 75% pot (~6.8)
+DT001,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R3.0,,Kd7c2d3h,K72 dry + brick3 turn 33%
+DT002,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R6.8,,Kd7c2d3h,K72 dry + brick3 turn 75%
+DT003,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R3.0,,Kd7c2dKs,K72 dry + K pair turn 33%
+DT004,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R6.8,,Kd7c2dKs,K72 dry + K pair turn 75%
+DT005,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R3.0,,Kd7c2dAh,K72 dry + A overcard turn 33%
+DT006,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R6.8,,Kd7c2dAh,K72 dry + A overcard turn 75%
+DT007,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R3.0,,Qh8d3s8c,Q83 + 8 pair turn 33%
+DT008,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R6.8,,Qh8d3s8c,Q83 + 8 pair turn 75%
+DT009,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R3.0,,Qh8d3s2h,Q83 + brick2 turn 33%
+DT010,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R6.8,,Qh8d3s2h,Q83 + brick2 turn 75%
+DT011,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R3.0,,Ts9d8c2h,T98 dynamic + brick turn 33%
+DT012,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R6.8,,Ts9d8c2h,T98 dynamic + brick turn 75%
+DT013,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R3.0,,Ts9d8cTh,T98 + T pair turn 33%
+DT014,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R6.8,,Ts9d8cTh,T98 + T pair turn 75%
+DT015,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R3.0,,KsJhTd2c,KJT dynamic + brick turn 33%
+DT016,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R6.8,,KsJhTd2c,KJT dynamic + brick turn 75%
+DT017,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R3.0,,KsJhTd9c,KJT + 9 straight turn 33%
+DT018,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R6.8,,KsJhTd9c,KJT + 9 straight turn 75%
+DT019,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R3.0,,Jh7d3c2s,J73 low + brick turn 33%
+DT020,def_turn_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R6.8,,Jh7d3c2s,J73 low + brick turn 75%
+# River defense — BB facing river bet after flop and turn cbet calls
+# Line: same as above + turn call → river cbet (varies)
+# Bet sizes river: 50% pot, 100% pot
+DR001,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R9,Kd7c2d3h4c,K72-3-4 brick river 50%
+DR002,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R18,Kd7c2d3h4c,K72-3-4 brick river 100%
+DR003,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R9,Kd7c2d3hAs,K72-3-A overcard river 50%
+DR004,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R18,Kd7c2d3hAs,K72-3-A overcard river 100%
+DR005,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R9,Qh8d3s2hJc,Q83-2-J connect river 50%
+DR006,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R18,Qh8d3s2hJc,Q83-2-J connect river 100%
+DR007,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R9,Ts9d8c2h4s,T98-2-4 brick river 50%
+DR008,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R18,Ts9d8c2h4s,T98-2-4 brick river 100%
+DR009,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R9,Ts9d8c2hJh,T98-2-J connect river 50%
+DR010,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R18,Ts9d8c2hJh,T98-2-J connect river 100%
+DR011,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R9,KsJhTd2c5s,KJT-2-5 brick river 50%
+DR012,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R18,KsJhTd2c5s,KJT-2-5 brick river 100%
+DR013,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R9,KsJhTd9cAh,KJT-9-A overcard river 50%
+DR014,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R18,KsJhTd9cAh,KJT-9-A overcard river 100%
+DR015,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R9,Jh7d3c2s4d,J73-2-4 brick river 50%
+DR016,def_river_cash100,Cash6mGeneral_6mNL50,100,100-100-100-100-100-100,F-F-F-R2.5-F-C,X-R1.8-C,X-R4.5-C,X-R18,Jh7d3c2s4d,J73-2-4 brick river 100%

@@ -1,0 +1,205 @@
+|--- street_turn <= 0.50
+|   |--- dv_cat_unknown <= 0.50
+|   |   |--- mv_cat_low_pair <= 0.50
+|   |   |   |--- mv_cat_third_pair <= 0.50
+|   |   |   |   |--- top_rank_bucket_Q <= 0.50
+|   |   |   |   |   |--- spread <= 2.50
+|   |   |   |   |   |   |--- mv_cat_straight <= 0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- mv_cat_straight >  0.50
+|   |   |   |   |   |   |   |--- class: MIX
+|   |   |   |   |   |--- spread >  2.50
+|   |   |   |   |   |   |--- top_rank_bucket_J <= 0.50
+|   |   |   |   |   |   |   |--- class: MIX
+|   |   |   |   |   |   |--- top_rank_bucket_J >  0.50
+|   |   |   |   |   |   |   |--- class: MIX
+|   |   |   |   |--- top_rank_bucket_Q >  0.50
+|   |   |   |   |   |--- spread <= 9.00
+|   |   |   |   |   |   |--- mv_cat_trips <= 0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- mv_cat_trips >  0.50
+|   |   |   |   |   |   |   |--- class: MIX
+|   |   |   |   |   |--- spread >  9.00
+|   |   |   |   |   |   |--- mv_cat_no_made_hand <= 0.50
+|   |   |   |   |   |   |   |--- class: MIX
+|   |   |   |   |   |   |--- mv_cat_no_made_hand >  0.50
+|   |   |   |   |   |   |   |--- class: MIX
+|   |   |   |--- mv_cat_third_pair >  0.50
+|   |   |   |   |--- dv_cat_twocards_bdfd <= 0.50
+|   |   |   |   |   |--- top_rank_bucket_A <= 0.50
+|   |   |   |   |   |   |--- spread_bucket_medium <= 0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- spread_bucket_medium >  0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |--- top_rank_bucket_A >  0.50
+|   |   |   |   |   |   |--- spread <= 11.00
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- spread >  11.00
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |--- dv_cat_twocards_bdfd >  0.50
+|   |   |   |   |   |--- class: MIX
+|   |   |--- mv_cat_low_pair >  0.50
+|   |   |   |--- top_rank_bucket_A <= 0.50
+|   |   |   |   |--- spread <= 7.00
+|   |   |   |   |   |--- dv_cat_oesd <= 0.50
+|   |   |   |   |   |   |--- top_rank_bucket_J <= 0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- top_rank_bucket_J >  0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |--- dv_cat_oesd >  0.50
+|   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |--- spread >  7.00
+|   |   |   |   |   |--- spread <= 9.50
+|   |   |   |   |   |   |--- hand_high_vs_top <= -4.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- hand_high_vs_top >  -4.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |--- spread >  9.50
+|   |   |   |   |   |   |--- class: LOW
+|   |   |   |--- top_rank_bucket_A >  0.50
+|   |   |   |   |--- class: LOW
+|   |--- dv_cat_unknown >  0.50
+|   |   |--- line_srp_3bet <= 0.50
+|   |   |   |--- top_rank_bucket_Q <= 0.50
+|   |   |   |   |--- spread_bucket_connected <= 0.50
+|   |   |   |   |   |--- spread <= 11.50
+|   |   |   |   |   |   |--- top_rank_bucket_A <= 0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- top_rank_bucket_A >  0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |--- spread >  11.50
+|   |   |   |   |   |   |--- hand_high_vs_top <= -3.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- hand_high_vs_top >  -3.50
+|   |   |   |   |   |   |   |--- class: MIX
+|   |   |   |   |--- spread_bucket_connected >  0.50
+|   |   |   |   |   |--- top_rank_bucket_T <= 0.50
+|   |   |   |   |   |   |--- hand_high_vs_top <= -3.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- hand_high_vs_top >  -3.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |--- top_rank_bucket_T >  0.50
+|   |   |   |   |   |   |--- hand_high_vs_top <= -3.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- hand_high_vs_top >  -3.50
+|   |   |   |   |   |   |   |--- class: MIX
+|   |   |   |--- top_rank_bucket_Q >  0.50
+|   |   |   |   |--- hand_high_vs_top <= 0.50
+|   |   |   |   |   |--- hand_high_vs_top <= -3.50
+|   |   |   |   |   |   |--- hand_high_vs_top <= -6.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- hand_high_vs_top >  -6.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |--- hand_high_vs_top >  -3.50
+|   |   |   |   |   |   |--- hand_high_vs_top <= -2.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- hand_high_vs_top >  -2.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |--- hand_high_vs_top >  0.50
+|   |   |   |   |   |--- is_suited <= 0.50
+|   |   |   |   |   |   |--- has_K <= 0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- has_K >  0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |--- is_suited >  0.50
+|   |   |   |   |   |   |--- class: LOW
+|   |   |--- line_srp_3bet >  0.50
+|   |   |   |--- top_rank_bucket_K <= 0.50
+|   |   |   |   |--- hand_high_vs_top <= -0.50
+|   |   |   |   |   |--- class: LOW
+|   |   |   |   |--- hand_high_vs_top >  -0.50
+|   |   |   |   |   |--- class: HIGH
+|   |   |   |--- top_rank_bucket_K >  0.50
+|   |   |   |   |--- class: HIGH
+|--- street_turn >  0.50
+|   |--- hero_rel_OOP <= 0.50
+|   |   |--- mv_cat_second_pair <= 0.50
+|   |   |   |--- mv_cat_third_pair <= 0.50
+|   |   |   |   |--- dv_cat_no_draw <= 0.50
+|   |   |   |   |   |--- n_suits <= 2.50
+|   |   |   |   |   |   |--- class: MIX
+|   |   |   |   |   |--- n_suits >  2.50
+|   |   |   |   |   |   |--- mv_cat_no_made_hand <= 0.50
+|   |   |   |   |   |   |   |--- class: HIGH
+|   |   |   |   |   |   |--- mv_cat_no_made_hand >  0.50
+|   |   |   |   |   |   |   |--- class: HIGH
+|   |   |   |   |--- dv_cat_no_draw >  0.50
+|   |   |   |   |   |--- mv_cat_set <= 0.50
+|   |   |   |   |   |   |--- mv_cat_two_pair <= 0.50
+|   |   |   |   |   |   |   |--- class: MIX
+|   |   |   |   |   |   |--- mv_cat_two_pair >  0.50
+|   |   |   |   |   |   |   |--- class: HIGH
+|   |   |   |   |   |--- mv_cat_set >  0.50
+|   |   |   |   |   |   |--- class: HIGH
+|   |   |   |--- mv_cat_third_pair >  0.50
+|   |   |   |   |--- dv_cat_no_draw <= 0.50
+|   |   |   |   |   |--- class: HIGH
+|   |   |   |   |--- dv_cat_no_draw >  0.50
+|   |   |   |   |   |--- spread <= 9.50
+|   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |--- spread >  9.50
+|   |   |   |   |   |   |--- class: LOW
+|   |   |--- mv_cat_second_pair >  0.50
+|   |   |   |--- spread <= 8.50
+|   |   |   |   |--- class: LOW
+|   |   |   |--- spread >  8.50
+|   |   |   |   |--- class: LOW
+|   |--- hero_rel_OOP >  0.50
+|   |   |--- mv_cat_low_pair <= 0.50
+|   |   |   |--- mv_cat_third_pair <= 0.50
+|   |   |   |   |--- mv_cat_ace_high <= 0.50
+|   |   |   |   |   |--- mv_cat_straight <= 0.50
+|   |   |   |   |   |   |--- top_rank_bucket_A <= 0.50
+|   |   |   |   |   |   |   |--- class: HIGH
+|   |   |   |   |   |   |--- top_rank_bucket_A >  0.50
+|   |   |   |   |   |   |   |--- class: HIGH
+|   |   |   |   |   |--- mv_cat_straight >  0.50
+|   |   |   |   |   |   |--- top_rank_bucket_low <= 0.50
+|   |   |   |   |   |   |   |--- class: MIX
+|   |   |   |   |   |   |--- top_rank_bucket_low >  0.50
+|   |   |   |   |   |   |   |--- class: HIGH
+|   |   |   |   |--- mv_cat_ace_high >  0.50
+|   |   |   |   |   |--- board_family_dynamic <= 0.50
+|   |   |   |   |   |   |--- top_rank_bucket_K <= 0.50
+|   |   |   |   |   |   |   |--- class: HIGH
+|   |   |   |   |   |   |--- top_rank_bucket_K >  0.50
+|   |   |   |   |   |   |   |--- class: HIGH
+|   |   |   |   |   |--- board_family_dynamic >  0.50
+|   |   |   |   |   |   |--- has_K <= 0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- has_K >  0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |--- mv_cat_third_pair >  0.50
+|   |   |   |   |--- top_rank_bucket_low <= 0.50
+|   |   |   |   |   |--- top_rank_bucket_A <= 0.50
+|   |   |   |   |   |   |--- top_rank_bucket_Q <= 0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- top_rank_bucket_Q >  0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |--- top_rank_bucket_A >  0.50
+|   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |--- top_rank_bucket_low >  0.50
+|   |   |   |   |   |--- hand_high_vs_top <= 3.50
+|   |   |   |   |   |   |--- hand_high_vs_top <= -0.50
+|   |   |   |   |   |   |   |--- class: HIGH
+|   |   |   |   |   |   |--- hand_high_vs_top >  -0.50
+|   |   |   |   |   |   |   |--- class: HIGH
+|   |   |   |   |   |--- hand_high_vs_top >  3.50
+|   |   |   |   |   |   |--- class: HIGH
+|   |   |--- mv_cat_low_pair >  0.50
+|   |   |   |--- top_rank_bucket_T <= 0.50
+|   |   |   |   |--- top_rank_bucket_A <= 0.50
+|   |   |   |   |   |--- top_rank_bucket_Q <= 0.50
+|   |   |   |   |   |   |--- spread_bucket_wide <= 0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- spread_bucket_wide >  0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |--- top_rank_bucket_Q >  0.50
+|   |   |   |   |   |   |--- hand_high_vs_top <= -0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |   |   |--- hand_high_vs_top >  -0.50
+|   |   |   |   |   |   |   |--- class: LOW
+|   |   |   |   |--- top_rank_bucket_A >  0.50
+|   |   |   |   |   |--- class: LOW
+|   |   |   |--- top_rank_bucket_T >  0.50
+|   |   |   |   |--- class: LOW

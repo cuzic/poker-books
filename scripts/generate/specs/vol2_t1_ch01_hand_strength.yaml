@@ -1,0 +1,177 @@
+volume: "Vol2"
+chapter_num: "01"
+title: "ハンド強さ 5 段階 — S / M / W / A / D を判定する"
+
+summary: |
+  ポストフロップで最初にやることは、自分のハンドを「強い・中程度・弱い・空・ドロー」の 5 段階に分類することです。
+  この章では各カテゴリーの定義と境界、迷ったときの判定基準を解説します。
+
+sections:
+
+  - type: heading
+    level: 2
+    text: "5 段階の定義"
+
+  - type: prose
+    body: |
+      本書はハンドを以下の 5 段階に分類します。
+
+  - type: table
+    markdown: |
+      | 記号 | 名称 | 例 (フロップ後の役) |
+      |------|------|----------------------|
+      | **S** | Strong | 2P+ (ツーペア以上)、set、straight、flush、overpair |
+      | **M** | Medium | top pair (TP)、2nd pair、3rd pair、underpair |
+      | **W** | Weak | A-high、K-high、low pair (ボトムペア以下) |
+      | **A** | Air | 役なし + ドローなし |
+      | **D** | Draw | OESD、FD、combo draw (Flop/Turn のみ。River では出ない) |
+
+  - type: prose
+    body: |
+      この 5 つは「相互排他」を意識せず、**「最も強い側に分類する」** ルールで判定します。例えば top pair + flush draw なら、メイドハンドの強さで M、ドローの強さで D ですが、後で説明する優先順位ルールで D 扱いになる場合があります (詳細は本章後半)。
+
+  - type: heading
+    level: 2
+    text: "S (Strong) の境界"
+
+  - type: prose
+    body: |
+      S は「相手の通常ベットに対して RAISE で立ち向かえる」強さです。
+
+      **必ず S になる役:**
+
+      - **2P (ツーペア)** 以上のメイドハンド
+      - **Set (セット、ポケットペアからの 3 カード)**
+      - **Trips (トリップス、ボードペアからの 3 カード)**
+      - **Straight (ストレート)**
+      - **Flush (フラッシュ)**
+      - **Full house / Quads** (極稀)
+
+      **準 S 扱い:**
+
+      - **Overpair** (ボードのトップカードより高いポケットペア。例: QQ on T-7-2)
+
+      Overpair は厳密にはトップペアの上位互換ですが、戦略的に S 扱いで問題ありません。AA on T-7-2 と JJ on T-7-2 を別カテゴリーに分けても判断は変わらないからです。
+
+  - type: heading
+    level: 2
+    text: "M (Medium) の境界"
+
+  - type: prose
+    body: |
+      M は「相手の通常ベットに対しては CALL、大きなベットには FOLD」を基本とする中間層です。
+
+      **典型的な M:**
+
+      - **TP (Top Pair)**: ボードの最高カードでペアを作った
+      - **2nd Pair**: ボードの 2 番目に高いカードでペアを作った
+      - **3rd Pair**: ボードの 3 番目 (=最低) のカードでペアを作った
+      - **Underpair**: ボードの最低カードより低いポケットペア (例: 88 on K-Q-9)
+
+      これら 4 タイプは showdown value (見せ場価値) があり、相手のブラフをキャッチすることで勝てる可能性があります。一方、相手が本気のバリューベットを打ってきた場合は負けていることが多いため、大きなサイズに対しては fold します。
+
+  - type: heading
+    level: 2
+    text: "W (Weak) の境界"
+
+  - type: prose
+    body: |
+      W は「ほぼ負けているが、最弱ではない」位置です。
+
+      **典型的な W:**
+
+      - **A-high**: ペアにもなっていない A (ace) 高
+      - **K-high**: ペアにもなっていない K (king) 高
+      - **Low pair**: ボトムペア以下のメイドペア (例: 22 on A-K-2 のボトムペア)
+
+      W は「showdown value はあるが、相手のベットに対しては基本 fold」のスタンスです。ただし相手のサイズが小さい場合は call することもあります (詳細はマトリックス参照)。
+
+  - type: heading
+    level: 2
+    text: "A (Air) の境界"
+
+  - type: prose
+    body: |
+      A は **役なし + ドローなし** の完全な空ハンドです。
+
+      **典型的な A:**
+
+      - **Q-high or lower** (A/K 以外の high card のみ、かつドローなし)
+      - **役もドローもない**: 例えば 7-6 offsuit on A-K-2 (役なし、ストレート/フラッシュドローもなし)
+
+      A は基本的に**諦める** (チェックまたはフォールド) ハンドです。例外は River でブロッカーを持っているときの bluff だけです (詳細は ch07)。
+
+  - type: heading
+    level: 2
+    text: "D (Draw) の境界 — Flop / Turn のみ"
+
+  - type: prose
+    body: |
+      D は **強いドロー** を持っているハンドです。Flop と Turn のみ存在し、River にはありません (River にはもう次のカードが来ないため)。
+
+      **強いドロー (D に分類):**
+
+      - **OESD (Open-Ended Straight Draw)**: 両端のカードどちらでもストレートが完成 (8 outs)
+      - **FD (Flush Draw)**: 同じスート 4 枚 (9 outs)
+      - **Combo draw**: OESD + FD など複数のドローを併せ持つ (15+ outs)
+
+      **弱いドロー (D には入らない、Air または Medium として扱う):**
+
+      - **Gutshot (内側ストレートドロー)**: 4 outs のみ
+      - **BDFD (backdoor flush draw)**: 同じスート 3 枚
+
+      **メイドハンド + ドロー** の場合: メイドハンドが S/M のときは S/M で分類し、A のときのみ D に分類します。例えば TP + FD は M (TP) として分類し、no_made + FD は D として分類します。
+
+      これは「強い側に分類する」原則の例外で、**「メイドハンドの方が優先」** だからです。実戦的にメイド + ドローはバリュー寄りの判断 (M なら CALL、S なら RAISE) になります。
+
+  - type: heading
+    level: 2
+    text: "境界事例 — 迷ったときの判定"
+
+  - type: prose
+    body: |
+      実戦で「これは S か M か」迷うことがあります。以下の優先ルールで決めます。
+
+  - type: list
+    ordered: true
+    items:
+      - "**最も強い役で分類**: 2P と TP を同時に持つことはないが、TP + 強いキッカー (例: AK on A-K-2) のように複数のペアを持つこともある。この場合は 2P として S 扱い"
+      - "**ドロー混合は基本メイド側**: TP+FD なら M (TP) 扱い、no_made+FD なら D 扱い"
+      - "**ボードの paired/monotone は warning**: ボードがペアまたはモノトーン (3 枚同じスート) のときは、自分のハンドのカテゴリーが一段下がる可能性を意識する。例: K-K-2 ボードで AA は overpair (S) だが、相手の K キッカー (KQ など) に逆転されている確率も加味"
+      - "**River で D は使わない**: River にはドローが残らないので、River で「D」と思ったら間違い。River は S/M/W/A の 4 段階のみ"
+
+  - type: heading
+    level: 2
+    text: "実践: 5 段階分類の練習"
+
+  - type: prose
+    body: |
+      実際のフロップ例で 5 段階分類を確認しましょう。
+
+  - type: table
+    markdown: |
+      | ハンド | フロップ | 役 | 強さ |
+      |--------|---------|-----|------|
+      | A♥A♦ | K-7-2 rainbow | overpair | **S** |
+      | K♣Q♣ | K-7-2 rainbow | TP (top pair) | **M** |
+      | 8♠8♥ | K-7-2 rainbow | underpair | **M** |
+      | A♣J♦ | K-7-2 rainbow | A-high, no draw | **W** |
+      | 6♣5♣ | K-7-2 rainbow | no_made, no draw | **A** |
+      | 9♣8♣ | K-7-6 two-tone | OESD (5-9, T-K) | **D** |
+      | T♠9♠ | K-7-2 rainbow | no_made, no draw | **A** |
+      | A♠T♠ | K-T-2 rainbow | TP (T pair) + A kicker | **M** |
+      | A♠5♠ | K-7-2 monotone | no_made + nut flush draw | **D** |
+      | T♠T♦ | K-T-2 rainbow | set | **S** |
+
+  - type: prose
+    body: |
+      最後の例 A♠5♠ on K-7-2 monotone は **A-high + Nut flush draw** ですが、A-high は「役なし」扱いなので no_made + FD = D に分類します。「強い側に分類」の例外で、メイドハンドが空の場合のみドローで分類するルールです。
+
+  - type: heading
+    level: 2
+    text: "次の章へ"
+
+  - type: prose
+    body: |
+      ハンド強さ 5 段階の判定ができたら、次は相手のベットサイズを 4 段階に分類します (ch02)。
+      その後、2 つの軸を掛け合わせた 5 × 4 マトリックスでアクションを決めます (ch03 攻撃、ch04 守備)。

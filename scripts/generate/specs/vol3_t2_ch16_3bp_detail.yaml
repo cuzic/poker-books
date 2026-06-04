@@ -1,0 +1,275 @@
+volume: "Vol3"
+chapter_num: "16"
+title: "3-bet pot 詳細 — IP のトラップ・OOP の強気 CR・トリップス逆転"
+
+summary: |
+  Vol3 ch09 では 3bp を簡易扱いとしましたが、本章では既存 GTO 検証データから判明した 3-bet pot の重要パターンを詳細に解説します。
+  IP のトラップ戦略、OOP の高 CR 率、SPR が低い場面でのトリップス挙動の逆転など、3bp 特有の dynamics を体系化します。
+
+sections:
+
+  - type: heading
+    level: 2
+    text: "3bp の SPR と特殊性 (ch09 復習)"
+
+  - type: prose
+    body: |
+      3-bet pot は preflop で「open → 3-bet → call」が起きた局面で、SPR が大きく下がります。
+
+  - type: table
+    title: "3bp の SPR (各 depth)"
+    markdown: |
+      | depth | SRP flop 後 | 3bp flop 後 | 3bp 倍率 |
+      |-------|-------------|-------------|---------|
+      | Cash 100bb | ~18 | ~5 | 3.6x 短く |
+      | Cash 200bb | ~36 | ~10 | 同上 |
+      | MTT 50bb | ~9 | ~2.5 | 同上 |
+      | MTT 100bb | ~18 | ~5 | 同上 |
+
+  - type: prose
+    body: |
+      3bp の SPR は SRP の **1/4** 程度。これは「**1-2 ストリートで commit する**」世界。
+
+      Cash 100bb 3bp (SPR ~5) は MTT 50bb SRP turn (SPR ~3) に近い。両者とも **bucket-based 公式が支配的** な領域。
+
+  - type: heading
+    level: 2
+    text: "3bp 固有のパターン 1: IP のトラップ戦略"
+
+  - type: prose
+    body: |
+      既存の defense_study データ (3BP20_IP) から判明した重要発見:
+
+      **3BP IP (caller 側) が OOP 3bettor の cbet を受けたとき:**
+
+  - type: table
+    title: "3BP20 IP (BTN caller) defense 頻度"
+    markdown: |
+      | hand | call % | raise % |
+      |------|--------|---------|
+      | top pair | **78%** | 22% |
+      | overpair | **76%** | 25% |
+      | **set** | **82%** | 18% |
+      | trips | 89% | 11% |
+
+  - type: prose
+    body: |
+      **観察: トップペア・オーバーペア・セットすべて 75%+ call、raise 18-25%**
+
+      **なぜトップペアでも 78% call?**
+
+      - 3bp の SPR ~2 では、call すれば自然と commit に流れる
+      - Raise で相手を fold させると weak range だけ残る → こちらの value が薄い
+      - **「call で相手の bluff range を維持」** が最適 (trapping)
+
+      **set でも 82% call**
+
+      - set は absolutely strong だが、3bp で raise すると相手は fold (折る)
+      - call すれば相手の polarized cbet range (value + bluff) を全部 capture できる
+      - **「深いトラップ」** — 強いハンドこそ call で trapping
+
+      **この戦略は Vol2 のマトリックスとも整合:**
+
+      - Vol2 マトリックスでは S × m = CALL (slowplay)
+      - 3bp で SPR が低い場合は slowplay 性向がさらに強まる
+      - Vol3 ch16 = Vol2 の「強いハンドは slowplay」原則の 3bp 版
+
+  - type: heading
+    level: 2
+    text: "3bp 固有のパターン 2: OOP の強気 CR (check-raise)"
+
+  - type: prose
+    body: |
+      逆に 3BP20_OOP (BB 3-bettor が BTN caller の cbet を受ける場合):
+
+  - type: table
+    title: "3BP20 OOP (BB 3-bettor) defense 頻度"
+    markdown: |
+      | hand | call % | raise % |
+      |------|--------|---------|
+      | top pair | 22% | **78%** |
+      | 2nd pair | 21% | **80%** |
+      | **underpair** | 13% | **87%** |
+      | **trips** | 84% | 16% |
+
+  - type: prose
+    body: |
+      **驚くべきパターン:**
+
+      - TP, 2P, **underpair すべて 80%+ raise** (CR)
+      - **トリップスだけ逆転** (84% call、16% raise)
+
+      **なぜ underpair でも 87% CR?**
+
+      - SPR ~2.2 で **コミット圏** に入る
+      - underpair (例 99 on K-7-2) でも commit 価値あり (相手の cbet range は wide)
+      - CR で相手の wider range を fold させる + value 取る
+
+      **なぜトリップスだけ逆?**
+
+      - トリップスは absolutely 強い (相手のレンジに対して圧倒的)
+      - CR すると相手は強い range のみ continue
+      - **call で深いトラップ** に振る
+
+      これは SRP と 3bp で「トリップスの挙動が真逆」になる現象として有名 (Vol3 ch16 の核心)。
+
+  - type: heading
+    level: 2
+    text: "SRP vs 3bp トリップス挙動の逆転 (Cash 100bb)"
+
+  - type: table
+    title: "トリップス挙動: SRP vs 3bp"
+    markdown: |
+      | シナリオ | call % | raise % |
+      |---------|--------|---------|
+      | **SRP25_OOP** (BB vs BTN cbet) | 26% | **74%** |
+      | **SRP20_OOP** (BB vs BTN cbet) | 1% | **99%** |
+      | **3BP20_OOP** (BB 3bet vs BTN caller cbet) | **84%** | 16% |
+      | **3BP20_IP** (BTN call vs BB 3bet cbet) | 89% | 11% |
+
+  - type: prose
+    body: |
+      **観察:**
+
+      - **SRP では トリップス CR 74-99%** (深い SPR で raise → value)
+      - **3bp ではトリップス call 84-89%** (浅い SPR で call → trap)
+
+      **理由 (SPR で軸が変わる):**
+
+      - **SRP (SPR ~8)**: depth でこちらが raise しても、相手はまだ次のストリートで bluff できる → CR でこちらの strong hand を polarize
+      - **3bp (SPR ~2)**: depth が浅くて相手は raise されたら commit 決断、wide range で commit しない → CALL で相手の bluff を induce
+
+      これは **SPR-axis-switching の最も劇的な実例の一つ**。
+
+  - type: heading
+    level: 2
+    text: "3bp 固有のパターン 3: TPTK CR の SBR 依存"
+
+  - type: table
+    title: "SRP OOP TPTK CR 率: depth による変化"
+    markdown: |
+      | シナリオ | TPTK call % | TPTK raise % |
+      |---------|------------|-------------|
+      | SRP25_OOP (Cash 100bb 相当) | 35% | 65% |
+      | SRP20_OOP (Cash 80bb 相当) | 23% | **77%** |
+      | SRP25_SB_OOP | 46% | 54% |
+      | SRP20_SB_OOP | 35% | **65%** |
+
+  - type: prose
+    body: |
+      **観察:**
+
+      - **stack 浅いほど CR 率高い** (SBR20 でより aggressive)
+      - **SB は BB より CR を抑える** (SB は OOP の中で disadvantage が小さい、call で安全に)
+
+      **公式の depth aware 調整:**
+
+      Vol3 ch05 で「TP × dry × overbet → CALL (bluff catch)」と説明しましたが、これは SPR ~3 (Cash 100bb) のデータ。SPR ~2 (Cash 80bb or MTT 50bb 3bp) では「TP × overbet → RAISE」が GTO になる。
+
+      実戦的なフロー:
+
+      - **SPR ≥ 7 (Cash 100bb SRP)**: TP × overbet → call (bluff catch)
+      - **SPR ~5 (Cash 100bb 3bp, Cash 200bb SRP)**: TP × overbet → call or raise (50/50)
+      - **SPR ~2 (MTT 50bb 3bp, Cash 80bb 3bp)**: TP × overbet → RAISE (commit)
+
+  - type: heading
+    level: 2
+    text: "3bp 固有のパターン 4: SB-BB IP コール優先"
+
+  - type: table
+    title: "SRP IP(BB) vs SB cbet"
+    markdown: |
+      | シナリオ | TP call % | TP raise % | 2nd P call % |
+      |---------|-----------|-----------|--------------|
+      | SRP25_SB_IP | **68%** | 32% | 77% |
+      | SRP20_SB_IP | **73%** | 27% | 77% |
+
+  - type: prose
+    body: |
+      **観察:**
+
+      - BB(IP) は TP で 68-73% call、CR 27-32%
+      - これは BB(OOP) の TP CR 率 (65-77%) と **逆転**
+      - 2nd P は 77% call (CR ほぼゼロ)
+
+      **理由:**
+
+      - IP は position advantage あり → call でも turn/river で有利に進める
+      - CR は OOP のときの方が必要 (position disadvantage の補い)
+      - 2nd P は IP で CR の価値なし (position で十分)
+
+      これは Vol2 のマトリックスでは「ポジション」軸がない簡略化のため捉えられないパターン。Vol3 で初めて明示できる重要な実戦的洞察。
+
+  - type: heading
+    level: 2
+    text: "Vol3 ch04 / ch06 と 3bp の関係"
+
+  - type: prose
+    body: |
+      3bp の SPR ~2-5 は、Vol3 で扱う既存の SPR バンドと近接:
+
+      - **Cash 100bb 3bp (SPR ~5)** ≈ Cash 100bb River (SPR ~3) ≈ MTT 50bb Turn (SPR ~3)
+      - **MTT 50bb 3bp (SPR ~2.5)** ≈ MTT 50bb River (SPR ~1)
+      - **Cash 200bb 3bp (SPR ~10)** ≈ Cash 100bb Turn (SPR ~7)
+
+      公式選択:
+
+      - **3bp Cash 100bb flop**: Cash v14 (bucket + mv override) を流用
+      - **3bp Cash 100bb turn/river**: MTT 50bb 用 v15 (真allin aware) を流用
+      - **3bp MTT 50bb flop**: MTT 50bb Turn v9 (pure bucket) を流用
+
+      これは SPR-based 公式選択の一般化です。「3bp だから特別な公式」ではなく「3bp の SPR が低いから低 SPR 公式」。
+
+  - type: heading
+    level: 2
+    text: "3bp 実戦の判断フロー"
+
+  - type: prose
+    body: |
+      3bp 実戦で迷ったら以下のフロー:
+
+      1. **SPR を計算**: 残スタック ÷ 現在のポット
+      2. **位置確認**: 自分が 3bettor (OOP) か caller (IP) か
+      3. **手のカテゴリー**: S/M/W/A/D + bucket
+      4. **対応:**
+         - **IP (caller) で S/M**: CALL (トラップ、78-89%)
+         - **IP (caller) で W/A**: 標準マトリックス + SPR 補正
+         - **OOP (3bettor) で TP+**: CR (78-87%)
+         - **OOP (3bettor) でトリップス**: CALL (slowplay、84%)
+         - **OOP (3bettor) で W/A**: FOLD 寄り (Vol2 マトリックス通り)
+
+      この 4 ステップで 3bp の defense は 85%+ 正解できます。
+
+  - type: heading
+    level: 2
+    text: "まとめ"
+
+  - type: prose
+    body: |
+      3-bet pot は SPR が低い特殊環境で、以下のパターンが GTO:
+
+      - **IP は強いハンドを call でトラップ** (TP/OP/set すべて 78%+ call)
+      - **OOP は中-強ハンドを CR で aggressive** (TP/2P/underpair 80%+ raise)
+      - **トリップスは SRP と 3bp で逆転** (SRP は raise、3bp は call)
+      - **stack 浅いほど CR aggressive** (SBR20 が SBR25 より TPTK CR 多い)
+      - **IP は position advantage で CR 抑制** (call 優先)
+
+      これらすべて SPR-axis-switching の特殊例として理解できます。
+
+  - type: heading
+    level: 2
+    text: "次の章へ (ch11 quiz, ch12 cheatsheet)"
+
+  - type: prose
+    body: |
+      Vol3 の主要トピックを全て扱いました。次は ch11 (練習問題) と ch12 (早見表) で全体を統合します。
+
+      この章 (ch16) の追加により、Vol3 は以下を全て網羅:
+
+      - ch01 SPR-axis-switching 理論
+      - ch02-08 Flop/Turn/River 詳細 (Cash + MTT)
+      - ch09-10 3bp 簡易 + ICM (簡易)
+      - **ch13-16 (本章群)**: ポジション × depth × donk × 3bp 詳細
+      - ch11-12 練習 + 早見表
+
+      これで「BTN vs BB SRP に集中していた範囲」を超えて、**multi-position / multi-line / multi-context** の網羅が達成されました。

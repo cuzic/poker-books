@@ -1,0 +1,82 @@
+volume: "Vol2r"
+chapter_num: "04"
+title: "フロップ攻撃: IP CBet"
+street: "5cat"
+
+summary: |
+  IP の CBet 判断は「5分類 × ボード型」で決まる。
+  バリューとセミブラフはほぼ全ボードでCBet。ブラフキャッチャーとRIOはチェックバック。
+
+key_formulas:
+  "IP CBet 判断":
+    |
+    バリュー     → 全ボードでCBet (HS≥65相当)
+    セミブラフ   → 全ボードでCBet (FD/OESD/GS)
+    ブラフキャッチャー → チェックバック (例外: 型1/型6で小サイズCBetも)
+    RIO         → 基本チェックバック (ウェットボードの中程度メイド)
+    エアー       → 型1/型3ドライボードのみCBet可 (2OC含む)
+
+  "CBet サイズ":
+    |
+    型3ロードライ: 100%pot (GTO実測 R6.4)
+    型5モノトーン: 75%pot
+    型6ペア高: 75%pot (HS≥80) / 33%pot (HS<80)
+    その他:    33%pot (デフォルト)
+
+examples:
+  # バリュー → CBet全ボード
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "77"
+    board: "Kc,7d,2s"
+  # セミブラフ → CBet
+  - hand: "JTs"
+    board: "Qd,9c,3h"
+  - hand: "A5s"
+    board: "Kd,7s,2s"
+  # ブラフキャッチャー → チェックバック
+  - hand: "KTo"
+    board: "Kd,7c,2s"
+  - hand: "55"
+    board: "Kd,Tc,4s"
+  # RIO → チェックバック (中程度メイド + ウェットボード)
+  - hand: "88"
+    board: "Jh,Th,5c"
+  - hand: "Q9o"
+    board: "Qh,7h,4c"
+  # エアー → ドライボードのみCBet
+  - hand: "A6o"
+    board: "Kd,7c,2s"
+  - hand: "T3o"
+    board: "Jd,7c,2s"
+
+key_points:
+  - "バリュー + セミブラフ = 全体の約50-60%のハンド → 高頻度CBet"
+  - "RIOがチェックバックする理由: ウェットボードで勝てる可能性が低下"
+  - "型3ロードライは100%ポットCBet (GTOで確認済み)"
+  - "エアーのCBetは型1/型3ドライボードのみ (2OC=A-high air が最優先候補)"
+  - "ブラフキャッチャーのチェックバックは『チェック後のコール』に続く"
+
+sections:
+  - title: "バリューとセミブラフのCBet: いつでも打つ"
+    summary: |
+      HS≥65 (バリュー) と FD/OESD (セミブラフ) は全ボードでCBet。
+      サイズはボード型に従う。バリューは大サイズ志向、セミブラフは小サイズ。
+  - title: "ブラフキャッチャーとRIOのチェックバック"
+    summary: |
+      TPMK/TPWK/セカンドペアのチェックバックは「サレンダー」ではない。
+      ターンで有利なカードが来ればベット機会がある（遅延CBet）。
+  - title: "エアーのCBet: ブラフ候補選定"
+    summary: |
+      型1/型3ドライボードでのみエアーCBetが収支プラス。
+      最優先候補: 2OC (両カードがボード最高より高い) + BDFD。
+      型3ロードライでのエアーCBet: GTO 33% (小頻度) → チェックが基本。
+  - title: "CBetサイズの決め方"
+    summary: |
+      33%: ドライボード全般、セミブラフ（ブラフ込みの広レンジ）
+      100%: 型3ロードライ（ポーラー戦略、ブラフも100%ポット）
+      75%: モノトーン、ペア高の強ハンド
+
+gto_reference:
+  source: "GTO Wizard Cash6mGeneral_6mNL25R25 100BB BTN vs BB"
+  notes: "型1 CBet: 80.9% @ 33%。型3 CBet: 48% @ 100%。型4 low_pair CBet: 7%（RIO確認）"

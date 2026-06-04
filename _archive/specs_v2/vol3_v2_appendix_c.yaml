@@ -1,0 +1,112 @@
+volume: "Vol3"
+chapter_num: "付録C"
+title: "A モデル公式チートシート (1 ページ版)"
+
+summary: |
+  実戦で 30 秒以内に参照できる凝縮版チートシートです。
+  7 ステップ判定 → MV/DV → TV バンド → α/β/cat/ε の流れをこの 1 枚で完結させます。
+
+sections:
+  - type: heading
+    level: 2
+    text: "統一式 (7 ステップ)"
+
+  - type: prose
+    body: |
+      ```
+      TV = MV[hand] + DV[draw]
+      band = air (TV≤2) / weak (3-4) / mid (5-6) / strong (7-8) / nut (9+)
+
+      freq = base[ctx5][band]                  ← Vol2 と共通 (25 セル表)
+           + α[ctx13]                          ← コンテキスト補正
+           + β[ctx13] · I(TV ≥ 7)             ← 強ハンド補正 (TV≥7 のとき)
+           + cat[クラス]                          ← ハンドクラス補正 (slowplay +6 / trash -14 / premium +7)
+           + ε[board_family][ctx_group]        ← ボード補正
+
+      freq = clamp(freq, 0.02, 0.98)
+      ```
+
+  - type: table
+    template: hp_buckets
+    title: "MV テーブル"
+
+  - type: table
+    template: dp_table
+    title: "DV テーブル"
+
+  - type: table
+    template: hand_category_table
+    title: "ハンドカテゴリ (cat_offset 区分)"
+
+  - type: table
+    template: v3_base
+    title: "Layer 1: base 25 セル (Vol2 共通)"
+
+  - type: table
+    template: v3_alpha_beta
+    title: "Layer 2: α / β layer (13 context)"
+
+  - type: table
+    template: v3_cat_offset
+    title: "Layer 3: cat_offset (共通)"
+
+  - type: table
+    template: v3_board_family_rules
+
+  - type: table
+    template: v3_epsilon
+    title: "Layer 4: ε board family (3 ctx_group)"
+
+  - type: table
+    template: dcbs_table
+    title: "D モデル 守備 continue freq (独立モデル)"
+
+  - type: heading
+    level: 2
+    text: "7 ステップ判定フロー"
+
+  - type: prose
+    body: |
+      **Step 1**: MV / DV を判定 → TV = MV + DV
+
+      **Step 2**: TV バンドを判定 (air/weak/mid/strong/nut)
+
+      **Step 3**: context を選ぶ
+      - SRP → cash_100bb or mtt_25/50/100/200bb
+      - 3BP IP → mtt_3bp_20/25/50/100bb
+      - turn → cash_100bb_turn_btn or mtt_25/50/100bb_turn_btn
+
+      **Step 4**: base[ctx5][band] を 25 セル表から lookup (Vol2 と同じ)
+
+      **Step 5**: α + β·I(TV≥7) + cat_offset を加算
+      - α は 13 context 別、β は TV≥7 のみ加算
+      - cat (ハンドクラス補正): slowplay +6 / trash -14 / premium +7 / default 0
+
+      **Step 6**: 板分類 (paired/dynamic/dry_high/low_dry) を判定
+      - paired: 同ランクあり → paired
+      - モノトーン or 連結ツーフラ → dynamic
+      - 最高ランク J 以上 → dry_high (baseline ε=0)
+      - 上記以外 → low_dry
+
+      **Step 7**: ε[board_family][ctx_group] を加算 → 最終 freq
+
+  - type: heading
+    level: 2
+    text: "精度サマリ (WRMSE)"
+
+  - type: prose
+    body: |
+      | 精度帯 | Contexts |
+      |---|---|
+      | < 10% (極良) | mtt_25bb_turn_btn (7.5%), mtt_3bp_50bb (9.3%) |
+      | 10-15% (良) | mtt_3bp_100bb (13.9%), mtt_50bb_turn_btn (14.5%), mtt_3bp_25bb (15.4%), cash_100bb_turn_btn (15.6%) |
+      | 15-20% (許容) | mtt_25bb (17.6%), mtt_50bb (17.6%), cash_100bb (18.8%), mtt_200bb (19.9%) |
+      | 20-25% (注意) | mtt_3bp_20bb (21.4%) |
+      | 25%+ (限界) | mtt_100bb (25.0%), mtt_100bb_turn_btn (25.7%) |
+
+      **平均 WRMSE ≈ 18.3%** (A モデル 全体)。
+      WRMSE 25%+ の context は結果を ±20pt 幅で解釈してください。
+
+      ---
+      **暗記対象**: MV 6 値 + DV 4 値 + base 25 セル + low_pair 例外 (Vol2) = 36 数値
+      + α 13 + β 13 + cat_offset 3 + ε 9 (Vol3 追加) = **総計 約 70 数値 + 1 式**

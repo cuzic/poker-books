@@ -1,0 +1,83 @@
+volume: "Vol2r"
+chapter_num: "05"
+title: "フロップ防御: OOP の判断"
+street: "flop"
+
+summary: |
+  OOP が CBet を受けた場合の判断: フォールド/コール/チェックレイズ。
+  5分類と MDF (最低守備頻度) を使って適切な守備範囲を決める。
+
+key_formulas:
+  "OOP フォールド閾値 (vs 33% CBet)":
+    |
+    ベースライン HS < 15 → フォールド
+    2tone補正: +5 → HS < 20 でフォールド
+    ペア補正: -10 → HS < 5 でフォールド
+    mono補正: -5 → HS < 10 でフォールド
+
+  "MDF (最小守備頻度)":
+    |
+    vs 33%: MDF = 75%   (25% フォールド可)
+    vs 50%: MDF = 67%
+    vs 75%: MDF = 57%
+    vs 100%: MDF = 50%
+
+  "チェックレイズ基準":
+    |
+    HS ≥ 70 + B ≥ 58 → CR (セット・2ペア・強FD)
+    HS < 35 + ナッツブロッカー + B ≥ 58 → ブラフCR
+
+examples:
+  # vs 33% CBet: コール例
+  - hand: "JTs"
+    board: "Qd,9c,3h"
+  - hand: "A5s"
+    board: "Kd,7s,2s"
+  - hand: "KTo"
+    board: "Kd,7c,2s"
+  # vs 33% CBet: フォールド例
+  - hand: "A6o"
+    board: "Kd,7c,2s"
+  - hand: "76o"
+    board: "Ad,Kd,2s"
+  # RIO on wet board (フォールド圧力)
+  - hand: "88"
+    board: "Jh,Th,5c"
+  # vs CR候補
+  - hand: "77"
+    board: "7d,9s,8h"
+  - hand: "99"
+    board: "9d,8s,5h"
+
+key_points:
+  - "MDF守備: vs 33%は75%を守備目標（25%フォールド）"
+  - "RIOはウェットボードでのCBetに対してタイトにフォールド"
+  - "セミブラフ(FD/OESD)はコール確定 → ドロー完成でバリューへ"
+  - "ブラフキャッチャーはコール → ターンで状況再評価"
+  - "チェックレイズはセットと強FDが主役（2OC air のブラフCRも有効）"
+
+sections:
+  - title: "MDF と最小守備頻度の考え方"
+    summary: |
+      相手がCBetで利益を得られないようにするための最低守備率。
+      33%CBetに対してはMDF=75%。4ハンドのうち1ハンドはフォールドできる。
+  - title: "5分類別の守備行動"
+    summary: |
+      バリュー: コール/CR（強ハンドはCR推奨）
+      セミブラフ: コール（ドロー完成まで継続）
+      ブラフキャッチャー: コール（ターンで状況確認）
+      RIO: フォールド寄り（ウェットボードで安値払い）
+      エアー: 基本フォールド（BDFD+2OCのみコール検討）
+  - title: "チェックレイズの基準とタイミング"
+    summary: |
+      CR の2条件: (1) 強ハンドのバリューCR (HS≥70, ウェットボード型2/型4/型5)
+                  (2) ナッツブロッカー保有のブラフCR
+      型3ロードライ: OOPのCR比率が高い（低カードが BB に多い）。
+  - title: "ドンクベット（先打ち）の条件"
+    summary: |
+      基本はチェック。例外: SC(ストレート完成)ターン/FC(フラッシュ完成)ターンでの
+      リバーリード。フロップでのドンクは非推奨（GTO 0-10%）。
+
+gto_reference:
+  source: "GTO Wizard Cash6mGeneral_6mNL25R25 100BB BTN vs BB (OOP=BB)"
+  notes: "型4 BB CR率: 8-15%。型3 BB CR率高め（低カードリッチなレンジ）"

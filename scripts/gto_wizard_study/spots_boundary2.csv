@@ -1,0 +1,55 @@
+id,topic,gametype,depth,stacks,line,target_board,note
+# B-1 拡張: paired turn / str8 turn の例外パターンマップ
+# 仮説: ペア化 turn / str8 turn では OOP donk が >20%
+# Flop x turn-card variations to find boundary
+b1x_01,b1_pair_top,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Ks7d2cKh,K-high top pair (実測 25.5%)
+b1x_02,b1_pair_top,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,QhJd4sQc,Q-high top pair (実測 0%)
+b1x_03,b1_pair_top,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,AhKd4sAc,A pair on AK4
+b1x_04,b1_pair_top,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Td7c6sTh,T-high top pair on T76
+b1x_05,b1_pair_top,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,JdTs9cJh,J top pair on JT9
+b1x_06,b1_pair_mid,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Ks7d2c7c,7 mid pair on Kxx (実測 48.1%)
+b1x_07,b1_pair_mid,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,QhJd4sJh,J mid pair on QJ4
+b1x_08,b1_pair_mid,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,AhKd4sKc,K pair on AK4
+b1x_09,b1_pair_mid,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,JdTs9cTh,T mid pair on JT9
+b1x_10,b1_pair_bot,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Ks7d2c2h,2 bot pair on Kxx
+b1x_11,b1_pair_bot,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,QhJd4s4c,4 bot pair on QJ4
+b1x_12,b1_pair_bot,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Td7c6s6h,6 bot pair on T76 (実測 53%)
+b1x_13,b1_pair_bot,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,JdTs9c9c,9 bot pair on JT9 (note: 9c duplicate)
+b1x_14,b1_pair_bot,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,9h8s7d7c,7 bot pair on 987
+b1x_15,b1_str8,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,9h8s7d6c,str8 complete on 987 (実測 0%)
+b1x_16,b1_str8,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Td7c6s8c,gut+str8 on T76 (実測 17%)
+b1x_17,b1_str8,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,JdTs9c8c,str8 complete on JT9
+b1x_18,b1_str8,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,QhJd4sTh,QJ4 + T (str8 draw)
+b1x_19,b1_str8,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Td7c6s9d,T76+9 (8-out)
+b1x_20,b1_str8,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Td7c6s5d,T76+5 (str8 complete)
+# B-3 拡張: BTN multiway / CO multiway での SB donk パターン
+b3x_01,b3_btn_mw,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-C-C / / / ,7d6s5c,BTN+SB+BB 3way 765
+b3x_02,b3_btn_mw,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-C-C / / / ,Td7c6s,BTN+SB+BB 3way T76
+b3x_03,b3_btn_mw,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-C-C / / / ,Ah7c4d,BTN+SB+BB 3way A74
+b3x_04,b3_btn_mw,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-C-C / / / ,Kh6s4c,BTN+SB+BB 3way K64
+b3x_05,b3_btn_mw,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-C-C / / / ,Qh4s2c,BTN+SB+BB 3way Q42
+b3x_06,b3_btn_mw,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-C-C / / / ,Jc8s5h,BTN+SB+BB 3way J85
+b3x_07,b3_btn_mw,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-C-C / / / ,9h8s7d,BTN+SB+BB 3way 987
+b3x_08,b3_co_mw,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-C-C / / / ,7d6s5c,CO+SB+BB 3way 765
+b3x_09,b3_co_mw,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-C-C / / / ,Td7c6s,CO+SB+BB 3way T76
+b3x_10,b3_co_mw,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-C-C / / / ,Ah7c4d,CO+SB+BB 3way A74
+b3x_11,b3_co_mw,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-C-C / / / ,Kh6s4c,CO+SB+BB 3way K64
+b3x_12,b3_co_mw,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-C-C / / / ,Qh4s2c,CO+SB+BB 3way Q42
+b3x_13,b3_co_mw,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-C-C / / / ,Jh7s5c,CO+SB+BB 3way J75
+# B-5 拡張: turn give-up 後の river BB lead 率 × river card パターン
+# 線: F-R2.2-F-F-F-C / X-R<cbet>-C / X-X / <river>
+b5_01,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,Ks7d2c5h3d,Kxx5h + 3d (blank) 実測 37%
+b5_02,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,Ks7d2c5hKd,Kxx5h + K (pair top river)
+b5_03,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,Ks7d2c5hAd,Kxx5h + A (scare overcard)
+b5_04,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,Ks7d2c5h7d,Kxx5h + 7 (pair mid river)
+b5_05,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,Ks7d2c5hQd,Kxx5h + Q (mid blank)
+b5_06,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,9h8s7d4c2d,987 + 2 wet 実測 78%
+b5_07,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,9h8s7d4cTd,987 + T (str8 complete)
+b5_08,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,9h8s7d4cAd,987 + A (scare)
+b5_09,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,9h8s7d4c9d,987 + 9 (pair top)
+b5_10,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,9h8s7d4c4h,987 + 4 (pair board pair)
+b5_11,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,QhJd4s7c2h,QJ4+7+2 実測 42%
+b5_12,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,QhJd4s7cTd,QJ4+7+T (str8 complete)
+b5_13,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,QhJd4s7cAh,QJ4+7+A (scare)
+b5_14,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,QhJd4s7cQd,QJ4+7+Q (pair top)
+b5_15,b5_river_giveup,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X-X / ,QhJd4s7c7d,QJ4+7+7 (pair board)

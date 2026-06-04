@@ -1,0 +1,251 @@
+# 第11章 練習問題 50 問 — 詳細公式の反射確認
+
+Vol3 で学んだ詳細公式 (Cash v8/v14, MTT v9/v15, SPR-axis-switching) を反射的に使えるかを 50 問で自己診断します。
+特に huge_gap セルに focus した問題集です。
+
+## 使い方
+
+各問題で「板 + ハンド + 相手アクション + game type/depth」を提示します。
+
+1. **まず自分でアクションを決定**
+2. **公式を意識して判断** (どの公式を適用するか — Vol2 マトリックス? Cash v8? MTT v9?)
+3. **解答と解説で確認**
+4. **間違えた問題は該当章を再読**
+
+問題はカテゴリー別に分かれています。
+
+- **Flop defense 詳細**: Q1-Q10
+- **Cash 100bb Turn defense (v8)**: Q11-Q20
+- **MTT 50bb Turn defense (v9)**: Q21-Q30
+- **Cash 100bb River defense (v14)**: Q31-Q38
+- **MTT 50bb River defense (v15)**: Q39-Q44
+- **River attack (v7)**: Q45-Q50
+
+## Flop defense 10 問 (Q1-Q10)
+
+**Q1**: K-7-2 rainbow で 22 (low_pair)、相手が cbet 50%。アクション?
+
+解答: **FOLD** (Vol3 ch02 Rule 2: low_pair × no_draw × dry_high → FOLD)
+
+**Q2**: K-7-2 rainbow で AA (overpair)、相手が cbet 33%。
+
+解答: **RAISE** (Rule 3: overpair → RAISE for value)
+
+**Q3**: T-9-8 rainbow で T♣9♣ (TP + 2nd pair = 2P)、相手が cbet 67%。
+
+解答: **CALL** (S × m = CALL、slowplay)
+
+**Q4**: K♠7♠2♠ (monotone) で A♠5♠ (nut flush)、相手が cbet 75%。
+
+解答: **CALL** (slowplay、monotone での RAISE は危険)
+
+**Q5**: A-9-4 rainbow で 9-8 (2nd pair + gutshot)、相手が cbet 33%。
+
+解答: **CALL** (M × m = CALL、補正なし)
+
+**Q6**: K-K-7 (paired) で AA (overpair)、相手が cbet 50%。
+
+解答: **CALL** (paired 板で overpair は慎重、turn での K キッカー警戒)
+
+**Q7**: 8-7-6 (low dynamic) で T♣9♣ (OESD + over)、相手が cbet 75%。
+
+解答: **CALL** (D × m = CALL、OESD のドローバリュー)
+
+**Q8**: K-7-2 で 3♣2♥ (low_pair, ボトムペア)、相手が cbet 100% (large)。
+
+解答: **FOLD** (low_pair × no_draw × dry × l → FOLD)
+
+**Q9**: T-9-8 rainbow で K-Q (gutshot to broadway, no_made)、相手が cbet 50%。
+
+解答: **FOLD** (A × m = FOLD; gutshot は弱ドロー扱い、Vol3 でも同じ)
+
+**Q10**: 7-7-2 (paired low) で 88 (underpair)、相手が cbet 33%。
+
+解答: **CALL** (paired 補正: underpair は M、相手の K/A キッカーレンジ薄い)
+
+## Cash 100bb Turn defense 10 問 (Q11-Q20)
+
+**Q11**: K-7-2-3 (Cash 100bb) で AK (TPTK)、相手が turn bet 67%。
+
+解答: **CALL** (M × m = CALL、Cash v8 標準)
+
+**Q12**: K-7-2-3 で AK、相手が turn overbet 185%。
+
+解答: **FOLD** (M × o = FOLD、Cash v8 Rule O1 適用)
+
+**Q13**: K-7-2-5 で A♦J♦ (nut FD + 2 over)、相手が turn overbet 185%。
+
+解答: **FOLD** (Rule O2: air × FD × dry_high × overbet → FOLD、implied odds 消失)
+
+**Q14**: T-9-8-2 (dynamic) で K♠Q♠ (gutshot + 2 over)、相手が turn bet 67%.
+
+解答: **FOLD** (Rule M2: dynamic + 弱メイド + 弱ドロー → FOLD)
+
+**Q15**: T-9-8-2 で T-T (set)、相手が turn overbet 185%.
+
+解答: **CALL** (S × o = CALL、slowplay。RAISE は危険)
+
+**Q16**: K-7-2-Q (Q overcard) で K♣J♣ (TP + BDFD)、相手が turn bet 67%.
+
+解答: **CALL** (M × m = CALL、補正なし)
+
+**Q17**: T-9-8-2 で 9♠8♠ (2P 9-8)、相手が turn bet 67%.
+
+解答: **CALL** (S × m = CALL、slowplay)
+
+**Q18**: K-7-2-3 で 22 (set)、相手が turn overbet 185%.
+
+解答: **CALL** (S × o = CALL、slowplay)
+
+**Q19**: T-9-8-2 で 6♣5♣ (gutshot 7、no_made + BDFD)、相手が turn bet 67%.
+
+解答: **FOLD** (Rule M2)
+
+**Q20**: K-7-2-5 で 7-6 (gutshot 4-8 + low pair の 6)、相手が turn overbet 185%.
+
+解答: **FOLD** (Rule O1: weak_mv (low_pair) + weak_draw (gutshot) → FOLD)
+
+## MTT 50bb Turn defense 10 問 (Q21-Q30)
+
+**Q21**: MTT 50bb で K-7-2-3 で AK (TPTK)、相手が turn overbet 117% (R10.6).
+
+解答: **CALL** (MTT v9 適用: good_hands × overbet → 強メイドでないので CALL)
+
+**Q22**: MTT 50bb で T-9-8-2 で T-T (set)、相手が turn overbet 117%.
+
+解答: **RAISE** (best × overbet + 強メイド (set) + 非monotone → RAISE)
+
+**Q23**: MTT 50bb で K-7-2-3 で 5♣4♣ (no_made, no_draw)、相手が turn overbet 117%.
+
+解答: **FOLD** (trash × overbet → FOLD)
+
+**Q24**: MTT 50bb で T-9-8-2 で K-Q (gutshot)、相手が turn small 25% (R2.3).
+
+解答: **CALL** (vs small は広く call、bucket trash でも call ok)
+
+**Q25**: MTT 50bb で K♠7♠2♠5♠ (monotone, 4 flush で flush 完成可) で 6♣5♣ (no flush)、相手が turn overbet.
+
+解答: **FOLD** (monotone + no flush + weak → FOLD)
+
+**Q26**: MTT 50bb で K-7-2-3 で 33 (set)、相手が overbet 117%.
+
+解答: **RAISE** (best × overbet + set + 非monotone → RAISE)
+
+**Q27**: MTT 50bb で T-9-8-2 で 8♣7♣ (2P)、相手が overbet 117%.
+
+解答: **RAISE** (best × overbet + 2P + 非monotone → RAISE)
+
+**Q28**: MTT 50bb で K-7-2-3 で 9♣9♥ (underpair)、相手が overbet 117%.
+
+解答: **CALL** or **FOLD** (good_hands × overbet で TPTK 相当の TP value、強メイドではないので CALL)
+
+実際は actual data で見ると border line。本書は CALL を推奨。
+
+**Q29**: MTT 50bb で K♠7♠2♠ (monotone) で A♠5♠ (nut flush)、相手が overbet 117%.
+
+解答: **CALL** (best × overbet + flush + monotone → monotone 補正で RAISE 抑制、CALL)
+
+**Q30**: MTT 50bb で T-9-8-2 で T♣9♣ (TP + 2nd = 2P)、相手が small 25%.
+
+解答: **CALL** (best/good × small → CALL)
+
+## Cash 100bb River defense 8 問 (Q31-Q38)
+
+**Q31**: K-7-2-3-A (dry) で AK (TP-A)、相手が overbet 200%.
+
+解答: **CALL** (v14 mv override: top_pair × dry × overbet → CALL)
+
+**Q32**: T-9-8-2-J (straight 完成、J で 8-9-T-J 4 連) で 7-6 (straight 6-7-8-9-T)、相手が med 100%.
+
+解答: **CALL** (mv override: straight → CALL)
+
+**Q33**: K-7-2-3-A で 22 (set on river)、相手が overbet 200%.
+
+解答: **CALL** (best bucket、eqp > 0.85 → CALL、または直接 set CALL via mv considerationcouldn't override)
+
+実は set の場合は mv override list (straight/flush/trips) に set は入っていない。bucket best で eqp 高い場合 CALL、低い場合 RAISE。本問は CALL 推奨。
+
+**Q34**: K-7-2-3-A で 4-3 (low pair on river)、相手が overbet 200%.
+
+解答: **FOLD** (trash × overbet → FOLD)
+
+**Q35**: K-7-2-3-A で AKo (TP-A)、相手が near-all-in (Cash 100bb の R89.6 = 421% pot).
+
+解答: **CALL** (Cash の near-allin で best_hands + eqp > 0.85 → CALL、mv override で TP × dry × allin → CALL)
+
+**Q36**: T-9-8-2-A (dynamic) で K-Q (gutshot busted)、相手が overbet 200%.
+
+解答: **FOLD** (trash × overbet → FOLD)
+
+**Q37**: T-9-8-2-A で T-T (set)、相手が overbet 200%.
+
+解答: **CALL** (best bucket、eqp > 0.85 → CALL、または mv override で set...
+
+待って、set は mv override list には入っていない。本問は CALL です。
+
+**Q38**: K-7-2-3-A で A-9 (TP-A but weak kicker)、相手が overbet 200%.
+
+解答: **CALL** (Vol3 v14: top_pair × dry_high × overbet → CALL by mv override)
+
+## MTT 50bb River defense 6 問 (Q39-Q44)
+
+**Q39**: MTT 50bb で K-7-2-3-A で AK (TP-A)、相手が真 all-in (R35.5).
+
+解答: **CALL** (v15: TP × dry × allin → CALL by mv override、または best_hands → CALL)
+
+**Q40**: MTT 50bb で T-9-8-2-J (straight 完成) で 7-6 (straight)、相手が真 all-in.
+
+解答: **CALL** (mv override: straight → CALL)
+
+**Q41**: MTT 50bb で K-7-2-3-A で 22 (set)、相手が真 all-in.
+
+解答: **CALL** (best_hands → CALL、または set だが mv override にない → bucket-based)
+
+**Q42**: MTT 50bb で K-7-2-3-A で 4-3 (low pair)、相手が真 all-in.
+
+解答: **FOLD** (trash → FOLD)
+
+**Q43**: MTT 50bb で T-9-8-2-A (dynamic) で AKo (TP-A)、相手が真 all-in.
+
+解答: **CALL** (dynamic + TP + good/weak bucket → CALL by mv override)
+
+**Q44**: MTT 50bb で K♠7♠2♠5♠A♠ (5-card monotone, A♠ on river) で A♣K♥ (TP-A, no flush)、相手が真 all-in.
+
+解答: **FOLD** (monotone board に flush ナシ → trash 扱い、weak_hands、call は -EV)
+
+## River attack 6 問 (Q45-Q50)
+
+**Q45**: River K-7-2-3-5 (dry) でこちらは 2-2 (set)、自分 IP で BB check.
+
+解答: **CHECK** (slowplay、v7 Rule 1: 強メイド on dry → CHECK)
+
+**Q46**: River T-9-8-2-A (dynamic) でこちらは A♠T♠ (TP-A)、BB check.
+
+解答: **CHECK** (Rule 2: TP on dynamic → CHECK)
+
+**Q47**: River T-9-8-2-A でこちらは K-Q (no_made + busted)、BB check.
+
+解答: **BET (bluff)** (Rule 4: K-high → bluff、K blocker で AKx fold 効果)
+
+**Q48**: River K-7-2-3-5 で T-T (overpair)、BB check.
+
+解答: **BET** (Rule 3: overpair → value bet)
+
+**Q49**: River T-9-8-2-A で T-T (set)、BB check.
+
+解答: **BET** (Rule 1 適用条件: 強メイド on dry → CHECK、しかし board は dynamic → BET for value)
+
+**Q50**: River K-7-2-3-5 で A-9 (no_made, A-high)、BB check.
+
+解答: **CHECK** (Rule 5: A-high は showdown 維持で CHECK、bluff せず)
+
+## 答え合わせと次のステップ
+
+50 問のうち何問正解できましたか?
+
+- **45 問以上**: Vol3 の詳細公式を反射的に使える level。SPR-axis-switching を理解し、Cash/MTT を使い分けられる
+- **35-44 問**: 標準公式は把握。huge_gap セルでの判断ミスがまだ残るが、実戦で十分通用するレベル
+- **25-34 問**: 基本公式は理解しているが、Vol3 の詳細補正の適用がまだ不安定。各章を再読推奨
+- **24 問以下**: Vol2 (簡易版) に戻って 5×4 マトリックスを reinforce し、その後 Vol3 に再挑戦
+
+次の ch12 (早見表) で全公式 + 例外を 2 ページに圧縮した実戦シートを提供します。

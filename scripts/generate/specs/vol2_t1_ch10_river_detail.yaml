@@ -1,0 +1,198 @@
+volume: "Vol2"
+chapter_num: "10"
+title: "River defense 詳細 — bucket+mv 軸の v14 公式 (huge_loss 97% 削減)"
+
+summary: |
+  Cash 100bb の River defense は bucket 軸が支配的ですが、特定の絶対強さ (straight/flush/trips など) は bucket を override します。
+  v14 公式 (bucket 主導 + mv override) で huge_loss を 0.388 BB まで圧縮できます。
+
+sections:
+
+  - type: heading
+    level: 2
+    text: "River の特殊性 — ドローが消える"
+
+  - type: prose
+    body: |
+      ch01 で触れた通り、River は **ドローが残らない** ため:
+
+      - **dv 軸は存在しない**
+      - **mv (絶対強さ)** と **bucket (相対強さ)** の 2 軸で判断
+      - 確定したハンド強さで「相手のレンジに勝つか」を冷静に評価
+
+      Cash 100bb の River では bucket 軸が主導しますが、絶対的に強いハンド (straight/flush/trips) は bucket = weak でも勝つ可能性が高いため、**mv で override** する必要があります。
+
+  - type: heading
+    level: 2
+    text: "Cash 100bb River v14 — bucket 主導 + mv override"
+
+  - type: code
+    lang: ""
+    body: |
+      Cash 100bb River defense v14:
+
+      ── Nut hands (override 最優先) ──
+      mv = quads → RAISE
+      mv = fullhouse ∧ bs ≠ overbet → RAISE
+      mv = fullhouse ∧ bs = overbet → CALL (slowplay)
+
+      ── vs allin (Cash の "allin" = R89.6, 421% pot だが raise 可) ──
+      best_hands ∧ eqp > 0.85 → CALL
+      bf ∈ dry ∧ mv ∈ {set, trips, straight, flush} → CALL
+      good_hands ∧ mv ∈ {straight, flush, trips} → CALL
+      bf = monotone ∧ mv = flush → CALL
+      dynamic ∧ mv = top_pair ∧ bucket ∈ {good, weak} → CALL (反直感)
+      その他 → FOLD
+
+      ── mv override (絶対強さ) ──
+      mv ∈ {straight, flush, trips} → CALL (bucket 関係なく)
+      mv = top_pair ∧ bf ∈ dry ∧ bs ∈ {overbet, med_100p} → CALL (bluff catch)
+
+      ── bucket ベース判断 ──
+      best_hands:
+        eqp > 0.96 → RAISE
+        else → CALL
+      good_hands → CALL
+      weak_hands:
+        bs = overbet:
+          dynamic ∧ mv = two_pair → CALL
+          else → FOLD
+        bs = med_100p → FOLD
+        else → CALL
+      trash_hands → FOLD
+
+  - type: heading
+    level: 2
+    text: "mv override の重要性"
+
+  - type: prose
+    body: |
+      River v14 の核心の一つが **「mv ∈ {straight, flush, trips} → bucket 関係なく CALL」** という override です。
+
+      **理由:**
+
+      - bucket は「相手のレンジ全体に対する相対強さ」を計算するが、相手のベットレンジ (subset) に対しては bucket が weak でも勝つことがある
+      - 例: River で straight を持っているとき、bucket は weak (相手のレンジ全体に対しては中程度) でも、相手のベット range (value or bluff) に対しては圧倒的に勝つ
+      - **絶対強さの強ハンドは bucket を上書き**
+
+      **検証データ:**
+
+      - **good_hands × straight × allin × dynamic** (n=55): bucket-only 公式では FOLD だが、actual CALL 100%、mean loss 32 BB → mv override で救出 (1,759 BB 損失機会防止)
+      - **weak_hands × straight × med_100p × dynamic** (n=101): pred FOLD, actual CALL 100%、mean loss 5.26 BB → mv override で CALL
+
+  - type: heading
+    level: 2
+    text: "TP × dry × overbet = CALL (bluff catch)"
+
+  - type: prose
+    body: |
+      Vol2 でも触れた重要パターン: **dry board で TP が overbet を受けたら CALL**。
+
+      **検証:**
+
+      - **weak_hands × top_pair × overbet × dry_high** (n=67): pred FOLD, actual CALL 100%、mean loss 5.6 BB
+      - dry board で相手の overbet レンジは limited (set/trips/AK の TPTK)
+      - 一方、相手の bluff range は busted draws 多く wide
+      - 結果: TP で bluff catch すると +EV
+
+      v14 の「mv = top_pair ∧ bf ∈ dry ∧ bs ∈ {overbet, med_100p} → CALL」がこのパターンを捕まえる。
+
+  - type: heading
+    level: 2
+    text: "dynamic 板の特殊扱い"
+
+  - type: prose
+    body: |
+      dynamic board (T-9-8-2-A など、connected + 2-tone) では River の挙動が独特です。
+
+      **dynamic 板の River パターン:**
+
+      1. **strong made (set+) → bucket 関係なく CALL** (mv override)
+      2. **TP → mostly CALL on overbet** (bluff catch)
+      3. **2P/TP on med_100p → FOLD** (draws complete で逆転されている可能性)
+      4. **no_made on med_100p → CALL (bluff catch)** ← これは bucket-based では捉えにくい
+
+      最後の **「dynamic + no_made + 100% pot → CALL」** は反直感的ですが、検証では:
+
+      - **trash_hands × no_made × med_100p × dynamic** (n=370): pred FOLD, actual CALL 100%、mean loss 5.82 BB
+      - dynamic 板で相手の 100% bet は polarized: ナッツ or 完全 air (busted FD など)
+      - こちらの no_made でも相手のブラフを keep them honest できる
+      - 数学的に最低限の equity (約 33%) があれば call が +EV
+
+  - type: heading
+    level: 2
+    text: "v14 公式の検証結果"
+
+  - type: table
+    title: "Cash 100bb River defense 公式比較"
+    markdown: |
+      | 公式 | accuracy | mean loss | huge_loss |
+      |------|---------|-----------|-----------|
+      | always_FOLD | 64% | 1.96 BB | (large) |
+      | always_CALL | 25% | 5.82 BB | (large) |
+      | v8 (mv ベース) | 70% | 0.527 | 0.604 |
+      | v11 (pure bucket) | 80.7% | 0.421 | 0.530 |
+      | **v14 (bucket + mv override)** | **82.3%** | **0.301** | **0.388** ⭐ |
+
+  - type: prose
+    body: |
+      v14 は v11 (pure bucket) の上に straight/flush/trips の override と TP の dry-board bluff catch を加えた形。**mv override 単独で huge_loss を 0.42 → 0.39 と圧縮**。
+
+      mv override の追加は約 7% の改善ですが、対 default (always_FOLD/CALL) では 80%+ 削減を維持しています。
+
+  - type: heading
+    level: 2
+    text: "Vol2 マトリックスとの対応"
+
+  - type: prose
+    body: |
+      Vol3 v14 を Vol2 の 5×4 マトリックスの言葉で表現すると:
+
+      **Vol2 マトリックスからの追加例外:**
+
+      - **W × o (overbet) で TP/2P on dynamic → CALL** (bluff catch)
+      - **W × l (100% pot) で straight/flush/trips → CALL** (mv override)
+      - **W × any で TP × dry_high overbet → CALL** (bluff catch)
+      - **all-in (raise option ありの大overbet) で best bucket eqp > 0.85 → CALL**
+
+      Vol2 ユーザーがこの 4 つの例外を覚えると、Cash 100bb River の huge_gap mistake が大幅に減ります。
+
+  - type: heading
+    level: 2
+    text: "実戦例: Cash 100bb River defense"
+
+  - type: prose
+    body: |
+      **例 1: K-7-2-3-A (dry) で AKo (TP-A on river)、相手が overbet 200%**
+
+      - bucket 判定: TP top pair = **weak_hands** (河で TP は bottom range)
+      - mv override: top_pair × dry_high × overbet → CALL (bluff catch)
+      - **アクション: CALL**
+
+      **例 2: T-9-8-2-J (river J で straight 6-7-8-9-T) で 6♣7♣ (straight)、相手が med 100%**
+
+      - bucket: straight on dynamic = **good_hands** (straight だが相手のレンジ全体には負ける可能性も)
+      - mv override: mv = straight → 無条件 CALL
+      - **アクション: CALL** (mv override で確定)
+
+      **例 3: K-7-2-3-5 (dry) で 4♠4♥ (river で 4 pair = low pair on dry)、相手が overbet 200%**
+
+      - bucket: low_pair on river = **trash_hands** (相手のレンジに対して弱)
+      - mv override: mv = low_pair → 対象外
+      - 標準 bucket 判定: trash × overbet → **FOLD**
+      - **アクション: FOLD**
+
+      **例 4: T-9-8-2-2 (river paired) で T♣T♦ (set with paired)、相手が overbet 150%**
+
+      - bucket: set on paired = **good_hands** or **best_hands**
+      - mv override: set は straight/flush/trips に含まれていない → 対象外
+      - 標準 bucket 判定: best/good × overbet → CALL
+      - **アクション: CALL** (paired 板で full house ナシだが set で勝つ可能性高い)
+
+  - type: heading
+    level: 2
+    text: "次の章へ"
+
+  - type: prose
+    body: |
+      Cash 100bb River の v14 を学びました。次の ch06 では **MTT 50bb River** に進み、**真の all-in** の概念と v15 公式 (huge_loss 0.038 BB ⭐⭐⭐⭐) を解説します。

@@ -1,0 +1,96 @@
+id,topic,gametype,depth,stacks,line,target_board,note
+# ==========================================================================
+# B-3x2: マルチウェイ SB donk グラデーション
+# 仮説検証: 連結度 × high card で donk 率が決まる
+# 「low connected = 低 donk、high disconnected = 高 donk」境界の精密測定
+# ==========================================================================
+b3z_01,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,4h3s2c,432 lowest connect
+b3z_02,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,8h7s6d,876 mid connect
+b3z_03,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Th9s8c,T98 high connect
+b3z_04,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Jh8s2c,J82 mid-gap+low
+b3z_05,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Qh9s2c,Q92 high-gap+low
+b3z_06,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Kh9s2c,K92 K-high-gap
+b3z_07,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Ah9s2c,A92 A-high-gap
+b3z_08,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Th6s2c,T62 mid-disconnect
+b3z_09,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Jh5s2c,J52 mid-disconnect
+b3z_10,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Kh5s2c,K52 K-high disconnect
+b3z_11,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Kc7s3d,K73 disconnect
+b3z_12,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Ah5s2c,A52 wheel-ish
+b3z_13,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Qc6s3d,Q63 mid air
+b3z_14,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,8h5s2c,852 mid-low gap
+b3z_15,b3_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,9c6s2d,962 mid-low
+# ==========================================================================
+# B-7x2: ターン cbet サイズ境界の精密測定
+# 仮説: 「Kxx+5=101%, Kxx+3=276%」の境界はどこ？
+# Ks7d2c の全 turn card で IP cbet サイズを確認
+# ==========================================================================
+b7z_01,b7_kxx_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ks7d2c3h,Kxx+3 (low)
+b7z_02,b7_kxx_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ks7d2c4h,Kxx+4
+b7z_03,b7_kxx_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ks7d2c5h,Kxx+5 (実測 101%)
+b7z_04,b7_kxx_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ks7d2c6h,Kxx+6
+b7z_05,b7_kxx_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ks7d2c8h,Kxx+8
+b7z_06,b7_kxx_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ks7d2c9h,Kxx+9
+b7z_07,b7_kxx_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ks7d2cTh,Kxx+T
+b7z_08,b7_kxx_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ks7d2cJh,Kxx+J
+b7z_09,b7_kxx_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ks7d2cQh,Kxx+Q (実測 276%)
+b7z_10,b7_kxx_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ks7d2cAh,Kxx+A (実測 101%)
+# ==========================================================================
+# B-1x2: ターン donk on board pair の boundary
+# 仮説: 「ペア化 rank が BB のレンジ密度高い」と donk 多く、低いと 0%
+# 同じ flop で異なる pair turn での donk 率比較
+# ==========================================================================
+b1z_01,b1_pair_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Ks7d2c5c,K72+5 (no pair, blank)
+b1z_02,b1_pair_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,QhJd4s2h,QJ4+2 (low blank)
+b1z_03,b1_pair_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,QhJd4s8c,QJ4+8 (mid blank)
+b1z_04,b1_pair_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Td7c6s5c,T76+5 (str8 complete)
+b1z_05,b1_pair_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,AhKd4s2c,AK4+2 (low blank)
+b1z_06,b1_pair_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,AhKd4s9c,AK4+9 (mid blank)
+b1z_07,b1_pair_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,AhKd4s4c,AK4+4 (bot pair board pair)
+b1z_08,b1_pair_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,9h8s7d2c,987+2 (blank)
+b1z_09,b1_pair_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,9h8s7d8c,987+8 (mid pair)
+b1z_10,b1_pair_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,9h8s7d9c,987+9 (top pair)
+b1z_11,b1_pair_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Td7c6sTc,T76+T (top pair already 0%)
+b1z_12,b1_pair_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,JdTs9c9d,JT9+9 (mid pair)
+# ==========================================================================
+# B-9: ペアフロップ（NEW — 未調査領域）
+# ==========================================================================
+b9_01,b9_paired_flop,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,KsKd7c2h,KK7+2 turn (paired flop)
+b9_02,b9_paired_flop,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,AhAdKc8h,AAK+8 turn
+b9_03,b9_paired_flop,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,7d7s4c2h,774+2 turn
+b9_04,b9_paired_flop,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Qs6s6c2h,Q66+2 turn
+b9_05,b9_paired_flop,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,8h8s3c2h,883+2 turn
+b9_06,b9_paired_flop,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,KsKd7c,KK7 flop XX → BB on turn
+b9_07,b9_paired_flop,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,7d7s4c,774 flop XX
+b9_08,b9_paired_flop,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,KsKd7c,KK7 flop first act BB
+b9_09,b9_paired_flop,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,7d7s4c,774 flop first act BB
+b9_10,b9_paired_flop,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,AhAdKc,AAK flop first act BB
+# ==========================================================================
+# B-10: モノフロップ（NEW — 1 spot のみだった）
+# ==========================================================================
+b10_01,b10_mono,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,KsQs7s2h,KQ7-mono+2 turn
+b10_02,b10_mono,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,KsQs7s2s,KQ7-mono+2s turn (4 to flush)
+b10_03,b10_mono,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Js9s5s2h,J95-mono+2
+b10_04,b10_mono,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,AsTs5s2h,AT5-mono+2
+b10_05,b10_mono,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,QsTs6s2h,QT6-mono+2
+b10_06,b10_mono,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,8s6s4s2h,864-mono+2
+b10_07,b10_mono,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,KsQs7s,KQ7-mono flop BB first
+b10_08,b10_mono,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Js9s5s,J95-mono flop BB first
+b10_09,b10_mono,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,KsQs7s2h,KQ7-mono+2 XX turn
+b10_10,b10_mono,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,Js9s5s2h,J95-mono+2 XX turn
+# ==========================================================================
+# B-8x2: probe spot near-boundary 再検証
+# 仮説: 「IP のレンジを直接強化」する turn で donk = 0%
+# QJ4+J/T などの boundary
+# ==========================================================================
+b8z_01,b8_near_zero,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,QhJd4sJh,QJ4+J top pair vs IP
+b8z_02,b8_near_zero,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,KsQd4hKh,KQ4+K top pair vs IP
+b8z_03,b8_near_zero,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,KsQd4hQh,KQ4+Q mid pair
+b8z_04,b8_near_zero,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,KsQd4hJh,KQ4+J str8 draw
+b8z_05,b8_near_zero,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,AhKd4sQh,AK4+Q str8 reach
+b8z_06,b8_near_zero,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,AhKd4sJh,AK4+J str8 reach
+b8z_07,b8_near_zero,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,KsJd4hTh,KJ4+T str8 reach
+b8z_08,b8_near_zero,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,KsJd4hQh,KJ4+Q top pair
+b8z_09,b8_near_zero,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,JdTs8c9h,JT8+9 str8 complete
+b8z_10,b8_near_zero,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,JdTs8cQh,JT8+Q broadway-reach
+b8z_11,b8_near_zero,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,9h7s5d6c,975+6 str8 complete
+b8z_12,b8_near_zero,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,9h7s5d8c,975+8 str8 complete

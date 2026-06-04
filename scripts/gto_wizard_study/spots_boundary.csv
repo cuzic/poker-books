@@ -1,0 +1,53 @@
+id,topic,gametype,depth,stacks,line,target_board,note
+# B-3: Multiway SB donk by connectedness/board (25 spots)
+# Line: F-R2.2-F-F-C-C / (SB first on flop)
+b3_01,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,7d6s5c,3way HJ+SB+BB flop 765 connect
+b3_02,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,6s5h4c,3way 654 connect mid
+b3_03,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,5d4s3c,3way 543 connect low
+b3_04,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,8h6c4d,3way 864 gap mid
+b3_05,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Th8c5d,3way T85 mixed
+b3_06,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Qc9s7d,3way Q97 mid-high
+b3_07,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Jc8s5h,3way J85
+b3_08,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Ah7c4d,3way A74 A-high
+b3_09,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Kh6s4c,3way K64
+b3_10,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Qh4s2c,3way Q42 air
+b3_11,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,9h8s2c,3way 982 paired-style
+b3_12,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,8h7s2c,3way 872 mid-conn-low
+b3_13,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Jh9s7c,3way J97 conn
+b3_14,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Ts9s7c,3way T97 2tone-conn
+b3_15,b3_mw_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-C-C / / / ,Jh7s5c,3way J75 gap
+# B-4: XX-XX river position dependency (15 spots)
+# Position-specific opens; UTG=R2.2, HJ=R2.2, CO=R2.4, BTN=R2.6; flop XX, turn XX
+b4_01,b4_xxxx_river,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,R2.2-F-F-F-F-C / X-X / X-X / ,Ks7d2c5h3d,UTGvBB XX-XX dry
+b4_02,b4_xxxx_river,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,R2.2-F-F-F-F-C / X-X / X-X / ,9h8s7d4c2d,UTGvBB XX-XX wet 987
+b4_03,b4_xxxx_river,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,R2.2-F-F-F-F-C / X-X / X-X / ,AhKd4s8c2h,UTGvBB XX-XX AK4 mid
+b4_04,b4_xxxx_river,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / X-X / ,9h8s7d4c2d,HJvBB XX-XX wet
+b4_05,b4_xxxx_river,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / X-X / ,AhKd4s8c2h,HJvBB XX-XX AK4
+b4_06,b4_xxxx_river,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-C / X-X / X-X / ,Ks7d2c5h3d,COvBB XX-XX dry
+b4_07,b4_xxxx_river,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-C / X-X / X-X / ,9h8s7d4c2d,COvBB XX-XX wet
+b4_08,b4_xxxx_river,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-C / X-X / X-X / ,Th9s8c4dAh,COvBB XX-XX T98+A
+b4_09,b4_xxxx_river,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / X-X / X-X / ,9h8s7d4c2d,BTNvBB XX-XX wet
+b4_10,b4_xxxx_river,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / X-X / X-X / ,AhKd4s8c2h,BTNvBB XX-XX AK4
+b4_11,b4_xxxx_river,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / X-X / X-X / ,Th9s8c4dAh,BTNvBB XX-XX T98+A
+b4_12,b4_xxxx_river,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / X-X / X-X / ,QhJd4s7c2h,BTNvBB XX-XX QJ4
+# B-1: Turn donk variations - test position, SPR, board (20 spots)
+b1_01,b1_turn_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / X-Rcbet-C / / ,Ks7d2c5h,BTNvBB turn after cbet-call Kxx
+b1_02,b1_turn_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / X-Rcbet-C / / ,9h8s7d4c,BTNvBB turn 987
+b1_03,b1_turn_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / X-Rcbet-C / / ,Td7c6s2h,BTNvBB turn T76
+b1_04,b1_turn_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / X-Rcbet-C / / ,QhJd4s7c,BTNvBB turn QJ4
+b1_05,b1_turn_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / X-Rcbet-C / / ,JdTs9c4h,BTNvBB turn JT9
+b1_06,b1_turn_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-C / X-Rcbet-C / / ,Ks7d2c5h,COvBB turn Kxx
+b1_07,b1_turn_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-C / X-Rcbet-C / / ,9h8s7d4c,COvBB turn 987
+b1_08,b1_turn_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-C / X-Rcbet-C / / ,AhKd4s8c,COvBB turn AK4
+b1_09,b1_turn_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,R2.2-F-F-F-F-C / X-Rcbet-C / / ,Ks7d2c5h,UTGvBB turn Kxx
+b1_10,b1_turn_donk,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,R2.2-F-F-F-F-C / X-Rcbet-C / / ,9h8s7d4c,UTGvBB turn 987
+b1_11,b1_turn_donk_pair,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Ks7d2cKh,HJvBB turn K pair
+b1_12,b1_turn_donk_pair,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Ks7d2c7c,HJvBB turn 7 pair
+b1_13,b1_turn_donk_str8,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,9h8s7d6c,HJvBB turn 987 + 6 (str8 complete)
+b1_14,b1_turn_donk_str8,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Td7c6s8h,HJvBB turn T76 + 8 (gut+str8)
+b1_15,b1_turn_donk_flush,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Ah4d2c9h,HJvBB turn A42 + 9 wet
+b1_16,b1_turn_donk_overcard,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,9h8s7dAd,HJvBB turn 987 + A (overcard)
+b1_17,b1_turn_donk_paired,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,QhJd4sQc,HJvBB turn QJ4 + Q (top pair)
+b1_18,b1_turn_donk_paired,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Td7c6s6h,HJvBB turn T76 + 6 (bottom pair)
+b1_19,b1_turn_donk_mono,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,KsQs7s4s,HJvBB turn mono complete
+b1_20,b1_turn_donk_mono,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / / ,Kh7c2c5c,HJvBB turn flush draw complete

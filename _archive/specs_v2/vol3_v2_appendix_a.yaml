@@ -1,0 +1,119 @@
+volume: "Vol3"
+chapter_num: "付録A"
+title: "A モデル 全パラメータ完全表"
+
+summary: |
+  A モデルを実戦で使うための数値リファレンスです。
+  Vol2 base 25 セル + 13 context α/β + cat_offset + ε board family のすべてを
+  本付録にまとめます。本文 (ch01〜ch14) と併せて参照してください。
+
+sections:
+  - type: heading
+    level: 2
+    text: "共通テーブル (MV / DV / hand category)"
+
+  - type: prose
+    body: |
+      以下の 3 表はすべての context で共通です。
+
+  - type: table
+    template: hp_buckets
+    title: "MV テーブル (6 バケット)"
+
+  - type: table
+    template: dp_table
+    title: "DV テーブル (4 段階)"
+
+  - type: table
+    template: hand_category_table
+    title: "Hand カテゴリ (cat_offset の区分)"
+
+  - type: heading
+    level: 2
+    text: "Layer 1: Vol2 と共通の 25 セル base"
+
+  - type: prose
+    body: |
+      Vol2 で覚えた 25 セル base 表 (5 context × 5 band)。Vol3 でもそのまま使います。
+
+  - type: table
+    template: v3_base
+    title: "base[ctx5][band]"
+
+  - type: heading
+    level: 2
+    text: "Layer 2: α / β layer (13 context)"
+
+  - type: prose
+    body: |
+      α は context コンテキスト補正、β は TV≥7 のときの追加 lift です。
+
+  - type: table
+    template: v3_alpha_beta
+    title: "α[ctx13] / β[ctx13]"
+
+  - type: heading
+    level: 2
+    text: "Layer 3: Category offset (context 共通)"
+
+  - type: table
+    template: v3_cat_offset
+    title: "cat_offset[hand_category]"
+
+  - type: heading
+    level: 2
+    text: "Layer 4: Board family ε (C3 軸)"
+
+  - type: prose
+    body: |
+      ε は板テクスチャ × ctx_group 別の補正。3 ctx_group (cash / mtt_srp / 3bp)。
+
+  - type: table
+    template: v3_board_family_rules
+
+  - type: table
+    template: v3_epsilon
+    title: "ε[board_family][ctx_group]"
+
+  - type: heading
+    level: 2
+    text: "7-step 計算手順"
+
+  - type: prose
+    body: |
+      実戦での計算順序は以下の通りです。
+
+      1. MV (役の強さ) を 6 バケットから判定 (2/3/5/7/8/9)
+      2. DV (ドロー価値) を 4 段階から判定 (0/1/2/3)
+      3. TV = MV + DV を計算してバンド分類 (air/weak/mid/strong/nut)
+      4. context を確定 (13 種から 1 つ)
+      5. base[ctx5][band] を 25 セル表から lookup
+      6. α + β·I(TV≥7) + cat_offset を加算
+      7. 板分類 → ε を加算 → 最終 freq
+
+  - type: heading
+    level: 2
+    text: "精度マップ"
+
+  - type: prose
+    body: |
+      13 context の WRMSE と参照優先度。
+
+      | context | WRMSE | 信頼度 |
+      |---|---:|---|
+      | mtt_25bb_turn_btn | 7.5% | ★★★ |
+      | mtt_3bp_50bb | 9.3% | ★★★ |
+      | mtt_3bp_100bb | 13.9% | ★★ |
+      | mtt_50bb_turn_btn | 14.5% | ★★ |
+      | mtt_3bp_25bb | 15.4% | ★★ |
+      | cash_100bb_turn_btn | 15.6% | ★★ |
+      | mtt_50bb | 17.6% | ★★ |
+      | mtt_25bb | 17.6% | ★★ |
+      | cash_100bb | 18.8% | ★★ |
+      | mtt_200bb | 19.9% | ★★ |
+      | mtt_3bp_20bb | 21.4% | ★ |
+      | mtt_100bb | 25.0% | × |
+      | mtt_100bb_turn_btn | 25.7% | × |
+      | **全体** | **18.3%** | |
+
+      × の context は ch14 で扱う構造的限界。実戦では計算結果 ±20pt の幅を想定。

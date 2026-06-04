@@ -1,0 +1,71 @@
+volume: "Vol2r"
+chapter_num: "03"
+title: "ポジションとPFコンテキスト"
+street: "5cat"
+
+summary: |
+  同じハンドでも「誰がCBet権を持つか」と「プリフロップの文脈」によって行動が変わる。
+  PFコンテキスト4分類（Class A/B/C/D）とポジションの組み合わせを整理する。
+
+key_formulas:
+  "PFコンテキスト分類":
+    |
+    Class A: UTG/HJ オープン → レンジが強い (ナットアドバンテージ有)
+    Class B: BTN/CO オープン → ポジション有利 (広いレンジ)
+    Class C: コールドコール IP (3wayなど) → ポジション有利だがレンジ弱め
+    Class D: 3BPポット → レンジが絞られる (ナット集中)
+
+  "ポジションによる行動調整":
+    |
+    IP (インポジション):  CBet権あり、チェックバック後ターン主導権
+    OOP (アウトオブポジション): チェックが基本、ドンクベット/CR は限定的
+
+examples:
+  # Class A: UTG vs BB, UTG has range advantage
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "JTs"
+    board: "Kc,7d,2s"
+  # Class B: BTN vs BB, BTN has position
+  - hand: "A5s"
+    board: "Kd,7s,2s"
+  - hand: "98s"
+    board: "Jd,9c,4h"
+  # Wet board RIO context
+  - hand: "88"
+    board: "Ah,9h,4c"
+  # 3BP context (Class D)
+  - hand: "QQ"
+    board: "Kd,7c,2s"
+
+key_points:
+  - "Class A(UTG/HJ)はナットアドバンテージ有 → バリュー帯が広くCBetしやすい"
+  - "Class B(BTN/CO)はポジション有利 → セミブラフも積極的にCBet"
+  - "IPはチェックバック後もターンで主導権を取れる（遅延CBet）"
+  - "OOPはチェックが基本。CR/ドンクベットは強い根拠が必要"
+  - "ナットアドバンテージ: セット/ストレート/フラッシュを多く持つ側がNA"
+
+sections:
+  - title: "IPとOOPの基本的な役割"
+    summary: |
+      IP（プリフロップ最終アグレッサー）= CBet権保有者。アクションを最後に取れる。
+      OOP = チェック後に反応するだけ。ただしCR/ドンクベットで奇襲もあり。
+  - title: "PFコンテキスト4分類"
+    summary: |
+      Class A: UTG/HJオープン → プレミアムレンジ → 高BS/低BSで行動が安定
+      Class B: BTN/COオープン → 広いレンジ → セミブラフも含む
+      Class C: コールドコール → ポジション有利だが受け身
+      Class D: 3BP → ナットが集中 → CBetは強い根拠が必要
+  - title: "ナットアドバンテージの活用"
+    summary: |
+      型1/6ボード: IPがNA → CBetを広く打てる
+      型3ロードライ: BBのNA強化（低カードが BB コール範囲に多い）→ IP は慎重に
+      型5モノトーン: FDを持つ側がNA → ナッツドローのあるプレイヤーが主導権
+  - title: "エクイティリアリゼーション補正"
+    summary: |
+      IP の ER は OOP の約 1.1 倍。同じ HS でも IP の方が実質的に有利。
+      この補正が「同じ HS でも IP は CBet, OOP はチェック」の根拠。
+
+gto_reference:
+  source: "GTO Wizard Cash6mGeneral_6mNL25R25 100BB"
+  notes: "BTN vs BB: CBet率が全ボードで高い。UTG vs BB: 型3で慎重なCBet"

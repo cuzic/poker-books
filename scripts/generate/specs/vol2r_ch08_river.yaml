@@ -1,0 +1,76 @@
+volume: "Vol2r"
+chapter_num: "08"
+title: "リバー: α式と決着"
+street: "river"
+
+summary: |
+  リバーではドローが消え、全員がメイドハンドで戦う。
+  α式で適切なバリュー:ブラフ比率を守りながら、river_tag で行動を決定する。
+
+key_formulas:
+  "α式 (バリュー:ブラフ比率)":
+    |
+    α = ベットサイズ / (ポット + ベットサイズ)
+    33%ベット: α = 0.25 → V:B = 3:1
+    50%ベット: α = 0.33 → V:B = 2:1
+    75%ベット: α = 0.43 → V:B = 1.3:1
+    100%ベット: α = 0.5  → V:B = 1:1
+
+  "IP リバーベット閾値 (river_tag別)":
+    |
+    blank: HS ≥ 55 (M+以上)
+    OC:    HS ≥ 60
+    SC:    HS ≥ 70 (V以上のみ)
+    FC:    HS ≥ 70
+    PB:    HS ≥ 80 (フルハウス+)
+
+  "OOP ドンクベット基準":
+    |
+    SC/FC ボード + HS ≥ 70 → ドンクベット 50%
+    PB/blank ボード → チェック（ドンクベット率 15-25%）
+
+examples:
+  - hand: "AKs"
+    board: "Kc,9d,2s,Ah,7c"
+  - hand: "77"
+    board: "Kc,9d,2s,Ah,Kd"
+  - hand: "AKs"
+    board: "Jd,9c,3h,8s,7d"
+  - hand: "JTs"
+    board: "Qd,9c,3h,2d,8h"
+  - hand: "AKs"
+    board: "Js,8s,4h,3h,5s"
+  - hand: "KJo"
+    board: "Qh,9d,5c,8c,7h"
+
+key_points:
+  - "リバーはメイドハンドのみ → セミブラフが消え、バリュー/BC/ブラフに整理される"
+  - "α式でバリューとブラフの比率を守る（50%ベットなら V:B = 2:1）"
+  - "SCリバー: HS≥70のみベット（TPTK 65でもチェック）"
+  - "FCリバー: フラッシュ完成側がドンク or 大サイズベット"
+  - "PBリバー: HS≥80のみベット（フルハウス+ 最小）"
+
+sections:
+  - title: "α式: バリュー:ブラフの黄金比"
+    summary: |
+      相手がMDFを守るためには、IPは適切なV:B比率を維持する必要がある。
+      50%ポットなら V:B = 2:1 が均衡点。ブラフが多すぎると搾取される。
+  - title: "river_tag 別 IPベット判断"
+    summary: |
+      blank: TPMK(55)以上でベット → 広いバリューレンジ
+      SC/FC: セット(70)以上のみ → ポーラーなレンジ
+      PB: フルハウス+(80)のみ → 超ポーラー
+  - title: "OOP リバーリード戦略"
+    summary: |
+      SC/FCボードでOOPのストレート/フラッシュが完成 → ドンクベット有効
+      IP がSC/FCターンでチェックバックしたことで OOP のドロー完成が示唆される。
+      PBボードは OOP もフルハウス候補 → チェックで誘う。
+  - title: "リバーのブラフキャッチャー判断"
+    summary: |
+      SC/FCボードではIPのベットレンジがポーラー化 → BCコール価値が上がる。
+      OOP がブラフキャッチャー候補ハンド(HS 35-54)でコールするのは
+      SC/FCボードのみ（PB/blankはフォールド）。
+
+gto_reference:
+  source: "GTO Wizard Cash6mGeneral_6mNL25R25 100BB BTN vs BB"
+  notes: "TPTK(65) blank: ベット率 62-99%。TPTK SC: ≈0%。OOP SC donk: 46-53%"

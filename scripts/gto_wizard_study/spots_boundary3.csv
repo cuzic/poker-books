@@ -1,0 +1,51 @@
+id,topic,gametype,depth,stacks,line,target_board,note
+# B-7: IP turn cbet size (after BB X-cbet-Call, BB checks turn, IP to act)
+# Line: F-R2.2-F-F-F-C / X-Rcbet-C / X / board (4-card)
+# Goal: which texture gets R9.5 (100%pot) vs R26.1 (276%pot)?
+b7_01,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ks7d2c5h,Kxx blank turn (実測 R9.5 30%)
+b7_02,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ks7d2c3h,Kxx low blank
+b7_03,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ks7d2cAh,Kxx + A scare
+b7_04,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ks7d2cQd,Kxx + Q (BDFD)
+b7_05,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,QhJd4s2h,QJ4 blank
+b7_06,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,QhJd4s7c,QJ4 + 7 (実測 R26.1 35%)
+b7_07,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,QhJd4sAh,QJ4 + A overcard
+b7_08,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,QhJd4sTh,QJ4 + T (str8 draw)
+b7_09,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Td7c6s2h,T76 + 2 blank (実測 R9.5)
+b7_10,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Td7c6sAh,T76 + A overcard
+b7_11,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,9h8s7d4c,987 + 4 (実測 R9.5)
+b7_12,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,9h8s7dAd,987 + A overcard
+b7_13,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,AhKd4s8c,AK4 + 8 (実測 R9.5)
+b7_14,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,AhKd4s2c,AK4 + 2 blank
+b7_15,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,JdTs9c2c,JT9 + 2 blank
+b7_16,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ts8s5s4d,T85m + 4 (実測 R9.5 47%)
+b7_17,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Ah4d2c9h,A42 + 9
+b7_18,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,Kh7c2c5c,K72 + 5 (FD complete)
+b7_19,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,KsQd4hTh,KQ4 + T (str8 draw)
+b7_20,b7_turn_cbet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-Rcbet-C / X / ,KsQd4h2h,KQ4 + 2 blank
+# B-8: probe spot (XX flop, BB first on turn) — turn card effect expanded
+# Line: F-R2.2-F-F-F-C / X-X / / board (4-card)
+b8_01,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,Ks7d2cKh,Kxx + K (top pair)
+b8_02,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,Ks7d2c7c,Kxx + 7 (mid pair)
+b8_03,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,Ks7d2c2h,Kxx + 2 (bottom pair)
+b8_04,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,Ks7d2cAh,Kxx + A (overcard)
+b8_05,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,9h8s7d6c,987 + 6 (str8 complete)
+b8_06,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,9h8s7d9c,987 + 9 (top pair)
+b8_07,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,9h8s7dAd,987 + A (overcard)
+b8_08,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,9h8s7dTd,987 + T (str8 / overcard)
+b8_09,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,Td7c6sJh,T76 + J (overcard)
+b8_10,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,Td7c6s8c,T76 + 8 (str8 complete)
+b8_11,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,Td7c6s6h,T76 + 6 (bottom pair top)
+b8_12,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,QhJd4sQc,QJ4 + Q (top pair)
+b8_13,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,QhJd4s4c,QJ4 + 4 (board pair bot)
+b8_14,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,QhJd4sAh,QJ4 + A (overcard)
+b8_15,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,QhJd4sTh,QJ4 + T (str8 draw)
+b8_16,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,AhKd4s8c,AK4 + 8 (mid blank)
+b8_17,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,AhKd4sAc,AK4 + A (top pair)
+b8_18,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,AhKd4sKc,AK4 + K (mid pair)
+b8_19,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,AhKd4s2c,AK4 + 2 (low blank)
+b8_20,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,JdTs9c2c,JT9 + 2 (low blank)
+b8_21,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,JdTs9c8c,JT9 + 8 (str8 complete)
+b8_22,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,JdTs9cAh,JT9 + A (overcard)
+b8_23,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,Ah4d2c3h,A42 + 3 (str8 wheel)
+b8_24,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,Ah4d2cKh,A42 + K (overcard)
+b8_25,b8_turn_probe,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / X-X / / ,Ks7d2c5h,Kxx + 5 (mid blank, baseline 実測10%)

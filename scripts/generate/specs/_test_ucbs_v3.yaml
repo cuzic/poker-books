@@ -1,0 +1,62 @@
+title: "UCBS-v3 smoke test"
+chapter_num: "TEST"
+volume: "Vol3"
+summary: |
+  UCBS-v3 (A+C3 階層型) の table renderer と example renderer の動作確認。
+
+sections:
+  - type: heading
+    level: 2
+    text: 25 cell base
+
+  - type: table
+    template: v3_base
+
+  - type: heading
+    level: 2
+    text: α / β layer
+
+  - type: table
+    template: v3_alpha_beta
+
+  - type: heading
+    level: 2
+    text: Category offset
+
+  - type: table
+    template: v3_cat_offset
+
+  - type: heading
+    level: 2
+    text: 板分類 ε
+
+  - type: prose
+    body: |
+      ボードを以下の優先順で 4 family に分類します。
+
+  - type: table
+    template: v3_board_family_rules
+
+  - type: table
+    template: v3_epsilon
+
+  - type: heading
+    level: 2
+    text: 例
+
+  - type: examples
+    framework: v3
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        board: AsKd7c
+        context: cash_100bb
+      - hand: flush
+        board: 8s7s6s
+        context: mtt_3bp_25bb
+      - hand: low_pair
+        board: 9h6c2d
+        context: mtt_100bb
+      - hand: overpair
+        board: 9c4d2s
+        context: mtt_25bb

@@ -1,0 +1,358 @@
+volume: "Vol2"
+chapter_num: "08"
+title: "練習問題 — 反射的にマトリックスを引けるか"
+
+summary: |
+  本章は 25 問の自己診断問題集です。各問題は「板 + ハンド + 相手アクション」を提示し、あなたが正しいアクションを選べるかを問います。
+  各問題に**解答** (推奨アクション) と**解説** (なぜそのセル/補正が適用されるか) を付けています。
+
+sections:
+
+  - type: heading
+    level: 2
+    text: "使い方"
+
+  - type: prose
+    body: |
+      各問題を読んだら、本書のマトリックス (ch03 攻撃、ch04 守備) と補正 (ch05-07) を参照せずに、**まず自分でアクションを決めて** ください。
+
+      決めたら解答を見て、自分の判断と合っているかを確認します。間違えた問題は**該当章を再読** し、同じパターンが出てきたら反射的に答えられるまで繰り返します。
+
+      問題は以下のように分類されています。
+
+      - **Flop 守備**: Q1-Q7
+      - **Turn 守備**: Q8-Q13
+      - **River 守備**: Q14-Q20
+      - **攻撃 (全街)**: Q21-Q25
+
+  - type: heading
+    level: 2
+    text: "Flop 守備 7 問"
+
+  - type: heading
+    level: 3
+    text: "Q1: K-7-2 rainbow で AKo、相手が cbet 33%"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CALL**
+
+      解説: TP top kicker = M (Medium)。33% = m (medium)。M × m = CALL。Flop 補正なし。
+
+  - type: heading
+    level: 3
+    text: "Q2: K-7-2 rainbow で 22 (low pair)、相手が cbet 33%"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **FOLD**
+
+      解説: 22 on K-7-2 = ボトムペア = W。33% = m。標準は W × m = CALL だが、**Flop 補正 1 適用** (W × no_draw × dry_high → FOLD)。
+
+  - type: heading
+    level: 3
+    text: "Q3: T-9-8 rainbow で T♣9♣ (TP + 2nd pair = 2P)、相手が cbet 50%"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CALL** (RAISE も検討可)
+
+      解説: 2P = S (Strong)。50% = m。S × m = CALL。本書 simple では CALL を推奨。
+
+  - type: heading
+    level: 3
+    text: "Q4: K-7-2 rainbow で 7♣6♣ (2nd pair + gutshot)、相手が cbet 33%"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CALL**
+
+      解説: 2nd pair = M、gutshot は弱ドロー (D 扱いではない)。M × m = CALL。
+
+  - type: heading
+    level: 3
+    text: "Q5: 9-6-2 rainbow (low_dry) で 9♣6♣ (2P)、相手が cbet 50%"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CALL** (RAISE 検討可)
+
+      解説: 2P = S。50% = m。S × m = CALL。low_dry は BB がやや有利な板 ((ch05 参照)。
+
+  - type: heading
+    level: 3
+    text: "Q6: K-7-2 with paired (K-K-7 想定) でこちらは K♥Q♣ (3 K's = trips with QK kicker)、相手が cbet 67%"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CALL** (RAISE 検討可)
+
+      解説: Trips with K kicker = S。67% = m。S × m = CALL。
+
+  - type: heading
+    level: 3
+    text: "Q7: A♥Q♠2♣ で 4♥3♥ (no_made, no_draw)、相手が cbet 33%"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CALL** (border) or **FOLD** (safer)
+
+      解説: no_made + no_draw = A。33% = s/m 境界。A × s = CALL、A × m = FOLD。33% は s/m 境界なので、**CALL も FOLD も妥当**。本書 simple は CALL を推奨 (5 公理 1 「s なら広く call」)。
+
+  - type: heading
+    level: 2
+    text: "Turn 守備 6 問"
+
+  - type: heading
+    level: 3
+    text: "Q8: K-7-2-3 (dry continued) で AK (TPTK)、相手が turn bet 67% pot"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CALL**
+
+      解説: TPTK = M (TP)。67% = m。M × m = CALL。Turn 補正なし (board は dry のまま)。
+
+  - type: heading
+    level: 3
+    text: "Q9: T-9-8-2 (dynamic) で K♠Q♠ (gutshot で broadway 狙い)、相手が turn bet 67% pot"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **FOLD**
+
+      解説: K-high + gutshot は **A (Air、gutshot は弱ドロー扱い)**。67% = m。**Turn 補正 2 適用** (dynamic + 弱メイド + 弱ドロー → FOLD)。標準 A × m = FOLD でも同じ結論。
+
+  - type: heading
+    level: 3
+    text: "Q10: K-7-2-3 で AKo、相手が turn overbet 200% pot"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **FOLD**
+
+      解説: TPTK = M。200% = o (overbet)。M × o = **FOLD** (標準)。相手の overbet レンジは set+ がメインで、TPTK では負けている。
+
+  - type: heading
+    level: 3
+    text: "Q11: T-9-8-2 で T♣T♦ (set)、相手が turn overbet 200% pot"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CALL**
+
+      解説: Set = S。200% = o。S × o = **CALL** (CO/SB は CO/SB)。本書 simple は CALL (raise は危険)。
+
+  - type: heading
+    level: 3
+    text: "Q12: K♣7♣2♦5♣ (3 flush 完成) で A♣J♦ (nut flush draw 完成 → flush)、相手が turn bet 100%"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **RAISE** (or CALL if uncertain)
+
+      解説: nut flush = S。100% = l。S × l = CALL が標準。だが nut flush は absolutely strong なので RAISE for value も妥当。**本書 simple では CALL** (raise でもいい)。
+
+  - type: heading
+    level: 3
+    text: "Q13: K-7-2-Q (dry-ish, A/Q overcard) で K♣J♣ (TP + BDFD)、相手が turn bet 67%"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CALL**
+
+      解説: TP + BDFD = M。67% = m。M × m = CALL。Turn 補正なし (BDFD は弱ドロー扱いだが、TP の M で十分受け止められる)。
+
+  - type: heading
+    level: 2
+    text: "River 守備 7 問"
+
+  - type: heading
+    level: 3
+    text: "Q14: K-7-2-3-A (dry) で A♠T♠ (river で A pair)、相手が river bet 100%"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CALL**
+
+      解説: River で A pair = TP-A = M。100% = l。M × l = CALL (標準)。dry board なので bluff catch も妥当。
+
+  - type: heading
+    level: 3
+    text: "Q15: K-7-2-3-A (dry) で A♠T♠、相手が river overbet 200%"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CALL** (bluff catch)
+
+      解説: TP on dry × overbet → **River 例外 2 適用 → CALL** (busted draws の bluff range が広い、A pair で bluff catch +EV)。
+
+  - type: heading
+    level: 3
+    text: "Q16: T-9-8-2-A (dynamic、busted draws 多) で A♠T♠ (TP-A)、相手が river overbet 200%"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CALL** (bluff catch)
+
+      解説: dynamic + TP + overbet → **River 例外 1 適用 → CALL**。dynamic で相手の overbet bluff range が広い (busted straight draws)。
+
+  - type: heading
+    level: 3
+    text: "Q17: K♠7♣2♦3♥5♦ で straight (4-5-6-7-K... ない、A-2-3-4-5 wheel) で 4♥6♣ ?"
+
+  - type: prose
+    body: |
+      待って、これは straight にならない。問題を修正:
+
+      **Q17: 8-7-6-5-4 で 9♣T♣ (T-high straight)、相手が river bet 100%**
+
+      解答: **RAISE** (or CALL)
+
+      解説: Straight = S。100% = l。S × l = CALL が標準だが、Nut straight (T-high) なので RAISE for value も妥当。
+
+  - type: heading
+    level: 3
+    text: "Q18: K-7-2-3-5 (dry) で 22 (set, river で set のまま、すなわち 2-2-K)、相手が river bet 75%"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **RAISE** (value)
+
+      解説: set on dry = S。75% = m。S × m = CALL が標準だが、set は強いので **RAISE for value** が妥当。River で raise は dynamic board より dry board のほうが行いやすい。
+
+  - type: heading
+    level: 3
+    text: "Q19: K-7-2-3-5 で 4♣3♣ (no_made, missed flush draw)、相手が river check (BB の check) → こちらはどうする?"
+
+  - type: prose
+    body: |
+      **アクション?** (これは river attack 問題)
+
+      解答: **CHECK** (or weak bluff)
+
+      解説: 自分が IP で BB の check 後にアクション。no_made = A。River attack で A × dry → CHECK (bluff は dynamic board で行う)。
+
+  - type: heading
+    level: 3
+    text: "Q20: K-7-2-3-A で K♠J♠ (TP-K)、相手が river all-in (true allin)"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CALL**
+
+      解説: TP-K = M (TP)。all-in = o (overbet 相当)。dry_high + TP + overbet → **River 例外 2 適用 → CALL** (bluff catch)。ただし K-high の K-J で A 完成しているので、A pair の相手にも負ける可能性 → 微妙な call。本書 simple では CALL を推奨。
+
+  - type: heading
+    level: 2
+    text: "攻撃 5 問"
+
+  - type: heading
+    level: 3
+    text: "Q21: K-7-2 rainbow でこちらは AA (overpair)、BB が check してきた"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **BET** (33% pot)
+
+      解説: AA on K-7-2 = overpair = S。Flop attack: S = BET。サイズは 33% pot 標準。
+
+  - type: heading
+    level: 3
+    text: "Q22: K-7-2 で 8♣7♣ (2nd pair + BDFD)、BB が check"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CHECK**
+
+      解説: 2nd pair + BDFD = M。Flop attack: M = CHECK (range 不利)。
+
+  - type: heading
+    level: 3
+    text: "Q23: K-7-2-3 (turn) で AA (overpair)、自分が IP で BB が check してきた"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CHECK** (slowplay) or BET (どちらでも可)
+
+      解説: Turn attack: S = CHECK (slowplay) が原則。ただし AA は強すぎるので BET も妥当。本書 simple では「Turn は常に CHECK」を推奨。
+
+  - type: heading
+    level: 3
+    text: "Q24: T-9-8-2-A (dynamic) で K♣J♣ (busted broadway gutshot)、自分が IP で BB が check"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **BET** (bluff with K blocker)
+
+      解説: K-high (busted draws) on dynamic = A (Air、K-high)。River attack: A on dynamic = BET as bluff。K のブロッカーで AKx (TPTK) を fold させる効果。
+
+  - type: heading
+    level: 3
+    text: "Q25: K-7-2-3-5 (dry) で 4♣2♣ (low pair, river で 2 のペアのまま)、自分が IP、BB check"
+
+  - type: prose
+    body: |
+      **アクション?**
+
+      解答: **CHECK**
+
+      解説: low pair = W (Weak)。River attack: W = CHECK (showdown で勝負)。BET しても W で call されたら負ける確率高い。
+
+  - type: heading
+    level: 2
+    text: "答え合わせと次のステップ"
+
+  - type: prose
+    body: |
+      25 問のうち何問正解できましたか?
+
+      - **22 問以上正解**: マトリックスを反射的に使えるレベル。Vol3 や Vol4 に進む準備が整っています。
+      - **17-21 問正解**: 基本は身についています。間違えた問題の章を再読し、同じパターンを反復練習しましょう。
+      - **16 問以下**: ch01-04 のマトリックスから復習しましょう。ハンド強さ 5 段階・サイズ 4 段階の判定が曖昧な可能性があります。
+
+      次の章 (ch09 早見表) で全マトリックスと 5 公理を 1 ページに圧縮した実戦シートを提供します。実戦中に参照する用の付録として活用してください。

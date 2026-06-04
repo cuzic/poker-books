@@ -1,0 +1,147 @@
+volume: "Vol2r"
+chapter_num: "10"
+title: "リバー: 先手・後手とXX-XX経路の OOP lead"
+street: "river"
+
+summary: |
+  リバーの判断は IP の barrel ライン (cbet-bet-bet) だけでなく、
+  XX-XX 経路（フロップとターンが両者 check）後の OOP lead が大きな分岐となる。
+  GTO Wizard 30+ spots で position 効果 (CO > BTN > HJ/UTG) と
+  river card 効果 (pair top/scare A/str8 complete) を定量化した。
+
+key_formulas:
+  "3バケット先手判断 (旧来)":
+    |
+    HS ≥ 70 (バリュー) → ベット
+    HS 35-69 (マージナル) → ボード×サイズで判断
+    HS ≤ 34 (エアー) → ブラフ or チェック
+
+  "後手 MDF (旧来)":
+    |
+    33% bet → HS ≥ 45 でコール
+    50% bet → HS ≥ 50
+    75% bet → HS ≥ 60
+    100% bet → HS ≥ 65 (バリュー)
+    126% bet (overbet) → HS ≥ 70
+    372% bet (huge overbet) → HS ≥ 80
+
+  "XX-XX 経路 BB lead 頻度 (新発見)":
+    |
+    フロップ X-X / ターン X-X / リバー BB first
+
+    Position 効果:
+      UTG vs : 平均 24.9% lead
+      HJ vs  : 平均 24.4% lead
+      CO vs  : 平均 38.4% lead (peak)
+      BTN vs : 平均 31.9% lead
+
+    River card 効果 (board × river の組合せ):
+      blank river: 標準 lead 率
+      pair top river on dry: +20pt (例: Kxx + K → 60%)
+      pair top river on wet: +10pt (例: 987 + 9 → 55%)
+      board pair river: +30pt (例: 9874 + 4 → 76%)
+      str8 complete: ボード依存（-10 to +30）
+      scare A on wet: -30pt (例: 987+4+A → 26%)
+      scare A on dry: -10pt
+      IP の broadway 完成 turn: -40pt
+
+    サイズ二極化: 33% pot (wet+connected) or 125-126% overbet
+
+  "turn give-up 後 river BB lead (旧 XX-XX とは別ライン)":
+    |
+    フロップ X-cbet-Call / ターン X-X / リバー BB first
+
+    River card 効果:
+      wet board (987+4):
+        blank river → 78% lead
+        board pair → 76%
+        str8 complete → 60%
+        top pair → 55%
+        scare A → 26%
+      dry board (Kxx+5h):
+        pair top (K) → 61%
+        scare A → 44%
+        mid blank → 38%
+        blank → 37%
+
+examples:
+  # XX-XX river BTN vs (high lead)
+  - hand: "JT"
+    board: "Ks,7d,2c,5h,3d"
+  # turn give-up river wet board (high lead)
+  - hand: "QJ"
+    board: "9h,8s,7d,4c,2d"
+  # river scare A (low lead)
+  - hand: "76"
+    board: "9h,8s,7d,4c,Ad"
+  # IP broadway 完成 turn (zero lead)
+  - hand: "55"
+    board: "Qh,Jd,4s,Th,5h"
+
+key_points:
+  - "リバー OOP lead は XX-XX 経路で CO > BTN > HJ/UTG"
+  - "Pair top river on wet で BB lead 50-75% (薄く value+ブラフ多)"
+  - "Board pair river では BB lead 60-78% (極端に高い)"
+  - "Scare A river では BB lead 大きく低下 (10-30pt 減)"
+  - "IP の broadway 完成 turn (AK4+J 等) では BB lead 0%"
+  - "サイズは 33% pot or 125-126% overbet の二極化"
+
+sections:
+  - title: "リバーの3バケット先手判断 (旧来の核)"
+    summary: |
+      HS ≥ 70 でベット、35-69 マージナル、≤34 エアー。
+      ベットサイズは 50% / 75% を基本、極化サイズ (126%) は限定的。
+      ブラフは V:B 比率を守る (第9章 α 式)。
+
+  - title: "後手 MDF と overbet 対応"
+    summary: |
+      古典的 33%-100% bet では HS ≥ 45-65 が閾値。
+      126% overbet (XX-XX 経路で頻出) → HS ≥ 70 でコール。
+      372% huge overbet (dry board polarized) → HS ≥ 80。
+
+  - title: "XX-XX 経路: OOP リバー lead の新発見"
+    summary: |
+      フロップ X-X / ターン X-X / リバー BB first の状況は実戦で頻出。
+      IP の cbet 連続放棄シグナル → BB がリードを取って攻める。
+      Position 効果: BTN/CO 開きの方が SB/BB の lead 率が上がる。
+      理由: 開く位置のレンジが広いほど、IP が check back する確率が増え、
+      OOP のリードが正当化される。
+
+  - title: "river card 効果（pair / scare / str8 complete）"
+    summary: |
+      Pair top river on wet (987+4+9 等): BB lead 50-75%
+      Board pair river (987+4+4 等): BB lead 60-78%
+      Scare A river on wet: lead 20-30% に大幅低下
+      IP broadway 完成 turn (Kxx+J 等): lead 0%
+      → 「自分のレンジが river card で強化されたか」が判定軸。
+
+  - title: "turn give-up 後 river の board 依存"
+    summary: |
+      フロップ X-cbet-Call → ターン X-X (IP が turn を諦め) のライン。
+      Wet board では BB lead 60-78%（連結 board は BB の hit 多）。
+      Dry board (Kxx) では blank で 37%、pair top で 61%。
+      Scare A は特に lead を下げる（A は IP 範囲に来やすい）。
+
+  - title: "サイズ二極化: 33% or 126% overbet"
+    summary: |
+      Wet board + 連結 river → 33% pot (small bet, value+bluff 多）
+      Dry board polarized → 126% overbet
+      372% huge overbet は dry board の特殊 spot のみ。
+      旧来の「50-75% 標準」はサイズ tree が異なるが、思想は同じ。
+
+  - title: "総合判断フロー: 全ストリート統合"
+    summary: |
+      プリフロップ → フロップ → ターン → リバーで一貫した思考。
+      フロップアクション履歴によってターン以降のレンジが絞られる。
+      XX-XX 経路や IP cbet-call → turn check の流れは、
+      OOP がリードを取り直すチャンス。
+
+gto_reference:
+  source: "GTO Wizard MTT6mSimple 30+ river spots (2026-05-26)"
+  notes: |
+    主要発見:
+    1. XX-XX 経路 river BB lead: CO 38% > BTN 32% > HJ/UTG 24-25%
+    2. River card 効果: pair top +20pt, board pair +30pt, scare A -30pt
+    3. IP broadway 完成 turn では lead 0%
+    4. サイズは 33% pot or 126% overbet の二極化
+    関連: BOUNDARY_REPORT.md (B-4), BOUNDARY_REPORT2.md (B-5), BOUNDARY_SYNTHESIS.md

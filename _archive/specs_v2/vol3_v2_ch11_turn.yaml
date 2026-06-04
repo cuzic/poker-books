@@ -1,0 +1,119 @@
+volume: "Vol3"
+chapter_num: "11"
+title: "Turn 4 context——2nd barrel の判断"
+
+summary: |
+  Turn 2nd barrel は cash と MTT 3 スタックの 4 context です。
+  Vol2 で覚えた base[turn] (全 band 6-7%) を共通基準とし、
+  context 別に α=-2〜+13、β=-4 で微調整します。
+
+sections:
+  - type: heading
+    level: 2
+    text: "Turn 4 context のパラメータ"
+
+  - type: prose
+    body: |
+      A モデルで Turn は 4 context に分かれます。
+
+      | context | α | β (TV≥7) | base[turn] |
+      |---|---:|---:|---|
+      | cash_100bb_turn_btn | +1 | -5 | air 6 / weak 6 / mid 3 / strong 7 / nut 7 |
+      | mtt_25bb_turn_btn | -2 | -4 | (同上) |
+      | mtt_50bb_turn_btn | +1 | -4 | (同上) |
+      | mtt_100bb_turn_btn | **+13** | -4 | (同上) |
+
+      共通の特徴は「全 band で 6-7%」という極めて低い base 値です。
+      フロップで 1 度 cbet を打った後、ターンでも続行するのは例外的な選択であることを
+      base で表現しています。
+
+  - type: heading
+    level: 2
+    text: "なぜ base が 6-7% なのか"
+
+  - type: prose
+    body: |
+      Vol2 で覚えた turn context の base が「全 band でほぼ同じ 6-7%」となっているのは、
+      ターン 2nd barrel の頻度が GTO 上で「ハンド強度を問わず低い」という構造を
+      反映しています。
+
+      理由は 2 つあります。第 1 に、フロップで 1 度 cbet を打った時点で
+      「ベットレンジ」と「チェックレンジ」が分離されており、ターンでベットを続けるには
+      フロップから turn にかけて状況が好転している必要があるためです (例: 自分の役が
+      improve、bluff の equity が拡大、相手レンジが weaken)。
+
+      第 2 に、ターン全体での bet 頻度を 50% に抑えることで polarized な構造を
+      維持できます。Vol2 ch09 で扱った通り、turn 2nd barrel は「6 ベット中 4 check、
+      2 bet」の比率が標準です。
+
+  - type: heading
+    level: 2
+    text: "mtt_100bb_turn_btn の α=+13"
+
+  - type: prose
+    body: |
+      4 context の中で mtt_100bb_turn_btn のみ α=+13 と突出しています。
+      これは「MTT 100bb で flop cbet 後にターンに進む場合、続行率が想定より高い」
+      ことを示します。
+
+      MTT 100bb の場合、相手 BB の continue range がやや tight (cash より tight) なため、
+      フロップで cbet → call されて turn に進む場合、相手が確実に手を持っている可能性が
+      高くなります。逆に言えば「自分の continue 判断は wider に取れる」構造です。
+
+      この α=+13 を見落とすと、MTT 100bb で「ターンは check 一辺倒」となりがちで、
+      実際の GTO 戦略 (continued cbet が多め) からズレます。
+
+  - type: heading
+    level: 2
+    text: "Turn 例題"
+
+  - type: examples
+    framework: v3
+    title: "cash_100bb_turn_btn の代表例"
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        board: KdTh4s
+        context: cash_100bb_turn_btn
+
+      - hand: overpair
+        draw: no_draw
+        board: 9c4d2s
+        context: cash_100bb_turn_btn
+
+      - hand: set
+        draw: no_draw
+        board: Ks7d7c
+        context: cash_100bb_turn_btn
+
+  - type: examples
+    framework: v3
+    title: "mtt_100bb_turn_btn (α=+13、続行率高め)"
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        board: KdTh4s
+        context: mtt_100bb_turn_btn
+
+      - hand: overpair
+        draw: no_draw
+        board: 9c4d2s
+        context: mtt_100bb_turn_btn
+
+      - hand: second_pair
+        draw: fd
+        board: KsJd6s
+        context: mtt_100bb_turn_btn
+
+  - type: heading
+    level: 2
+    text: "Turn の 3 原則"
+
+  - type: prose
+    body: |
+      1. **base[turn] = 全 band 6-7% を覚える**: ターン 2nd barrel は基本的に低頻度。
+         「ターンに来たら check を考える」がデフォルト。
+      2. **mtt_100bb_turn_btn のみ α=+13 を意識**: 他 3 context は α が小さく、
+         base 値そのままで概ね予測可能。
+      3. **β=-4 と cat_offset で微調整**: strong/nut バンドは少し抑制し、
+         premium / slowplay 系で少し上げる。

@@ -1,0 +1,249 @@
+volume: "Vol2"
+chapter_num: "10"
+title: "Multistreet plan — 3 ストリートを通した計画"
+
+summary: |
+  フロップ → ターン → リバーを 1 ストリートずつ独立して考えると、一貫性のない行動になりがちです。
+  本章では「3 ストリートを通した計画」の立て方を習得します。
+  主要ライン (cbet+barrel / cbet+check / check+probe) を TV × context の組み合わせで分類し、
+  各ラインで A モデルと D モデル (cash 版) をどう更新するかを整理します。
+  SPR とベット回数の関係を理解することで、リバーのポットコミット判定まで見通せます。
+
+sections:
+  - type: heading
+    level: 2
+    text: "マルチストリート設計の考え方"
+
+  - type: prose
+    body: |
+      ポーカーの postflop は 3 ストリート (フロップ・ターン・リバー) で構成されています。
+      各ストリートは独立した選択に見えますが、実際には「前のストリートの判断が後を縛る」という連鎖があります。
+
+      **フロップの判断がターン・リバーを縛る理由**:
+      フロップで cbet を打つことで、相手に「IP は強い」というシグナルを送ります。
+      相手がコールすれば、ターンで再度 bet するかチェックするかを選ぶ必要があります。
+      フロップでチェックバックした場合は、ターンでのプローブやドンクベットが相手から来ることもあります。
+
+      **SPR と残りベット回数の関係**:
+      SPR (Stack to Pot Ratio) は「今のポットサイズに対して残りスタックが何倍あるか」を示します。
+
+      | SPR | 解釈 | 典型的残りベット回数 |
+      |---:|---|---:|
+      | ≥8 | 深い (3 ストリートフル) | 3 回 |
+      | 4-7 | 中程度 (ターン+リバー) | 2 回 |
+      | 2-3 | 浅い (リバーが厳しい) | 1-2 回 |
+      | <2 | コミット圏内 | オールイン検討 |
+
+      Cash 100bb の SRP では、フロップ前の SPR は 100bb / (3bb pot) ≈ 33 です。
+      フロップで 33% cbet を打つと、SPR は 約 16 に半減します。
+      ターンでさらに 33% 打つと SPR は 約 8 になります。
+      リバーでさらに 33% 打つと SPR は 約 4 でゲームが終わります。
+
+  - type: heading
+    level: 2
+    text: "ライン 1: cbet → barrel (攻撃継続)"
+
+  - type: prose
+    body: |
+      フロップで cbet を打ち、ターンでもバレルを継続するラインです。
+
+      **選択条件**:
+      - フロップ TV バンドが strong / nut (TV 7+)
+      - または TA+ ターンカードで TV が改善・維持された場合
+      - turn context の freq が 30%+ (strong/nut バンド)
+
+      **A モデルの更新**:
+      フロップ: cash context → LIGHT_V2_BASE["cash"][band]
+      ターン: turn context → LIGHT_V2_BASE["turn"][band]
+
+      ターンでロールが変わった場合 (例: セカンドペアがトップペアに昇格) は、MV を更新してから turn context を参照します。
+
+      **典型的な cbet → barrel ライン**:
+
+      フロップ K♠7♦2♣ で top_pair (TV 7, strong, 60% bet):
+      → ターン Ac (TA+): MV = top_pair (変化なし)、turn context strong → 30% でバレル継続
+      → ターン 3h (TA-): 30% よりさらに控えめ (20% 前後) を判断
+
+      **バレル後のリバー計画**:
+      ターンで bet した場合、リバーの SPR は約 4 前後になります。
+      strong / nut は「第 3 ブレット」を準備。
+      mid バンドは「チェックコール」が多い。
+      air は「ブラフ or フォールド」の二択。
+
+  - type: examples
+    framework: light
+    title: "cbet → barrel ライン例"
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        context: cash
+      - hand: top_pair
+        draw: no_draw
+        context: turn
+      - hand: overpair
+        draw: no_draw
+        context: turn
+      - hand: two_pair
+        draw: no_draw
+        context: turn
+
+  - type: heading
+    level: 2
+    text: "ライン 2: cbet → check-back (ギアチェンジ)"
+
+  - type: prose
+    body: |
+      フロップで cbet を打ったが、ターンでチェックバックするラインです。
+      このラインは「range protection」と呼ばれ、IP がすべてベットするのを防ぐ役割があります。
+
+      **選択条件**:
+      - turn context の freq が 5-10% (air/weak/mid バンド)
+      - TA- ターンカードで TV が維持または悪化
+      - ナッツの一部をチェックバックに回して range をバランスする場合
+
+      **A モデルの適用**:
+      air / weak / mid バンドはターン context で 5-10% → ほぼチェックバックで正解。
+      strong バンド (30%) の一部もチェックバックに使い、range を守ります。
+
+      **チェックバック後のリバー計画**:
+      ターンでチェックバックした場合、リバーで相手からのベットを受けることが多くなります。
+      この場合は D モデルの continue freq を参照します。
+
+      | MV | リバー D モデル (cash 100bb 参考) | 判断 |
+      |---:|---:|---|
+      | 2 (air) | 40% | fold 寄り |
+      | 3 (weak) | 85% | call 主体 |
+      | 5 (mid) | 98% | call |
+      | 7+ (strong+) | 100% | call / CR |
+
+      **典型的な cbet → check-back ライン**:
+      フロップ T♠9♠8♦ で second_pair (TV 5, mid, 40% bet):
+      → ターン 2h (TA-, TV 変化なし, turn context mid → 10%) → チェックバック
+      → リバー相手ベット → MV=5 (mid) → D モデル 98% continue → call
+
+  - type: examples
+    framework: light
+    title: "check-back 後のターン判断例"
+    cases:
+      - hand: second_pair
+        draw: no_draw
+        context: turn
+      - hand: ace_high
+        draw: oesd
+        context: turn
+      - hand: underpair
+        draw: no_draw
+        context: turn
+
+  - type: heading
+    level: 2
+    text: "ライン 3: check → probe / donk (OOP 先手)"
+
+  - type: prose
+    body: |
+      フロップで IP がチェックバックした後、BB (OOP) がターンで先手 (probe bet) を打つラインです。
+      または BB がフロップで cbet に対してコールし、ターンでドンクベット (donk) するケースもあります。
+
+      **probe の条件 (フロップ check-back 後)**:
+      - TA- ターンカード (BB のレンジが強化される 2-6 等)
+      - BB の TV が strong / nut に改善した場合
+      - BB がフロップの IP チェックバックに対して強いレンジを見せる局面
+
+      **donk の条件 (フロップ cbet コール後)**:
+      - GTO ではほぼ 0% (フロップ cbet 後の BB donk は非推奨)
+      - 例外: board-pair ターンやストレート完成ターンでは 25-86% donk が GTO (第 9 章の例外)
+      - 本書 (base のみ) 版では「フロップ cbet 後のドンクは基本なし、例外局面のみ」と覚えます
+
+      **probe bet の暗算**:
+      BB がターンで先手を打つ場合の freq 目安は、cash context の 50-60% 程度 (強いレンジ限定)。
+      TV が strong (7-8) または nut (9+) の場合にプローブを選択します。
+      TV が mid 以下の場合はチェックが基本です。
+
+      **defense 側 (IP) の対応**:
+      BB のプローブに対して IP は、D モデル (cash 版) ではなく通常の cash context での判断に近い形で対応します。
+      MV=7+ は call / raise。MV=5 は call。MV=3 以下は fold が多い。
+
+  - type: examples
+    framework: dcbs
+    title: "probe 受け側 (IP) の defense 例"
+    cases:
+      - hand: top_pair
+        context: cash_100bb
+      - hand: second_pair
+        context: cash_100bb
+      - hand: ace_high
+        context: cash_100bb
+
+  - type: heading
+    level: 2
+    text: "リバーへの接続 — ポットコミット判定"
+
+  - type: prose
+    body: |
+      ターン終了後、SPR が 2 以下になった場合はリバーでのポットコミット判定が近づきます。
+
+      **ポットコミットの目安**:
+      SPR < 2 → 「call 全部コミット」方向で考える。
+      リバーで相手がオールインしてきた場合、strong / nut バンドはほぼ自動コール。
+      mid バンドでも SPR < 1 ならコールが正解になることが多い。
+
+      **リバーの 3 バケット (本書 (base のみ) 版)**:
+      リバーでは TV の更新 (役が完成したか) を確認した後、3 バケットで判断します。
+
+      | リバー役 | 判断 |
+      |---|---|
+      | nut (フラッシュ / ストレート / フルハウス以上) | バリューベット (33-75%) |
+      | strong (トップペア / セット) | ベット or チェックコール |
+      | mid 以下 | ブラフ or フォールド |
+
+      **light ルール**: リバーで「どうしよう」と迷う局面のほとんどは、フロップ or ターンの計画で解決できます。
+      フロップで cbet して相手がコールした時点で、「ターンに何が来たらバレルするか」を決めておくことが重要です。
+
+  - type: heading
+    level: 2
+    text: "3 ストリート通し例題"
+
+  - type: prose
+    body: |
+      2 つの代表例で、フロップ → ターン → リバーの計画を通して確認します。
+
+      **例題 A: K♠7♦2♣ → Th → Ac (ライン 1: cbet → barrel → river bet)**
+
+      フロップ K♠7♦2♣:
+      - 手牌が top_pair (MV=7, DV=0, TV=7, strong)
+      - cash context → 60% → cbet 推奨
+
+      ターン Th (TA+ ブロードウェイカード):
+      - MV は top_pair のまま (TV=7, strong)
+      - turn context → 30% → バレル継続
+
+      リバー Ac:
+      - Ac でトップペアが two_pair に昇格する場合: MV=9 (nut)
+      - リバーバリューベット推奨 (60-75%)
+
+      **例題 B: T♠9♠8♦ → 7h → Kd (ライン 2: cbet → check-back → river call)**
+
+      フロップ T♠9♠8♦:
+      - 手牌が second_pair (MV=5, DV=0, TV=5, mid)
+      - cash context → 40% → チェック / 境界ベット
+
+      ターン 7h (ストレート完成カード、TA-、例外処理対象):
+      - ストレートが完成したターン → freq -10pt
+      - turn context mid → 10% → -10pt → ほぼ 0% → チェックバック
+
+      リバー Kd:
+      - 手牌は second_pair のまま (MV=5)
+      - 相手からベットが来たら D モデル cash_100bb MV=5 → 98% continue → call
+
+  - type: heading
+    level: 2
+    text: "まとめ"
+
+  - type: prose
+    body: |
+      - フロップの TV バンドとターン context の 2 ステップで 3 ストリートの大枠が決まる。
+      - cbet → barrel: strong / nut バンドでターン TA+ の場合に継続。
+      - cbet → check-back: air / weak / mid バンドまたはターン TA- で多用。
+      - check → probe: TA- ターンで BB の TV が strong / nut に改善した場合のみ。
+      - SPR < 2 になったらポットコミット判定 → mid 以上はほぼコール。
+      - リバーで迷う局面は「フロップ計画の再確認」で 9 割解決する。

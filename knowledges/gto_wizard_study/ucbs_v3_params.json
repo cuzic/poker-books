@@ -1,0 +1,158 @@
+{
+  "model": "UCBS-v3 (A+C3 Board family)",
+  "version": "1.0",
+  "n_params": 63,
+  "formula": "freq = base[ctx5][band] + α[ctx13] + β[ctx13]·I(CBS≥7) + cat_offset[cat] + ε[board_family][ctx_group]",
+  "base": {
+    "cash": {
+      "air": 0.4446,
+      "weak": 0.3744,
+      "mid": 0.4246,
+      "strong": 0.5701,
+      "nut": 0.6171
+    },
+    "mtt_short": {
+      "air": 0.3748,
+      "weak": 0.3019,
+      "strong": 0.5826,
+      "mid": 0.3469,
+      "nut": 0.7332
+    },
+    "mtt_deep": {
+      "air": 0.4202,
+      "weak": 0.4124,
+      "strong": 0.5815,
+      "mid": 0.4089,
+      "nut": 0.6143
+    },
+    "3bp": {
+      "air": 0.4607,
+      "strong": 0.6981,
+      "nut": 0.5813,
+      "mid": 0.6074,
+      "weak": 0.5019
+    },
+    "turn": {
+      "nut": 0.0694,
+      "weak": 0.0601,
+      "air": 0.0612,
+      "mid": 0.0328,
+      "strong": 0.0669
+    }
+  },
+  "alpha": {
+    "cash_100bb": 0.0224,
+    "mtt_25bb": 0.3579,
+    "mtt_50bb": 0.0037,
+    "mtt_100bb": 0.2595,
+    "mtt_200bb": -0.0533,
+    "mtt_3bp_20bb": -0.0198,
+    "mtt_3bp_25bb": 0.0319,
+    "mtt_3bp_50bb": 0.0143,
+    "mtt_3bp_100bb": 0.0029,
+    "mtt_25bb_turn_btn": -0.0246,
+    "mtt_50bb_turn_btn": 0.0123,
+    "mtt_100bb_turn_btn": 0.1298,
+    "cash_100bb_turn_btn": 0.0129
+  },
+  "beta": {
+    "cash_100bb": -0.0028,
+    "mtt_25bb": -0.0474,
+    "mtt_50bb": -0.026,
+    "mtt_100bb": -0.0604,
+    "mtt_200bb": -0.0417,
+    "mtt_3bp_20bb": -0.149,
+    "mtt_3bp_25bb": -0.1477,
+    "mtt_3bp_50bb": 0.0544,
+    "mtt_3bp_100bb": 0.0812,
+    "mtt_25bb_turn_btn": -0.0427,
+    "mtt_50bb_turn_btn": -0.0386,
+    "mtt_100bb_turn_btn": -0.0397,
+    "cash_100bb_turn_btn": -0.0514
+  },
+  "cat_offset": {
+    "default": 0.0,
+    "slowplay": 0.0558,
+    "trash": -0.1397,
+    "premium": 0.0694
+  },
+  "epsilon": {
+    "paired": {
+      "cash": 0.0532,
+      "mtt_srp": 0.0241,
+      "3bp": -0.0112
+    },
+    "dynamic": {
+      "cash": -0.2103,
+      "mtt_srp": -0.108,
+      "3bp": -0.0632
+    },
+    "low_dry": {
+      "cash": -0.0945,
+      "mtt_srp": -0.0863,
+      "3bp": -0.0203
+    },
+    "dry_high": {
+      "cash": 0.0,
+      "mtt_srp": 0.0,
+      "3bp": 0.0
+    }
+  },
+  "tables": {
+    "HP": {
+      "flush_combo": 9,
+      "trips_set": 9,
+      "two_pair": 8,
+      "top_pair": 7,
+      "second_pair": 5,
+      "low_pair": 3,
+      "high_card": 2
+    },
+    "DP": {
+      "no_draw": 0,
+      "gutshot": 1,
+      "oesd": 2,
+      "fd": 2,
+      "combo_draw": 3
+    },
+    "bands": {
+      "air": "CBS 0-2",
+      "weak": "CBS 3-4",
+      "mid": "CBS 5-6",
+      "strong": "CBS 7-8",
+      "nut": "CBS 9+"
+    },
+    "categories": {
+      "slowplay": "set/trips/two_pair/fullhouse/flush/straight/quads",
+      "trash": "low_pair (5 以下の pair)",
+      "premium": "overpair / underpair"
+    },
+    "board_families": {
+      "dry_high": "ペアなし、J 以上のハイカード、ストフラ系なし (baseline)",
+      "paired": "ボードに同ランクが含まれる",
+      "dynamic": "モノトーン、または連結 + ツーフラ",
+      "low_dry": "ペアなし、ハイカード T 以下、ドロー薄"
+    },
+    "ctx_groups": {
+      "cash": [
+        "cash_100bb",
+        "cash_100bb_turn_btn"
+      ],
+      "mtt_srp": [
+        "mtt_25bb",
+        "mtt_50bb",
+        "mtt_100bb",
+        "mtt_200bb",
+        "mtt_25bb_turn_btn",
+        "mtt_50bb_turn_btn",
+        "mtt_100bb_turn_btn"
+      ],
+      "3bp": [
+        "mtt_3bp_20bb",
+        "mtt_3bp_25bb",
+        "mtt_3bp_50bb",
+        "mtt_3bp_100bb"
+      ]
+    }
+  }
+}

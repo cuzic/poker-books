@@ -1,0 +1,95 @@
+id,topic,gametype,depth,stacks,line,target_board,note
+# ===========================================
+# B-25: Cash 特殊 boards × 全 position
+# 各 position から paired/mono/super-wet 板の cbet 頻度を取得
+# ===========================================
+b25_utg_kk7,b25_cash_paired,Cash6mGeneral_6mNL25R25,100,,R2.5-F-F-F-F-C / X / / ,KsKd7c,Cash UTGvBB KK7
+b25_utg_aak,b25_cash_paired,Cash6mGeneral_6mNL25R25,100,,R2.5-F-F-F-F-C / X / / ,AhAdKc,Cash UTGvBB AAK
+b25_utg_774,b25_cash_paired,Cash6mGeneral_6mNL25R25,100,,R2.5-F-F-F-F-C / X / / ,7d7s4c,Cash UTGvBB 774
+b25_hj_kk7,b25_cash_paired,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,KsKd7c,Cash HJvBB KK7
+b25_hj_aak,b25_cash_paired,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,AhAdKc,Cash HJvBB AAK
+b25_hj_774,b25_cash_paired,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,7d7s4c,Cash HJvBB 774
+b25_co_kk7,b25_cash_paired,Cash6mGeneral_6mNL25R25,100,,F-F-R2.5-F-F-C / X / / ,KsKd7c,Cash COvBB KK7
+b25_co_774,b25_cash_paired,Cash6mGeneral_6mNL25R25,100,,F-F-R2.5-F-F-C / X / / ,7d7s4c,Cash COvBB 774
+b25_sb_kk7,b25_cash_paired,Cash6mGeneral_6mNL25R25,100,,F-F-F-F-R3.5-C / X / / ,KsKd7c,Cash SBvBB KK7
+b25_sb_774,b25_cash_paired,Cash6mGeneral_6mNL25R25,100,,F-F-F-F-R3.5-C / X / / ,7d7s4c,Cash SBvBB 774
+b25_utg_mono1,b25_cash_mono,Cash6mGeneral_6mNL25R25,100,,R2.5-F-F-F-F-C / X / / ,KsQs7s,Cash UTGvBB KQ7 mono
+b25_hj_mono1,b25_cash_mono,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,KsQs7s,Cash HJvBB KQ7 mono
+b25_co_mono1,b25_cash_mono,Cash6mGeneral_6mNL25R25,100,,F-F-R2.5-F-F-C / X / / ,KsQs7s,Cash COvBB KQ7 mono
+b25_sb_mono1,b25_cash_mono,Cash6mGeneral_6mNL25R25,100,,F-F-F-F-R3.5-C / X / / ,KsQs7s,Cash SBvBB KQ7 mono
+b25_utg_987,b25_cash_wet,Cash6mGeneral_6mNL25R25,100,,R2.5-F-F-F-F-C / X / / ,9h8s7d,Cash UTGvBB 987
+b25_hj_987,b25_cash_wet,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,9h8s7d,Cash HJvBB 987
+b25_co_987,b25_cash_wet,Cash6mGeneral_6mNL25R25,100,,F-F-R2.5-F-F-C / X / / ,9h8s7d,Cash COvBB 987
+b25_sb_987,b25_cash_wet,Cash6mGeneral_6mNL25R25,100,,F-F-F-F-R3.5-C / X / / ,9h8s7d,Cash SBvBB 987
+b25_hj_jt9,b25_cash_wet,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,JhTh9c,Cash HJvBB JT9
+b25_btn_jt9,b25_cash_wet,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,JhTh9c,Cash BTNvBB JT9
+b25_hj_q42,b25_cash_wet,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,Qh4s2c,Cash HJvBB Q42
+b25_co_q42,b25_cash_wet,Cash6mGeneral_6mNL25R25,100,,F-F-R2.5-F-F-C / X / / ,Qh4s2c,Cash COvBB Q42
+# ===========================================
+# B-26: Cash 3BP HJvBB flop cbet (BB cold-call 3bet)
+# 3bet size: R13.5 (BB vs HJ R2.5)
+# ===========================================
+b26_01,b26_cash_3bp,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-R13.5-C / X / / ,Ks7d2c,Cash 3BP HJvBB Kxx
+b26_02,b26_cash_3bp,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-R13.5-C / X / / ,Qh8d3s,Cash 3BP HJvBB Q83
+b26_03,b26_cash_3bp,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-R13.5-C / X / / ,Jd6c4d,Cash 3BP HJvBB J64
+b26_04,b26_cash_3bp,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-R13.5-C / X / / ,Th9s8d,Cash 3BP HJvBB T98
+b26_05,b26_cash_3bp,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-R13.5-C / X / / ,AhKd4s,Cash 3BP HJvBB AK4
+b26_06,b26_cash_3bp,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-R13.5-C / X / / ,9h8s7d,Cash 3BP HJvBB 987
+b26_07,b26_cash_3bp,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-R13.5-C / X / / ,KsKd7c,Cash 3BP HJvBB KK7
+b26_08,b26_cash_3bp,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-R13.5-C / X / / ,KsQs7s,Cash 3BP HJvBB KQ7 mono
+# ===========================================
+# B-27: Cash OOP defense (BB response to IP cbet)
+# Line: HJ open + BB call + IP cbet R1.8 → BB action
+# ===========================================
+b27_01,b27_cash_oop_def,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet / / ,Ks7d2c,Cash OOP def Kxx vs HJ cbet
+b27_02,b27_cash_oop_def,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet / / ,Qh8d3s,Cash OOP def Q83
+b27_03,b27_cash_oop_def,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet / / ,Jd6c4d,Cash OOP def J64
+b27_04,b27_cash_oop_def,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet / / ,Th9s8d,Cash OOP def T98
+b27_05,b27_cash_oop_def,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet / / ,AhKd4s,Cash OOP def AK4
+b27_06,b27_cash_oop_def,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet / / ,KsKd7c,Cash OOP def KK7
+b27_07,b27_cash_oop_def,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet / / ,9h8s7d,Cash OOP def 987
+b27_08,b27_cash_oop_def,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet / / ,KsQs7s,Cash OOP def KQ7 mono
+b27_09,b27_cash_oop_def,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet / / ,Qh4s2c,Cash OOP def Q42
+b27_10,b27_cash_oop_def,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet / / ,Td7c6s,Cash OOP def T76
+# ===========================================
+# B-28: Cash ターン cbet (IP barrel after cbet-call)
+# Line: HJ + BB + flop X-cbet-C / turn / → IP turn action
+# ===========================================
+b28_01,b28_cash_turn,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet-C / X / ,Ks7d2c5h,Cash turn after cbc Kxx5h
+b28_02,b28_cash_turn,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet-C / X / ,Ks7d2c7c,Cash turn 7pair
+b28_03,b28_cash_turn,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet-C / X / ,Ks7d2cAh,Cash turn A overcard
+b28_04,b28_cash_turn,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet-C / X / ,Ks7d2cQh,Cash turn Q broadway
+b28_05,b28_cash_turn,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet-C / X / ,Qh8d3s2h,Cash turn Q83 blank
+b28_06,b28_cash_turn,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet-C / X / ,Th9s8d4c,Cash turn T98 blank
+b28_07,b28_cash_turn,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet-C / X / ,AhKd4s2c,Cash turn AK4 blank
+b28_08,b28_cash_turn,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet-C / X / ,9h8s7d2c,Cash turn 987 blank
+# ===========================================
+# B-29: Cash multiway 3-way SB donk
+# HJ open + SB call + BB call → SB flop first action
+# ===========================================
+b29_01,b29_cash_multiway,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-C-C / / / ,Ks7d2c,Cash 3way SB first Kxx
+b29_02,b29_cash_multiway,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-C-C / / / ,Qh4s2c,Cash 3way SB first Q42
+b29_03,b29_cash_multiway,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-C-C / / / ,Th9s8d,Cash 3way SB first T98
+b29_04,b29_cash_multiway,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-C-C / / / ,Td7c6s,Cash 3way SB first T76
+b29_05,b29_cash_multiway,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-C-C / / / ,Ah7c4d,Cash 3way SB first A74
+b29_06,b29_cash_multiway,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-C-C / / / ,Kh6s4c,Cash 3way SB first K64
+b29_07,b29_cash_multiway,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-C-C / / / ,5d4s3c,Cash 3way SB first 543
+b29_08,b29_cash_multiway,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-C-C / / / ,Jh7s5c,Cash 3way SB first J75
+# ===========================================
+# B-30: Cash SB limp pot (SB call + BB check/raise → flop)
+# SB limp, BB check, then flop both check or one bets
+# ===========================================
+b30_01,b30_cash_limp,Cash6mGeneral_6mNL25R25,100,,F-F-F-F-C-X / / / ,Ks7d2c,Cash limp SB+BB flop BB first
+b30_02,b30_cash_limp,Cash6mGeneral_6mNL25R25,100,,F-F-F-F-C-X / / / ,Th9s8d,Cash limp T98 flop
+b30_03,b30_cash_limp,Cash6mGeneral_6mNL25R25,100,,F-F-F-F-C-X / / / ,AhKd4s,Cash limp AK4
+b30_04,b30_cash_limp,Cash6mGeneral_6mNL25R25,100,,F-F-F-F-C-X / / / ,9h8s7d,Cash limp 987
+b30_05,b30_cash_limp,Cash6mGeneral_6mNL25R25,100,,F-F-F-F-C-X / / / ,Qh4s2c,Cash limp Q42
+# ===========================================
+# B-31: Cash river (XX-XX 後 BB lead)
+# ===========================================
+b31_01,b31_cash_river,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-X / X-X / ,Ks7d2c5h3d,Cash XX-XX river HJvBB Kxx
+b31_02,b31_cash_river,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X-X / X-X / ,Ks7d2c5h3d,Cash XX-XX river BTNvBB Kxx
+b31_03,b31_cash_river,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-X / X-X / ,9h8s7d4c2d,Cash XX-XX river HJvBB 987
+b31_04,b31_cash_river,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X-X / X-X / ,9h8s7d4c2d,Cash XX-XX river BTNvBB 987
+b31_05,b31_cash_river,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet-C / X-X / ,Ks7d2c5h3d,Cash turn give-up river Kxx
+b31_06,b31_cash_river,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X-Rcbet-C / X-X / ,9h8s7d4c2d,Cash turn give-up river 987

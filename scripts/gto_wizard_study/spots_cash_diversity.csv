@@ -1,0 +1,128 @@
+id,topic,gametype,depth,stacks,line,target_board,note
+# ===========================================
+# B-32: K-high boards gradient (BTN vs BB) — 15 boards
+# K72(baseline) → K94 → K76 → K54 → K85 → KQ等の全変化
+# ===========================================
+b32_01,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ks5d2c,K52 dry low
+b32_02,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ks5d3c,K53 dry low
+b32_03,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ks5d4c,K54 dry low-connected
+b32_04,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ks8d3c,K83 dry mid
+b32_05,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ks9d4c,K94 mid gap
+b32_06,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ks9d5c,K95 mid gap
+b32_07,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,KsTd5c,KT5 high mid
+b32_08,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,KsJd4c,KJ4 high mid
+b32_09,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,KsQd5c,KQ5 high mid
+b32_10,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ks8d7c,K87 wet-conn
+b32_11,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ks9d8c,K98 wet-conn
+b32_12,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ks7d6c,K76 wet-conn
+b32_13,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,KsQd7c,KQ7 wet-mid
+b32_14,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,KsJdTc,KJT broadway-wet
+b32_15,b32_khigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,KsQdJc,KQJ broadway-wet
+# ===========================================
+# B-33: A-high boards (BTN vs BB) — 12 boards
+# ===========================================
+b33_01,b33_ahigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ah5d2c,A52 dry low (wheel-ish)
+b33_02,b33_ahigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ah7d2c,A72 dry low
+b33_03,b33_ahigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ah8d2c,A82 dry low
+b33_04,b33_ahigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ah9d2c,A92 dry low
+b33_05,b33_ahigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ah9d5c,A95 dry mid
+b33_06,b33_ahigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,AhJd4c,AJ4 mid
+b33_07,b33_ahigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,AhTd5c,AT5 mid
+b33_08,b33_ahigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,AhTd7c,AT7 mid-conn
+b33_09,b33_ahigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ah8d7c,A87 wet-conn
+b33_10,b33_ahigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ah6d5c,A65 wet-conn low
+b33_11,b33_ahigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,AhKdQc,AKQ broadway
+b33_12,b33_ahigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,AhQdJc,AQJ broadway
+# ===========================================
+# B-34: Q-high boards (BTN vs BB) — 12 boards
+# ===========================================
+b34_01,b34_qhigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Qh5d2c,Q52 dry low
+b34_02,b34_qhigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Qh7d2c,Q72 dry low
+b34_03,b34_qhigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Qh5d3c,Q53 dry low
+b34_04,b34_qhigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Qh6d3c,Q63 dry low-mid
+b34_05,b34_qhigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Qh9d4c,Q94 mid
+b34_06,b34_qhigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Qh9d8c,Q98 wet-conn
+b34_07,b34_qhigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,QhTd5c,QT5 mid-broadway
+b34_08,b34_qhigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,QhJd9c,QJ9 broadway-conn
+b34_09,b34_qhigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,QhJd6c,QJ6 broadway mid
+b34_10,b34_qhigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,QhJdTc,QJT broadway-wet
+b34_11,b34_qhigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Qh8d7c,Q87 wet-conn
+b34_12,b34_qhigh_gradient,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Qh8d6c,Q86 wet-mid
+# ===========================================
+# B-35: J/T-high + low connected boards — 12 boards
+# ===========================================
+b35_01,b35_jt_low,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Jh7d5c,J75 mid wet
+b35_02,b35_jt_low,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Jh8d4c,J84 mid (2tone)
+b35_03,b35_jt_low,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Jh9d5c,J95 mid
+b35_04,b35_jt_low,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Jh8d5c,J85 mid
+b35_05,b35_jt_low,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,JhTd6c,JT6 broadway-mid
+b35_06,b35_jt_low,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,JhTd8c,JT8 broadway-conn
+b35_07,b35_jt_low,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Th6d2c,T62 mid low
+b35_08,b35_jt_low,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Th7d2c,T72 mid low
+b35_09,b35_jt_low,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Th8d7c,T87 wet-conn
+b35_10,b35_jt_low,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Th8d6c,T86 wet
+b35_11,b35_jt_low,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Th5d2c,T52 mid low (we have UTG/HJ)
+b35_12,b35_jt_low,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Th9d6c,T96 mid wet
+# ===========================================
+# B-36: Low connected + mid family — 12 boards
+# ===========================================
+b36_01,b36_low_connected,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,8h7d6c,876 connected
+b36_02,b36_low_connected,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,7h6d5c,765 connected low
+b36_03,b36_low_connected,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,6h5d4c,654 connected lowest
+b36_04,b36_low_connected,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,5h4d3c,543 connected wheel
+b36_05,b36_low_connected,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,4h3d2c,432 connected lowest
+b36_06,b36_low_connected,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,8h6d4c,864 gap
+b36_07,b36_low_connected,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,9h7d5c,975 gap
+b36_08,b36_low_connected,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,9h6d4c,964 gap
+b36_09,b36_low_connected,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,8h5d3c,853 gap mid-low
+b36_10,b36_low_connected,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,7h5d3c,753 gap mid-low
+b36_11,b36_low_connected,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,6h4d2c,642 gap low
+b36_12,b36_low_connected,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,5h3d2c,532 gap low
+# ===========================================
+# B-37: 2tone vs rainbow 比較 (same rank, different suit pattern) — 8 boards × 2
+# ===========================================
+b37_01,b37_2tone_compare,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ks7s2c,K72 2tone (K-7 spade)
+b37_02,b37_2tone_compare,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ks7c2s,K72 2tone (K-2 spade)
+b37_03,b37_2tone_compare,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Qh8h3s,Q83 2tone (Q-8 hearts)
+b37_04,b37_2tone_compare,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Th9h8d,T98 2tone (T-9 hearts)
+b37_05,b37_2tone_compare,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,9h8h7d,987 2tone
+b37_06,b37_2tone_compare,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,JhTh9d,JT9 2tone (no 9-suited)
+b37_07,b37_2tone_compare,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,AhKh4s,AK4 2tone (A-K hearts)
+b37_08,b37_2tone_compare,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Jh6h4c,J64 2tone
+# ===========================================
+# B-38: Mono boards diversity (different ranks) — 8 boards
+# ===========================================
+b38_01,b38_mono_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,AsKs7s,AKs7s mono Ace
+b38_02,b38_mono_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,AsQs5s,AQs5s mono Ace
+b38_03,b38_mono_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,KsQs7s,KQ7 mono K (we have BTN)
+b38_04,b38_mono_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,QsTs6s,QT6 mono Q
+b38_05,b38_mono_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,JsTs5s,JT5 mono J (we have BTN)
+b38_06,b38_mono_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ts8s5s,T85 mono T
+b38_07,b38_mono_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,9s8s7s,987 mono (super-wet)
+b38_08,b38_mono_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,8s6s4s,864 mono mid-low
+# ===========================================
+# B-39: Paired flop diversity — 8 boards
+# ===========================================
+b39_01,b39_paired_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,AhAdQc,AAQ paired high
+b39_02,b39_paired_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,KsKd4c,KK4 paired (low kicker)
+b39_03,b39_paired_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,QsQc4d,QQ4 paired (Q low)
+b39_04,b39_paired_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,QsQc8d,QQ8 paired mid
+b39_05,b39_paired_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,JsJc4d,JJ4 paired
+b39_06,b39_paired_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,9d9s4c,994 paired mid
+b39_07,b39_paired_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,5s5h2c,552 paired low
+b39_08,b39_paired_diverse,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,3s3h2c,332 paired lowest
+# ===========================================
+# B-40: HJvBB 多様 (HJ position の補完) — 12 boards
+# ===========================================
+b40_01,b40_hj_diverse,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,Ah5d2c,Cash HJvBB A52
+b40_02,b40_hj_diverse,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,AhKdQc,Cash HJvBB AKQ
+b40_03,b40_hj_diverse,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,Qh9d8c,Cash HJvBB Q98
+b40_04,b40_hj_diverse,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,JhTd9c,Cash HJvBB JT9 (we have BTN)
+b40_05,b40_hj_diverse,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,Jh7d5c,Cash HJvBB J75
+b40_06,b40_hj_diverse,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,8h7d6c,Cash HJvBB 876
+b40_07,b40_hj_diverse,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,5h4d3c,Cash HJvBB 543
+b40_08,b40_hj_diverse,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,AsKs7s,Cash HJvBB AKs7s mono
+b40_09,b40_hj_diverse,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,KsKd4c,Cash HJvBB KK4
+b40_10,b40_hj_diverse,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,9d9s4c,Cash HJvBB 994
+b40_11,b40_hj_diverse,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,Ks8d7c,Cash HJvBB K87
+b40_12,b40_hj_diverse,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,Qh5d3c,Cash HJvBB Q53

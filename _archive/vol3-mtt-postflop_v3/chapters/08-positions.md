@@ -1,0 +1,153 @@
+# 第13章 ポジション別 Flop Cbet — SB の特殊性と EP の高頻度戦略
+
+Flop の攻撃側 (cbet 判断) は preflop opener のポジションで大きく変わります。
+本章では EP/MP の 80%+ cbet 戦略、BTN の標準 60-65%、SB の「default check」戦略を GTO 検証データで解説します。
+
+## ポジション別 Cbet 頻度 (MTT 100bb)
+
+MTT 100bb の Flop cbet 頻度を 5 ポジション全てで GTO 検証した結果です。
+
+**ポジション別 Flop Cbet 頻度 (MTT 100bb)**
+
+| 位置 | Cbet 頻度 | レンジ密度 |
+|------|-----------|-----------|
+| **LJ (UTG+1)** | **81.5%** | strong (10-15% open) |
+| **HJ** | 80.5% | strong (15-18% open) |
+| **CO** | 77.5% | medium-strong (22-25% open) |
+| **BTN** | 65.7% | wide (45-50% open) |
+| **SB** | **49.0%** | medium (open + BB squeeze risk) |
+
+**観察 1: EP (LJ/HJ) は 80%+ cbet**
+
+EP open range は narrow + strong (premium pairs, high broadway)。Flop で **range advantage** が圧倒的に強いため、ほぼ全板で aggressive cbet が GTO 最適。
+
+**観察 2: BTN は 65% で wider range の standard**
+
+BTN open range は wide (45-50% of hands)。ほとんどの flop と connect しないが、SB/BB の defending range も wide なので polarized cbet で良い。
+
+**観察 3: SB は 49% で「半分しか cbet しない」**
+
+SB は OOP の中で唯一 BTN/CO open に対して 3bet or call の選択を持つ。Postflop は OOP で disadvantaged。さらに BB が SB を attacked range で squeezed していることも考慮 → cbet を抑制する。
+
+## ハンド別 Cbet 頻度 — SB の異常さ
+
+ハンドの強さで cbet 頻度を分解すると、**SB は他ポジションと完全に違う挙動** を示します。
+
+**Hand × Position cbet 頻度 (MTT 50bb)**
+
+| Hand | BTN | CO | HJ | LJ | SB |
+|------|-----|-----|-----|-----|-----|
+| **overpair** | 94% | 94% | 94% | 94% | **37%** |
+| **set** | 71% | 71% | 72% | 72% | **20%** |
+| **straight** | 86% | 85% | 85% | 85% | **19%** |
+| **2P / trips** | 84% | 84% | 84% | 84% | 26% |
+| **TPTK** | 57% | 55% | 54% | 54% | 22% |
+| **air (no_made)** | 46% | 46% | 46% | 46% | 13% |
+
+**驚くべき事実:**
+
+- SB は **overpair (AA, KK on T-7-2)** でも 37% しか cbet せず、63% は CHECK!
+- SB は **set** でも 20% (Cash や他 MTT position の 70-94% と対比)
+- SB は **straight** でも 19% (BTN の 85% と対比)
+
+これは初心者には極めて反直感的です。「強いハンドは aggressive」という 5 公理にも反するように見えます。
+
+**理由:**
+
+- SB は preflop で 3bet も call も選べる → postflop に到達した hand range は **polarize されている** (premium または medium のミックス)
+- BB は SB の cbet レンジを読みやすい → BB の counter-attack (CR) が容易
+- SB の最適戦略は **「強いハンドで slowplay (check-call or check-raise)」** に振る
+- aggressive cbet すると range balance が崩れる
+
+これは Vol2 のマトリックスでは扱えなかった **GTO の polarization 原理** の最も劇的な例です。
+
+## ボード別の Cbet 変動 (MTT 50bb)
+
+**Board family × position cbet 頻度 (MTT 50bb)**
+
+| Board family | BTN | CO | HJ | LJ | SB |
+|--------------|-----|-----|-----|-----|-----|
+| **dry_high** (K-7-2) | 48% | 48% | 49% | 49% | **15%** |
+| **paired** (K-K-7) | 48% | 48% | 48% | 48% | **9%** |
+| **low_dry** (8-4-3) | 42% | 38% | 38% | 38% | 12% |
+| **dynamic** (T-9-8) | 33% | 33% | 33% | 33% | 11% |
+| **dynamic_2tone** | 38% | 32% | 32% | 32% | 10% |
+
+**観察:**
+
+- **dry_high と paired** で全 position の cbet が最大 (~48%)、これらは range advantage が最も明確
+- **dynamic 板** は cbet 抑制 (33% 程度) — 両者の range が均等にヒット
+- **SB は全板で抑制** — paired 板で 9% は特に低い
+
+実戦的なルール:
+
+- **EP / MP open → ほぼ全板で cbet** (90%+ heuristic でも OK)
+- **BTN open → dry/paired は cbet、dynamic は select (TP+, draws)**
+- **SB open → 強気でも check が default、check-raise や turn lead を活用**
+
+## Cash 100bb との対比
+
+MTT 100bb の cbet 頻度を Cash 100bb と比較すると、Cash の方がやや低い傾向があります。
+
+**理由:**
+
+- Cash 100bb は MTT のような ICM 圧力なし → 全 range が等価に commit できる
+- MTT 100bb は ICM (将来の bust 回避) で polarized betting が増える
+- 結果: MTT の方が cbet がやや aggressive
+
+ただし大局は同じパターン (EP > BTN > SB)。
+
+## SB のための実戦ガイド
+
+SB から open した場合の postflop ガイド:
+
+**公理: 「SB は強いハンドでも check default」**
+
+具体的なフロー:
+
+1. **Flop**: ほぼ全板で **CHECK** (overpair でも 63% check)
+   - 例外: dry_high で TPTK や set → 33% cbet 程度の small bet で probe
+   - **チェック後の plan**: BB が donk か check か観察、BB check なら turn での自分のアクションを考える
+
+2. **BB が donk してきた場合**:
+   - BB の donk レンジは比較的 polarized (small bet なら weak/draw、large bet なら strong)
+   - 自分の S/M で call、W/A で fold or float (small bet なら)
+
+3. **Turn 以降**:
+   - SB は依然 OOP で disadvantaged
+   - 強いハンドは XR を狙う、weak は基本 check-fold
+
+この戦略は数学的に最適ですが、実戦で実行する難易度は高い。**「SB の overpair で check するのは怖いが GTO 解」** という認識を持つことが重要です。
+
+## EP/MP のための実戦ガイド
+
+EP (LJ/HJ/UTG) open の場合は単純です。
+
+**公理: 「EP は範囲全体で aggressive、cbet をデフォルトに」**
+
+具体的なフロー:
+
+1. **Flop**: ほぼ全ハンドで **CBET** (90% 近く)
+   - 例外: BB の 3bet potential が高い場面 → check で trapping
+   - サイズは 33-50% pot 標準
+
+2. **強いハンド (overpair, set)**: 95%+ cbet
+3. **TP / 2P**: 80% cbet
+4. **Draws**: 65% cbet (semibluff)
+5. **Air**: 45% cbet (range balance のため)
+
+EP のシンプルさは Vol2 のマトリックスとほぼ一致します — Vol3 の追加は **「SB が違う」** 部分のみ重要。
+
+## Vol3 全体への意味
+
+この章で明らかになった position-specific patterns は:
+
+- **EP/MP の attack 公式は Vol2 マトリックスでほぼ十分** (cbet 頻度高い = BET 寄り)
+- **BTN の attack 公式は Vol2 マトリックス通り**
+- **SB の attack 公式は完全に違う** — 「default check + 戦略的 cbet」
+
+これらは preflop position による postflop 戦略の違いの「基本パターン」であり、本書の他章 (turn donk, 3bp, etc.) でも繰り返し参照されます。
+
+## 次の章へ
+
+次の ch14 では **BB Flop defense の depth 依存性** を解説します。25bb と 100bb で fold 閾値が大きく変わる現象を SPR-axis-switching で説明します。

@@ -1,0 +1,187 @@
+volume: "Vol3"
+chapter_num: "01"
+title: "SPR-axis-switching 理論 — stack depth で支配軸が切り替わる"
+
+summary: |
+  本書の中核理論 SPR-axis-switching を解説します。
+  Flop は絶対強さ (mv) で判断、Turn は depth に応じて mv+dv または bucket、River は常に bucket — この切替が GTO 整合性の本質です。
+
+sections:
+
+  - type: heading
+    level: 2
+    text: "3 つの軸 — 判断の指標"
+
+  - type: prose
+    body: |
+      ポストフロップ判断には大きく 3 つの軸 (指標) があります。
+
+      **軸 1: 絶対強さ (mv = made value)**
+
+      自分のハンドが「客観的にどの役か」を見る軸。TP/2P/set/straight/flush など。相手のレンジを考慮せず、純粋にハンドの強さだけで判断。
+
+      - 例: K-7-2 で AKo は **TP top kicker** (絶対強さ = M)
+
+      **軸 2: ドローバリュー (dv = draw value)**
+
+      未完成だが将来当たれば強くなるドローを評価する軸。OESD/FD/combo など。
+
+      - 例: T-9-8 で 6-7 は **OESD (8 outs)** = D
+
+      **軸 3: 相対強さ (bucket)**
+
+      自分のハンドが相手のレンジに対して「上位何 %」かを見る軸。GTO Wizard では equity bucket (best/good/weak/trash) として表現される。
+
+      - 例: River K-7-2-3-A で AKo は相手のベットレンジに対して 「best (上位 25%)」なら call、「weak (下位 25-50%)」なら fold
+
+      この 3 軸のうち、**どれが判断を支配するか** が street と stack depth で変わります。これが SPR-axis-switching です。
+
+  - type: heading
+    level: 2
+    text: "SPR の役割"
+
+  - type: prose
+    body: |
+      **SPR (Stack-to-Pot Ratio)** = 残り有効スタック ÷ 現在のポットサイズ
+
+      例: ポット 10 BB / スタック 90 BB → SPR = 9
+
+      SPR は **「これから何回大きなベットを打ち合えるか」** の指標です。
+
+      - **SPR 高い (10+)** = まだ何回もベットラウンドが残る → drawing odds や implied odds が大
+      - **SPR 中 (3-7)** = 1-2 回のベットで決着 → bucket と mv 両方が重要
+      - **SPR 低い (≤2)** = 1 回のベットで commit → bucket (相対強さ) が支配的
+
+      SPR は ストリートが進むほど下がります。Flop 後の SPR が 10 でも、Turn 後は 7、River 後は 3 程度になります (大まかな目安)。
+
+  - type: heading
+    level: 2
+    text: "Flop = mv 軸の世界"
+
+  - type: prose
+    body: |
+      Flop の判断は **絶対強さ (mv)** が支配します。
+
+      **理由:**
+
+      - Flop 後はまだ SPR が大きい (Cash 100bb で ~10, MTT 50bb で ~6)
+      - 2 ストリート以上 (Turn, River) のベットが残っている
+      - こちらのレンジも相手のレンジも広く、bucket の概念が機能しにくい
+      - drawing hand は drawing odds で支えられる (implied odds 大)
+
+      **結果:**
+
+      - **TP は強い** (mv で M)、**overpair は強い** (mv で S)
+      - **bucket は薄い情報** (相手のレンジも広いので相対強さの差が小さい)
+      - **ドロー (D) は call 価値がある** (implied odds)
+
+      Flop での判断公式は本書全章を通じて **mv ベース** で記述します。
+
+  - type: heading
+    level: 2
+    text: "Turn = 中間の世界 (depth 依存)"
+
+  - type: prose
+    body: |
+      Turn は SPR が **3-7** の範囲で、**stack depth によって支配軸が変わる** 街です。
+
+      **Cash 100bb の Turn (SPR ~7):**
+
+      - SPR まだ十分 → drawing odds がそれなりに効く
+      - **mv + dv の両方が重要**
+      - 例: TP + FD は M + D 両方の価値 → 大きいベットにも CALL できる
+      - **mv+dv ベース公式 (Cash v8)** が最適 → Cash 100bb turn huge_loss 0.037 BB ⭐
+
+      **MTT 50bb の Turn (SPR ~3):**
+
+      - SPR 低い → drawing odds 弱まる、implied odds ほぼゼロ
+      - **bucket (相対強さ) が支配**
+      - 例: FD は dv = D だが、低 SPR で完成しても hit する前に pot committed
+      - **bucket-based 公式 (MTT v9)** が最適 → MTT 50bb turn huge_loss 0.057 BB ⭐
+
+      同じ "Turn" でも、Cash と MTT で**全く異なる軸**が支配的になることを GTO 検証で確認しています。
+
+      **境界の目安:**
+
+      - SPR ≥ 6 → mv+dv ベース (Cash style)
+      - SPR ≤ 4 → bucket ベース (MTT style)
+      - SPR 4-6 → 過渡的 (どちらも有効)
+
+  - type: heading
+    level: 2
+    text: "River = bucket 軸の世界"
+
+  - type: prose
+    body: |
+      River は **常に bucket** が支配する街です。
+
+      **理由:**
+
+      - **ドローが消失** (もう次のカードが来ない)
+      - ハンド強さが確定 → 「自分の確定強さ vs 相手のレンジ強さ」の純粋比較
+      - drawing odds の概念が消える → dv 軸は存在しない
+      - **bucket (相対強さ)** が唯一意味を持つ軸
+
+      **Cash 100bb の River:**
+
+      - SPR ~3 で **bucket ベース公式 (Cash v14)** → huge_loss 0.388 BB
+      - mv 軸 (TP/2P など) は bucket の補助情報として参照
+      - 例外: straight/flush/trips のような **絶対強さの強ハンド** は bucket = weak でも call (絶対強さ override)
+
+      **MTT 50bb の River:**
+
+      - SPR ~1 で **bucket + 真allin 判定** (MTT v15) → huge_loss 0.038 BB ⭐⭐⭐
+      - all-in が頻発 → 「raise 不可」の特殊判断
+      - Cash の all-in (raise 可) と意味論的に違う (詳細は ch08)
+
+  - type: heading
+    level: 2
+    text: "理論の実証 — 公式間の精度比較"
+
+  - type: prose
+    body: |
+      SPR-axis-switching が正しいことは、以下の比較で確認できます。
+
+  - type: table
+    title: "公式精度の比較 (huge_loss, BB/decision、低いほど良い)"
+    markdown: |
+      | Street | Cash 100bb | MTT 50bb | 軸の違い |
+      |--------|-----------|----------|---------|
+      | Flop defense (mv) | 0.49 | (同様) | 両者 mv |
+      | Turn defense (Cash v8 = mv+dv) | **0.037** ⭐ | 0.133 | Cash 向き |
+      | Turn defense (MTT v9 = pure bucket) | 0.169 | **0.057** ⭐ | MTT 向き |
+      | River defense (Cash v14 = bucket+mv) | **0.388** ⭐ | 0.316 | Cash 向き |
+      | River defense (MTT v15 = bucket+真allin) | (適用外) | **0.038** ⭐ | MTT 向き |
+
+  - type: prose
+    body: |
+      **観察:**
+
+      - **Turn**: Cash v8 を MTT に適用すると **3.6 倍** 悪化、MTT v9 を Cash に適用すると **4.6 倍** 悪化 → **軸の選択ミスは大きく EV を損なう**
+      - **River**: bucket-based の Cash v14 は MTT でもそれなりに動くが (0.388 → 0.316)、MTT 専用の v15 で **10 倍以上の改善** (0.038)
+
+      この実証データが SPR-axis-switching の核心です。
+
+  - type: heading
+    level: 2
+    text: "Vol2 のマトリックスとの関係再確認"
+
+  - type: prose
+    body: |
+      Vol2 の 5×4 マトリックスは **mv 軸を主体としつつサイズ補正** という設計です。これは Cash 100bb で平均 73% の huge_loss 削減を実現します (Flop 49%, Turn 82%, River 87%)。
+
+      Vol3 の Tier 2 は:
+
+      - **Flop**: Vol2 の mv 軸を継続使用 + 詳細補正
+      - **Turn**: Cash は mv+dv 詳細、MTT は bucket-based に切替
+      - **River**: bucket-based に明示的に切替
+
+      Vol2 で「マトリックスで判断 → 例外チェック」だったフローが、Vol3 では「**SPR と street で軸を決定 → 軸別の公式で判断 → 例外チェック**」になります。1 段階複雑になりますが、その分の正確性が得られます。
+
+  - type: heading
+    level: 2
+    text: "次の章へ"
+
+  - type: prose
+    body: |
+      SPR-axis-switching の理論的な全体像を把握しました。次の ch02-03 では **Flop defense の詳細公式** (mv ベース、Cash & MTT 共通) を解説します。

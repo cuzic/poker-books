@@ -1,0 +1,52 @@
+{
+  "title": "迷わないポーカー Vol3: MTT ポストフロップ専門版",
+  "titleRomaji": "Mayowanai Poker Vol3: MTT Postflop Specialized",
+  "subtitle": "SPR-axis-switching と stack depth 別補正で MTT を制する",
+  "author": "川西智也",
+  "language": "ja",
+  "identifier": "urn:uuid:e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b",
+  "publisher": "川西智也",
+  "description": "MTT (トーナメント) ポストフロップに特化した中上級者向け実践書。Vol2 (Cash 100bb 専門版) と独立した内容を提供。\n\n本書の中核は **SPR-axis-switching** という理論 — stack depth が低い MTT では Cash と判断の支配軸 (絶対強さ vs 相対強さ) が切り替わる現象を GTO 検証データで解明。MTT 50bb Turn 公式 v9 (pure bucket、huge_loss 0.057 BB)、MTT 50bb River 公式 v15 (真allin aware、0.038 BB) で全街を網羅し、Cash 公式を MTT に適用した場合との劇的差 (3-5 倍の精度差) を実証。\n\n12 章構成。ch01 で SPR-axis-switching 理論、ch02-03 で MTT 50bb 専用公式、ch04 で「all-in」の意味論的差 (Cash と MTT の本質的違い)、ch05 で BB defense depth 依存性 (25/50/100bb で fold 閾値が変わる)、ch06 で Turn donk lead (BB の先制ベット、MTT 100bb で 16%)、ch07 で 3-bet pot 詳細 (IP のトラップ vs OOP の強気 CR、トリップス挙動の逆転)、ch08 でポジション別 Flop Cbet (SB の \"default check\" 戦略)、ch09 で ICM 補正方針、ch10 で 50 問練習、ch11 で 2 ページ早見表。\n\nCash 100bb 詳細公式は Vol2 (Cash 専門版) で扱うため本書では割愛。Vol1 (プリフロップ) と Vol4 (テル) の橋渡しとして、トーナメントプレイヤー向けに独立して読める構成。",
+  "cover": "chapters/images/cover.jpg",
+  "kdp": {
+    "keywords": [
+      "MTT ポストフロップ",
+      "ポーカー トーナメント 戦略",
+      "MTT 25BB ショートスタック",
+      "MTT 50BB SPR",
+      "ICM バブル ポストフロップ",
+      "MTT ドンクベット",
+      "MTT チェックレイズ 3ベットポット",
+      "ポーカー stack depth 補正",
+      "MTT ポジション別 cbet",
+      "テキサスホールデム トーナメント 中上級"
+    ],
+    "categories": [
+      "Kindle Store > 趣味・実用 > ゲーム",
+      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム",
+      "Kindle Store > ノンフィクション > 科学・テクノロジー"
+    ],
+    "bisac": [
+      "GAM004000",
+      "GAM002000",
+      "SPO047000"
+    ],
+    "bisacLabels": [
+      "GAMES & ACTIVITIES / Card Games / Poker",
+      "GAMES & ACTIVITIES / Card Games / General",
+      "SPORTS & RECREATION / Gambling"
+    ],
+    "targetAudience": "MTT (トーナメント) プレイヤー中上級者。Vol1 プリフロップを読了済、または同等のプリフロップ知識がある読者を想定。Vol2 (Cash 専門版) は前提としないが、5×4 マトリックスの基礎を Vol2 ch01-04 で押さえると効率的。",
+    "pageReadDirection": "ltr",
+    "aiContentDisclosure": {
+      "textAssisted": true,
+      "imageGenerated": true,
+      "note": "Claude Code（Anthropic）を執筆補助ツールとして使用。最終的な編集・監修は著者が実施。"
+    },
+    "pricing": {
+      "currency": "JPY",
+      "listPrice": 980,
+      "kdpSelect": true
+    }
+  }
+}

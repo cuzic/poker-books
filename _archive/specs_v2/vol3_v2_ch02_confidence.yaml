@@ -1,0 +1,119 @@
+volume: "Vol3"
+chapter_num: "02"
+title: "α/β layer——13 context の lift 表"
+
+summary: |
+  A モデルの中核となる α (コンテキスト補正) と β (TV≥7 の追加 lift) を、
+  13 context すべてについて表で習得します。なぜ mtt_25bb の α が +36 と大きく、
+  mtt_3bp_25bb の β が -15 と大きく負なのか、構造的理由とともに理解します。
+
+sections:
+  - type: heading
+    level: 2
+    text: "α/β 表の全貌"
+
+  - type: table
+    template: v3_alpha_beta
+    title: "13 context × α/β layer"
+
+  - type: prose
+    body: |
+      α は「その context 全体で base からどれだけ lift するか」を表します。
+      正の α は「base より bet 寄り」、負の α は「base より check 寄り」を意味します。
+      β は TV ≥ 7 (strong または nut バンド) のときのみ追加で加算します。
+      TV が 6 以下のときは β は加算しません。
+
+  - type: heading
+    level: 2
+    text: "α が大きい context (MTT 短スタック)"
+
+  - type: prose
+    body: |
+      最も大きな α は **mtt_25bb の +36** と **mtt_100bb の +26** です。
+      この 2 つは Vol2 では「mtt_short と mtt_deep に統合」されていたものを
+      Vol3 で細分化したものです。
+
+      mtt_25bb の +36 は「ショートスタックでは wide cbet が GTO 最適」という
+      MTT 6m Simple tree の特性を反映しています。25bb スタックでは SPR が低く、
+      pot コミット判断が近いため、ブラフレンジ含めた cbet 率を base より大幅に上げます。
+
+      mtt_100bb の +26 も同様の構造です。MTT 100bb は cash 100bb と一見似ていますが、
+      MTT 特有のレンジ構成 (open range がややタイト) により、cbet 率が cash より高めに
+      なります。これは MTT 6m Simple tree が cash と異なる solver 設定で計算されている
+      ためで、本書では実測値に従って α を割り当てています。
+
+      mtt_50bb と mtt_200bb は α がほぼ 0 (それぞれ +0、-5) で、Vol2 の base 値とほぼ
+      同じ頻度になります。中程度のスタックでは特殊な lift が必要ないことを示しています。
+
+  - type: heading
+    level: 2
+    text: "β が大きく負の context (3BP 浅スタック)"
+
+  - type: prose
+    body: |
+      最も大きな負の β は **mtt_3bp_25bb の -15** と **mtt_3bp_20bb の -15** です。
+      これは「3BP の浅スタックでは strong / nut バンドのハンドで slowplay 傾向が顕著」
+      ということを反映しています。
+
+      3BP 浅 (SPR ~3) では、set や two_pair など TV≥7 のハンドを
+      むしろチェックバックして相手のブラフを誘発するのが GTO 最適な場合が多くなります。
+      ベットしてしまうとレンジが極端に強くなり、相手が安いハンドを fold してしまうためです。
+      β = -15 は「strong/nut バンドでは base から 15pt 下げてベットする」という意味です。
+
+      逆に **mtt_3bp_50bb の +5** と **mtt_3bp_100bb の +8** では β が正です。
+      深い 3BP では SPR が高く、ベットでより多くの value を取れるため、
+      strong/nut バンドを bet 寄りに lift します。
+
+  - type: heading
+    level: 2
+    text: "Turn context の α/β は控えめ"
+
+  - type: prose
+    body: |
+      Turn 4 context (mtt_25/50/100bb_turn_btn と cash_100bb_turn_btn) は
+      α/β とも比較的小さい値です (α: -2 〜 +13、β: -4 〜 -5)。
+
+      Turn では Vol2 base が既に 6-7% と非常に低く設定されているため、
+      追加の lift は不要に近い構造です。最も大きい mtt_100bb_turn_btn の α=+13 は
+      「MTT 100bb のターンでは想定より cbet 続行率が高い」ことを示します。
+
+  - type: heading
+    level: 2
+    text: "α/β 適用例 (4 つの代表 context)"
+
+  - type: examples
+    framework: v3
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        board: AsKd7c
+        context: mtt_25bb
+      - hand: second_pair
+        draw: oesd
+        board: 9c8d6h
+        context: mtt_3bp_25bb
+      - hand: overpair
+        draw: no_draw
+        board: 9h5c2s
+        context: mtt_3bp_100bb
+      - hand: top_pair
+        draw: no_draw
+        board: KdTh4s
+        context: mtt_100bb_turn_btn
+
+  - type: heading
+    level: 2
+    text: "暗記の優先順位"
+
+  - type: prose
+    body: |
+      13 context すべての α/β を一気に覚えるのは大変です。優先順位は以下の通りです。
+
+      1. **cash_100bb (+2, +0)** — 最頻出 context。α/β とも小さいので「Vol2 と同じ」と覚えれば OK
+      2. **mtt_25bb (+36, -5)** — α が最大、確実に暗記
+      3. **mtt_100bb (+26, -6)** — α が大きい、確実に暗記
+      4. **mtt_3bp_25bb (+3, -15)** — β が最大の負、3BP 浅で重要
+      5. **mtt_3bp_50/100bb (+1/+0, +5/+8)** — β が正、深 3BP で覚える
+
+      残り 7 context は α/β とも 5pt 以下の小さい値なので、「微調整 ±5pt」と覚えて
+      実戦では Vol2 base に近い扱いで OK です。

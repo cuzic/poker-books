@@ -1,0 +1,143 @@
+volume: "Vol3"
+chapter_num: "10"
+title: "3-bet pot シリーズ——SPR 別の β 大反転"
+
+summary: |
+  3-bet pot 4 context (20/25/50/100bb) は β が **-15 から +8 まで 23pt の差** という
+  大きな分散を持つ context 群です。SPR の違いで strong/nut の slowplay 比率が
+  劇的に変わる構造を理解します。
+
+sections:
+  - type: heading
+    level: 2
+    text: "3BP 4 context のパラメータ"
+
+  - type: prose
+    body: |
+      A モデルで 3-bet pot は 4 つに細分化されています。
+
+      | context | α | β (TV≥7) | 特徴 |
+      |---|---:|---:|---|
+      | mtt_3bp_20bb | -2 | **-15** | 極浅、slowplay 顕著 |
+      | mtt_3bp_25bb | +3 | **-15** | 浅 3BP の標準 |
+      | mtt_3bp_50bb | +1 | **+5** | β が正に転じる |
+      | mtt_3bp_100bb | +0 | **+8** | 最も bet 寄り |
+
+      α は -2 から +3 で大きく変わりませんが、β は **-15 から +8 まで 23pt の差** が
+      あります。3BP では strong/nut バンドの扱いが SPR で大きく変わる構造です。
+
+  - type: heading
+    level: 2
+    text: "β=-15 の意味 (浅 3BP)"
+
+  - type: prose
+    body: |
+      mtt_3bp_20bb と mtt_3bp_25bb の β=-15 は、「浅い 3BP では強い役 (TV≥7) を
+      slowplay する比率が高い」ことを示します。
+
+      浅 3BP では SPR が 3 前後と非常に低く、ベットすると pot コミット圏に入ります。
+      強い役を持っていると相手が早期 fold してしまい、追加 value が取れません。
+      逆にチェックバックして相手のブラフを誘発する方が EV が高くなります。
+
+      cat_offset[slowplay] = +6 と組み合わせると、合計で -9pt の slowplay 補正に
+      なります。「set でも 50% は check」というレンジ構成です。
+
+  - type: heading
+    level: 2
+    text: "β=+8 の意味 (深 3BP)"
+
+  - type: prose
+    body: |
+      mtt_3bp_100bb の β=+8 は、「深い 3BP では強い役で **多めに** bet」を示します。
+
+      深い 3BP では SPR が高く (約 8-10)、ベットしても 3 ストリート構築の余裕があり、
+      相手の lighter な call から value を取れます。strong/nut バンドを wide に bet し、
+      slowplay 比率を下げる構造です。
+
+      cat_offset[slowplay] = +6 と組み合わせると、合計で +14pt の lift。
+      「set / two_pair はほぼ常時 bet」というレンジ構成です。
+
+  - type: heading
+    level: 2
+    text: "β 反転の数値例"
+
+  - type: prose
+    body: |
+      同じ set on Ks7d2c で 4 つの 3BP を比較します。
+
+      | context | base | α | β | cat[slowplay] | ε[dry_high] | 合計 |
+      |---|---:|---:|---:|---:|---:|---:|
+      | mtt_3bp_20bb | 58% (3bp/nut) | -2 | -15 | +6 | 0 | **47%** |
+      | mtt_3bp_25bb | 58% | +3 | -15 | +6 | 0 | **52%** |
+      | mtt_3bp_50bb | 58% | +1 | +5 | +6 | 0 | **70%** |
+      | mtt_3bp_100bb | 58% | +0 | +8 | +6 | 0 | **72%** |
+
+      同じ set でも SPR 別で 25pt の差。3BP では「スタックサイズを確認してから
+      bet/check を決める」が必須です。
+
+  - type: heading
+    level: 2
+    text: "3BP の実戦例題"
+
+  - type: examples
+    framework: v3
+    title: "mtt_3bp_25bb (β=-15、slowplay 顕著)"
+    cases:
+      - hand: set
+        draw: no_draw
+        board: Ks7d2c
+        context: mtt_3bp_25bb
+
+      - hand: top_pair
+        draw: no_draw
+        board: Ks7d2c
+        context: mtt_3bp_25bb
+
+      - hand: overpair
+        draw: no_draw
+        board: 9c4d2s
+        context: mtt_3bp_25bb
+
+      - hand: low_pair
+        draw: no_draw
+        board: Jd8c3s
+        context: mtt_3bp_25bb
+
+  - type: examples
+    framework: v3
+    title: "mtt_3bp_100bb (β=+8、深 3BP)"
+    cases:
+      - hand: set
+        draw: no_draw
+        board: Ks7d2c
+        context: mtt_3bp_100bb
+
+      - hand: two_pair
+        draw: no_draw
+        board: KsJd6c
+        context: mtt_3bp_100bb
+
+      - hand: overpair
+        draw: no_draw
+        board: 8s5c2d
+        context: mtt_3bp_100bb
+
+      - hand: top_pair
+        draw: oesd
+        board: 9c8d6h
+        context: mtt_3bp_100bb
+
+  - type: heading
+    level: 2
+    text: "3BP の 4 原則"
+
+  - type: prose
+    body: |
+      1. **SPR で context を確定**: 3BP に入ったらまず 20/25/50/100bb の判定。
+         β が ±15pt 範囲で動くため、context ミスは致命的。
+      2. **浅 3BP は slowplay 優先**: β=-15、cat[slowplay]=+6 で合計 -9pt。
+         set / two_pair は check が標準。
+      3. **深 3BP は value bet 優先**: β=+8、cat[slowplay]=+6 で合計 +14pt。
+         set / two_pair は wide に bet。
+      4. **板分類 ε[3bp] は緩い**: paired -1 / dynamic -6 / low_dry -2 で
+         SRP より小さい振れ幅。

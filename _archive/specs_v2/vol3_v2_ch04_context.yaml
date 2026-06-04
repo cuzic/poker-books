@@ -1,0 +1,128 @@
+volume: "Vol3"
+chapter_num: "04"
+title: "板分類 ε——C3 軸で wet/dry の差を吸収"
+
+summary: |
+  A モデルの C3 軸 (板分類 ε) は flop ボードを 4 family に分類し、
+  ctx_group (cash / mtt_srp / 3bp) ごとに頻度補正を加算します。
+  Dynamic 板 (wet) では cash で -21pt と大きく cbet を減らすのが本軸の中核です。
+
+sections:
+  - type: heading
+    level: 2
+    text: "板分類の 4 family ロジック"
+
+  - type: table
+    template: v3_board_family_rules
+
+  - type: prose
+    body: |
+      フロップ 3 枚を見て、上から順に判定します。最初に該当した family を採用します。
+
+      paired は **ボード 3 枚に同ランクが含まれる** ボードです。例: 998 / KK4 / 422。
+      ペアボードでは相手のレンジから set/quads の出現確率が低く (相手は通常 pre で
+      raise しないため)、自分の overpair が相対的に強くなる構造です。
+
+      dynamic は **モノトーン (3 枚同スート)、または (ストレート連結 + ツーフラ)** です。
+      例: 8s7s6s (モノトーン)、9s8c7d (連結ツーフラ)。
+      Wet な board で draw が多く、相手の continue range が広くなり、自分のレンジが
+      heads down に弱くなる構造です。
+
+      dry_high は **paired / dynamic に該当せず、最高ランクが J 以上** です (**baseline**)。
+      例: AsKd4c / QcTh2s。プリフロップで自分がレンジ有利な典型ボードで、補正は 0 です。
+
+      low_dry は **paired / dynamic に該当せず、最高ランクが T 以下** です。
+      例: Tc6s2d / 8h4c3s。プリフロップで自分のレンジ有利が薄く、cbet を控えめに
+      する family です。
+
+  - type: heading
+    level: 2
+    text: "ε 表——4 family × 3 ctx_group"
+
+  - type: table
+    template: v3_epsilon
+    title: "Board family × ctx_group の ε"
+
+  - type: prose
+    body: |
+      ctx_group は context 13 を 3 つに集約したもので、cash (cash_100bb と turn_cash100)、
+      mtt_srp (MTT 4 スタックの flop と turn)、3bp (3-bet pot 4 スタック) です。
+      Vol3 全体で ε は 9 数値 (3 group × 3 non-baseline family) のみです。
+
+      この 9 数値を覚えれば、すべての context で板分類による頻度補正を加算できます。
+
+  - type: heading
+    level: 2
+    text: "Dynamic 板の -21pt は何を意味するか (cash)"
+
+  - type: prose
+    body: |
+      最も大きな ε は cash の dynamic 板で -21pt です。これは「Cash 100bb で
+      モノトーン板や連結ツーフラ板では、base から **21pt 下げて** cbet する」
+      ことを意味します。
+
+      例えば top_pair on 9s8s6s (dynamic, cash) の場合:
+
+      - base[cash][strong] = 57% (top_pair MV=7 → strong band)
+      - α[cash_100bb] = +2
+      - β[cash_100bb] · I(TV≥7) = -0 (TV=7、β=0)
+      - cat[default] = 0
+      - ε[dynamic][cash] = **-21**
+      - 合計 = 57 + 2 - 0 + 0 - 21 = **38%** → check 寄り
+
+      同じ top_pair でも dry_high 板 (AsKd7c) では 59% で bet 寄りでした。
+      板テクスチャだけで 21pt の差が出ます。
+
+  - type: heading
+    level: 2
+    text: "MTT SRP / 3bp での ε は緩い"
+
+  - type: prose
+    body: |
+      ε[dynamic][mtt_srp] = -11、ε[dynamic][3bp] = -6 と、cash の -21 より緩い値です。
+      これは「深いスタック (cash 100bb) ほど wet 板での cbet 削減が大きく、
+      浅いスタック (MTT / 3bp) では削減が緩い」という構造を示します。
+
+      深いスタックでは「ブラフをそのまま 3 ストリート続けるコスト」が大きいので、
+      wet 板では早めに check の選択肢を残します。浅いスタックでは「コミット判断が近い」
+      ため、wet 板でも protect bet として cbet を選ぶ頻度が高くなります。
+
+  - type: heading
+    level: 2
+    text: "板分類 ε 適用例"
+
+  - type: examples
+    framework: v3
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        board: 9s8s6s
+        context: cash_100bb
+      - hand: top_pair
+        draw: no_draw
+        board: AsKd7c
+        context: cash_100bb
+      - hand: top_pair
+        draw: no_draw
+        board: 6h4c2d
+        context: cash_100bb
+      - hand: overpair
+        draw: no_draw
+        board: 7s7c2d
+        context: mtt_3bp_50bb
+
+  - type: heading
+    level: 2
+    text: "板分類のコツ (3 秒で判定)"
+
+  - type: prose
+    body: |
+      実戦での 3 秒判定は以下のフローです。
+
+      **ステップ A**: 3 枚に同ランクあり? → Yes → **paired**
+      **ステップ B**: モノトーン or (連結 + ツーフラ)? → Yes → **dynamic**
+      **ステップ C**: 最高ランク J 以上? → Yes → **dry_high** (baseline、ε=0)
+      **ステップ D**: それ以外 → **low_dry**
+
+      慣れれば 2-3 秒で判定できます。境界例 (連結だが ペアあり: 998 など) は
+      上位の paired が優先なので paired を選びます。

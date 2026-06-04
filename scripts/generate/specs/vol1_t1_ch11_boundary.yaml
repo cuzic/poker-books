@@ -1,0 +1,312 @@
+volume: "Vol1"
+chapter_num: "11"
+title: "境界ハンドの暗記法 — 公式 93% を 98% に押し上げる"
+
+summary: |
+  Score 公式は ch00 で示した通り Cash 92.7% / MTT 93.7% の GTO 整合率を持ちます。
+  残る 6-7% は GTO が混合戦略を使う「境界帯」です。
+  この章では境界帯のハンドを **「グループ分け + 個別暗記」** で押さえ、判断精度を 93% → 98% に押し上げる方法を解説します。
+
+sections:
+
+  - type: heading
+    level: 2
+    text: "なぜ境界ハンドを暗記すべきか"
+
+  - type: prose
+    body: |
+      本書のスコア式は GTO データ整合 **Cash 92.7% / MTT 93.7%** の精度 (ch00 参照) を持ちますが、残る 6-7% は **境界帯 (Score = 閾値 T ± 1)** で発生する混合戦略です。
+
+      境界帯のハンドは GTO が **混合戦略** (例: raise 40% / fold 60%) を使う領域で、本書の式は **片方の固定アクション** に振りやすい性質があります。式に従っても致命的なミスにはなりませんが、**境界帯の最適アクションを個別に暗記**することで:
+
+      - 判断精度: 93% → **98%** (5pp 改善、6-7% gap の 70-80% を埋める)
+      - 長期 EV: +0.3-0.5 BB / 100 hands (Cash) / +0.2-0.4 BB / 100 hands (MTT)
+      - 自信を持って即決できる (混合戦略の迷いがなくなる)
+
+      暗記すべきハンドは **Cash 12-15 / MTT 12-15** の計 25-30 ハンド程度 (B 帯 + C 帯の主要ハンドのみ)。これを 1 週間で完全暗記できれば、本書を「公式 + 例外」のハイブリッド完成形として運用できます。
+
+  - type: heading
+    level: 2
+    text: "境界帯の構造 — 3 つのスコア帯"
+
+  - type: prose
+    body: |
+      境界帯のハンドは **Score = T (プレイ境界)** と **Score = T − 1 (フォールド境界)** の 2 行に集中します。具体的には以下の構造:
+
+  - type: table
+    title: "境界帯の 3 つのゾーン"
+    markdown: |
+      | ゾーン | Score | 性質 | 暗記の重み |
+      |--------|-------|------|-----------|
+      | **A 帯** (プレイ境界 +1) | T+1 | 式で問題なし、GTO もほぼ play | ★ |
+      | **B 帯** (プレイ境界) | T | 式は play、GTO は play 60-70% | **★★★ 要暗記** |
+      | **C 帯** (フォールド境界) | T-1 | 式は fold、GTO は fold 60-70% | **★★★ 要暗記** |
+      | D 帯 (フォールド境界 -1) | T-2 | 式で問題なし、GTO もほぼ fold | ★ |
+
+  - type: prose
+    body: |
+      **B 帯と C 帯 (Score = T と T-1) の 2 行が暗記対象**です。それ以外は式で十分。
+
+      Cash の代表的な T (BB defense vs BTN open):
+      - T_call = 22 → B 帯 (Score=22) と C 帯 (Score=21) を暗記
+      - T_3bet = 28 → B 帯 (Score=28) と C 帯 (Score=27) を暗記
+
+  - type: heading
+    level: 2
+    text: "Cash 境界 30 ハンド — グループ別暗記"
+
+  - type: prose
+    body: |
+      Cash プレイヤーが BB defense / RFI で出会う**境界帯 30 ハンド** をグループ分けして暗記します。
+
+      **暗記の 3 原則:**
+
+      1. **A 系をまず暗記** (A2s-A9o の境界)
+      2. **K 系を次に暗記** (Kx の境界)
+      3. **ポケットペアとコネクターを最後に**
+
+  - type: heading
+    level: 3
+    text: "グループ 1: A 系 (Score 22-26)"
+
+  - type: table
+    title: "Ax 境界ハンド (Cash、覚えるべき行動)"
+    markdown: |
+      | ハンド | Score | T (vs BTN) | GTO 最善手 | メモ |
+      |-------|-------|-----------|------------|------|
+      | A2s | 23 | T_call=22 | **CALL** | suited Ax は ほぼ全部 call |
+      | A3s | 24 | T_call=22 | **CALL** | 同上 |
+      | A4s | 25 | T_call=22 | **CALL** | wheel 性 (A2345) で価値増 |
+      | A5s | 26 | T_call=22 | **CALL** | wheel 系 |
+      | A8o | 22 | T_call=22 | **CALL 60%** | 境界、迷ったら CALL |
+      | A9o | 23 | T_call=22 | **CALL** | A8o より明確 |
+      | A7o | 21 | T_call=22 | **FOLD 60%** | 境界、迷ったら FOLD |
+      | ATo | 25 | T_call=22 | **CALL or 3BET 30%** | 上位境界、混合 OK |
+
+  - type: prose
+    body: |
+      **暗記の短文**: 「**Ax suited は全部 call (A2s から ATs まで)**、Axo は **A8o から境界開始、A7o 以下は fold**」
+
+  - type: heading
+    level: 3
+    text: "グループ 2: K 系 (Score 21-26)"
+
+  - type: table
+    title: "Kx 境界ハンド (Cash)"
+    markdown: |
+      | ハンド | Score | T (vs BTN) | GTO 最善手 | メモ |
+      |-------|-------|-----------|------------|------|
+      | K6s | 22 | T_call=22 | **CALL 60%** | suited 価値 |
+      | K7s | 23 | T_call=22 | **CALL** | 明確 |
+      | K8s | 24 | T_call=22 | **CALL** | TPGK ヒット狙い |
+      | K9s | 26 | T_call=22 | **CALL or 3BET** | broadway 系 |
+      | KTo | 21 | T_call=22 | **FOLD 60%** | dominated 多 |
+      | KJo | 23 | T_call=22 | **CALL** | broadway |
+
+  - type: prose
+    body: |
+      **暗記の短文**: 「**K6s 以上は call、K5s 以下は fold**」「**KTo は border (fold 寄り)、KJo+ は call**」
+
+  - type: heading
+    level: 3
+    text: "グループ 3: ポケットペア (Score 17-25)"
+
+  - type: table
+    title: "ポケットペア境界ハンド (Cash)"
+    markdown: |
+      | ハンド | Score | T (vs BTN) | GTO 最善手 | メモ |
+      |-------|-------|-----------|------------|------|
+      | 22 | 17 | T_call=22 | **CALL if 深スタック** | set mining (ch12 補助ルール) |
+      | 33 | 19 | T_call=22 | **CALL if 深スタック** | 同上 |
+      | 44 | 21 | T_call=22 | **CALL 70%** | T-1 だが set mining 効く |
+      | 55 | 23 | T_call=22 | **CALL** | 境界超え |
+      | 66 | 25 | T_call=22 | **CALL** | 安定 |
+
+  - type: prose
+    body: |
+      **暗記の短文**: 「**ペアは 22-44 でも深スタックで call (set mining)、55+ は無条件 call**」
+
+  - type: heading
+    level: 3
+    text: "グループ 4: コネクター (Score 17-24)"
+
+  - type: table
+    title: "コネクター境界ハンド (Cash)"
+    markdown: |
+      | ハンド | Score | T (vs BTN) | GTO 最善手 | メモ |
+      |-------|-------|-----------|------------|------|
+      | 54s | 16 | T_call=22 | **CALL if IP + 深スタック** | implied odds (ch12) |
+      | 65s | 18 | T_call=22 | **CALL if IP** | 同上 |
+      | 76s | 20 | T_call=22 | **CALL if IP** | 同上 |
+      | 87s | 22 | T_call=22 | **CALL 60%** | 境界、IP 寄り |
+      | 98s | 24 | T_call=22 | **CALL** | 明確 |
+      | T7s | 22 | T_call=22 | **CALL 60%** | one-gapper、IP 寄り |
+      | J7s | 22 | T_call=22 | **CALL 60%** | 同上 |
+      | T9s | 26 | T_call=22 | **CALL or 3BET** | broadway connector |
+      | T8s | 24 | T_call=22 | **CALL** | one-gapper |
+
+  - type: prose
+    body: |
+      **暗記の短文**: 「**SC は 76s 以上で IP なら call、98s+ は無条件 call、low SC (54s-65s) は深スタック IP のみ**」
+
+  - type: heading
+    level: 2
+    text: "MTT 境界 30 ハンド — Cash との違い"
+
+  - type: prose
+    body: |
+      MTT (係数: pair=19, suit=7, gap=5, a_bonus=5) は Cash と pair_bonus が +6 違うため、ペア系の境界が変動します。
+
+  - type: heading
+    level: 3
+    text: "MTT 特有の境界パターン"
+
+  - type: table
+    title: "MTT 境界ハンド (差分のみ)"
+    markdown: |
+      | ハンド | Cash Score | MTT Score | MTT GTO 最善手 (vs BTN, T_call=22) | メモ |
+      |-------|-----------|-----------|------------------------------------|------|
+      | 22 | 17 | **23** | **CALL** | MTT では境界超え (pair bonus +6) |
+      | 33 | 19 | **25** | **CALL** | 同上 |
+      | A2s | 23 | **23** | CALL | 同等 |
+      | A8o | 22 | **22** | **CALL 60%** | 境界 (同等) |
+      | KTo | 21 | **21** | FOLD 60% | 同等 |
+      | T7s | 22 | **22** | CALL 60% | 同等 |
+      | 76s | 20 | **20** | C 帯 (FOLD 60%) | 境界下 (MTT で IP 価値減) |
+
+  - type: prose
+    body: |
+      **MTT 暗記の追加ルール:**
+
+      - **ペア系は全部 call** (22 が Cash で T-5 から MTT で T+1 へジャンプ)
+      - **コネクター系は Cash より tight** (gap penalty -5 で SC の価値減)
+      - **A-high と broadway は Cash とほぼ同等**
+
+  - type: heading
+    level: 2
+    text: "暗記の 5 step 法"
+
+  - type: prose
+    body: |
+      B 帯 + C 帯の主要 25-30 ハンドを確実にする 5 step 法。表が多めに見えるかもしれませんが、**実際に暗記すべきは混合戦略帯 (Score = T、T-1) の 12-15 ハンド** だけです。
+
+  - type: list
+    ordered: true
+    items:
+      - "**Day 1-2: A 系**: A2s-A9o の 8 ハンドの GTO アクションを reciting で暗唱"
+      - "**Day 3-4: K 系**: K6s-KJo の 6 ハンドの GTO アクションを暗唱"
+      - "**Day 5-6: ペア + コネクター**: 22-66, 54s-T9s の 14 ハンドを暗唱"
+      - "**Day 7: 実戦テスト**: 章末ドリル 50 問で確認 (本章末参照)"
+      - "**Week 2 以降**: 実戦で出会うたびに「これは境界帯だから暗記した GTO に従う」と認識する習慣化"
+
+  - type: prose
+    body: |
+      暗記法のコツ:
+
+      - **音読**: 「**A2s call、A3s call、A4s call、A5s call、A8o **call (混合 60%)** 、A7o **fold (混合 60%)** 、ATo call、A9o call**」と声に出す
+      - **グルーピング**: 「Ax suited は全部 call」「Kx は K6s 以上 call」のように **ルール化** して個別ハンドを推測可能にする
+      - **例外フラグ**: 「**A7o** は唯一の Axo fold 境界」「**KTo** は K kicker dominated 帯」のように "特異ハンド" を強調
+
+  - type: heading
+    level: 2
+    text: "自己診断 30 問"
+
+  - type: prose
+    body: |
+      暗記の定着を確認する 30 問。各問題で **Score 計算** + **GTO 最善手** の両方を答えます。
+
+  - type: list
+    ordered: true
+    items:
+      - "**Cash** BB vs BTN open、A♣8♣ (A8s) → Score? アクション?"
+      - "**Cash** BB vs BTN open、A♥7♠ (A7o) → Score? アクション?"
+      - "**Cash** BB vs BTN open、K♣6♣ (K6s) → Score? アクション?"
+      - "**Cash** BB vs BTN open、K♥T♠ (KTo) → Score? アクション?"
+      - "**Cash** BB vs BTN open、4♣4♥ (44) → Score? アクション? (スタック 100bb)"
+      - "**Cash** BB vs BTN open、5♣5♥ (55) → Score? アクション?"
+      - "**Cash** BB vs BTN open、6♣5♣ (65s) → Score? アクション? (IP, 100bb)"
+      - "**Cash** BB vs BTN open、8♣7♣ (87s) → Score? アクション?"
+      - "**Cash** BB vs BTN open、T♣7♣ (T7s) → Score? アクション?"
+      - "**Cash** BTN open、A♣2♣ → Score? アクション (T_open=22)?"
+      - "**MTT** BB vs BTN、2♣2♥ → Score? アクション (T_call=22)?"
+      - "**MTT** BB vs BTN、3♣3♥ → Score? アクション?"
+      - "**MTT** BB vs BTN、7♣6♣ → Score? アクション (T_call=22)?"
+      - "**MTT** BB vs BTN、8♣7♣ → Score? アクション?"
+      - "**MTT** BB vs BTN、K♣7♣ → Score? アクション?"
+      - "**MTT** BB vs BTN、A♣9♣ → Score? アクション?"
+      - "**MTT** BB vs BTN、Q♣J♥ (QJo) → Score? アクション?"
+      - "**MTT** BB vs BTN、J♣T♥ (JTo) → Score? アクション?"
+      - "**Cash** BB vs BTN、T♣9♣ → Score? アクション?"
+      - "**Cash** BB vs BTN、5♣4♣ → Score? アクション (IP, 100bb)?"
+      - "**Cash** BB vs BTN、Q♣7♣ → Score? アクション?"
+      - "**Cash** BB vs BTN、J♣7♣ → Score? アクション?"
+      - "**Cash** BB vs BTN、K♣5♣ → Score? アクション?"
+      - "**Cash** BB vs BTN、A♣6♣ → Score? アクション?"
+      - "**MTT** BB vs BTN、A♣8♥ (A8o) → Score? アクション?"
+      - "**MTT** BB vs BTN、4♣4♥ (44) → Score? アクション?"
+      - "**MTT** BB vs BTN、5♣5♥ (55) → Score? アクション?"
+      - "**MTT** BB vs BTN、K♣T♥ (KTo) → Score? アクション?"
+      - "**Cash** BB vs BTN、9♣8♣ → Score? アクション?"
+      - "**Cash** BTN open、6♣6♥ → Score? アクション (T_open=22)?"
+
+  - type: prose
+    body: |
+      **解答キー** (上から順):
+
+      Cash 部分 (Q1-Q10, Q19-Q24, Q29-Q30):
+      - A8s = 29 → 公式 call (>22)、境界外、迷わず CALL
+      - A7o = 21 → C 帯、暗記 GTO **FOLD** (60%)
+      - K6s = 22 → B 帯、暗記 GTO **CALL** (60%)
+      - KTo = 21 → C 帯、暗記 GTO **FOLD** (60%)
+      - 44 = 21 → C 帯、暗記 GTO **CALL** (深スタック + set mining)
+      - 55 = 23 → 公式 call (>22)、迷わず CALL
+      - 65s = 18 → 公式 fold、ch12 implied odds **CALL** (IP, 100bb+)
+      - 87s = 22 → B 帯、暗記 GTO **CALL** (60%)
+      - T7s = 22 → B 帯、暗記 GTO **CALL** (60%)
+      - A2s = 23 → 公式 OPEN (BTN T_open=22 を超える)
+      - T9s = 26 → 公式 call、迷わず
+      - 54s = 16 → 公式 fold、ch12 implied odds で IP 深ならCALL
+      - Q7s = 22 → B 帯 (Score 21-22 周辺)、call 寄り
+      - J7s = 22 → B 帯、call 寄り
+      - K5s = 21 → C 帯、暗記 GTO **FOLD** (60%)
+      - A6s = 27 → 公式 call、迷わず
+      - 9-8s = 24 → 公式 call、迷わず
+      - 66 = 25 → 公式 OPEN (BTN T_open=22)
+
+      MTT 部分 (Q11-Q18, Q25-Q28):
+      - 22 = 23 → B 帯 (T_call=22 超え)、call 暗記
+      - 33 = 25 → 公式 call (越え)、迷わず
+      - 76s = 20 → C 帯下、暗記 GTO **FOLD**
+      - 87s = 22 → B 帯、call 暗記 (60%)
+      - K7s = 23 → 公式 call (>22)
+      - A9s = 31 → 公式 call、迷わず
+      - QJo = 23 → 公式 call (>22)
+      - JTo = 21 → C 帯、暗記 GTO **FOLD** (60%)
+      - A8o = 22 → B 帯、call 暗記 (60%)
+      - 44 = 27 → 公式 call (>22)
+      - 55 = 29 → 公式 call、迷わず
+      - KTo = 21 → C 帯、暗記 GTO **FOLD** (60%)
+
+  - type: heading
+    level: 2
+    text: "暗記が完璧になったら何が起きるか"
+
+  - type: prose
+    body: |
+      Cash + MTT の主要境界 25-30 ハンドを完全暗記すると、本書のスコア式は **93% (元の精度) → 98% に近づき**、GTO の混合戦略帯のうち頻出する 70-80% をカバーします。
+
+      **得られる実戦力**:
+
+      - **境界帯で迷わなくなる** (主要 25-30 ハンドのアクションが即決)
+      - **混合戦略の "理屈" が体感できる** (なぜ A7o は fold 寄りで A8o は call 寄りか、kicker の差を実感)
+      - **MTT/Cash の係数差 (+6 ペア) の意味が分かる** (なぜ MTT では 22 が call で Cash では fold か)
+
+      これが「**式 93% + 境界暗記 5% = 98% 精度**」を実現する境界暗記のハイブリッド構造です。GTO に到達する最後の 2% は混合戦略を頻度通り再現する必要があり、本書の範囲を超えます (上級者は GTO ソルバー学習に進むべき領域)。
+
+  - type: heading
+    level: 2
+    text: "次の章へ"
+
+  - type: prose
+    body: |
+      次の ch12 では境界帯以外の **補助ルール** (set mining、SC implied odds、3-bet bluff コンボ、BB ワイドコール) を学びます。本章の境界暗記と組み合わせることで、本書のスコア式は実戦で 98% 近い精度を発揮します。

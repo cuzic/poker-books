@@ -1,0 +1,43 @@
+id,topic,gametype,depth,stacks,preflop_actions,flop_actions,turn_actions,river_actions,board,note
+# Refetch with corrected sizes per board/position
+# Position cbet sizes: HJ=R1.9, CO=R2, BTN=R2.1; 3bp board-dependent
+# Wet boards (987, JT9, AK4) → R5.5 (20%) in 3bp; Dry (Kxx, QJ4, T76) → R19.9 (72%)
+#
+# 3bp HJvBB turn — Wet boards use R5.5
+A03b,3bp_turn_wet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-R13.2-C,X-R5.5-C,X-,,9h8s7d3c,3bp HJvBB 987 small cbet turn
+A04b,3bp_turn_wet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-R13.2-C,X-R5.5-C,X-,,AhKd4s8c,3bp HJvBB AK4 small cbet turn
+A07b,3bp_turn_wet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-R13.2-C,X-R5.5-C,X-,,JdTs9c4h,3bp HJvBB JT9 small cbet turn
+# Dry boards in 3bp use R19.9 - try with -C for call
+A01b,3bp_turn_dry,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-R13.2-C,X-R19.9-C,X-,,Ks7d2c5h,3bp HJvBB Kxx turn after IP-call
+A05b,3bp_turn_dry,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-R13.2-C,X-R19.9-C,X-,,Td7c6s2h,3bp HJvBB T76 turn
+A06b,3bp_turn_dry,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-R13.2-C,X-R19.9-C,X-,,QhJd4s7c,3bp HJvBB QJ4 turn
+A02b,3bp_turn_XX,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-R13.2-C,X-X,,,Ks7d2c5h,3bp HJvBB Kxx XX flop turn first
+A08b,3bp_turn_XX,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-R13.2-C,X-X,,,9h8s7d3c,3bp HJvBB 987 XX
+A09b,3bp_turn_XX,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-R13.2-C,X-X,,,AhKd4s8c,3bp HJvBB AK4 XX
+# 3bp BTNvBB - BB cbets too. Need to check sizes per board too
+A12b,3bp_BTN_turn_dry,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-R13.65-C,X-R19.9-C,X-,,Ks7d2c5h,3bp BTNvBB Kxx turn dry
+A13b,3bp_BTN_turn_wet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-R13.65-C,X-R5.5-C,X-,,Th9s8c2d,3bp BTNvBB T98 wet turn
+A14b,3bp_BTN_turn_wet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-R13.65-C,X-R5.5-C,X-,,AhKd4s8c,3bp BTNvBB AK4 wet turn
+# 3bp COvBB
+A17b,3bp_CO_turn_dry,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-R14.4-C,X-R19.9-C,X-,,Ks7d2c5h,3bp COvBB Kxx turn dry
+A18b,3bp_CO_turn_wet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-R14.4-C,X-R5.5-C,X-,,Th9s8c2d,3bp COvBB T98 wet turn
+# 3bp SB facing HJ open
+A20b,3bp_SB_HJ_turn,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-R14-F-C,X-R19.9-C,X-,,Ks7d2c5h,3bp SBvHJ Kxx turn (HJ-call confirmed?)
+# BTN SRP turn — use R2.1 cbet
+C10b,SRP_BTN_turn_cbc,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C,X-R2.1-C,,,Ks7d2c5h,BTNvBB turn cbet-called Kxx
+C11b,SRP_BTN_turn_cbc,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C,X-R2.1-C,,,9h8s7d4c,BTNvBB turn cbet-called 987
+C12b,SRP_BTN_turn_cbc,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C,X-R9.6-C,,,AhKd4s8c,BTNvBB turn after big overbet cbet AK4
+C13b,SRP_BTN_turn_cbc,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C,X-R2.1-C,,,Td7c6s2h,BTNvBB turn cbet-called T76
+C14b,SRP_BTN_river_check,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C,X-R2.1-C,X-X,,Ks7d2c5h3d,BTNvBB turn give up river Kxx
+C15b,SRP_CO_turn_cbc,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-C,X-R2-C,,,Ks7d2c5h,COvBB turn cbet-called Kxx
+B19b,turn_donk_BTN,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C,X-R2.1-C,,,Ks7d2c5h,BTNvBB turn donk after IP cbet call Kxx
+B20b,turn_donk_BTN,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C,X-R2.1-C,,,Th9s8c4d,BTNvBB turn donk T98
+# 3bp rivers with correct sizes
+A10b,3bp_river_dry,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-R13.2-C,X-R19.9-C,X-X,,Ks7d2c5h3d,3bp HJvBB Kxx turn XX river
+A11b,3bp_river_wet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-R13.2-C,X-R5.5-C,X-X,,9h8s7d3cTh,3bp HJvBB 987 turn XX river
+A15b,3bp_BTN_river_dry,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-R13.65-C,X-R19.9-C,X-X,,Ks7d2c5h3d,3bp BTNvBB river dry
+A16b,3bp_BTN_river_wet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-R13.65-C,X-R5.5-C,X-X,,Th9s8c2dAh,3bp BTNvBB river wet
+A19b,3bp_CO_river,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-R14.4-C,X-R19.9-C,X-X,,Ks7d2c5h3d,3bp COvBB river
+# ICM additional - SB facing shove (RAI from BTN may not be in tree)
+# Try SB facing BTN open call instead
+E10b,ICM_SB_def,MTTGeneral_ICM6m200PTT2,28.125,28.125-26.125-22.125-30.125-20.125-24.125,F-F-RAI,,,,,ICM CO shove (instead of BTN since BTN may not RAI here)

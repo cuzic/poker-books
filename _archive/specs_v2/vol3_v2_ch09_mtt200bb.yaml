@@ -1,0 +1,106 @@
+volume: "Vol3"
+chapter_num: "09"
+title: "MTT 200bb——深スタックで base から微減"
+
+summary: |
+  MTT 200bb は α=-5、β=-4 で base から少しだけ check 寄りになる context です。
+  深スタックでは protected check や 3 ストリート構築の余裕があるため、
+  flop cbet を厳選する傾向が出ます。本章では 100bb / 200bb の対比で理解します。
+
+sections:
+  - type: heading
+    level: 2
+    text: "mtt_200bb のパラメータ"
+
+  - type: prose
+    body: |
+      A モデル mtt_200bb の補正は以下の通りです。
+
+      | layer | 値 | 意味 |
+      |---|---:|---|
+      | α (コンテキスト補正) | **-5pt** | base から少し抑制 |
+      | β (TV≥7 のみ) | **-4pt** | 強い役で少し抑制 |
+      | cat_offset | 共通 | slowplay +6 / trash -14 / premium +7 |
+      | ε[mtt_srp] | 共通 | dry_high 0 / paired +2 / dynamic -11 / low_dry -9 |
+
+      WRMSE は約 20%。中庸な精度です。
+
+  - type: heading
+    level: 2
+    text: "α=-5 と「深スタック厳選」"
+
+  - type: prose
+    body: |
+      mtt_200bb の α=-5 は「深スタックでは cbet を厳選する」傾向を反映しています。
+      Vol2 で覚えた mtt_deep base 値 (air 42 / weak 41 / mid 41 / strong 58 / nut 61) を
+      ほぼそのまま使い、5pt だけ全体に下げます。
+
+      Cash 100bb (α=+2) や mtt_100bb (α=+26) と比べると、200bb は最も check 寄りな
+      context です。深いスタックでは flop でベットしなくても turn / river で 3 ストリート
+      構築できる余裕があり、protected check が有効になります。
+
+  - type: heading
+    level: 2
+    text: "mtt_100bb vs mtt_200bb"
+
+  - type: prose
+    body: |
+      同じ top_pair on AsKd7c で 100bb と 200bb を比較します。
+
+      | layer | mtt_100bb | mtt_200bb |
+      |---|---:|---:|
+      | base[mtt_deep][strong] | 58% | 58% |
+      | α | +26 | -5 |
+      | β·I(TV≥7) | -6 | -4 |
+      | cat[default] | 0 | 0 |
+      | ε[dry_high][mtt_srp] | 0 | 0 |
+      | **合計** | **78%** | **49%** |
+
+      同じハンドでも 29pt 違います。深スタックでは「flop の cbet 選択は慎重に」が
+      指針です。
+
+  - type: heading
+    level: 2
+    text: "mtt_200bb の実戦例題"
+
+  - type: examples
+    framework: v3
+    title: "mtt_200bb で 5 つの代表局面"
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        board: AsKd7c
+        context: mtt_200bb
+
+      - hand: overpair
+        draw: no_draw
+        board: 9c4d2s
+        context: mtt_200bb
+
+      - hand: set
+        draw: no_draw
+        board: Ks7d7c
+        context: mtt_200bb
+
+      - hand: second_pair
+        draw: fd
+        board: KsJd6s
+        context: mtt_200bb
+
+      - hand: low_pair
+        draw: no_draw
+        board: AsKd7c
+        context: mtt_200bb
+
+  - type: heading
+    level: 2
+    text: "mtt_200bb の 3 原則"
+
+  - type: prose
+    body: |
+      1. **base から -5 で全体抑制**: mtt_deep base 値 (Vol2 と共通) を覚えて、
+         全 band で 5pt 下げる。
+      2. **slowplay は β=-4 + cat=+6 = +2**: ナッツ系は少し bet 寄りだが
+         scaled は控えめ。
+      3. **板分類は通常通り**: ε 値は mtt_srp 共通 (paired +2 / dynamic -11 / low_dry -9)。
+         dry_high で baseline 通り。

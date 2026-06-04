@@ -9,11 +9,23 @@
 | 巻 | テーマ | ディレクトリ | 主要式 | 状態 |
 |----|--------|------------|--------|------|
 | Vol1 | プリフロップ完全版（Cash+MTT統合） | `vol1-preflop/` | Score_BB v7 | 初稿生成中 |
-| Vol2 | キャッシュ ポストフロップ + 簡易版 | `vol2-cash-postflop/` | Light UCBS v2 + Light DCBS | 新規執筆 |
-| Vol3 | MTT ポストフロップ + 精緻版 | `vol3-mtt-postflop/` | Full UCBS-v2 + Full DCBS | 新規執筆 |
+| Vol2 | キャッシュ ポストフロップ | （未着手・旧版アーカイブ済） | 全 5 街公式 v9 + Postflop 3 ルール式 | **再執筆待ち** |
+| Vol3 | MTT ポストフロップ | （未着手・旧版アーカイブ済） | SPR-axis-switching + bucket 公式 (Turn v9 / River v15) | **再執筆待ち** |
 | Vol4 | エクスプロイト（相手タイプ別） | `vol4-tell/` | プレイヤータイプ別補正 | 初稿完了 |
 
-旧シリーズ・分割版は `_archive/` に移動済み（`cash-preflop/`, `mtt-preflop/` は vol1-preflop に統合済）。
+旧シリーズ・廃棄版は `_archive/` に移動済み:
+- `_archive/cash-preflop/`, `_archive/mtt-preflop/` は vol1-preflop に統合済
+- `_archive/vol2-cash-postflop_v3/`, `_archive/vol3-mtt-postflop_v3/` は **2026-06-02 廃棄** (S/M/W/A/D マトリックス・UCBS-v2/v3 系の旧ロジック)
+- `_archive/knowledges/volume{3..6}/`: 旧シリーズ名の knowledge
+- `_archive/specs_v2/`: 旧 UCBS-v2 spec YAML
+- `_archive/scripts/ucbs_book_generator.py`: 旧 generator
+
+**Vol2/Vol3 の現行ロジック (2026-06-01 確立、未書籍化)**:
+- 全 5 街公式 v9 (27 ルール): Flop attack 7 例外 / Flop def v7 (4 ルール) / Turn attack 常 CHECK / Turn def v8 (9 ルール mv+dv) / River attack v7 / River def v14 (bucket+mv override)
+- Postflop 3 ルール式: default + 5 例外 BET / 守備 3 条件分岐
+- SPR-axis-switching: 街 × stack depth で支配軸 mv/mv+dv/bucket が切替
+- 検証: `scripts/three_class_model/`
+- 設計書: `BOOK_DESIGN_2026-06-01.md`
 
 ## 共通の設計思想
 
@@ -27,14 +39,21 @@
 ```
 poker-books/
 ├── vol1-preflop/         Vol1: プリフロップ完全版（Cash+MTT統合、4係数スコア式）
-├── vol2-cash-postflop/   Vol2: キャッシュ ポストフロップ（Light UCBS v2 + Light DCBS）
-├── vol3-mtt-postflop/    Vol3: MTT ポストフロップ（Full UCBS-v2 + Full DCBS、13 context）
 ├── vol4-tell/            Vol4: エクスプロイト（プレイヤータイプ別）
-├── _archive/             旧シリーズ（cash-preflop/, mtt-preflop/, flop/, volume4-6/, digest/ 等）
+├── _archive/             旧シリーズ・廃棄版
+│   ├── vol2-cash-postflop_v3/  廃棄 (S/M/W/A/D マトリックス系)
+│   ├── vol3-mtt-postflop_v3/   廃棄 (旧 SPR-axis-switching 系)
+│   ├── cash-preflop/, mtt-preflop/  vol1-preflop に統合済
+│   ├── knowledges/             旧 volume{3..6} 知識
+│   ├── specs_v2/               旧 UCBS-v2 spec YAML
+│   └── scripts/                旧 generator
 ├── scripts/
-│   ├── build.ts            ビルドスクリプト（bun で実行）
+│   ├── build.ts            ビルドスクリプト（bun で実行、Vol1/Vol4 のみ）
+│   ├── three_class_model/  ポストフロップ最新ロジック検証 (v9 公式群、3 ルール式)
 │   └── generate/
-│       └── preflop_book_generator.py  章原稿自動生成（GTO データから）
+│       ├── preflop_book_generator.py  Vol1 章原稿自動生成
+│       └── specs/         Vol2/Vol3 新 spec (vol{2,3}_t2_*.yaml)
+├── BOOK_DESIGN_2026-06-01.md  Vol2/Vol3 新書設計書
 └── dist/           ビルド成果物
 ```
 
@@ -42,11 +61,11 @@ poker-books/
 
 ```bash
 bun run scripts/build.ts vol1-preflop          # Vol1 のみ
-bun run scripts/build.ts vol2-cash-postflop    # Vol2 のみ
-bun run scripts/build.ts vol3-mtt-postflop     # Vol3 のみ
 bun run scripts/build.ts vol4-tell             # Vol4 のみ
-bun run scripts/build.ts all                   # 全巻
+bun run scripts/build.ts all                   # 全巻 (現状 Vol1 + Vol4)
 ```
+
+Vol2/Vol3 は再執筆待ち。新ロジックは scripts/three_class_model/ で検証済み、書籍化は別タスク。
 
 ## 執筆ワークフロー（全巻共通）
 
@@ -109,8 +128,8 @@ knowledges/<book>/reviews/review_<scope>.md
 各巻の gist URL は書籍固有（`book.json` 内の `identifier` とは別）。現行シリーズの gist：
 
 - Vol1 プリフロップ完全版: （旧 cash-preflop: https://gistpreview.github.io/?a263151bbdee0ac9cbaa4a4e97483edb）
-- Vol2 キャッシュ ポストフロップ: https://gistpreview.github.io/?d50e33d174d918b1bbe9b7821ca8d1bb
-- Vol3 MTT ポストフロップ: （未公開）
+- Vol2 キャッシュ ポストフロップ: **廃棄** (旧 gist: https://gistpreview.github.io/?d50e33d174d918b1bbe9b7821ca8d1bb は旧ロジック)
+- Vol3 MTT ポストフロップ: **再執筆待ち**
 - Vol4 エクスプロイト: https://gistpreview.github.io/?519b2350329278e7be6f09e5be449cd9
 
 旧シリーズ gist（参照用）：

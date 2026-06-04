@@ -1,0 +1,364 @@
+cash_ip_flop_srp_no_draw:
+  n_rows: 34035
+  cells:
+    dry_high:
+      air:
+        freq_pct: 53
+        n: 7210
+      weak:
+        freq_pct: 31
+        n: 2850
+      mid:
+        freq_pct: 31
+        n: 1405
+      strong:
+        freq_pct: 57
+        n: 3444
+      nut:
+        freq_pct: 98
+        n: 824
+    dynamic:
+      air:
+        freq_pct: 47
+        n: 2867
+      weak:
+        freq_pct: 19
+        n: 922
+      mid:
+        freq_pct: 25
+        n: 402
+      strong:
+        freq_pct: 55
+        n: 1343
+      nut:
+        freq_pct: 88
+        n: 810
+    dynamic_2tone:
+      air:
+        freq_pct: 28
+        n: 218
+      weak:
+        freq_pct: 5
+        n: 107
+      mid:
+        freq_pct: 16
+        n: 66
+      strong:
+        freq_pct: 36
+        n: 98
+      nut:
+        freq_pct: 63
+        n: 163
+    low_dry:
+      air:
+        freq_pct: 42
+        n: 1130
+      weak:
+        freq_pct: 14
+        n: 223
+      mid:
+        freq_pct: 51
+        n: 92
+      strong:
+        freq_pct: 61
+        n: 411
+      nut:
+        freq_pct: 98
+        n: 48
+    monotone:
+      air:
+        freq_pct: 40
+        n: 1146
+      weak:
+        freq_pct: 20
+        n: 543
+      mid:
+        freq_pct: 19
+        n: 528
+      strong:
+        freq_pct: 37
+        n: 771
+      nut:
+        freq_pct: 54
+        n: 623
+    paired:
+      air:
+        freq_pct: 72
+        n: 3519
+      weak:
+        freq_pct: 91
+        n: 828
+      mid:
+        freq_pct: 86
+        n: 314
+      strong:
+        freq_pct: 65
+        n: 390
+      nut:
+        freq_pct: 95
+        n: 740
+mtt_oop_flop_srp_no_draw:
+  n_rows: 69825
+  cells:
+    dry_high:
+      air:
+        freq_pct: 0
+        n: 17650
+      weak:
+        freq_pct: 0
+        n: 6880
+      mid:
+        freq_pct: 0
+        n: 3387
+      strong:
+        freq_pct: 1
+        n: 4785
+      nut:
+        freq_pct: 13
+        n: 3534
+    dynamic:
+      air:
+        freq_pct: 0
+        n: 7348
+      weak:
+        freq_pct: 0
+        n: 3597
+      mid:
+        freq_pct: 0
+        n: 1652
+      strong:
+        freq_pct: 6
+        n: 2170
+      nut:
+        freq_pct: 11
+        n: 5968
+    dynamic_2tone:
+      air:
+        freq_pct: 0
+        n: 36
+      weak:
+        freq_pct: null
+        n: 20
+        low_n: true
+      mid:
+        freq_pct: null
+        n: 6
+        low_n: true
+      strong:
+        freq_pct: 24
+        n: 30
+      nut:
+        freq_pct: null
+        n: 17
+        low_n: true
+    low_dry:
+      air:
+        freq_pct: 4
+        n: 692
+      weak:
+        freq_pct: 7
+        n: 197
+      mid:
+        freq_pct: 25
+        n: 41
+      strong:
+        freq_pct: 30
+        n: 258
+      nut:
+        freq_pct: 31
+        n: 58
+    monotone:
+      air:
+        freq_pct: 0
+        n: 1983
+      weak:
+        freq_pct: 0
+        n: 1169
+      mid:
+        freq_pct: 0
+        n: 720
+      strong:
+        freq_pct: 0
+        n: 783
+      nut:
+        freq_pct: 0
+        n: 1349
+    paired:
+      air:
+        freq_pct: 0
+        n: 3466
+      weak:
+        freq_pct: 0
+        n: 593
+      mid:
+        freq_pct: 0
+        n: 589
+      strong:
+        freq_pct: 0
+        n: 188
+      nut:
+        freq_pct: 0
+        n: 659
+mtt_ip_turn_srp_no_draw:
+  n_rows: 7476
+  cells:
+    dry_high:
+      air:
+        freq_pct: 5
+        n: 2139
+      weak:
+        freq_pct: 0
+        n: 1454
+      mid:
+        freq_pct: 0
+        n: 760
+      strong:
+        freq_pct: 44
+        n: 1346
+      nut:
+        freq_pct: 98
+        n: 660
+    dynamic:
+      air:
+        freq_pct: 12
+        n: 242
+      weak:
+        freq_pct: 1
+        n: 208
+      mid:
+        freq_pct: 1
+        n: 72
+      strong:
+        freq_pct: 66
+        n: 206
+      nut:
+        freq_pct: 89
+        n: 192
+    monotone:
+      air:
+        freq_pct: 8
+        n: 60
+      weak:
+        freq_pct: null
+        n: 22
+        low_n: true
+      mid:
+        freq_pct: null
+        n: 15
+        low_n: true
+      strong:
+        freq_pct: 10
+        n: 57
+      nut:
+        freq_pct: 85
+        n: 43
+mtt_oop_turn_srp_no_draw:
+  n_rows: 20364
+  cells:
+    dry_high:
+      air:
+        freq_pct: 93
+        n: 4980
+      weak:
+        freq_pct: 0
+        n: 3001
+      mid:
+        freq_pct: 10
+        n: 1257
+      strong:
+        freq_pct: 100
+        n: 1196
+      nut:
+        freq_pct: 62
+        n: 1304
+    dynamic:
+      air:
+        freq_pct: 30
+        n: 3224
+      weak:
+        freq_pct: 0
+        n: 2252
+      mid:
+        freq_pct: 100
+        n: 851
+      strong:
+        freq_pct: 100
+        n: 909
+      nut:
+        freq_pct: 98
+        n: 1390
+dv_impact_cash_ip_dry_high:
+  n_rows: 23713
+  cells:
+    flush_draw:
+      air:
+        freq_pct: 72
+        n: 99
+      weak: null
+      mid: null
+      strong: null
+      nut: null
+    gutshot:
+      air:
+        freq_pct: 66
+        n: 1585
+      weak: null
+      mid: null
+      strong:
+        freq_pct: 40
+        n: 30
+      nut: null
+    no_draw:
+      air:
+        freq_pct: 53
+        n: 7210
+      weak:
+        freq_pct: 31
+        n: 2850
+      mid:
+        freq_pct: 31
+        n: 1405
+      strong:
+        freq_pct: 57
+        n: 3444
+      nut:
+        freq_pct: 98
+        n: 824
+    oesd:
+      air:
+        freq_pct: 72
+        n: 411
+      weak: null
+      mid: null
+      strong: null
+      nut: null
+    onecard_bdfd:
+      air:
+        freq_pct: 65
+        n: 402
+      weak:
+        freq_pct: 67
+        n: 147
+      mid:
+        freq_pct: 51
+        n: 38
+      strong:
+        freq_pct: 49
+        n: 117
+      nut: null
+    twocards_bdfd:
+      air:
+        freq_pct: 56
+        n: 3154
+      weak:
+        freq_pct: 64
+        n: 362
+      mid:
+        freq_pct: 75
+        n: 580
+      strong:
+        freq_pct: 80
+        n: 840
+      nut:
+        freq_pct: 93
+        n: 100

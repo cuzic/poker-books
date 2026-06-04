@@ -1,0 +1,84 @@
+id,topic,gametype,depth,stacks,line,target_board,note
+# ===========================================
+# B-20: Cash @ 100bb NL25R25 — 全 position × 7 boards
+# Open size: UTG/HJ/CO/BTN=R2.5, SB=R3.5
+# ===========================================
+b20_utg_01,b20_cash_100bb_utg,Cash6mGeneral_6mNL25R25,100,,R2.5-F-F-F-F-C / X / / ,Ks7d2c,Cash UTGvBB Kxx
+b20_utg_02,b20_cash_100bb_utg,Cash6mGeneral_6mNL25R25,100,,R2.5-F-F-F-F-C / X / / ,Qh8d3s,Cash UTGvBB Q83
+b20_utg_03,b20_cash_100bb_utg,Cash6mGeneral_6mNL25R25,100,,R2.5-F-F-F-F-C / X / / ,Jd6c4d,Cash UTGvBB J64
+b20_utg_04,b20_cash_100bb_utg,Cash6mGeneral_6mNL25R25,100,,R2.5-F-F-F-F-C / X / / ,Th9s8d,Cash UTGvBB T98
+b20_utg_05,b20_cash_100bb_utg,Cash6mGeneral_6mNL25R25,100,,R2.5-F-F-F-F-C / X / / ,AhKd4s,Cash UTGvBB AK4
+b20_utg_06,b20_cash_100bb_utg,Cash6mGeneral_6mNL25R25,100,,R2.5-F-F-F-F-C / X / / ,Td7c6s,Cash UTGvBB T76
+b20_utg_07,b20_cash_100bb_utg,Cash6mGeneral_6mNL25R25,100,,R2.5-F-F-F-F-C / X / / ,Ts5d2c,Cash UTGvBB T52
+b20_hj_01,b20_cash_100bb_hj,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,Ks7d2c,Cash HJvBB Kxx
+b20_hj_02,b20_cash_100bb_hj,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,Qh8d3s,Cash HJvBB Q83
+b20_hj_03,b20_cash_100bb_hj,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,Jd6c4d,Cash HJvBB J64
+b20_hj_04,b20_cash_100bb_hj,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,Th9s8d,Cash HJvBB T98
+b20_hj_05,b20_cash_100bb_hj,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,AhKd4s,Cash HJvBB AK4
+b20_hj_06,b20_cash_100bb_hj,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,Td7c6s,Cash HJvBB T76
+b20_hj_07,b20_cash_100bb_hj,Cash6mGeneral_6mNL25R25,100,,F-R2.5-F-F-F-C / X / / ,Ts5d2c,Cash HJvBB T52
+b20_co_01,b20_cash_100bb_co,Cash6mGeneral_6mNL25R25,100,,F-F-R2.5-F-F-C / X / / ,Ks7d2c,Cash COvBB Kxx
+b20_co_02,b20_cash_100bb_co,Cash6mGeneral_6mNL25R25,100,,F-F-R2.5-F-F-C / X / / ,Qh8d3s,Cash COvBB Q83
+b20_co_03,b20_cash_100bb_co,Cash6mGeneral_6mNL25R25,100,,F-F-R2.5-F-F-C / X / / ,Th9s8d,Cash COvBB T98
+b20_co_04,b20_cash_100bb_co,Cash6mGeneral_6mNL25R25,100,,F-F-R2.5-F-F-C / X / / ,AhKd4s,Cash COvBB AK4
+b20_co_05,b20_cash_100bb_co,Cash6mGeneral_6mNL25R25,100,,F-F-R2.5-F-F-C / X / / ,Td7c6s,Cash COvBB T76
+b20_btn_01,b20_cash_100bb_btn,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Ks7d2c,Cash BTNvBB Kxx
+b20_btn_02,b20_cash_100bb_btn,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Qh8d3s,Cash BTNvBB Q83
+b20_btn_03,b20_cash_100bb_btn,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Jd6c4d,Cash BTNvBB J64
+b20_btn_04,b20_cash_100bb_btn,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Th9s8d,Cash BTNvBB T98
+b20_btn_05,b20_cash_100bb_btn,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,AhKd4s,Cash BTNvBB AK4
+b20_btn_06,b20_cash_100bb_btn,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Td7c6s,Cash BTNvBB T76
+b20_btn_07,b20_cash_100bb_btn,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,QhJd4s,Cash BTNvBB QJ4
+b20_sb_01,b20_cash_100bb_sb,Cash6mGeneral_6mNL25R25,100,,F-F-F-F-R3.5-C / X / / ,Ks7d2c,Cash SBvBB Kxx
+b20_sb_02,b20_cash_100bb_sb,Cash6mGeneral_6mNL25R25,100,,F-F-F-F-R3.5-C / X / / ,Qh8d3s,Cash SBvBB Q83
+b20_sb_03,b20_cash_100bb_sb,Cash6mGeneral_6mNL25R25,100,,F-F-F-F-R3.5-C / X / / ,Th9s8d,Cash SBvBB T98
+b20_sb_04,b20_cash_100bb_sb,Cash6mGeneral_6mNL25R25,100,,F-F-F-F-R3.5-C / X / / ,AhKd4s,Cash SBvBB AK4
+# ===========================================
+# B-21: MTT 100bb 残 spots (BTN 4 + SB 4)
+# Open: UTG/HJ=R2.1, CO=R2.2, BTN=R2.5, SB=R3.5
+# ===========================================
+b21_btn_04,b21_mtt_btn_more,MTT6mSimple,100.125,100.125-100.125-100.125-100.125-100.125-100.125,F-F-F-R2.5-F-C / X / / ,Th9s8d,MTT BTNvBB T98
+b21_btn_05,b21_mtt_btn_more,MTT6mSimple,100.125,100.125-100.125-100.125-100.125-100.125-100.125,F-F-F-R2.5-F-C / X / / ,AhKd4s,MTT BTNvBB AK4
+b21_btn_06,b21_mtt_btn_more,MTT6mSimple,100.125,100.125-100.125-100.125-100.125-100.125-100.125,F-F-F-R2.5-F-C / X / / ,Td7c6s,MTT BTNvBB T76
+b21_btn_07,b21_mtt_btn_more,MTT6mSimple,100.125,100.125-100.125-100.125-100.125-100.125-100.125,F-F-F-R2.5-F-C / X / / ,QhJd4s,MTT BTNvBB QJ4
+b21_sb_01,b21_mtt_sb,MTT6mSimple,100.125,100.125-100.125-100.125-100.125-100.125-100.125,F-F-F-F-R3.5-C / X / / ,Ks7d2c,MTT SBvBB Kxx
+b21_sb_02,b21_mtt_sb,MTT6mSimple,100.125,100.125-100.125-100.125-100.125-100.125-100.125,F-F-F-F-R3.5-C / X / / ,Qh8d3s,MTT SBvBB Q83
+b21_sb_03,b21_mtt_sb,MTT6mSimple,100.125,100.125-100.125-100.125-100.125-100.125-100.125,F-F-F-F-R3.5-C / X / / ,Th9s8d,MTT SBvBB T98
+b21_sb_04,b21_mtt_sb,MTT6mSimple,100.125,100.125-100.125-100.125-100.125-100.125-100.125,F-F-F-F-R3.5-C / X / / ,AhKd4s,MTT SBvBB AK4
+# ===========================================
+# B-22: Cash rake 比較 (NL10/NL25/NL100/NL500) on 5 key boards
+# 主要 board × 4 rake で rake 効果を測定
+# ===========================================
+b22_nl10_01,b22_cash_rake,Cash6mGeneral_6mNL10R25,100,,F-F-F-R2.5-F-C / X / / ,Ks7d2c,Cash NL10 BTNvBB Kxx
+b22_nl10_02,b22_cash_rake,Cash6mGeneral_6mNL10R25,100,,F-F-F-R2.5-F-C / X / / ,Th9s8d,Cash NL10 BTNvBB T98
+b22_nl10_03,b22_cash_rake,Cash6mGeneral_6mNL10R25,100,,F-F-F-R2.5-F-C / X / / ,AhKd4s,Cash NL10 BTNvBB AK4
+b22_nl100_01,b22_cash_rake,Cash6mGeneral_6mNL100R25,100,,F-F-F-R2.5-F-C / X / / ,Ks7d2c,Cash NL100 BTNvBB Kxx
+b22_nl100_02,b22_cash_rake,Cash6mGeneral_6mNL100R25,100,,F-F-F-R2.5-F-C / X / / ,Th9s8d,Cash NL100 BTNvBB T98
+b22_nl100_03,b22_cash_rake,Cash6mGeneral_6mNL100R25,100,,F-F-F-R2.5-F-C / X / / ,AhKd4s,Cash NL100 BTNvBB AK4
+b22_nl500_01,b22_cash_rake,Cash6mGeneral_6mNL500R25,100,,F-F-F-R2.5-F-C / X / / ,Ks7d2c,Cash NL500 BTNvBB Kxx
+b22_nl500_02,b22_cash_rake,Cash6mGeneral_6mNL500R25,100,,F-F-F-R2.5-F-C / X / / ,Th9s8d,Cash NL500 BTNvBB T98
+b22_nl500_03,b22_cash_rake,Cash6mGeneral_6mNL500R25,100,,F-F-F-R2.5-F-C / X / / ,AhKd4s,Cash NL500 BTNvBB AK4
+b22_cev_01,b22_cash_rake,Cash6mGeneral_6mcEVR25,100,,F-F-F-R2.5-F-C / X / / ,Ks7d2c,Cash cEV BTNvBB Kxx
+b22_cev_02,b22_cash_rake,Cash6mGeneral_6mcEVR25,100,,F-F-F-R2.5-F-C / X / / ,Th9s8d,Cash cEV BTNvBB T98
+b22_cev_03,b22_cash_rake,Cash6mGeneral_6mcEVR25,100,,F-F-F-R2.5-F-C / X / / ,AhKd4s,Cash cEV BTNvBB AK4
+# ===========================================
+# B-23: Cash 50bb mid-stack
+# ===========================================
+b23_hj_01,b23_cash_50bb,Cash6mGeneral_6mNL25R25,50,,F-R2.5-F-F-F-C / X / / ,Ks7d2c,Cash 50bb HJvBB Kxx
+b23_hj_02,b23_cash_50bb,Cash6mGeneral_6mNL25R25,50,,F-R2.5-F-F-F-C / X / / ,Th9s8d,Cash 50bb HJvBB T98
+b23_hj_03,b23_cash_50bb,Cash6mGeneral_6mNL25R25,50,,F-R2.5-F-F-F-C / X / / ,AhKd4s,Cash 50bb HJvBB AK4
+b23_btn_01,b23_cash_50bb,Cash6mGeneral_6mNL25R25,50,,F-F-F-R2.5-F-C / X / / ,Ks7d2c,Cash 50bb BTNvBB Kxx
+b23_btn_02,b23_cash_50bb,Cash6mGeneral_6mNL25R25,50,,F-F-F-R2.5-F-C / X / / ,Th9s8d,Cash 50bb BTNvBB T98
+b23_btn_03,b23_cash_50bb,Cash6mGeneral_6mNL25R25,50,,F-F-F-R2.5-F-C / X / / ,AhKd4s,Cash 50bb BTNvBB AK4
+b23_btn_04,b23_cash_50bb,Cash6mGeneral_6mNL25R25,50,,F-F-F-R2.5-F-C / X / / ,Td7c6s,Cash 50bb BTNvBB T76
+# ===========================================
+# B-24: Cash 特殊 boards @ 100bb (paired/mono/super-wet)
+# ===========================================
+b24_01,b24_cash_special,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,KsKd7c,Cash BTNvBB KK7
+b24_02,b24_cash_special,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,AhAdKc,Cash BTNvBB AAK
+b24_03,b24_cash_special,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,7d7s4c,Cash BTNvBB 774
+b24_04,b24_cash_special,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,KsQs7s,Cash BTNvBB KQ7 mono
+b24_05,b24_cash_special,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,JsTs5s,Cash BTNvBB JT5 mono
+b24_06,b24_cash_special,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,9h8s7d,Cash BTNvBB 987
+b24_07,b24_cash_special,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,JhTh9c,Cash BTNvBB JT9
+b24_08,b24_cash_special,Cash6mGeneral_6mNL25R25,100,,F-F-F-R2.5-F-C / X / / ,Qh4s2c,Cash BTNvBB Q42

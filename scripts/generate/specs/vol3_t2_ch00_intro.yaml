@@ -1,0 +1,145 @@
+volume: "Vol3"
+chapter_num: "00"
+title: "はじめに — MTT 専門版の位置付けと SPR-axis-switching 理論"
+
+summary: |
+  Vol3 は **MTT (トーナメント) 専門版** で、Cash 100bb を扱う Vol2 と独立した内容を提供します。
+  本書の中核は「SPR-axis-switching」という理論 — stack depth が低い MTT では Cash と支配的な判断軸が切り替わる、という現象です。
+
+sections:
+
+  - type: heading
+    level: 2
+    text: "Vol2 (Cash) と Vol3 (MTT) の関係"
+
+  - type: prose
+    body: |
+      本シリーズは「迷わないポーカー」の 4 巻構成で、Vol2 と Vol3 はポストフロップを **Cash と MTT で別巻に分けた独立構成** です。
+
+      **Vol2 (Cash 100bb 専門)**:
+      - 5×4 マトリックス + 街補正 (Tier 1、平均 88% 削減)
+      - Cash 100bb 詳細公式 (Tier 2、平均 93% 削減)
+      - Cash 100bb の SRP (BTN vs BB) に特化
+
+      **Vol3 (MTT 専門、本書)**:
+      - MTT 25-200bb の depth 別補正
+      - SPR-axis-switching 理論 (Cash と公式の支配軸が違う)
+      - ポジション別 Cbet 戦略 (SB の "default check" など)
+      - Turn donk lead (BB の先制ベット)
+      - 3-bet pot 詳細 (IP のトラップ vs OOP の強気 CR)
+
+      Cash と MTT で公式の構造が**根本的に違う**ため、別巻として独立構成しています。Vol2 を未読でも本書は理解できますが、5×4 マトリックスの基礎は Vol2 ch01-04 を参照すると効率的です。
+
+  - type: heading
+    level: 2
+    text: "Vol3 の中核理論 — SPR-axis-switching"
+
+  - type: prose
+    body: |
+      Vol3 の最も重要な発見は以下です。
+
+      > **SPR が下がるほど、判断の支配的な軸が「絶対強さ (mv)」→「絶対強さ + ドロー (mv+dv)」→「相対強さ (bucket)」へシフトする**
+
+      これを **SPR-axis-switching** (SPR による軸切替) と呼びます。具体的には:
+
+  - type: table
+    title: "街 × stack depth × 支配軸"
+    markdown: |
+      | 状況 | SPR (flop後) | 支配軸 | 理由 |
+      |------|-------------|--------|------|
+      | Cash 100bb Flop | ~10 | mv (絶対強さ) | レンジが広い、ドローの implied odds 大 |
+      | Cash 100bb Turn | ~7 | mv + dv | ドローまだ有効 |
+      | Cash 100bb River | ~3 | bucket (相対) | ドロー消失 |
+      | MTT 50bb Flop | ~6 | mv | 標準的なメイドハンド判断 |
+      | **MTT 50bb Turn** | **~3** | **bucket** ⭐ | Cash River と同じ低 SPR |
+      | MTT 50bb River | ~1 | bucket | 真の all-in も多発 |
+
+  - type: prose
+    body: |
+      この理論的洞察は GTO 検証で確認されています。MTT 50bb turn defense に Cash 100bb の Turn 公式 (mv+dv ベース v8) を適用すると huge_loss 0.133 BB ですが、bucket-based の MTT 専用公式 (v9) に切り替えると **0.057 BB (-57%)** になります。
+
+      逆に Cash 100bb turn では bucket-based は逆効果で、mv+dv ベースの方が huge_loss 0.037 BB と圧倒的に良い。これは「同じ街でも depth で最適軸が変わる」ことを示します。
+
+  - type: heading
+    level: 2
+    text: "Vol3 で扱う MTT stack depth"
+
+  - type: prose
+    body: |
+      MTT は stack depth (有効スタックの BB 数) によって戦略が大きく変わります。本書では以下の depth 帯を扱います。
+
+  - type: table
+    title: "MTT depth 別 SPR と戦略傾向"
+    markdown: |
+      | Depth | Flop 後 SPR | 戦略傾向 |
+      |-------|-------------|----------|
+      | **25bb** (short) | ~4 | コミット近い、push/fold 寄り |
+      | **50bb** (mid) | ~3 | bucket 軸が支配的、二極化サイズ — **主データ源** |
+      | **100bb** (mid-deep) | ~6 | Cash と類似、微調整 |
+      | **200bb** (deep) | ~12 | overbet 多用、bluff catch 拡大 |
+
+  - type: heading
+    level: 2
+    text: "本書の MTT データソース"
+
+  - type: prose
+    body: |
+      Vol3 の公式は以下の GTO 検証データに基づきます:
+
+      - **MTT 50bb turn/river defense**: 自前 fetch (turn 22 spots, river 24 spots)
+      - **MTT 50bb 全ポジション flop attack**: 120 spots × 5 positions (BTN/CO/HJ/LJ/SB)
+      - **MTT 100bb 全ポジション flop attack**: 120 spots
+      - **MTT 200bb 全ポジション flop attack**: 120 spots (Simple gametype)
+      - **3-bet pot 25/50/100bb**: 24 spots each + defense_study 集計データ
+      - **BB Turn donk (Cash 100bb + MTT 25/50/100bb)**: 100k+ rows
+
+      合計約 **1 万 spots、116 万行** の GTO 検証データで Vol3 の主張を裏付けます。
+
+  - type: heading
+    level: 2
+    text: "読み方ガイド — 全 12 章の構成"
+
+  - type: prose
+    body: |
+      Vol3 は 12 章で構成されています。
+
+      **ch01: SPR-axis-switching 理論** — 本書の中核理論を最初に解説
+
+      **ch02-03: MTT 専門公式** — Turn MTT 50bb (v9 pure bucket)、River MTT 50bb (v15 真allin aware)
+
+      **ch04: "all-in" の意味論** — Cash と MTT で all-in の意味が違うことを掘り下げる
+
+      **ch05: BB Defense depth 依存性** — 25/50/100bb で fold 閾値が変わる現象 (SPR-axis-switching の追加証拠)
+
+      **ch06: Turn donk lead** — BB が turn で先制する戦略パターン (MTT 100bb で 16% donk)
+
+      **ch07: 3-bet pot 詳細** — IP のトラップ戦略、OOP の強気 CR、トリップス逆転
+
+      **ch08: ポジション別 Flop Cbet** — SB の "default check" 戦略、EP/MP の 80%+ cbet
+
+      **ch09: ICM 補正** — バブル付近の判断 (理論方針のみ)
+
+      **ch10: 練習問題 50 問** — MTT 中心の自己診断
+
+      **ch11: 早見表** — 全 MTT 公式 + 例外 30+ を 2 ページに圧縮
+
+  - type: heading
+    level: 2
+    text: "Vol3 で扱わないこと"
+
+  - type: prose
+    body: |
+      Vol3 は以下を扱いません (Vol2 / Vol4 に委ねます)。
+
+      - **Cash 100bb の詳細公式** → Vol2 ch08-11 で扱う
+      - **プリフロップ判断** → Vol1 (Score_BB)
+      - **相手タイプ別のエクスプロイト** → Vol4 (テル)
+      - **マルチウェイ (3+ プレイヤー)** → 詳細データ不足のため簡易扱いのみ
+
+  - type: heading
+    level: 2
+    text: "次の章へ"
+
+  - type: prose
+    body: |
+      次の ch01 では **SPR-axis-switching** の理論的背景を詳細に解説します。本書の全公式がこの 1 つの理論で統一される様子を見ていきます。

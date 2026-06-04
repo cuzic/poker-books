@@ -1,0 +1,90 @@
+id,topic,gametype,depth,stacks,line,target_board,note
+# ===========================================
+# B-11: Cash flop cbet — multiple gametypes try
+# 旧 GCP study と直接比較するため、同じ標準ボード K72/Q83/J65/T98/T52
+# ===========================================
+b11_01,b11_cash_50z_gen,Cash6m50zGeneral,100,100-100-100-100-100-100,F-R2.2-F-F-F-C / / / ,Ks7d2c,Cash50z HJvBB Kxx
+b11_02,b11_cash_50z_gen,Cash6m50zGeneral,100,100-100-100-100-100-100,F-R2.2-F-F-F-C / / / ,Qh8d3s,Cash50z HJvBB Q83
+b11_03,b11_cash_50z_gen,Cash6m50zGeneral,100,100-100-100-100-100-100,F-R2.2-F-F-F-C / / / ,Jd6c4d,Cash50z HJvBB J64
+b11_04,b11_cash_50z_gen,Cash6m50zGeneral,100,100-100-100-100-100-100,F-R2.2-F-F-F-C / / / ,Th9s8d,Cash50z HJvBB T98
+b11_05,b11_cash_50z_gen,Cash6m50zGeneral,100,100-100-100-100-100-100,F-R2.2-F-F-F-C / / / ,Ts5d2c,Cash50z HJvBB T52
+b11_06,b11_cash_500z_gen,Cash6m500zGeneral,100,100-100-100-100-100-100,F-R2.2-F-F-F-C / / / ,Ks7d2c,Cash500z HJvBB Kxx
+b11_07,b11_cash_500z_gen,Cash6m500zGeneral,100,100-100-100-100-100-100,F-R2.2-F-F-F-C / / / ,Qh8d3s,Cash500z HJvBB Q83
+b11_08,b11_cash_NL10,Cash6mGeneral_6mNL10R25,100,100-100-100-100-100-100,F-R2.5-F-F-F-C / / / ,Ks7d2c,Cash NL10 R2.5 HJvBB Kxx
+b11_09,b11_cash_NL10,Cash6mGeneral_6mNL10R25,100,100-100-100-100-100-100,F-R2.5-F-F-F-C / / / ,Qh8d3s,Cash NL10 R2.5 HJvBB Q83
+b11_10,b11_cash_cev,Cash6mGeneral_6mcEVR25,100,100-100-100-100-100-100,F-R2.5-F-F-F-C / / / ,Ks7d2c,Cash cEV R2.5 HJvBB Kxx
+# ===========================================
+# B-12: MTT position 拡張 (UTG/CO/BTN/SB vs BB)
+# UTG=R2.2, HJ=R2.2, CO=R2.4, BTN=R2.6, SB=R4
+# ===========================================
+b12_utg_01,b12_mtt_utg,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,R2.2-F-F-F-F-C / / / ,Ks7d2c,UTGvBB Kxx flop
+b12_utg_02,b12_mtt_utg,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,R2.2-F-F-F-F-C / / / ,Qh8d3s,UTGvBB Q83
+b12_utg_03,b12_mtt_utg,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,R2.2-F-F-F-F-C / / / ,Jd6c4d,UTGvBB J64
+b12_utg_04,b12_mtt_utg,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,R2.2-F-F-F-F-C / / / ,Th9s8d,UTGvBB T98
+b12_utg_05,b12_mtt_utg,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,R2.2-F-F-F-F-C / / / ,AhKd4s,UTGvBB AK4
+b12_co_01,b12_mtt_co,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-C / / / ,Ks7d2c,COvBB Kxx
+b12_co_02,b12_mtt_co,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-C / / / ,Qh8d3s,COvBB Q83
+b12_co_03,b12_mtt_co,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-C / / / ,Jd6c4d,COvBB J64
+b12_co_04,b12_mtt_co,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-C / / / ,Th9s8d,COvBB T98
+b12_co_05,b12_mtt_co,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-R2.4-F-F-C / / / ,AhKd4s,COvBB AK4
+b12_btn_01,b12_mtt_btn,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / / / ,Ks7d2c,BTNvBB Kxx
+b12_btn_02,b12_mtt_btn,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / / / ,Qh8d3s,BTNvBB Q83
+b12_btn_03,b12_mtt_btn,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / / / ,Jd6c4d,BTNvBB J64
+b12_btn_04,b12_mtt_btn,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / / / ,Th9s8d,BTNvBB T98
+b12_btn_05,b12_mtt_btn,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / / / ,AhKd4s,BTNvBB AK4
+b12_btn_06,b12_mtt_btn,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / / / ,Td7c6s,BTNvBB T76
+b12_btn_07,b12_mtt_btn,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-R2.6-F-C / / / ,QhJd4s,BTNvBB QJ4
+b12_sb_01,b12_mtt_sb,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-F-R4-C / / / ,Ks7d2c,SBvBB SRP Kxx
+b12_sb_02,b12_mtt_sb,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-F-R4-C / / / ,Qh8d3s,SBvBB SRP Q83
+b12_sb_03,b12_mtt_sb,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-F-R4-C / / / ,Jd6c4d,SBvBB SRP J64
+b12_sb_04,b12_mtt_sb,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-F-R4-C / / / ,Th9s8d,SBvBB SRP T98
+b12_sb_05,b12_mtt_sb,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-F-F-F-R4-C / / / ,AhKd4s,SBvBB SRP AK4
+# ===========================================
+# B-13: 特殊ボード (paired / mono / super-wet)
+# ===========================================
+b13_01,b13_paired_high,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,KsKd7c,KK7 paired high
+b13_02,b13_paired_high,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,AhAdKc,AAK paired
+b13_03,b13_paired_high,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,QsQc7d,QQ7
+b13_04,b13_paired_mid,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,JsJc4d,JJ4
+b13_05,b13_paired_mid,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,9d9s4c,994
+b13_06,b13_paired_low,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,7d7s4c,774
+b13_07,b13_paired_low,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,5s5h2c,552
+b13_08,b13_paired_low,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,3s3h2c,332
+b13_09,b13_mono_high,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,AsKs7s,AKs7s mono Ace
+b13_10,b13_mono_high,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,KsQs7s,KQs7s mono King
+b13_11,b13_mono_mid,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,JsTs5s,JT5 mono
+b13_12,b13_mono_mid,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,QsTs6s,QT6 mono
+b13_13,b13_mono_low,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,8s6s4s,864 mono
+b13_14,b13_mono_low,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,7s5s2s,752 mono
+b13_15,b13_super_wet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,JhTh9c,JT9 wet (2-tone)
+b13_16,b13_super_wet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,9h8s7d,987 rainbow connected
+b13_17,b13_super_wet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Qh9c8d,Q98 wet
+b13_18,b13_super_wet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Kh9s8c,K98 wet
+b13_19,b13_super_wet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,6c5s4d,654 connected low
+b13_20,b13_super_wet,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,5h4c3s,543 connected lowest
+# ===========================================
+# B-14: ボード型間の境界（K-high の連続グラデーション）
+# K72(dry) → K83 → K94 → K76(wet) → K85 → K-mono の連続変化
+# ===========================================
+b14_01,b14_khigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Ks7d2c,K72 dry baseline
+b14_02,b14_khigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Ks8d2c,K82 small gap
+b14_03,b14_khigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Ks8d3c,K83 mid gap
+b14_04,b14_khigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Ks9d4c,K94 wet gap
+b14_05,b14_khigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Ks7d6c,K76 connected wet
+b14_06,b14_khigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Ks9d8c,K98 connected wet
+b14_07,b14_khigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Ks8s2c,K82 2tone (FD)
+b14_08,b14_khigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Ks8s7c,K87 2tone wet
+b14_09,b14_khigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Ks8s2s,K82 mono
+b14_10,b14_khigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Ks9s8s,K98 mono wet
+# Q-high gradient
+b14_11,b14_qhigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Qh7d2c,Q72 dry
+b14_12,b14_qhigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Qh8d3s,Q83 baseline
+b14_13,b14_qhigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Qh9d8c,Q98 connected
+b14_14,b14_qhigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Qh9s4c,Q94 gap
+b14_15,b14_qhigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Qh4s2c,Q42 air
+# A-high gradient
+b14_16,b14_ahigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Ah7d2c,A72 dry
+b14_17,b14_ahigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Ah8d3s,A83
+b14_18,b14_ahigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,AhKd4s,AK4 (range adv)
+b14_19,b14_ahigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Ah4d2c,A42 air
+b14_20,b14_ahigh_grad,MTT6mSimple,200.125,200.125-200.125-200.125-200.125-200.125-200.125,F-R2.2-F-F-F-C / / / ,Ah9c8s,A98 connected high

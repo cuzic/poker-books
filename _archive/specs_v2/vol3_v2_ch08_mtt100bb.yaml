@@ -1,0 +1,113 @@
+volume: "Vol3"
+chapter_num: "08"
+title: "MTT 100bb——構造的限界 context (α=+26)"
+
+summary: |
+  MTT 100bb は α=+26 で第 2 に大きな lift を持ちますが、WRMSE が 25% と高く
+  Vol3 で最も精度が低い context です。これは MTT 6m Simple tree の wide cbet 特性が
+  band 集約だけでは取り切れない構造的限界に由来します。本章では限界を理解しつつ
+  実用的な使い方を提示します。
+
+sections:
+  - type: heading
+    level: 2
+    text: "mtt_100bb のパラメータ"
+
+  - type: prose
+    body: |
+      A モデル mtt_100bb の補正は以下の通りです。
+
+      | layer | 値 | 意味 |
+      |---|---:|---|
+      | α (コンテキスト補正) | **+26pt** | wide cbet (mtt_25bb の +36 に次ぐ第 2 位) |
+      | β (TV≥7 のみ) | **-6pt** | 強い役で抑制 |
+      | cat_offset | 共通 | slowplay +6 / trash -14 / premium +7 |
+      | ε[mtt_srp] | 共通 | dry_high 0 / paired +2 / dynamic -11 / low_dry -9 |
+
+      WRMSE は **25%** で Vol3 13 context 中ワースト 1 位。旧 5 軸モデル でも 22% で、
+      band 集約構造の限界に当たっています。
+
+  - type: heading
+    level: 2
+    text: "α=+26 の構造的理由"
+
+  - type: prose
+    body: |
+      MTT 100bb で α=+26 となる理由は、MTT 6m Simple tree が cash 100bb と比べて
+      全体的に wide cbet 戦略を採用するためです。MTT のオープンレンジが (cash より少し)
+      tight な分、ポストフロップで cbet 率を上げることで補正する形になっています。
+
+      これは GTO solver の設定の違いに由来します。MTT では ICM (Independent Chip Model)
+      の影響で短スタックの fold equity が cash より高くなり、cbet 期待値が上昇するため、
+      base 戦略が cash より aggressive になります。
+
+  - type: heading
+    level: 2
+    text: "WRMSE 25% の構造的限界"
+
+  - type: prose
+    body: |
+      mtt_100bb の WRMSE 25% は、Vol3 scope / Vol2 scope / 旧 5 軸モデル のどれでも改善できない
+      構造的限界です。Vol2 scope: 35%、Vol3 scope: 25%、旧 5 軸モデル: 22% という測定値で、
+      Vol3 7-step を加算しても base + 3pt しか改善しません。
+
+      この限界は MTT 6m Simple tree が「cbet 率を 70-80% で polarized に分布させる」
+      という特殊な構造から来ています。同じ hand カテゴリでもボード特性により
+      cbet 率が 30%-90% まで散らばり、band 単位の予測では中央値を取らざるを得ません。
+
+      実用上は「mtt_100bb では計算結果から ±20pt の幅を見る」「polarized な
+      ボード (dynamic + draw 多) では A モデルの予測より wide に bet する」と
+      心得るのが現実的です。
+
+  - type: heading
+    level: 2
+    text: "mtt_100bb の実戦例題"
+
+  - type: examples
+    framework: v3
+    title: "mtt_100bb で 6 つの代表局面"
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        board: AsKd7c
+        context: mtt_100bb
+
+      - hand: overpair
+        draw: no_draw
+        board: 9c4d2s
+        context: mtt_100bb
+
+      - hand: second_pair
+        draw: gutshot
+        board: KsJd6c
+        context: mtt_100bb
+
+      - hand: low_pair
+        draw: no_draw
+        board: 9h6c2d
+        context: mtt_100bb
+
+      - hand: ace_high
+        draw: fd
+        board: Jd8c3d
+        context: mtt_100bb
+
+      - hand: set
+        draw: no_draw
+        board: 9s9c4d
+        context: mtt_100bb
+
+  - type: heading
+    level: 2
+    text: "mtt_100bb の 4 原則"
+
+  - type: prose
+    body: |
+      1. **wide cbet を基本**: α=+26 で全 band が大幅 lift。Cash 100bb 感覚で
+         「mid band は check」と判断すると外す。mid band でも 60-70% bet。
+      2. **精度限界 25% を理解**: 計算結果 ±20pt の幅を見る。境界 (40-60%) は
+         迷ったら bet 側を選ぶのが MTT 100bb の傾向。
+      3. **slowplay の β=-6 + cat=+6 ≈ 0**: 強ハンド補正 (TV≥7 のとき) はほぼなし。
+         「base+α で概ね bet 寄り」で十分。
+      4. **板分類で±10pt 程度の補正**: ε 値で大きく方針が変わるのは dynamic 板
+         (-11) のみ。dry_high / low_dry は中庸な扱いで OK。

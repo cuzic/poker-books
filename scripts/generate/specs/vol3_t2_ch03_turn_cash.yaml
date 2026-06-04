@@ -1,0 +1,232 @@
+volume: "Vol3"
+chapter_num: "03"
+title: "Turn defense 詳細 — Cash 100bb (mv+dv 軸、v8)"
+
+summary: |
+  Cash 100bb の Turn defense は SPR ~7 で mv+dv の両軸が支配的です。
+  v8 公式 (8 ルール体系) で huge_loss を 0.037 BB/decision まで圧縮できます。
+  GTO 検証で 96% accuracy on huge_gap を達成した最強の公式を解説します。
+
+sections:
+
+  - type: heading
+    level: 2
+    text: "Cash 100bb Turn v8 — 8 ルール体系"
+
+  - type: prose
+    body: |
+      Cash 100bb Turn defense は、bet size を 3 段階 (small_25p / med_67p / overbet_185p) に区分し、それぞれで mv と dv の組み合わせを判定します。
+
+  - type: code
+    lang: ""
+    body: |
+      Cash 100bb Turn defense v8:
+
+      ── vs overbet (≥100% pot, 典型的に R16.8 = 185% pot) ──
+      Rule O1: weak_mv (air, A/K-high, low/under/3rd pair, 2nd_pair)
+              ∧ weak_draw (no_draw, BDFD, gutshot)
+            → FOLD
+
+      Rule O2: air ∧ flush_draw ∧ board = dry_high
+            → FOLD
+            (理由: overbet が FD の direct odds を消す)
+
+      Rule O3: air ∧ OESD ∧ board ∈ dynamic
+            → FOLD
+            (理由: implied odds 消失)
+
+      Rule O4: top_pair ∧ no_draw ∧ board ∈ dynamic
+            → FOLD
+            (理由: dynamic 板で TP は draws complete でドミネイト多)
+
+      Rule O5 (default): CALL
+
+      ── vs medium (≤67% pot, 典型的に R6.1 = 67% pot) ──
+      Rule M1: air ∧ no_draw → FOLD
+
+      Rule M2: board ∈ dynamic ∧ weak_mv (excl 2nd_pair) ∧ weak_draw
+            → FOLD
+
+      Rule M3: board ∈ dynamic ∧ OESD ∧ weak_mv (excl 2nd_pair)
+            → FOLD
+
+      Rule M4 (default): CALL
+
+      ── vs small (≤33% pot) ──
+      標準マトリックス通り (W/M/S は CALL、A は call or fold 境界)
+
+  - type: heading
+    level: 2
+    text: "Rule O1-O4: vs overbet の詳細"
+
+  - type: heading
+    level: 3
+    text: "O1: 弱メイド + 弱ドロー → FOLD"
+
+  - type: prose
+    body: |
+      最も基本的なルール。overbet を打たれて weak (air/A-high/K-high/弱中ペア) しか持っていない場合は **無条件 FOLD**。drawing odds が overbet で吹き飛ぶため、bluff catch も難しい。
+
+      **weak_draw の定義:**
+
+      - **no_draw**: ドローなし
+      - **BDFD (backdoor flush draw)**: 同スート 3 枚 (turn まで → river まで 2 段階 hit 必要、実質ほぼ無価値)
+      - **gutshot**: 4 outs のみ (12% to hit by river)
+
+      これらは overbet (要求 equity 50%+) には到底足りない。
+
+  - type: heading
+    level: 3
+    text: "O2: 反直感ルール - FD on dry でも FOLD"
+
+  - type: prose
+    body: |
+      **「flush draw は良いドローだから call できるのでは?」** という直感に反するルール。
+
+      **理由:**
+
+      - dry_high board (K-7-2 など) で相手が overbet を打つレンジは **completed nuts (set, AK の TPTK)** が中心
+      - こちらが FD で river を見ても、相手の set/2P+ には負ける
+      - **implied odds**: river で hit してもこちらの FD が相手にバレている (overbet を call した時点で「draw を持っている」とバレる) → river で payoff されない
+      - 結果: overbet vs FD は call すると EV マイナス
+
+      **検証データ:**
+
+      - **no_made_hand × flush_draw × overbet_185p × dry_high** (n=65 in Cash 100bb): pred CALL (標準 D × o は本来 FOLD だが、過去の単純公式では CALL 寄り)、actual **FOLD 100%**、mean loss 3.8 BB
+      - O2 ルールで FOLD に override → 250 BB の損失機会を防ぐ
+
+  - type: heading
+    level: 3
+    text: "O3: OESD on dynamic でも FOLD"
+
+  - type: prose
+    body: |
+      OESD (8 outs) は通常 D (Draw) で CALL ですが、**overbet + dynamic 板**では FOLD。
+
+      **理由:**
+
+      - dynamic 板で相手の overbet は polarized: ナッツ近辺 (straight, set) or 完全 bluff
+      - OESD で straight 完成しても相手のナッツ (より強い straight or flush) に負ける可能性
+      - implied odds 消失で 8 outs の数学的不利が補えない
+
+      **検証:** no_made × OESD × overbet × dynamic (n=32): actual FOLD 87% / CALL 13%、Rule O3 で FOLD に → huge_loss 2.67 → 0.5 BB
+
+  - type: heading
+    level: 3
+    text: "O4: 反直感ルール - dynamic 板の TP も FOLD"
+
+  - type: prose
+    body: |
+      dynamic 板 (T-9-8-2 など) で **TP + no_draw** が overbet を受けたら **FOLD**。
+
+      **理由:**
+
+      - dynamic 板の turn では straight draws (例: J-T で OESD → turn で完成) が多く complete している
+      - こちらの TP (例 T-T on T-9-8-2) は **既に straight に負けている可能性**
+      - 相手の overbet は確信ありの value bet → TP では勝てない
+
+      **検証:** top_pair × no_draw × overbet × dynamic (n=18): actual FOLD 100%、mean loss 1.62 BB → Rule O4 で完全カバー
+
+  - type: heading
+    level: 2
+    text: "Rule M1-M3: vs medium の詳細"
+
+  - type: heading
+    level: 3
+    text: "M1: air + no_draw → FOLD (基本)"
+
+  - type: prose
+    body: |
+      Vol2 の標準マトリックス A × m = FOLD と同じ。完全な air (no_made + no_draw) は medium bet に対しても FOLD。
+
+  - type: heading
+    level: 3
+    text: "M2: dynamic + 弱メイド + 弱ドロー → FOLD (重要)"
+
+  - type: prose
+    body: |
+      Vol2 では W × m は CALL でしたが、Cash 100bb Turn の **dynamic 板** ではタイト化が必要。
+
+      **対象セル:**
+
+      - **low_pair × no_draw × dynamic** (n=132 in Cash): actual FOLD 78%、mean loss 1.75 BB
+      - **low_pair × gutshot × dynamic** (n=24): actual FOLD 84%
+      - **3rd_pair × no_draw × dynamic** (n=34): actual FOLD 73%
+
+      これら全部「弱メイド + 弱ドロー」で板が dynamic という共通条件。
+
+      **理由:**
+
+      - dynamic 板で相手の cbet range は draws + made hand のミックス
+      - turn で相手が second barrel するなら、相手の hand range は further filtered to made hands
+      - こちらの low_pair / 3rd pair は相手の completed straight や 2P に負ける確率高い
+
+      **注意: 2nd_pair は除外**: 2nd_pair + gutshot は actual CALL 100% (n=12)、2nd_pair + OESD も CALL 100%。2nd_pair は M 扱いで M × m は CALL のまま。
+
+  - type: heading
+    level: 3
+    text: "M3: dynamic + OESD + 弱メイド → FOLD"
+
+  - type: prose
+    body: |
+      M2 の延長で、ドローが OESD (Vol2 では D 扱いで CALL) でも weak mv と組み合わさると FOLD が GTO。
+
+      **対象セル:**
+
+      - **no_made × OESD × med × dynamic** (n=40): actual FOLD 95%
+      - **A-high × OESD × med × dynamic** (n=64): actual FOLD 89%
+
+      Vol2 の標準では「OESD = D で CALL」でしたが、Cash 100bb Turn の dynamic + weak_mv では FOLD が正解。
+
+  - type: heading
+    level: 2
+    text: "v8 公式の検証結果"
+
+  - type: prose
+    body: |
+      Cash 100bb Turn defense v8 を 7,554 行のデータに適用した結果:
+
+  - type: table
+    title: "Cash 100bb Turn defense 公式比較"
+    markdown: |
+      | 公式 | accuracy | mean loss | huge_gap loss | 対 default 削減 |
+      |------|---------|-----------|---------------|----------------|
+      | always_CALL | 27% | 1.66 BB | 2.64 BB | 0% |
+      | always_FOLD | 64% | 1.90 BB | (n/a) | -15% |
+      | v6 (mv+dv 基礎) | 71.6% | 0.241 | 0.347 | 87% |
+      | **v8 (mv+dv+board 詳細)** | **85.9%** | **0.054** | **0.037** | **99%** ⭐ |
+
+  - type: prose
+    body: |
+      v8 はほぼ最適です。huge_gap での accuracy 96.3% (172 mistakes out of 4,611 huge_gap rows)。残りの 4% は混合戦略 (50/50 split など) で、いずれを選んでも EV はほぼ変わらないセル。
+
+  - type: heading
+    level: 2
+    text: "覚え方のコツ"
+
+  - type: prose
+    body: |
+      v8 を覚えるコツ:
+
+      **vs overbet (≥100%): FOLD 寄り**
+      - 「overbet は polarized」を念頭に: weak/airに対しては FOLD
+      - ドローは implied odds 消えるので FOLD
+      - 例外: D (FD/OESD) は単独なら call 余地、TP+ なら call
+
+      **vs medium (67% 前後): CALL 寄りだが dynamic 注意**
+      - air は FOLD
+      - dynamic 板で weak_mv + weak_draw は FOLD (M2)
+      - dynamic 板で OESD + weak_mv は FOLD (M3)
+
+      **vs small (≤33%): 広く call**
+      - Vol2 のマトリックス通り、ほぼ全部 CALL
+
+      **覚えるルール数**: vs overbet 4 + vs medium 3 = **計 7 ルール** + default CALL。Vol2 の標準マトリックス (FOLD M × o, FOLD A × m+) と組み合わせて使う。
+
+  - type: heading
+    level: 2
+    text: "次の章へ"
+
+  - type: prose
+    body: |
+      Cash 100bb Turn の詳細公式 v8 を学びました。次の ch04 では **MTT 50bb Turn** に進み、SPR-axis-switching で **bucket 軸** に切り替わる様子を見ます。

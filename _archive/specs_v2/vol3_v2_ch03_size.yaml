@@ -1,0 +1,130 @@
+volume: "Vol3"
+chapter_num: "03"
+title: "Category offset——slowplay / trash / premium"
+
+summary: |
+  A モデルの category offset は hand category 別の頻度補正です。
+  slowplay (+6)、trash (-14)、premium (+7) の 3 つで、context を問わず適用します。
+  本章では各カテゴリの定義と適用例を扱います。
+
+sections:
+  - type: heading
+    level: 2
+    text: "Category offset 表"
+
+  - type: table
+    template: v3_cat_offset
+    title: "hand category × offset"
+
+  - type: prose
+    body: |
+      Category offset は context 共通です。13 context どれでも同じ値を加算します。
+      4 カテゴリ (default / slowplay / trash / premium) は MV テーブルの hand type から
+      機械的に判定できるので、追加の判断ステップは不要です。
+
+  - type: heading
+    level: 2
+    text: "slowplay カテゴリ (+6pt)"
+
+  - type: prose
+    body: |
+      slowplay カテゴリには **set / trips / two_pair / fullhouse / flush / straight / quads**
+      が含まれます。MV は 8-9 (strong/nut バンド) です。
+
+      offset +6 は「nut に近い役は base より +6pt bet する」という意味です。
+      Vol2 では nut バンドに value bet 寄りの値が既に設定されていますが、
+      Vol3 ではさらに「特に強い役 (slowplay 候補) を識別」して微調整します。
+
+      ただし 3BP 浅 (mtt_3bp_25bb 等) では β = -15 が同時に効くため、
+      slowplay +6 と β -15 の合計で -9pt 程度の slowplay 傾向になります。
+      「ナッツ系を持っているからベットせよ」とは限らない、相手のレンジ構成に
+      合わせた判断が必要です。
+
+  - type: heading
+    level: 2
+    text: "trash カテゴリ (-14pt)"
+
+  - type: prose
+    body: |
+      trash カテゴリは **low_pair** (MV=3) のみです。22-55 の低ペア (ボードに対して
+      アンダーペアでも highest pair に届かない) が該当します。
+
+      offset -14 は「low_pair は base より 14pt 下げてベットする」という意味です。
+      Vol2 の low_pair 例外 -10pt より少し厳しめの値です。
+
+      理由は ch02 (Vol2) で扱った通り、「showdown value がない」「チェックレイズに弱い」
+      ためです。Vol3 ではこの傾向が context 共通で見られることを confirm しています。
+
+  - type: heading
+    level: 2
+    text: "premium カテゴリ (+7pt)"
+
+  - type: prose
+    body: |
+      premium カテゴリには **overpair / underpair** が含まれます。
+
+      overpair はボードの最高ランクより高い pocket pair (例: 88 on 752)、
+      underpair はボードの最高ランクより低いが top pair より高い pocket pair (例: 88 on T75) です。
+
+      offset +7 は「オーバーペア系は強気に value bet」を意味します。
+      これらのハンドは pot コミットしてしまえば多くのワーストハンドから call が取れるため、
+      base より bet 寄りに調整します。
+
+      ただし dry な板 (paired ε=+5、low_dry ε=-9) と dynamic な板 (ε=-21) で
+      条件が異なるため、ε と組み合わせて最終判断します。
+
+  - type: heading
+    level: 2
+    text: "default カテゴリ (offset なし)"
+
+  - type: prose
+    body: |
+      slowplay / trash / premium に含まれないハンドはすべて default として扱い、
+      offset 0 (補正なし) で base 値そのまま使います。
+
+      具体的には top_pair / second_pair / third_pair / ace_high / king_high /
+      no_made_hand など、MV=2-7 のうち category 指定がないものが該当します。
+
+      default カテゴリの判定は「**まず category を確認し、該当しなければ default**」という
+      順序で行います。
+
+  - type: heading
+    level: 2
+    text: "Category offset 適用例"
+
+  - type: examples
+    framework: v3
+    cases:
+      - hand: set
+        draw: no_draw
+        board: 9s9c4d
+        context: cash_100bb
+      - hand: low_pair
+        draw: no_draw
+        board: AsKd7c
+        context: cash_100bb
+      - hand: overpair
+        draw: no_draw
+        board: 8s5c2d
+        context: mtt_50bb
+      - hand: two_pair
+        draw: no_draw
+        board: KsJd6c
+        context: mtt_3bp_50bb
+
+  - type: heading
+    level: 2
+    text: "Size 軸を採用しない理由"
+
+  - type: prose
+    body: |
+      旧 Vol3 (旧 5 軸モデル) では「33% small bet vs 116% overbet」の Size 軸を
+      扱っていました。A モデルでは Size 軸を廃止し、すべてのケースで 33% small bet
+      を前提とした頻度予測のみを行います。
+
+      理由は 2 つあります。第 1 に、Size 軸を導入しても WRMSE が大きく改善しない
+      ことが実測で判明したためです (band 集約後は Size 別の差が小さくなる)。
+      第 2 に、Size 判断は別の章 (Vol2 ch05) で扱う方が読者の負担が少ないためです。
+
+      Overbet (116%) を使うべき場面については Vol2 ch05 で polarized board の分類で扱います。
+      本書 ch11 (Turn) でも overbet 系の議論を行います。

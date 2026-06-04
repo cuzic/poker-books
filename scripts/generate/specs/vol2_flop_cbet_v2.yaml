@@ -1,0 +1,234 @@
+volume: "Vol2"
+chapter_num: "02"
+title: "フロップ CBet — IP 先手（v2 改訂）"
+street: "flop"
+gto_source: "GTO Wizard Cash6mGeneral_6mNL25R25 @ 100bb / 187 spots (2026-05-27)"
+
+summary: |
+  187 spots の GTO Wizard 直接データから再構築した IP CBet ロジック。
+  旧「7型分類 × HS」を「6 ボードクラス × サイズ二極化」に置換。
+  サイズが第一決定軸（33% range bet / 116% polarize overbet）、頻度はクラスごとに固定。
+
+key_formulas:
+  "Step 1: ボード6クラス分類 (FCBL v2)":
+    |
+    D (Dominant Small):   K-dry, Q-dry, A-broadway, 高ペア (KK4, QQ4, 332)
+                          → cbet 70-99%、size 33%pot
+    W (Wet-mid Small):    K-wet, Q-mid, QJT/JT9 broadway-wet
+                          → cbet 50-70%、size 33%pot
+    L (Low-Wheel):        A-low (A52-A95), 中低ペア(994/552), wheel(654/543/432)
+                          → cbet 45-65%、size 33%pot
+    M (Mono Small):       全モノトーン
+                          → cbet 30-42%、size 33%pot
+    P (Polarize-mid):     K-broadway-mid(KJ4/KQJ), A-mid-wet(AJ4/AT5/A87), Q-mid-wet(QT5/Q87)
+                          → cbet 25-50%、size 116%pot overbet
+    C (Connected-low):    876, 765, 975 (super-connected)
+                          → cbet 26-30%、size 116%pot overbet
+
+  "Step 2: 5分類 × クラス → アクション":
+    |
+    RANGE クラス (D/W/L/M, 33% pot):
+      Value (HS≥65)        → BET (連続バリュー)
+      Semi-bluff (draws)   → BET (FE + EQ realization)
+      Bluff-catcher        → BET if D-class, CHECK if W/L/M
+      RIO (wet mid SDV)    → CHECK (pot management)
+      Air (no equity)      → BET (range bet 維持)
+
+    POLARIZE クラス (P/C, 116% pot):
+      Value (TP+/nuts only) → BET
+      Semi-bluff           → CHECK (overbet で押し出されたくない)
+      Bluff-catcher        → CHECK (大コミット回避)
+      RIO                  → CHECK
+      Air (with blocker)   → BET (ブラフ枠)
+
+  "Step 3: Position 調整":
+    |
+    UTG/HJ/CO: 上記がベース (3 position 中 cbet 率は ~55-60% で近い)
+    BTN: -3〜-5pt (range が広いため微減)
+    SB:  -15pt (SRP vs BB は IP/OOP non-standard で大幅減)
+
+  "サイズ完全二極化 (検証済 187 spots)":
+    |
+    33% pot small : 53 spots (range bet 全クラス D/W/L/M)
+    116% pot huge : 26 spots (polarize クラス P/C)
+    中間サイズ (50-100%): 0 spots ← 使わない!
+    つまり "33% or 116% の二択" のみ
+
+examples:
+  # D-class: K-dry
+  - hand: "KhQs"
+    board: "Ks,7d,2c"  # 73% cbet, 33% pot
+  # D-class: A-broadway
+  - hand: "AhJd"
+    board: "Ah,Kd,Qc"  # 74% cbet, 33%
+  # D-class: 高ペア
+  - hand: "AhKh"
+    board: "Ks,Kd,4c"  # 88% cbet, 33%
+  # W-class: K-wet
+  - hand: "9d8c"
+    board: "Ks,9d,8c"  # 51% cbet, 33%
+  # L-class: A-low
+  - hand: "Ah5d"
+    board: "Ah,7d,2c"  # 51% cbet, 33%
+  # M-class: mono
+  - hand: "KsKd"
+    board: "As,Ks,7s"  # 38% cbet, 33%
+  # P-class: K-broadway-mid
+  - hand: "AhKh"
+    board: "Ks,Jd,4c"  # 42% cbet, **116%** overbet
+  # P-class: A-mid-wet
+  - hand: "AhKh"
+    board: "Ah,Jd,4c"  # 28% cbet, 116%
+  # C-class: super-connected
+  - hand: "9h9s"
+    board: "8h,7d,6c"  # 30% cbet, 116%
+
+key_points:
+  - "サイズが第一決定軸。33% small bet か 116% overbet の二択（中間サイズ無し）"
+  - "ボード 6 クラス分類で size と base cbet 率が決まる"
+  - "D/W/L/M クラスは 33% range bet（広く打つ）"
+  - "P/C クラスは 116% polarize（強い手と air のみ）"
+  - "M (mono) は全 high card で 30-42% に収束、シンプル"
+  - "A-high は意外と低い（47%）、K-high が最高（63%）"
+  - "中間 gap (4-7) が cbet の谷、最連結と最 disconnected で peak"
+  - "高 paired (KK4) 88% / 低 paired (332) 81% / 中 paired (994) 52%"
+  - "2tone と rainbow の差は dry で -20〜-45pt、wet で同等"
+  - "Position 効果は moderate (BTN -3pt, SB -15pt)"
+
+sections:
+  - title: "FCBL v2 — ロジック全体像"
+    summary: |
+      旧 framework: HS × ボード型7分類 × 3サイズ(33/75/100)
+      新 framework (FCBL v2): 5cat × ボード6クラス × 2サイズ(33/116)
+
+      第一決定: サイズ二極化 (33% range / 116% polarize)
+      第二決定: ボードクラスで base cbet 率
+      第三決定: 5cat (Value/Semi-bluff/Bluff-catcher/RIO/Air) でハンド選択
+
+      これは 187 spots の GTO 直接データから派生した実証ベースのロジック。
+
+  - title: "ボード 6 クラスの判定フロー"
+    summary: |
+      1. Paired flop か？
+         ├ YES + 高ペア (KK/QQ/AA + low kicker) → D
+         ├ YES + 中低ペア (JJ/99/77/55) → L
+         ├ YES + 最低ペア (332) → D (例外、IP overpair 支配)
+         └ NO → 2
+      2. Monotone か？
+         ├ YES → M
+         └ NO → 3
+      3. High card と structure
+         ├ K-high dry/wet → D or W
+         ├ K-broadway-mid (KJ4, KQJ, KQ7) → P
+         ├ Q-high dry/broadway → D or W
+         ├ Q-mid-wet (QT5, Q87, QJ6) → P
+         ├ A-high broadway (AKQ, AQJ) → D
+         ├ A-high low (A52-A95) → L
+         ├ A-high mid-wet (AJ4, AT5, A87) → P
+         ├ J/T-high mid-wet → P
+         └ 4 へ
+      4. Connected structure
+         ├ Super-connected (876, 765, 975) → C
+         ├ Wheel (654, 543, 432) → L
+         └ Gap mid (864, 753) → L
+
+  - title: "クラス別 cbet 戦略"
+    summary: |
+      D (Dominant Small): 70-99% cbet at 33% pot
+        - K-dry (K72r): 73%
+        - K-broadway connected (KJT): 99%
+        - Q-broadway (QJT): 94%
+        - A-broadway (AKQ, AQJ): 74-78%
+        - 高ペア (KK4): 88%, QQ4: 84%
+        - 332: 81% (例外低ペア)
+
+      W (Wet-mid): 50-70% cbet at 33%
+        - K-wet connected (K98, K76): 51-55%
+        - Q-mid (Q98, Q53): 53-68%
+        - A-low mid (A95): 55%
+
+      L (Low-Wheel): 45-65% cbet at 33%
+        - A-low (A52, A72, A82): 47-55%
+        - Wheel (543, 654, 432): 48-54%
+        - Gap mid (864, 753): 53-58%
+        - 中低ペア (994, 552): 52-57%
+
+      M (Mono): 30-42% cbet at 33%
+        - 全モノトーン: 30-42% で収束
+        - high card 依存最小
+
+      P (Polarize-mid): 25-50% cbet at 116% overbet
+        - K-mid-wet (KJ4, KQ7): 42-46%
+        - K-broadway connected (KQJ): 25%
+        - A-mid-wet (AJ4, AT5, AT7, A87): 25-33%
+        - Q-mid-wet (QT5, Q86, Q87, QJ6): 34-57%
+        - J/T-mid-wet (J75, J85, T62, T87): 30-48%
+
+      C (Connected-low): 26-30% cbet at 116% overbet
+        - 876: 30%, 765: 26%, 975: 30%
+
+  - title: "5分類 × クラス アクション表"
+    summary: |
+      RANGE クラス (D/W/L/M, 33% pot):
+        Value         → BET 100%
+        Semi-bluff    → BET 100%
+        Bluff-catcher → BET in D, CHECK in W/L/M
+        RIO           → CHECK
+        Air           → BET (range bet 維持)
+
+      POLARIZE クラス (P/C, 116% pot):
+        Value (TP+)   → BET 100%
+        Semi-bluff    → CHECK (drawback risk)
+        Bluff-catcher → CHECK
+        RIO           → CHECK
+        Air w/blocker → BET (bluff 枠)
+        Air no blocker→ CHECK
+
+  - title: "Position 別 cbet 率の調整"
+    summary: |
+      実測 (B-20 28 spots):
+        UTG avg: 55.4%
+        HJ avg:  56.4%
+        CO avg:  57.3%
+        BTN avg: 50.8%
+        SB avg:  37.9%
+
+      → UTG/HJ/CO ≈ 同じ
+      → BTN は range 広い → 微減
+      → SB は OOP のため大幅減
+
+      ベース cbet 率は HJ/CO/BTN で参照、SB は -15pt で適用。
+
+  - title: "旧 vol2 ch02 (HSベース 7型) からの主な訂正"
+    summary: |
+      訂正1: 「BTN avg cbet 75%」→ 実測 51%
+      訂正2: 「33%/100% 二択」→ 「33%/116% 二択」(中間なし)
+      訂正3: 「型1ハイドライ 73%」→ K-dry は OK だが Q-dry 99%, A-low 47% で大きく差
+      訂正4: 「型5 mono 38%」→ ほぼ正確 (30-42%)
+      訂正5: 「型7 ペア低 54%」→ 実際は K高ペア 88%、低ペア 52-67%、332 81%
+
+  - title: "実例 — 5cat × 6クラス マトリクス"
+    summary: |
+      実戦判断のチェックリスト:
+      1. ボード見て 6 クラス判定 (D/W/L/M/P/C)
+      2. 自分のハンドの 5cat 判定 (V/S/B/R/A)
+      3. (1) から サイズと base cbet 率
+      4. (2) でアクション選択
+      5. Position 調整 (-3 to -15pt)
+
+gto_reference:
+  source: "GTO Wizard Cash6mGeneral_6mNL25R25 @ 100bb"
+  notes: |
+    187 cash flop spots 直接 API データ (2026-05-27 取得):
+    - B-20: 全 position × 標準7板 (28)
+    - B-22: rake 比較 (12)
+    - B-23: 50bb mid-stack (1)
+    - B-24: BTN 特殊板 (8)
+    - B-25: 特殊板 × position (22)
+    - B-32-36: K/A/Q/J/T-high + low connected gradient (63)
+    - B-37: 2tone vs rainbow (8)
+    - B-38: mono diversity (8)
+    - B-39: paired diversity (8)
+    - B-40: HJvBB diversity (12)
+
+    関連: CASH_FLOP_BOUNDARY_SYNTHESIS.md, CASH_DIVERSITY_REPORT.md

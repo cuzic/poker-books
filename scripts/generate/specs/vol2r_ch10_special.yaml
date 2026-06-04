@@ -1,0 +1,74 @@
+volume: "Vol2r"
+chapter_num: "10"
+title: "スペシャルシナリオ"
+street: "5cat"
+
+summary: |
+  マルチウェイポット、SB vs BB、チェックレイズ等の特殊状況での5分類の適用。
+  通常ルールからの調整を整理する。
+
+key_formulas:
+  "マルチウェイ補正":
+    |
+    3人以上のポット → BC閾値を +10 (より強い手が必要)
+    セミブラフのCBet頻度 → 50-60% (通常より低め)
+    エアーCBet → 禁止（マルチウェイでブラフは機能しない）
+
+  "SB vs BB 調整":
+    |
+    SBはIPのCBet権なし（OOP）
+    SBのドンクベット率: 低め（通常と同じ）
+    BBのMDF: 通常と同じ計算
+    ポットサイズ: SBリンプ + BB チェックなら 2BB
+
+examples:
+  # Multiway: stronger hands needed
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "JTs"
+    board: "Qd,9c,3h"
+  - hand: "88"
+    board: "Ah,7h,4d"
+  # SB vs BB
+  - hand: "KQs"
+    board: "Qd,9c,4h"
+  - hand: "A5s"
+    board: "Kd,7s,2s"
+  # Check-raise scenarios
+  - hand: "77"
+    board: "7d,9s,8h"
+  - hand: "A5s"
+    board: "Kd,5s,2s"
+
+key_points:
+  - "マルチウェイではCBet頻度を下げ、強ハンド中心にベット"
+  - "エアーのCBetはマルチウェイで禁止（誰かに当たっている確率が高い）"
+  - "SB vs BBはどちらもOOP確率が高く、チェックが基本"
+  - "チェックレイズはセット/2ペア/強FDが主役（GTO CR率: フロップ10-20%）"
+  - "ドンクベットは特定のボードタイプ（SC/FCリバー）に限定"
+
+sections:
+  - title: "マルチウェイポットでの5分類"
+    summary: |
+      3人以上のポットではBC閾値が上がる。
+      バリューはTPTK以上推奨。セミブラフはFD/OESD限定。
+      RIOはマルチウェイでさらにリスクが高い（複数の draw と戦う）。
+  - title: "SB vs BB のポストフロップ"
+    summary: |
+      SBはOOPでCBet権なし。BBもOOP。
+      どちらもチェックが基本 → ターンでアクション。
+      SBのドンクベット: SC/FCリバーで HS ≥ 70 のみ。
+  - title: "チェックレイズの実戦活用"
+    summary: |
+      強ハンドCR: セット(85)、2ペア(72)、強FD(NFD+) → B ≥ 58 のとき
+      ブラフCR: NFDブロッカー保有 + B ≥ 58 + HS < 35
+      CR サイズ: 通常 pot × 2.5〜3
+  - title: "ドンクベット（先打ち）の戦略的使用"
+    summary: |
+      フロップドンクはほぼ不要（GTO 0-10%）。
+      ターン/リバーのドンクが有効なのは:
+      SC/FCボードでOOPが有利なとき（ストレート/フラッシュ完成）。
+
+gto_reference:
+  source: "GTO Wizard Cash6mGeneral_6mNL25R25 100BB マルチウェイ"
+  notes: "マルチウェイCBet率: 通常より10-15%低い。CR率: フロップ 10-20%"

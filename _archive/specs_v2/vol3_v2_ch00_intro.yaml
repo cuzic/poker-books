@@ -1,0 +1,162 @@
+volume: "Vol3"
+chapter_num: "00"
+title: "はじめに——A モデルで MTT を制する"
+
+summary: |
+  本書は Vol2 (Cash) を読了した方を対象に、
+  MTT ポストフロップを A モデル (13 context × 4 layer) で精緻化します。
+  Vol2 の用語 (MV/DV/TV/MDF) と 25 セル base 表をそのまま継承しながら、
+  α/β/cat/ε の追加 layer で MTT を扱います。
+
+sections:
+  - type: heading
+    level: 2
+    text: "この本が解く問題——Cash と MTT のポストフロップは何が違うか"
+
+  - type: prose
+    body: |
+      Vol2 でキャッシュポストフロップを学んだ後、「MTT でも同じ式が使えるか?」という
+      疑問を持つのは自然なことです。答えは「使えます——ただし context を MTT 用に
+      切り替えて、追加 layer で補正する必要があります」です。
+
+      Cash と MTT のポストフロップが異なる点は本質的には 2 点です。
+      1 点目は「MTT は SPR が浅いのがデフォルト」であること。
+      たとえば中盤 25-50bb なら SRP のフロップ SPR は約 5-9 と、
+      キャッシュ (SPR≈16) の半分以下になります。
+      2 点目は「MTT 6m solver の特性」で、open range がやや tight な分、
+      ポストフロップで cbet 率を上げる調整があります。
+
+      この 2 点を α/β/cat/ε の 4 layer で表現するのが A モデルです。
+
+  - type: heading
+    level: 2
+    text: "A モデルとは——Vol2 (25 セル base) との関係"
+
+  - type: prose
+    body: |
+      Vol2 では 25 セル base 表 (5 context × 5 band) のみで cbet 頻度を予測しました。
+      Vol3 ではこの 25 セル base を **そのまま** 使い、context を細分化した上で
+      α/β/cat/ε の 4 layer を加算します。
+
+      ```
+      Vol2 (本書 base のみ):
+        freq = base[ctx5][band]
+        + low_pair -10pt 例外
+
+      Vol3 (全 layer):
+        freq = base[ctx5][band]                  ← Vol2 と同じ
+             + α[ctx13]                          ← コンテキスト補正
+             + β[ctx13] · I(TV ≥ 7)             ← 強ハンド補正 (TV≥7 のとき)
+             + cat_offset[hand_category]         ← ハンドクラス補正 (slowplay/trash/premium)
+             + ε[board_family][ctx_group]        ← ボード補正
+      ```
+
+      Vol3 で新たに覚える数値は 38 個 (α 13 + β 13 + cat 3 + ε 9)。
+      Vol2 で覚えた 25 セル + 6 MV + 4 DV の 35 数値はすべて再利用できます。
+
+  - type: heading
+    level: 2
+    text: "13 context への細分化"
+
+  - type: prose
+    body: |
+      Vol2 では 5 context (cash / mtt_short / mtt_deep / 3bp / turn) でしたが、
+      Vol3 では 13 context に細分化します。
+
+      | Vol2 (ctx5) | Vol3 で分解 (ctx13) |
+      |---|---|
+      | cash | cash_100bb |
+      | mtt_short | mtt_25bb / mtt_50bb |
+      | mtt_deep | mtt_100bb / mtt_200bb |
+      | 3bp | mtt_3bp_20/25/50/100bb (4 つ) |
+      | turn | mtt_25/50/100_turn_btn / cash_100_turn_btn (4 つ) |
+
+      この細分化によって、特に mtt_3bp_50bb (WRMSE 9.3%) や
+      mtt_25bb_turn_btn (WRMSE 7.5%) で高精度を達成しました。
+
+  - type: heading
+    level: 3
+    text: "Vol2 scope / Vol3 scope / 旧モデルの精度比較"
+
+  - type: prose
+    body: |
+      A モデルを Vol2 scope (base のみ) / Vol3 scope (全 layer) で使ったときの精度と、
+      旧 5 軸モデルとの比較:
+
+      | スコープ | params | WRMSE |
+      |---|---:|---:|
+      | Vol2 scope (base 25 セルのみ) | 25 | ~21% |
+      | **Vol3 scope (本書、全 4 layer)** | **63** | **18.3%** |
+      | 旧 5 軸モデル (Vol3 旧版、別構造) | 100+ | ~16% |
+
+      Vol3 scope は Vol2 base を継承しつつ、38 数値を追加するだけで
+      base のみから 2.5pt 改善、旧 5 軸モデル と +2pt 差。3BP では旧モデルを上回る精度。
+
+  - type: heading
+    level: 2
+    text: "本書の読み方——前提知識と各章の位置づけ"
+
+  - type: prose
+    body: |
+      本書を読むための前提知識は以下です。
+      Vol2 (Cash) で学んだ TV / MV / DV / MDF の基礎。
+      Vol2 ch02 の 25 セル base 表は Vol3 でも頻繁に参照します。
+
+      推奨する読み進め方:
+      初読者は ch01 (7-step 統一式) → ch02 (α/β layer) → ch03 (cat_offset) →
+      ch04 (板分類 ε) → ch05 (context 選択) → ch06-09 (MTT 各スタック) →
+      ch10 (3BP) → ch11 (Turn) → ch16 (例題) という順がおすすめです。
+
+  - type: heading
+    level: 2
+    text: "本書の構成"
+
+  - type: prose
+    body: |
+      本書は全 16 章と 3 つの付録で構成されます。
+
+      前半 (ch00〜ch05) で A モデルの骨格を解説:
+      - ch01: 7-step 統一式の概観
+      - ch02: α/β layer (13 context)
+      - ch03: Category offset (slowplay/trash/premium)
+      - ch04: 板分類 ε (C3 軸)
+      - ch05: context 切り替えフロー
+
+      中盤 (ch06〜ch11) で MTT 各 depth と特殊シナリオ:
+      - ch06: MTT 25bb (α=+36)
+      - ch07: MTT 50bb (α=+0)
+      - ch08: MTT 100bb (α=+26、構造的限界)
+      - ch09: MTT 200bb (α=-5)
+      - ch10: 3-bet pot 4 context (β -15 〜 +8)
+      - ch11: Turn 4 context
+
+      後半 (ch12〜ch16) で守備・例外・限界・ICM・例題:
+      - ch12: D モデル (BB 守備頻度、4 context)
+      - ch13: 例外と境界ハンド
+      - ch14: 構造的限界と精度
+      - ch15: ICM (補助)
+      - ch16: 20 問例題集
+
+  - type: heading
+    level: 2
+    text: "暗記対象の概算"
+
+  - type: prose
+    body: |
+      Vol2 と Vol3 を合わせた暗記対象の総計は約 70 数値です。
+
+      Vol2 で習得済み (約 35 数値):
+      - MV テーブル 6 値
+      - DV テーブル 4 値
+      - 25 セル base 表 (5 context × 5 band)
+      - low_pair -10pt 例外
+
+      Vol3 で追加 (約 38 数値):
+      - α 13 値 (コンテキスト補正)
+      - β 13 値 (TV≥7 のみ)
+      - Category offset 3 値 (slowplay/trash/premium)
+      - 板分類 ε 9 値 (3 family × 3 ctx_group)
+      - 板分類ロジック 4 family
+
+      旧 5 軸モデル の 128 数値から 45% 削減。各章で 1 context ずつ習得していけば、
+      読み終える頃には自然に身についています。

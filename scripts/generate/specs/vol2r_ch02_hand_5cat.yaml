@@ -1,0 +1,97 @@
+volume: "Vol2r"
+chapter_num: "02"
+title: "手の5分類"
+street: "5cat"
+
+summary: |
+  ポストフロップの判断は「自分の手がどのカテゴリか」を確認することから始まる。
+  バリュー/セミブラフ/ブラフキャッチャー/RIO/エアーの5分類を習得する。
+
+key_formulas:
+  "5分類ロジック":
+    |
+    判定フロー（優先順位順）：
+    1. 強いメイドハンド？ → バリュー
+       (セット/2ペア/オーバーペア/TPTK/TPGK)
+    2. 強いドロー？ → セミブラフ
+       (FD/OESD/GS + バリューなし)
+    3. 中程度メイド + ウェットボード → RIO
+       (TPMK以下 + 2tone/connected)
+    4. 中程度メイド + ドライボード → ブラフキャッチャー
+       (TPMK以下 + rainbow/dry)
+    5. それ以外 → エアー
+
+  "各カテゴリの行動方針":
+    |
+    バリュー:          CBet/バレル継続（サイズ大）
+    セミブラフ:        CBet/バレル継続（サイズ小〜中、折たたみエクイティ込み）
+    ブラフキャッチャー: チェック/コール（IP優位ボードでは小サイズCBetも可）
+    RIO:              基本チェック、相手のCBetに対してもフォールド圧力
+    エアー:            チェック（型1/型3ドライボードのみブラフCBet）
+
+examples:
+  # Strong made → バリュー
+  - hand: "AKs"
+    board: "Kc,7d,2s"
+  - hand: "77"
+    board: "Kc,7d,2s"
+  - hand: "AA"
+    board: "Jd,9s,4c"
+  # Strong draw → セミブラフ
+  - hand: "JTs"
+    board: "Qd,9c,3h"
+  - hand: "A5s"
+    board: "Kd,7s,2s"
+  - hand: "98s"
+    board: "Jd,7c,2s"
+  # Medium + dry → ブラフキャッチャー
+  - hand: "KTo"
+    board: "Kd,7c,2s"
+  - hand: "55"
+    board: "Kd,Tc,4s"
+  # Medium + wet → RIO
+  - hand: "88"
+    board: "Ah,7h,4d"
+  - hand: "KTo"
+    board: "Jh,Th,5c"
+  # Air → エアー
+  - hand: "A6o"
+    board: "Kd,7c,2s"
+  - hand: "76o"
+    board: "Ad,Kd,2s"
+
+key_points:
+  - "ボードのウェット度（FDあり or connected）が RIO vs BC を分ける"
+  - "セミブラフはドロー完成時に強くなる（方向性=上昇）"
+  - "RIOはドロー完成時に弱くなる（方向性=下降）"
+  - "ブラフキャッチャーは自分が勝っているときのみ価値がある（コールがメイン）"
+  - "エアーは折たたみエクイティ目的のブラフのみ（型1/型3ドライボードのみ）"
+
+sections:
+  - title: "バリュー: 強いメイドハンドは迷わずBet"
+    summary: |
+      セット(85)・2ペア(72)・オーバーペア(70-80)・TPTK(65)・TPGK(60)。
+      方向性は「安定」〜「下降リスクあり」。ほぼ全ボードでCBet継続。
+  - title: "セミブラフ: ドローは積極的に押す"
+    summary: |
+      FD(+32/36)・OESD(+28)・GS(+12)。自分のハンドは今弱くても、
+      完成すれば強い（方向性=上昇）。相手のフォールドを誘いながらエクイティを持つ。
+  - title: "ブラフキャッチャー: コールが主役"
+    summary: |
+      TPMK(55)・TPWK(50)・セカンドペア(38-42)のドライボード版。
+      方向性は「中立」。自分より強いハンドに弱く、弱いハンドに強い。
+      チェック後のコールが基本。IPなら小サイズCBetも可。
+  - title: "RIO (逆インプライドオッズ): 中程度メイドのウェットボード"
+    summary: |
+      TPMK以下のペアハンドがウェットボードで持つリスク。
+      相手のドローが完成するとアウトランクされる（例: 低ペア vs FD）。
+      基本はチェック。相手のCBetに対してはタイトにフォールド。
+  - title: "エアー: ブラフ選択基準"
+    summary: |
+      メイドなし・ドローなし。役割はブラフ候補。
+      型1/型3ドライ系ボードでのみCBet可（IP限定）。
+      2OC(両カードがボード最高ランク超)の場合はエアーでもHS+24。
+
+gto_reference:
+  source: "GTO Wizard Cash6mGeneral_6mNL25R25 100BB BTN vs BB"
+  notes: "型4低ペア: CBet 7%（RIO確認）。型3 OESD: CBet 68%（セミブラフ確認）"

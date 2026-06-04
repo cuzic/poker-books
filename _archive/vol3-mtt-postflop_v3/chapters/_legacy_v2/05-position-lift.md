@@ -1,0 +1,103 @@
+# 第05章 context 切り替えフロー——13 context をどう選ぶか
+
+Vol3 で扱う 13 context のうち、その場面でどれを使うべきかを
+迷わず即決するための判断フローを整理します。スタックサイズ、3-bet pot か否か、
+flop か turn かの 3 軸で機械的に決まります。
+
+## 13 context の早見
+
+Vol3 の 13 context は以下の 3 軸の組合せで決まります。
+
+- **flop か turn か** (2 値)
+- **3-bet pot か single raise pot か** (2 値)
+- **effective stack** (cash 100bb / MTT 20-200bb のスタック区分)
+
+この組合せで 13 context が定義されます。フローは以下です。
+
+```
+Q1: ターンの 2nd barrel か?
+   Yes → turn 4 context (mtt_25/50/100bb_turn_btn or cash_100bb_turn_btn)
+   No  → flop 9 context のいずれか
+
+Q2: 3-bet pot (preflop で 3-bet → call) か?
+   Yes → mtt_3bp_4 context (20/25/50/100bb)
+   No  → SRP 5 context (cash_100bb or mtt_25/50/100/200bb)
+
+Q3: effective stack でさらに細分
+```
+
+## Single raise pot (SRP) 5 context
+
+SRP は最頻出の context です。cash と MTT 4 スタックで合計 5 種類。
+
+- **cash_100bb** — Cash 100bb の SRP。α=+2、β=0 で base に近い
+- **mtt_25bb** — MTT 25bb SRP。α=+36 で wide cbet
+- **mtt_50bb** — MTT 50bb SRP。α=+0、β=-3 で base に近い
+- **mtt_100bb** — MTT 100bb SRP。α=+26 で wide cbet
+- **mtt_200bb** — MTT 200bb SRP。α=-5 で僅かに減らす
+
+MTT 25bb と MTT 100bb で α が大きい点は ch02 で詳述しました。
+「短スタックと中程度スタックで wide cbet」と覚えると整理しやすいです。
+
+## 3-bet pot 4 context
+
+3-bet pot は SPR 別に 4 つ。「3BP では β が大きく変わる」のが特徴です。
+
+- **mtt_3bp_20bb** — α=-2、β=-15。極浅 3BP で slowplay 顕著
+- **mtt_3bp_25bb** — α=+3、β=-15。最も slowplay 傾向が強い 25bb
+- **mtt_3bp_50bb** — α=+1、β=+5。50bb 以上で β が正に転じる
+- **mtt_3bp_100bb** — α=+0、β=+8。100bb 3BP で最も bet 寄り
+
+β が「-15 から +8 まで 23pt の差」がある点は、3BP の SPR 別差異が
+かなり大きいことを意味します。3BP では context 選択ミスが大きく
+WRMSE を悪化させます。
+
+## Turn 4 context
+
+Turn 2nd barrel は flop と同じ effective stack で 4 つに分かれます。
+Cash と MTT 3 スタックを覆います。
+
+- **cash_100bb_turn_btn** — Cash 100bb ターン。α=+1、β=-5
+- **mtt_25bb_turn_btn** — MTT 25bb ターン。α=-2、β=-4
+- **mtt_50bb_turn_btn** — MTT 50bb ターン。α=+1、β=-4
+- **mtt_100bb_turn_btn** — MTT 100bb ターン。α=+13、β=-4 (突出)
+
+mtt_100bb_turn_btn のみ α=+13 と突出するのは、MTT 100bb で
+「flop で cbet したハンドが turn でも続行する率が想定より高い」
+ためです。100bb スタックでターンに進む状況自体が稀で、その代わり
+ターン到達後の続行率が高いという構造を反映しています。
+
+## context 選択 cheat sheet
+
+実戦で迷ったときの 1 ステップ判定。
+
+| 条件 | 選ぶ context |
+|---|---|
+| Cash 100bb の flop | cash_100bb |
+| Cash 100bb の turn | cash_100bb_turn_btn |
+| MTT 25bb の SRP flop | mtt_25bb |
+| MTT 50bb の SRP flop | mtt_50bb |
+| MTT 100bb の SRP flop | mtt_100bb |
+| MTT 200bb の SRP flop | mtt_200bb |
+| MTT 25bb の SRP turn | mtt_25bb_turn_btn |
+| MTT 50bb の SRP turn | mtt_50bb_turn_btn |
+| MTT 100bb の SRP turn | mtt_100bb_turn_btn |
+| MTT 20bb の 3BP flop | mtt_3bp_20bb |
+| MTT 25bb の 3BP flop | mtt_3bp_25bb |
+| MTT 50bb の 3BP flop | mtt_3bp_50bb |
+| MTT 100bb の 3BP flop | mtt_3bp_100bb |
+
+この対応関係を 30 秒で見られるようになれば、実戦で context 選びに
+迷うことはなくなります。
+
+## Position lift を採用しない理由
+
+旧 Vol3 では「BTN/CO/HJ/UTG/SB の Position lift」を扱っていました。
+A モデルでは Position 軸 (C2) を廃止しました。
+
+これは fit 実測で「Position 別 lift を加えても WRMSE が +0.3pt しか改善しない」
+ことが判明したためです。Position の影響は α/base layer に既に吸収されており、
+独立軸として追加するだけの寄与がないと結論付けました。
+
+実戦では「BTN open vs BB」を標準シナリオとして数値を覚え、
+SB / 早いポジションでは「やや tight な扱い」と直感補正する形で十分です。

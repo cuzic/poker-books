@@ -1,0 +1,113 @@
+volume: "Vol3"
+chapter_num: "07"
+title: "MTT 50bb——base 同等の標準 context"
+
+summary: |
+  MTT 50bb は α=+0、β=-3 で、Vol2 の mtt_short base 値とほぼ同じ頻度になる context です。
+  Vol3 13 context の中で「base への補正が最も小さい」context で、Vol2 知識をほぼそのまま
+  使えます。本章では mtt_25bb との対比で「補正が要らない理由」を理解します。
+
+sections:
+  - type: heading
+    level: 2
+    text: "mtt_50bb のパラメータ"
+
+  - type: prose
+    body: |
+      A モデル mtt_50bb の補正は以下の通りです。
+
+      | layer | 値 | 意味 |
+      |---|---:|---|
+      | α (コンテキスト補正) | **+0pt** | base そのまま |
+      | β (TV≥7 のみ) | **-3pt** | 強い役で少し抑制 |
+      | cat_offset | 共通 (+6/-14/+7) | slowplay/trash/premium |
+      | ε[dynamic][mtt_srp] | -11pt | wet 板 |
+      | ε[paired][mtt_srp] | +2pt | ペア板 |
+      | ε[low_dry][mtt_srp] | -9pt | low_dry 板 |
+
+      WRMSE は 17.6%。base[mtt_short] の 5 値だけで実戦判断の 80% は決まります。
+
+  - type: heading
+    level: 2
+    text: "α=+0 が意味すること"
+
+  - type: prose
+    body: |
+      mtt_50bb の α=+0 は、Vol2 で覚えた mtt_short base 値 (air 37 / weak 30 / mid 35 /
+      strong 58 / nut 73) がそのまま mtt_50bb の予測値になる、ということです。
+
+      この context は「Vol2 の知識だけで実戦可能な最小 layer」と考えてください。
+      25bb (α=+36) と異なり、wide cbet 戦略が要らない理由は、50bb スタックでは
+      SPR が 7-9 まで上がり、相手の continue 後にも余裕があるためです。
+
+  - type: heading
+    level: 2
+    text: "mtt_25bb との対比"
+
+  - type: prose
+    body: |
+      mtt_25bb (α=+36) と mtt_50bb (α=+0) で、同じ top_pair on dry_high の頻度を
+      比較してみます。
+
+      | layer | mtt_25bb | mtt_50bb |
+      |---|---:|---:|
+      | base[mtt_short][strong] | 58% | 58% |
+      | α | +36 | +0 |
+      | β·I(TV≥7) | -5 | -3 |
+      | cat[default] | 0 | 0 |
+      | ε[dry_high][mtt_srp] | 0 | 0 |
+      | **合計** | **89%** | **55%** |
+
+      同じハンドでも 34pt 違う計算結果になります。MTT で「スタックサイズの違いを
+      意識する」とはこの差を意識することです。
+
+  - type: heading
+    level: 2
+    text: "mtt_50bb の実戦例題"
+
+  - type: examples
+    framework: v3
+    title: "mtt_50bb で 6 つの代表局面"
+    cases:
+      - hand: top_pair
+        draw: no_draw
+        board: Ks7d2c
+        context: mtt_50bb
+
+      - hand: overpair
+        draw: no_draw
+        board: Jd8c3s
+        context: mtt_50bb
+
+      - hand: second_pair
+        draw: oesd
+        board: 9c8d6h
+        context: mtt_50bb
+
+      - hand: set
+        draw: no_draw
+        board: 9s9c4d
+        context: mtt_50bb
+
+      - hand: low_pair
+        draw: no_draw
+        board: AsKd7c
+        context: mtt_50bb
+
+      - hand: ace_high
+        draw: fd
+        board: Jd8c3d
+        context: mtt_50bb
+
+  - type: heading
+    level: 2
+    text: "mtt_50bb の 3 原則"
+
+  - type: prose
+    body: |
+      1. **base そのまま使う**: α=+0 なので Vol2 で覚えた mtt_short base 5 値が
+         そのまま予測値です。新たな数値は不要です。
+      2. **板分類で補正**: ε のみ慎重に。dry_high なら 0、low_dry/dynamic で -9/-11。
+         paired で +2。
+      3. **cat_offset で +/-**: slowplay +6、trash -14、premium +7 は共通なので、
+         手の種類別の微調整として加算します。
