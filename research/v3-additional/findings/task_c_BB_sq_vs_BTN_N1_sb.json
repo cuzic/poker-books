@@ -1,0 +1,860 @@
+{
+  "scenario": "BB_sq_vs_BTN_N1_sb",
+  "preflop_actions": "F-F-F-R2-C",
+  "depth": 100,
+  "summary": {
+    "F": 0.3963,
+    "C": 0.4614,
+    "R10": 0.1117,
+    "R12": 0.0227,
+    "R14": 0.0079,
+    "RAI": 0.0
+  },
+  "hand_freqs": {
+    "22": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "32o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "32s": {
+      "fold": 0.0006,
+      "call": 0.9994,
+      "squeeze": 0.0
+    },
+    "33": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "42o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "42s": {
+      "fold": 0.0002,
+      "call": 0.9998,
+      "squeeze": 0.0
+    },
+    "43o": {
+      "fold": 0.8382,
+      "call": 0.1618,
+      "squeeze": 0.0
+    },
+    "43s": {
+      "fold": 0.0,
+      "call": 0.9999,
+      "squeeze": 0.0
+    },
+    "44": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "52o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "52s": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "53o": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "53s": {
+      "fold": 0.0,
+      "call": 0.9995,
+      "squeeze": 0.0005
+    },
+    "54o": {
+      "fold": 0.0001,
+      "call": 0.9999,
+      "squeeze": 0.0
+    },
+    "54s": {
+      "fold": 0.0,
+      "call": 0.5314,
+      "squeeze": 0.4685
+    },
+    "55": {
+      "fold": 0.0,
+      "call": 0.6747,
+      "squeeze": 0.3253
+    },
+    "62o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "62s": {
+      "fold": 0.0003,
+      "call": 0.9997,
+      "squeeze": 0.0
+    },
+    "63o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "63s": {
+      "fold": 0.0001,
+      "call": 0.9999,
+      "squeeze": 0.0
+    },
+    "64o": {
+      "fold": 0.0001,
+      "call": 0.9999,
+      "squeeze": 0.0
+    },
+    "64s": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "65o": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "65s": {
+      "fold": 0.0,
+      "call": 0.3638,
+      "squeeze": 0.6362
+    },
+    "66": {
+      "fold": 0.0,
+      "call": 0.9747,
+      "squeeze": 0.0253
+    },
+    "72o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "72s": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "73o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "73s": {
+      "fold": 0.0006,
+      "call": 0.9994,
+      "squeeze": 0.0
+    },
+    "74o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "74s": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "75o": {
+      "fold": 0.0004,
+      "call": 0.9996,
+      "squeeze": 0.0
+    },
+    "75s": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "76o": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "76s": {
+      "fold": 0.0,
+      "call": 0.5108,
+      "squeeze": 0.4892
+    },
+    "77": {
+      "fold": 0.0,
+      "call": 0.9226,
+      "squeeze": 0.0774
+    },
+    "82o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "82s": {
+      "fold": 0.917,
+      "call": 0.083,
+      "squeeze": 0.0
+    },
+    "83o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "83s": {
+      "fold": 0.592,
+      "call": 0.408,
+      "squeeze": 0.0
+    },
+    "84o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "84s": {
+      "fold": 0.0005,
+      "call": 0.9995,
+      "squeeze": 0.0
+    },
+    "85o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "85s": {
+      "fold": 0.0001,
+      "call": 0.9999,
+      "squeeze": 0.0
+    },
+    "86o": {
+      "fold": 0.0019,
+      "call": 0.9981,
+      "squeeze": 0.0
+    },
+    "86s": {
+      "fold": 0.0,
+      "call": 0.9999,
+      "squeeze": 0.0001
+    },
+    "87o": {
+      "fold": 0.0002,
+      "call": 0.9998,
+      "squeeze": 0.0
+    },
+    "87s": {
+      "fold": 0.0,
+      "call": 0.9062,
+      "squeeze": 0.0938
+    },
+    "88": {
+      "fold": 0.0,
+      "call": 0.9228,
+      "squeeze": 0.0772
+    },
+    "92o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "92s": {
+      "fold": 0.9971,
+      "call": 0.0027,
+      "squeeze": 0.0001
+    },
+    "93o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "93s": {
+      "fold": 0.1783,
+      "call": 0.8217,
+      "squeeze": 0.0
+    },
+    "94o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "94s": {
+      "fold": 0.0124,
+      "call": 0.9876,
+      "squeeze": 0.0
+    },
+    "95o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "95s": {
+      "fold": 0.0003,
+      "call": 0.9997,
+      "squeeze": 0.0
+    },
+    "96o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "96s": {
+      "fold": 0.0001,
+      "call": 0.9974,
+      "squeeze": 0.0025
+    },
+    "97o": {
+      "fold": 0.0033,
+      "call": 0.9967,
+      "squeeze": 0.0
+    },
+    "97s": {
+      "fold": 0.0,
+      "call": 0.9373,
+      "squeeze": 0.0627
+    },
+    "98o": {
+      "fold": 0.0004,
+      "call": 0.9995,
+      "squeeze": 0.0
+    },
+    "98s": {
+      "fold": 0.0,
+      "call": 0.63,
+      "squeeze": 0.37
+    },
+    "99": {
+      "fold": 0.0,
+      "call": 0.216,
+      "squeeze": 0.784
+    },
+    "A2o": {
+      "fold": 0.8729,
+      "call": 0.0,
+      "squeeze": 0.1271
+    },
+    "A2s": {
+      "fold": 0.0,
+      "call": 0.9932,
+      "squeeze": 0.0069
+    },
+    "A3o": {
+      "fold": 0.0076,
+      "call": 0.0647,
+      "squeeze": 0.9277
+    },
+    "A3s": {
+      "fold": 0.0,
+      "call": 0.9473,
+      "squeeze": 0.0527
+    },
+    "A4o": {
+      "fold": 0.0006,
+      "call": 0.6601,
+      "squeeze": 0.3393
+    },
+    "A4s": {
+      "fold": 0.0,
+      "call": 0.9782,
+      "squeeze": 0.0217
+    },
+    "A5o": {
+      "fold": 0.0001,
+      "call": 0.589,
+      "squeeze": 0.4108
+    },
+    "A5s": {
+      "fold": 0.0,
+      "call": 0.2725,
+      "squeeze": 0.7275
+    },
+    "A6o": {
+      "fold": 0.9554,
+      "call": 0.0005,
+      "squeeze": 0.0441
+    },
+    "A6s": {
+      "fold": 0.0,
+      "call": 0.9997,
+      "squeeze": 0.0004
+    },
+    "A7o": {
+      "fold": 0.0008,
+      "call": 0.8005,
+      "squeeze": 0.1987
+    },
+    "A7s": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "A8o": {
+      "fold": 0.0001,
+      "call": 0.9999,
+      "squeeze": 0.0
+    },
+    "A8s": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "A9o": {
+      "fold": 0.0,
+      "call": 0.9875,
+      "squeeze": 0.0124
+    },
+    "A9s": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "AA": {
+      "fold": 0.0,
+      "call": 0.0,
+      "squeeze": 1.0
+    },
+    "AJo": {
+      "fold": 0.0,
+      "call": 0.9341,
+      "squeeze": 0.0658
+    },
+    "AJs": {
+      "fold": 0.0,
+      "call": 0.2127,
+      "squeeze": 0.7874
+    },
+    "AKo": {
+      "fold": 0.0,
+      "call": 0.0,
+      "squeeze": 1.0
+    },
+    "AKs": {
+      "fold": 0.0,
+      "call": 0.0,
+      "squeeze": 1.0
+    },
+    "AQo": {
+      "fold": 0.0,
+      "call": 0.0,
+      "squeeze": 0.9999
+    },
+    "AQs": {
+      "fold": 0.0,
+      "call": 0.0,
+      "squeeze": 1.0
+    },
+    "ATo": {
+      "fold": 0.0,
+      "call": 0.5176,
+      "squeeze": 0.4824
+    },
+    "ATs": {
+      "fold": 0.0,
+      "call": 0.5623,
+      "squeeze": 0.4377
+    },
+    "J2o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "J2s": {
+      "fold": 0.0003,
+      "call": 0.9945,
+      "squeeze": 0.0053
+    },
+    "J3o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "J3s": {
+      "fold": 0.0012,
+      "call": 0.9642,
+      "squeeze": 0.0347
+    },
+    "J4o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "J4s": {
+      "fold": 0.0002,
+      "call": 0.9985,
+      "squeeze": 0.0012
+    },
+    "J5o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "J5s": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "J6o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "J6s": {
+      "fold": 0.0001,
+      "call": 0.9723,
+      "squeeze": 0.0276
+    },
+    "J7o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "J7s": {
+      "fold": 0.0001,
+      "call": 0.9879,
+      "squeeze": 0.0121
+    },
+    "J8o": {
+      "fold": 0.0049,
+      "call": 0.9951,
+      "squeeze": 0.0
+    },
+    "J8s": {
+      "fold": 0.0,
+      "call": 0.9886,
+      "squeeze": 0.0113
+    },
+    "J9o": {
+      "fold": 0.0,
+      "call": 0.7387,
+      "squeeze": 0.2613
+    },
+    "J9s": {
+      "fold": 0.0,
+      "call": 0.9918,
+      "squeeze": 0.0081
+    },
+    "JJ": {
+      "fold": 0.0,
+      "call": 0.0,
+      "squeeze": 1.0
+    },
+    "JTo": {
+      "fold": 0.0,
+      "call": 0.9941,
+      "squeeze": 0.0058
+    },
+    "JTs": {
+      "fold": 0.0,
+      "call": 0.4149,
+      "squeeze": 0.5851
+    },
+    "K2o": {
+      "fold": 0.9998,
+      "call": 0.0,
+      "squeeze": 0.0002
+    },
+    "K2s": {
+      "fold": 0.0,
+      "call": 0.5747,
+      "squeeze": 0.4252
+    },
+    "K3o": {
+      "fold": 0.986,
+      "call": 0.0,
+      "squeeze": 0.014
+    },
+    "K3s": {
+      "fold": 0.0,
+      "call": 0.924,
+      "squeeze": 0.0759
+    },
+    "K4o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "K4s": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "K5o": {
+      "fold": 0.8479,
+      "call": 0.1508,
+      "squeeze": 0.0013
+    },
+    "K5s": {
+      "fold": 0.0,
+      "call": 0.986,
+      "squeeze": 0.014
+    },
+    "K6o": {
+      "fold": 0.1552,
+      "call": 0.7811,
+      "squeeze": 0.0636
+    },
+    "K6s": {
+      "fold": 0.0,
+      "call": 0.9967,
+      "squeeze": 0.0033
+    },
+    "K7o": {
+      "fold": 0.0035,
+      "call": 0.9959,
+      "squeeze": 0.0006
+    },
+    "K7s": {
+      "fold": 0.0,
+      "call": 0.9848,
+      "squeeze": 0.0152
+    },
+    "K8o": {
+      "fold": 0.0009,
+      "call": 0.9981,
+      "squeeze": 0.001
+    },
+    "K8s": {
+      "fold": 0.0,
+      "call": 1.0,
+      "squeeze": 0.0
+    },
+    "K9o": {
+      "fold": 0.0001,
+      "call": 0.6486,
+      "squeeze": 0.3512
+    },
+    "K9s": {
+      "fold": 0.0,
+      "call": 0.896,
+      "squeeze": 0.104
+    },
+    "KJo": {
+      "fold": 0.0,
+      "call": 0.7887,
+      "squeeze": 0.2112
+    },
+    "KJs": {
+      "fold": 0.0,
+      "call": 0.2579,
+      "squeeze": 0.742
+    },
+    "KK": {
+      "fold": 0.0,
+      "call": 0.0,
+      "squeeze": 1.0
+    },
+    "KQo": {
+      "fold": 0.0,
+      "call": 0.7309,
+      "squeeze": 0.2691
+    },
+    "KQs": {
+      "fold": 0.0,
+      "call": 0.0002,
+      "squeeze": 0.9998
+    },
+    "KTo": {
+      "fold": 0.0,
+      "call": 0.8843,
+      "squeeze": 0.1157
+    },
+    "KTs": {
+      "fold": 0.0,
+      "call": 0.7451,
+      "squeeze": 0.2549
+    },
+    "Q2o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "Q2s": {
+      "fold": 0.0,
+      "call": 0.3272,
+      "squeeze": 0.6728
+    },
+    "Q3o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "Q3s": {
+      "fold": 0.0001,
+      "call": 0.1294,
+      "squeeze": 0.8706
+    },
+    "Q4o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "Q4s": {
+      "fold": 0.0001,
+      "call": 0.967,
+      "squeeze": 0.0329
+    },
+    "Q5o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "Q5s": {
+      "fold": 0.0,
+      "call": 0.6006,
+      "squeeze": 0.3994
+    },
+    "Q6o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "Q6s": {
+      "fold": 0.0,
+      "call": 0.6844,
+      "squeeze": 0.3155
+    },
+    "Q7o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "Q7s": {
+      "fold": 0.0001,
+      "call": 0.4307,
+      "squeeze": 0.5691
+    },
+    "Q8o": {
+      "fold": 0.8728,
+      "call": 0.1258,
+      "squeeze": 0.0014
+    },
+    "Q8s": {
+      "fold": 0.0,
+      "call": 0.6204,
+      "squeeze": 0.3796
+    },
+    "Q9o": {
+      "fold": 0.0004,
+      "call": 0.7302,
+      "squeeze": 0.2694
+    },
+    "Q9s": {
+      "fold": 0.0,
+      "call": 0.1885,
+      "squeeze": 0.8115
+    },
+    "QJo": {
+      "fold": 0.0,
+      "call": 0.9556,
+      "squeeze": 0.0444
+    },
+    "QJs": {
+      "fold": 0.0,
+      "call": 0.2867,
+      "squeeze": 0.7133
+    },
+    "QQ": {
+      "fold": 0.0,
+      "call": 0.0,
+      "squeeze": 1.0
+    },
+    "QTo": {
+      "fold": 0.0,
+      "call": 0.5876,
+      "squeeze": 0.4123
+    },
+    "QTs": {
+      "fold": 0.0,
+      "call": 0.0026,
+      "squeeze": 0.9973
+    },
+    "T2o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "T2s": {
+      "fold": 0.001,
+      "call": 0.9256,
+      "squeeze": 0.0735
+    },
+    "T3o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "T3s": {
+      "fold": 0.0001,
+      "call": 0.8981,
+      "squeeze": 0.1018
+    },
+    "T4o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "T4s": {
+      "fold": 0.0006,
+      "call": 0.9773,
+      "squeeze": 0.0221
+    },
+    "T5o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "T5s": {
+      "fold": 0.0001,
+      "call": 0.9997,
+      "squeeze": 0.0002
+    },
+    "T6o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "T6s": {
+      "fold": 0.0,
+      "call": 0.9008,
+      "squeeze": 0.0992
+    },
+    "T7o": {
+      "fold": 1.0,
+      "call": 0.0,
+      "squeeze": 0.0
+    },
+    "T7s": {
+      "fold": 0.0,
+      "call": 0.8762,
+      "squeeze": 0.1237
+    },
+    "T8o": {
+      "fold": 0.0001,
+      "call": 0.9999,
+      "squeeze": 0.0
+    },
+    "T8s": {
+      "fold": 0.0,
+      "call": 0.436,
+      "squeeze": 0.5639
+    },
+    "T9o": {
+      "fold": 0.0001,
+      "call": 0.7716,
+      "squeeze": 0.2284
+    },
+    "T9s": {
+      "fold": 0.0,
+      "call": 0.0684,
+      "squeeze": 0.9316
+    },
+    "TT": {
+      "fold": 0.0,
+      "call": 0.0,
+      "squeeze": 0.9999
+    }
+  }
+}
