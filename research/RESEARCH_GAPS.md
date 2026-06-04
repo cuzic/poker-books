@@ -153,13 +153,39 @@ SB open → SB cbet:  24+24+24 = 72 files (BvB postflop)
 
 ## 全 Phase 合計
 
-| Phase | 内容 | spots |
-|-------|------|-------|
-| α | Vol1 Preflop hand-level の残り | 38 |
-| **β** | **defense 不足 + SB 補強** ★ 最重要 | 162 |
-| γ | Postflop 特殊シナリオ補強 | 120 |
-| δ | 書籍範囲拡張 | 60 |
-| **計** | | **380 spots** (~40 分の API call) |
+| Phase | 内容 | spots | 取得済 |
+|-------|------|-------|--------|
+| α | Vol1 Preflop hand-level の残り | 38 | **30/38** ✅ (F3/C2 は GTO tree なし) |
+| **β** | **defense 不足 + SB 補強** ★ 最重要 | 162 | **16/162** S1 のみ取得 |
+| γ | Postflop 特殊シナリオ補強 | 120 | 0 |
+| δ | 書籍範囲拡張 | 60 | 0 |
+| **計** | | **380 spots** | **46 取得済** |
+
+## 🚨 GTO Wizard tree の制約 (2026-06-04 発見)
+
+実際に調査して判明した GTO Wizard `Cash6mTest_6mNL100R2` tree の制約:
+
+### ✅ サポートされている spot
+
+- **Preflop**: 標準 sizing (R2/R2.5/R3 open, R7/R8/R10 3-bet, R20/R21 4-bet)
+- **Flop**: action_solutions に出てくる sizing (`B33` / `X` / `R6.1` 等、spot 別)
+- **BTN open → BB call → BTN cbet → BB defense** (= 既存 raw データの大半)
+
+### ❌ サポートされていない spot (HTTP 204 / 422)
+
+- **4-bet defense / 5-bet defense** (Vol1 ch04 §4.5/§4.6): 標準 sizing で 204
+- **Squeeze N=3** (4 callers): 204
+- **BB lead at flop (donk lead)**: 422、tree に含まれない
+- **任意 bet size + check-raise** (例: `B33-R10`): 422
+- **non-standard postflop sequence**: 422
+
+→ Phase β の S2/S3/S4/S5 は **GTO Wizard tree に含まれない**ため取得不可能
+
+### 代替策
+
+- **BB lead 系**: 既存 `def_cash100_bb_turn_raw` 96 ファイル + `_river_raw` 202 ファイルが tree 合法な「BB lead at turn/river」データ
+- **check-raise pot**: 既存 `cash_pairwise_gto.json` の SRP_OOP / 3BP_OOP で OOP_defense.raise として含まれる可能性
+- **書籍 ch04 §4.5/§4.6 (4-bet/5-bet defense)**: 既知の通り「理論値、GTO 検証なし」のままで OK
 
 ## 重要な再認識
 
