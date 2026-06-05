@@ -45,3 +45,8 @@ tmp_*.txt
 
 # Local task lock
 .claude/scheduled_tasks.lock
+research/**/__pycache__/
+
+# Probe rows CSV (regeneratable from findings/*.json)
+research/v4-postflop/probe_priority_rows.csv
+research/v4-postflop/probe_phase2_rows.csv
