@@ -1,0 +1,1010 @@
+[
+  {
+    "n": 6768,
+    "mean_ev_gap": 11.385,
+    "max_ev_gap": 86.214,
+    "p90_ev_gap": 25.097,
+    "huge_loss": 12.478,
+    "formula_acc": 66.3,
+    "formula_mean_loss": 1.201,
+    "formula_huge_loss": 5.054,
+    "formula_huge_pct": 23.4,
+    "bimodal_pct": 9.9,
+    "pct_fold": 58.2,
+    "pct_call": 33.3,
+    "pct_raise": 8.5,
+    "per_board_huge_loss": {
+      "d2t_T97": 15.938,
+      "mono_Js": 8.831,
+      "low_853": 12.41,
+      "dry_K72": 9.616,
+      "pair_KK2": 11.723,
+      "dyn_T97": 15.842
+    },
+    "per_board_n": {
+      "d2t_T97": 1128,
+      "mono_Js": 1128,
+      "low_853": 1128,
+      "dry_K72": 1128,
+      "pair_KK2": 1128,
+      "dyn_T97": 1128
+    },
+    "per_board_opp_struct": {
+      "d2t_T97": {
+        "polarization": 0.69,
+        "nut_pct": 0.0,
+        "nut_class": "flush",
+        "strong_pct": 0.317,
+        "weak_pct": 0.373,
+        "nut_eq_median": null
+      },
+      "mono_Js": {
+        "polarization": 0.925,
+        "nut_pct": 0.136,
+        "nut_class": "flush",
+        "strong_pct": 0.373,
+        "weak_pct": 0.552,
+        "nut_eq_median": 0.903
+      },
+      "low_853": {
+        "polarization": 0.727,
+        "nut_pct": 0.0,
+        "nut_class": "set",
+        "strong_pct": 0.3,
+        "weak_pct": 0.427,
+        "nut_eq_median": null
+      },
+      "dry_K72": {
+        "polarization": 0.667,
+        "nut_pct": 0.024,
+        "nut_class": "set",
+        "strong_pct": 0.18,
+        "weak_pct": 0.488,
+        "nut_eq_median": 0.978
+      },
+      "pair_KK2": {
+        "polarization": 0.585,
+        "nut_pct": 0.03,
+        "nut_class": "fullhouse",
+        "strong_pct": 0.235,
+        "weak_pct": 0.349,
+        "nut_eq_median": 0.986
+      },
+      "dyn_T97": {
+        "polarization": 0.669,
+        "nut_pct": 0.119,
+        "nut_class": "straight",
+        "strong_pct": 0.313,
+        "weak_pct": 0.356,
+        "nut_eq_median": 0.938
+      }
+    },
+    "opp_polarization_mean": 0.711,
+    "opp_nut_pct_mean": 0.052,
+    "opp_strong_pct_mean": 0.286,
+    "opp_weak_pct_mean": 0.424,
+    "opp_nut_eq_median_mean": 0.951,
+    "hero_dominates_nut_pct": 0.8,
+    "per_family": {
+      "low_dry": 12.41,
+      "dynamic_2tone": 15.938,
+      "paired": 11.723,
+      "dry_high": 9.616,
+      "monotone": 8.831,
+      "dynamic": 15.842
+    },
+    "id": "P5_A_cash_3bp_turn",
+    "desc": "Cash100 3BP × BB OOP turn def (3BP turn 初取得)",
+    "GT": "Cash6mTest_6mNL100R2",
+    "depth": 100,
+    "target": "turn_def_oop",
+    "n_spots_ok": 0,
+    "n_spots_fail": 0,
+    "n_spots_skipped": 6
+  },
+  {
+    "n": 6768,
+    "mean_ev_gap": 12.41,
+    "max_ev_gap": 91.434,
+    "p90_ev_gap": 29.873,
+    "huge_loss": 13.116,
+    "formula_acc": 66.5,
+    "formula_mean_loss": 1.215,
+    "formula_huge_loss": 5.002,
+    "formula_huge_pct": 23.9,
+    "bimodal_pct": 8.6,
+    "pct_fold": 57.7,
+    "pct_call": 33.1,
+    "pct_raise": 9.3,
+    "per_board_huge_loss": {
+      "d2t_T97": 16.853,
+      "mono_Js": 9.934,
+      "low_853": 14.098,
+      "dry_K72": 11.067,
+      "pair_KK2": 9.776,
+      "dyn_T97": 16.436
+    },
+    "per_board_n": {
+      "d2t_T97": 1128,
+      "mono_Js": 1128,
+      "low_853": 1128,
+      "dry_K72": 1128,
+      "pair_KK2": 1128,
+      "dyn_T97": 1128
+    },
+    "per_board_opp_struct": {
+      "d2t_T97": {
+        "polarization": 0.682,
+        "nut_pct": 0.0,
+        "nut_class": "flush",
+        "strong_pct": 0.322,
+        "weak_pct": 0.36,
+        "nut_eq_median": null
+      },
+      "mono_Js": {
+        "polarization": 0.927,
+        "nut_pct": 0.133,
+        "nut_class": "flush",
+        "strong_pct": 0.396,
+        "weak_pct": 0.531,
+        "nut_eq_median": 0.904
+      },
+      "low_853": {
+        "polarization": 0.675,
+        "nut_pct": 0.0,
+        "nut_class": "set",
+        "strong_pct": 0.265,
+        "weak_pct": 0.41,
+        "nut_eq_median": null
+      },
+      "dry_K72": {
+        "polarization": 0.623,
+        "nut_pct": 0.023,
+        "nut_class": "set",
+        "strong_pct": 0.16,
+        "weak_pct": 0.463,
+        "nut_eq_median": 0.976
+      },
+      "pair_KK2": {
+        "polarization": 0.739,
+        "nut_pct": 0.02,
+        "nut_class": "fullhouse",
+        "strong_pct": 0.2,
+        "weak_pct": 0.539,
+        "nut_eq_median": 0.995
+      },
+      "dyn_T97": {
+        "polarization": 0.636,
+        "nut_pct": 0.11,
+        "nut_class": "straight",
+        "strong_pct": 0.278,
+        "weak_pct": 0.358,
+        "nut_eq_median": 0.94
+      }
+    },
+    "opp_polarization_mean": 0.714,
+    "opp_nut_pct_mean": 0.048,
+    "opp_strong_pct_mean": 0.27,
+    "opp_weak_pct_mean": 0.444,
+    "opp_nut_eq_median_mean": 0.954,
+    "hero_dominates_nut_pct": 0.8,
+    "per_family": {
+      "low_dry": 14.098,
+      "dynamic_2tone": 16.853,
+      "paired": 9.776,
+      "dry_high": 11.067,
+      "monotone": 9.934,
+      "dynamic": 16.436
+    },
+    "id": "P5_A_mtt_3bp_turn",
+    "desc": "MTT100 3BP × BB OOP turn def",
+    "GT": "MTTGeneral_8m",
+    "depth": 100,
+    "target": "turn_def_oop",
+    "n_spots_ok": 0,
+    "n_spots_fail": 0,
+    "n_spots_skipped": 6
+  },
+  {
+    "n": 6486,
+    "mean_ev_gap": 26.241,
+    "max_ev_gap": 143.6,
+    "p90_ev_gap": 93.257,
+    "huge_loss": 29.202,
+    "formula_acc": 77.1,
+    "formula_mean_loss": 5.603,
+    "formula_huge_loss": 28.654,
+    "formula_huge_pct": 19.5,
+    "bimodal_pct": 6.6,
+    "pct_fold": 68.1,
+    "pct_call": 31.9,
+    "pct_raise": 0.0,
+    "per_board_huge_loss": {
+      "d2t_T97": 32.926,
+      "mono_Js": 21.558,
+      "low_853": 31.507,
+      "dry_K72": 22.406,
+      "pair_KK2": 32.336,
+      "dyn_T97": 34.858
+    },
+    "per_board_n": {
+      "d2t_T97": 1081,
+      "mono_Js": 1081,
+      "low_853": 1081,
+      "dry_K72": 1081,
+      "pair_KK2": 1081,
+      "dyn_T97": 1081
+    },
+    "per_board_opp_struct": {
+      "d2t_T97": {
+        "polarization": 0.941,
+        "nut_pct": 0.0,
+        "nut_class": "flush",
+        "strong_pct": 0.715,
+        "weak_pct": 0.226,
+        "nut_eq_median": null
+      },
+      "mono_Js": {
+        "polarization": 1.0,
+        "nut_pct": 0.242,
+        "nut_class": "flush",
+        "strong_pct": 0.676,
+        "weak_pct": 0.324,
+        "nut_eq_median": 0.904
+      },
+      "low_853": {
+        "polarization": 1.0,
+        "nut_pct": 0.0,
+        "nut_class": "set",
+        "strong_pct": 0.719,
+        "weak_pct": 0.281,
+        "nut_eq_median": null
+      },
+      "dry_K72": {
+        "polarization": 0.669,
+        "nut_pct": 0.06,
+        "nut_class": "set",
+        "strong_pct": 0.35,
+        "weak_pct": 0.319,
+        "nut_eq_median": 0.981
+      },
+      "pair_KK2": {
+        "polarization": 0.687,
+        "nut_pct": 0.071,
+        "nut_class": "fullhouse",
+        "strong_pct": 0.352,
+        "weak_pct": 0.335,
+        "nut_eq_median": 0.995
+      },
+      "dyn_T97": {
+        "polarization": 0.922,
+        "nut_pct": 0.714,
+        "nut_class": "straight",
+        "strong_pct": 0.714,
+        "weak_pct": 0.208,
+        "nut_eq_median": 0.907
+      }
+    },
+    "opp_polarization_mean": 0.87,
+    "opp_nut_pct_mean": 0.181,
+    "opp_strong_pct_mean": 0.588,
+    "opp_weak_pct_mean": 0.282,
+    "opp_nut_eq_median_mean": 0.947,
+    "hero_dominates_nut_pct": 1.2,
+    "per_family": {
+      "low_dry": 31.507,
+      "dynamic_2tone": 32.926,
+      "paired": 32.336,
+      "dry_high": 22.406,
+      "monotone": 21.558,
+      "dynamic": 34.858
+    },
+    "id": "P5_A_mtt_3bp_river",
+    "desc": "MTT100 3BP × BB OOP river def",
+    "GT": "MTTGeneral_8m",
+    "depth": 100,
+    "target": "river_def_oop",
+    "n_spots_ok": 0,
+    "n_spots_fail": 0,
+    "n_spots_skipped": 6
+  },
+  {
+    "n": 3093,
+    "mean_ev_gap": 2.147,
+    "max_ev_gap": 24.041,
+    "p90_ev_gap": 6.188,
+    "huge_loss": 3.362,
+    "formula_acc": null,
+    "formula_mean_loss": null,
+    "formula_huge_loss": null,
+    "formula_huge_pct": null,
+    "bimodal_pct": 16.0,
+    "pct_fold": 39.6,
+    "pct_call": 55.9,
+    "pct_raise": 4.5,
+    "per_board_huge_loss": {
+      "d2t_T97": 3.032,
+      "mono_Js": 2.504,
+      "low_853": 4.573,
+      "dry_K72": 3.813,
+      "pair_KK2": 3.744,
+      "dyn_T97": 3.266
+    },
+    "per_board_n": {
+      "d2t_T97": 504,
+      "mono_Js": 526,
+      "low_853": 530,
+      "dry_K72": 523,
+      "pair_KK2": 506,
+      "dyn_T97": 504
+    },
+    "per_board_opp_struct": {
+      "d2t_T97": {
+        "polarization": 0.745,
+        "nut_pct": 0.0,
+        "nut_class": "flush",
+        "strong_pct": 0.168,
+        "weak_pct": 0.578,
+        "nut_eq_median": null
+      },
+      "mono_Js": {
+        "polarization": 0.924,
+        "nut_pct": 0.152,
+        "nut_class": "flush",
+        "strong_pct": 0.313,
+        "weak_pct": 0.611,
+        "nut_eq_median": 0.929
+      },
+      "low_853": {
+        "polarization": 0.622,
+        "nut_pct": 0.0,
+        "nut_class": "set",
+        "strong_pct": 0.09,
+        "weak_pct": 0.532,
+        "nut_eq_median": null
+      },
+      "dry_K72": {
+        "polarization": 0.501,
+        "nut_pct": 0.016,
+        "nut_class": "set",
+        "strong_pct": 0.057,
+        "weak_pct": 0.444,
+        "nut_eq_median": 0.969
+      },
+      "pair_KK2": {
+        "polarization": 0.667,
+        "nut_pct": 0.02,
+        "nut_class": "fullhouse",
+        "strong_pct": 0.139,
+        "weak_pct": 0.528,
+        "nut_eq_median": 0.974
+      },
+      "dyn_T97": {
+        "polarization": 0.721,
+        "nut_pct": 0.052,
+        "nut_class": "straight",
+        "strong_pct": 0.165,
+        "weak_pct": 0.556,
+        "nut_eq_median": 0.964
+      }
+    },
+    "opp_polarization_mean": 0.696,
+    "opp_nut_pct_mean": 0.04,
+    "opp_strong_pct_mean": 0.155,
+    "opp_weak_pct_mean": 0.541,
+    "opp_nut_eq_median_mean": 0.959,
+    "hero_dominates_nut_pct": 0.5,
+    "per_family": {
+      "low_dry": 4.573,
+      "dynamic_2tone": 3.032,
+      "paired": 3.744,
+      "dry_high": 3.813,
+      "monotone": 2.504,
+      "dynamic": 3.266
+    },
+    "id": "P5_D_turn_donk_def",
+    "desc": "Cash100 SRP × BTN IP def vs BB turn donk (after flop X-X)",
+    "GT": "Cash6mTest_6mNL100R2",
+    "depth": 100,
+    "target": "turn_def_ip_donk",
+    "n_spots_ok": 0,
+    "n_spots_fail": 0,
+    "n_spots_skipped": 6
+  },
+  {
+    "n": 2940,
+    "mean_ev_gap": 3.563,
+    "max_ev_gap": 44.101,
+    "p90_ev_gap": 7.866,
+    "huge_loss": 4.689,
+    "formula_acc": null,
+    "formula_mean_loss": null,
+    "formula_huge_loss": null,
+    "formula_huge_pct": null,
+    "bimodal_pct": 9.7,
+    "pct_fold": 35.6,
+    "pct_call": 46.4,
+    "pct_raise": 18.0,
+    "per_board_huge_loss": {
+      "d2t_T97": 4.104,
+      "mono_Js": 4.418,
+      "low_853": 6.2,
+      "dry_K72": 4.345,
+      "pair_KK2": 4.708,
+      "dyn_T97": 3.695
+    },
+    "per_board_n": {
+      "d2t_T97": 479,
+      "mono_Js": 500,
+      "low_853": 504,
+      "dry_K72": 497,
+      "pair_KK2": 481,
+      "dyn_T97": 479
+    },
+    "per_board_opp_struct": {
+      "d2t_T97": {
+        "polarization": 0.908,
+        "nut_pct": 0.0,
+        "nut_class": "flush",
+        "strong_pct": 0.75,
+        "weak_pct": 0.158,
+        "nut_eq_median": null
+      },
+      "mono_Js": {
+        "polarization": 0.396,
+        "nut_pct": 0.128,
+        "nut_class": "flush",
+        "strong_pct": 0.213,
+        "weak_pct": 0.183,
+        "nut_eq_median": 0.97
+      },
+      "low_853": {
+        "polarization": 0.963,
+        "nut_pct": 0.0,
+        "nut_class": "set",
+        "strong_pct": 0.608,
+        "weak_pct": 0.355,
+        "nut_eq_median": null
+      },
+      "dry_K72": {
+        "polarization": 0.285,
+        "nut_pct": 0.001,
+        "nut_class": "set",
+        "strong_pct": 0.101,
+        "weak_pct": 0.184,
+        "nut_eq_median": 0.982
+      },
+      "pair_KK2": {
+        "polarization": 0.528,
+        "nut_pct": 0.033,
+        "nut_class": "fullhouse",
+        "strong_pct": 0.153,
+        "weak_pct": 0.375,
+        "nut_eq_median": 0.995
+      },
+      "dyn_T97": {
+        "polarization": 0.906,
+        "nut_pct": 0.454,
+        "nut_class": "straight",
+        "strong_pct": 0.779,
+        "weak_pct": 0.127,
+        "nut_eq_median": 0.911
+      }
+    },
+    "opp_polarization_mean": 0.663,
+    "opp_nut_pct_mean": 0.101,
+    "opp_strong_pct_mean": 0.432,
+    "opp_weak_pct_mean": 0.231,
+    "opp_nut_eq_median_mean": 0.965,
+    "hero_dominates_nut_pct": 3.7,
+    "per_family": {
+      "low_dry": 6.2,
+      "dynamic_2tone": 4.104,
+      "paired": 4.708,
+      "dry_high": 4.345,
+      "monotone": 4.418,
+      "dynamic": 3.695
+    },
+    "id": "P5_D_river_donk_def",
+    "desc": "Cash100 SRP × BTN IP def vs BB river donk (after flop X-cbet-C, turn X-X)",
+    "GT": "Cash6mTest_6mNL100R2",
+    "depth": 100,
+    "target": "river_def_ip_donk",
+    "n_spots_ok": 0,
+    "n_spots_fail": 0,
+    "n_spots_skipped": 6
+  },
+  {
+    "n": 3093,
+    "mean_ev_gap": 9.279,
+    "max_ev_gap": 116.412,
+    "p90_ev_gap": 17.011,
+    "huge_loss": 9.373,
+    "formula_acc": null,
+    "formula_mean_loss": null,
+    "formula_huge_loss": null,
+    "formula_huge_pct": null,
+    "bimodal_pct": 6.4,
+    "pct_fold": 75.7,
+    "pct_call": 20.4,
+    "pct_raise": 4.0,
+    "per_board_huge_loss": {
+      "d2t_T97": 10.573,
+      "mono_Js": 6.016,
+      "low_853": 10.625,
+      "dry_K72": 11.633,
+      "pair_KK2": 4.496,
+      "dyn_T97": 12.707
+    },
+    "per_board_n": {
+      "d2t_T97": 504,
+      "mono_Js": 526,
+      "low_853": 530,
+      "dry_K72": 523,
+      "pair_KK2": 506,
+      "dyn_T97": 504
+    },
+    "per_board_opp_struct": {
+      "d2t_T97": {
+        "polarization": 0.695,
+        "nut_pct": 0.0,
+        "nut_class": "flush",
+        "strong_pct": 0.349,
+        "weak_pct": 0.346,
+        "nut_eq_median": null
+      },
+      "mono_Js": {
+        "polarization": 0.824,
+        "nut_pct": 0.275,
+        "nut_class": "flush",
+        "strong_pct": 0.435,
+        "weak_pct": 0.389,
+        "nut_eq_median": 0.794
+      },
+      "low_853": {
+        "polarization": 0.901,
+        "nut_pct": 0.0,
+        "nut_class": "set",
+        "strong_pct": 0.561,
+        "weak_pct": 0.339,
+        "nut_eq_median": null
+      },
+      "dry_K72": {
+        "polarization": 0.722,
+        "nut_pct": 0.356,
+        "nut_class": "set",
+        "strong_pct": 0.424,
+        "weak_pct": 0.298,
+        "nut_eq_median": 0.902
+      },
+      "pair_KK2": {
+        "polarization": 0.99,
+        "nut_pct": 0.121,
+        "nut_class": "fullhouse",
+        "strong_pct": 0.504,
+        "weak_pct": 0.486,
+        "nut_eq_median": 0.938
+      },
+      "dyn_T97": {
+        "polarization": 0.714,
+        "nut_pct": 0.296,
+        "nut_class": "straight",
+        "strong_pct": 0.504,
+        "weak_pct": 0.209,
+        "nut_eq_median": 0.882
+      }
+    },
+    "opp_polarization_mean": 0.808,
+    "opp_nut_pct_mean": 0.175,
+    "opp_strong_pct_mean": 0.463,
+    "opp_weak_pct_mean": 0.345,
+    "opp_nut_eq_median_mean": 0.878,
+    "hero_dominates_nut_pct": 0.6,
+    "per_family": {
+      "low_dry": 10.625,
+      "dynamic_2tone": 10.573,
+      "paired": 4.496,
+      "dry_high": 11.633,
+      "monotone": 6.016,
+      "dynamic": 12.707
+    },
+    "id": "P5_D_turn_cr_def",
+    "desc": "Cash100 SRP × BTN IP def vs BB turn CR (after flop X-cbet-C, turn X-barrel)",
+    "GT": "Cash6mTest_6mNL100R2",
+    "depth": 100,
+    "target": "turn_def_ip_cr",
+    "n_spots_ok": 6,
+    "n_spots_fail": 0,
+    "n_spots_skipped": 0
+  },
+  {
+    "n": 6486,
+    "mean_ev_gap": 22.608,
+    "max_ev_gap": 139.1,
+    "p90_ev_gap": 65.705,
+    "huge_loss": 24.89,
+    "formula_acc": 78.0,
+    "formula_mean_loss": 4.017,
+    "formula_huge_loss": 22.466,
+    "formula_huge_pct": 17.8,
+    "bimodal_pct": 5.6,
+    "pct_fold": 71.2,
+    "pct_call": 28.8,
+    "pct_raise": 0.0,
+    "per_board_huge_loss": {
+      "dyn_875": 24.794,
+      "low_752": 33.531,
+      "pair_J88": 16.929,
+      "d2t_J96": 26.162,
+      "dry_Q73": 24.581,
+      "mono_Qh": 23.585
+    },
+    "per_board_n": {
+      "dyn_875": 1081,
+      "low_752": 1081,
+      "pair_J88": 1081,
+      "d2t_J96": 1081,
+      "dry_Q73": 1081,
+      "mono_Qh": 1081
+    },
+    "per_board_opp_struct": {
+      "dyn_875": {
+        "polarization": 0.993,
+        "nut_pct": 0.187,
+        "nut_class": "straight",
+        "strong_pct": 0.704,
+        "weak_pct": 0.289,
+        "nut_eq_median": 0.948
+      },
+      "low_752": {
+        "polarization": 0.726,
+        "nut_pct": 0.046,
+        "nut_class": "set",
+        "strong_pct": 0.434,
+        "weak_pct": 0.291,
+        "nut_eq_median": 0.907
+      },
+      "pair_J88": {
+        "polarization": 1.0,
+        "nut_pct": 0.196,
+        "nut_class": "fullhouse",
+        "strong_pct": 0.675,
+        "weak_pct": 0.325,
+        "nut_eq_median": 0.525
+      },
+      "d2t_J96": {
+        "polarization": 0.811,
+        "nut_pct": 0.0,
+        "nut_class": "flush",
+        "strong_pct": 0.486,
+        "weak_pct": 0.325,
+        "nut_eq_median": null
+      },
+      "dry_Q73": {
+        "polarization": 0.992,
+        "nut_pct": 0.077,
+        "nut_class": "set",
+        "strong_pct": 0.672,
+        "weak_pct": 0.32,
+        "nut_eq_median": 0.895
+      },
+      "mono_Qh": {
+        "polarization": 0.877,
+        "nut_pct": 0.449,
+        "nut_class": "flush",
+        "strong_pct": 0.673,
+        "weak_pct": 0.205,
+        "nut_eq_median": 0.617
+      }
+    },
+    "opp_polarization_mean": 0.9,
+    "opp_nut_pct_mean": 0.159,
+    "opp_strong_pct_mean": 0.607,
+    "opp_weak_pct_mean": 0.292,
+    "opp_nut_eq_median_mean": 0.778,
+    "hero_dominates_nut_pct": 4.6,
+    "per_family": {
+      "low_dry": 33.531,
+      "dynamic_2tone": 26.162,
+      "paired": 16.929,
+      "dry_high": 24.581,
+      "monotone": 23.585,
+      "dynamic": 24.794
+    },
+    "id": "P5_B_3bp_river_extra",
+    "desc": "Cash100 3BP × BB OOP river def (EXTRA 6 boards、phase2 未使用)",
+    "GT": "Cash6mTest_6mNL100R2",
+    "depth": 100,
+    "target": "river_def_oop",
+    "n_spots_ok": 0,
+    "n_spots_fail": 0,
+    "n_spots_skipped": 6
+  },
+  {
+    "n": 17296,
+    "mean_ev_gap": 36.969,
+    "max_ev_gap": 150.6,
+    "p90_ev_gap": 118.954,
+    "huge_loss": 43.375,
+    "formula_acc": 60.5,
+    "formula_mean_loss": 13.191,
+    "formula_huge_loss": 38.631,
+    "formula_huge_pct": 34.1,
+    "bimodal_pct": 11.1,
+    "pct_fold": 47.2,
+    "pct_call": 52.8,
+    "pct_raise": 0.0,
+    "per_board_huge_loss": {
+      "pair_KK2": 47.439,
+      "dry_K72": 41.584,
+      "mono_Js": 40.301,
+      "dyn_T97": 44.597
+    },
+    "per_board_n": {
+      "pair_KK2": 4324,
+      "dry_K72": 4324,
+      "mono_Js": 4324,
+      "dyn_T97": 4324
+    },
+    "per_board_opp_struct": {
+      "pair_KK2": {
+        "polarization": 0.445,
+        "nut_pct": 0.047,
+        "nut_class": "fullhouse",
+        "strong_pct": 0.2,
+        "weak_pct": 0.245,
+        "nut_eq_median": 0.987
+      },
+      "dry_K72": {
+        "polarization": 0.407,
+        "nut_pct": 0.019,
+        "nut_class": "set",
+        "strong_pct": 0.161,
+        "weak_pct": 0.246,
+        "nut_eq_median": 0.996
+      },
+      "mono_Js": {
+        "polarization": 0.586,
+        "nut_pct": 0.03,
+        "nut_class": "flush",
+        "strong_pct": 0.339,
+        "weak_pct": 0.247,
+        "nut_eq_median": 0.893
+      },
+      "dyn_T97": {
+        "polarization": 0.999,
+        "nut_pct": 0.564,
+        "nut_class": "straight",
+        "strong_pct": 0.757,
+        "weak_pct": 0.242,
+        "nut_eq_median": 0.908
+      }
+    },
+    "opp_polarization_mean": 0.638,
+    "opp_nut_pct_mean": 0.168,
+    "opp_strong_pct_mean": 0.373,
+    "opp_weak_pct_mean": 0.266,
+    "opp_nut_eq_median_mean": 0.925,
+    "hero_dominates_nut_pct": 5.4,
+    "per_family": {
+      "dynamic": 44.597,
+      "paired": 47.439,
+      "dry_high": 41.584,
+      "monotone": 40.301
+    },
+    "id": "P5_B_4bp_river_traj",
+    "desc": "Cash100 4BP × BB OOP river def (4 boards × 2 turn × 2 river, trajectory variance)",
+    "GT": "Cash6mTest_6mNL100R2",
+    "depth": 100,
+    "target": "river_def_oop",
+    "n_spots_ok": 0,
+    "n_spots_fail": 0,
+    "n_spots_skipped": 16
+  },
+  {
+    "n": 3065,
+    "mean_ev_gap": 4.478,
+    "max_ev_gap": 37.261,
+    "p90_ev_gap": 12.168,
+    "huge_loss": 4.967,
+    "formula_acc": 72.1,
+    "formula_mean_loss": 0.24,
+    "formula_huge_loss": 1.678,
+    "formula_huge_pct": 13.2,
+    "bimodal_pct": 7.3,
+    "pct_fold": 63.4,
+    "pct_call": 30.1,
+    "pct_raise": 6.6,
+    "per_board_huge_loss": {
+      "d2t_T97": 3.002,
+      "mono_Js": 2.824,
+      "low_853": 2.437,
+      "dry_K72": 9.761,
+      "pair_KK2": 2.831,
+      "dyn_T97": 7.648
+    },
+    "per_board_n": {
+      "d2t_T97": 501,
+      "mono_Js": 517,
+      "low_853": 518,
+      "dry_K72": 516,
+      "pair_KK2": 512,
+      "dyn_T97": 501
+    },
+    "per_board_opp_struct": {
+      "d2t_T97": {
+        "polarization": 0.761,
+        "nut_pct": 0.0,
+        "nut_class": "flush",
+        "strong_pct": 0.255,
+        "weak_pct": 0.505,
+        "nut_eq_median": null
+      },
+      "mono_Js": {
+        "polarization": 0.75,
+        "nut_pct": 0.162,
+        "nut_class": "flush",
+        "strong_pct": 0.322,
+        "weak_pct": 0.428,
+        "nut_eq_median": 0.881
+      },
+      "low_853": {
+        "polarization": 0.824,
+        "nut_pct": 0.0,
+        "nut_class": "set",
+        "strong_pct": 0.346,
+        "weak_pct": 0.478,
+        "nut_eq_median": null
+      },
+      "dry_K72": {
+        "polarization": 0.699,
+        "nut_pct": 0.048,
+        "nut_class": "set",
+        "strong_pct": 0.144,
+        "weak_pct": 0.555,
+        "nut_eq_median": 0.973
+      },
+      "pair_KK2": {
+        "polarization": 0.806,
+        "nut_pct": 0.0,
+        "nut_class": "fullhouse",
+        "strong_pct": 0.308,
+        "weak_pct": 0.498,
+        "nut_eq_median": 0.944
+      },
+      "dyn_T97": {
+        "polarization": 0.876,
+        "nut_pct": 0.0,
+        "nut_class": "straight",
+        "strong_pct": 0.295,
+        "weak_pct": 0.581,
+        "nut_eq_median": null
+      }
+    },
+    "opp_polarization_mean": 0.786,
+    "opp_nut_pct_mean": 0.035,
+    "opp_strong_pct_mean": 0.278,
+    "opp_weak_pct_mean": 0.507,
+    "opp_nut_eq_median_mean": 0.933,
+    "hero_dominates_nut_pct": 1.1,
+    "per_family": {
+      "low_dry": 2.437,
+      "dynamic_2tone": 3.002,
+      "paired": 2.831,
+      "dry_high": 9.761,
+      "monotone": 2.824,
+      "dynamic": 7.648
+    },
+    "id": "P5_C_hj_open_turn",
+    "desc": "Cash100 HJ open × BB call × BB OOP turn def (opener position turn)",
+    "GT": "Cash6mTest_6mNL100R2",
+    "depth": 100,
+    "target": "turn_def_oop",
+    "n_spots_ok": 0,
+    "n_spots_fail": 0,
+    "n_spots_skipped": 6
+  },
+  {
+    "n": 3477,
+    "mean_ev_gap": 5.429,
+    "max_ev_gap": 45.293,
+    "p90_ev_gap": 14.25,
+    "huge_loss": 6.085,
+    "formula_acc": 71.9,
+    "formula_mean_loss": 0.388,
+    "formula_huge_loss": 2.432,
+    "formula_huge_pct": 15.2,
+    "bimodal_pct": 9.2,
+    "pct_fold": 64.8,
+    "pct_call": 29.2,
+    "pct_raise": 5.9,
+    "per_board_huge_loss": {
+      "d2t_T97": 13.319,
+      "mono_Js": 3.037,
+      "low_853": 2.701,
+      "dry_K72": 9.994,
+      "pair_KK2": 2.582,
+      "dyn_T97": 2.985
+    },
+    "per_board_n": {
+      "d2t_T97": 566,
+      "mono_Js": 583,
+      "low_853": 590,
+      "dry_K72": 587,
+      "pair_KK2": 586,
+      "dyn_T97": 565
+    },
+    "per_board_opp_struct": {
+      "d2t_T97": {
+        "polarization": 0.686,
+        "nut_pct": 0.0,
+        "nut_class": "flush",
+        "strong_pct": 0.327,
+        "weak_pct": 0.359,
+        "nut_eq_median": null
+      },
+      "mono_Js": {
+        "polarization": 0.746,
+        "nut_pct": 0.155,
+        "nut_class": "flush",
+        "strong_pct": 0.314,
+        "weak_pct": 0.433,
+        "nut_eq_median": 0.885
+      },
+      "low_853": {
+        "polarization": 0.759,
+        "nut_pct": 0.0,
+        "nut_class": "set",
+        "strong_pct": 0.278,
+        "weak_pct": 0.48,
+        "nut_eq_median": null
+      },
+      "dry_K72": {
+        "polarization": 0.723,
+        "nut_pct": 0.044,
+        "nut_class": "set",
+        "strong_pct": 0.149,
+        "weak_pct": 0.574,
+        "nut_eq_median": 0.97
+      },
+      "pair_KK2": {
+        "polarization": 0.796,
+        "nut_pct": 0.012,
+        "nut_class": "fullhouse",
+        "strong_pct": 0.263,
+        "weak_pct": 0.533,
+        "nut_eq_median": 0.957
+      },
+      "dyn_T97": {
+        "polarization": 0.768,
+        "nut_pct": 0.036,
+        "nut_class": "straight",
+        "strong_pct": 0.261,
+        "weak_pct": 0.506,
+        "nut_eq_median": 0.951
+      }
+    },
+    "opp_polarization_mean": 0.747,
+    "opp_nut_pct_mean": 0.041,
+    "opp_strong_pct_mean": 0.265,
+    "opp_weak_pct_mean": 0.481,
+    "opp_nut_eq_median_mean": 0.941,
+    "hero_dominates_nut_pct": 0.9,
+    "per_family": {
+      "low_dry": 2.701,
+      "dynamic_2tone": 13.319,
+      "paired": 2.582,
+      "dry_high": 9.994,
+      "monotone": 3.037,
+      "dynamic": 2.985
+    },
+    "id": "P5_C_co_open_turn",
+    "desc": "Cash100 CO open × BB call × BB OOP turn def (opener position turn)",
+    "GT": "Cash6mTest_6mNL100R2",
+    "depth": 100,
+    "target": "turn_def_oop",
+    "n_spots_ok": 0,
+    "n_spots_fail": 0,
+    "n_spots_skipped": 6
+  }
+]

@@ -224,6 +224,35 @@ def walk_to_target(sc, board_flop, turn_card="", river_card=""):
         sols = call(board_flop, donk)
         return sols, bet_codes, None if sols else "no IP donk def"
 
+    if target == "turn_def_ip_donk":
+        # flop X-X (both check) → turn OOP donks → IP defends
+        turn_board = board_flop + turn_card
+        sols_t = call(turn_board, "X-X", "")
+        if not sols_t: return None, bet_codes, "no turn after X-X"
+        turn_donk = gto_api.dominant_raise_code(sols_t, oop_pos)
+        if not turn_donk: return None, bet_codes, "no OOP turn donk code"
+        bet_codes["turn_donk"] = turn_donk
+        sols2 = call(turn_board, "X-X", turn_donk)
+        return sols2, bet_codes, None if sols2 else "no IP turn donk def"
+
+    if target == "river_def_ip_donk":
+        # flop X-cbet-C, turn X-X (check check), river OOP donks → IP defends
+        sols_f = call(board_flop, "X")
+        if not sols_f: return None, bet_codes, "no flop X"
+        cbet = gto_api.dominant_raise_code(sols_f, ip_pos)
+        if not cbet: return None, bet_codes, "no IP cbet"
+        bet_codes["cbet"] = cbet
+        flop_act = f"X-{cbet}-C"
+        turn_board = board_flop + turn_card
+        river_board = turn_board + river_card
+        sols_r = call(river_board, flop_act, "X-X", "")
+        if not sols_r: return None, bet_codes, "no river after X-X"
+        river_donk = gto_api.dominant_raise_code(sols_r, oop_pos)
+        if not river_donk: return None, bet_codes, "no OOP river donk code"
+        bet_codes["river_donk"] = river_donk
+        sols2 = call(river_board, flop_act, "X-X", river_donk)
+        return sols2, bet_codes, None if sols2 else "no IP river donk def"
+
     # all other targets walk through X-cbet
     sols = call(board_flop, "X")
     if not sols: return None, bet_codes, "no flop X"
@@ -255,6 +284,16 @@ def walk_to_target(sc, board_flop, turn_card="", river_card=""):
     if target == "turn_def_oop":
         sols2 = call(turn_board, flop_act, f"X-{barrel}")
         return sols2, bet_codes, None if sols2 else "no turn OOP def"
+
+    if target == "turn_def_ip_cr":
+        # turn X-barrel に対し OOP raise (CR) → IP defends
+        sols_oop = call(turn_board, flop_act, f"X-{barrel}")
+        if not sols_oop: return None, bet_codes, "no turn CR node"
+        turn_cr = gto_api.dominant_raise_code(sols_oop, oop_pos)
+        if not turn_cr: return None, bet_codes, "no OOP turn CR code"
+        bet_codes["turn_cr"] = turn_cr
+        sols2 = call(turn_board, flop_act, f"X-{barrel}-{turn_cr}")
+        return sols2, bet_codes, None if sols2 else "no IP turn CR def"
 
     river_board = turn_board + river_card
     turn_act = f"X-{barrel}-C"
