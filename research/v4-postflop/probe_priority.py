@@ -268,6 +268,16 @@ def walk_to_target(sc, board_flop, turn_card="", river_card=""):
         sols2 = call(river_board, flop_act, turn_act, f"X-{river_bet}")
         return sols2, bet_codes, None if sols2 else "no river OOP def"
 
+    if target == "river_def_ip_allin":
+        # OOP がIP bet に対して allin shove → IP がそれに対する F/C 判断
+        sols_oop = call(river_board, flop_act, turn_act, f"X-{river_bet}")
+        if not sols_oop: return None, bet_codes, "no OOP shove node"
+        oop_allin = gto_api.dominant_raise_code(sols_oop, oop_pos)
+        if not oop_allin: return None, bet_codes, "no OOP allin code (no shove option)"
+        bet_codes["oop_allin"] = oop_allin
+        sols2 = call(river_board, flop_act, turn_act, f"X-{river_bet}-{oop_allin}")
+        return sols2, bet_codes, None if sols2 else "no IP allin def"
+
     return None, bet_codes, f"unknown target {target}"
 
 

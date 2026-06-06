@@ -1,0 +1,48 @@
+{"spot_id": "N_bvb_srp_river_dry_K72_3c_8h", "status": "FAIL", "dt_ms": 472, "ts": 1780782819.602105, "err": "no flop X"}
+{"spot_id": "N_bvb_srp_river_low_853_3c_8h", "status": "FAIL", "dt_ms": 373, "ts": 1780782819.9763556, "err": "no flop X"}
+{"spot_id": "N_bvb_srp_river_dyn_T97_3c_8h", "status": "FAIL", "dt_ms": 354, "ts": 1780782820.3308575, "err": "no flop X"}
+{"spot_id": "N_bvb_srp_river_d2t_T97_3c_8h", "status": "FAIL", "dt_ms": 348, "ts": 1780782820.6795976, "err": "no flop X"}
+{"spot_id": "N_bvb_srp_river_pair_KK2_3c_8h", "status": "FAIL", "dt_ms": 367, "ts": 1780782821.0474937, "err": "no flop X"}
+{"spot_id": "N_bvb_srp_river_mono_Js_3c_8h", "status": "FAIL", "dt_ms": 365, "ts": 1780782821.4136274, "err": "no flop X"}
+{"spot_id": "N_btn_sb_river_dry_K72_3c_8h", "status": "FAIL", "dt_ms": 360, "ts": 1780782821.7749474, "err": "no flop X"}
+{"spot_id": "N_btn_sb_river_low_853_3c_8h", "status": "FAIL", "dt_ms": 370, "ts": 1780782822.1460462, "err": "no flop X"}
+{"spot_id": "N_btn_sb_river_dyn_T97_3c_8h", "status": "FAIL", "dt_ms": 360, "ts": 1780782822.506476, "err": "no flop X"}
+{"spot_id": "N_btn_sb_river_d2t_T97_3c_8h", "status": "FAIL", "dt_ms": 372, "ts": 1780782822.878837, "err": "no flop X"}
+{"spot_id": "N_btn_sb_river_pair_KK2_3c_8h", "status": "FAIL", "dt_ms": 355, "ts": 1780782823.234961, "err": "no flop X"}
+{"spot_id": "N_btn_sb_river_mono_Js_3c_8h", "status": "FAIL", "dt_ms": 350, "ts": 1780782823.5861535, "err": "no flop X"}
+{"spot_id": "N_cash_4bp_turn_dry_K72_3c", "status": "FAIL", "dt_ms": 350, "ts": 1780782823.936687, "err": "no flop X"}
+{"spot_id": "N_cash_4bp_turn_low_853_3c", "status": "FAIL", "dt_ms": 336, "ts": 1780782824.2735283, "err": "no flop X"}
+{"spot_id": "N_cash_4bp_turn_dyn_T97_3c", "status": "FAIL", "dt_ms": 362, "ts": 1780782824.6368277, "err": "no flop X"}
+{"spot_id": "N_cash_4bp_turn_d2t_T97_3c", "status": "FAIL", "dt_ms": 345, "ts": 1780782824.9821522, "err": "no flop X"}
+{"spot_id": "N_cash_4bp_turn_pair_KK2_3c", "status": "FAIL", "dt_ms": 347, "ts": 1780782825.3303497, "err": "no flop X"}
+{"spot_id": "N_cash_4bp_turn_mono_Js_3c", "status": "FAIL", "dt_ms": 345, "ts": 1780782825.676584, "err": "no flop X"}
+{"spot_id": "N_cash_4bp_river_dry_K72_3c_8h", "status": "FAIL", "dt_ms": 350, "ts": 1780782826.027398, "err": "no flop X"}
+{"spot_id": "N_cash_4bp_river_low_853_3c_8h", "status": "FAIL", "dt_ms": 344, "ts": 1780782826.3719482, "err": "no flop X"}
+{"spot_id": "N_cash_4bp_river_dyn_T97_3c_8h", "status": "FAIL", "dt_ms": 348, "ts": 1780782826.7211146, "err": "no flop X"}
+{"spot_id": "N_cash_4bp_river_d2t_T97_3c_8h", "status": "FAIL", "dt_ms": 354, "ts": 1780782827.0756423, "err": "no flop X"}
+{"spot_id": "N_cash_4bp_river_pair_KK2_3c_8h", "status": "FAIL", "dt_ms": 436, "ts": 1780782827.5119987, "err": "no flop X"}
+{"spot_id": "N_cash_4bp_river_mono_Js_3c_8h", "status": "FAIL", "dt_ms": 343, "ts": 1780782827.8559277, "err": "no flop X"}
+{"spot_id": "N_bvb_srp_river_dry_K72_3c_8h", "status": "OK", "dt_ms": 7283, "ts": 1780782912.8283508, "bet_codes": {"cbet": "R2", "barrel": "R17.4", "river_bet": "R77.6"}}
+{"spot_id": "N_bvb_srp_river_low_853_3c_8h", "status": "OK", "dt_ms": 7410, "ts": 1780782920.2584648, "bet_codes": {"cbet": "R6.7", "barrel": "R21.4", "river_bet": "R68.9"}}
+{"spot_id": "N_bvb_srp_river_dyn_T97_3c_8h", "status": "OK", "dt_ms": 7367, "ts": 1780782927.6447918, "bet_codes": {"cbet": "R2", "barrel": "R17.4", "river_bet": "R33.6"}}
+{"spot_id": "N_bvb_srp_river_d2t_T97_3c_8h", "status": "OK", "dt_ms": 7383, "ts": 1780782935.0530033, "bet_codes": {"cbet": "R6.7", "barrel": "R21.4", "river_bet": "R68.9"}}
+{"spot_id": "N_bvb_srp_river_pair_KK2_3c_8h", "status": "OK", "dt_ms": 7771, "ts": 1780782942.8420577, "bet_codes": {"cbet": "R2", "barrel": "R6.7", "river_bet": "R17.6"}}
+{"spot_id": "N_bvb_srp_river_mono_Js_3c_8h", "status": "OK", "dt_ms": 6628, "ts": 1780782949.4910712, "bet_codes": {"cbet": "R2", "barrel": "R6.7", "river_bet": "R17.6"}}
+{"spot_id": "N_btn_sb_river_dry_K72_3c_8h", "status": "OK", "dt_ms": 6834, "ts": 1780782956.3917778, "bet_codes": {"cbet": "R1.7", "barrel": "R5.6", "river_bet": "R14.7"}}
+{"spot_id": "N_btn_sb_river_low_853_3c_8h", "status": "OK", "dt_ms": 7002, "ts": 1780782963.4087267, "bet_codes": {"cbet": "R6.1", "barrel": "R20.8", "river_bet": "R71.1"}}
+{"spot_id": "N_btn_sb_river_dyn_T97_3c_8h", "status": "OK", "dt_ms": 6700, "ts": 1780782970.116701, "bet_codes": {"cbet": "R1.7", "barrel": "R5.6", "river_bet": "R14.7"}}
+{"spot_id": "N_btn_sb_river_d2t_T97_3c_8h", "status": "OK", "dt_ms": 6725, "ts": 1780782976.8512297, "bet_codes": {"cbet": "R1.7", "barrel": "R5.6", "river_bet": "R14.7"}}
+{"spot_id": "N_btn_sb_river_pair_KK2_3c_8h", "status": "OK", "dt_ms": 6241, "ts": 1780782983.101203, "bet_codes": {"cbet": "R6.1", "barrel": "R20.8", "river_bet": "R71.1"}}
+{"spot_id": "N_btn_sb_river_mono_Js_3c_8h", "status": "OK", "dt_ms": 6864, "ts": 1780782989.9735358, "bet_codes": {"cbet": "R1.7", "barrel": "R5.6", "river_bet": "R14.7"}}
+{"spot_id": "N_cash_4bp_turn_dry_K72_3c", "status": "OK", "dt_ms": 4602, "ts": 1780782994.599403, "bet_codes": {"cbet": "R8.1", "barrel": "R25"}}
+{"spot_id": "N_cash_4bp_turn_low_853_3c", "status": "OK", "dt_ms": 5511, "ts": 1780783000.1493814, "bet_codes": {"cbet": "R8.1", "barrel": "R25"}}
+{"spot_id": "N_cash_4bp_turn_dyn_T97_3c", "status": "OK", "dt_ms": 4042, "ts": 1780783004.2268188, "bet_codes": {"cbet": "R8.1", "barrel": "R25"}}
+{"spot_id": "N_cash_4bp_turn_d2t_T97_3c", "status": "OK", "dt_ms": 3947, "ts": 1780783008.2046504, "bet_codes": {"cbet": "R8.1", "barrel": "R25"}}
+{"spot_id": "N_cash_4bp_turn_pair_KK2_3c", "status": "OK", "dt_ms": 4175, "ts": 1780783012.4107993, "bet_codes": {"cbet": "R8.1", "barrel": "R25"}}
+{"spot_id": "N_cash_4bp_turn_mono_Js_3c", "status": "OK", "dt_ms": 4178, "ts": 1780783016.6215026, "bet_codes": {"cbet": "R8.1", "barrel": "R25"}}
+{"spot_id": "N_cash_4bp_river_dry_K72_3c_8h", "status": "OK", "dt_ms": 3706, "ts": 1780783020.4515157, "bet_codes": {"cbet": "R8.1", "barrel": "R25", "river_bet": "R46.9"}}
+{"spot_id": "N_cash_4bp_river_low_853_3c_8h", "status": "OK", "dt_ms": 4793, "ts": 1780783025.2776575, "bet_codes": {"cbet": "R8.1", "barrel": "R25", "river_bet": "R46.9"}}
+{"spot_id": "N_cash_4bp_river_dyn_T97_3c_8h", "status": "OK", "dt_ms": 3631, "ts": 1780783028.9389231, "bet_codes": {"cbet": "R8.1", "barrel": "R25", "river_bet": "R46.9"}}
+{"spot_id": "N_cash_4bp_river_d2t_T97_3c_8h", "status": "OK", "dt_ms": 3968, "ts": 1780783032.9395282, "bet_codes": {"cbet": "R8.1", "barrel": "R25", "river_bet": "R46.9"}}
+{"spot_id": "N_cash_4bp_river_pair_KK2_3c_8h", "status": "OK", "dt_ms": 3508, "ts": 1780783036.480678, "bet_codes": {"cbet": "R8.1", "barrel": "R25", "river_bet": "R46.9"}}
+{"spot_id": "N_cash_4bp_river_mono_Js_3c_8h", "status": "OK", "dt_ms": 3715, "ts": 1780783040.226231, "bet_codes": {"cbet": "R8.1", "barrel": "R25", "river_bet": "R46.9"}}

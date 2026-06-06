@@ -1,0 +1,60 @@
+{"spot_id": "A_cash_cr_def_full_dry_K72", "status": "OK", "dt_ms": 2538, "ts": 1780782011.0112693, "bet_codes": {"cbet": "R1.5", "cr": "R4"}}
+{"spot_id": "A_cash_cr_def_full_dry_A94", "status": "OK", "dt_ms": 4156, "ts": 1780782015.1917, "bet_codes": {"cbet": "R1.5", "cr": "R9"}}
+{"spot_id": "A_cash_cr_def_full_dry_Q73", "status": "OK", "dt_ms": 4188, "ts": 1780782019.3993304, "bet_codes": {"cbet": "R1.5", "cr": "R9"}}
+{"spot_id": "A_cash_cr_def_full_low_853", "status": "OK", "dt_ms": 4637, "ts": 1780782024.0540178, "bet_codes": {"cbet": "R5.7", "cr": "R11.4"}}
+{"spot_id": "A_cash_cr_def_full_low_964", "status": "OK", "dt_ms": 4289, "ts": 1780782028.3779526, "bet_codes": {"cbet": "R5.7", "cr": "R11.4"}}
+{"spot_id": "A_cash_cr_def_full_low_752", "status": "OK", "dt_ms": 4477, "ts": 1780782032.874124, "bet_codes": {"cbet": "R5.7", "cr": "R11.4"}}
+{"spot_id": "A_cash_cr_def_full_dyn_T97", "status": "OK", "dt_ms": 4360, "ts": 1780782037.252019, "bet_codes": {"cbet": "R1.5", "cr": "R9"}}
+{"spot_id": "A_cash_cr_def_full_dyn_986", "status": "OK", "dt_ms": 4490, "ts": 1780782041.7628477, "bet_codes": {"cbet": "R5.7", "cr": "R16.3"}}
+{"spot_id": "A_cash_cr_def_full_dyn_875", "status": "OK", "dt_ms": 4508, "ts": 1780782046.2888453, "bet_codes": {"cbet": "R5.7", "cr": "R16.3"}}
+{"spot_id": "A_cash_cr_def_full_d2t_T97", "status": "OK", "dt_ms": 3829, "ts": 1780782050.133901, "bet_codes": {"cbet": "R1.5", "cr": "R9"}}
+{"spot_id": "A_cash_cr_def_full_d2t_875", "status": "OK", "dt_ms": 3984, "ts": 1780782054.1483192, "bet_codes": {"cbet": "R5.7", "cr": "R11.4"}}
+{"spot_id": "A_cash_cr_def_full_d2t_J96", "status": "OK", "dt_ms": 3861, "ts": 1780782058.028871, "bet_codes": {"cbet": "R5.7", "cr": "R16.3"}}
+{"spot_id": "A_cash_cr_def_full_pair_KK2", "status": "OK", "dt_ms": 5033, "ts": 1780782063.080127, "bet_codes": {"cbet": "R1.5", "cr": "R4"}}
+{"spot_id": "A_cash_cr_def_full_pair_992", "status": "OK", "dt_ms": 4781, "ts": 1780782067.8785064, "bet_codes": {"cbet": "R1.5", "cr": "R4"}}
+{"spot_id": "A_cash_cr_def_full_pair_J88", "status": "OK", "dt_ms": 4708, "ts": 1780782072.6045666, "bet_codes": {"cbet": "R1.5", "cr": "R4"}}
+{"spot_id": "A_cash_cr_def_full_mono_Js", "status": "OK", "dt_ms": 3842, "ts": 1780782076.468312, "bet_codes": {"cbet": "R1.5", "cr": "R4"}}
+{"spot_id": "A_cash_cr_def_full_mono_Ts", "status": "OK", "dt_ms": 4143, "ts": 1780782080.628963, "bet_codes": {"cbet": "R1.5", "cr": "R4"}}
+{"spot_id": "A_cash_cr_def_full_mono_Qh", "status": "OK", "dt_ms": 4158, "ts": 1780782084.8020592, "bet_codes": {"cbet": "R1.5", "cr": "R4"}}
+{"spot_id": "A_cash_donk_def_full_dry_K72", "status": "OK", "dt_ms": 1751, "ts": 1780782086.7127416, "bet_codes": {"donk": "R1.5"}}
+{"spot_id": "A_cash_donk_def_full_dry_A94", "status": "OK", "dt_ms": 1419, "ts": 1780782088.1479626, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_dry_Q73", "status": "OK", "dt_ms": 1711, "ts": 1780782089.875676, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_low_853", "status": "OK", "dt_ms": 1465, "ts": 1780782091.3568933, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_low_964", "status": "OK", "dt_ms": 1362, "ts": 1780782092.7352867, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_low_752", "status": "OK", "dt_ms": 1649, "ts": 1780782094.4013948, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_dyn_T97", "status": "OK", "dt_ms": 1667, "ts": 1780782096.085832, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_dyn_986", "status": "OK", "dt_ms": 1425, "ts": 1780782097.5274308, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_dyn_875", "status": "OK", "dt_ms": 1668, "ts": 1780782099.212725, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_d2t_T97", "status": "OK", "dt_ms": 1403, "ts": 1780782100.6331897, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_d2t_875", "status": "OK", "dt_ms": 1350, "ts": 1780782101.9986904, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_d2t_J96", "status": "OK", "dt_ms": 1448, "ts": 1780782103.4643466, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_pair_KK2", "status": "OK", "dt_ms": 1433, "ts": 1780782104.9173968, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_pair_992", "status": "OK", "dt_ms": 1321, "ts": 1780782106.2617912, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_pair_J88", "status": "OK", "dt_ms": 1852, "ts": 1780782108.1349065, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_mono_Js", "status": "OK", "dt_ms": 1365, "ts": 1780782109.5190568, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "A_cash_donk_def_full_mono_Ts", "status": "OK", "dt_ms": 1453, "ts": 1780782110.9882815, "bet_codes": {"donk": "R1.5"}}
+{"spot_id": "A_cash_donk_def_full_mono_Qh", "status": "OK", "dt_ms": 1479, "ts": 1780782112.4862523, "bet_codes": {"donk": "R5.7"}}
+{"spot_id": "N_cash_3bp_river_allin_dry_K72_3c_8h", "status": "FAIL", "dt_ms": 2091, "ts": 1780782114.7182748, "err": "unknown target river_def_ip_allin"}
+{"spot_id": "N_cash_3bp_river_allin_low_853_3c_8h", "status": "FAIL", "dt_ms": 2573, "ts": 1780782117.2919028, "err": "unknown target river_def_ip_allin"}
+{"spot_id": "N_cash_3bp_river_allin_dyn_T97_3c_8h", "status": "FAIL", "dt_ms": 2184, "ts": 1780782119.4768605, "err": "unknown target river_def_ip_allin"}
+{"spot_id": "N_cash_3bp_river_allin_d2t_T97_3c_8h", "status": "FAIL", "dt_ms": 2902, "ts": 1780782122.3794658, "err": "unknown target river_def_ip_allin"}
+{"spot_id": "N_cash_3bp_river_allin_pair_KK2_3c_8h", "status": "FAIL", "dt_ms": 2505, "ts": 1780782124.885755, "err": "unknown target river_def_ip_allin"}
+{"spot_id": "N_cash_3bp_river_allin_mono_Js_3c_8h", "status": "FAIL", "dt_ms": 2555, "ts": 1780782127.4419928, "err": "unknown target river_def_ip_allin"}
+{"spot_id": "N_cash_hj_open_river_dry_K72_3c_8h", "status": "OK", "dt_ms": 5992, "ts": 1780782133.4350386, "bet_codes": {"cbet": "R1.5", "barrel": "R15.6", "river_bet": "R29"}}
+{"spot_id": "N_cash_hj_open_river_low_853_3c_8h", "status": "OK", "dt_ms": 7213, "ts": 1780782140.6648498, "bet_codes": {"cbet": "R1.5", "barrel": "R5", "river_bet": "R17.5"}}
+{"spot_id": "N_cash_hj_open_river_dyn_T97_3c_8h", "status": "OK", "dt_ms": 6760, "ts": 1780782147.4394464, "bet_codes": {"cbet": "R1.5", "barrel": "R15.6", "river_bet": "R29"}}
+{"spot_id": "N_cash_hj_open_river_d2t_T97_3c_8h", "status": "OK", "dt_ms": 6290, "ts": 1780782153.7465613, "bet_codes": {"cbet": "R1.5", "barrel": "R5", "river_bet": "R17.5"}}
+{"spot_id": "N_cash_hj_open_river_pair_KK2_3c_8h", "status": "OK", "dt_ms": 6312, "ts": 1780782160.0851743, "bet_codes": {"cbet": "R1.5", "barrel": "R5", "river_bet": "R17.5"}}
+{"spot_id": "N_cash_hj_open_river_mono_Js_3c_8h", "status": "OK", "dt_ms": 6540, "ts": 1780782166.642326, "bet_codes": {"cbet": "R1.5", "barrel": "R5", "river_bet": "R17.5"}}
+{"spot_id": "N_cash_co_open_river_dry_K72_3c_8h", "status": "OK", "dt_ms": 6437, "ts": 1780782173.1361957, "bet_codes": {"cbet": "R1.5", "barrel": "R15.6", "river_bet": "R29"}}
+{"spot_id": "N_cash_co_open_river_low_853_3c_8h", "status": "OK", "dt_ms": 7131, "ts": 1780782180.2864006, "bet_codes": {"cbet": "R1.5", "barrel": "R5", "river_bet": "R17.5"}}
+{"spot_id": "N_cash_co_open_river_dyn_T97_3c_8h", "status": "OK", "dt_ms": 6742, "ts": 1780782187.0532951, "bet_codes": {"cbet": "R1.5", "barrel": "R5", "river_bet": "R17.5"}}
+{"spot_id": "N_cash_co_open_river_d2t_T97_3c_8h", "status": "OK", "dt_ms": 6203, "ts": 1780782193.2745492, "bet_codes": {"cbet": "R5.7", "barrel": "R20.3", "river_bet": "R72"}}
+{"spot_id": "N_cash_co_open_river_pair_KK2_3c_8h", "status": "OK", "dt_ms": 6939, "ts": 1780782200.2298188, "bet_codes": {"cbet": "R1.5", "barrel": "R5", "river_bet": "R17.5"}}
+{"spot_id": "N_cash_co_open_river_mono_Js_3c_8h", "status": "OK", "dt_ms": 6605, "ts": 1780782206.8537898, "bet_codes": {"cbet": "R1.5", "barrel": "R5", "river_bet": "R17.5"}}
+{"spot_id": "N_cash_3bp_river_allin_dry_K72_3c_8h", "status": "FAIL", "dt_ms": 3481, "ts": 1780782238.1650536, "err": "no OOP allin code (no shove option)"}
+{"spot_id": "N_cash_3bp_river_allin_low_853_3c_8h", "status": "FAIL", "dt_ms": 3370, "ts": 1780782241.5359871, "err": "no OOP allin code (no shove option)"}
+{"spot_id": "N_cash_3bp_river_allin_dyn_T97_3c_8h", "status": "FAIL", "dt_ms": 4206, "ts": 1780782245.7424574, "err": "no OOP allin code (no shove option)"}
+{"spot_id": "N_cash_3bp_river_allin_d2t_T97_3c_8h", "status": "FAIL", "dt_ms": 3037, "ts": 1780782248.7799604, "err": "no OOP allin code (no shove option)"}
+{"spot_id": "N_cash_3bp_river_allin_pair_KK2_3c_8h", "status": "FAIL", "dt_ms": 2833, "ts": 1780782251.6136942, "err": "no OOP allin code (no shove option)"}
+{"spot_id": "N_cash_3bp_river_allin_mono_Js_3c_8h", "status": "FAIL", "dt_ms": 3420, "ts": 1780782255.0342317, "err": "no OOP allin code (no shove option)"}
