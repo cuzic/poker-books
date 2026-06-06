@@ -288,6 +288,20 @@ def write_report(summaries, all_rows, elapsed_s):
                 f.write(f"- per-family huge_loss: ")
                 f.write(", ".join(f"{fam}={v}" for fam, v in sorted(s["per_family"].items())))
                 f.write("\n")
+            # opp range structure
+            if s.get("opp_polarization_mean") is not None:
+                f.write(f"- **opp range**: polarization={s['opp_polarization_mean']} "
+                        f"(strong={s['opp_strong_pct_mean']} + weak={s['opp_weak_pct_mean']}), "
+                        f"nut_pct={s['opp_nut_pct_mean']}, nut_eq_median={s['opp_nut_eq_median_mean']}, "
+                        f"hero_dominates_nut%={s['hero_dominates_nut_pct']}\n")
+            if s.get("per_board_opp_struct"):
+                lines = []
+                for b, st in sorted(s["per_board_opp_struct"].items()):
+                    if st.get("polarization") is not None:
+                        lines.append(f"{b}: pol={st['polarization']:.2f} "
+                                     f"nut_class={st['nut_class']} nut_pct={st['nut_pct']:.2f}")
+                if lines:
+                    f.write(f"- per-board opp: {'; '.join(lines)}\n")
             f.write("\n")
 
 

@@ -300,6 +300,15 @@ def extract_hand_rows(sols, sc, board_str, fam_str, lbl, bet_codes):
             hero = p; break
     if hero is None and pi: hero = pi[0]
 
+    # opp 抽出: hero と異なる側
+    opp_pos = sc["oop_pos"] if hero_pos == sc["ip_pos"] else sc["ip_pos"]
+    opp = None
+    for p in pi:
+        if isinstance(p, dict) and p.get("player", {}).get("position") == opp_pos:
+            opp = p; break
+    if opp is None and len(pi) >= 2:
+        opp = pi[1] if pi[0] is hero else pi[0]
+
     eqr = (hero or {}).get("equity_buckets_range") or []
     eqp = (hero or {}).get("eq_percentile") or []
     heq = (hero or {}).get("hand_eqs") or []
@@ -307,6 +316,43 @@ def extract_hand_rows(sols, sc, board_str, fam_str, lbl, bet_codes):
     bucket_name = {b.get("index", -1): b.get("name", "") for b in eb_list if isinstance(b, dict)}
     if not bucket_name:
         bucket_name = {0: "best_hands", 1: "good_hands", 2: "weak_hands", 3: "trash_hands"}
+
+    # opp side data
+    opp_eb = (opp or {}).get("equity_buckets_range") or []
+    opp_eq = (opp or {}).get("hand_eqs") or []
+    opp_pct = (opp or {}).get("eq_percentile") or []
+    opp_hc_list = (opp or {}).get("hand_categories") or []
+    opp_dc_list = (opp or {}).get("draw_categories") or []
+    opp_hc_combos = {h.get("name", ""): h.get("total_combos", 0) for h in opp_hc_list}
+    opp_dc_combos = {d.get("name", ""): d.get("total_combos", 0) for d in opp_dc_list}
+    opp_total = sum(opp_hc_combos.values()) or 1.0
+
+    # opp range structure (spot-level scalar 集約)
+    STRONG_CATS = {"straight_flush", "quads", "fullhouse", "flush", "straight",
+                   "set", "trips", "two_pair", "overpair"}
+    WEAK_CATS = {"no_made_hand", "ace_high", "king_high", "queen_high",
+                 "jack_high", "ten_high"}
+    STRONG_DRAW = {"oesd", "combo_draw", "nut_flush_draw", "flush_draw"}
+    opp_strong_pct = sum(opp_hc_combos.get(c, 0) for c in STRONG_CATS) / opp_total
+    opp_weak_pct = sum(opp_hc_combos.get(c, 0) for c in WEAK_CATS) / opp_total
+    opp_polarization = opp_strong_pct + opp_weak_pct  # 1.0 = full polar (0 mid)
+    opp_draw_pct = sum(opp_dc_combos.get(c, 0) for c in STRONG_DRAW) / opp_total  # missed draw 候補 (bluff 候補) の指標
+
+    # board family-specific nut class
+    NUT_CLASS = {"dry_high": "set", "low_dry": "set", "dynamic": "straight",
+                 "dynamic_2tone": "flush", "paired": "fullhouse", "monotone": "flush"}
+    nut_class = NUT_CLASS.get(fam_str, "set")
+    opp_nut_pct = opp_hc_combos.get(nut_class, 0) / opp_total
+
+    # opp nut tier の equity 中央値 (board nut class に属する opp combos の hand_eqs)
+    nut_idx = next((h.get("index", -1) for h in opp_hc_list if h.get("name") == nut_class), -1)
+    opp_nut_eqs = []
+    if nut_idx >= 0:
+        for j in range(1326):
+            if j >= len(hcr) or hcr[j] != nut_idx: continue
+            if j >= len(opp_eb) or opp_eb[j] < 0: continue  # opp range 外
+            if j < len(opp_eq): opp_nut_eqs.append(opp_eq[j])
+    opp_nut_eq_median = statistics.median(opp_nut_eqs) if opp_nut_eqs else None
 
     board_cards = {board_str[i:i+2] for i in range(0, len(board_str), 2)} if board_str else set()
 
@@ -317,6 +363,8 @@ def extract_hand_rows(sols, sc, board_str, fam_str, lbl, bet_codes):
         ip_bet_size = classify_bet_size(bet_codes.get("barrel", ""), "turn")
     elif target == "flop_def_oop":
         ip_bet_size = classify_bet_size(bet_codes.get("cbet", ""), "flop")
+    elif target == "river_def_ip_allin":
+        ip_bet_size = "allin"
     else:
         ip_bet_size = "med_75p"  # 公式 N/A
 
@@ -367,6 +415,15 @@ def extract_hand_rows(sols, sc, board_str, fam_str, lbl, bet_codes):
         sorted_f = sorted(freqs.values(), reverse=True)
         per_combo_bimodal = (sorted_f[1] / total) if total > 0 else 0
 
+        # opp side per-combo: opp の bucket / percentile / equity (この combo を opp が持つ場合)
+        opp_eb_i = int(opp_eb[i]) if i < len(opp_eb) and opp_eb[i] >= 0 else None
+        opp_bucket = bucket_name.get(opp_eb_i, "") if opp_eb_i is not None else ""
+        opp_pct_i = float(opp_pct[i]) if i < len(opp_pct) and opp_pct[i] >= 0 else None
+        opp_eq_i = float(opp_eq[i]) if i < len(opp_eq) else None
+        # hero vs opp nut tier: heq_v - opp_nut_eq_median > 0 → hero dominates opp の nut 中央値
+        hand_eq_vs_opp_nut = (heq_v - opp_nut_eq_median
+                              if heq_v is not None and opp_nut_eq_median is not None else None)
+
         row = {
             "scenario_id": sc["id"], "board_label": lbl, "board_family": fam_str,
             "board_str": board_str, "card_a": ca, "card_b": cb,
@@ -380,6 +437,20 @@ def extract_hand_rows(sols, sc, board_str, fam_str, lbl, bet_codes):
             "gto_modal": modal,
             "per_combo_bimodal": round(per_combo_bimodal, 3),
             "ip_bet_size": ip_bet_size,
+            # OPP-SIDE per-combo
+            "opp_bucket": opp_bucket,
+            "opp_eq_percentile": round(opp_pct_i, 3) if opp_pct_i is not None else None,
+            "opp_eq": round(opp_eq_i, 3) if opp_eq_i is not None else None,
+            "hand_eq_vs_opp_nut": round(hand_eq_vs_opp_nut, 3) if hand_eq_vs_opp_nut is not None else None,
+            # OPP-SIDE spot-level (全行共通)
+            "opp_total_combos": round(opp_total, 1),
+            "opp_strong_pct": round(opp_strong_pct, 3),
+            "opp_weak_pct": round(opp_weak_pct, 3),
+            "opp_polarization": round(opp_polarization, 3),
+            "opp_nut_class": nut_class,
+            "opp_nut_pct": round(opp_nut_pct, 3),
+            "opp_nut_eq_median": round(opp_nut_eq_median, 3) if opp_nut_eq_median is not None else None,
+            "opp_draw_pct": round(opp_draw_pct, 3),
         }
         formula = apply_formula(row, sc)
         row["formula_action"] = formula
@@ -563,11 +634,30 @@ def summarize(rows):
 
     per_board_huge_loss = {}
     per_board_n = {}
+    per_board_opp_struct = {}  # opp range structure per board
     for b in {r["board_label"] for r in rows}:
         br = [r for r in rows if r["board_label"] == b]
         per_board_n[b] = len(br)
         b_huge = [r["ev_gap"] for r in br if r["ev_gap"] is not None and r["ev_gap"] > 0.5]
         per_board_huge_loss[b] = round(statistics.mean(b_huge), 3) if b_huge else 0
+        # per-board opp range structure (spot 単位なので 1 行目の値で代表)
+        first = br[0] if br else {}
+        per_board_opp_struct[b] = {
+            "polarization": first.get("opp_polarization"),
+            "nut_pct": first.get("opp_nut_pct"),
+            "nut_class": first.get("opp_nut_class"),
+            "strong_pct": first.get("opp_strong_pct"),
+            "weak_pct": first.get("opp_weak_pct"),
+            "nut_eq_median": first.get("opp_nut_eq_median"),
+        }
+
+    # scenario-level opp range structure (平均)
+    pol_vals = [r["opp_polarization"] for r in rows if r.get("opp_polarization") is not None]
+    nut_vals = [r["opp_nut_pct"] for r in rows if r.get("opp_nut_pct") is not None]
+    strong_vals = [r["opp_strong_pct"] for r in rows if r.get("opp_strong_pct") is not None]
+    weak_vals = [r["opp_weak_pct"] for r in rows if r.get("opp_weak_pct") is not None]
+    nut_eq_vals = [r["opp_nut_eq_median"] for r in rows if r.get("opp_nut_eq_median") is not None]
+    dom_vals = [r["hand_eq_vs_opp_nut"] for r in rows if r.get("hand_eq_vs_opp_nut") is not None]
 
     return dict(
         n=n,
@@ -585,6 +675,14 @@ def summarize(rows):
         pct_raise=round(n_raise / n * 100, 1) if n else 0,
         per_board_huge_loss=per_board_huge_loss,
         per_board_n=per_board_n,
+        per_board_opp_struct=per_board_opp_struct,
+        # opp 集約 (scenario level)
+        opp_polarization_mean=round(statistics.mean(pol_vals), 3) if pol_vals else None,
+        opp_nut_pct_mean=round(statistics.mean(nut_vals), 3) if nut_vals else None,
+        opp_strong_pct_mean=round(statistics.mean(strong_vals), 3) if strong_vals else None,
+        opp_weak_pct_mean=round(statistics.mean(weak_vals), 3) if weak_vals else None,
+        opp_nut_eq_median_mean=round(statistics.mean(nut_eq_vals), 3) if nut_eq_vals else None,
+        hero_dominates_nut_pct=round(sum(1 for v in dom_vals if v > 0) / len(dom_vals) * 100, 1) if dom_vals else None,
     )
 
 
@@ -658,6 +756,20 @@ def write_report(summaries, all_rows, elapsed_s):
                 items = ", ".join(f"{b}={v} (n={s['per_board_n'][b]})"
                                   for b, v in s["per_board_huge_loss"].items())
                 f.write(f"- per-board huge_loss: {items}\n")
+            # opp range structure
+            if s.get("opp_polarization_mean") is not None:
+                f.write(f"- **opp range**: polarization={s['opp_polarization_mean']} "
+                        f"(strong={s['opp_strong_pct_mean']} + weak={s['opp_weak_pct_mean']}), "
+                        f"nut_pct={s['opp_nut_pct_mean']}, nut_eq_median={s['opp_nut_eq_median_mean']}, "
+                        f"hero_dominates_nut%={s['hero_dominates_nut_pct']}\n")
+            if s.get("per_board_opp_struct"):
+                lines = []
+                for b, st in sorted(s["per_board_opp_struct"].items()):
+                    if st["polarization"] is not None:
+                        lines.append(f"{b}: pol={st['polarization']:.2f} nut_class={st['nut_class']} "
+                                     f"nut_pct={st['nut_pct']:.2f}")
+                if lines:
+                    f.write(f"- per-board opp: {'; '.join(lines)}\n")
             f.write("\n")
 
         f.write("\n## 推奨フォローアップ\n\n")
