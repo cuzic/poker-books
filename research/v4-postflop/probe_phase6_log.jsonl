@@ -1,0 +1,16 @@
+{"spot_id": "P6_A_mtt_4bp_flop_dry_K72", "status": "OK", "dt_ms": 4603, "ts": 1780784593.0948205, "bet_codes": {"cbet": "R8.3"}}
+{"spot_id": "P6_A_mtt_4bp_flop_low_853", "status": "OK", "dt_ms": 3893, "ts": 1780784597.0260794, "bet_codes": {"cbet": "R8.3"}}
+{"spot_id": "P6_A_mtt_4bp_flop_dyn_T97", "status": "OK", "dt_ms": 3799, "ts": 1780784600.8589, "bet_codes": {"cbet": "R8.3"}}
+{"spot_id": "P6_A_mtt_4bp_flop_d2t_T97", "status": "OK", "dt_ms": 3098, "ts": 1780784603.9998295, "bet_codes": {"cbet": "R8.3"}}
+{"spot_id": "P6_A_mtt_4bp_flop_pair_KK2", "status": "OK", "dt_ms": 3583, "ts": 1780784607.6518302, "bet_codes": {"cbet": "R8.3"}}
+{"spot_id": "P6_A_mtt_4bp_flop_mono_Js", "status": "OK", "dt_ms": 3063, "ts": 1780784610.74828, "bet_codes": {"cbet": "R8.3"}}
+{"spot_id": "P6_A_mtt_4bp_turn_dry_K72_3c", "status": "OK", "dt_ms": 4189, "ts": 1780784615.0682864, "bet_codes": {"cbet": "R8.3", "barrel": "R25"}}
+{"spot_id": "P6_A_mtt_4bp_turn_low_853_3c", "status": "OK", "dt_ms": 4480, "ts": 1780784619.5876791, "bet_codes": {"cbet": "R8.3", "barrel": "R25"}}
+{"spot_id": "P6_A_mtt_4bp_turn_dyn_T97_3c", "status": "OK", "dt_ms": 4492, "ts": 1780784624.1144626, "bet_codes": {"cbet": "R8.3", "barrel": "R25"}}
+{"spot_id": "P6_A_mtt_4bp_turn_d2t_T97_3c", "status": "OK", "dt_ms": 3922, "ts": 1780784628.0684183, "bet_codes": {"cbet": "R8.3", "barrel": "R25"}}
+{"spot_id": "P6_A_mtt_4bp_turn_pair_KK2_3c", "status": "OK", "dt_ms": 3820, "ts": 1780784631.920643, "bet_codes": {"cbet": "R8.3", "barrel": "R25"}}
+{"spot_id": "P6_A_mtt_4bp_turn_mono_Js_3c", "status": "OK", "dt_ms": 3410, "ts": 1780784635.3732672, "bet_codes": {"cbet": "R8.3", "barrel": "R25"}}
+{"spot_id": "P6_A_mtt_4bp_river_dry_K72_3c_8h", "status": "OK", "dt_ms": 4057, "ts": 1780784639.5527136, "bet_codes": {"cbet": "R8.3", "barrel": "R25", "river_bet": "R46.7"}}
+{"spot_id": "P6_A_mtt_4bp_river_low_853_3c_8h", "status": "OK", "dt_ms": 4147, "ts": 1780784643.7316334, "bet_codes": {"cbet": "R8.3", "barrel": "R25", "river_bet": "R46.7"}}
+{"spot_id": "P6_A_mtt_4bp_river_dyn_T97_3c_8h", "status": "OK", "dt_ms": 3790, "ts": 1780784647.5533185, "bet_codes": {"cbet": "R8.3", "barrel": "R25", "river_bet": "R46.7"}}
+{"spot_id": "P6_A_mtt_4bp_river_d2t_T97_3c_8h", "status": "OK", "dt_ms": 4009, "ts": 1780784651.590642, "bet_codes": {"cbet": "R8.3", "barrel": "R25", "river_bet": "R46.7"}}
