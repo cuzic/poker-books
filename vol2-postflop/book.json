@@ -1,0 +1,55 @@
+{
+  "title": "迷わないポーカー ポストフロップ完全版",
+  "titleRomaji": "Mayowanai Poker: Postflop Complete Edition",
+  "subtitle": "Vol2: Cash & MTT chipEV を 5 tier + 3 ルールで統一、UDG (Universal Defense Grid) フレームワーク",
+  "author": "川西智也",
+  "language": "ja",
+  "identifier": "urn:uuid:b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e",
+  "publisher": "川西智也",
+  "description": "キャッシュゲーム (100bb) と MTT chipEV (25/50/100/200bb) のポストフロップ判断を、**UDG (Universal Defense Grid)** という単一フレームワークで完全統一。\n\n11 専用公式 (旧 v9b/v10/v15 系列、計 165 分岐) を **5 つの tier 概念 + 3 つの universal rule + 3 modifier** に圧縮 (~20 暗記項目)、にも関わらず GTO Wizard 実測データ 293K rows での huge_loss は **0.62 BB 削減** (15.75 BB → 5.94 BB)。\n\n中核 tier:\n  - board_polar_tier (POLAR/MERGED/MID)\n  - hand_strength_tier (NUT_MADE/STRONG/TWO_PAIR/PAIR/MID_PAIR/AIR)\n  - bet_size_tier (SMALL/MED/BIG/ALLIN)\n  - SPR tier (SHALLOW/LOW/MID/HIGH) — pot type × depth を統合\n  - equity_aware_tier (HIGH/MID/LOW/VERY_LOW) — 相手 range に対する hero の相対 equity\n\n中核 rule (matchup): AHEAD / TIE / BEHIND の 3 択 → 9 つの判断パターン\n\nVol2 は **Cash 100bb + MTT chipEV 100/25/200bb** を統合カバー。ICM/PKO は対象外 (将来別冊で対応)。",
+  "cover": "chapters/images/cover.jpg",
+  "chapters": [
+    "chapters/00-introduction.md",
+    "chapters/01-board-polar-tier.md",
+    "chapters/02-hand-strength-tier.md",
+    "chapters/03-bet-size-tier.md",
+    "chapters/04-spr-tier.md",
+    "chapters/05-equity-aware-tier.md",
+    "chapters/06-matchup-tier.md",
+    "chapters/07-ahead-rule.md",
+    "chapters/08-tie-rule.md",
+    "chapters/09-behind-rule.md",
+    "chapters/10-srp-modifier.md",
+    "chapters/11-3bp-modifier.md",
+    "chapters/12-4bp-modifier.md",
+    "chapters/13-cr-defense.md",
+    "chapters/14-donk-defense.md",
+    "chapters/15-opener-position.md",
+    "chapters/16-short-stack-mtt.md",
+    "chapters/17-deep-stack-mtt.md",
+    "chapters/18-boundary-hands.md",
+    "chapters/19-drills.md",
+    "chapters/20-cheatsheet.md",
+    "chapters/appendix-a-udg-table.md",
+    "chapters/appendix-b-audit-results.md",
+    "chapters/appendix-c-data-method.md"
+  ],
+  "kdp": {
+    "keywords": [
+      "テキサスホールデム ポストフロップ",
+      "ポーカー UDG",
+      "ポーカー 暗算 公式",
+      "GTO ポストフロップ 整合",
+      "SPR tier ポーカー",
+      "ポーカー equity bucket",
+      "Cash MTT 統合 ポストフロップ",
+      "3bet pot 4bet pot ポストフロップ",
+      "ポーカー bluff catcher",
+      "ポーカー board texture POLAR MERGED"
+    ],
+    "categories": [
+      "Kindle Store > 趣味・実用 > ゲーム",
+      "Kindle Store > 趣味・実用 > 囲碁・将棋・カードゲーム"
+    ]
+  }
+}
