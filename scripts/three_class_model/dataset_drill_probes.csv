@@ -1,0 +1,89 @@
+probe_id,purpose,flop,scenario_type,category,boundary_type,n_drill_cards,action_type,action_name,betsize,betsize_by_pot,total_frequency,total_ev,total_combos,is_allin
+bound_4s4d2c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,4s4d2c,SRP_flop+3BP+4BP,paired_low,paired boundary,0,CHECK,CHECK,0,,0.8389,0.0,986.5151023864746,False
+bound_4s4d2c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,4s4d2c,SRP_flop+3BP+4BP,paired_low,paired boundary,0,RAISE,BET,1.9,0.3333333333333333333333333333,0.1611,0.0,189.48486256599426,False
+bound_4s4d2c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,4s4d2c,SRP_flop+3BP+4BP,paired_low,paired boundary,0,CHECK,CHECK,0,,0.8389,0.0,986.5151023864746,False
+bound_4s4d2c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,4s4d2c,SRP_flop+3BP+4BP,paired_low,paired boundary,0,RAISE,BET,1.9,0.3333333333333333333333333333,0.1611,0.0,189.48486256599426,False
+bound_7s4d2c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,7s4d2c,SRP_flop+3BP+4BP,very_low_dry,low_dry boundary,0,CHECK,CHECK,0,,0.972,0.0,1143.0616292953491,False
+bound_7s4d2c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,7s4d2c,SRP_flop+3BP+4BP,very_low_dry,low_dry boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.028,0.0,32.938401371240616,False
+bound_7s4d2c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,7s4d2c,SRP_flop+3BP+4BP,very_low_dry,low_dry boundary,0,CHECK,CHECK,0,,0.972,0.0,1143.0616292953491,False
+bound_7s4d2c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,7s4d2c,SRP_flop+3BP+4BP,very_low_dry,low_dry boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.028,0.0,32.938401371240616,False
+bound_8s6d3h_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,8s6d3h,SRP_flop+3BP+4BP,low_dynamic,low_dry boundary,0,CHECK,CHECK,0,,0.9571,0.0,1125.5389852523804,False
+bound_8s6d3h_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,8s6d3h,SRP_flop+3BP+4BP,low_dynamic,low_dry boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0429,0.0,50.46103227138519,False
+bound_8s6d3h_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,8s6d3h,SRP_flop+3BP+4BP,low_dynamic,low_dry boundary,0,CHECK,CHECK,0,,0.9571,0.0,1125.5389852523804,False
+bound_8s6d3h_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,8s6d3h,SRP_flop+3BP+4BP,low_dynamic,low_dry boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0429,0.0,50.46103227138519,False
+bound_9s6d3c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,9s6d3c,SRP_flop+3BP+4BP,spread_medium,dynamic vs medium,0,CHECK,CHECK,0,,0.9594,0.0,1128.2065229415894,False
+bound_9s6d3c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,9s6d3c,SRP_flop+3BP+4BP,spread_medium,dynamic vs medium,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0406,0.0,47.79348582029343,False
+bound_9s6d3c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,9s6d3c,SRP_flop+3BP+4BP,spread_medium,dynamic vs medium,0,CHECK,CHECK,0,,0.9594,0.0,1128.2065229415894,False
+bound_9s6d3c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,9s6d3c,SRP_flop+3BP+4BP,spread_medium,dynamic vs medium,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0406,0.0,47.79348582029343,False
+bound_9s7d5c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,9s7d5c,SRP_flop+3BP+4BP,medium_dynamic,dynamic vs medium,0,CHECK,CHECK,0,,0.9592,0.0,1127.9788541793823,False
+bound_9s7d5c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,9s7d5c,SRP_flop+3BP+4BP,medium_dynamic,dynamic vs medium,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0408,0.0,48.02116334438324,False
+bound_9s7d5c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,9s7d5c,SRP_flop+3BP+4BP,medium_dynamic,dynamic vs medium,0,CHECK,CHECK,0,,0.9592,0.0,1127.9788541793823,False
+bound_9s7d5c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,9s7d5c,SRP_flop+3BP+4BP,medium_dynamic,dynamic vs medium,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0408,0.0,48.02116334438324,False
+bound_9s8d6c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,9s8d6c,SRP_flop+3BP+4BP,dynamic_oneOff,dynamic vs medium,0,CHECK,CHECK,0,,0.9737,0.0,1145.079035282135,False
+bound_9s8d6c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,9s8d6c,SRP_flop+3BP+4BP,dynamic_oneOff,dynamic vs medium,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0263,0.0,30.920991003513336,False
+bound_9s8d6c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,9s8d6c,SRP_flop+3BP+4BP,dynamic_oneOff,dynamic vs medium,0,CHECK,CHECK,0,,0.9737,0.0,1145.079035282135,False
+bound_9s8d6c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,9s8d6c,SRP_flop+3BP+4BP,dynamic_oneOff,dynamic vs medium,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0263,0.0,30.920991003513336,False
+bound_9s8d7c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,9s8d7c,SRP_flop+3BP+4BP,dynamic_clear,dynamic vs medium,0,CHECK,CHECK,0,,0.9401,0.0,1105.591332435608,False
+bound_9s8d7c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,9s8d7c,SRP_flop+3BP+4BP,dynamic_clear,dynamic vs medium,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0599,0.0,70.40870261192322,False
+bound_9s8d7c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,9s8d7c,SRP_flop+3BP+4BP,dynamic_clear,dynamic vs medium,0,CHECK,CHECK,0,,0.9401,0.0,1105.591332435608,False
+bound_9s8d7c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,9s8d7c,SRP_flop+3BP+4BP,dynamic_clear,dynamic vs medium,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0599,0.0,70.40870261192322,False
+bound_as9d4c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,as9d4c,SRP_flop+3BP+4BP,ace_high_dry,ace_high boundary,0,CHECK,CHECK,0,,0.9473,0.0,1114.0208945274353,False
+bound_as9d4c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,as9d4c,SRP_flop+3BP+4BP,ace_high_dry,ace_high boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0527,0.0,61.979092329740524,False
+bound_as9d4c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,as9d4c,SRP_flop+3BP+4BP,ace_high_dry,ace_high boundary,0,CHECK,CHECK,0,,0.9473,0.0,1114.0208945274353,False
+bound_as9d4c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,as9d4c,SRP_flop+3BP+4BP,ace_high_dry,ace_high boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0527,0.0,61.979092329740524,False
+bound_astd4c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,astd4c,SRP_flop+3BP+4BP,ace_high_kicker,ace_high boundary,0,CHECK,CHECK,0,,0.9621,0.0,1131.3829507827759,False
+bound_astd4c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,astd4c,SRP_flop+3BP+4BP,ace_high_kicker,ace_high boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0379,0.0,44.617022931575775,False
+bound_astd4c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,astd4c,SRP_flop+3BP+4BP,ace_high_kicker,ace_high boundary,0,CHECK,CHECK,0,,0.9621,0.0,1131.3829507827759,False
+bound_astd4c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,astd4c,SRP_flop+3BP+4BP,ace_high_kicker,ace_high boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0379,0.0,44.617022931575775,False
+bound_astd9c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,astd9c,SRP_flop+3BP+4BP,ace_high_broadway,ace_high boundary,0,CHECK,CHECK,0,,0.9604,0.0,1129.467182636261,False
+bound_astd9c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,astd9c,SRP_flop+3BP+4BP,ace_high_broadway,ace_high boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0396,0.0,46.53279983997345,False
+bound_astd9c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,astd9c,SRP_flop+3BP+4BP,ace_high_broadway,ace_high boundary,0,CHECK,CHECK,0,,0.9604,0.0,1129.467182636261,False
+bound_astd9c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,astd9c,SRP_flop+3BP+4BP,ace_high_broadway,ace_high boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0396,0.0,46.53279983997345,False
+bound_jstc4s_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,jstc4s,SRP_flop+3BP+4BP,two_tone_spread,monotone vs 2-tone,0,CHECK,CHECK,0,,0.9953,0.0,1170.5286598205566,False
+bound_jstc4s_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,jstc4s,SRP_flop+3BP+4BP,two_tone_spread,monotone vs 2-tone,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0047,0.0,5.47135441750288,False
+bound_jstc4s_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,jstc4s,SRP_flop+3BP+4BP,two_tone_spread,monotone vs 2-tone,0,CHECK,CHECK,0,,0.9953,0.0,1170.5286598205566,False
+bound_jstc4s_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,jstc4s,SRP_flop+3BP+4BP,two_tone_spread,monotone vs 2-tone,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0047,0.0,5.47135441750288,False
+bound_jsts4h_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,jsts4h,SRP_flop+3BP+4BP,two_tone,monotone vs 2-tone,0,CHECK,CHECK,0,,0.9924,0.0,1167.0581130981445,False
+bound_jsts4h_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,jsts4h,SRP_flop+3BP+4BP,two_tone,monotone vs 2-tone,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0076,0.0,8.941881973296404,False
+bound_jsts4h_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,jsts4h,SRP_flop+3BP+4BP,two_tone,monotone vs 2-tone,0,CHECK,CHECK,0,,0.9924,0.0,1167.0581130981445,False
+bound_jsts4h_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,jsts4h,SRP_flop+3BP+4BP,two_tone,monotone vs 2-tone,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0076,0.0,8.941881973296404,False
+bound_jsts4s_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,jsts4s,SRP_flop+3BP+4BP,monotone_3spade,monotone vs 2-tone,0,CHECK,CHECK,0,,0.9917,0.0,1166.195803642273,False
+bound_jsts4s_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,jsts4s,SRP_flop+3BP+4BP,monotone_3spade,monotone vs 2-tone,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0083,0.0,9.804221548140049,False
+bound_jsts4s_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,jsts4s,SRP_flop+3BP+4BP,monotone_3spade,monotone vs 2-tone,0,CHECK,CHECK,0,,0.9917,0.0,1166.195803642273,False
+bound_jsts4s_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,jsts4s,SRP_flop+3BP+4BP,monotone_3spade,monotone vs 2-tone,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0083,0.0,9.804221548140049,False
+bound_kh9c5d_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,kh9c5d,SRP_flop+3BP+4BP,merged_high,dry_high boundary,0,CHECK,CHECK,0,,0.9508,0.0,1118.1646342277527,False
+bound_kh9c5d_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,kh9c5d,SRP_flop+3BP+4BP,merged_high,dry_high boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0492,0.0,57.83539643883705,False
+bound_kh9c5d_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,kh9c5d,SRP_flop+3BP+4BP,merged_high,dry_high boundary,0,CHECK,CHECK,0,,0.9508,0.0,1118.1646342277527,False
+bound_kh9c5d_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,kh9c5d,SRP_flop+3BP+4BP,merged_high,dry_high boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0492,0.0,57.83539643883705,False
+bound_ks8d2c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,ks8d2c,SRP_flop+3BP+4BP,dry_high_kicker,dry_high boundary,0,CHECK,CHECK,0,,0.9498,0.0,1116.921778678894,False
+bound_ks8d2c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,ks8d2c,SRP_flop+3BP+4BP,dry_high_kicker,dry_high boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0502,0.0,59.07818627357483,False
+bound_ks8d2c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,ks8d2c,SRP_flop+3BP+4BP,dry_high_kicker,dry_high boundary,0,CHECK,CHECK,0,,0.9498,0.0,1116.921778678894,False
+bound_ks8d2c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,ks8d2c,SRP_flop+3BP+4BP,dry_high_kicker,dry_high boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0502,0.0,59.07818627357483,False
+bound_ks9d4c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,ks9d4c,SRP_flop+3BP+4BP,dry_high_mid,dry_high boundary,0,CHECK,CHECK,0,,0.9586,0.0,1127.3257083892822,False
+bound_ks9d4c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,ks9d4c,SRP_flop+3BP+4BP,dry_high_mid,dry_high boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0414,0.0,48.67426970601082,False
+bound_ks9d4c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,ks9d4c,SRP_flop+3BP+4BP,dry_high_mid,dry_high boundary,0,CHECK,CHECK,0,,0.9586,0.0,1127.3257083892822,False
+bound_ks9d4c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,ks9d4c,SRP_flop+3BP+4BP,dry_high_mid,dry_high boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0414,0.0,48.67426970601082,False
+bound_kskd4c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,kskd4c,SRP_flop+3BP+4BP,paired_high,paired boundary,0,CHECK,CHECK,0,,0.9767,0.0,1148.6435794830322,False
+bound_kskd4c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,kskd4c,SRP_flop+3BP+4BP,paired_high,paired boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0233,0.0,27.356394231319427,False
+bound_kskd4c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,kskd4c,SRP_flop+3BP+4BP,paired_high,paired boundary,0,CHECK,CHECK,0,,0.9767,0.0,1148.6435794830322,False
+bound_kskd4c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,kskd4c,SRP_flop+3BP+4BP,paired_high,paired boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0233,0.0,27.356394231319427,False
+bound_kskd9c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,kskd9c,SRP_flop+3BP+4BP,paired_high_connector,paired boundary,0,CHECK,CHECK,0,,0.9838,0.0,1156.9229278564453,False
+bound_kskd9c_SRP_flop_3BP_4BP_btn_v_bb,boundary_validation,kskd9c,SRP_flop+3BP+4BP,paired_high_connector,paired boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0162,0.0,19.077067762613297,False
+bound_kskd9c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,kskd9c,SRP_flop+3BP+4BP,paired_high_connector,paired boundary,0,CHECK,CHECK,0,,0.9838,0.0,1156.9229278564453,False
+bound_kskd9c_SRP_flop_3BP_4BP_btn_v_bb_srp,boundary_validation,kskd9c,SRP_flop+3BP+4BP,paired_high_connector,paired boundary,0,RAISE,BET,6.5,1.140350877192982456140350877,0.0162,0.0,19.077067762613297,False
+drill_8s5d3c_SRP_flop_btn_v_bb,drill_audit,8s5d3c,SRP_flop,,,1,CHECK,CHECK,0,,0.8945,0.0,1051.9486327171326,False
+drill_8s5d3c_SRP_flop_btn_v_bb,drill_audit,8s5d3c,SRP_flop,,,1,RAISE,BET,6.5,1.140350877192982456140350877,0.1055,0.0,124.05136728286743,False
+drill_9s8d7c_SRP_flop_btn_v_bb,drill_audit,9s8d7c,SRP_flop,,,3,CHECK,CHECK,0,,0.9401,0.0,1105.591332435608,False
+drill_9s8d7c_SRP_flop_btn_v_bb,drill_audit,9s8d7c,SRP_flop,,,3,RAISE,BET,6.5,1.140350877192982456140350877,0.0599,0.0,70.40870261192322,False
+drill_9s8d7c_SRP_turn_btn_v_bb,drill_audit,9s8d7c,SRP_turn,,,2,CHECK,CHECK,0,,0.9401,0.0,1105.591332435608,False
+drill_9s8d7c_SRP_turn_btn_v_bb,drill_audit,9s8d7c,SRP_turn,,,2,RAISE,BET,6.5,1.140350877192982456140350877,0.0599,0.0,70.40870261192322,False
+drill_AsTd4c_SRP_flop_btn_v_bb,drill_audit,AsTd4c,SRP_flop,,,1,CHECK,CHECK,0,,0.9621,0.0,1131.3829507827759,False
+drill_AsTd4c_SRP_flop_btn_v_bb,drill_audit,AsTd4c,SRP_flop,,,1,RAISE,BET,6.5,1.140350877192982456140350877,0.0379,0.0,44.617022931575775,False
+drill_Js7s3h_SRP_river_btn_v_bb,drill_audit,Js7s3h,SRP_river,,,2,CHECK,CHECK,0,,0.9668,0.0,1136.99476146698,False
+drill_Js7s3h_SRP_river_btn_v_bb,drill_audit,Js7s3h,SRP_river,,,2,RAISE,BET,6.5,1.140350877192982456140350877,0.0332,0.0,39.005216628313065,False
+drill_JsTs4s_SRP_flop_btn_v_bb,drill_audit,JsTs4s,SRP_flop,,,3,CHECK,CHECK,0,,0.9917,0.0,1166.195803642273,False
+drill_JsTs4s_SRP_flop_btn_v_bb,drill_audit,JsTs4s,SRP_flop,,,3,RAISE,BET,6.5,1.140350877192982456140350877,0.0083,0.0,9.804221548140049,False
+drill_KsKd4c_SRP_flop_btn_v_bb,drill_audit,KsKd4c,SRP_flop,,,1,CHECK,CHECK,0,,0.9767,0.0,1148.6435794830322,False
+drill_KsKd4c_SRP_flop_btn_v_bb,drill_audit,KsKd4c,SRP_flop,,,1,RAISE,BET,6.5,1.140350877192982456140350877,0.0233,0.0,27.356394231319427,False
+drill_QhJd9c_SRP_flop_btn_v_bb,drill_audit,QhJd9c,SRP_flop,,,1,CHECK,CHECK,0,,0.9804,0.0,1152.9204998016357,False
+drill_QhJd9c_SRP_flop_btn_v_bb,drill_audit,QhJd9c,SRP_flop,,,1,RAISE,BET,6.5,1.140350877192982456140350877,0.0196,0.0,23.079482674598694,False
