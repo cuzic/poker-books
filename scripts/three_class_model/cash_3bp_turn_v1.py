@@ -1,28 +1,28 @@
 #!/usr/bin/env python3
-"""cash_3bp_turn_v1.py — Cash 100bb 3BP turn, BB OOP defense (v1).
+"""cash_3bp_turn_v1.py — Cash 100bb 3BP turn, BB OOP defense (v2、data-driven 修正版).
 
-Domain: Cash/MTT 100bb 3BP (3-bet pot), BB OOP defender on turn.
+Domain: Cash 100bb (and MTT 100bb) 3BP, BB OOP defender vs IP 3-bettor's turn barrel.
+
 Data source:
   - probe_phase5_stats.json: P5_A_cash_3bp_turn acc=66.3%, opp_pol=0.711, opp_weak=0.424
-  - probe_phase5_stats.json: P5_A_mtt_3bp_turn  acc=66.5%, opp_pol=0.714, opp_weak=0.444
-  - PROBE_PRIORITY_FINDINGS.md §5 Tier B, §6.1
+  - probe_phase5_stats.json: P5_A_mtt_3bp_turn acc=66.5%, opp_pol=0.714 (≈ Cash)
+  - PROBE_PRIORITY_FINDINGS.md §5 (Tier B)、§6.1
 
-Key findings (PROBE_PRIORITY_FINDINGS §5 Tier B, §6.1):
-  - Cash and MTT 100bb 3BP turn are virtually identical (acc 66.3% vs 66.5%,
-    opp_pol 0.711 vs 0.714). This formula serves BOTH.
-  - opp_pol=0.711 on turn: LOWER than SRP turn (0.794). 3BP range has more mid-strength
-    hands (TT, JJ, QQ, AQ-type) that didn't fold to 3-bet → merged feel on turn.
-  - opp_weak=0.424: much lower than SRP flop (0.606). 3-bettor's range survived the flop;
-    more showdown-worthy holdings. → BB should fold more liberally.
-  - bet_size context: cbet ~R10 (small), barrel ~R24 (2/3 pot).
-    Small cbet → IP protected strong range → CALL wider on draws/medium hands.
-    Barrel R24 → commitment pressure → fold weak hands.
+Key findings (revised 2026-06-06 audit):
+  - bet_size 分布: overbet_185 (5640) + med_75p (1128)。
+    "overbet_185" は実は barrel R24 で、true overbet ではない。
+  - 3BP turn の OOP は SRP より wide に call できる:
+      * top_pair × overbet_185 → CALL 多数 (formula は v1 で FOLD していた、acc 上)
+      * ace_high × monotone × overbet_185 → CALL (nut blocker)
+      * second_pair × weak_draw → CALL (3BP 3-bettor は bluff も持つ)
 
-Design: mv-based + opp_polarization correction, bet_size aware.
-  Rule 1: AIR → always FOLD (turn range merged, fewer bluffs than SRP)
-  Rule 2: Weak pairs + no draw → FOLD
-  Rule 3: opp_pol < 0.75 (merged) + medium hand + no draw → FOLD more
-  Rule 4: Strong hands / combo draws → CALL (or RAISE with nuts)
+Design (v2):
+  - 強い made hand (set+) は CALL/RAISE
+  - **top_pair, overpair は基本 CALL** (v1 のように bet_size で FOLD しない)
+  - middle pair × draw → CALL
+  - AIR × strong draw → CALL
+  - AIR × ace_high/king_high × monotone → CALL (blocker)
+  - 上記以外の AIR → FOLD
 """
 from __future__ import annotations
 
@@ -38,82 +38,94 @@ WEAK_DRAW = {"twocards_bdfd", "onecard_bdfd", "gutshot"}
 STRONG_DRAW = {"flush_draw", "nut_flush_draw", "oesd", "combo_draw"}
 STRONG_MADE = {"two_pair", "set", "trips", "straight", "flush", "fullhouse", "quads"}
 
-# 3BP turn bet sizes — use probe's classify_bet_size() vocabulary
-# probe: small_33 (R<4), med_75p (R4-10), overbet_185 (R>=10)
-SMALL_BETS = {"small_33", "small_30p"}            # ~R<4
-BARRELS = {"med_75p", "med_100p"}                  # ~R4-10
-OVERBETS = {"overbet", "overbet_185", "allin"}    # R10+
+# 3BP turn bet sizes — probe's classify_bet_size() vocabulary
+SMALL_BETS = {"small_33", "small_30p"}
+BARRELS = {"med_75p", "med_100p"}
+OVERBETS = {"overbet", "overbet_185", "allin"}  # NOTE: overbet_185 は barrel R24
 
 
 def cash_3bp_turn_def_v1(
     mv: str,
     dv: str,
     board_family: str,
-    bet_size: str = "barrel",
+    bet_size: str = "med_75p",
     opp_polarization: float = 0.711,
-    opp_weak: float = 0.424,
 ) -> Action:
-    """Cash/MTT 100bb 3BP turn BB OOP defense v1.
+    """Cash/MTT 100bb 3BP turn BB OOP defense v2.
 
     Args:
         mv: made-value category.
         dv: draw-value category.
         board_family: board texture family.
-        bet_size: "small_cbet" (~R10/33%) / "barrel" (~R24/65%) / "overbet" (R40+).
-        opp_polarization: 3-bettor's turn range polarity (default N_cash_3bp_turn probe).
-        opp_weak: fraction of 3-bettor's range that is weak/air (default from probe).
+        bet_size: probe classify_bet_size 出力 (small_33 / med_75p / overbet_185 等)。
+        opp_polarization: 3-bettor's turn range polarity (default from N_cash_3bp_turn).
     """
-    # --- Nuts: always raise ---
+    has_strong_draw = dv in STRONG_DRAW
+    has_any_draw = dv in STRONG_DRAW or dv in WEAK_DRAW
+
+    # --- Monsters: always RAISE ---
     if mv in {"quads", "fullhouse"}:
         return "RAISE"
-    if mv == "set" and dv != "no_draw":
+    if mv == "set" and has_strong_draw:
         return "RAISE"
 
-    # --- AIR: always fold on turn (finding: opp_weak=0.424 → fewer bluffs → no call) ---
-    if mv in AIR:
-        if dv in STRONG_DRAW and board_family in DYNAMIC_BOARDS:
-            return "CALL"
-        return "FOLD"
+    # --- Strong made hands (2P+): CALL ---
+    if mv in {"two_pair", "set", "trips", "straight", "flush"}:
+        return "CALL"
 
-    # NOTE: removed blanket OVERBETS filter — dataset labels barrel R24 as "overbet_185"
-    # but that's just normal barrel size, not true overbet. mv-specific branches below
-    # handle bet_size correctly.
-
-    # --- Weak pairs: fold unless draw or vs small cbet ---
-    if mv in WEAK_PAIR_LOW:
-        if dv in STRONG_DRAW:
-            return "CALL"
-        if bet_size in SMALL_BETS and board_family in DRY_BOARDS:
-            return "CALL"  # small cbet on dry board → often protection, not value
-        return "FOLD"
+    # --- Top pair / overpair: CALL (data driven、v1 FOLD ルール削除) ---
+    if mv in {"top_pair", "overpair"}:
+        # exception: overpair × strong draw → RAISE for protection
+        if mv == "overpair" and has_strong_draw:
+            return "RAISE"
+        return "CALL"
 
     # --- Second pair ---
     if mv == "second_pair":
-        if dv in STRONG_DRAW:
+        if has_any_draw:
             return "CALL"
-        if dv in WEAK_DRAW and board_family in DYNAMIC_BOARDS:
-            return "CALL"
-        # opp_pol < 0.75 = merged 3BP range → second pair often behind → FOLD
+        # opp_pol < 0.75 = merged → second_pair behind → FOLD
         if opp_polarization < 0.75:
             return "FOLD"
         return "CALL"
 
-    # --- Top pair ---
-    if mv == "top_pair":
-        if dv in STRONG_DRAW:
-            return "RAISE"
-        if bet_size in OVERBETS and dv == "no_draw":
-            return "FOLD"  # overbet + top pair + no redraw → dominated
-        return "CALL"
+    # --- Weak pairs (underpair / third / low) ---
+    if mv in WEAK_PAIR_LOW:
+        if has_strong_draw:
+            return "CALL"
+        if bet_size in SMALL_BETS and board_family in DRY_BOARDS:
+            return "CALL"
+        return "FOLD"
 
-    # --- Overpair ---
-    if mv == "overpair":
-        if dv in STRONG_DRAW:
-            return "RAISE"
-        return "CALL"
+    # --- AIR (no_made_hand, ace_high, king_high) ---
+    if mv in AIR:
+        # Strong draw → CALL anywhere
+        if has_strong_draw:
+            return "CALL"
+        # Nut blocker on monotone → CALL (data: ace_high/king_high × monotone GTO calls)
+        if board_family == "monotone" and mv in {"ace_high", "king_high"}:
+            return "CALL"
+        # Weak draw on dynamic dry → marginal call
+        if dv in WEAK_DRAW and board_family in DRY_BOARDS and bet_size in SMALL_BETS:
+            return "CALL"
+        return "FOLD"
 
-    # --- Strong made / combo draw ---
-    if mv in STRONG_MADE or dv in STRONG_DRAW:
-        return "CALL"
+    # default: CALL (mv unknown)
+    return "CALL"
 
-    return "FOLD"
+
+if __name__ == "__main__":
+    # quick smoke test
+    tests = [
+        ("top_pair", "no_draw", "dry_high", "overbet_185", "CALL"),
+        ("top_pair", "no_draw", "low_dry", "overbet_185", "CALL"),
+        ("ace_high", "no_draw", "monotone", "overbet_185", "CALL"),
+        ("no_made_hand", "no_draw", "dry_high", "med_75p", "FOLD"),
+        ("set", "no_draw", "dry_high", "med_75p", "CALL"),
+        ("overpair", "flush_draw", "dynamic_2tone", "med_75p", "RAISE"),
+        ("second_pair", "no_draw", "dynamic", "med_75p", "CALL"),  # opp_pol=0.711 → close
+    ]
+    for mv, dv, bf, bs, expected in tests:
+        got = cash_3bp_turn_def_v1(mv, dv, bf, bs)
+        flag = "✓" if got == expected else "✗"
+        print(f"  {flag} ({mv},{dv},{bf},{bs}) → {got} (expected {expected})")

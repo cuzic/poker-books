@@ -100,10 +100,10 @@ def predict_new(row):
             return "flop_def_v9b_v10", flop_def_v9b_v10(mv, dv, bf, bs, opp_polarization=pol, opp_nut_pct=nut_pct)
         if sid in ("B_turn", "N_mtt200_turn"):
             return "turn_def_v10_v2", turn_def_v10_v2(mv, dv, bf, bs, opp_nut_pct=nut_pct)
+        # signature: river_def_v15_v2(mv, dv, board_family, bet_size, equity_bucket, eq_percentile, opp_pol, opp_nut_pct)
         if sid in ("B_river", "N_bvb_srp_river", "N_btn_sb_river", "N_mtt100_river",
                    "N_mtt25_river", "N_mtt200_river"):
-            return "river_def_v15_v2", river_def_v15_v2(mv, eb, bf, bs, eqp,
-                                                          opp_polarization=pol)
+            return "river_def_v15_v2", river_def_v15_v2(mv, dv, bf, bs, eb, eqp, pol, nut_pct)
     except Exception as e:
         return f"ERROR:{type(e).__name__}", None
     return "no_match", None
