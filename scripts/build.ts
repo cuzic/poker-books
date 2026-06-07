@@ -32,17 +32,18 @@ interface Chapter {
 }
 
 type OutputFormat = "html" | "xhtml" | "epub" | "site" | "all";
-type BookId = "vol1-preflop" | "vol4-tell";
+type BookId = "vol1-preflop" | "vol2-postflop" | "vol3-tell";
 
 const ROOT = join(import.meta.dir, "..");
-const BOOKS: BookId[] = ["vol1-preflop", "vol4-tell"];
+const BOOKS: BookId[] = ["vol1-preflop", "vol2-postflop", "vol3-tell"];
 
 // 各 book ID とディレクトリの対応（同名でない場合のみ記載）
 const BOOK_DIRS: Partial<Record<BookId, string>> = {};
 
 const EPUB_FILENAMES: Record<BookId, string> = {
   "vol1-preflop": "vol1-preflop.epub",
-  "vol4-tell": "vol4-tell.epub",
+  "vol2-postflop": "vol2-postflop.epub",
+  "vol3-tell": "vol3-tell.epub",
 };
 
 function bookDir(bookId: BookId): string {

@@ -1,17 +1,29 @@
-# 『迷わないポーカー』シリーズ執筆プロジェクト
+# 『迷わないポーカー』MATCHA シリーズ執筆プロジェクト
 
 ## プロジェクト概要
 
 テキサスホールデムを「暗算できる判断フロー」で決める書籍シリーズ。
+シリーズ通底のフレームワーク名: **MATCHA** (Math Algorithm for Tier-Categorized Hold'em Action)。
+全 3 巻が同じ acronym を共有し、巻ごとに **Formula / Framework / Exploits** の役割 suffix で識別する。
 
-## シリーズ構成（4 巻体制）
+## シリーズ構成（3 巻体制、2026-06-07 改定）
 
-| 巻 | テーマ | ディレクトリ | 主要式 | 状態 |
-|----|--------|------------|--------|------|
-| Vol1 | プリフロップ完全版（Cash+MTT統合） | `vol1-preflop/` | Score_BB v7 | 初稿生成中 |
-| Vol2 | キャッシュ ポストフロップ | （未着手・旧版アーカイブ済） | 全 5 街公式 v9 + Postflop 3 ルール式 | **再執筆待ち** |
-| Vol3 | MTT ポストフロップ | （未着手・旧版アーカイブ済） | SPR-axis-switching + bucket 公式 (Turn v9 / River v15) | **再執筆待ち** |
-| Vol4 | エクスプロイト（相手タイプ別） | `vol4-tell/` | プレイヤータイプ別補正 | 初稿完了 |
+| 巻 | サブブランド | テーマ | ディレクトリ | 主要式 | 状態 |
+|----|-----|--------|------------|--------|------|
+| Vol1 | **MATCHA Formula** | プリフロップ完全版（Cash+MTT統合、ICM/PKO preflop range含む） | `vol1-preflop/` | Score_BB v7 (ポジションティア + コンテキストキャリブレーション) | 初稿生成中 |
+| Vol2 | **MATCHA Framework** | ポストフロップ完全版（Cash 100bb + MTT chipEV 25-200bb 統合） | `vol2-postflop/` | 5 つの判定軸 + TEA グリッド + 3 モード + 3 補正 | 設計完了・執筆待ち |
+| Vol3 | **MATCHA Exploits** | エクスプロイト・テル（相手タイプ別） | `vol3-tell/` | 5 つの逸脱軸で MATCHA 判定軸を歪める | 初稿完了 (旧 Vol4)、MATCHA 用語で再執筆予定 |
+
+**MATCHA acronym 解釈** (シリーズ共通):
+- **M**ath **A**lgorithm — 数学アルゴリズム (暗算 philosophy)
+- **T**ier-**C**ategorized — ティア分類 (Vol1: ポジションティア / Vol2: 5 判定軸ティア / Vol3: 相手タイプ別ティア歪め)
+- **H**old'em **A**ction — ホールデムのアクション (Vol1: プレ vs フォールド / Vol2: ベット/レイズ/コール/フォールド / Vol3: タイプ別最適アクション)
+
+**3 巻構成の決定経緯 (2026-06-07)**:
+- MATCHA Framework (旧 UDG v2) で Cash 100bb と MTT chipEV (100bb) のポストフロップ判断が **完全同一公式** で扱えると確認 (293K rows audit、acc 同等差 ≤2pp)
+- 旧 Vol2 (Cash) + 旧 Vol3 (MTT) の内容が 8 割重複 → 統合書 1 冊で十分
+- ICM/PKO postflop は GTO Wizard API tier 制限 (403) で取得不可 → 将来別冊 (Vol2.5/Vol3.5 想定) で対応
+- 旧 Vol4 (エクスプロイト) を Vol3 にリネーム、MATCHA 用語で再執筆
 
 旧シリーズ・廃棄版は `_archive/` に移動済み:
 - `_archive/cash-preflop/`, `_archive/mtt-preflop/` は vol1-preflop に統合済
@@ -20,12 +32,35 @@
 - `_archive/specs_v2/`: 旧 UCBS-v2 spec YAML
 - `_archive/scripts/ucbs_book_generator.py`: 旧 generator
 
-**Vol2/Vol3 の現行ロジック (2026-06-01 確立、未書籍化)**:
-- 全 5 街公式 v9 (27 ルール): Flop attack 7 例外 / Flop def v7 (4 ルール) / Turn attack 常 CHECK / Turn def v8 (9 ルール mv+dv) / River attack v7 / River def v14 (bucket+mv override)
-- Postflop 3 ルール式: default + 5 例外 BET / 守備 3 条件分岐
-- SPR-axis-switching: 街 × stack depth で支配軸 mv/mv+dv/bucket が切替
-- 検証: `scripts/three_class_model/`
-- 設計書: `BOOK_DESIGN_2026-06-01.md`
+**Vol2 (MATCHA Framework) の中核** (2026-06-07 確立、書籍化準備完了):
+
+**MATCHA** = **M**ath **A**lgorithm for **T**ier-**C**ategorized **H**old'em **A**ction
+
+- **Layer 1: 5 つの判定軸** (`scripts/three_class_model/udg_v2.py` が SSOT、コード変数は英語維持)
+  - レンジ分布 (`board_polar_tier`): 2極化型 / 混在型 / 密集型
+  - ハンドストレングス (`hand_strength_tier`): ナッツメイド / ストロング / ツーペア / トップペア以上 / ミドルペア / エア
+  - ベットサイジング (`bet_size_tier`): スモールベット / ミディアムベット / オーバーベット / オールイン
+  - SPR (`spr_tier`): オールインSPR / ローSPR / ミディアムSPR / ディープSPR
+  - エクイティバケット (`equity_aware_tier`): モンスターハンド / 良ハンド / 弱ハンド / ブラフハンド
+- **Layer 2: TEA グリッド** (Tier × Edge = Action) — 5 軸 → 形勢 (優勢 / 五分五分 / 劣勢) を導出する中央装置
+- **Layer 3: 3 つのモード** (形勢ごとの行動原則)
+  - 優勢 → バリューモード
+  - 五分五分 → ショーダウンモード
+  - 劣勢 → ブラフキャッチモード
+- **Layer 4: 3 つの補正**
+  - チェックレイズ補正 (vs CR)
+  - ドンクベット補正 (vs Donk Bet)
+  - オープナー補正 (CO/HJ open river のみ)
+- 検証: `scripts/three_class_model/UDG_V2_RESULTS.md` (huge_loss 11 専用公式比 -62%)
+- 設計過程: `scripts/three_class_model/UDG_V3_LEARNINGS.md` (v3 試行で equity_bucket の重要性発見)
+- データ: `scripts/three_class_model/dataset_unified_v2.csv` (293K rows、phase 1-6 統合)
+- **用語集 (HTML)**: https://gistpreview.github.io/?dbb75f11330aff4346de987c4f4fb91b
+
+旧 Vol2/Vol3 の現行ロジック (2026-06-01 確立、MATCHA で吸収済) は `BOOK_DESIGN_2026-06-01.md` に記録。
+
+**Vol3 (エクスプロイト) と MATCHA の接続**:
+- エクスプロイト = **5 つの逸脱軸** (Five Imbalances: レンジ逸脱 / 頻度逸脱 / サイズ逸脱 / ポジション逸脱 / 判断逸脱) を読み、MATCHA の判定軸を歪めて形勢を変える技術
+- プレイタイプ 5 分類: ニット / TAG / LAG / コーリングステーション / マニアック
 
 ## 共通の設計思想
 
@@ -39,7 +74,8 @@
 ```
 poker-books/
 ├── vol1-preflop/         Vol1: プリフロップ完全版（Cash+MTT統合、4係数スコア式）
-├── vol4-tell/            Vol4: エクスプロイト（プレイヤータイプ別）
+├── vol2-postflop/        Vol2: ポストフロップ完全版 (MATCHA Framework、Cash+MTT chipEV統合)
+├── vol3-tell/            Vol3: エクスプロイト・テル（MATCHA 判定軸の歪め方、旧 Vol4）
 ├── _archive/             旧シリーズ・廃棄版
 │   ├── vol2-cash-postflop_v3/  廃棄 (S/M/W/A/D マトリックス系)
 │   ├── vol3-mtt-postflop_v3/   廃棄 (旧 SPR-axis-switching 系)
@@ -48,12 +84,12 @@ poker-books/
 │   ├── specs_v2/               旧 UCBS-v2 spec YAML
 │   └── scripts/                旧 generator
 ├── scripts/
-│   ├── build.ts            ビルドスクリプト（bun で実行、Vol1/Vol4 のみ）
-│   ├── three_class_model/  ポストフロップ最新ロジック検証 (v9 公式群、3 ルール式)
+│   ├── build.ts            ビルドスクリプト（bun で実行、Vol1/Vol2/Vol3 対応）
+│   ├── three_class_model/  ポストフロップ MATCHA Framework 実装 (`udg_v2.py` が SSOT、ファイル名は legacy)
 │   └── generate/
 │       ├── preflop_book_generator.py  Vol1 章原稿自動生成
-│       └── specs/         Vol2/Vol3 新 spec (vol{2,3}_t2_*.yaml)
-├── BOOK_DESIGN_2026-06-01.md  Vol2/Vol3 新書設計書
+│       └── specs/         Vol2 spec (vol2_ch{NN}_*.yaml、MATCHA ベース) は今後作成
+├── BOOK_DESIGN_2026-06-01.md  旧 Vol2/Vol3 設計書 (UDG v2 で吸収済、参照用)
 └── dist/           ビルド成果物
 ```
 
@@ -61,11 +97,12 @@ poker-books/
 
 ```bash
 bun run scripts/build.ts vol1-preflop          # Vol1 のみ
-bun run scripts/build.ts vol4-tell             # Vol4 のみ
-bun run scripts/build.ts all                   # 全巻 (現状 Vol1 + Vol4)
+bun run scripts/build.ts vol2-postflop         # Vol2 のみ (執筆開始後)
+bun run scripts/build.ts vol3-tell             # Vol3 (旧 Vol4 リネーム)
+bun run scripts/build.ts all                   # 全巻
 ```
 
-Vol2/Vol3 は再執筆待ち。新ロジックは scripts/three_class_model/ で検証済み、書籍化は別タスク。
+Vol2 は spec/generator 設計待ち、MATCHA Framework 公式 (`scripts/three_class_model/udg_v2.py` — ファイル名は legacy、内容は MATCHA SSOT) を generator から呼び出す予定。
 
 ## 執筆ワークフロー（全巻共通）
 
@@ -127,10 +164,10 @@ knowledges/<book>/reviews/review_<scope>.md
 
 各巻の gist URL は書籍固有（`book.json` 内の `identifier` とは別）。現行シリーズの gist：
 
-- Vol1 プリフロップ完全版: （旧 cash-preflop: https://gistpreview.github.io/?a263151bbdee0ac9cbaa4a4e97483edb）
-- Vol2 キャッシュ ポストフロップ: **廃棄** (旧 gist: https://gistpreview.github.io/?d50e33d174d918b1bbe9b7821ca8d1bb は旧ロジック)
-- Vol3 MTT ポストフロップ: **再執筆待ち**
-- Vol4 エクスプロイト: https://gistpreview.github.io/?519b2350329278e7be6f09e5be449cd9
+- Vol1 プリフロップ完全版 (**MATCHA Formula**): （旧 cash-preflop: https://gistpreview.github.io/?a263151bbdee0ac9cbaa4a4e97483edb）
+- Vol2 ポストフロップ完全版 (**MATCHA Framework**): **執筆待ち** (旧 Vol2/Vol3 廃棄、MATCHA で統合再執筆)
+- Vol3 エクスプロイト (**MATCHA Exploits**、旧 Vol4): https://gistpreview.github.io/?519b2350329278e7be6f09e5be449cd9 (MATCHA 用語で再執筆予定)
+- **MATCHA シリーズ用語集**: https://gistpreview.github.io/?dbb75f11330aff4346de987c4f4fb91b
 
 旧シリーズ gist（参照用）：
 - 旧②フロップ[基礎]: https://gistpreview.github.io/?5883292a2b687db842b4117f384c3aad

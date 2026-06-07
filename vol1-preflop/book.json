@@ -1,12 +1,12 @@
 {
   "title": "迷わないポーカー プリフロップ完全版",
   "titleRomaji": "Mayowanai Poker: Preflop Complete Edition",
-  "subtitle": "Vol1: Cash & MTT を4係数 + 境界暗記で 98% 整合",
+  "subtitle": "Vol1 MATCHA Formula 編 — Cash & MTT を4係数 + 境界暗記で 98% 整合",
   "author": "川西智也",
   "language": "ja",
   "identifier": "urn:uuid:a1b2c3d4-e5f6-7a8b-9c0d-e1f2a3b4c5d6",
   "publisher": "川西智也",
-  "description": "キャッシュゲームもトーナメントも、たった4つの係数から導けるスコア式でプリフロップ判断を完全攻略。\n\n169ハンド × ポジション × コンテキストをすべて「Score = H + L + pair_bonus + suit_bonus − gap + a_bonus」の一式で統一。GTO Wizard データ（Cash 58 シナリオ 92.7% / MTT 435 シナリオ 93.7% の整合率）に基づく係数設計で、Cash と MTT の違いも pair_bonus の差（+6）だけで説明できます。\n\nSBR別閾値テーブル、ICMフェーズ補正、9max補正まですべて網羅。さらに ch11 で境界帯ハンド (B+C 帯主要 12-15 ハンド) の暗記法を学べば、精度を 93% → 98% に押し上げられます。20問のドリル、ch12 補助ルール (set mining / SC implied odds / 3-bet bluff / BB ワイドコール)、1枚チートシートで式を実戦レベルまで定着させる構成です。",
+  "description": "本書は『迷わないポーカー』MATCHA シリーズ Vol1。MATCHA = Math Algorithm for Tier-Categorized Hold'em Action。プリフロップ版は **MATCHA Formula** として、ポジションティア (UTG/HJ/CO/BTN/SB) × コンテキストキャリブレーション (Cash/MTT/SBR/ICM/9max) を 1 つの Score 公式に統一。\n\nキャッシュゲームもトーナメントも、たった 4 つの係数から導ける Score_BB v7 でプリフロップ判断を完全攻略。\n\n169 ハンド × ポジション × コンテキストをすべて「Score = H + L + pair_bonus + suit_bonus − gap + a_bonus」の一式で統一。GTO Wizard データ（Cash 58 シナリオ 92.7% / MTT 435 シナリオ 93.7% の整合率）に基づく係数設計で、Cash と MTT の違いも pair_bonus の差（+6）だけで説明できます。\n\nSBR 別閾値テーブル、ICM フェーズ補正、9max 補正まですべて網羅。さらに ch11 で境界帯ハンド (B+C 帯主要 12-15 ハンド) の暗記法を学べば、精度を 93% → 98% に押し上げられます。20 問のドリル、ch12 補助ルール (set mining / SC implied odds / 3-bet bluff / BB ワイドコール)、1 枚チートシートで式を実戦レベルまで定着させる構成です。\n\n**シリーズ続編**: Vol2 (MATCHA Framework、ポストフロップ) / Vol3 (MATCHA Exploits、相手タイプ別)。\n**用語集**: https://gistpreview.github.io/?dbb75f11330aff4346de987c4f4fb91b",
   "cover": "chapters/images/cover.jpg",
   "chapters": [
     "chapters/00-introduction.md",
@@ -27,6 +27,7 @@
   "kdp": {
     "keywords": [
       "テキサスホールデム プリフロップ",
+      "ポーカー MATCHA Formula",
       "ポーカー レンジ表",
       "ポーカー 計算式 暗算",
       "MTT トーナメント プリフロップ",

@@ -1,33 +1,40 @@
 {
   "title": "エクスプロイト・ポーカー — 相手タイプ別に崩す技術",
-  "subtitle": "GTOの外側で稼ぐ、タイプ読みの実践フレームワーク",
+  "subtitle": "Vol3 MATCHA Exploits 編 — GTOの外側で稼ぐ、MATCHA Framework を歪める実践書",
   "author": "川西智也",
   "publisher": "川西智也",
   "language": "ja",
   "identifier": "urn:uuid:d4e5f6a7-8b9c-0d1e-2f3a-b4c5d6e7f8a9",
-  "description": "テキサスホールデムにおいて、GTO（ゲーム理論最適）の式と閾値をベースに、相手プレイヤーのタイプ（ニット・コーリングステーション・LAG・マニアック・TAG）を診断し、タイプ別にエクスプロイト戦略を実行する実践書。Five Imbalancesフレームワーク、サイズ・タイミング・ラインTell、タイプ別閾値調整表を体系化。",
+  "description": "本書は『迷わないポーカー』MATCHA シリーズ Vol3 (MATCHA Exploits 編)。Vol1 (MATCHA Formula、プリフロップ) と Vol2 (MATCHA Framework、ポストフロップ) の判定軸・閾値をベースに、相手プレイタイプ (ニット・コーリングステーション・LAG・マニアック・TAG) を診断し、タイプ別に MATCHA の判定軸を歪めるエクスプロイト戦略を実行する実践書。**5 つの逸脱軸** (レンジ逸脱 / 頻度逸脱 / サイズ逸脱 / ポジション逸脱 / 判断逸脱、GTO Wizard 'Five Imbalances of Exploitative Poker' に基づく)、サイズ・タイミング・ラインテル、タイプ別の判定軸補正表を体系化。\n\n**用語集**: https://gistpreview.github.io/?dbb75f11330aff4346de987c4f4fb91b",
   "keywords": [
     "ポーカー",
     "テキサスホールデム",
     "エクスプロイト",
+    "MATCHA Exploits",
+    "MATCHA Framework",
     "GTO",
-    "プレイヤータイプ",
+    "プレイタイプ",
     "ニット",
     "コーリングステーション",
     "LAG",
     "マニアック",
-    "Tell",
+    "5 つの逸脱軸",
+    "Five Imbalances",
+    "テル",
     "ライブポーカー"
   ],
   "target_readers": [
     "ライブポーカー初心者（半年以上）",
-    "オンライン中級者（GTO理論に触れたことがある）",
+    "オンライン中級者（GTO 理論に触れたことがある）",
     "ライブ経験豊富だが感覚に頼っているベテラン"
   ],
   "chapters": 21,
   "appendices": 4,
   "estimated_pages": 200,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "created": "2026-05-18",
-  "directory": "vol4-tell"
+  "updated": "2026-06-07",
+  "directory": "vol3-tell",
+  "framework_reference": "MATCHA Framework (Vol2)",
+  "terminology_glossary": "https://gistpreview.github.io/?dbb75f11330aff4346de987c4f4fb91b"
 }
