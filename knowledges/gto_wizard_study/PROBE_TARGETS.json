@@ -1,0 +1,581 @@
+[
+  {
+    "purpose": "drill_audit",
+    "flop": "7d4c2s",
+    "scenario_type": "3BP",
+    "n_drill_cards": 3,
+    "example_refs": [
+      [
+        "matcha-framework-3bet-pot-decisions",
+        "mf3bp_004"
+      ],
+      [
+        "matcha-framework-3bet-pot-decisions",
+        "mf3bp_015"
+      ],
+      [
+        "matcha-framework-3bet-pot-decisions",
+        "mf3bp_018"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "9s8d7c",
+    "scenario_type": "3BP",
+    "n_drill_cards": 2,
+    "example_refs": [
+      [
+        "matcha-framework-3bet-pot-decisions",
+        "mf3bp_007"
+      ],
+      [
+        "matcha-framework-3bet-pot-decisions",
+        "mf3bp_011"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "KsKd4c",
+    "scenario_type": "3BP",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-3bet-pot-decisions",
+        "mf3bp_009"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "As9d4c",
+    "scenario_type": "4BP",
+    "n_drill_cards": 2,
+    "example_refs": [
+      [
+        "matcha-framework-4bet-pot-decisions",
+        "mf4bp_006"
+      ],
+      [
+        "matcha-framework-4bet-pot-decisions",
+        "mf4bp_019"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "7d4c2s",
+    "scenario_type": "4BP",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-4bet-pot-decisions",
+        "mf4bp_009"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "9s8d7c",
+    "scenario_type": "4BP",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-4bet-pot-decisions",
+        "mf4bp_011"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "KsKd4c",
+    "scenario_type": "4BP",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-4bet-pot-decisions",
+        "mf4bp_012"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "5d4c2s",
+    "scenario_type": "4BP",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-4bet-pot-decisions",
+        "mf4bp_020"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "JsTs4s",
+    "scenario_type": "SRP_flop",
+    "n_drill_cards": 3,
+    "example_refs": [
+      [
+        "matcha-framework-srp-flop-decisions",
+        "mfsrpf_002"
+      ],
+      [
+        "matcha-framework-srp-flop-decisions",
+        "mfsrpf_007"
+      ],
+      [
+        "matcha-framework-srp-flop-decisions",
+        "mfsrpf_011"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "9s8d7c",
+    "scenario_type": "SRP_flop",
+    "n_drill_cards": 3,
+    "example_refs": [
+      [
+        "matcha-framework-srp-flop-decisions",
+        "mfsrpf_003"
+      ],
+      [
+        "matcha-framework-srp-flop-decisions",
+        "mfsrpf_008"
+      ],
+      [
+        "matcha-framework-srp-flop-decisions",
+        "mfsrpf_009"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "QhJd9c",
+    "scenario_type": "SRP_flop",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-flop-decisions",
+        "mfsrpf_012"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "AsTd4c",
+    "scenario_type": "SRP_flop",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-flop-decisions",
+        "mfsrpf_013"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "KsKd4c",
+    "scenario_type": "SRP_flop",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-flop-decisions",
+        "mfsrpf_016"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "8s5d3c",
+    "scenario_type": "SRP_flop",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-flop-decisions",
+        "mfsrpf_017"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "9s8d7c",
+    "scenario_type": "SRP_river",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-river-decisions",
+        "mfsrpr_006"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "Js7s3h",
+    "scenario_type": "SRP_river",
+    "n_drill_cards": 2,
+    "example_refs": [
+      [
+        "matcha-framework-srp-river-decisions",
+        "mfsrpr_011"
+      ],
+      [
+        "matcha-framework-srp-river-decisions",
+        "mfsrpr_012"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "JsTs8s",
+    "scenario_type": "SRP_river",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-river-decisions",
+        "mfsrpr_013"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "KsKd4c",
+    "scenario_type": "SRP_river",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-river-decisions",
+        "mfsrpr_018"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "9c6d4h",
+    "scenario_type": "SRP_river",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-river-decisions",
+        "mfsrpr_021"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "8c5d3h",
+    "scenario_type": "SRP_river",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-river-decisions",
+        "mfsrpr_022"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "Js7s3h",
+    "scenario_type": "SRP_turn",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-turn-decisions",
+        "mfsrpt_005"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "9s8d7c",
+    "scenario_type": "SRP_turn",
+    "n_drill_cards": 2,
+    "example_refs": [
+      [
+        "matcha-framework-srp-turn-decisions",
+        "mfsrpt_007"
+      ],
+      [
+        "matcha-framework-srp-turn-decisions",
+        "mfsrpt_015"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "Js7s3d",
+    "scenario_type": "SRP_turn",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-turn-decisions",
+        "mfsrpt_010"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "KsQs4c",
+    "scenario_type": "SRP_turn",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-turn-decisions",
+        "mfsrpt_011"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "Qc9d4h",
+    "scenario_type": "SRP_turn",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-turn-decisions",
+        "mfsrpt_012"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "Ts8d4c",
+    "scenario_type": "SRP_turn",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-turn-decisions",
+        "mfsrpt_013"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "8c7d3h",
+    "scenario_type": "SRP_turn",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-turn-decisions",
+        "mfsrpt_014"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "JsTs4c",
+    "scenario_type": "SRP_turn",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-turn-decisions",
+        "mfsrpt_017"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "drill_audit",
+    "flop": "Kh8h3c",
+    "scenario_type": "SRP_turn",
+    "n_drill_cards": 1,
+    "example_refs": [
+      [
+        "matcha-framework-srp-turn-decisions",
+        "mfsrpt_020"
+      ]
+    ],
+    "priority": 3
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "9s8d7c",
+    "category": "dynamic_clear",
+    "boundary_type": "dynamic vs medium",
+    "note": "完全 connected straight 可",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "9s8d6c",
+    "category": "dynamic_oneOff",
+    "boundary_type": "dynamic vs medium",
+    "note": "1 ギャップ、まだ dynamic 寄り",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "9s7d5c",
+    "category": "medium_dynamic",
+    "boundary_type": "dynamic vs medium",
+    "note": "2 ギャップ、grayzone",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "9s6d3c",
+    "category": "spread_medium",
+    "boundary_type": "dynamic vs medium",
+    "note": "3 ギャップ、もう dynamic でない",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "jsts4s",
+    "category": "monotone_3spade",
+    "boundary_type": "monotone vs 2-tone",
+    "note": "3-spade、明確 monotone",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "jsts4h",
+    "category": "two_tone",
+    "boundary_type": "monotone vs 2-tone",
+    "note": "2-spade、 FD あり",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "jstc4s",
+    "category": "two_tone_spread",
+    "boundary_type": "monotone vs 2-tone",
+    "note": "JT 2-tone, 完全 2 tone",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "ks8d2c",
+    "category": "dry_high_kicker",
+    "boundary_type": "dry_high boundary",
+    "note": "K8x、少し connectivity",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "ks9d4c",
+    "category": "dry_high_mid",
+    "boundary_type": "dry_high boundary",
+    "note": "K9x、middle range",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "kh9c5d",
+    "category": "merged_high",
+    "boundary_type": "dry_high boundary",
+    "note": "K9x rainbow、merged 寄り",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "kskd4c",
+    "category": "paired_high",
+    "boundary_type": "paired boundary",
+    "note": "K-paired",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "kskd9c",
+    "category": "paired_high_connector",
+    "boundary_type": "paired boundary",
+    "note": "KK + 9 (TP draw)",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "4s4d2c",
+    "category": "paired_low",
+    "boundary_type": "paired boundary",
+    "note": "low pair-bottom",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "7s4d2c",
+    "category": "very_low_dry",
+    "boundary_type": "low_dry boundary",
+    "note": "very low",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "8s6d3h",
+    "category": "low_dynamic",
+    "boundary_type": "low_dry boundary",
+    "note": "ややconnected low",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "as9d4c",
+    "category": "ace_high_dry",
+    "boundary_type": "ace_high boundary",
+    "note": "A-high dry",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "astd4c",
+    "category": "ace_high_kicker",
+    "boundary_type": "ace_high boundary",
+    "note": "A-T-x, broadway",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  },
+  {
+    "purpose": "boundary_validation",
+    "flop": "astd9c",
+    "category": "ace_high_broadway",
+    "boundary_type": "ace_high boundary",
+    "note": "A-T-9 broadway",
+    "scenario_type": "SRP_flop+3BP+4BP",
+    "priority": 2
+  }
+]
