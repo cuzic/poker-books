@@ -36,17 +36,16 @@ DRY_RIVER = {"dry_high", "low_dry"}
 DYNAMIC_RIVER = {"dynamic", "dynamic_2tone", "monotone"}
 ABSOLUTELY_STRONG = {"straight", "flush", "trips", "set", "two_pair"}
 
-# Per-family nut class and opp nut % from probe (PROBE_PRIORITY_FINDINGS §6.1)
+# Per-family nut class from probe (PROBE_PRIORITY_FINDINGS §6.1)
 # Used to determine whether hero hand beats opp nut class.
-# Format: {board_family: (nut_class_name, opp_nut_pct_3bp)}
+# Keys are board_family values (generic), not specific board labels.
 FAMILY_NUT_MAP: dict[str, tuple[str, float]] = {
-    "dyn_T97":   ("straight", 0.705),   # dyn_T97 → straight heavy; 3BP 70.5%
-    "dynamic":   ("straight", 0.187),   # generic dynamic → straight possible
-    "dynamic_2tone": ("flush", 0.000),  # d2t → flush draw boards; 3BP flush % low
-    "mono_Js":   ("flush",    0.275),   # mono → flush nut; 3BP 27.5% (SRP 44%)
-    "dry_high":  ("set",      0.064),   # dry high → set/trips nut; 3BP 6.4%
-    "low_dry":   ("set",      0.000),   # low dry → set nut; low nut concentration
-    "pair_KK2":  ("fullhouse",0.122),   # paired → FH nut; 3BP 12.2% (SRP 16%)
+    "dynamic":       ("straight",  0.187),  # dyn_T97 70.5%、他 dyn は低い、平均 ~18%
+    "dynamic_2tone": ("flush",     0.000),  # d2t は flush draw 完成低い
+    "monotone":      ("flush",     0.275),  # 3BP mono flush 27.5% (SRP 44%)
+    "dry_high":      ("set",       0.064),  # set/trips nut、3BP 6.4%
+    "low_dry":       ("set",       0.000),  # low_dry は nut concentration 極小
+    "paired":        ("fullhouse", 0.122),  # 3BP paired FH 12.2% (SRP 16%)
 }
 
 # Hand categories that beat each nut class
@@ -91,22 +90,32 @@ def cash_3bp_river_def_v1(
     is_dry = board_family in DRY_RIVER
     hero_beats_nut = _hero_beats_opp_nut(mv, board_family)
 
-    # --- Absolute monsters: always raise (PROBE_PRIORITY_FINDINGS §6.1: paired_KK2 FH 0% in 3BP) ---
-    if mv in {"quads", "fullhouse"}:
-        return "RAISE"
-
-    # --- Near-allin / allin bet: shove-or-fold structure ---
+    # --- Near-allin / allin bet: shove-or-fold structure (no RAISE option) ---
     if bet_size in {"allin", "near_allin"}:
+        # quads/fullhouse: always CALL (can't raise allin)
+        if mv in {"quads", "fullhouse"}:
+            return "CALL"
         # Hero beats opp nut class → call shove (PROBE_PRIORITY_FINDINGS §6.1)
         if hero_beats_nut:
             return "CALL"
-        # strong made hand + good equity position → call
-        if mv in {"set", "trips", "straight", "flush"} and equity_bucket in {"best_hands", "good_hands"}:
+        # strong made hand + good equity → call (v15-compatible base)
+        if mv in {"two_pair", "set", "trips", "straight", "flush"}:
+            if equity_bucket in {"best_hands", "good_hands"}:
+                return "CALL"
+            if is_dry and mv in {"set", "trips", "straight", "flush"}:
+                return "CALL"
+            return "FOLD"
+        # best_hands fallback (v15-style): top eq% on allin → CALL
+        if equity_bucket == "best_hands" and eq_percentile is not None and eq_percentile > 0.85:
             return "CALL"
-        # two_pair: only call if high equity percentile (3BP nut_pct 14-19% is significant)
-        if mv == "two_pair" and equity_bucket == "best_hands":
+        # monotone × flush special (v15-style)
+        if board_family == "monotone" and mv == "flush":
             return "CALL"
         return "FOLD"
+
+    # --- Non-allin: monsters always raise ---
+    if mv in {"quads", "fullhouse"}:
+        return "RAISE"
 
     # --- Strong made hands (non-allin): always call ---
     if mv in ABSOLUTELY_STRONG:

@@ -150,10 +150,10 @@ def river_def_v15_v2(
     """
     is_dry = board_family in DRY_RIVER
 
-    if mv in {"quads", "fullhouse"}:
-        return "RAISE"
-
+    # allin: no raise option; quads/fullhouse must CALL (not RAISE)
     if bet_size == "allin":
+        if mv in {"quads", "fullhouse"}:
+            return "CALL"
         if mv in {"two_pair", "set", "trips", "straight", "flush"}:
             if equity_bucket in {"best_hands", "good_hands"}:
                 return "CALL"
@@ -165,6 +165,10 @@ def river_def_v15_v2(
         if board_family == "monotone" and mv == "flush":
             return "CALL"
         return "FOLD"
+
+    # non-allin: quads/fullhouse can raise
+    if mv in {"quads", "fullhouse"}:
+        return "RAISE"
 
     if mv in ABSOLUTELY_STRONG:
         if equity_bucket == "trash_hands" and bet_size == "overbet":

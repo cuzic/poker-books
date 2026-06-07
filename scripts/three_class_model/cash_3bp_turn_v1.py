@@ -38,10 +38,11 @@ WEAK_DRAW = {"twocards_bdfd", "onecard_bdfd", "gutshot"}
 STRONG_DRAW = {"flush_draw", "nut_flush_draw", "oesd", "combo_draw"}
 STRONG_MADE = {"two_pair", "set", "trips", "straight", "flush", "fullhouse", "quads"}
 
-# 3BP turn bet sizes (approximate from probe: cbet=R10, barrel=R24)
-SMALL_BET = "small_cbet"   # ~R10, ~33%
-BARREL = "barrel"          # ~R24, ~65%
-OVERBET = "overbet"        # R40+
+# 3BP turn bet sizes — use probe's classify_bet_size() vocabulary
+# probe: small_33 (R<4), med_75p (R4-10), overbet_185 (R>=10)
+SMALL_BETS = {"small_33", "small_30p"}            # ~R<4
+BARRELS = {"med_75p", "med_100p"}                  # ~R4-10
+OVERBETS = {"overbet", "overbet_185", "allin"}    # R10+
 
 
 def cash_3bp_turn_def_v1(
@@ -74,17 +75,15 @@ def cash_3bp_turn_def_v1(
             return "CALL"
         return "FOLD"
 
-    # --- Overbet: only very strong hands survive ---
-    if bet_size == OVERBET:
-        if mv in STRONG_MADE or dv in STRONG_DRAW:
-            return "CALL"
-        return "FOLD"
+    # NOTE: removed blanket OVERBETS filter — dataset labels barrel R24 as "overbet_185"
+    # but that's just normal barrel size, not true overbet. mv-specific branches below
+    # handle bet_size correctly.
 
     # --- Weak pairs: fold unless draw or vs small cbet ---
     if mv in WEAK_PAIR_LOW:
         if dv in STRONG_DRAW:
             return "CALL"
-        if bet_size == SMALL_BET and board_family in DRY_BOARDS:
+        if bet_size in SMALL_BETS and board_family in DRY_BOARDS:
             return "CALL"  # small cbet on dry board → often protection, not value
         return "FOLD"
 
@@ -103,7 +102,7 @@ def cash_3bp_turn_def_v1(
     if mv == "top_pair":
         if dv in STRONG_DRAW:
             return "RAISE"
-        if bet_size == OVERBET and dv == "no_draw":
+        if bet_size in OVERBETS and dv == "no_draw":
             return "FOLD"  # overbet + top pair + no redraw → dominated
         return "CALL"
 

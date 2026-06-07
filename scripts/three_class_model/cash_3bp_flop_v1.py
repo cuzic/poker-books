@@ -66,10 +66,8 @@ def cash_3bp_flop_def_v1(
     if mv in {"low_pair", "third_pair"} and dv == "no_draw" and board_family in DRY_BOARDS | {"dynamic_2tone"}:
         return "FOLD"
 
-    # 3BP correction: second_pair × no_draw × dry → FOLD
-    # (opp 3BP range has AA/KK/AK that dominate top-pair → second_pair has little showdown value)
-    if mv == "second_pair" and dv == "no_draw" and board_family in DRY_BOARDS:
-        return "FOLD"
+    # NOTE: removed "second_pair × no_draw × dry → FOLD" — over-aggressive vs GTO
+    # (3BP IP range has missed AhKh/QhJh bluffs, second_pair still has bluff-catch value)
 
     # --- Strong holdings ---
     if mv == "overpair":
