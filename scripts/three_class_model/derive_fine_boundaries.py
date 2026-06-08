@@ -129,7 +129,7 @@ def analyze(p: Path) -> dict:
 
 def main():
     rows = []
-    for d in [GTOW / "probe_drill_btn_cbet", GTOW / "probe_boundary_gradient"]:
+    for d in [GTOW / "probe_drill_btn_cbet", GTOW / "probe_boundary_gradient", GTOW / "probe_exhaustive"]:
         for p in sorted(d.glob("*.json")):
             r = analyze(p)
             r["struct"] = board_structure(r["flop"])
