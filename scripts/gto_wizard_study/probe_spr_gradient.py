@@ -85,11 +85,17 @@ def parse_spr(label: str) -> float:
     return 0.0
 
 
-def probe_one(t: tuple) -> bool:
+def probe_one(t: tuple) -> tuple[bool, dict]:
     gametype, depth, preflop, flop_actions, board, label, expected_spr = t
     out = OUT_DIR / f"spr_{label}.json"
     if out.exists():
-        return True
+        saved = json.loads(out.read_text())
+        actions = saved.get("data", {}).get("action_solutions", [])
+        cbet = sum(a["total_frequency"] for a in actions if a["action"]["type"] in ("BET","RAISE"))
+        f_freq = sum(a["total_frequency"] for a in actions if a["action"]["type"] == "FOLD")
+        c_freq = sum(a["total_frequency"] for a in actions if a["action"]["type"] == "CALL")
+        chk = sum(a["total_frequency"] for a in actions if a["action"]["type"] == "CHECK")
+        return True, {"cbet": cbet, "fold": f_freq, "call": c_freq, "check": chk, "cached": True}
     params = {
         "gametype": gametype, "depth": depth,
         "preflop_actions": preflop,
