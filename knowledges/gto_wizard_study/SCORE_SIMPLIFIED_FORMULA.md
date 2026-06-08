@@ -9,15 +9,15 @@
 Score = 1 × tier + 3 × eq + (-1) × bs + 2 × pot
 ```
 
-## 新式 (係数なし、暗算楽)
+## 新式 (係数なし、bs は引き算)
 
 ```
-Score = tier + eq + bs + pot  ← 足すだけ
+Score = tier + eq - bs + pot
 
 tier:  ナッツ=5, ストロング=4, ツーペア=3, TP+=2, MP=1, エア=0
 eq:    best=9, good=6, weak=3, trash=0       ← 旧 0/1/2/3 を 3 倍
-bs:    small=0, 75%=-1, 100%=-2, over=-3,    ← 符号反転
-       over185=-4, allin=-5
+bs:    small=0, 75%=1, 100%=2, over=3,        ← 引き算
+       over185=4, allin=5
 pot:   SRP=0, DEF=2, 3BP=2, 4BP=4             ← 旧 0/1/1/2 を 2 倍
 ```
 
@@ -38,11 +38,11 @@ pot:   SRP=0, DEF=2, 3BP=2, 4BP=4             ← 旧 0/1/1/2 を 2 倍
 ## 推奨公式 (バランス)
 
 ```
-Score = tier + eq + bs + pot
+Score = tier + eq - bs + pot
 
 tier:  ナッツ=5, ストロング=4, ツーペア=3, TP+=2, MP=1, エア=0
 eq:    best=9, good=6, weak=3, trash=0
-bs:    small=0, 75%=-1, 100%=-2, over=-3, over185=-4, allin=-5
+bs:    small=0, 75%=1, 100%=2, over=3, over185=4, allin=5  (引く)
 pot:   SRP=0, DEF=2, 3BP=2, 4BP=4
 
 if Score >= 16: raise
@@ -52,23 +52,26 @@ else: fold
 
 ## 暗算の例題
 
-### 例 1: SRP flop で TP+ + good eq + 相手 33% bet
-- tier=2 (TP+) + eq=6 (good) + bs=0 (small) + pot=0 (SRP)
-- Score = **8** → call
+### 例 1: SRP flop / TP+ / good eq / 相手 33% bet
+Score = 2 + 6 - 0 + 0 = **8** → call
 
-### 例 2: 4BP flop で TP+ + good eq + 相手 overbet
-- tier=2 + eq=6 + bs=-3 (overbet) + pot=4 (4BP)
-- Score = **9** → call
+### 例 2: 4BP flop / TP+ / good eq / 相手 overbet
+Score = 2 + 6 - 3 + 4 = **9** → call
 
-### 例 3: SRP river で ナッツ + best eq + 相手 100% bet
-- tier=5 + eq=9 + bs=-2 + pot=0
-- Score = **12** → call
+### 例 3: SRP river / ナッツ / best eq / 相手 100% bet
+Score = 5 + 9 - 2 + 0 = **12** → call (>=16 で raise)
+
+### 例 4: 4BP / ナッツ / best / 100% bet
+Score = 5 + 9 - 2 + 4 = **16** → raise
+
+### 例 5: SRP / エア / trash / 相手 overbet 185%
+Score = 0 + 0 - 4 + 0 = **-4** → fold
 
 ## 比較
 
 | 式 | 操作 | 例: SRP TP+ good 33% |
 |---|---|---|
 | 旧式 | 1×2 + 3×2 + (-1)×0 + 2×0 = 8 | 4 個の乗算 + 4 個の加算 |
-| **新式** | 2 + 6 + 0 + 0 = 8 | **0 乗算、3 加算** |
+| **新式** | 2 + 6 - 0 + 0 = 8 | **0 乗算、3 加減算** |
 
 → 暗算負荷 ~70% 削減。Chen Formula 同様「数値を覚えて足すだけ」

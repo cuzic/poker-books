@@ -35,8 +35,8 @@ MATCHA_TIER = {
 # Pre-multiplied scores (係数 1 で足すだけ)
 TIER_VAL = {"ナッツメイド":5,"ストロング":4,"ツーペア":3,"トップペア以上":2,"ミドルペア":1,"エア":0}
 EQ_VAL   = {"best_hands":9,"good_hands":6,"weak_hands":3,"trash_hands":0}            # 旧×3
-BS_VAL   = {"small_33":0,"med_75p":-1,"med_100p":-2,"overbet":-3,"overbet_185":-4,"allin":-5}  # 符号反転
-POT_VAL  = {"SRP":0,"DEF":2,"3BP":2,"4BP":4}                                          # 旧×2
+BS_VAL   = {"small_33":0,"med_75p":1,"med_100p":2,"overbet":3,"overbet_185":4,"allin":5}  # 引き算用
+POT_VAL  = {"SRP":0,"DEF":2,"3BP":2,"4BP":4}                                              # 旧×2
 
 
 def parse_pot(scn):
@@ -80,7 +80,7 @@ print(f"Loaded {N:,} rows")
 
 
 def evaluate(t_call: int, t_raise: int):
-    scores = tiers + eqs + bss + pots  # all coefficients = 1
+    scores = tiers + eqs - bss + pots  # bs を引き算
     preds = np.where(scores >= t_raise, 2, np.where(scores >= t_call, 1, 0)).astype(np.int8)
     pred_evs = evs[np.arange(N), preds]
     losses = np.maximum(0, best_evs - pred_evs)
@@ -124,19 +124,23 @@ print(f"  Loss min: t_call={best_loss[3]}, t_raise={best_loss[4]} → acc={best_
 print(f"\n  Score range: [{tiers.min() + eqs.min() + bss.min() + pots.min()}, {tiers.max() + eqs.max() + bss.max() + pots.max()}]")
 print(f"  Theoretical [-5, 18]")
 
-# Example calculations for memorization
-print("\n=== 暗算の例題 ===")
+# Example calculations for memorization (引き算 style)
+print("\n=== 暗算の例題 (bs は引き算) ===")
 print("【例 1】SRP flop で TP+ + good eq + 相手 33% bet")
-print(f"  tier=2 (TP+) + eq=6 (good) + bs=0 (small) + pot=0 (SRP) = {2+6+0+0}")
-print(f"  → Score 8 → call (>= {best_balanced[3]})")
+print(f"  Score = 2 (TP+) + 6 (good) - 0 (small) + 0 (SRP) = {2+6-0+0}")
+print(f"  → call (>= {best_balanced[3]})")
 print()
 print("【例 2】4BP flop で TP+ + good eq + 相手 overbet")
-print(f"  tier=2 + eq=6 + bs=-3 (overbet) + pot=4 (4BP) = {2+6-3+4}")
-print(f"  → Score 9 → call")
+print(f"  Score = 2 + 6 - 3 (overbet) + 4 (4BP) = {2+6-3+4}")
+print(f"  → call")
 print()
-print("【例 3】SRP river で ナッツメイド + best eq + 相手 100% bet")
-print(f"  tier=5 + eq=9 + bs=-2 + pot=0 = {5+9-2+0}")
-print(f"  → Score 12 → call (>= {best_balanced[4]} なら raise)")
+print("【例 3】SRP river で ナッツ + best eq + 相手 100% bet")
+print(f"  Score = 5 + 9 - 2 + 0 = {5+9-2+0}")
+print(f"  → call (>= {best_balanced[4]} なら raise)")
+print()
+print("【例 4】4BP / ナッツ / best / 100% bet")
+print(f"  Score = 5 + 9 - 2 + 4 = {5+9-2+4}")
+print(f"  → raise!")
 
 
 # === Report ===
@@ -152,15 +156,15 @@ lines.append("```")
 lines.append("Score = 1 × tier + 3 × eq + (-1) × bs + 2 × pot")
 lines.append("```")
 lines.append("")
-lines.append("## 新式 (係数なし、暗算楽)")
+lines.append("## 新式 (係数なし、bs は引き算)")
 lines.append("")
 lines.append("```")
-lines.append("Score = tier + eq + bs + pot  ← 足すだけ")
+lines.append("Score = tier + eq - bs + pot")
 lines.append("")
 lines.append("tier:  ナッツ=5, ストロング=4, ツーペア=3, TP+=2, MP=1, エア=0")
 lines.append("eq:    best=9, good=6, weak=3, trash=0       ← 旧 0/1/2/3 を 3 倍")
-lines.append("bs:    small=0, 75%=-1, 100%=-2, over=-3,    ← 符号反転")
-lines.append("       over185=-4, allin=-5")
+lines.append("bs:    small=0, 75%=1, 100%=2, over=3,        ← 引き算")
+lines.append("       over185=4, allin=5")
 lines.append("pot:   SRP=0, DEF=2, 3BP=2, 4BP=4             ← 旧 0/1/1/2 を 2 倍")
 lines.append("```")
 lines.append("")
@@ -184,11 +188,11 @@ lines.append("")
 lines.append("## 推奨公式 (バランス)")
 lines.append("")
 lines.append("```")
-lines.append("Score = tier + eq + bs + pot")
+lines.append("Score = tier + eq - bs + pot")
 lines.append("")
 lines.append("tier:  ナッツ=5, ストロング=4, ツーペア=3, TP+=2, MP=1, エア=0")
 lines.append("eq:    best=9, good=6, weak=3, trash=0")
-lines.append("bs:    small=0, 75%=-1, 100%=-2, over=-3, over185=-4, allin=-5")
+lines.append("bs:    small=0, 75%=1, 100%=2, over=3, over185=4, allin=5  (引く)")
 lines.append("pot:   SRP=0, DEF=2, 3BP=2, 4BP=4")
 lines.append("")
 lines.append(f"if Score >= {best_balanced[4]}: raise")
@@ -199,17 +203,20 @@ lines.append("")
 
 lines.append("## 暗算の例題")
 lines.append("")
-lines.append("### 例 1: SRP flop で TP+ + good eq + 相手 33% bet")
-lines.append("- tier=2 (TP+) + eq=6 (good) + bs=0 (small) + pot=0 (SRP)")
-lines.append("- Score = **8** → call")
+lines.append("### 例 1: SRP flop / TP+ / good eq / 相手 33% bet")
+lines.append("Score = 2 + 6 - 0 + 0 = **8** → call")
 lines.append("")
-lines.append("### 例 2: 4BP flop で TP+ + good eq + 相手 overbet")
-lines.append("- tier=2 + eq=6 + bs=-3 (overbet) + pot=4 (4BP)")
-lines.append("- Score = **9** → call")
+lines.append("### 例 2: 4BP flop / TP+ / good eq / 相手 overbet")
+lines.append("Score = 2 + 6 - 3 + 4 = **9** → call")
 lines.append("")
-lines.append("### 例 3: SRP river で ナッツ + best eq + 相手 100% bet")
-lines.append("- tier=5 + eq=9 + bs=-2 + pot=0")
-lines.append("- Score = **12** → call")
+lines.append("### 例 3: SRP river / ナッツ / best eq / 相手 100% bet")
+lines.append("Score = 5 + 9 - 2 + 0 = **12** → call (>=16 で raise)")
+lines.append("")
+lines.append("### 例 4: 4BP / ナッツ / best / 100% bet")
+lines.append("Score = 5 + 9 - 2 + 4 = **16** → raise")
+lines.append("")
+lines.append("### 例 5: SRP / エア / trash / 相手 overbet 185%")
+lines.append("Score = 0 + 0 - 4 + 0 = **-4** → fold")
 lines.append("")
 
 lines.append("## 比較")
@@ -217,7 +224,7 @@ lines.append("")
 lines.append("| 式 | 操作 | 例: SRP TP+ good 33% |")
 lines.append("|---|---|---|")
 lines.append("| 旧式 | 1×2 + 3×2 + (-1)×0 + 2×0 = 8 | 4 個の乗算 + 4 個の加算 |")
-lines.append("| **新式** | 2 + 6 + 0 + 0 = 8 | **0 乗算、3 加算** |")
+lines.append("| **新式** | 2 + 6 - 0 + 0 = 8 | **0 乗算、3 加減算** |")
 lines.append("")
 lines.append("→ 暗算負荷 ~70% 削減。Chen Formula 同様「数値を覚えて足すだけ」")
 
