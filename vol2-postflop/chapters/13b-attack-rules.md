@@ -9,8 +9,8 @@
 **どの条件なら BET し、どの条件なら CHECK するか** を決定ロジックとして示します。
 
 精度根拠: 6,418 hands × 16 シナリオの GTO Wizard 実測データで検証。
-全体精度 **80.76%**（v9d、DT 上限 83.2% に対し −2.4pp）。
-ランクベース閾値を導入した結果、旧版 v6d（76.3%）から +4.5pp 向上。
+全体精度 **81.09%**（v9f、DT 上限 83.2% に対し −2.1pp）。
+ランクベース閾値を導入した結果、旧版 v6d（76.3%）から +4.8pp 向上。
 
 ## 14.2 なぜ MATCHA Score を使わないのか
 
@@ -179,13 +179,13 @@ UP × paired × 10-high 以上?                      → BET（10 以下の低�
 2P+ （その他）?                               → BET
 TP+ × paired × no-draw × ≤7-high?            → CHECK（低ペアは CHECK）
 TP+ （その他）?                               → BET
-UP × wet × no-draw?                           → CHECK
+UP × wet?                                     → BET（no-draw 含む）
 UP × paired × no-draw × Q-high 以上?         → CHECK（J 以下は BET）
 UP （その他）?                                → BET
 エア × dry × gutshot × Q-high 以上?          → BET（J 以下は CHECK）
 エア × dry × no-strong?                      → BET（strong draw は CHECK）
-エア × wet?                                  → BET（78% BET — 全部 BET）
-→ CHECK
+エア × wet × no-draw?                        → BET（no-draw のみ BET）
+→ CHECK（エア×wet×strong/gutshot は CHECK）
 ```
 
 | ルール | 条件 | アクション | 理由 |
@@ -193,8 +193,8 @@ UP （その他）?                                → BET
 | ① | 2P+（非 low dry） | **BET** | SPR≈1.5 でオールイン圧力として機能 |
 | ② | 2P+×dry×≤8×no-draw | **CHECK** | 低 dry で 2P+ も CHECK（レンジが disconnected） |
 | ③ | TP+（非 low-paired） | **BET** | TP+ はほぼ全ての状況で BET |
-| ④ | UP×dry/paired×≤11 | **BET** | Q-high 以下のペアまで UP が BET |
-| ⑤ | エア×wet | **BET** | 78% BET — wet ボードのエアは常に BET |
+| ④ | UP×dry/paired×≤11 / UP×wet | **BET** | Q-high 以下のペアまで UP が BET。wet も BET |
+| ⑤ | エア×wet×no-draw | **BET** | no-draw のみ BET（FD/gutshot は CHECK — 相手レンジと正面衝突） |
 | ⑥ | エア×dry×gutshot×Q+ | **BET** | Q/K/A-high dry で gutshot エアが機能（J 以下は CHECK） |
 | ⑦ | エア×dry×no-strong | **BET** | strong draw 以外の干渉しないエアを bluff |
 
@@ -227,7 +227,8 @@ TP+ × paired × no-draw × ≤10-high?  → BET（11 以上は CHECK）
 TP+（その他）?                        → BET
 2P+ × wet?                           → BET
 2P+ × paired × 7-high 以上?          → BET（6 以下は CHECK）
-エア × strong?                        → BET
+エア × strong × (dry/wet)?            → BET
+エア × strong × paired × ≤10-high?   → BET（J 以上のペアは CHECK）
 エア × paired × gutshot × 12-high 以上? → BET（11 以下は CHECK）
 → CHECK
 ```
@@ -237,7 +238,8 @@ TP+（その他）?                        → BET
 | ① | TP+ × non-high-paired | **BET** | 3BP OOP TP+ dry 81% / wet 69%。高ペアボード（Q/K/A）は CHECK |
 | ② | 2P+×wet | **BET** | wet で強い手 + OOP ポジション不利の補填として BET |
 | ③ | 2P+×paired×7+ | **BET** | 中〜高ペアボードで 2P+ がバリュー |
-| ④ | エア×strong | **BET** | strong draw エアは OOP でもブラフとして機能 |
+| ④ | エア×strong×(dry/wet) | **BET** | dry/wet のエア strong draw は OOP でもブラフとして機能 |
+| ④' | エア×strong×paired×≤10 | **BET** | ペアボード strong は low のみ BET（J/Q/K/A ペアは CHECK） |
 | ⑤ | エア×paired×gutshot×K+ | **BET** | A-high ペアボードで gutshot エアが機能（12 以上） |
 
 ### 4BP ターン OOP
