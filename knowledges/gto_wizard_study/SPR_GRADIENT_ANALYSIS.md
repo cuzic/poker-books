@@ -1,7 +1,7 @@
 # SPR gradient 分析 — 同 board (Ks7d2c) × SPR 変化
 
 BTN 攻撃 IP 側、SRP/3BP/4BP × Cash 50/100bb で同 K72 rainbow flop を probe。
-SPR が連続的に変化したとき、tier ごとの cbet 行動がどう変わるか。
+SPR が連続的に変化したとき、カテゴリ ごとの cbet 行動がどう変わるか。
 
 ## 概要 (SPR 昇順)
 
@@ -12,9 +12,9 @@ SPR が連続的に変化したとき、tier ごとの cbet 行動がどう変�
 | depth_50_flop | 8.0 | 4.6bb | 33.0% |
 | depth_100_flop | 16.0 | 1.9bb | 50.2% |
 
-## tier × SPR の cbet 頻度
+## カテゴリ × SPR の cbet 頻度
 
-| tier | SPR 1.3 | SPR 3.4 | SPR 8.0 | SPR 16.0 |
+| カテゴリ | SPR 1.3 | SPR 3.4 | SPR 8.0 | SPR 16.0 |
 |---|---:|---:|---:|---:|
 | ナッツメイド | 0% | 0% | 0% | 0% |
 | ストロング | 4% | 41% | 69% | 96% |
@@ -25,7 +25,7 @@ SPR が連続的に変化したとき、tier ごとの cbet 行動がどう変�
 
 ## 観察
 
-### tier ごとの SPR sensitivity
+### カテゴリ ごとの SPR sensitivity
 
 - **ナッツメイド**: SPR1.3=0% → SPR3.4=0% → SPR8=0% → SPR16=0% (安定)
 - **ストロング**: SPR1.3=4% → SPR3.4=41% → SPR8=69% → SPR16=96% (★ SPR1→3 で急変)
@@ -41,7 +41,7 @@ SPR が連続的に変化したとき、tier ごとの cbet 行動がどう変�
 - **ミディアム (3-7)**: SPR 3.4 (3BP flop) 側 — value/bluff 分離
 - **ディープ (>7)**: SPR 8/16 (SRP) 側 — protect range, 多様な sizing
 
-実 GTO で tier ごとに SPR の sensitivity が異なる:
+実 GTO で カテゴリ ごとに SPR の sensitivity が異なる:
 - ナッツメイド/ストロング: SPR↑で常に高頻度ベット (value 一貫)
 - ツーペア/トップペア: SPR↓ (3BP/4BP) で頻度↑ (jam 価値)、SPR↑ (SRP) で控えめ
 - ミドルペア/エア: SPR↑ で頻度↑ (multi-street bluff 可、ブラフ余地)

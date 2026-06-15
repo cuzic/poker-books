@@ -21,11 +21,11 @@ MATCHA_TIER = {
     "set":"ストロング","trips":"ストロング","straight":"ストロング","flush":"ストロング",
     "two_pair":"ツーペア",
     "top_pair":"トップペア以上","overpair":"トップペア以上",
-    "second_pair":"ミドルペア","third_pair":"ミドルペア","underpair":"ミドルペア","low_pair":"ミドルペア",
+    "second_pair":"アンダーペア","third_pair":"アンダーペア","underpair":"アンダーペア","low_pair":"アンダーペア",
     "no_made_hand":"エア","king_high":"エア","ace_high":"エア",
 }
 
-TIER_SCORE = {"ナッツメイド":5,"ストロング":4,"ツーペア":3,"トップペア以上":2,"ミドルペア":1,"エア":0}
+TIER_SCORE = {"ナッツメイド":5,"ストロング":4,"ツーペア":3,"トップペア以上":2,"アンダーペア":1,"エア":0}
 EQ_SCORE = {"best_hands":3,"good_hands":2,"weak_hands":1,"trash_hands":0}
 BS_PRESSURE = {"small_33":0,"med_75p":1,"med_100p":2,"overbet":3,"overbet_185":4,"allin":5}
 POT_PRESSURE = {"SRP":0,"DEF":1,"3BP":1,"4BP":2}

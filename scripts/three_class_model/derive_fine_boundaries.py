@@ -22,7 +22,7 @@ MATCHA_TIER = {
     "set": "ストロング","trips": "ストロング","straight": "ストロング","flush": "ストロング",
     "two_pair": "ツーペア",
     "top_pair": "トップペア以上","overpair": "トップペア以上",
-    "second_pair": "ミドルペア","third_pair": "ミドルペア","underpair": "ミドルペア","low_pair": "ミドルペア",
+    "second_pair": "アンダーペア","third_pair": "アンダーペア","underpair": "アンダーペア","low_pair": "アンダーペア",
     "no_made_hand": "エア","king_high": "エア","ace_high": "エア",
 }
 
@@ -157,7 +157,7 @@ def main():
     for r in rows:
         for tier, ratio in r["tier_bet_ratio"].items():
             sub_tier[(r["subfamily"], tier)].append(ratio)
-    tier_order = ["ナッツメイド","ストロング","ツーペア","トップペア以上","ミドルペア","エア"]
+    tier_order = ["ナッツメイド","ストロング","ツーペア","トップペア以上","アンダーペア","エア"]
     subs_sorted = sorted(by_subfamily.keys(),
                         key=lambda x: -statistics.mean([r['cbet'] for r in by_subfamily[x]]))
 

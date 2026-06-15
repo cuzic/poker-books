@@ -3,7 +3,7 @@
 ## プロジェクト概要
 
 テキサスホールデムを「暗算できる判断フロー」で決める書籍シリーズ。
-シリーズ通底のフレームワーク名: **MATCHA** (Math Algorithm for Tier-Categorized Hold'em Action)。
+シリーズ通底のフレームワーク名: **MATCHA** (Math Algorithm of Twelve-Cell Hold'em Action)。
 全 3 巻が同じ acronym を共有し、巻ごとに **Formula / Framework / Exploits** の役割 suffix で識別する。
 
 ## シリーズ構成（3 巻体制、2026-06-07 改定）
@@ -16,7 +16,7 @@
 
 **MATCHA acronym 解釈** (シリーズ共通):
 - **M**ath **A**lgorithm — 数学アルゴリズム (暗算 philosophy)
-- **T**ier-**C**ategorized — ティア分類 (Vol1: ポジションティア / Vol2: 5 判定軸ティア / Vol3: 相手タイプ別ティア歪め)
+- **T**welve-**C**ell — 12 マス (4 カテゴリ × 3 board の判定グリッド、シリーズ全体を貫く核心)
 - **H**old'em **A**ction — ホールデムのアクション (Vol1: プレ vs フォールド / Vol2: ベット/レイズ/コール/フォールド / Vol3: タイプ別最適アクション)
 
 **3 巻構成の決定経緯 (2026-06-07)**:
@@ -34,7 +34,7 @@
 
 **Vol2 (MATCHA Framework) の中核** (2026-06-07 確立、書籍化準備完了):
 
-**MATCHA** = **M**ath **A**lgorithm for **T**ier-**C**ategorized **H**old'em **A**ction
+**MATCHA** = **M**ath **A**lgorithm for **T**welve-**C**ell **H**old'em **A**ction
 
 - **Layer 1: 5 つの判定軸** (`scripts/three_class_model/udg_v2.py` が SSOT、コード変数は英語維持)
   - レンジ分布 (`board_polar_tier`): 2極化型 / 混在型 / 密集型
@@ -42,7 +42,7 @@
   - ベットサイジング (`bet_size_tier`): スモールベット / ミディアムベット / オーバーベット / オールイン
   - SPR (`spr_tier`): オールインSPR / ローSPR / ミディアムSPR / ディープSPR
   - エクイティバケット (`equity_aware_tier`): モンスターハンド / 良ハンド / 弱ハンド / ブラフハンド
-- **Layer 2: TEA グリッド** (Tier × Edge = Action) — 5 軸 → 形勢 (優勢 / 五分五分 / 劣勢) を導出する中央装置
+- **Layer 2: TEA グリッド** (カテゴリ × Edge = Action) — 5 軸 → 形勢 (優勢 / 五分五分 / 劣勢) を導出する中央装置
 - **Layer 3: 3 つのモード** (形勢ごとの行動原則)
   - 優勢 → バリューモード
   - 五分五分 → ショーダウンモード

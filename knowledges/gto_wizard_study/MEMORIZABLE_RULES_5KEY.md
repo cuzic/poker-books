@@ -7,11 +7,11 @@ Equity Bucket / SPR は pot type で代用) を反映したマクロルール。
 
 | level | cell key | cells | rules |
 |-------|---------|---:|---:|
-| L1 (最具体) | (pot, street, tier, eq, **bs**) | 252 | 144 |
+| L1 (最具体) | (pot, street, カテゴリ, eq, **bs**) | 252 | 144 |
 | L2 | (pot, street, sub, eq, **bs**) | 310 | 152 |
-| L3 | (pot, street, tier, eq) | 155 | 81 |
+| L3 | (pot, street, カテゴリ, eq) | 155 | 81 |
 | L4 | (pot, street, eq, **bs**) | 79 | 36 |
-| L5a | (pot, street, tier, **bs**) | 112 | 64 |
+| L5a | (pot, street, カテゴリ, **bs**) | 112 | 64 |
 | L5b | (pot, street, sub, eq) | 247 | 145 |
 | L6 | (pot, street, eq) | 40 | 23 |
 | L7 | (pot, street) | 10 | 3 |

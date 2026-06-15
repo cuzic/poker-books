@@ -15,7 +15,7 @@ DV テーブル (combo=4, FD=3, etc) を覚える必要なし。
 ## w_outs=1 公式 (整数版)
 
 ```
-Score = 5 × tier + Grid[tier][board]
+Score = 5 × カテゴリ + Grid[カテゴリ][board]
       + 1 × outs (読者が計算)
       + 0 × overcards
       + 3 × pot - 2 × bs + (-10)
@@ -35,7 +35,7 @@ else: fold
 
 ## Grid (w_outs=1 整数版)
 
-| tier | dry | paired | wet |
+| カテゴリ | dry | paired | wet |
 |------|---:|---:|---:|
 | エア | -7 | -5 | -8 |
 | ミドルペア | 17 | 2 | -6 |
@@ -48,5 +48,5 @@ else: fold
 
 | version | 軸の値 | grid | weights | 合計項目 |
 |---|---:|---:|---:|---:|
-| 旧 (DV 5段階) | tier 6 + DV 5 + bs 6 + pot 4 = 21 | 18 | 5 | **44** |
-| **新 (outs 直接)** | tier 6 + bs 6 + pot 4 = 16 | 18 | 5 | **39** ← 5 項目減 |
+| 旧 (DV 5段階) | カテゴリ 6 + DV 5 + bs 6 + pot 4 = 21 | 18 | 5 | **44** |
+| **新 (outs 直接)** | カテゴリ 6 + bs 6 + pot 4 = 16 | 18 | 5 | **39** ← 5 項目減 |

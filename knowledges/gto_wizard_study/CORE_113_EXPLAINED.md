@@ -34,7 +34,7 @@
 
 ### 🔴 fold ルール (72 個、主に 弱手 vs 大きな bet)
 
-**「エア tier + trash_hands + 大きな bet サイズ」の組合せが最多**:
+**「エア カテゴリ + trash_hands + 大きな bet サイズ」の組合せが最多**:
 
 | # | 条件 | action | 直感 |
 |---|------|--------|------|
@@ -69,7 +69,7 @@
 | 11 | 4BP flop × mid_dry × weak × overbet | call 88% | 4BP の dry board で weak → call jam-or-fold |
 | 14 | 4BP turn × connected_mid × weak × 185% bet | call 86% | 4BP turn で weak eq でも MDF call |
 | 22 | 4BP flop × ミドルペア × weak × overbet | call 98% | 4BP の MP は call で commit (jam-or-fold) |
-| 29 | 3BP flop × エア × weak × 75% bet | call 93% | 3BP で エア tier (弱だが eq そこそこ) → call MDF |
+| 29 | 3BP flop × エア × weak × 75% bet | call 93% | 3BP で エア カテゴリ (弱だが eq そこそこ) → call MDF |
 | 75 | 4BP flop × paired_high × best × overbet | call 89% | best eq でも 4BP の paired board は call (slowplay/trap) |
 
 **「good_hands + 中サイズ bet」の call**:
@@ -102,14 +102,14 @@
 
 CORE 113 を暗記する前に、これらの **マクロ法則** をまず体に染み込ませる:
 
-1. **「エア tier + trash eq に大きな bet は降りる」** → ルール 1, 3, 4, 8, 18, 19, 32 (約 25 ルール)
+1. **「エア カテゴリ + trash eq に大きな bet は降りる」** → ルール 1, 3, 4, 8, 18, 19, 32 (約 25 ルール)
 2. **「ミドルペア + trash eq は降りる」** → 12, 36, 40, 98
 3. **「強い手 (TP+/2pair/ナッツ) でも trash eq なら降りる」** → 79, 104, 113 (board crushed 認識)
 4. **「monotone river + trash → flush 完成、降りる」** → 5, 31, 60
 5. **「4BP の overbet 受けたら、weak は call、good は raise」** → 6, 7 (jam-or-fold ゾーン)
 6. **「best_hands + 浅い SPR = jam value re-raise」** → 7, 76, 81, 97
 7. **「good_hands に 75% bet → call (value catch)」** → 35, 44, 46, 65
-8. **「3BP の エア tier だが weak eq → call で MDF」** → 29, 85, 106
+8. **「3BP の エア カテゴリ だが weak eq → call で MDF」** → 29, 85, 106
 9. **「paired board の best/good eq は call で slowplay」** → 75, 105, 99
 10. **「connected board の good eq → call で semi-bluff/draw catch」** → 35, 52, 65
 

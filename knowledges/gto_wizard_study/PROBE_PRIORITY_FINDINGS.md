@@ -49,7 +49,7 @@ bimodal_combo% = P(min(top2_freq) / total_freq > 0.2)
   `opp_nut_class` (board family の典型 nut class), `opp_nut_pct`, `opp_nut_eq_median`
 - per-combo: `opp_bucket`, `opp_eq`, `opp_eq_percentile`, `hand_eq_vs_opp_nut`
 
-→ 「相手 range が polar か merged か」「相手の nut tier の比率」「自分のハンドが相手 nut tier より強いか」を全 spot で定量化。
+→ 「相手 range が polar か merged か」「相手の nut カテゴリ の比率」「自分のハンドが相手 nut カテゴリ より強いか」を全 spot で定量化。
 
 ### 2.4 過去 JSON 再処理 (extract_past.py)
 

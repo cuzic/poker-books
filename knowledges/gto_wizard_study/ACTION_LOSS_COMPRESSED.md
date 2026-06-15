@@ -12,9 +12,9 @@ Grid 24→9 cells + 補正 9→4 個に圧縮、過剰適合回避。
 | v2 整数 (24 grid + 9 corrections) | 64.2% | 0.65 BB | 3.16% |
 | 既存公式 v9b/v15 | 59.5% | 1.86 BB | 9.65% |
 
-## Compressed Grid (3 tier × 3 board = 9 cells)
+## Compressed Grid (3 カテゴリ × 3 board = 9 cells)
 
-| tier | dry | paired | wet (connected/mono) |
+| カテゴリ | dry | paired | wet (connected/mono) |
 |------|---:|---:|---:|
 | **弱(MP/エア)** | 4 | 11 | 3 |
 | **中(2P/TP+)** | 7 | 4 | 5 |

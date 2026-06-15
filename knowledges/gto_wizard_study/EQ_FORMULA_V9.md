@@ -17,7 +17,7 @@
 ```
 Score = w_mv × MV + w_dv × DV − w_opp × OppR + intercept
 
-MV (made tier):  ナッツ=9, ストロング=7, ツーペア=6,
+MV (made カテゴリ):  ナッツ=9, ストロング=7, ツーペア=6,
                  TP+=4, MP=2, エア=0
 DV (draw):       combo=4, NFD/FD/OESD=3, gutshot=1, BDFD=1, none=0
 OppR (pot):      SRP=0, DEF=1, 3BP=2, 4BP=3

@@ -34,4 +34,4 @@ cell 数は 298 → 556 (+258) で大幅増加。
 - **eq_bucket を加える」と精度向上**: value / draw / equity の概念が判定に効く
 - ただし cell 数は 4 倍程度増加 → 暗記負荷も増
 - 「value 4 段階」を hand_tier の上に重ねるアプローチ
-- combo draw (made tier=エア だが eq=good_hands) のような spot が正しく分類される
+- combo draw (made カテゴリ=エア だが eq=good_hands) のような spot が正しく分類される

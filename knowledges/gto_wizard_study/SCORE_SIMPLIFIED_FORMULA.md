@@ -6,15 +6,15 @@
 ## 旧式 (係数あり)
 
 ```
-Score = 1 × tier + 3 × eq + (-1) × bs + 2 × pot
+Score = 1 × カテゴリ + 3 × eq + (-1) × bs + 2 × pot
 ```
 
 ## 新式 (係数なし、bs は引き算)
 
 ```
-Score = tier + eq - bs + pot
+Score = カテゴリ + eq - bs + pot
 
-tier:  ナッツ=5, ストロング=4, ツーペア=3, TP+=2, MP=1, エア=0
+カテゴリ:  ナッツ=5, ストロング=4, ツーペア=3, TP+=2, MP=1, エア=0
 eq:    best=9, good=6, weak=3, trash=0       ← 旧 0/1/2/3 を 3 倍
 bs:    small=0, 75%=1, 100%=2, over=3,        ← 引き算
        over185=4, allin=5
@@ -38,9 +38,9 @@ pot:   SRP=0, DEF=2, 3BP=2, 4BP=4             ← 旧 0/1/1/2 を 2 倍
 ## 推奨公式 (バランス)
 
 ```
-Score = tier + eq - bs + pot
+Score = カテゴリ + eq - bs + pot
 
-tier:  ナッツ=5, ストロング=4, ツーペア=3, TP+=2, MP=1, エア=0
+カテゴリ:  ナッツ=5, ストロング=4, ツーペア=3, TP+=2, MP=1, エア=0
 eq:    best=9, good=6, weak=3, trash=0
 bs:    small=0, 75%=1, 100%=2, over=3, over185=4, allin=5  (引く)
 pot:   SRP=0, DEF=2, 3BP=2, 4BP=4

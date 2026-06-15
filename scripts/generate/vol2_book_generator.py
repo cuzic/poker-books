@@ -479,8 +479,8 @@ audit で次の発見:
 - **dry × ナッツメイド vs dry × ストロング**: 両者とも value bet 強行、 細分化情報過多
 - **paired × 2P**: 0-30% bet (slowplay)、 ナッツと同じ check 寄り挙動
 
-→ 上位 3 階層を細分化しても GTO 出力が変わらない。 「2P+」 に集約する
-ことで Grid 18 → Grid 12 に圧縮し、 暗記コストを 1/3 削減 (詳細根拠は第 11 章)。
+→ 上位 3 階層を細分化しても GTO 出力が変わりません。 「2P+」 に集約する
+ことで Grid 18 → Grid 12 に圧縮し、 暗記コストを 1/3 削減できます (詳細根拠は第 11 章)。
 
 ### 集約の audit 効果
 
@@ -924,11 +924,11 @@ def gen_ch06() -> str:
     return f"""\
 # 第 6 章　12 cells grid の完全解説 ★本書の魔法核心
 
-> **本章は本書の最大の難所であり、 最大の発見である。**
-> 12 cells grid は **線形ではない**。 「役が強いほど値が大きい」 でも「dry board ほど
-> 値が大きい」 でもない。 hand × board の **複雑な interaction** で値が増減する、
-> 直感に反する数値表である。 この interaction を「12 の物語」 として理解することが
-> 本書の核心である。
+> **本章は本書の最大の難所であり、 最大の発見です。**
+> 12 cells grid は **線形ではありません**。 「役が強いほど値が大きい」 でも「dry board ほど
+> 値が大きい」 でもありません。 hand × board の **複雑な interaction** で値が増減する、
+> 直感に反する数値表です。 この interaction を「12 の物語」 として理解することが
+> 本書の核心です。
 
 ## 6.1 12 cells grid の全表
 
@@ -1365,7 +1365,7 @@ paired board は 1 種類ではありません。 sub-family で挙動が大き�
 
 - cbet 41% (CONDENSED 系)
 - TP+ range advantage が hero (attacker) に
-- paired × TP+ = 10 だが、 board K にヒットしたペアは別物
+- paired × TP+ = 10 ですが、 board K にヒットしたペアは別物です
 
 → Score 公式は **paired を 1 種類で扱う** が、 paired_high と paired_low の
 差は **oc** と **DV** で部分的に吸収されます。
@@ -1385,7 +1385,7 @@ paired board で hero が 2P を持っているとき (例: K-K-7 で K7):
 
 paired board で hero が overpair (例: T-T-2 で QQ):
 
-- TP+ 扱いだが、 board のペア化で「相手の T range」 に弱体化
+- TP+ 扱いですが、 board のペア化で「相手の T range」 に弱体化します
 - 実 GTO では wet board 並みの controlled play
 - Grid「TP+ × paired = 10」 で低めに評価されている (適切)
 
@@ -1610,8 +1610,8 @@ Step 1: context 判別 (SRP/3BP/4BP/TURN/RIVER)
 Step 2: context 別判定
   ├─ SRP/3BP → Score 公式 (Grid + DV + 補正)
   ├─ 4BP    → 4 cells lookup (第 16 章)
-  ├─ TURN   → 3 cells lookup + overpair + bluff (第 16b 章)
-  └─ RIVER  → split rule (第 16c 章)
+  ├─ TURN   → 3 cells lookup + overpair + bluff (第 17 章)
+  └─ RIVER  → split rule (第 18 章)
 Step 3: 役 × board で outlier rule 確認 (上記表)
 ```
 
@@ -1679,7 +1679,7 @@ def gen_ch10() -> str:
 ## 10.3 data-driven な 3 タイプ集約
 
 集約のキーは「Grid 12 cells の hand × board interaction で sub-family の差を吸収」
-する設計。 つまり sub-family を board 軸ではなく Grid 値で表現する。
+する設計です。 つまり sub-family を board 軸ではなく Grid 値で表現します。
 
 例:
 - paired_low (cbet 50%) と paired_high (cbet 41%) の差
@@ -1790,8 +1790,8 @@ GTO ソルバー 内部の mv_cat 17 種類が本書 4 カテゴリ に対応し
 - set と flush は wet board で「両方とも check call base」
 - straight と FH は dry board で「両方とも value raise」
 
-→ 細分化しても出力は変わらない。 集約することで Grid を 12 に減らし、 暗記コストを
-半減できる。
+→ 細分化しても出力は変わりません。 集約することで Grid を 12 に減らし、 暗記コストを
+半減できます。
 
 ## 11.6 旧 5 軸モデルの「エクイティバケット」 との関係
 
@@ -1898,7 +1898,7 @@ Score 公式は 6 段階 (small_33 / med_75 / med_100 / overbet / overbet_185 / 
 
 この逆転を Score 公式は **「2P+ × 4BP」 で +16 補正 + slowplay 隅**
 で間接表現。 Score 値そのものは set が高いが、 アンダーペアでも 4BP 補正で
-call 閾値を悠々越えるので強気の判断に出る。
+call 閾値を悠々越えるので強気の判断に出ます。
 
 ## 12.6 4BP は別ゲーム (Tier A) の証拠
 
@@ -2260,7 +2260,7 @@ MATCHA は伝統的な range morphology 概念を board × カテゴリ × Grid 
 ## 13.7 Sklansky Hand Groups (1976 "Hold'em Poker")
 
 David Sklansky の preflop hand groups (8 群、 後に Sklansky-Malmuth で 9 群)。
-preflop 分類だが、 postflop カテゴリ の **系譜** として理解できます。
+preflop 分類ですが、 postflop カテゴリ の **系譜** として理解できます。
 
 ### 群 1-8 の定義 (preflop、 一部抜粋)
 
@@ -2421,7 +2421,7 @@ Grid 12 cells は **Cash 100bb と MTT chipEV (25/50/100/200bb) で同公式**�
 # ===================================================================
 def gen_ch13() -> str:
     return f"""\
-# 第 14 章　SRP — 標準 100bb
+# 第 15 章　SRP — 標準 100bb
 
 ## 13.1 SRP の定義
 
@@ -2514,9 +2514,9 @@ SRP の huge spots は主に:
 
 def gen_ch14() -> str:
     return f"""\
-# 第 15 章　3BP — 3-bet Pot
+# 第 16 章　3BP — 3-bet Pot
 
-## 14.1 3BP の定義
+## 22.1 3BP の定義
 
 **3BP** (3-bet Pot) = プリフロップで 3-bet (再レイズ) + コールで成立した pot。
 
@@ -2526,7 +2526,7 @@ Score 公式上は **pot = 2** → **+ 4 × 2 = +8** の上方補正。
 Score = Grid + DV × mult + 2 × oc + 8 − 2 × bs
 ```
 
-## 14.2 3BP 特有の SPR 低下
+## 22.2 3BP 特有の SPR 低下
 
 3BP の typical setup:
 
@@ -2537,7 +2537,7 @@ Score = Grid + DV × mult + 2 × oc + 8 − 2 × bs
 
 flop 後 effective SPR は 4 前後。 Cash 100bb の SRP (SPR 17) と比べ約 1/4。
 
-## 14.3 +8 補正の意味
+## 22.3 +8 補正の意味
 
 Score 公式の `4 × pot = +8` (3BP):
 
@@ -2551,7 +2551,7 @@ Score 公式の `4 × pot = +8` (3BP):
 SRP (pot=0) では Score 38 で call 閾値の下限近くだったハンドも、 3BP では Score 46
 で raise 閾値を超え、 強気の出力に変わります。
 
-## 14.4 3BP audit セグメント
+## 22.4 3BP audit セグメント
 
 - n = 27,648 (17.9%)
 - huge%: {POT_HUGE_NEW['3BP']:.2f}% (旧 {POT_HUGE_OLD['3BP']:.2f}% から +75%)
@@ -2559,7 +2559,7 @@ SRP (pot=0) では Score 38 で call 閾値の下限近くだったハンドも�
 
 3BP の huge は SRP / 4BP より小さく、 大半は公式マッチ。
 
-## 14.5 例外 4 のサンプリング
+## 22.5 例外 4 のサンプリング
 
 **エア × wet × turn × 3BP → call** (公式 pred fold、 n=159、 avg 9.5 BB)
 
@@ -2569,11 +2569,11 @@ SRP (pot=0) では Score 38 で call 閾値の下限近くだったハンドも�
 - 公式: Grid[エア][wet] = 1、 + 2 × 2 (oc) + 8 (3BP) − 4 (bs med_100) = 7 → fold
 - GTO best: **call** (bluff catch range として残す)
 
-例外 4 の理由: 3BP では相手の 3BP range が valudy だが、 turn で **bluff 比率が上がる**
+例外 4 の理由: 3BP では相手の 3BP range が valudy ですが、 turn で **bluff 比率が上がる**
 (opp は flop で cbet を bluff 強行している)。 hero エアでも overcard が多ければ
 bluff catch 価値あり。
 
-## 14.6 3BP の board family 別注意
+## 22.6 3BP の board family 別注意
 
 ### dry board × 3BP
 
@@ -2590,7 +2590,7 @@ bluff catch 価値あり。
 - ミドル × paired × 3BP = Grid 40 + 8 = 48 → raise 強行
 - 公式に最も従順な spot
 
-## 14.7 3BP × 4BP の境界
+## 22.7 3BP × 4BP の境界
 
 3BP の更に raise されると 4BP (第 16 章) になります。 Score 公式上:
 
@@ -2611,7 +2611,7 @@ bluff catch 価値あり。
 
 def gen_ch15() -> str:
     return f"""\
-# 第 16 章　4BP — 専用 lookup table (公式の代わりに役 × board で即決) ★
+# 第 17 章　4BP — 専用 lookup table (公式の代わりに役 × board で即決) ★
 
 ## 16.1 4BP は Score 公式が機能しない領域
 
@@ -2701,9 +2701,9 @@ set/2P+ で bet しない代わりに、 アンダーペアで bet する **「�
 
 def gen_ch_turn_lookup() -> str:
     return f"""\
-# 第 16b 章　TURN — 専用 lookup + split rule (2P+ → bet、 overpair → bet、 役なし bluff)
+# 第 18 章　TURN — 専用 lookup + split rule (2P+ → bet、 overpair → bet、 役なし bluff)
 
-## 16b.1 TURN は SRP X-X 後の polarization 開始点
+## 17.1 TURN は SRP X-X 後の polarization 開始点
 
 SRP context で flop check-check 後の turn first action は **bet 率 39%** とやや控えめです。 ところが cell 別に分解すると、 強 hand と完全 air の二極化が始まっています。
 
@@ -2716,7 +2716,7 @@ SRP context で flop check-check 後の turn first action は **bet 率 39%** �
 
 bet 率 > 50% のセルは **2P+ の 3 cells のみ**。
 
-## 16b.2 TURN 専用ルール (Score 公式の代わりに simple lookup + split rule)
+## 17.2 TURN 専用ルール (Score 公式の代わりに simple lookup + split rule)
 
 ```
 ① 2P+ (= 2P / set / trips / straight / flush / FH / quads / SF) → bet
@@ -2725,7 +2725,7 @@ bet 率 > 50% のセルは **2P+ の 3 cells のみ**。
 ④ それ以外 (TP / ミドル / エア with showdown value) → check
 ```
 
-## 16b.3 各ルールの data 裏付け
+## 17.3 各ルールの data 裏付け
 
 ### ① 2P+ → bet (lookup 主体)
 
@@ -2748,7 +2748,7 @@ TP+ × dry/wet は cell 平均で bet 率 50% boundary。 中でも **overpair (
 
 これは GTO 理論の **polarization 戦略** の data 確証。 turn から「強 hand bet + 完全 air bluff bet」 の二極化が始まる。
 
-## 16b.4 ストリート別 polarization の中間段階
+## 17.4 ストリート別 polarization の中間段階
 
 完全 air × no_draw の bet 率推移:
 
@@ -2760,7 +2760,7 @@ TP+ × dry/wet は cell 平均で bet 率 50% boundary。 中でも **overpair (
 
 turn は **「flop の merged 戦略から river の polarized 戦略への移行点」**。 強 hand bet と完全 air bluff の比率が同等程度になります。
 
-## 16b.5 効果 (data 検証)
+## 17.5 効果 (data 検証)
 
 | 指標 | Score 公式のまま | TURN 専用 lookup + split |
 |---|---:|---:|
@@ -2783,13 +2783,13 @@ turn は **「flop の merged 戦略から river の polarized 戦略への移�
 
 def gen_ch_river_split() -> str:
     return f"""\
-# 第 16c 章　RIVER — split rule v6 (役で value bet + 役なしで bluff bet)
+# 第 19 章　RIVER — split rule v6 (役で value bet + 役なしで bluff bet)
 
-## 16c.1 RIVER は polarized strategy が最適
+## 18.1 RIVER は polarized strategy が最適
 
 RIVER の構造的特徴: **役確定済み (draw 完成不可)** で、 equity が 0% / 100% に二極化します。 これにより GTO は **polarized strategy** (両端 bet、 中間 check) が最適となります。
 
-## 16c.2 RIVER 専用ルール (Score 公式無視)
+## 18.2 RIVER 専用ルール (Score 公式無視)
 
 ```
 ① top_pair 以上 (= overpair / 2P / set / trips / straight / flush / FH / quads / SF) → value bet
@@ -2797,7 +2797,7 @@ RIVER の構造的特徴: **役確定済み (draw 完成不可)** で、 equity 
 ③ それ以外 (ace_high / king_high / second_pair / low_pair etc.) → check
 ```
 
-## 16c.3 完全 air が 74% bet する GTO 理論の data 確証
+## 18.3 完全 air が 74% bet する GTO 理論の data 確証
 
 | 場面 | bet 率 |
 |---|---:|
@@ -2810,7 +2810,7 @@ RIVER の構造的特徴: **役確定済み (draw 完成不可)** で、 equity 
 
 教科書 (Janda、 Acevedo) が定性的に語ってきた polarization 理論を、 174K hands で初めて定量化した data です。
 
-## 16c.4 効果 (data 検証、 段階別)
+## 18.4 効果 (data 検証、 段階別)
 
 | ルール | acc | avg loss BB/hand |
 |---|---:|---:|
@@ -2821,7 +2821,7 @@ RIVER の構造的特徴: **役確定済み (draw 完成不可)** で、 equity 
 
 v1 → v6 で **+4.6pp acc / -52% loss**。 v8 は更に微改善だが暗算負荷増のため v6 を採用。
 
-## 16c.5 中間役 (ace_high, low_pair, second_pair) は check
+## 18.5 中間役 (ace_high, low_pair, second_pair) は check
 
 これらは「**showdown value 保持 hand**」:
 
@@ -2834,17 +2834,17 @@ v1 → v6 で **+4.6pp acc / -52% loss**。 v8 は更に微改善だが暗算負
 
 これらを bet すると「相手の TP+ に call され負け」 で大損。 「中間役は **check で showdown へ**」 が GTO 最適。
 
-## 16c.6 直感的解釈
+## 18.6 直感的解釈
 
 RIVER は equity が 0% / 100% に近づく street:
 
 - **強 hand (made)** = value bet (相手の bluff catcher から call を取る)
-- **完全 air** = bluff bet (call されたら負け確定だが、 fold equity 大)
+- **完全 air** = bluff bet (call されたら負け確定ですが、 fold equity 大)
 - **中間 hand** = check (showdown で勝つか相手の bluff に call)
 
 これは **「両端 bet、 中間 check」** の polarized strategy。 flop/turn では merged だった戦略が river で完全に二極化します。
 
-## 16c.7 効果 (data 検証)
+## 18.7 効果 (data 検証)
 
 | 指標 | Score 公式のまま | RIVER split v6 |
 |---|---:|---:|
@@ -2867,13 +2867,13 @@ RIVER は equity が 0% / 100% に近づく street:
 
 def gen_ch_polarization() -> str:
     return f"""\
-# 第 20b 章　ストリート別 polarization — 完全 air が river で 74% bet する理由
+# 第 20 章　ストリート別 polarization — 完全 air が river で 74% bet する理由
 
-## 20b.1 GTO 理論の data 駆動の絵
+## 18.1 GTO 理論の data 駆動の絵
 
 ポストフロップにおける GTO 戦略は、 ストリート進行とともに **merged から polarized へ移行** します。 この理論は教科書 (Matthew Janda『Applications of No-Limit Hold'em』、 Michael Acevedo『Modern Poker Theory』) で定性的に語られてきましたが、 本書では **174K hands の data で初めて定量化** しました。
 
-## 20b.2 完全 air × no_draw の bet 率 (全 context 横断)
+## 18.2 完全 air × no_draw の bet 率 (全 context 横断)
 
 「役なし、 draw 完成不可、 call されたら 100% 負け確定」 の hand の bet 率:
 
@@ -2892,7 +2892,7 @@ def gen_ch_polarization() -> str:
 - **turn**: paired board で 60.9% bet 開始、 polarization 入口
 - **river**: 全 board で 56-74% bet、 fully polarized
 
-## 20b.3 なぜ river で完全 air が 74% bet するのか
+## 18.3 なぜ river で完全 air が 74% bet するのか
 
 直感的には「役なし、 draw なし、 call されたら 100% 負け確定」 の hand を bet するのは無謀です。 しかし GTO は polarization のために bet を要求します:
 
@@ -2915,7 +2915,7 @@ board: A♠ K♦ 5♣ T♥ 2♣ (river)
 - でも相手の low_pair (= ace_high より弱い bluff catcher) を fold させれば pot 獲得
 - → 74% の頻度で bet するのが GTO
 
-## 20b.4 ストリート別の戦略変化
+## 18.4 ストリート別の戦略変化
 
 | ストリート | 戦略 | 完全 air の扱い |
 |---|---|---|
@@ -2923,17 +2923,17 @@ board: A♠ K♦ 5♣ T♥ 2♣ (river)
 | **turn** | **transition**: polarization 開始、 paired board から air bet 増 | 部分的 bluff bet |
 | **river** | **polarized**: 強 hand value bet + 弱 hand bluff bet | **高頻度 bluff bet** |
 
-## 20b.5 暗算では何を覚えるか
+## 18.5 暗算では何を覚えるか
 
 この発見は MATCHA 公式に既に組み込み済み:
 
 - **flop (SRP/3BP)**: Score 公式の check 判定が GTO 平均的に正しい → 何もしない
-- **TURN**: 「no_made_hand × paired/wet → bluff bet」 ルール (第 16b 章)
-- **RIVER**: 「no_made_hand → bluff bet」 ルール (第 16c 章)
+- **TURN**: 「no_made_hand × paired/wet → bluff bet」 ルール (第 17 章)
+- **RIVER**: 「no_made_hand → bluff bet」 ルール (第 18 章)
 
 実戦では特に意識せず、 各 context の lookup/split rule に従えば自動的に polarization 戦略が実現されます。
 
-## 20b.6 教科書理論の data 確証
+## 18.6 教科書理論の data 確証
 
 | 教科書 | 提唱内容 | data 確証 |
 |---|---|---|
@@ -2947,7 +2947,7 @@ board: A♠ K♦ 5♣ T♥ 2♣ (river)
 
 1. **flop は merged、 turn は transition、 river は fully polarized**
 2. **river の完全 air は 74% bet** (相手の bluff catcher を fold させる)
-3. 公式は既に polarization を組み込み済み (第 16b/16c 章)、 意識せず lookup に従えば OK
+3. 公式は既に polarization を組み込み済み (第 18/19 章)、 意識せず lookup に従えば OK
 """
 
 
@@ -3025,134 +3025,11 @@ v7 が「公式が実戦で何 BB 損させるか」 を直接表す **真の品
 """
 
 
-def _UNUSED_gen_ch15_legacy() -> str:
-    return f"""\
-# (legacy) 第 16 章　4BP — 公式の最強適用域 ★
-
-## 15.1 本書の最大成果
-
-**4BP (4-bet Pot)** こそが MATCHA Score 公式の **最強適用域** です。
-
-| 指標 | 旧公式 | MATCHA Score | 改善 |
-|---|---:|---:|---:|
-| 4BP huge% | {POT_HUGE_OLD['4BP']:.2f}% | **{POT_HUGE_NEW['4BP']:.2f}%** | **−85%** ★ |
-
-旧公式の最大の弱点 (4BP で huge 3.37% = 4BP spots の 1/30 が大損失) を、
-本公式は **0.53% = 1/200 spots** まで削減しました。 本書の最大価値です。
-
-## 15.2 4BP の定義
-
-**4BP** (4-bet Pot) = プリフロップで 4-bet (3-bet への再々レイズ) + コール
-で成立した pot。
-
-Score 公式上は **pot = 4** → **+ 4 × 4 = +16** の上方補正。
-
-```
-Score = Grid + DV × mult + 2 × oc + 16 − 2 × bs
-```
-
-## 15.3 4BP は SRP と質的別ゲーム
-
-4BP の典型 setup:
-
-- BTN open 2.5bb → SB 3-bet 10bb → BTN 4-bet 25bb → SB call
-- effective stack: ~75bb
-- pot: ~51bb
-- SPR: ~1.5 (オールインSPR / ローSPR 境界)
-
-SPR が **1.5** と極小。 Cash 100bb の SRP (SPR 17) の **1/10**。 これがゲーム全体
-の挙動を変えます。
-
-probe phase 4-6 audit (Cash 4BP / MTT 4BP) で「4BP は SRP と別系統」 を確認。
-詳細は 参照。
-
-## 15.4 アンダーペア 73% > set 4% の逆転現象
-
-第 12 章でも触れた事実: 4BP では set より アンダーペアの方が bet 頻度高い。
-
-| カテゴリ | 4BP SPR 1.3 での bet 頻度 |
-|---|---:|
-| **2P+ (set)** | **4%** |
-| ツーペア | 18% |
-| TP+ | 61% |
-| **アンダーペア** | **73%** ★ |
-| エア | 41% |
-
-set はほぼ slowplay (相手の overcommit を誘発)。 アンダーペアは「迷う」 範囲で
-GTO は jam-or-fold で jam 寄せ。
-
-Score 公式上:
-- ミドル × dry × 4BP × small_33: Grid 18 + 16 + 0 − 0 = **34** → call (14 ≤ 34 < 43)
-- 実際 jam するか call で受けるかは混合、 Score 34 は call 領域として正確
-
-## 15.5 Cash 4BP = MTT 100bb 4BP の同構造性
-
-audit で Cash 100bb の 4BP と MTT 100bb の 4BP は **同構造** と確認:
-
-| 比較 | Cash 4BP huge% | MTT 4BP huge% | 差 |
-|---|---:|---:|---:|
-| 旧公式 | 3.37% | 3.42% | 0.05% |
-| **MATCHA Score** | **0.53%** | **0.55%** | 0.02% |
-
-→ Score 公式は両 game type で同じ性能。 これは「4BP のゲーム構造は SPR で決まる」
-という data 駆動の発見。
-
-## 15.6 「2P+」 統合が 4BP を救った
-
-第 11 章 (Hand Strength) で述べた通り、 4BP huge −85% の決定打は
-**「2P+」 統合** です。
-
-旧 6 階層 (ナッツ / ストロング / 2P / TP+ / ミドル / エア) では:
-- 4BP × ナッツ → bet 強行
-- 4BP × ストロング → bet 寄り
-- 4BP × 2P → 混合
-- ... と細かく分岐
-
-これらすべて出力が「2P 以上は call / raise どちらも GTO 上 viable」 で同じ。
-統合により Score 公式の `+16` 補正が一括で効き、 huge spots が激減しました。
-
-## 15.7 4BP の board family 別注意
-
-### dry × 4BP
-
-- TP+: Grid 38 + 16 = 54 → raise (TPTK は強行)
-- 2P+: Grid 25 + 16 = 41 → call ベース (slowplay 余地)
-- ミドル: Grid 18 + 16 = 34 → call (jam 候補)
-
-### wet × 4BP
-
-- 2P+: Grid 23 + 16 = 39 → call (overbet なら fold 候補)
-- エア: Grid 1 + 16 = 17 + DV → call (DV 込みで bluff catch)
-- 例外 5 (2P+ × wet × flop × SRP) は 4BP では発動せず
-
-### paired × 4BP
-
-- ミドル × paired = Grid 40 + 16 = 56 → raise 強行
-- 全 spot で公式に従順
-
-## 15.8 4BP 内 huge% 内訳
-
-4BP の huge spots は主に:
-
-1. エア × wet × turn × 4BP → call (公式 pred call、 fold が best、 n=117)
-2. エア × dry × flop × 4BP → call (公式 pred fold、 call が best、 n=109)
-3. その他 (n < 100)
-
-これらは個別の例外ルール化はせず、 全体の avg loss を低く保つ trade-off。
-
-## この章で覚える項目 (4 items)
-
-1. 4BP = 4-bet Pot、 pot 値 = 4、 Score +16 補正
-2. effective SPR ~1.5 (オールインSPR / ローSPR 境界)
-3. huge% 0.53% (旧 3.37% → −85%) ← 本書最大成果
-4. 「2P+」 統合が 4BP を救う立役者
-"""
-
 def gen_ch16() -> str:
     return f"""\
-# 第 17 章　vs CR (CR ディフェンス) — turn donk vs CR は真逆
+# 第 21 章　vs CR (CR ディフェンス) — turn donk vs CR は真逆
 
-## 16.1 vs CR の定義
+## 20.1 vs CR の定義
 
 **vs CR** (CR ディフェンス) = hero が cbet 後に相手から **チェックレイズ**
 または **ドンクベット** を受けた場面。 「DEF」 という旧称は廃止。
@@ -3163,13 +3040,13 @@ Score 公式上は **pot = 2** → **+ 4 × 2 = +8** (3BP と同じ補正)。
 Score = Grid + DV × mult + 2 × oc + 8 − 2 × bs
 ```
 
-## 16.2 vs CR の typical setup
+## 20.2 vs CR の typical setup
 
 - BTN open → BB call → flop → BTN cbet → BB raise → BTN ?
 - pot は cbet 倍率分膨らんでいる (SRP × 1.5〜2 程度)
 - effective SPR: 3-5 (ミディアムSPR)
 
-## 16.3 turn donk vs turn CR は真逆
+## 20.3 turn donk vs turn CR は真逆
 
 データ検証で判明した重要事実:
 
@@ -3190,7 +3067,7 @@ Score = Grid + DV × mult + 2 × oc + 8 − 2 × bs
 
 → CR は「相手が強い signal」、 Donk は「相手が弱い signal」。
 
-## 16.4 Score 公式での扱い
+## 20.4 Score 公式での扱い
 
 本書は両者を **pot=2 (+8)** で同一扱いします。 これは:
 
@@ -3200,14 +3077,14 @@ Score = Grid + DV × mult + 2 × oc + 8 − 2 × bs
 例外 3 は vs CR の「相手 value-heavy」 を反映。 例外 4 は 3BP × wet × turn の bluff
 catch (vs Donk と似た構造)。
 
-## 16.5 vs CR audit セグメント
+## 20.5 vs CR audit セグメント
 
 - n = 34,092 (22.1%)
 - huge%: {POT_HUGE_NEW['vs CR']:.2f}% (旧 {POT_HUGE_OLD['vs CR']:.2f}%)
 - 主な huge: DEF T_raise=49 補正 + ex9/ex10 Turn CR fold 不足
 - vs CR 総合精度: **80.5 Grade S** (208K hands 検証)
 
-## 16.6 vs CR の board family 別注意
+## 20.6 vs CR の board family 別注意
 
 ### dry × vs CR
 
@@ -3233,11 +3110,11 @@ catch (vs Donk と似た構造)。
   - ⚠️ DEF 文脈 T_raise=49 を使う。 Score=48 < 49 → call
 - TP+ × paired = 10 + 8 = 18 → call (trip 警戒)
 
-## 16.7 ドンクベット受け (vs Donk) の扱い
+## 20.7 ドンクベット受け (vs Donk) の扱い
 
 vs Donk も pot = 2 として同じ式で扱いますが、 相手の range が異なるため:
 
-- vs Donk × エア: 公式上は fold 寄りだが、 実 GTO は call 寄り (bluff catch)
+- vs Donk × エア: 公式上は fold 寄りですが、 実 GTO は call 寄り (bluff catch)
 - vs Donk × TP+: 公式上 call、 実 GTO もそのまま (donk への TP+ は call 維持)
 
 **DEF 閾値補正 (vs Donk でも適用):**
@@ -3259,13 +3136,13 @@ vs Donk も pot = 2 として同じ式で扱いますが、 相手の range が�
 """
 
 # ===================================================================
-# 第 17b 章　vs Donk Bet 専門
+# 第 22 章　vs Donk Bet 専門
 # ===================================================================
 def gen_ch_vs_donk() -> str:
     return """\
-# 第 17b 章　vs Donk Bet — ドンクベットへの対応
+# 第 22 章　vs Donk Bet — ドンクベットへの対応
 
-## 17b.1 ドンクベットとは
+## 21.1 ドンクベットとは
 
 **ドンクベット (Donk Bet)** = ポストフロップで IP（先手）の c-bet を待たずに
 OOP（後手）が先にベットしてくる行動です。
@@ -3277,7 +3154,7 @@ OOP（後手）が先にベットしてくる行動です。
 
 IP は「自分がアクション側」になるはずの局面で、突然ディフェンス側に回されます。
 
-## 17b.2 ドンクの発生頻度 — ターンカードが鍵
+## 21.2 ドンクの発生頻度 — ターンカードが鍵
 
 GTO データで判明した重要事実: **ドンクの頻度はターンカードで激変します**。
 
@@ -3295,7 +3172,7 @@ GTO データで判明した重要事実: **ドンクの頻度はターンカー
 フロップは SRP でほぼ 0% (例: Ks7d2c 0%, 9h8s7d 0%)。
 OOP がフロップをドンクしてきた場合は **レンジの逸脱** と判断してよいです。
 
-## 17b.3 vs Donk のレンジ分析 — vs CR と真逆
+## 21.3 vs Donk のレンジ分析 — vs CR と真逆
 
 同じ pot=2 の文脈でも、相手のレンジ構造が vs CR と真逆です。
 
@@ -3306,7 +3183,7 @@ OOP がフロップをドンクしてきた場合は **レンジの逸脱** と�
 
 → **ドンクは相手が弱いシグナル**。IP は wide defense で対応できます。
 
-## 17b.4 MATCHA Score での計算
+## 21.4 MATCHA Score での計算
 
 vs Donk も **pot = 2** として扱います（vs CR と同じ）。
 
@@ -3325,7 +3202,7 @@ Score = Grid + DV × mult + 2 × oc + 4 × pot − 2 × bs
 理由: ex9/ex10 は「vs CR では相手が value-heavy」という前提。
 vs Donk では相手が air-heavy なので fold は損。
 
-## 17b.5 ターンドンク — ボードペア時の対応
+## 21.5 ターンドンク — ボードペア時の対応
 
 ターンがボードをペアしてきた場合 (e.g., Ks7d2c → **Kh** or **7c**)、
 OOP のドンク頻度が 19-41% に跳ね上がります。
@@ -3340,7 +3217,7 @@ OOP のドンク頻度が 19-41% に跳ね上がります。
 > **ポイント**: ボードペア時の donk は相手が trips を持っている可能性が高い。
 > こちらも trips 以上 (ex11) なら raise、それ以下は call または fold で対応。
 
-## 17b.6 vs Donk 専用例外
+## 21.6 vs Donk 専用例外
 
 ### 例外 11: 2P+ × paired × river × vs Donk → raise (value)
 
@@ -3352,7 +3229,7 @@ river × paired board × 自分が 2P+(trips/FH/quads) × vs Donk → RAISE
 - 理由: river vs Donk のレンジは bluff が多く、IP の 2P+ はナッツ優位
 - ターンへの適用は不可（ターンでは slowplay が有効）
 
-## 17b.7 フロップドンク — 対応指針
+## 21.7 フロップドンク — 対応指針
 
 フロップドンクは GTO では稀（≈0%）ですが、ライブや低ステークスでは起こります。
 
@@ -3362,7 +3239,7 @@ river × paired board × 自分が 2P+(trips/FH/quads) × vs Donk → RAISE
 - 2P+: raise を検討（相手のドンクが弱い手である可能性高）
 - エア: fold
 
-## 17b.8 リバードンク — ポラライゼーション
+## 21.8 リバードンク — ポラライゼーション
 
 OOP がリバーをドンクする場合: ポラライズされた range (ナッツ or ブラフ)。
 
@@ -3389,7 +3266,7 @@ OOP がリバーをドンクする場合: ポラライズされた range (ナッ
 # ===================================================================
 def gen_ch17() -> str:
     return f"""\
-# 第 18 章　短スタック (≤ 25bb)
+# 第 24 章　短スタック (≤ 25bb)
 
 ## 17.1 短スタックでの Score 公式の挙動
 
@@ -3410,7 +3287,7 @@ SPR=3 の戦略反転点をしばしば跨ぎます。
 SPR < 3 では「ペア以上 = コール」 が GTO 推奨 (committed range):
 
 - アンダーペア以上 → all-in 受けでもコール (例: K72 で 55、 effective 20bb)
-- エア + draw → ふつう fold だが、 SPR < 2 の場合は jam 候補
+- エア + draw → ふつう fold ですが、 SPR < 2 の場合は jam 候補
 
 Score 公式上は **4 × pot** が小さいため pot 補正が効かない一方、 short stack では
 **bs (実際の bet サイズ) が pot に対して大きく出る** ため −2 × bs が効きすぎる
@@ -3455,9 +3332,9 @@ short stack × バブル では Score 公式に追加補正が必要 (第 22 章
 
 def gen_ch18() -> str:
     return f"""\
-# 第 19 章　深スタック (200bb+)
+# 第 25 章　深スタック (200bb+)
 
-## 18.1 深スタックでの Score 公式の挙動
+## 17.1 深スタックでの Score 公式の挙動
 
 deep stack (effective 200bb+) では SPR が自動的に上昇します:
 
@@ -3469,7 +3346,7 @@ deep stack (effective 200bb+) では SPR が自動的に上昇します:
 
 deep stack ではディープSPR が更に深くなり、 implied odds が大きく効きます。
 
-## 18.2 deep stack での implied odds
+## 17.2 deep stack での implied odds
 
 SPR > 20 では:
 
@@ -3485,7 +3362,7 @@ Score 公式の DV × mult は flop で 12 (combo draw)、 turn で 8 まで上�
 
 ただしこれは大まかな目安、 厳密化は本書のスコープ外。
 
-## 18.3 200bb での Score 閾値補正
+## 17.3 200bb での Score 閾値補正
 
 Cash 200bb の audit (limited data) から推定する補正:
 
@@ -3495,7 +3372,7 @@ Cash 200bb の audit (limited data) から推定する補正:
 → deep stack では **post-flop の implied odds 価値を Score に乗せる** より、
 閾値を上げて「強い手だけ raise / value 重視」 が GTO 推奨。
 
-## 18.4 Cash 200bb と MTT 200bb の同構造性
+## 17.4 Cash 200bb と MTT 200bb の同構造性
 
 audit (limited、 ~10K rows) で Cash 200bb と MTT 200bb の挙動を比較:
 
@@ -3505,7 +3382,7 @@ audit (limited、 ~10K rows) で Cash 200bb と MTT 200bb の挙動を比較:
 
 → MATCHA Score は **stack depth 軸でも汎用** と確認。
 
-## 18.5 deep stack での board family 別注意
+## 17.5 deep stack での board family 別注意
 
 ### dry × deep
 
@@ -3523,7 +3400,7 @@ audit (limited、 ~10K rows) で Cash 200bb と MTT 200bb の挙動を比較:
 
 - ミドル × paired = 40 → raise 強行 (deep stack でも変わらず)
 
-## 18.6 200bb での例外ルール調整
+## 17.6 200bb での例外ルール調整
 
 例外 11 ルール (第 9 章) のうち、 deep stack で挙動が変わるもの:
 
@@ -3545,7 +3422,7 @@ deep stack では例外 1 と 2 が最頻出パターン、 確実に覚える�
 # ===================================================================
 def gen_ch19() -> str:
     return """\
-# 第 21 章　ICM 入門 — chipEV と $EV のズレ ★定性
+# 第 27 章　ICM 入門 — chipEV と $EV のズレ ★定性
 
 > **本章は定性記述のみ**。 ICM/PKO の postflop GTO data は データ取得 tier
 > 制限で取得不能なため、 数値モデル化は将来 Vol2.5 (ICM/PKO 別冊) で対応予定。
@@ -3640,7 +3517,7 @@ ICM の数値モデル化は将来課題 (Vol2.5) です。 理由:
 
 def gen_ch20() -> str:
     return """\
-# 第 22 章　バブル戦略 — リスクプレミアムの極大化 ★定性
+# 第 28 章　バブル戦略 — リスクプレミアムの極大化 ★定性
 
 > **本章は定性記述のみ**。 ICM/PKO 数値モデル化は将来 Vol2.5 で対応予定。
 
@@ -3740,11 +3617,11 @@ short stack 程 ICM 影響小 (もう committed の領域)。 大きい short st
 
 def gen_ch21() -> str:
     return """\
-# 第 23 章　マルチウェイ (3+ way) — 公式の前提崩れ ★Vol3 連携
+# 第 29 章　マルチウェイ (3+ way) — 公式の前提崩れ ★Vol3 連携
 
 > **本章は定性記述のみ**。 MW の詳細は Vol3 (MATCHA Exploits) ch16 で扱います。
 
-## 22.1 公式の単独 villain 前提
+## 23.1 公式の単独 villain 前提
 
 MATCHA Score は **hero vs 1 villain** の構造で最適化されています。 これが 3+way
 (マルチウェイ、 MW) では大きく崩れます:
@@ -3753,7 +3630,7 @@ MATCHA Score は **hero vs 1 villain** の構造で最適化されています�
 - **range の overlap**: 複数 villain がそれぞれ独立 range を持つため hero の equity 低下
 - **bluff range の機能不全**: bluff してもどこかで call される
 
-## 22.2 MW での MATCHA Score の限界
+## 23.2 MW での MATCHA Score の限界
 
 MW (3+ way) で MATCHA Score をそのまま使うと:
 
@@ -3761,15 +3638,15 @@ MW (3+ way) で MATCHA Score をそのまま使うと:
 - **薄い value bet** → multiple caller で勝てない
 - **強気の cbet** → range 全体で −EV
 
-→ MW では **公式値を強制下方修正** か、 そもそも別ルール (MW 5 原則) を使う。
+→ MW では **公式値を強制下方修正** か、 そもそも別ルール (MW 5 原則) を使いましょう。
 
-## 22.3 MW 5 原則 (Vol3 詳細)
+## 23.3 MW 5 原則 (Vol3 詳細)
 
 Vol3 (MATCHA Exploits) ch16 で扱う MW 5 原則 (要点のみ):
 
 ### 原則 1: ブラフ生成禁止
 
-3+ way では fold equity 急減 (1 − f)^n。 ブラフ range を作らない。
+3+ way では fold equity 急減 (1 − f)^n。 ブラフ range は作らないようにしましょう。
 
 ### 原則 2: バリュー集中
 
@@ -3790,7 +3667,7 @@ SC・小ペアを優遇 (multiway で implied odds 大)、 broadway off (KQo 等
 
 squeeze で先に 1 vs 1 に戻せれば公式 +shift 復活。 MW を避ける動き。
 
-## 22.4 short stack 混在時の effective SPR 管理
+## 23.4 short stack 混在時の effective SPR 管理
 
 MW で short stack 混在する場合 (例: BTN 100bb、 SB 15bb、 BB 100bb の 3way):
 
@@ -3803,7 +3680,7 @@ deep side に対しては slowplay と **真逆の戦略** が同時に必要。
 これは MATCHA Score (HU 前提) では表現不可能。 MW では「強い手は short side jam、
 deep side slowplay」 という分離行動が GTO 推奨。
 
-## 22.5 MW での MATCHA Score 適用上の注意
+## 23.5 MW での MATCHA Score 適用上の注意
 
 緊急時に MW で MATCHA Score を使うなら:
 
@@ -3812,7 +3689,7 @@ deep side slowplay」 という分離行動が GTO 推奨。
 3. **2P+以外の wet board → fold ベース**
 4. **オープナー補正 (CO/HJ open river)** で形勢を 1 段階下げ
 
-## 22.6 詳細は Vol3 へ
+## 23.6 詳細は Vol3 へ
 
 MW の data 駆動 strategy は **Vol3 (MATCHA Exploits) ch16** で詳述します。
 本書 (Vol2) では「MW では公式が崩れる」 という事実のみ示し、 詳細は姉妹巻に
@@ -3840,14 +3717,14 @@ Vol3 (MATCHA Exploits) ch16 では:
 def gen_ch22() -> str:
     grid_table = grid_md_table()
     return f"""\
-# 第 25 章　境界ハンド総覧
+# 第 31 章　境界ハンド総覧
 
-## 25.1 本書の暗記対象を 1 表に集約
+## 18.1 本書の暗記対象を 1 表に集約
 
 本書を通じて出てきた **境界ハンド / 境界 board / 例外ルール** を 1 章にまとめます。
 全 56 項目のうち、 暗記必須は次の通り。
 
-## 25.2 公式の核心
+## 18.2 公式の核心
 
 ```
 Score = Grid[カテゴリ][board] + DV × mult[street] + 2 × oc + 4 × pot − 2 × bs
@@ -3855,11 +3732,11 @@ Score = Grid[カテゴリ][board] + DV × mult[street] + 2 × oc + 4 × pot − 
 ≥ {T_RAISE}: レイズ / ≥ {T_CALL}: コール / else: フォールド
 ```
 
-## 25.3 12 cells Grid
+## 18.3 12 cells Grid
 
 {grid_table}
 
-## 25.4 加算項の値
+## 18.4 加算項の値
 
 | 軸 | 値 |
 |---|---|
@@ -3869,7 +3746,7 @@ Score = Grid[カテゴリ][board] + DV × mult[street] + 2 × oc + 4 × pot − 
 | **bs** (small / med75 / med100 / overbet / 185 / allin) | 0 / 1 / 2 / 3 / 4 / 5 (× −2) |
 | **oc** (board 最高超え数) | 0 / 1 / 2 (× 2) |
 
-## 25.5 例外 11 ルール
+## 18.5 例外 11 ルール
 
 | # | 条件 | 公式 pred | 真の解 | n |
 |--:|---|---|---|---:|
@@ -3881,7 +3758,7 @@ Score = Grid[カテゴリ][board] + DV × mult[street] + 2 × oc + 4 × pot − 
 
 → すべて **wet** に集中。 「wet × ?」 を見たら例外候補。
 
-## 25.6 境界ハンド ~15 個 (第 7 章より抜粋)
+## 18.6 境界ハンド ~15 個 (第 7 章より抜粋)
 
 公式値 ± 補正で覚える境界ハンド (multi spots):
 
@@ -3898,7 +3775,7 @@ Score = Grid[カテゴリ][board] + DV × mult[street] + 2 × oc + 4 × pot − 
 
 詳細は第 7 章参照。
 
-## 25.7 境界 board ~10 個 (第 8 章より抜粋)
+## 18.7 境界 board ~10 個 (第 8 章より抜粋)
 
 | board | 旧分類 | 修正 |
 |---|---|---|
@@ -3912,7 +3789,7 @@ Score = Grid[カテゴリ][board] + DV × mult[street] + 2 × oc + 4 × pot − 
 
 詳細は第 8 章参照。
 
-## 25.8 short / deep stack 補正 (第 18-19 章より)
+## 18.8 short / deep stack 補正 (第 18-19 章より)
 
 | stack 深度 | T_call | T_raise |
 |---|---:|---:|
@@ -3922,7 +3799,7 @@ Score = Grid[カテゴリ][board] + DV × mult[street] + 2 × oc + 4 × pot − 
 
 ICM/MW では更に上方修正 (第 21-23 章)。
 
-## 25.9 暗記項目の累積
+## 18.9 暗記項目の累積
 
 | カテゴリ | 項目数 |
 |---|---:|
@@ -4001,7 +3878,7 @@ def gen_ch23() -> str:
     drills_body = '\n'.join(out_parts)
 
     return f"""\
-# 第 26 章　ドリル抜粋 (12 問)
+# 第 32 章　ドリル抜粋 (12 問)
 
 ## 26.1 本章の位置づけ
 
@@ -4044,7 +3921,7 @@ ICM・MW) から 2 問ずつ。
 def gen_ch24() -> str:
     grid_table = grid_md_table()
     return f"""\
-# 第 27 章　チートシート (A4 1 枚)
+# 第 33 章　チートシート (A4 1 枚)
 
 > 本章は印刷推奨。 A4 1 枚に圧縮した公式 + Grid + 例外 11 ルール。
 > 実戦中はこのページだけ目を通せば判断可能。
@@ -4377,7 +4254,7 @@ MATCHA は morphology を board × カテゴリ × Grid 値に **吸収**。
 # ===================================================================
 def gen_ch19_cash_vs_mtt() -> str:
     return """\
-# 第 20 章　Cash vs MTT chipEV のパラメータ差
+# 第 26 章　Cash vs MTT chipEV のパラメータ差
 
 > 本書 MATCHA Score は **Cash 100bb と MTT chipEV (25/50/100/200bb)** で同一公式
 > として最適化されています。 ただし両者には **構造的パラメータ差** があり、
@@ -4459,7 +4336,7 @@ range tighter:
 - Cash: SB 3-bet vs BTN open 約 12%
 - MTT BB ante: SB 3-bet vs BTN open 約 **8%** (-4pp)
 
-→ MATCHA Score 上は SRP/3BP の pot 値は同じだが、 **MTT BB ante 時は SB 寄り
+→ MATCHA Score 上は SRP/3BP の pot 値は同じですが、 **MTT BB ante 時は SB 寄り
 3BP の頻度が下がる**。
 
 ## 20.4 rake の有無 — Cash thin value 効率↓
@@ -4594,7 +4471,7 @@ Grid 12 cells は両者で同一。 pot 値 (SRP=0 / vs CR=2 / 3BP=2 / 4BP=4) �
 - **rake 重い場 (online micro stake)**: t_call +2 (thin value 削除)
 - **rakeback / VIP 還元あり**: t_call 補正不要 (実 rake はほぼ無)
 - **live cash (rake high % / no cap)**: t_call +3 (薄 value 危険)
-- **deep stack (Cash 200bb+)**: 第 19 章補正 (t_call +2)
+- **deep stack (Cash 200bb+)**: 第 24 章補正 (t_call +2)
 
 ## 20.11 MTT 専用の運用 tip
 
@@ -4632,7 +4509,7 @@ note からは本章を参照する形にしています。
 # ===================================================================
 def gen_ch23_table_size() -> str:
     return """\
-# 第 24 章　テーブルサイズ別調整 (6/8/9-max)
+# 第 30 章　テーブルサイズ別調整 (6/8/9-max)
 
 > 本書 MATCHA Score は **6-max** (6人テーブル) を想定して最適化されています。
 > 8-max / 9-max では range structure と multiway 頻度が変わるため、 Score 閾値
@@ -4836,7 +4713,7 @@ polar (6-max) → merged (9-max) で、 MATCHA Score の Grid 値の解釈も微
 | 9-max | 低 (4-bet 受け 5-7%) |
 
 → 9-max では 3-bet されたら「相手は強い」 と読み、 4-bet range を tighter 化。
-MATCHA Score 上は 4BP pot 値は同じだが、 4BP に持ち込まれる頻度自体が 9-max で
+MATCHA Score 上は 4BP pot 値は同じですが、 4BP に持ち込まれる頻度自体が 9-max で
 低い。
 
 ## 24.9 multiway 頻度の計算
@@ -4919,16 +4796,16 @@ CASH_MTT_NOTES = {
     '00': '本書 MATCHA Score は **Cash 100bb と MTT chipEV (25/50/100/200bb)** で同形。 ante / rake / sizing の差はあるが Score 公式は共通。 詳細は第 20 章で 1 ページ早見表。',
     '01': '公式そのものは Cash/MTT 共通。 ただし bs (bet size) は ante 込み pot で実 bb 単位が ±10% ずれ、 SPR は MTT で若干低い。 Cash で rake 重時 t_call +1〜+2 推奨。 詳細は第 20 章。',
     '02': 'カテゴリ 4 段階 (エア / アンダーペア / トップペア以上 / 2P+) は Cash と MTT で同一定義。 GTO 上の頻度差なし。 mv_cat → 4 階層対応も共通。',
-    '03': 'board 3 タイプ (dry / paired / wet) の判定は Cash/MTT 共通。 ただし late MTT (ante 大) では BB defense wider で「相手が wet board に call で残る range」 が +5-10% 広く、 board 解釈の hero edge がやや低下する。',
+    '03': 'board 3 タイプ (dry / paired / wet) の判定は Cash/MTT 共通です。 ただし late MTT (ante 大) では BB defense wider で「相手が wet board に call で残る range」 が +5-10% 広く、 board 解釈の hero edge がやや低下します。',
     '04': 'DV 値と street mult は Cash/MTT 共通。 ただし MTT short stack では river まで届く確率が低く、 DV ×3 (flop) の implied 価値が「実 EV」 として強く効く (commit 寄り)。 deep Cash 200bb と逆の動き。',
     '05': 'pot/bs/oc の係数は Cash/MTT 共通。 ただし **pot 値の解釈**: MTT は ante 込みで実 pot が +10-25% 大、 bs の bbeq 解釈もそれに応じて厚い。 4BP の huge −85% は Cash + MTT100 統合 audit の成果。',
-    '06': '12 cells grid は Cash と MTT chipEV で共通最適化。 154,216 spots の audit で huge 1.49%。 ante / sizing 差は Score 値に内包 (bs/pot 軸が吸収)。 grid 値自体は両者で同じ整数を使う。',
+    '06': '12 cells grid は Cash と MTT chipEV で共通最適化されています。 154,216 spots の audit で huge 1.49%。 ante / sizing 差は Score 値に内包 (bs/pot 軸が吸収)。 grid 値自体は両者で同じ整数を使います。',
     '07': '境界ハンドは Cash/MTT 共通。 ただし MTT short stack (25bb) では TPWK でも committed range で fold 不可、 境界 hand の挙動が「常に call 寄り」 に偏る。 deep Cash では境界 hand を厳密に。',
     '08': '境界 board は Cash/MTT 共通。 paired board の wide attack は MTT で更に強く (ante でレンジ wider)。 low_dry は Cash で出やすく、 MTT 後期では dynamic_2tone (wet 系) が増える。',
-    '09': '例外 11 ルールは Cash と MTT で共通適用。 すべて wet 集中、 ante/rake の影響はほぼなし (huge spots は board structure 駆動)。 short stack MTT では例外 1, 3 を無効化 (committed) — 第 18 章。',
+    '09': '例外 11 ルールは Cash と MTT で共通適用。 すべて wet 集中、 ante/rake の影響はほぼなし (huge spots は board structure 駆動)。 short stack MTT では例外 1, 3 を無効化 (committed) — 第 23 章。',
     '10': 'Range Morphology の 3 タイプは Cash/MTT 共通。 ただし 9-max (LIVE Cash / MTT early) は merged 寄り、 6-max (online Cash / MTT FT) は polar 寄り。 詳細は第 24 章。',
     '11': 'Hand Strength の 6→4 集約は Cash/MTT 共通。 「2P+」 統合の huge −85% は Cash 4BP + MTT100 4BP 並列 audit の成果 (詳細は付録 C)。',
-    '12': 'Bet Sizing 2 段階 (small 33% / over 100%) は Cash/MTT 共通。 SPR 4 段階の境界も共通だが、 MTT は ante 込みで SPR が数% 低く、 SPR=3 反転点を Cash より早く跨ぐ (詳細は第 20 章)。',
+    '12': 'Bet Sizing 2 段階 (small 33% / over 100%) は Cash/MTT 共通です。 SPR 4 段階の境界も共通ですが、 MTT は ante 込みで SPR が数% 低く、 SPR=3 反転点を Cash より早く跨ぎます (詳細は第 20 章)。',
     # 新 ch13 (旧理論橋渡し) は内蔵 Cash/MTT note を持つため除外
     '14': 'SRP は Cash/MTT 共通公式。 ただし pot 初期サイズ: Cash 5.5bb / MTT 6.0-7.5bb (ante 影響)。 flop SPR: Cash 100bb=17 / MTT 100bb=16 / MTT 25bb=4.2。 詳細は第 20 章。',
     '15': '3BP は Cash/MTT 共通。 3-bet sizing 差 (Cash 9-11bb / MTT 6-8bb) で 3BP SPR が異なる (Cash IP 4.6 / MTT IP 6.2)。 pot 値は両者で 2 共通。',
@@ -4938,19 +4815,116 @@ CASH_MTT_NOTES = {
     '19': 'deep stack は **Cash 主体の概念** (Cash 200bb+)、 MTT 200bb は早期のみ。 本章の補正 (t_call 16 / t_raise 45) は両者共通。 Cash deep では rake 込みで t_call 更に +1-2 推奨。',
     # 新 ch20 (Cash vs MTT) は内蔵 Cash/MTT note を持つため除外
     '21': 'ICM は **MTT 専用概念** (Cash は chipEV 等価)。 本章補正 (+5〜+10) は MTT 後期/バブル/FT 専用。 Cash には ICM 補正一切不要。',
-    '22': 'バブルは MTT 専用。 Cash には存在しない。 本章補正は MTT 賞金圏直前のみ適用。 ante 込みの MTT late stage と組合せて運用 (第 20 章併用)。',
-    '23': 'MW (3+ way) 頻度は Cash と MTT で **テーブルサイズに依存** (詳細は第 24 章): 6-max=25% / 8-max=35% / 9-max=45%。 MW 5 原則は両者共通適用。 Cash 9-max LIVE と MTT 9-max early が最頻発場面。',
+    '22': 'バブルは MTT 専用です。 Cash には存在しません。 本章補正は MTT 賞金圏直前のみ適用してください。 ante 込みの MTT late stage と組合せて運用します (第 20 章併用)。',
+    '23': 'MW (3+ way) 頻度は Cash と MTT で **テーブルサイズに依存** (詳細は第 29 章): 6-max=25% / 8-max=35% / 9-max=45%。 MW 5 原則は両者共通適用。 Cash 9-max LIVE と MTT 9-max early が最頻発場面。',
     # 新 ch24 (テーブルサイズ) は内蔵 Cash/MTT note を持つため除外
     '25': '境界総覧の暗記項目は Cash/MTT 共通。 短/深スタック補正 (第 18-19 章) と ICM/MW 補正 (第 21-23 章) の Cash/MTT 別運用は第 20, 24 章を参照。',
     '26': 'ドリル 12 問のうち、 ICM (#11)、 MW (#12) は MTT 専用。 残り 10 問は Cash/MTT 共通シナリオ。 poker-drill アプリでは Cash/MTT 別 deck も用意。',
     '27': 'チートシートは Cash/MTT 共通。 補正は 1 行: **「MTT 後期 +1-3 / バブル +5-10 / 9-max +2 / Cash rake 重 +1-2」**。 詳細は第 20 章 (Cash/MTT) と第 24 章 (テーブルサイズ)。',
 }
 
-def gen_ch_attack_rules() -> str:
+def gen_ch_basic_attack() -> str:
     return """\
-# 第 13b 章　アタックルール — BET/CHECK の決定ロジック
+# 第 14 章　アタック入門 — OOP は全チェック、IP は強手のみベット
+
+ここまでの章で MATCHA Score の公式と、12 cells grid・例外ルール・理論背景を学びました。
+第 15 章からはいよいよ「ポット種別ごとの実戦」に入ります。
+
+その前に、**攻撃判断の大原則** を 2 つだけ押さえておきましょう。
+この 2 原則を知っているだけで、ポストフロップの攻撃判断は 6 割以上正解できます。
+
+---
 
 ## 14.1 アタックとは
+
+**アタック** = 自分が先にベットする場面の判断 (cbet・2 バレル・3 バレルを含む)。
+
+MATCHA Score はもともと「相手のベットを受ける場面 (守備)」を最適化した公式です。
+攻撃は少し別の話になります。
+
+大原則は 2 つだけです。
+
+---
+
+## 14.2 大原則 1: OOP はすべてチェック
+
+**OOP** (Out of Position) = フロップ以降、自分が先にアクションしなければならない側。
+
+OOP でベットすると:
+- **相手に情報を与えすぎる** — ベットレンジが透けやすく、相手はレイズかコールを最適に選べる
+- **レイズされたときの逃げ場がない** — OOP でドンクベット → レイズ → どうする？
+
+GTO 解析でも、OOP の cbet 率はほぼ 0% のボードが多い (フロップ donk bet は例外的に 5-20% 程度)。
+
+**暗算原則: OOP → 全チェック**
+
+```
+自分が OOP (BB が BTN の cbet を受ける場合など)
+→ まずチェック
+→ 相手のベットに MATCHA Score で応じる (第 15-23 章)
+```
+
+---
+
+## 14.3 大原則 2: IP は強手のみベット
+
+**IP** (In Position) = 後にアクションできる側。ポジション優位があります。
+
+IP なら「弱いハンドでもブラフを打てる」と思いがちですが、初級〜中級では逆に損をしやすいです。
+
+**ポジション優位だけでは弱ハンドのベットは EV が出ません**。
+相手がコールすると強いハンドに当たりやすく、フォールドしても得るものが少ないです。
+
+**暗算原則: IP → 2P+ または TP+ ならベット、それ以下はチェック**
+
+| ハンド | 攻撃判断 |
+|--------|---------|
+| 2P+ (ツーペア以上) | ✅ ベット |
+| TP+ (トップペア以上) | ✅ ベット |
+| アンダーペア / エア | ❌ チェック |
+
+---
+
+## 14.4 この 2 原則だけでどこまで戦えるか
+
+| 状況 | 2 原則の答え | GTO との差 |
+|------|------------|-----------|
+| OOP × 弱ハンド | チェック | ほぼ一致 |
+| OOP × 強ハンド | チェック (slowplay) | ほぼ一致 |
+| IP × 2P+ | ベット | ほぼ一致 |
+| IP × TP+ | ベット | ほぼ一致 |
+| IP × アンダーペア | チェック | ほぼ一致 |
+| IP × エア (ブラフ) | チェック | **差あり** — GTO はリバーで air の 74% がベット (第 20 章) |
+
+エア × リバー × IP の「デフォルト=チェック」は **GTO より tight** ですが、
+初学者がリバーブラフで大損する事故を防ぐ意味で正解に近い。
+
+---
+
+## 14.5 例外は第 23 章のアタックルールで学ぶ
+
+この 2 原則を精度 LS=91% まで高めたのが、第 23 章の **アタック 8 ルール** です。
+
+主な追加条件:
+- **IP × ターン × 2nd pair × SRP** → ドロー込みでベット (T3 ルール)
+- **IP × 4BP × ターン × dry** → 底ハンドでもベット (T底 ルール)
+- **リバー × エア** → ブラフベット (R4 ルール)
+
+これらは第 15-22 章でポット種別とコンテキストを学んだ後に、改めて統合します。
+**今は「OOP=チェック / IP=強手のみベット」だけで十分です**。
+
+## この章で覚える項目 (2 items)
+
+> 1. **OOP → 全チェック**
+> 2. **IP → 2P+ または TP+ ならベット、それ以下はチェック**
+"""
+
+
+def gen_ch_attack_rules() -> str:
+    return """\
+# 第 23 章　アタックルール — BET/CHECK の決定ロジック
+
+## 22.1 アタックとは
 
 **アタック** = 自分から最初に賭けを開始する（BET / C-BET）行動。
 ディフェンス（相手のBETに対して call / raise / fold を選ぶ）とは別のシナリオです。
@@ -4962,7 +4936,7 @@ def gen_ch_attack_rules() -> str:
 全体精度 **81.09%**（v9f、DT 上限 83.2% に対し −2.1pp）。
 ランクベース閾値を導入した結果、旧版 v6d（76.3%）から +4.8pp 向上。
 
-## 14.2 なぜ MATCHA Score を使わないのか
+## 22.2 なぜ MATCHA Score を使わないのか
 
 MATCHA Score（Grid + DV×mult + 2oc + 4pot − 2bs）は **ディフェンス専用** の公式です。
 アタック判断に Score を使うと、ロジックが逆転するケースが生じます。
@@ -4976,7 +4950,193 @@ MATCHA Score（Grid + DV×mult + 2oc + 4pot − 2bs）は **ディフェンス�
 Score がアタックに使えない理由: Grid 値は「相手のベットサイズに対する自ハンドの防御価値」を表しており、
 「自分からベットしたときに相手が降りるかどうか」は別の問いです。
 
-## 14.3 SRP フロップ IP — 判断ロジック
+## 22.2b BET の3動機 — フロップ・ターン・リバー共通フレーム
+
+アタック判断の全ストリートを貫く考え方です。**なぜ BET するのか** を3種類に分けると、
+複雑に見えるルールが「理由から導ける」ようになります。
+
+| 動機 | 記号 | 意味 | 代表ハンド |
+|---|---|---|---|
+| **バリュー** | **V** | 相手の弱い手からコールをもらう | 2P+、TP+、second_pair（薄いV） |
+| **セミブラフ** | **S** | フォールドさせる＋当たれば強い | エア + draw（gutshot/FD/OESD） |
+| **ブラフ** | **B** | ショーダウン価値ゼロ → フォールドさせるしかない | no_made_hand（リバー）、4BP dry の low_pair |
+
+**CHECK になる理由** も2種類:
+
+| 理由 | 意味 | 代表ハンド |
+|---|---|---|
+| **ショーダウン守（SD守）** | 勝てる可能性があるのに BET すると損 | king_high、ace_high、low_pair（リバー） |
+| **スローレイ** | 強すぎて BET すると相手が降りる | set/flush（3BP フロップ）、overpair（4BP OOP） |
+
+> **核心**: `king_high → CHECK` / `no_made_hand → BET` の理由
+> - king_high はショーダウンで勝てる可能性がある → CHECK して守る（SD守）
+> - no_made_hand はショーダウンで必ず負ける（ペアなし）→ BET 以外に勝ち手がない（B）
+
+---
+
+## 22.2c アタック全体マップ → 8 ルール（暗算コンパクト版）
+
+### アタック傾向マップ（ざっくり把握）
+
+まず「大体どのハンドが BET か CHECK か」を掴みます。
+◎ = BET 傾向（GTO 65%+）　△ = 境界（40〜65%）　× = CHECK 傾向（〜40%）
+
+**フロップ**
+
+| ハンド | SRP IP | SRP OOP | 3BP IP | 3BP OOP | 4BP |
+|--------|:------:|:-------:|:------:|:-------:|:---:|
+| set+ | ◎ | × | × *スロー* | × | × *スロー* |
+| 2P+ | ◎ | × | ◎ | × | × *スロー* |
+| TP+ | △ | × | ◎ | × | △ |
+| 2nd/UP | △ | × | × | × | ◎ |
+| 底ペア / no_made | △/× | × | × | × | △ |
+| K/A-high | △ | × | × | × | △ |
+
+> OOP はほぼ全部 CHECK。4BP のみ「強いハンドほど CHECK（スローレイ）、弱いハンドが BET」に逆転。
+
+**ターン**
+
+| ハンド | SRP IP | SRP OOP | 3BP IP | 3BP OOP | 4BP IP | 4BP OOP |
+|--------|:------:|:-------:|:------:|:-------:|:------:|:-------:|
+| set+ | ◎ | △ | ◎ | △ | ◎ | × *スロー* |
+| 2P+ | ◎ | △ | ◎ | △ | ◎ | × *スロー* |
+| TP+ | △ | × | △ | △ | ◎ | △ |
+| 2nd/UP | × | × | × | × | ◎ | △ |
+| 底ペア | × | × | × | × | △ | × |
+| no_made | △ | × | △ | × | △ | × |
+| K/A-high | △ | × | × | × | × | × |
+
+> 4BP IP は弱いハンドまで広く BET 傾向（底ペアも △60%）。
+> 4BP OOP は逆転: 2P+/set+ が CHECK（スローレイ）、弱いハンドはブラフ候補。
+
+**リバー**
+
+| ハンド | SRP | 3BP | 4BP IP | 4BP OOP |
+|--------|:---:|:---:|:------:|:-------:|
+| set+ / 2P+ | ◎ IP / △ OOP | ◎ IP / △ OOP | ◎ | △ |
+| TP+ | ◎ | ◎ | ◎ | △ |
+| 2nd/UP | △→◎ | ◎ | △ | ◎ |
+| 底ペア | × | × | × | △ *逆転* |
+| no_made | △ | △ | △ | × |
+| K/A-high | **×（全場面）** | **×（全場面）** | × | × |
+
+> K/A-high はリバーで必ず CHECK（ショーダウン価値を守る）。
+> 底ペアは 4BP OOP リバーのみ逆転 BET。no_made はほぼ境界（△）だが 4BP OOP のみ CHECK。
+
+---
+
+### 8 ルール（暗算版）
+
+上のマップの傾向を 8 条件に圧縮したものです。
+
+精度: **LS=91%**（6,418 hands × 16 シナリオ実測、L100=635 BB/100）
+定義: **底ハンド** = no_made_hand / low_pair / third_pair
+
+---
+
+### デフォルト: CHECK
+
+以下のルールに一致しなければすべて CHECK。
+
+---
+
+### BET ルール（4 条件）+ BET 例外（2 条件）
+
+| # | 条件 | アクション | 動機 |
+|---|------|-----------|------|
+| **R1** | **TP+ 以上（トップペア以上、2P+/set+ 含む）** | **BET** | V バリュー |
+| E1★ | （R1 の例外）trips / overpair × **4BP OOP** | **CHECK** | スローレイ |
+| **R2** | **2nd/UP（セカンドペア/アンダーペア）× 4BP または リバー** | **BET** | V薄バリュー |
+| **R3★** | **low/3rd（ローペア/サードペア）× 4BP OOP × リバー** | **BET（逆転！）** | B 純ブラフ |
+| **R4★** | **no_made_hand × リバー**（ペアなし × リバー） | **BET** | B 純ブラフ |
+| E2 | （R4 の例外）no_made_hand × 4BP OOP × リバー | **CHECK** | ブラフ不成立 |
+
+---
+
+### ターン専用補正（3 条件）
+
+ターンのみに適用する追加条件。4BP IP dry の「逆転」パターンを扱います。
+
+定義: **底ハンド** = no_made_hand / low_pair / third_pair（ショーダウン価値がほぼゼロのハンド）
+
+| # | 条件 | アクション | GTO% | 動機 |
+|---|------|-----------|------|------|
+| **T底★** | **底ハンド** × **4BP IP** × ターン × **dry** | **BET** | 52–68% | B 純ブラフ（逆転） |
+| **T3** | 2nd/UP × **SRP IP** × ターン × **ドローあり** | **BET** | ~60% | S セミブラフ |
+
+> **底ハンドとは**: no_made_hand（ペアなし）、low_pair（最低ペア）、third_pair（3番目ペア）の総称。
+> 4BP IP dry のターンではこの3つが同じ「逆転 BET」ルールに従うため、1条件で表現できます。
+> ただしリバーでは no_made と low/3rd の行動が分かれるため（後述）、底ハンドの統合は**ターンのみ**有効です。
+
+---
+
+### 判定の優先順位（疑似コード）
+
+```
+デフォルト = CHECK
+
+1. E1: trips/overpair × 4BP OOP     → CHECK（最優先）
+2. R1: TP+ 以上                     → BET
+3. R2: 2nd/UP × (4BP or リバー)     → BET
+4. T底: 底ハンド × 4BP IP ターン dry→ BET ★（逆転）
+5. T3: 2nd/UP × SRP IP ターン draw  → BET
+6. R3: low/3rd × 4BP OOP リバー     → BET ★（逆転）
+7. E2: no_made × 4BP OOP リバー     → CHECK
+8. R4: no_made × リバー             → BET ★
+```
+
+合計 **8 条件**（精度 LS=91%）
+
+---
+
+### なぜリバーでは底ハンドを統合できないか
+
+リバーの 4BP OOP dry で、底ハンド内部が**逆方向**に分岐するためです：
+
+| 底ハンドの種類 | 4BP OOP リバー GTO% | 判定 |
+|---|---|---|
+| **low_pair** | 57.9% | → **BET**（R3 逆転） |
+| **third_pair** | 76.4% | → **BET**（R3 逆転） |
+| **no_made_hand** | 33.8% | → **CHECK**（E2 例外） |
+
+no_made のみが CHECK になる理由: 4BP OOP では相手のレンジが AA/AK 寄りに絞られており、ブラフ（no_made）が機能しません。一方 low/3rd はブラフではなく「薄いスケア」としてフォールドを誘えます。
+
+---
+
+### 8 ルールで何が変わるか
+
+| ストリート | カバー範囲 |
+|------------|-----------|
+| **フロップ** | R1（TP+→BET）が主役。4BP は R2 で 2nd/UP も追加 |
+| **ターン** | R1+R2 に加え T底（底ハンド統合・4BP IP dry 逆転）と T3（SRP IP draw） |
+| **リバー** | R2+R3+R4 でほぼ完全カバー。E1/E2 で 4BP OOP 例外を処理 |
+
+> **注意点**: 後続の 14.3〜14.9 のシナリオ別ルールを参照してください。
+> 8 ルールは「9 割の局面で正解」する圧縮版です。
+
+---
+
+### 確実に CHECK するケース（8 ルールの前提）
+
+8 ルールは「BET 条件に当てはまらなければ CHECK」という構造ですが、
+以下のケースは **BET ルールが発火していても CHECK が正解** です。
+「相手レンジが強すぎる」か「ショーダウン価値を守る」かのどちらかが理由です。
+
+| 状況 | GTO BET% | 理由 |
+|------|---------|------|
+| **king_high / ace_high** — 全シナリオ | 約 27% | ショーダウン価値あり → 守る |
+| **TP+ 以上 × 3BP OOP** （フロップ・ターン） | 約 46% | 相手レンジが AA/KK 寄りで BET が裏目 |
+| **2nd/UP × 4BP OOP ターン** | 約 47% | 4BP OOP は IP と逆ロジック（R2 の例外） |
+| **two_pair/set × 4BP OOP ターン** | 約 30% | スローレイ（E1 の適用範囲を超えた強ハンド） |
+| **低ペア（low/3rd）× SRP/3BP リバー** | 約 23% | ショーダウン価値あり → 守る（4BP OOP は逆転） |
+
+> **読み方**: 8 ルールで BET と判定されても上の表に当てはまる場合は CHECK。
+> 特に 4BP OOP のターンは「強いハンドほど CHECK（スローレイ）、弱いハンドは BET（ブラフ）」と
+> 覚えると逆転パターンが整理しやすい。
+
+---
+
+## 22.3 SRP フロップ IP — 判断ロジック
 
 SRP（SPR ≈ 8〜12）で相手（OOP）がチェック。自分（IP）のアクション。
 
@@ -4993,16 +5153,16 @@ UP かつ dry かつ gutshot?                          → BET if K/A-high の�
 → CHECK
 ```
 
-| ルール | 条件 | アクション | 理由 |
-|---|---|---|---|
-| ① | 2P+ | **BET** | 最強ハンドは全ボードでバリュー確定。相手のどのコール/フォールドも EV プラス |
-| ② | TP+ × dry × (draw OR Q+high) | **BET** | Q/K/A ボードは相手レンジが連動。7-5-2 等の低 dry では TP+ も CHECK |
-| ③ | TP+ × paired | **BET** | ペアボードで TP+ が相手レンジを支配 |
-| ④ | UP × paired（A-board 除く） | **BET** | ペアボードは相手の 7x/8x 等が減り自ペアの相対価値が上昇 |
-| ⑤ | UP × dry × gutshot × K/A-high | **BET** | K/A-high dry のみ gutshot UP が機能。低 dry は CHECK |
-| ⑥ | エア × dry × strong draw × K/A-high | **BET** | FD/OESD/combo のみ K/A ボードで BET。低 dry の strong draw も CHECK |
-| ⑦ | エア × wet × strong draw × Q-high+ | **BET** | Q 以上の wet ボードで strong draw が機能 |
-| ⑧ | エア × paired + draw | **BET** | ペアボードは相手レンジが弱まるため gutshot でも機能 |
+| ルール | 動機 | 条件 | アクション | 理由 |
+|---|---|---|---|---|
+| ① | **V** | 2P+ | **BET** | 最強ハンドは全ボードでバリュー確定。相手のどのコール/フォールドも EV プラス |
+| ② | **V** | TP+ × dry × (draw OR Q+high) | **BET** | Q/K/A ボードは相手レンジが連動。7-5-2 等の低 dry では TP+ も CHECK |
+| ③ | **V** | TP+ × paired | **BET** | ペアボードで TP+ が相手レンジを支配 |
+| ④ | **V** | UP × paired（A-board 除く） | **BET** | ペアボードは相手の 7x/8x 等が減り自ペアの相対価値が上昇 |
+| ⑤ | **S** | UP × dry × gutshot × K/A-high | **BET** | K/A-high dry のみ gutshot UP がセミブラフとして機能。低 dry は CHECK |
+| ⑥ | **S** | エア × dry × strong draw × K/A-high | **BET** | FD/OESD/combo = セミブラフ。K/A ボードでのみ機能 |
+| ⑦ | **S** | エア × wet × strong draw × Q-high+ | **BET** | Q 以上の wet ボードで strong draw がセミブラフとして機能 |
+| ⑧ | **S** | エア × paired + draw | **BET** | ペアボードは相手レンジが弱まるため gutshot でもセミブラフが機能 |
 
 > **ランク閾値の考え方**: 「ボードが K/A-high（top rank ≥ 13）か否か」で BET/CHECK が分かれる。
 > 低ボード（top rank ≤ J=11）は相手レンジが連動しにくく、弱い手の攻撃効率が落ちる。
@@ -5014,7 +5174,7 @@ UP かつ dry かつ gutshot?                          → BET if K/A-high の�
 - 2P+ × paired × no-draw × 5-high 以下 → BET
 - 2P+ × dry × no-draw × A-high のみ → BET
 
-## 14.4 3BP フロップ IP — 判断ロジック
+## 22.4 3BP フロップ IP — 判断ロジック
 
 3-bet pot（SPR ≈ 4〜6）。相手の 3bet レンジは AK / QQ+ 寄りにコンデンスされています。
 
@@ -5026,71 +5186,79 @@ UP × dry × gutshot × K-high 以上? → BET
 → CHECK
 ```
 
-| ルール | 条件 | アクション | 理由 |
-|---|---|---|---|
-| ① | TP+ 以上（wet×no-draw 除く） | **BET** | 相手のコンデンスされたレンジに対して TP+ 以上がバリューライン |
-| ② | TP+ × wet × no-draw × ≤9-high | **BET** | 低 wet ボードは TP+ でも BET（9 以下の wet）。J-high 以上 wet×no-draw は CHECK |
-| ③ | エア × paired × ≤6-high | **BET** | 低ペアボードは相手レンジが弱い。7 以上のペアは CHECK |
-| ④ | エア × dry × no-draw × ≤9-high | **BET** | 9 以下のドライ低ボードでエアがブラフとして機能（56% BET） |
-| ⑤ | UP / エア × wet/paired×high | **CHECK** | 相手が強いレンジを持つ局面でブラフは機能しない |
+| ルール | 動機 | 条件 | アクション | 理由 |
+|---|---|---|---|---|
+| ① | **V** | TP+ 以上（wet×no-draw 除く） | **BET** | 相手のコンデンスされたレンジに対して TP+ 以上がバリューライン |
+| ② | **V** | TP+ × wet × no-draw × ≤9-high | **BET** | 低 wet ボードは TP+ でも BET（9 以下の wet）。J-high 以上 wet×no-draw は CHECK |
+| ③ | **B** | エア × paired × ≤6-high | **BET** | 低ペアボードは相手レンジが弱い → エアのブラフが機能（56% BET） |
+| ④ | **B** | エア × dry × no-draw × ≤9-high | **BET** | 9 以下の低 dry ボードでエアのブラフが機能（56% BET） |
+| ⑤ | — | UP / エア × wet/paired×high | **CHECK** | 相手が強いレンジを持つ局面でブラフは機能しない |
 
 > SRP との違い: SRP では「UP×dry+draw → BET」「UP×paired → BET」等の例外があったが、
 > 3BP では **TP+ 以上 + 低ボード限定の例外** に絞る。精度 84.7%。
 
-## 14.5 4BP フロップ IP — 逆転ロジック
+## 22.5 4BP フロップ — レンジベット戦略（SRP/3BP とは別ロジック）
 
-4-bet pot（SPR ≈ 2）。ポットが大きく、スタックが浅い。
+4-bet pot（SPR ≈ 2）のフロップは **SRP/3BP とは根本的に別のゲーム** です。
+GTO Wizard 実測データにより、4BP は **20% pot のレンジベット戦略** が最善と確認されました。
+
+### 旧「逆転ロジック（2P+→CHECK）」は誤り
+
+過去の仮説「4BP フロップ = 強い手はトラップ(CHECK)、弱い手はプレッシャー(BET)」は
+GTO Wizard プローブデータで**否定**されました。実際の GTO は:
+
+| | 旧仮説（誤）| GTO（正） |
+|---|---|---|
+| 2P+ | CHECK（トラップ） | **ほぼ BET または AI** |
+| TP+ | 条件付き BET | **BET（82–100%）** |
+| ベットサイズ | 大きなサイズ | **20% pot（≈11BB into 56BB）** |
+| 全体 BET 頻度 | 手によって大きく変動 | **≈49% BET（レンジ分散）** |
+
+### 4BP フロップ BET ルール
 
 ```
-2P+?                                          → CHECK（理由: トラップが有効）
-UP × wet × no-draw?                           → CHECK
-UP（その他）?                                 → BET（理由: スタック圧力）
-TP+ × dry × 9-high 以下?                     → CHECK（低 dry は TP+ も CHECK）
-TP+ × dry × 10-high 以上?                    → BET
-TP+ × wet × no-draw × Q-high 以上?           → CHECK（高 wet は CHECK）
-TP+ × wet（その他）?                          → BET
-TP+ × paired?                                 → CHECK（TP+ も slowplay）
-エア × dry × no-draw × ≤A前（A 除く）?       → BET（A-high dry は CHECK）
-→ CHECK
+Ultra-dry 低ボード（4s4d2c, 7s4d2c, 8s5d3c 型）?  → AI（オールイン直行。BET 35–41%）
+TP+ ?                                               → BET（IP/OOP 問わず、82–100%）
+2ndペア / 3rdペア（IP）× connected?                 → BET（≈50%、レンジ分散）
+→ CHECK（その他）
 ```
 
-| ルール | 条件 | アクション | 理由 |
-|---|---|---|---|
-| ① | 2P+ | **CHECK** | SPR≈2 では BET しても弱い手はフォールド → EV 低下。CHECK で強い手を誘う |
-| ② | UP × (dry/paired)、UP × wet+draw | **BET** | ポット大 × スタック浅 → UP のベットが「フォールドかオールイン」を迫る圧力 |
-| ③ | TP+ × dry × 10-high 以上 | **BET** | 高い dry ボード（T/J/Q/K-high）で TP+ はポラライズバリュー |
-| ④ | TP+ × dry × 9-high 以下 | **CHECK** | 9 以下の低 dry では TP+ も CHECK（相手レンジが disconnected） |
-| ⑤ | TP+ × wet × no-draw × J-high 以下 | **BET** | 低 wet は TP+ でも BET |
-| ⑥ | TP+ × paired / TP+ × wet × Q-high+ no-draw | **CHECK** | ペアは slowplay、高 wet no-draw も CHECK |
-| ⑦ | エア × dry × no-draw × non-A | **BET** | A-high 以外の dry ボードでエアをプレッシャーベット（74% BET） |
+| 動機 | 条件 | アクション | GTO BET% | 理由 |
+|---|---|---|---|---|
+| **V** | Ultra-dry 低ボード（742/752/853 型）× any | **AI** | 35–41% AI | 20% pot は機能しません。直接 all-in が最善です |
+| **V** | TP+ × all boards (IP/OOP) | **BET 20% pot** | 82–100% | SPR≈2 でバリューを即回収。slowplay の余裕なし |
+| **V/B** | 2nd/3rdペア × IP × connected | **BET 20% pot** | ≈50% | range-bet でレンジ全体の EV を最大化 |
 
-> **4BP の構造**: 「強い手（2P+）はトラップ、弱い手（UP）はプレッシャー」。
-> SPR が浅いほど、ポット/スタック比が大きいベットが相手に大きな決断を迫る。
+> **4BP の根本原理（レンジベット）**: SPR≈2 でベットしても相手が次のストリートで all-in になります。
+> 強い手でもすぐに BET してバリューを回収する方が EV 高いです。
+> 3BP での「セット/フラッシュ → CHECK（スローレイ）」は 4BP では不要です。SPR が低すぎてスローレイの旨味がありません。
 
-## 14.6 ターン IP — 判断ロジック
+> **ベットサイズ**: 20% pot（= ≈11BB into ≈56BB pot）。SRP/3BP の 33–50% pot とは全く異なる。
+
+## 22.6 ターン IP — 判断ロジック
 
 フロップで双方チェック後（または delayed C-BET）、ターンで相手がチェック。
 
 ### SRP ターン IP
 
 ```
-2P+?                                 → BET
-TP+ かつ dry かつ draw あり?        → BET（no draw は CHECK）
-TP+ かつ draw あり?                 → BET
-エア かつ draw あり (gutshot 以上)? → BET（no draw は CHECK）
+2P+?                                 → BET（V バリュー）
+TP+ かつ dry かつ draw あり?        → BET（V+S バリュー兼セミブラフ）
+TP+ かつ draw あり?                 → BET（V+S）
+エア かつ draw あり (gutshot 以上)? → BET（S セミブラフ）
 → CHECK（UP は draw あっても CHECK）
 ```
 
-| ルール | 条件 | アクション | 理由 |
-|---|---|---|---|
-| ① | 2P+ | **BET** | ターンでも最強ハンドはバリュー確定 |
-| ② | TP+×dry + draw | **BET** | dry ターンでも draw なし TP+ は 40% BET = CHECK 多数。draw で補完必須 |
-| ③ | TP+×dry×no draw | **CHECK** | 40.3% BET — draw なし TP+ は dry でも CHECK が GTO 多数（反直感） |
-| ④ | TP+×wet + draw | **BET** | draw が加わった TP+ は wet でもバリュー兼セミブラフ |
-| ⑤ | エア + gutshot 以上 | **BET** | gutshot エア×dry 76%、OESD/FD 85〜100% のセミブラフ値 |
-| ⑥ | UP（draw あり） | **CHECK** | UP はターンで BET しても相手に「より良い手がある」可能性が高い。Draw があっても原則 CHECK |
+| ルール | 動機 | 条件 | アクション | 理由 |
+|---|---|---|---|---|
+| ① | **V** | 2P+ | **BET** | ターンでも最強ハンドはバリュー確定 |
+| ② | **V+S** | TP+×dry + draw | **BET** | draw なし TP+ は 40% BET = CHECK 多数。draw で補完必須 |
+| ③ | — | TP+×dry×no draw | **CHECK（スローレイ）** | 40.3% BET — draw なし TP+ は dry でも CHECK が GTO 多数（反直感） |
+| ④ | **V+S** | TP+×wet + draw | **BET** | draw が加わった TP+ は wet でもバリュー兼セミブラフ |
+| ⑤ | **S** | エア + gutshot 以上 | **BET** | gutshot エア×dry 76%、OESD/FD 85〜100% のセミブラフ値 |
+| ⑥ | — | UP（draw あり） | **CHECK（SD守）** | UP のブロッカー価値 < ショーダウン価値。Draw があっても原則 CHECK |
 
-> **重要**: TP+×dry は **draw なし = CHECK**（逆直感）。GTO はターン到達後に dry ボードの TP+ を slowplay する。
+> **重要**: TP+×dry は **draw なし = CHECK**（逆直感）。GTO はターン到達後に dry ボードの TP+ を slowplay します。
 > **SRP ターン IP 精度**: 85.8%（v6d 改訂後、全シナリオ中最高クラス）
 
 ### 3BP ターン IP
@@ -5101,57 +5269,67 @@ TP+ かつ dry?                                    → BET
 TP+ かつ paired × no-draw × A-only?              → BET（K 以下は CHECK）
 TP+ かつ gutshot?                                → BET
 UP × paired × 10-high 以上?                      → BET（10 以下の低ペアは CHECK）
-エア × dry × no-draw × ≤8-high?                 → BET（9 以上の dry no-draw は CHECK）
-エア × dry × draw あり?                          → BET
-エア × wet × gutshot?                            → BET
-エア × paired × strong × 10-high 以上?          → BET（9 以下の strong draw は CHECK）
-エア × paired × no-draw × ≤9-high?              → BET（10 以上は CHECK — 逆方向！）
-→ CHECK
+no_made_hand × dry × draw (gutshot/FD)?          → BET ★（55–84%）
+→ CHECK（エア全て: ace_high/king_high/low_pair/third_pair は draw があっても CHECK ★）
 ```
 
-| ルール | 条件 | アクション | 理由 |
-|---|---|---|---|
-| ① | 2P+ | **BET** | 3BP でも最強ハンドは継続バリュー |
-| ② | TP+×dry | **BET** | dry ターンでは TP+ が相手の 3bet レンジに対して優位（85% BET） |
-| ③ | TP+×paired×A-only | **BET** | A-board ペアのみ TP+ が BET。K 以下のペアは CHECK（25% BET） |
-| ④ | TP+×gutshot | **BET** | gutshot で強化された TP+ はセミブラフ価値が付加される |
-| ⑤ | UP×paired×10+ | **BET** | J/Q/K/A-high ペアで UP に価値が出る。9 以下の低ペアは CHECK |
-| ⑥ | エア×dry×≤8-high×no-draw | **BET** | 8 以下の低 dry no-draw エアはブラフが機能（delayed bluff） |
-| ⑦ | エア×dry+draw | **BET** | ドロー付きエアはセミブラフとして機能 |
-| ⑧ | エア×wet+gutshot | **BET** | 69.4% BET — wet + gutshot の組合せはブラフ頻度が高い |
-| ⑨ | エア×paired×strong×10+ | **BET** | 高ペアボードで strong draw エアがブラフとして機能 |
-| ⑩ | エア×paired×no-draw×≤9 | **BET** | 低ペアボードはエア no-draw がブラフとして機能（逆直感） |
+| ルール | 動機 | 条件 | アクション | 理由 |
+|---|---|---|---|---|
+| ① | **V** | 2P+ | **BET** | 3BP でも最強ハンドは継続バリュー |
+| ② | **V** | TP+×dry | **BET** | dry ターンでは TP+ が相手の 3bet レンジに対して優位（85% BET） |
+| ③ | **V** | TP+×paired×A-only | **BET** | A-board ペアのみ TP+ が BET。K 以下のペアは CHECK（25% BET） |
+| ④ | **V+S** | TP+×gutshot | **BET** | gutshot で強化された TP+ はセミブラフ価値が付加される |
+| ⑤ | **V** | UP×paired×10+ | **BET** | J/Q/K/A-high ペアで UP に価値が出ます。9 以下の低ペアは CHECK |
+| ⑥ ★ | **S** | **no_made_hand × dry × draw（gutshot/FD）** | **BET** | 純ブラフハンドのみ draw でセミブラフが機能（55–84% BET）|
+| ✗ | — | エア（ace_high/king_high/low_pair/third_pair）× any | **CHECK（SD守）★** | ショーダウン価値あり → 守る。GTO: low_pair 22%、ace_high gutshot 22%。draw があっても× |
 
-### 4BP ターン IP — フロップ逆転の継続
+> **3BP ターン エア = 全 CHECK（no_made_hand+draw の例外のみ）**:
+> 旧ルール「エア×dry×≤8-high → BET」は誤り。実測値: low_pair no_draw = 22%、ace_high gutshot = 22%。
+> **no_made_hand**（ペアなし純ブラフ）だけが draw でセミブラフとして機能。King/Ace-high はブロッカー値があるが CHECK が EV 高い。
+
+### 4BP ターン IP — ボード × ハンドカテゴリ 別ロジック
 
 ```
-2P+ × dry × no-draw × ≤8-high?               → CHECK（低 dry は 2P+ も CHECK）
-2P+ （その他）?                               → BET
-TP+ × paired × no-draw × ≤7-high?            → CHECK（低ペアは CHECK）
-TP+ （その他）?                               → BET
-UP × wet?                                     → BET（no-draw 含む）
-UP × paired × no-draw × Q-high 以上?         → CHECK（J 以下は BET）
-UP （その他）?                                → BET
-エア × dry × gutshot × Q-high 以上?          → BET（J 以下は CHECK）
-エア × dry × no-strong?                      → BET（strong draw は CHECK）
-エア × wet × no-draw?                        → BET（no-draw のみ BET）
-→ CHECK（エア×wet×strong/gutshot は CHECK）
+【dry ボード】
+TP+ または two_pair 以上?                → BET（77–78%）
+second_pair?                            → BET ★★（73.9%）← 重要追記
+third_pair × (no_draw または gutshot)? → BET ★（64–100%）
+low_pair × (no_draw または gutshot)?   → BET（51–52%）
+no_made_hand × (no_draw または gutshot)? → BET ★（56–58%）
+king_high × any?                        → CHECK ★（24–30%、gain=14.71 BB）
+ace_high × any?                         → CHECK ★（23–50%）
+エア × FD/OESD?                         → CHECK（34–38%）
+
+【paired ボード】
+TP+?                                    → BET（66%）
+third_pair × no_draw?                   → BET ★（90.5%、gain=4.35 BB）
+ace_high × no_draw?                     → BET ★（59.2%）
+→ CHECK（no_made_hand 36.7%、second_pair 28.8% は全て CHECK）
+
+【wet ボード】
+TP+?                                    → BET（52%）
+→ CHECK（エア全て: low_pair 26.8%、third_pair 28% は CHECK）
 ```
 
-| ルール | 条件 | アクション | 理由 |
-|---|---|---|---|
-| ① | 2P+（非 low dry） | **BET** | SPR≈1.5 でオールイン圧力として機能 |
-| ② | 2P+×dry×≤8×no-draw | **CHECK** | 低 dry で 2P+ も CHECK（レンジが disconnected） |
-| ③ | TP+（非 low-paired） | **BET** | TP+ はほぼ全ての状況で BET |
-| ④ | UP×dry/paired×≤11 / UP×wet | **BET** | Q-high 以下のペアまで UP が BET。wet も BET |
-| ⑤ | エア×wet×no-draw | **BET** | no-draw のみ BET（FD/gutshot は CHECK — 相手レンジと正面衝突） |
-| ⑥ | エア×dry×gutshot×Q+ | **BET** | Q/K/A-high dry で gutshot エアが機能（J 以下は CHECK） |
-| ⑦ | エア×dry×no-strong | **BET** | strong draw 以外の干渉しないエアを bluff |
+| ルール | 動機 | 条件 | アクション | GTO% | 理由 |
+|---|---|---|---|---|---|
+| ①D | **V** | **dry**: TP+/2P | **BET** | 61–78% | SPR≈1.5 でオールイン圧力として機能 |
+| ①D_b ★★ | **V薄/B** | **dry**: second_pair | **BET** | 73.9% | TP+/2P の次に位置する薄いバリュー。dry × 4BP では K/A-high コールを誘える |
+| ②D ★ | **B** | **dry**: third_pair × no_draw/gutshot | **BET** | 64–100% | ショーダウン価値低 → ブラフがオールイン圧力として機能 |
+| ③D ★ | **B** | **dry**: no_made_hand × no_draw/gutshot | **BET** | 56–58% | ショーダウン価値ゼロ → 純ブラフが最もプレッシャー機能 |
+| ④D ★ | — | **dry**: king_high または ace_high | **CHECK（SD守）** | 24–30% | ショーダウン価値あり → 守る。BET すると相手が Kx/Ax でコール |
+| ⑤D | — | **dry**: エア × FD/OESD | **CHECK（スローレイ）** | 34–38% | 強ドロー = 相手に踏み込まれると負ける → CHECK |
+| ①P ★ | **B** | **paired**: third_pair × no_draw | **BET** | 90.5% | ペアボードで low_pair が「ロウ 3 枚目」→ 相手フォールド誘発 |
+| ②P ★ | **B** | **paired**: ace_high × no_draw | **BET** | 59.2% | A-high はペアボードでスケア（相手のボードペアを超えた) |
+| ①W | **V** | **wet**: TP+ | **BET** | 52% | wet でも TP+ はバリュー |
 
-> 4BP ターンの変化点: フロップでは「2P+ → CHECK（トラップ）」だったが、
-> ターンでは SPR がさらに低下し、2P+ でも BET してオールインを狙う局面になる。
+> **4BP ターン dry の核心**: second_pair は 73.9% BET — TP+ の次に位置する薄いバリュー（paired の 28.8% とは別物）。
+> K/A-high は CHECK してショーダウンを狙う（K-high dry no_draw = 24%）。これは直感と逆だが GTO 実測済み。
+> **dry × second_pair ≠ paired × second_pair**: dry では K/A-high のコールを取れるが、paired では相手のフルハウス可能性が高く BET 不可。
 
-## 14.7 OOP ターン — 判断ロジック
+> 4BP ターンの位置付け: フロップ「TP+ → BET、エア→CHECK（レンジベット）」から、ターンは「low_pair/no_made_hand → BET に転換」。SPR が 2→1.5 に低下し、ブラフのプレッシャーが増す。
+
+## 22.7 OOP ターン — 判断ロジック
 
 双方フロップチェック後、ターンで OOP（= 自分）がファーストアクション。
 
@@ -5173,201 +5351,283 @@ OOP ターン SRP の基本は **CHECK**。2P+×wet/dry（バリュー）と dra
 ### 3BP ターン OOP
 
 ```
-TP+ × paired × no-draw × ≤10-high?  → BET（11 以上は CHECK）
-TP+（その他）?                        → BET
-2P+ × wet?                           → BET
-2P+ × paired × 7-high 以上?          → BET（6 以下は CHECK）
-エア × strong × (dry/wet)?            → BET
-エア × strong × paired × ≤10-high?   → BET（J 以上のペアは CHECK）
-エア × paired × gutshot × 12-high 以上? → BET（11 以下は CHECK）
-→ CHECK
+TP+ (top_pair, overpair, trips) × dry?       → BET（71–81%）
+TP+ × paired × no-draw × ≤10-high?          → BET（11 以上は CHECK）
+TP+ × wet?                                   → BET（44–69%）
+no_made_hand × dry/wet × draw (gutshot/FD)?  → BET ★（59–84%）
+→ CHECK（エア全て: ace_high/king_high/low_pair × any は CHECK ★）
 ```
 
-| ルール | 条件 | アクション | 理由 |
-|---|---|---|---|
-| ① | TP+ × non-high-paired | **BET** | 3BP OOP TP+ dry 81% / wet 69%。高ペアボード（Q/K/A）は CHECK |
-| ② | 2P+×wet | **BET** | wet で強い手 + OOP ポジション不利の補填として BET |
-| ③ | 2P+×paired×7+ | **BET** | 中〜高ペアボードで 2P+ がバリュー |
-| ④ | エア×strong×(dry/wet) | **BET** | dry/wet のエア strong draw は OOP でもブラフとして機能 |
-| ④' | エア×strong×paired×≤10 | **BET** | ペアボード strong は low のみ BET（J/Q/K/A ペアは CHECK） |
-| ⑤ | エア×paired×gutshot×K+ | **BET** | A-high ペアボードで gutshot エアが機能（12 以上） |
+| ルール | 動機 | 条件 | アクション | GTO% | 理由 |
+|---|---|---|---|---|---|
+| ① | **V** | **TP+ × dry**（top_pair/overpair/trips） | **BET** | 64–81% | 3BP OOP はポジション不利だが TP+ は dry でバリューが勝る |
+| ② | **V** | **TP+ × paired × ≤10-high** | **BET** | 65% | 高ペアボード（J/Q/K/A）は CHECK、10 以下はバリュー |
+| ③ | **V** | **TP+ × wet** | **BET** | 44–69% | wet でも TP+ はバリューライン |
+| ④ ★ | **S** | **no_made_hand × draw（gutshot/FD）** | **BET** | 59–84% | ショーダウン価値ゼロ × draw = セミブラフのみが機能 |
+| ✗ | — | エア（ace_high/king_high/low_pair）× any | **CHECK（SD守）★** | 8–24% | ショーダウン価値あり → 守る。OOP エアは draw があっても不利 |
 
-### 4BP ターン OOP
+> **3BP OOP ターン エア = 全 CHECK**: IP 同様に、ace_high/king_high/low_pair は draw があっても CHECK が最善。
+> **trips × dry → BET (71%)** を忘れずに（trips は tier_i=4、2P+ に含まれるが OOP dry で明示的に BET）。
+
+### 4BP ターン OOP — dry で overpair/2P が逆転する
 
 ```
-TP+ × wet × no-draw?               → CHECK
-TP+ × paired × 11-high 以上?      → CHECK（10 以下は BET）
-TP+ × dry × no-draw × A-only?     → CHECK（K 以下は BET）
-TP+（その他）?                      → BET
-2P+ × wet?                         → BET
-2P+ × paired × 10-high 以上?       → BET（9 以下は CHECK）
-UP × dry + draw?                    → BET
-エア × dry × gutshot × ≤9-high?    → BET（10 以上は CHECK）
-→ CHECK
+top_pair × dry?                      → BET（59.1%）
+trips × dry?                         → BET（55.6%）
+overpair × dry?                      → CHECK ★（29.8%、gain=2.33 BB）
+two_pair × dry × no-draw?            → CHECK ★（24%）
+set × dry?                           → CHECK（25.9%、スローレイ）
+second_pair × gutshot?               → BET ★（91.8%、gain=3.45 BB）
+third_pair × gutshot?                → BET ★（88.3%）
+→ CHECK（other: no_made_hand 15.9%、third_pair no_draw 38%）
 ```
 
-| ルール | 条件 | アクション | 理由 |
-|---|---|---|---|
-| ① | TP+（制限付き） | **BET** | 4BP OOP TP+。wet no-draw/高ペア/A-high dry は CHECK |
-| ② | 2P+×wet | **BET** | wet ボードで 2P+ はバリューライン |
-| ③ | 2P+×paired×10+ | **BET** | 高ペアボードで 2P+ が機能 |
-| ④ | エア×dry×gutshot×≤9 | **BET** | 低 dry でエア+gutshot がブラフとして機能 |
+| ルール | 動機 | 条件 | アクション | GTO% | 理由 |
+|---|---|---|---|---|---|
+| ①T | **V** | **top_pair × dry** | **BET** | 59.1% | OOP でも top_pair dry はバリュー優先 |
+| ②T | **V** | **trips × dry** | **BET** | 55.6% | trips は OOP でも BET（GTO 実測） |
+| ③T ★ | — | **overpair × dry** | **CHECK（スローレイ）** | 29.8% | 4BP OOP overpair は CHECK！相手レンジ（AK/AA+）に対して BET は危険 |
+| ④T ★ | — | **two_pair × dry × no-draw** | **CHECK（スローレイ）** | 24% | SPR≈1.5 で BET→AI のリスク大 → CHECK でスタック保全 |
+| ⑤T | — | **set × dry** | **CHECK（スローレイ）** | 25.9% | 強すぎて BET すると相手が降りる → CHECK でトラップ |
+| ⑥T ★ | **S** | **second_pair × gutshot** | **BET** | 91.8% | ほぼ 100% BET — gutshot が付いた second_pair は最強セミブラフ |
+| ⑦T ★ | **S** | **third_pair × gutshot** | **BET** | 88.3% | third_pair+gutshot も強力セミブラフ（BET でフォールドか draw 完成） |
 
-## 14.8 リバー IP — 判断ロジック
+> **4BP OOP dry ターンの核心**: "overpair が CHECK、third_pair+draw が BET"。
+> 4BP で overpair を CHECK する理由: OOP × 4BP × dry の overpair は SPR≈1.5 で BET するとほぼ全ての相手のコールに負ける（相手は AK/AA+）。
+> 逆に third_pair/second_pair+gutshot = ショーダウン価値がなく、フォールドエクイティのみがある → BET が最善。
+
+## 22.8 リバー IP — 判断ロジック
 
 フロップ・ターン双方チェック後、OOP がリバーをチェック（delayed attack 局面）。
+
+**【リバー dry ボード共通パターン】** GTO 実測で判明したリバーの核心ルール:
+
+| mv_cat | SRP IP | 3BP IP | 4BP IP | 理由 |
+|---|---|---|---|---|
+| **no_made_hand** | 61.9% → **BET** | 60.8% → **BET** | 57.6% → **BET ★** | ショーダウン価値ゼロ → ブラフのみ |
+| **second_pair** | 52.7% → **BET ★** | 79.5% → **BET ★** | 54.0% → **BET ★** | thin value（弱い手のコールに勝つ） |
+| **underpair** | 57.9% → **BET** | 59.0% → **BET ★** | 48.1% → 境界 | 同上 |
+| **third_pair** | 25.5% → CHECK | 69.0% → **BET** | 23.2% → CHECK | 3BP のみ BET |
+| **king_high** | 2.5% → **CHECK ★** | 0.4% → **CHECK ★** | 3.2% → CHECK | ショーダウン価値あり |
+| **ace_high** | 22.9% → **CHECK ★** | 1.9% → **CHECK ★** | 1.4% → CHECK | ショーダウン価値あり |
+| **low_pair** | 13.2% → **CHECK ★** | 10.1% → **CHECK ★** | 13.3% → CHECK | ショーダウン価値あり |
+
+> **旧「エア×dry → 常に BET（K/A も例外なし）」は誤り**: king_high dry = 0.4-22.9%、ace_high = 1.9%。
+> 旧「UP → CHECK」も誤り: second_pair = 52-79.5%、underpair = 57.9% で BET が多数。
+> **no_made_hand（ペアなし純エア）はブラフ。ace/king_high はショーダウン価値を守る。**
 
 ### SRP リバー IP
 
 ```
-2P+?                                   → BET
-TP+ × (dry または paired)?             → BET
-UP × paired × ≤11-high?               → BET（Q/K/A ペアは CHECK）
-エア × (dry または wet)?              → BET
-エア × paired × ≤11-high?             → BET（Q/K/A ペアは CHECK）
-→ CHECK（TP+×wet → CHECK）
+2P+?                              → BET
+TP+ × (dry または paired)?        → BET
+second_pair または underpair?      → BET ★（thin value）
+no_made_hand × dry/wet?           → BET ★（ブラフ）
+→ CHECK（king_high/ace_high/low_pair/third_pair × dry → CHECK ★）
 ```
 
-| ルール | 条件 | アクション | 理由 |
-|---|---|---|---|
-| ① | 2P+ | **BET** | ショーダウン価値が高く、BET してもコールされる手に勝っている |
-| ② | TP+ × dry/paired | **BET** | 双方チェックが続いた後、TP+ は相手のレンジに対して依然価値を持つ |
-| ③ | TP+ × wet | **CHECK** | 相手のチェックが強いレンジを示唆しうる。wet では慎重に |
-| ④ | UP × paired × ≤J-high | **BET** | J 以下のペアボードで UP がブラフとして機能。Q/K/A ペアは CHECK |
-| ⑤ | エア × dry/wet | **BET** | 全 3 チェック後の delayed bluff として機能 |
-| ⑥ | エア × paired × ≤J-high | **BET** | J 以下のペアボードでエアがブラフとして機能（Q/K/A ペアは CHECK） |
+| ルール | 動機 | 条件 | アクション | GTO% | 理由 |
+|---|---|---|---|---|---|
+| ① | **V** | 2P+ | **BET** | 91-100% | 最強ハンドはフルバリュー |
+| ② | **V** | TP+ × dry/paired | **BET** | 91.4% | 3 チェック後も TP+ はバリュー |
+| ③ ★ | **V薄** | **second_pair × dry** | **BET** | 52.7% | 薄いバリュー — 相手の ace/king_high よりも強い |
+| ④ ★ | **V薄** | **underpair × dry** | **BET** | 57.9% | 薄いバリューとして機能 |
+| ⑤ ★ | **B** | **no_made_hand × dry/wet** | **BET** | 61.9% | ショーダウン価値ゼロ → ブラフが唯一の選択肢 |
+| ✗ ★ | — | **king_high/ace_high/low_pair/third_pair** | **CHECK（SD守）** | 2-25% | ショーダウン価値あり → 守る。BET すると相手の強い手にコールされ損 |
 
-> リバー「エア全 BET」の直感: フロップ・ターンとチェックが続いた後、IP のエアはどのボードでも「相手が弱い」を意味する。
-> ただし Q/K/A-board のペアは相手が強い手を持ちやすく、エア/UP は CHECK に転換。
-
-### 3BP リバー IP
+### 3BP リバー IP — 最大改善（gain 上位集中）
 
 ```
-TP+ または 2P+?                       → BET
-エア × (wet または dry)?              → BET（常に BET — K/A も例外なし）
-エア × paired × no-draw × ≤11-high?  → BET（Q/K/A ペアは CHECK）
-→ CHECK（UP → CHECK）
+TP+ 以上（top_pair, two_pair, trips, straight, flush, set, fullhouse）? → BET（96-100%）
+third_pair × dry?      → BET ★（69%）
+second_pair × dry?     → BET ★（79.5%、旧 CHECK は最大誤り: gain=28.53 BB/100）
+underpair × dry?       → BET ★（59.0%）
+no_made_hand × dry?    → BET（60.8%）
+→ CHECK ★（king_high=0.4%、ace_high=1.9%、low_pair=10.1% → 全て CHECK）
 ```
 
-| ルール | 条件 | アクション | 理由 |
-|---|---|---|---|
-| ① | TP+ / 2P+ | **BET** | SPR≈3 では TP+ 以上がリバーで明確なバリュー |
-| ② | エア × wet | **BET** | ドローミスのエアが wet ボードでブラフとして機能 |
-| ③ | エア × dry | **BET** | 74% BET — K/A-high でも例外なく BET（旧版 K/A → CHECK は誤り） |
-| ④ | エア × paired × ≤J-high | **BET** | J 以下のペアボードでエアのブラフが機能 |
-| ⑤ | UP | **CHECK** | UP は「バリューとして弱く、ブラフとして機能しない」中途半端な強さ |
-| ⑥ | エア × paired × Q/K/A-high | **CHECK** | 高ペアボードではエアのブラフ効率が落ちる |
+| ルール | 動機 | 条件 | アクション | GTO% | 理由 |
+|---|---|---|---|---|---|
+| ① | **V** | TP+ 以上 (TP+/2P+/trips/straight/flush) | **BET** | 96–100% | SPR≈3 での強バリュー |
+| ② ★ | **B/V薄** | **third_pair × dry** | **BET** | 69.0% | 3BP SPR≈3 では thin value+ブラフとして機能（SRP 25.5% とは逆） |
+| ③ ★ | **V薄** | **second_pair × dry** | **BET** | 79.5% | 薄いバリュー（旧「UP → CHECK」は誤り：gain=28.53 BB/100） |
+| ④ ★ | **V薄** | **underpair × dry** | **BET** | 59.0% | 薄いバリュー |
+| ⑤ ★ | **B** | **no_made_hand × dry** | **BET** | 60.8% | ショーダウン価値ゼロ → ブラフのみ |
+| ✗ ★★★ | — | **king_high × dry** | **CHECK（SD守）** | 0.4% | **0.4%** — ほぼ 100% CHECK（旧「K/A も BET」は最大の誤り）|
+| ✗ ★★★ | — | **ace_high × dry** | **CHECK（SD守）** | 1.9% | ショーダウン価値あり → 守る |
+| ✗ ★★★ | — | **low_pair × dry** | **CHECK（SD守）** | 10.1% | gain=79.88 BB/100 — リバー最大改善ポイント |
 
-### 4BP リバー IP
+> **3BP IP リバー dry 核心**: "エア=CHECK、UP=BET" — 従来の TP+/UP/エアの三分類を捨てる。
+> `king_high`/`ace_high`/`low_pair` → CHECK（ショーダウン価値を守る）。
+> `second_pair`/`underpair`/`third_pair`/`no_made_hand` → BET（thin value or ブラフ）。
+
+### 4BP リバー IP — no_made_hand/second_pair が解禁される
 
 ```
-2P+?          → ALLIN
-TP+?          → BET / ALLIN
-UP かつ paired? → ALLIN
-→ CHECK
+2P+ または TP+?         → ALLIN（SPR≈1 で全額押す）
+no_made_hand × dry?    → BET ★（57.6%、gain=44.85 BB/100）
+second_pair × dry?     → BET ★（54.0%）
+→ CHECK（king_high/ace_high/low_pair/third_pair → CHECK）
 ```
 
-| ルール | 条件 | アクション | 理由 |
-|---|---|---|---|
-| ① | 2P+ | **ALLIN** | SPR≈1 ではポット全額が最大バリュー。チェックはナッツを捨てることになる |
-| ② | TP+ | **BET/ALLIN** | 4BP リバーでは TP+ もオールインバリューライン |
-| ③ | UP × paired | **ALLIN** | ペアボードの UP はブラフとして圧力をかけられる唯一の局面 |
-| ④ | エア | **CHECK** | 4BP の強いレンジにエアのブラフは機能しない |
+| ルール | 動機 | 条件 | アクション | GTO% | 理由 |
+|---|---|---|---|---|---|
+| ① | **V** | 2P+ / TP+ | **ALLIN** | 85-100% | SPR≈1 では全額でバリューを取る |
+| ② ★ | **B** | **no_made_hand × dry** | **BET** | 57.6% | ショーダウン価値ゼロ → ブラフ：相手がフォールドするかオールインしかない |
+| ③ ★ | **V薄** | **second_pair × dry** | **BET** | 54.0% | 薄いバリュー（旧「エア以外は ALLIN のみ」を修正） |
+| ✗ | — | king_high/ace_high/low_pair/third_pair | **CHECK（SD守）** | 1-23% | ショーダウン価値あり → 守る |
 
-> 4BP の流れ: フロップ 2P+→CHECK（トラップ）→ ターン 2P+→BET（SPR 低下）→ リバー 2P+→ALLIN（全額押す）
-
-## 14.9 OOP リバー — polarization ロジック
+## 22.9 OOP リバー — polarization ロジック
 
 フロップ・ターン双方チェック後、リバーで OOP がファーストアクション。
+
+**【OOP リバー dry ボード共通パターン】**
+
+| mv_cat | SRP OOP | 3BP OOP | 4BP OOP |
+|---|---|---|---|
+| **second_pair** | 67.5% → **BET ★** | 85.2% → **BET** | 73.0% → **BET** |
+| **underpair** | 62.9% → **BET ★** | 65.9% → **BET** | 51.9% → BET |
+| **no_made_hand** | 53.7% → **BET ★** | 50.7% → BET | 33.8% → CHECK |
+| **third_pair** | 40.1% → 境界 | 75.2% → **BET** | 76.4% → **BET ★** |
+| **low_pair** | 18.0% → CHECK | 17.3% → **CHECK ★★★** | 57.9% → **BET ★★★** |
+| **king_high** | 48.6% → 境界 | 0.0% → **CHECK ★★★** | 4.0% → CHECK |
+| **ace_high** | 20.2% → CHECK | 10.3% → **CHECK ★★★** | 34.8% → 境界 |
+| **overpair** | 74.1% → BET | — | 12.5% → **CHECK ★** |
+| **trips** | 45.0% → 境界 | 46.7% → 境界 | 43.4% → **CHECK ★** |
 
 ### SRP リバー OOP
 
 ```
-TP+?                                             → BET
-2P+?                                             → BET（dry/wet/paired 全て）
-UP × paired × 13-high 以上（K/A）?              → BET（J 以下は CHECK）
-エア × paired × ≤12-high?                       → BET（K/A ペアは CHECK）
-エア × dry × no-draw × ≤10-high?               → BET（J 以上の dry は CHECK）
-→ CHECK
+TP+ または 2P+?                → BET
+second_pair または underpair?  → BET ★（thin value）
+no_made_hand × dry?            → BET ★（ブラフ）
+→ CHECK（ace_high/low_pair → CHECK; king_high は境界: 48.6%）
 ```
 
-| ルール | 条件 | アクション | 理由 |
+| ルール | 動機 | 条件 | アクション | GTO% | 理由 |
+|---|---|---|---|---|---|
+| ① | **V** | TP+ / 2P+ | **BET** | 64-100% | 強バリュー |
+| ② ★ | **V薄** | **second_pair × dry** | **BET** | 67.5% | 薄いバリュー（旧「UP → CHECK」は誤り: gain=11.99 BB/100）|
+| ③ ★ | **V薄** | **underpair × dry** | **BET** | 62.9% | 薄いバリュー |
+| ④ ★ | **B** | **no_made_hand × dry** | **BET** | 53.7% | ショーダウン価値ゼロ → ブラフ（gain=6.89 BB/100）|
+| ✗ | — | ace_high × dry | **CHECK（SD守）** | 20.2% | ショーダウン価値あり → 守る |
+| ✗ | — | low_pair × dry | **CHECK（SD守）** | 18.0% | ショーダウン価値あり → 守る |
+
+### 3BP リバー OOP — エア全般 CHECK（逆転）
+
+```
+TP+ (top_pair/overpair) × dry?          → BET（89%）
+third_pair または second_pair?          → BET ★（75-85%）
+underpair × dry?                        → BET ★（65.9%）
+no_made_hand × dry?                     → BET（50.7%、ほぼ境界）
+→ CHECK ★（king_high=0%、ace_high=10%、low_pair=17%、two_pair=45.6%、trips=46.7% → CHECK）
+```
+
+| ルール | 動機 | 条件 | アクション | GTO% | 理由 |
+|---|---|---|---|---|---|
+| ① | **V** | **TP+ × dry**（top_pair/overpair） | **BET** | 74-89% | OOP でも TP+ はバリューライン |
+| ② ★ | **B/V薄** | **third_pair × dry** | **BET** | 75.2% | thin value + ブラフとして機能 |
+| ③ ★ | **V薄** | **second_pair × dry** | **BET** | 85.2% | 最も明確な薄いバリュー |
+| ④ ★ | **V薄** | **underpair × dry** | **BET** | 65.9% | 薄いバリュー |
+| ⑤ | **B** | **no_made_hand × dry** | **BET** | 50.7% | ショーダウン価値ゼロ。GTO はほぼ 50/50 だが pure air はブラフが基本方針 |
+| ✗ ★★★ | — | king_high × dry | **CHECK（SD守）** | 0.0% | 完全に CHECK — ショーダウン価値あり |
+| ✗ ★★★ | — | ace_high × dry | **CHECK（SD守）** | 10.3% | ショーダウン価値あり（gain=22.71 BB/100）|
+| ✗ ★★★ | — | low_pair × dry | **CHECK（SD守）** | 17.3% | ショーダウン価値あり（gain=65.49 BB/100 — 最大）|
+| ✗ ★ | — | two_pair × dry | **CHECK（スローレイ）** | 45.6% | OOP × dry × 3BP では two_pair も CHECK（gain=3.04）|
+| ✗ | — | trips × dry | **CHECK（スローレイ）** | 46.7% | 境界（46.7%）|
+
+> **3BP OOP dry リバー核心**: 旧「エア×dry → 全 BET」は完全に誤り。
+> `king_high=0%`、`low_pair=17.3%` → CHECK ★★★（ショーダウン価値を守る）。
+> `second_pair/underpair` → BET（旧「UP → CHECK」も誤り）。
+> `no_made_hand` はほぼ 50/50（50.7%）— 迷ったら BET でよいが GTO 的には誤差範囲。
+
+### 4BP リバー OOP — lower_pair が逆転 BET
+
+```
+top_pair または two_pair または straight?     → BET（55-88%）
+third_pair × dry?                            → BET ★★★（76.4%、gain=37.71 BB/100）
+low_pair × dry?                              → BET ★★★（57.9%、gain=24.47 BB/100）
+second_pair × dry?                           → BET（73.0%）
+→ CHECK（overpair=12.5% ★ / trips=43.4% / fullhouse=43.1% / king_high=4% → CHECK）
+```
+
+| ルール | 動機 | 条件 | アクション | GTO% | 理由 |
+|---|---|---|---|---|---|
+| ① | **V** | top_pair / two_pair / straight | **BET** | 55–88% | バリューライン |
+| ② ★ | **V/B** | set / second_pair / underpair | **BET** | 52–73% | SPR≈1 でのバリュー/ブラフ |
+| ③ ★★★ | **B** | **third_pair × dry** | **BET** | 76.4% | ショーダウン価値低 → ブラフが最善（gain=37.71 BB/100）|
+| ④ ★★★ | **B** | **low_pair × dry** | **BET** | 57.9% | ショーダウン価値低 → ブラフ（gain=24.47 BB/100）|
+| ✗ ★ | — | **overpair × dry** | **CHECK（スローレイ/SD守）** | 12.5% | SPR≈1 で相手レンジ(AA/AK)に対して守る（gain=2.66 BB/100）|
+| ✗ ★ | — | **trips × dry** | **CHECK（スローレイ）** | 43.4% | trips が CHECK（逆直感）|
+| ✗ | — | **king_high / no_made_hand** | **CHECK** | 4–34% | エアはほぼ CHECK |
+
+> **4BP OOP dry リバー核心**: "lower_pair（low_pair/third_pair）が BET、overpair/trips が CHECK"。
+> 旧「エア=CHECK、エア以外=BET」は誤り。low_pair(57.9%)がBET、overpair(12.5%)がCHECK。
+> 理由: 4BP OOP でoverpair はSPR≈1 でオールインを押し付けられると負ける（相手=AA/AK+）。
+> low_pair はショーダウン価値が低くブラフが最善。
+
+## 22.10 BET の3動機 × ポット種別 まとめ
+
+### V バリュー BET — 弱い手のコールをもらう
+
+| ストリート | SRP | 3BP | 4BP |
 |---|---|---|---|
-| ① | TP+ | **BET** | SRP OOP リバー TP+ 80% BET — 最も明確なバリュー |
-| ② | 2P+ | **BET** | 2P+ 全ボードで BET（旧「dry×K/A → CHECK」は誤り、60% BET） |
-| ③ | UP × K/A-high paired | **BET** | K/A-board ペアで UP がブラフとして機能 |
-| ④ | エア × paired × ≤Q-high | **BET** | Q 以下のペアボードでエアがブラフ。K/A ペアは CHECK |
-| ⑤ | エア × dry × ≤10-high | **BET** | J 以下の低 dry ボードでエアがブラフとして機能 |
-| ⑥ | エア × dry × J-high 以上 | **CHECK** | J/Q/K/A dry ではエア CHECK が多数 |
-| ⑦ | UP × low paired / エア × wet | **CHECK** | showdown value を守る |
+| **ターン IP** | 2P+、TP+ + draw | 2P+、TP+×dry、UP×paired×10+ | TP+/2P × dry |
+| **ターン OOP** | 2P+×wet/dry | TP+（trips含む）×dry | top_pair/trips × dry |
+| **リバー IP** | 2P+/TP+、second_pair、underpair（薄いV） | 2P+/TP+、second_pair/underpair/third_pair（薄いV） | 2P+/TP+ → ALLIN、second_pair（薄いV） |
+| **リバー OOP** | 2P+/TP+、second_pair/underpair（薄いV） | TP+、second_pair/underpair/third_pair（薄いV） | top_pair/two_pair/set/second_pair/underpair |
 
-> **改訂**: 旧版「TP+/2P+ → BET、それ以外 CHECK」→ 新版ではランク別のエア/UP 例外あり。
-> 2P+×dry は 60% BET で CHECK は誤り（旧 K/A-board → CHECK を削除）。
+> **「薄いバリュー（V薄）」とは**: second_pair/underpair が ace/king_high に勝てるのでコールをもらえる。
+> BET しても損しない相手（弱いエア）がいる = バリュー BET が成立。
 
-### 3BP リバー OOP
+### S セミブラフ — draw があるのでフォールドさせるか当たれば勝つ
 
-```
-エア × dry?  → BET（74% BET — K/A-high も例外なし）
-エア × paired × no-draw × ≤11-high? → BET（Q/K/A ペアは CHECK）
-エア × wet/paired(high)? → CHECK
-UP × dry × A-only? → BET（K 以下は CHECK）
-→ BET（2P+ / TP+ / UP はすべて BET）
-```
-
-| ルール | 条件 | アクション | 理由 |
+| ストリート | SRP | 3BP | 4BP |
 |---|---|---|---|
-| ① | 2P+ / TP+ / UP | **BET** | 3BP OOP リバー: UP 65% / TP+ 73% / 2P+ 57% — エア以外が BET |
-| ② | UP × dry × A-only | **BET** | A-board dry でのみ UP がブラフとして機能（K-board は CHECK） |
-| ③ | エア × dry | **BET** | 74% BET — K/A-high でも例外なく BET（旧版 K/A → CHECK は誤り） |
-| ④ | エア × paired × ≤J-high | **BET** | J 以下のペアボードで delayed bluff が機能 |
-| ⑤ | エア × wet/paired×Q+ | **CHECK** | 高 wet/高ペアボードではエアのブラフ効率が落ちる |
+| **ターン IP** | エア + gutshot以上（76-100%） | no_made_hand × dry × draw（55-84%）| no_made_hand/third_pair × dry gutshot |
+| **ターン OOP** | エア × wet + draw | no_made_hand × draw（59-84%）| second/third_pair × gutshot（88-92%）|
+| **リバー** | — | — | — |
 
-> UP が BET する理由: 3BP SPR≈3 ではスタックが浅く、UP もリバーで適切なバリューを持つ。
-> エア×dry は常に BET: K/A ボードでも 74% BET — dry ボードでの delayed bluff が有効。
+> リバーにドロー待ちは存在しない → **リバーにセミブラフはない**。
+> リバーで BET する弱い手は V薄（ペアが薄いバリュー）か B（純ブラフ）のどちらか。
 
-### 4BP リバー OOP — UP が逆転する
+### B 純ブラフ — ショーダウン価値ゼロ → フォールドさせるしかない
 
+| ストリート | SRP | 3BP | 4BP IP | 4BP OOP |
+|---|---|---|---|---|
+| **ターン IP** | — | — | third_pair/no_made_hand × dry | — |
+| **ターン OOP** | — | — | — | third_pair+gutshot（88%）|
+| **リバー IP** | no_made_hand（62%） | no_made_hand（61%） | no_made_hand（58%）| — |
+| **リバー OOP** | no_made_hand（54%） | — | — | third_pair(76%)/low_pair(58%) |
+
+> **ブラフの必要条件**: ショーダウン価値が「ほぼゼロ」= CHECK しても 0% に近い勝率。
+> この条件を満たす: no_made_hand（ペアなし）、4BP OOP の low_pair/third_pair（相手レンジに負ける）。
+
+### — CHECK — ショーダウン価値を守るか、スローレイ
+
+| CHECK の理由 | 代表ハンド | 代表場面 |
+|---|---|---|
+| **ショーダウン守**: BET すると弱い手にコールされ損 | king_high、ace_high、low_pair（SRP/3BP） | 3BP リバー dry — low_pair(10%) CHECK ★★★ |
+| **スローレイ**: 強すぎて BET すると降りられる | set/flush（3BP フロップ）、trips（4BP OOP） | 4BP OOP: trips(43%) CHECK |
+| **中途半端**: バリューにもブラフにも機能しない | UP × dry（SRP ターン）、king/ace_high（4BP ターン dry） | SRP ターン UP: draw あっても CHECK |
+
+**4BP ターン IP dry — 逆転パターン（重要）**:
 ```
-エア? → CHECK
-→ BET（UP / 2P+ / TP+ はすべて BET。UP が最強 BET カテゴリ）
-```
-
-| ルール | 条件 | アクション | 理由 |
-|---|---|---|---|
-| ① | UP | **BET** | 4BP OOP リバー UP 70% BET — UP が最強！SPR≈1 でプレッシャー BET として最有効 |
-| ② | 2P+ / TP+ | **BET** | 2P+ 57% / TP+ 53% — バリューライン |
-| ③ | エア | **CHECK** | エア 20% BET — ほぼ全て CHECK |
-
-> **4BP OOP リバーの逆転**: SPR≈1 まで浅くなると UP が最強 BET 頻度を持つ。
-> これは 4BP フロップ（UP→BET/2P+→CHECK）と同じ SPR 逆転ロジックの継続。
-
-## 14.10 ポット種別 × ストリート 決定ロジック まとめ
-
-### IP アタックまとめ
-
-| | **フロップ IP** | **ターン IP** | **リバー IP** |
-|---|---|---|---|
-| **SRP** | 2P+ / TP+×dry-paired / UP×paired / UP×dry+draw / エア×dry-wet+strong / エア×paired+draw → BET | 2P+ / TP++draw / UP×paired / エア+draw → BET（UP は CHECK、TP+×dry no_draw → CHECK） | 2P+ / TP+×dry-paired / UP×paired / エア（全 board） → BET |
-| **3BP** | TP+ 以上 / エア×paired → BET | 2P+ / TP+×dry / TP++gutshot / UP×paired / エア×dry+draw / エア×wet+gutshot → BET | TP+ 以上 / エア×wet-dry → BET |
-| **4BP** | UP→BET / 2P+→CHECK（逆転） | 2P+ / TP+ / UP / エア×dry → BET | TP+ 以上 → ALLIN |
-
-### OOP アタックまとめ
-
-| | **フロップ OOP** | **ターン OOP** | **リバー OOP** |
-|---|---|---|---|
-| **SRP** | 常に CHECK | 2P+×wet/dry → BET | TP+ / 2P+ → BET |
-| **3BP** | 常に CHECK | TP+ / 2P+×wet / エア×dry+draw / エア×wet+gutshot → BET | UP / TP+ / 2P+ / エア×dry → BET |
-| **4BP** | 常に CHECK | TP+ → BET | UP / TP+ / 2P+ → BET（UP が最強） |
-
-**4BP の流れを追う（2P+ を例に）**:
-
-```
-フロップ: 2P+ → CHECK（トラップ。BET してもコールは強い手のみ）
-ターン  : 2P+ → BET（SPR 低下でオールイン圧力が有効に）
-リバー  : 2P+ → ALLIN（SPR≈1、チェックは価値を捨てる）
+薄バリュー:    second_pair → BET ★★（73.9%）← 追記
+ブラフ枠:     third_pair → BET ★（64%）、no_made_hand → BET ★（57%、draw なし/gutshot のみ）
+ショーダウン守: king_high/ace_high → CHECK ★（24%）
+注意:         no_made_hand × FD/OESD → CHECK（強ドローでも 4BP では CHECK）
+直感と逆！ 「高いカードほど CHECK、low_pair/no_made は BET、second_pair も BET」
 ```
 
-## 14.11 SPR とロジックの関係
+**4BP OOP リバー dry — 逆転パターン（重要）**:
+```
+ブラフ枠:    third_pair → BET ★★★（76%）、low_pair → BET ★★★（58%）
+スローレイ:  overpair → CHECK ★（12.5%）、trips → CHECK ★（43%）
+直感と逆！ 「弱いペアが BET、overpair が CHECK」= SPR≈1 の圧力
+```
+
+## 22.11 SPR とロジックの関係
 
 SPR（スタック/ポット比）がアタックロジックを支配する原理:
 
@@ -5380,26 +5640,34 @@ SPR（スタック/ポット比）がアタックロジックを支配する原�
 | ≈1（4BP リバー） | 最浅 | 強い手は全額（ALLIN）。弱い手は CHECK |
 
 **原則**: SPR が低いほど、ベットが相手に「フォールドかオールイン」の二択を迫る。
-この圧力が有効なハンドは SPR によって変わる。
+この圧力が有効なハンドは SPR によって変わります。
 
-## この章で覚える項目 (16 items)
+## この章で覚える項目 (17 items)
 
-1. **SRP フロップ IP**: `2P+` / `TP+×paired` / `TP+×dry×Q/K/A-high or draw` / `UP×paired（A除く）` / `エア×dry-wet+strong×K/A-high` / `エア×paired+draw` → BET
-2. **SRP フロップ OOP**: 原則 CHECK。例外: `TP+×dry×A-only` / `2P+×wet/paired×low` / `2P+×dry×A-only` → BET
-3. **3BP フロップ IP**: `TP+（wet×no-draw×high 除く）` / `エア×paired×≤6-high` / `エア×dry×≤9×no-draw` → BET
-4. **4BP フロップ IP**: `UP` → BET、`2P+` → CHECK（強弱逆転）。`TP+×dry×9+` → BET、`エア×dry×non-A` → BET
-5. **SRP ターン IP**: `2P+` / `TP++draw` / `エア+gutshot以上` → BET、`TP+×dry×no draw → CHECK`（反直感）、`UP` は CHECK
-6. **3BP ターン IP**: `2P+` / `TP+×dry` / `TP++gutshot` / `UP×paired×10+` / `エア×dry×≤8×no-draw` / `エア×dry+draw` / `エア×wet+gutshot` / `エア×paired（rank 別）` → BET
-7. **4BP ターン IP**: `2P+` / `TP+` / `UP（wet×no-draw 除く）` / `エア×dry` / `エア×wet` → BET（細部はランク閾値あり）
-8. **OOP ターン SRP**: `2P+×wet/dry` → BET、`2P+×paired×≤10` → BET、`エア+draw` → BET
-9. **OOP ターン 3BP**: `TP+（高ペア除く）` / `2P+×wet` / `2P+×paired×7+` / `エア×strong` → BET
-10. **OOP ターン 4BP**: `TP+（制限付き）` / `2P+×wet` / `2P+×paired×10+` / `エア×dry×gutshot×≤9` → BET
-11. **SRP リバー IP**: `2P+` / `TP+×dry-paired` / `UP×paired×≤J` / `エア×dry-wet` / `エア×paired×≤J` → BET
-12. **3BP リバー IP**: `TP+ 以上` / `エア×wet-dry（常に BET）` / `エア×paired×≤J` → BET（`UP` → CHECK）
-13. **4BP リバー IP**: `TP+ 以上` → ALLIN、`UP×paired×K/A+` → ALLIN、`エア×dry×non-A` → BET
-14. **SRP OOP リバー**: `TP+ / 2P+` → BET、`UP×K/A-paired` → BET、`エア×paired×≤Q` → BET、`エア×dry×≤10` → BET
-15. **3BP OOP リバー**: `UP / TP+ / 2P+` → BET、`エア×dry（常に BET、K/A も例外なし）` / `エア×paired×≤J` → BET
-16. **4BP OOP リバー**: `エア以外 BET`（UP が最強 BET カテゴリ — SPR 逆転）
+**【最優先】全ストリート統一 8 ルール**
+0. **8 ルール（コンパクト版）**: 底ハンド=`no_made/low/3rd`と定義。デフォルト=CHECK。判定順: E1=`trips/overpair×4BP OOP→CHECK`→R1=`TP+→BET`→R2=`2nd/UP×(4BP/river)→BET`→T底=`底ハンド×4BP IP turn dry→BET★`→T3=`2nd/UP×SRP IP turn×draw→BET`→R3=`low/3rd×4BP OOP river→BET★`→E2=`no_made×4BP OOP river→CHECK`→R4=`no_made×river→BET★`。精度 LS=91%
+
+**フロップ（V/S/B 分類）**
+1. **SRP フロップ IP**: V=`2P+/TP+×dry-paired/UP×paired`、S=`UP×dry×gutshot×K/A/エア×strong draw×Q+`、B=`エア×low dry（低ボードでブラフ機能）`
+2. **SRP フロップ OOP**: 原則 CHECK。例外 V=`TP+×dry×A-only` / `2P+×wet/paired×low`
+3. **3BP フロップ IP**: V=`TP+`、B=`エア×paired≤6/エア×dry≤9`（低ボードブラフ）。スローレイ=`セット/フラッシュ→CHECK ★`
+4. **4BP フロップ**: V=`TP+→BET 20%pot（82-100%）/Ultra-dry→AI`。スローレイなし（SPR低すぎ）
+
+**ターン（V バリュー / S セミブラフ）**
+5. **SRP ターン IP**: V=`2P+`、V+S=`TP++draw`、S=`エア+gutshot以上`。スローレイ=`TP+×dry×no draw → CHECK ★`、SD守=`UP → CHECK`
+6. **3BP ターン IP**: V=`2P+/TP+×dry/UP×paired×10+`、S=`no_made_hand×dry×draw ★`。SD守=`ace_high/king_high/low_pair → 全 CHECK ★`
+7. **4BP ターン IP dry**: V薄=`second_pair→BET ★★（73.9%）`、B=`third_pair/no_made_hand→BET ★`、V=`TP+/2P`。SD守=`king_high/ace_high→CHECK ★`（逆転！）。FD/OESD×no_made→CHECK ★（⑤D）
+8. **4BP ターン IP paired**: B=`third_pair→BET ★（90%）`、B=`ace_high→BET ★（59%）`
+9. **SRP OOP ターン**: V=`2P+×wet/dry`、S=`エア+draw`
+10. **3BP OOP ターン**: V=`TP+(trips含む)×dry`、S=`no_made_hand×draw ★`。SD守=`エア全（ace/king/low）→ CHECK ★`
+11. **4BP OOP ターン dry**: V=`top_pair/trips`、S=`second/third_pair×gutshot ★（88-92%）`。スローレイ=`overpair/two_pair → CHECK ★`（逆転！）
+
+**リバー（V薄 / B 純ブラフ / CHECK）**
+12. **SRP リバー IP**: V=`2P+/TP+`、V薄=`second_pair/underpair`、B=`no_made_hand`。SD守=`king/ace_high/low_pair/third_pair → CHECK ★`
+13. **3BP リバー IP**: V=`TP+`、V薄=`second_pair(79.5%)/underpair/third_pair(69%)`、B=`no_made_hand(61%)`。SD守=`king_high(0.4%)/ace_high(1.9%)/low_pair(10%) → CHECK ★★★`（gain=80BB/100）
+14. **4BP リバー IP**: V=`TP+/2P+ → ALLIN`、B=`no_made_hand(58%)`、V薄=`second_pair(54%)`
+15. **SRP OOP リバー**: V=`TP+/2P+`、V薄=`second_pair/underpair`、B=`no_made_hand`。SD守=`ace_high/low_pair → CHECK`
+16. **3BP OOP リバー**: V薄=`second_pair(85%)/underpair(66%)/third_pair(75%)`、B=`no_made_hand×dry(50.7%)`。SD守=`king_high(0%)/low_pair(17%)/two_pair(45.6%) → CHECK ★★★`（gain=65BB/100）。**4BP OOP**: B=`third_pair(76%)/low_pair(58%) → BET ★★★`（逆転！）、スローレイ=`overpair(12.5%)/trips(43%) → CHECK ★`
 """
 
 
@@ -5453,35 +5721,36 @@ def main():
     # 第 3 部: 4 軸の背景 + 旧理論橋渡し (新 ch13)
     write('13-classic-bridge.md',      gen_ch13_bridge())  # 新章、 内蔵 Cash/MTT note
 
-    # 第 4 部: アタックルール（攻撃→防御 プレイ順）
-    write('13b-attack-rules.md',       gen_ch_attack_rules())  # 攻撃を防御より前に
+    # 第 4 部: ポット種別 + コンテキスト別 (ch14-23)
+    write('14-basic-attack.md',        gen_ch_basic_attack())   # NEW: アタック入門 (2 大原則)
+    write('23-attack-rules.md',       gen_ch_attack_rules())   # 攻撃 8 ルール (第 4 部末)
 
     # 第 5 部: ポット種別 (+1 シフト)
-    write('14-srp.md',                 append_cash_mtt_note('14', gen_ch13()))  # 旧 ch13 = SRP
-    write('15-3bp.md',                 append_cash_mtt_note('15', gen_ch14()))  # 旧 ch14 = 3BP
-    write('16-4bp.md',                 append_cash_mtt_note('16', gen_ch15()))  # 旧 ch15 = 4BP
-    write('16b-turn-lookup.md',        append_cash_mtt_note('16b', gen_ch_turn_lookup()))  # NEW v6
-    write('16c-river-split.md',        append_cash_mtt_note('16c', gen_ch_river_split()))  # NEW v6
-    write('17-vs-cr.md',               append_cash_mtt_note('17', gen_ch16()))  # 旧 ch16 = vs CR
-    write('17b-vs-donk.md',            gen_ch_vs_donk())                         # vs Donk 専用章
+    write('15-srp.md', append_cash_mtt_note('15', gen_ch13()))  # 旧 ch13 = SRP
+    write('16-3bp.md', append_cash_mtt_note('16', gen_ch14()))  # 旧 ch14 = 3BP
+    write('17-4bp.md', append_cash_mtt_note('17', gen_ch15()))  # 旧 ch15 = 4BP
+    write('18-turn-lookup.md',        append_cash_mtt_note('18', gen_ch_turn_lookup()))  # NEW v6
+    write('19-river-split.md',        append_cash_mtt_note('19', gen_ch_river_split()))  # NEW v6
+    write('21-vs-cr.md', append_cash_mtt_note('21', gen_ch16()))  # 旧 ch16 = vs CR
+    write('22-vs-donk.md',            gen_ch_vs_donk())                         # vs Donk 専用章
 
     # 第 5 部: スタック深度 + Cash/MTT 差 (+1 シフト)
-    write('18-short-stack.md',         append_cash_mtt_note('18', gen_ch17()))  # 旧 ch17 = short stack
-    write('19-deep-stack.md',          append_cash_mtt_note('19', gen_ch18()))  # 旧 ch18 = deep stack
-    write('20-cash-vs-mtt.md',         gen_ch19_cash_vs_mtt())                  # 旧 ch19 (新 ch20)、 note 内蔵
-    write('20b-polarization.md',       gen_ch_polarization())                   # NEW v6 polarization 新章
+    write('24-short-stack.md', append_cash_mtt_note('24', gen_ch17()))  # 旧 ch17 = short stack
+    write('25-deep-stack.md', append_cash_mtt_note('25', gen_ch18()))  # 旧 ch18 = deep stack
+    write('26-cash-vs-mtt.md',         gen_ch19_cash_vs_mtt())                  # 旧 ch19 (新 ch20)、 note 内蔵
+    write('20-polarization.md',       gen_ch_polarization())                   # NEW v6 polarization 新章
 
     # 第 6 部: ICM / バブル / MW / テーブルサイズ (+1 シフト)
-    write('21-icm.md',                 append_cash_mtt_note('21', gen_ch19()))  # 旧 gen_ch19 = ICM
-    write('22-bubble.md',              append_cash_mtt_note('22', gen_ch20()))  # 旧 gen_ch20 = バブル
-    write('23-multiway.md',            append_cash_mtt_note('23', gen_ch21()))  # 旧 gen_ch21 = MW
-    write('24-table-size.md',          gen_ch23_table_size())                   # 旧 ch23 (新 ch24)、 note 内蔵
+    write('27-icm.md', append_cash_mtt_note('27', gen_ch19()))  # 旧 gen_ch19 = ICM
+    write('28-bubble.md', append_cash_mtt_note('28', gen_ch20()))  # 旧 gen_ch20 = バブル
+    write('29-multiway.md', append_cash_mtt_note('29', gen_ch21()))  # 旧 gen_ch21 = MW
+    write('30-table-size.md',          gen_ch23_table_size())                   # 旧 ch23 (新 ch24)、 note 内蔵
 
     # 第 7 部: 実戦 (+1 シフト)
-    write('25-boundary-summary.md',    append_cash_mtt_note('25', gen_ch22()))  # 旧 gen_ch22 = 境界総覧
-    write('26-drills.md',              append_cash_mtt_note('26', gen_ch23()))  # 旧 gen_ch23 = ドリル
+    write('31-boundary-summary.md', append_cash_mtt_note('31', gen_ch22()))  # 旧 gen_ch22 = 境界総覧
+    write('32-drills.md', append_cash_mtt_note('32', gen_ch23()))  # 旧 gen_ch23 = ドリル
 
-    write('27-cheatsheet.md',          append_cash_mtt_note('27', gen_ch24()))  # 旧 gen_ch24 = チートシート
+    write('33-cheatsheet.md', append_cash_mtt_note('33', gen_ch24()))  # 旧 gen_ch24 = チートシート
 
     # 付録
     write('appendix-A.md',             gen_appendix_a())

@@ -109,6 +109,6 @@ BTN range advantage 強、wide cbet。
 
 ## 次のステップ
 
-1. drill cards の Hand Strength tier × board family 振る舞いも同様に実測導出
+1. drill cards の Hand Strength カテゴリ × board family 振る舞いも同様に実測導出
 2. SPR 境界 (1/3/7) の実測検証 (現状: 計算ベース、行動の不連続性は未確認)
 3. Bet Sizing 4 段階 → 実 GTO 2 段階 (small ~30% / big ~90%) との整合

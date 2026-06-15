@@ -1,6 +1,6 @@
 # 境界 spec — data 駆動の境界条件
 
-フィルタ: pot=*, street=*, depth=*, sub=*, tier=*
+フィルタ: pot=*, street=*, depth=*, sub=*, カテゴリ=*
 閾値: PURE ≥80% / STRONG 60-80% / MIXED 40-60% / BALANCED <40%
 最小 n: 10
 
@@ -17,7 +17,7 @@
 
 dominant action 頻度 ≥80% の cell。読者は条件確認 → 即アクション。
 
-| pot | street | depth | sub-family | tier | action | freq | n |
+| pot | street | depth | sub-family | カテゴリ | action | freq | n |
 |---|---|---|---|---|---|---:|---:|
 | 3BP | flop | MTT100 | Khigh_spread | ミドルペア | **call** | 96% | 294 |
 | 3BP | flop | Cash100 | Khigh_spread | ミドルペア | **call** | 96% | 294 |
@@ -352,7 +352,7 @@ dominant action 頻度 ≥80% の cell。読者は条件確認 → 即アクシ�
 
 dominant 60-80%。基本そうするが、たまに別の action もあり。
 
-| pot | street | depth | sub-family | tier | action | freq | n |
+| pot | street | depth | sub-family | カテゴリ | action | freq | n |
 |---|---|---|---|---|---|---:|---:|
 | 4BP | river | Cash100 | mid_dry | エア | fold | 80% | 726 |
 | DEF | turn | Cash100 | mid_dry | エア | fold | 80% | 712 |
@@ -542,7 +542,7 @@ dominant 60-80%。基本そうするが、たまに別の action もあり。
 
 dominant 40-60%。2 アクションが拮抗。書籍では「状況による」と書く部分。
 
-| pot | street | depth | sub-family | tier | fold | call | raise | n |
+| pot | street | depth | sub-family | カテゴリ | fold | call | raise | n |
 |---|---|---|---|---|---:|---:|---:|---:|
 | 3BP | flop | MTT100 | Khigh_spread | ツーペア | 0% | 56% | 44% | 27 |
 | 3BP | flop | Cash100 | Khigh_spread | ツーペア | 0% | 45% | 55% | 27 |
@@ -655,15 +655,15 @@ dominant 40-60%。2 アクションが拮抗。書籍では「状況による」
 
 ## 🔴 BALANCED (完全に状況依存、追加調査必要)
 
-どの action も <40%。tier より細かい分類 (kicker, draw, equity etc) で
+どの action も <40%。カテゴリ より細かい分類 (kicker, draw, equity etc) で
 細分化しないと判断できない。MATCHA で 5 軸目以上の補正候補。
 
-| pot | street | depth | sub-family | tier | fold | call | raise | n |
+| pot | street | depth | sub-family | カテゴリ | fold | call | raise | n |
 |---|---|---|---|---|---:|---:|---:|---:|
 
 ## ⚪ data 欠落 cell
 
-今フィルタで観測されない (pot, street, depth, sub, tier) の組合せ。
+今フィルタで観測されない (pot, street, depth, sub, カテゴリ) の組合せ。
 新規 probe の対象候補。
 
 観測 cell: 619 / 期待 cell: 3168 → 欠落: 2549

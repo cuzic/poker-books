@@ -6,9 +6,9 @@ Chen Formula 規模の暗算可能性を達成。
 ## スコア計算
 
 ```
-Score = w_tier × tier + w_eq × eq + w_bs × bs + w_pot × pot
+Score = w_tier × カテゴリ + w_eq × eq + w_bs × bs + w_pot × pot
 
-tier:  ナッツ=5, ストロング=4, ツーペア=3, TP+=2, MP=1, エア=0
+カテゴリ:  ナッツ=5, ストロング=4, ツーペア=3, TP+=2, MP=1, エア=0
 eq:    best=3, good=2, weak=1, trash=0
 bs:    small_33=0, med_75p=1, med_100p=2, overbet=3, overbet_185=4, allin=5
 pot:   SRP=0, DEF=1, 3BP=1, 4BP=2
@@ -38,7 +38,7 @@ else: fold
 ## バランス選定の公式 (推奨)
 
 ```
-Score = 1 × tier + 3 × eq + (-1) × bs + (2) × pot
+Score = 1 × カテゴリ + 3 × eq + (-1) × bs + (2) × pot
 
 if Score >= 16: raise
 elif Score >= 3: call

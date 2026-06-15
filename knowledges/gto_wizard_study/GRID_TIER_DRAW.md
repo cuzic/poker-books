@@ -1,4 +1,4 @@
-# tier + draw 統合の 4 分類 × board grid
+# カテゴリ + draw 統合の 4 分類 × board grid
 
 ## 4 分類 (tier_draw)
 

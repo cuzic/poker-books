@@ -1,6 +1,6 @@
 # Bet Sizing 境界の実測 — 77 boards data 由来
 
-既存 probe data の action_solutions から sizing 別の頻度 / tier 配分を集計。
+既存 probe data の action_solutions から sizing 別の頻度 / カテゴリ 配分を集計。
 
 ## sub-family ごとの sizing 使用パターン
 
@@ -22,10 +22,10 @@
 | paired_low | 50.1% | 0.0% | 0.0% | 5 |
 | paired_mid | 42.0% | 0.0% | 0.0% | 6 |
 
-## sizing × tier の使用比率
-(同じ tier 内で、どの sizing が選ばれるか)
+## sizing × カテゴリ の使用比率
+(同じ カテゴリ 内で、どの sizing が選ばれるか)
 
-| tier | small (~33%) | medium (~66%) | large (~100%+) |
+| カテゴリ | small (~33%) | medium (~66%) | large (~100%+) |
 |---|---|---|---|
 | ナッツメイド | 0% | — | 0% |
 | ストロング | 6% | — | 8% |
@@ -38,7 +38,7 @@
 
 - **small (1.9bb ~33%)**: dry / static board の標準。range advantage で wide attack
 - **large (6.5bb ~100%+)**: wet / dynamic board の polar attack
-- **medium はほぼ存在しない** → MATCHA の **2-tier sizing で十分** (small/large 二択)
+- **medium はほぼ存在しない** → MATCHA の **2-カテゴリ sizing で十分** (small/large 二択)
 - tier 別: ナッツメイド と エア は large 寄り (polar)、TP+ / ミドルペア は small 寄り (merged)
 
 ## drill / 書籍への反映

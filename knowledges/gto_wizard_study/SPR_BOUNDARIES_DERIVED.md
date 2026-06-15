@@ -104,7 +104,7 @@ MTT depth 補正: SPR × (depth/100)。MTT25 → 25%、MTT50 → 50%、MTT200 �
 
 ## MATCHA SPR 4 段階との対応
 
-| MATCHA tier | SPR 範囲 | データ上の検証 |
+| MATCHA カテゴリ | SPR 範囲 | データ上の検証 |
 |-------------|---------|---------------|
 | オールイン | <1 | 4BP turn/river, 3BP river — fold/call 中心 (raise が allin か) |
 | ロー | 1-3 | 4BP flop, 3BP turn — set/2pair 強気、TP pot-control |

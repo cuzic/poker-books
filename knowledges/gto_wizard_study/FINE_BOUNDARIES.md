@@ -42,7 +42,7 @@
 | monotone | 3 | 29.2% | 15-38% | 12.4% |
 | connected_mid | 10 | 28.5% | 21-48% | 9.1% |
 
-## sub-family × hand_strength tier の cbet%
+## sub-family × hand_strength カテゴリ の cbet%
 
 | sub-family | ナッツメイド | ストロング | ツーペア | トップペア以上 | ミドルペア | エア |
 |---|---|---|---|---|---|---|
@@ -64,14 +64,14 @@
 
 ## 解釈: cell ごとの細かい cbet% パターン
 
-- stddev が大きい subfamily = board 依存性大、tier 内でばらつき
-- 「特定 tier だけ cbet が偏る」spots は MATCHA で個別に扱うべき
-- 同じ row 内で tier 間 cbet% 差が 30%+ の場合 = tier 区分が明確 ✓
-- 同じ col 内で sub-family 間 cbet% 差が 20%+ の場合 = board が tier の役割を変える
+- stddev が大きい subfamily = board 依存性大、カテゴリ 内でばらつき
+- 「特定 カテゴリ だけ cbet が偏る」spots は MATCHA で個別に扱うべき
+- 同じ row 内で カテゴリ 間 cbet% 差が 30%+ の場合 = カテゴリ 区分が明確 ✓
+- 同じ col 内で sub-family 間 cbet% 差が 20%+ の場合 = board が カテゴリ の役割を変える
 
-## 顕著な outlier (sub-family × tier で特異な行動)
+## 顕著な outlier (sub-family × カテゴリ で特異な行動)
 
-| sub-family | tier | local cbet | tier baseline | 差 | n |
+| sub-family | カテゴリ | local cbet | カテゴリ baseline | 差 | n |
 |---|---|---:|---:|---:|---:|
 | paired_low | ツーペア | 0% | 61% | -61% | 5 |
 | paired_high | ツーペア | 0% | 61% | -61% | 5 |

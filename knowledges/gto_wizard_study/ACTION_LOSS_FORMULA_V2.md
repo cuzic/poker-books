@@ -28,7 +28,7 @@ v1 (avg loss 0.48 BB) に huge loss の主要 spot に対する補正項を追�
 ## 公式 (整数版)
 
 ```
-Score = 2 × tier_idx + GridBase[tier][board]
+Score = 2 × tier_idx + GridBase[カテゴリ][board]
       + 2 × DV + 2 × overcards
       + 2 × pot - 0 × bs + (-8)
       + 補正項 (該当する spot のみ):
@@ -48,7 +48,7 @@ else: fold
 
 ## Grid 表 (整数)
 
-| tier | dry | paired | connected | monotone |
+| カテゴリ | dry | paired | connected | monotone |
 |------|---:|---:|---:|---:|
 | エア | 3 | 8 | 2 | 1 |
 | ミドルペア | 4 | 4 | 0 | 6 |

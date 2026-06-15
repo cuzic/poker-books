@@ -39,9 +39,9 @@ SPR / Equity Bucket) の境界を実 GTO data で裏付けた日。
 
 ### 2. Hand Strength
 
-6 tier × 42 boards 平均 cbet (BTN attacker):
+6 カテゴリ × 42 boards 平均 cbet (BTN attacker):
 
-| tier | avg cbet | 隣接差 | 境界明確性 |
+| カテゴリ | avg cbet | 隣接差 | 境界明確性 |
 |------|---:|---:|---|
 | ナッツメイド (FH/quads) | 9% | — | (slowplay base) |
 | ストロング (set/flush) | 29% | +20% | 🟢 明確 |
@@ -70,7 +70,7 @@ MATCHA の 4 段階 → 2 段階で 90% カバー、`オーバーベット` を 
 
 同 board (Ks7d2c) × SPR variation の cbet 頻度:
 
-| tier | SPR 1.3 (4BP) | SPR 3.4 (3BP) | SPR 8 (Cash50) | SPR 16 (Cash100) |
+| カテゴリ | SPR 1.3 (4BP) | SPR 3.4 (3BP) | SPR 8 (Cash50) | SPR 16 (Cash100) |
 |------|---:|---:|---:|---:|
 | ストロング (set) | **4%** | 41% | 69% | **96%** |
 | ツーペア | 18% | 80% | 97% | 83% |
@@ -115,7 +115,7 @@ MATCHA 4 段階 (モンスター / 良ハンド / 弱ハンド / ブラフハン
 | 8 | 69% | value bet |
 | 16 | 96% | 強制 value bet (multi-street) |
 
-→ tier だけでなく SPR で行動激変。**MATCHA で SPR 軸の独立性が data 裏付け**。
+→ カテゴリ だけでなく SPR で行動激変。**MATCHA で SPR 軸の独立性が data 裏付け**。
 
 ### sub-family × Hand Strength (90 セル cross-tab)
 
@@ -125,7 +125,7 @@ MATCHA 4 段階 (モンスター / 良ハンド / 弱ハンド / ブラフハン
 - paired_high × TP+ = 21% (vulnerable)
 - mid_dry × ミドルペア = 18% (pot-control)
 
-→ tier 単独でなく、board × tier の cross-tab が必要。
+→ カテゴリ 単独でなく、board × カテゴリ の cross-tab が必要。
 
 ---
 

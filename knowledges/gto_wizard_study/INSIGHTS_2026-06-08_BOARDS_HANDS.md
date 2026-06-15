@@ -9,7 +9,7 @@ MATCHA Framework の 5 判定軸のうち、**Range Morphology (board 分類)** 
 
 ## 1. Board 分類: 現行 heuristic と実 GTO のズレ
 
-### MATCHA Framework の board 分類定義 (Range Morphology tier)
+### MATCHA Framework の board 分類定義 (Range Morphology カテゴリ)
 
 | 名称 | 想定する range 形状 | 想定 cbet 行動 |
 |------|-------------------|---------------|
@@ -81,11 +81,11 @@ def classify_board(board) -> str:
 
 ---
 
-## 2. Hand Strength 境界: tier 区分の正当性
+## 2. Hand Strength 境界: カテゴリ 区分の正当性
 
 ### MATCHA 6 階層の avg cbet (42 boards 平均)
 
-| tier | avg_bet% | min% | max% | n | 境界判定 |
+| カテゴリ | avg_bet% | min% | max% | n | 境界判定 |
 |------|---:|---:|---:|---:|---|
 | **ナッツメイド** (FH/quads/SF) | 9.3% | 0% | 96% | 126 | (低い) |
 | **ストロング** (set/trips/flush/straight) | 28.9% | 0% | 100% | 168 | |
@@ -94,9 +94,9 @@ def classify_board(board) -> str:
 | **ミドルペア** (2P/3P/UP/LP) | 24.0% | 0% | 100% | 168 | |
 | **エア** (no_made/high card) | 37.4% | 0% | 65% | 126 | |
 
-### tier 間の cbet% 差 (隣接 tier)
+### カテゴリ 間の cbet% 差 (隣接 カテゴリ)
 
-| 隣接 tier | A 平均 | B 平均 | 差 | 判定 |
+| 隣接 カテゴリ | A 平均 | B 平均 | 差 | 判定 |
 |-----------|---:|---:|---:|---|
 | ナッツメイド → ストロング | 9.3% | 28.9% | -19.6% | 🟢 明確 |
 | ストロング → ツーペア | 28.9% | 66.9% | -38.0% | 🟢 明確 |
@@ -109,7 +109,7 @@ def classify_board(board) -> str:
 
 ### 「ベル / 逆U字」パターン
 
-cbet 頻度を tier 順に並べると **山型** になる:
+cbet 頻度を カテゴリ 順に並べると **山型** になる:
 
 ```
        ツーペア
@@ -132,10 +132,10 @@ cbet 頻度を tier 順に並べると **山型** になる:
 - **ミドルペア**: 24% (pot-control)
 - **エア**: 37% (ブラフレンジ強制)
 
-### MATCHA tier の最重要発見
+### MATCHA カテゴリ の最重要発見
 
 1. **ツーペア = cbet 最高頻度** (67% > TP+ 52% > set 29%)
-   → ナッツ-1 段下の「守る価値が最も高い」tier
+   → ナッツ-1 段下の「守る価値が最も高い」カテゴリ
    → drill / 書籍で「ツーペアこそ最も打つべき」を独立カード化
 
 2. **set < two_pair < top_pair の "U字逆転"**
@@ -144,11 +144,11 @@ cbet 頻度を tier 順に並べると **山型** になる:
    → 完成度の高い nut hand ほど slowplay (range balance のため)
 
 3. **low_pair = 2.7%** (ほぼ check 一択)
-   → ミドルペア tier の中で最弱、独立扱い
+   → ミドルペア カテゴリ の中で最弱、独立扱い
 
 ---
 
-## 3. sub-family × tier の cross-tab (15 × 6 行動表)
+## 3. sub-family × カテゴリ の cross-tab (15 × 6 行動表)
 
 | sub-family | ナッツメイド | ストロング | ツーペア | TP+ | ミドルペア | エア |
 |---|---:|---:|---:|---:|---:|---:|
@@ -170,7 +170,7 @@ cbet 頻度を tier 順に並べると **山型** になる:
 
 ### 重要 outlier
 
-| sub-family | tier | local cbet | baseline | 差 | 解釈 |
+| sub-family | カテゴリ | local cbet | baseline | 差 | 解釈 |
 |---|---|---:|---:|---:|---|
 | **paired_** × ツーペア | 0% | 61% | -61% | paired board で 2pair = ヤバい (TP=quads vs you 2P) → check一択 |
 | paired_broadway × ナッツメイド | 75% | 17% | +58% | broadway paired で fullhouse は wide bet |
@@ -190,21 +190,21 @@ cbet 頻度を tier 順に並べると **山型** になる:
 | low_dry の分類 | MERGED | **POLAR** | empirical cbet 33% |
 | paired K/A の分類 | MERGED | **CONDENSED** | empirical cbet 41-43% |
 | paired low (XX-X<5) | POLAR override | **MERGED** | empirical cbet 50%+ |
-| Hand Strength 章 | tier 区分のみ | **tier × board** cross-tab 必須 | board で tier 振る舞い激変 |
+| Hand Strength 章 | カテゴリ 区分のみ | **カテゴリ × board** cross-tab 必須 | board で カテゴリ 振る舞い激変 |
 | ツーペアの位置づけ | 「強い hand」 | **「打つべき hand の peak」** | 67% > TP+ > set |
 
 ### 中期 (Vol2 Framework 章設計)
 
 - **Range Morphology 章**: 13 sub-family table を本文に掲載
 - **Hand Strength 章**: 「逆U字パターン」を視覚化 (山形グラフ)
-- **TEA グリッド章**: sub-family × tier の 15 × 6 = 90 セル table を付録
+- **TEA グリッド章**: sub-family × カテゴリ の 15 × 6 = 90 セル table を付録
 - **境界ハンド集**: paired-board × 2pair の "check 一択" 等を暗記リスト化
 
 ---
 
 ## 5. tier 別 board sensitivity
 
-| tier | 安定性 (stddev) | board 依存性 |
+| カテゴリ | 安定性 (stddev) | board 依存性 |
 |------|----------------:|------------|
 | エア | 5% | 低 (常に ~37% bluff) |
 | ナッツメイド | 20% | 中 (paired のみ active) |
@@ -213,9 +213,9 @@ cbet 頻度を tier 順に並べると **山型** になる:
 | ツーペア | 30% | 高 (paired で 0%) |
 | TP+ | 18% | 中 |
 
-- **ミドルペア / ストロング = board 依存性最大** → 同 tier 内でも分岐必要
-- **エア = board 不変** → ブラフ頻度は tier 規定
-- → MATCHA で "board × tier" cross-tab を主役にすべき (1 軸では不十分)
+- **ミドルペア / ストロング = board 依存性最大** → 同 カテゴリ 内でも分岐必要
+- **エア = board 不変** → ブラフ頻度は カテゴリ 規定
+- → MATCHA で "board × カテゴリ" cross-tab を主役にすべき (1 軸では不十分)
 
 ---
 
@@ -223,11 +223,11 @@ cbet 頻度を tier 順に並べると **山型** になる:
 
 ### 取れたもの
 - 77 boards 網羅 probe で 15 sub-family の細分化確定
-- 5 段の tier 境界 (cbet% 差 ≥15pp) 確認
-- 90 セル の sub-family × tier 行動表
+- 5 段の カテゴリ 境界 (cbet% 差 ≥15pp) 確認
+- 90 セル の sub-family × カテゴリ 行動表
 
 ### 未確認
-- 100% sizing (6.5bb) の per-tier 行動は probe 範囲外
+- 100% sizing (6.5bb) の per-カテゴリ 行動は probe 範囲外
 - Turn / River の boundary は別調査必要 (今回は flop のみ)
 - defense 側 (BB vs cbet) の board 別分類は別 probe 必要
 - equity bucket (best/good/weak/trash) の boundaries は per-combo 解析待ち
@@ -240,10 +240,10 @@ cbet 頻度を tier 順に並べると **山型** になる:
 |---------|------|
 | `knowledges/gto_wizard_study/BOARD_BOUNDARIES_EMPIRICAL.md` | 21 boards × heuristic 一致率 |
 | `knowledges/gto_wizard_study/CLEAN_BOUNDARIES.md` | 42 boards 集計 + 構造的パターン |
-| `knowledges/gto_wizard_study/FINE_BOUNDARIES.md` | 77 boards × 15 sub-family × 6 tier 行動表 |
-| `knowledges/gto_wizard_study/HAND_STRENGTH_BOUNDARIES.md` | 6 tier の cbet 差 + mv_cat 詳細 |
+| `knowledges/gto_wizard_study/FINE_BOUNDARIES.md` | 77 boards × 15 sub-family × 6 カテゴリ 行動表 |
+| `knowledges/gto_wizard_study/HAND_STRENGTH_BOUNDARIES.md` | 6 カテゴリ の cbet 差 + mv_cat 詳細 |
 | `scripts/three_class_model/derive_fine_boundaries.py` | sub-family 集計 script |
-| `scripts/three_class_model/derive_hand_strength_boundaries.py` | tier 境界 script |
+| `scripts/three_class_model/derive_hand_strength_boundaries.py` | カテゴリ 境界 script |
 | `scripts/gto_wizard_study/probe_exhaustive.py` | 35 board 追加 probe |
 | `scripts/gto_wizard_study/probe_boundary_gradient.py` | 21 board gradient probe |
 
@@ -262,8 +262,8 @@ cbet 頻度を tier 順に並べると **山型** になる:
 
 - **SPR 軸の境界**: 別文書 `INSIGHTS_2026-06-08.md` 参照
   - SPR=3 が GTO 戦略反転点
-  - 本 board × tier 分析は SPR 16 (Cash100 SRP) 想定
-  - SPR が変わると tier 行動激変 (set 4% → 96% etc) → 本表も SPR 別が必要
+  - 本 board × カテゴリ 分析は SPR 16 (Cash100 SRP) 想定
+  - SPR が変わると カテゴリ 行動激変 (set 4% → 96% etc) → 本表も SPR 別が必要
 
 - **公式 v9b / v15** の改善余地:
   - 本表の outlier (paired × 2pair = 0%) を encoding できているか確認必要

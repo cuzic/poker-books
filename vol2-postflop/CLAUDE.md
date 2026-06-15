@@ -4,8 +4,8 @@
 
 『迷わないポーカー』MATCHA シリーズ Vol2 (**MATCHA Framework 編**)。Cash 100bb と MTT chipEV (25/50/100/200bb) のポストフロップ判断を **MATCHA Framework** という単一フレームワークに統一した書籍。
 
-**MATCHA** (シリーズ共通) = **M**ath **A**lgorithm for **T**ier-**C**ategorized **H**old'em **A**ction
-— ティア分類されたホールデム判断のための数学アルゴリズム
+**MATCHA** (シリーズ共通) = **M**ath **A**lgorithm of **T**welve-**C**ell **H**old'em **A**ction
+— 12 マス グリッドによるホールデム判断のための数学アルゴリズム
 
 | 巻 | サブブランド | 役割 |
 |---|---|---|
@@ -26,14 +26,14 @@ ICM/PKO の postflop GTO data は GTO Wizard API tier 制限 (403) で取得で�
 | 判定軸 | カテゴリ | コード変数 |
 |---|---|---|
 | ① レンジ分布 | 2極化型 / 混在型 / 密集型 | `board_polar_tier` |
-| ② ハンドストレングス | ナッツメイド / ストロング / ツーペア / トップペア以上 / ミドルペア / エア | `hand_strength_tier` |
+| ② ハンドストレングス | ナッツメイド / ストロング / ツーペア / トップペア以上 / アンダーペア / エア | `hand_strength_tier` |
 | ③ ベットサイジング | スモールベット / ミディアムベット / オーバーベット / オールイン | `bet_size_tier` |
 | ④ SPR | オールインSPR / ローSPR / ミディアムSPR / ディープSPR | `spr_tier` |
 | ⑤ エクイティバケット | モンスターハンド / 良ハンド / 弱ハンド / ブラフハンド | `equity_aware_tier` |
 
 ### Layer 2: TEA グリッド (中央装置)
 
-**Tier × Edge = Action グリッド** = 5 軸の組合せから **形勢** (Edge) を導出。
+**カテゴリ × Edge = Action グリッド** = 5 軸の組合せから **形勢** (Edge) を導出。
 
 | 形勢 (Edge) | 英訳 | 意味 |
 |---|---|---|
@@ -59,7 +59,7 @@ ICM/PKO の postflop GTO data は GTO Wizard API tier 制限 (403) で取得で�
 
 ```
 vol2-postflop/
-├── chapters/               # 本文 (00-introduction〜20-cheatsheet.md + 付録 A〜C)
+├── chapters/               # 本文 (00-introduction〜32-cheatsheet.md + 付録 A〜C)
 ├── book.json               # 書誌メタデータ
 ├── toc.md                  # 目次・執筆ガイド (MATCHA 用語)
 ├── plan.md                 # 書籍企画書
@@ -91,19 +91,19 @@ memory `feedback_book_writing_workflow`: chapters/*.md を直接書き直して�
 
 MATCHA Framework の精度は `scripts/three_class_model/NEW_FORMULA_AUDIT.md` と `UDG_V2_RESULTS.md` の数値を引用 (293K rows の実測値)。
 
-## 章構成 (21 章 + 付録 3)
+## 章構成 (32 章 + 付録 3)
 
 | Part | 章 | 内容 |
 |------|----|------|
-| 序章 | ch00 | MATCHA Framework 全体像、暗算 philosophy |
-| 第1部: 判定軸 | ch01-05 | 5 つの判定軸の定義と読み方 |
-| 第2部: TEA グリッド | ch06 | 5 軸 → 形勢 (Edge) の導出 |
-| 第3部: モード | ch07-09 | バリュー / ショーダウン / ブラフキャッチモード |
-| 第4部: ポット種別 | ch10-12 | SRP / 3BP / 4BP modifier |
-| 第5部: 状況補正 | ch13-15 | チェックレイズ / ドンクベット / オープナー補正 |
-| 第6部: スタック深度 | ch16-17 | 短スタック (≤25bb) / 深スタック (200bb+) |
-| 第7部: 実戦 | ch18-20 | 境界ハンド / ドリル / チートシート |
-| 付録 | A-C | MATCHA 完全表 / audit 結果 / データ取得法 |
+| 序章 | ch00 | ポストフロップを 5 秒で解く、公式全体像 |
+| 第1部: MATCHA Score 公式 | ch01-05 | 公式全体像 / カテゴリ / board / DV / pot-bs-oc |
+| 第2部: Grid + 境界・例外 | ch06-09 | 12 cells grid / 境界ハンド集 / 境界ボード集 / 例外 5 ルール |
+| 第3部: 4 判定軸の背景 | ch10-13 | Range Morphology / Hand Strength / Bet Sizing + SPR / 旧来理論橋渡し |
+| 第4部: ポット種別 + コンテキスト | ch14-23 | アタック入門 / SRP / 3BP / 4BP / TURN / RIVER / polarization / vs CR / vs Donk / アタック 8 ルール |
+| 第5部: 深度 + Cash/MTT 差分 | ch24-26 | 短スタック / 深スタック / Cash vs MTT |
+| 第6部: トーナメント + テーブルサイズ | ch26-29 | ICM / バブル / マルチウェイ / テーブルサイズ |
+| 第7部: 実戦 | ch30-32 | 境界ハンド総覧 / ドリル / チートシート |
+| 付録 | A-C | MATCHA 完全表 / 旧来理論橋渡し早見 / MQS 品質保証 |
 
 ## 関連 memory
 

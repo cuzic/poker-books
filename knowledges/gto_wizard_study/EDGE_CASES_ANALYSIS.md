@@ -3,7 +3,7 @@
 MATCHA 公式の判定が直感に反する瞬間を data で確認。
 各 spot で specific hand のアクション分布を実測。
 
-## A. 過大評価リスク (強い tier だが equity 低い)
+## A. 過大評価リスク (強い カテゴリ だが equity 低い)
 
 ### A1_66_low_connected_pre_cbet
 
@@ -18,7 +18,7 @@ MATCHA 公式の判定が直感に反する瞬間を data で確認。
 | CHECK | 0bb | 87.9% |
 | RAISE | 6.5bb | 12.1% |
 
-**Hero tier 推定**: overpair
+**Hero カテゴリ 推定**: overpair
 
 **Tier `overpair` の行動分布:**
 
@@ -41,7 +41,7 @@ MATCHA 公式の判定が直感に反する瞬間を data で確認。
 | CALL | 1.9bb | 66.7% |
 | RAISE | 10.3bb | 3.5% |
 
-**Hero tier 推定**: 2nd pair
+**Hero カテゴリ 推定**: 2nd pair
 
 **Tier `second_pair` の行動分布:**
 
@@ -73,7 +73,7 @@ MATCHA 公式の判定が直感に反する瞬間を data で確認。
 | CALL | 1.9bb | 64.7% |
 | RAISE | 10.3bb | 7.7% |
 
-**Hero tier 推定**: 2nd pair
+**Hero カテゴリ 推定**: 2nd pair
 
 **Tier `second_pair` の行動分布:**
 
@@ -105,7 +105,7 @@ MATCHA 公式の判定が直感に反する瞬間を data で確認。
 | CALL | 1.9bb | 61.7% |
 | RAISE | 5bb | 11.0% |
 
-**Hero tier 推定**: overpair
+**Hero カテゴリ 推定**: overpair
 
 **Tier `overpair` の行動分布:**
 
@@ -129,7 +129,7 @@ MATCHA 公式の判定が直感に反する瞬間を data で確認。
 | CALL | 1.9bb | 64.7% |
 | RAISE | 10.3bb | 7.7% |
 
-**Hero tier 推定**: 2nd pair
+**Hero カテゴリ 推定**: 2nd pair
 
 **Tier `second_pair` の行動分布:**
 
@@ -147,7 +147,7 @@ MATCHA 公式の判定が直感に反する瞬間を data で確認。
 | FOLD | 0bb | 0.0% |
 | RAISE | 10.3bb | 35.4% |
 
-## B. 過小評価リスク (弱い tier だが equity 高い)
+## B. 過小評価リスク (弱い カテゴリ だが equity 高い)
 
 ### B6_65s_456_pre_cbet
 
@@ -162,7 +162,7 @@ MATCHA 公式の判定が直感に反する瞬間を data で確認。
 | CHECK | 0bb | 98.1% |
 | RAISE | 6.5bb | 1.9% |
 
-**Hero tier 推定**: ?
+**Hero カテゴリ 推定**: ?
 
 **Tier `no_made_hand` の行動分布:**
 
@@ -199,7 +199,7 @@ MATCHA 公式の判定が直感に反する瞬間を data で確認。
 | CALL | 1.9bb | 54.5% |
 | RAISE | 5bb | 15.9% |
 
-**Hero tier 推定**: ?
+**Hero カテゴリ 推定**: ?
 
 **Tier `no_made_hand` の行動分布:**
 
@@ -241,7 +241,7 @@ MATCHA 公式の判定が直感に反する瞬間を data で確認。
 | CALL | 1.9bb | 51.5% |
 | RAISE | 5bb | 16.3% |
 
-**Hero tier 推定**: 2nd pair
+**Hero カテゴリ 推定**: 2nd pair
 
 **Tier `second_pair` の行動分布:**
 
@@ -273,7 +273,7 @@ MATCHA 公式の判定が直感に反する瞬間を data で確認。
 | CALL | 1.9bb | 64.7% |
 | RAISE | 10.3bb | 6.4% |
 
-**Hero tier 推定**: trips/set
+**Hero カテゴリ 推定**: trips/set
 
 **Tier `trips` の行動分布:**
 
@@ -321,7 +321,7 @@ MATCHA 公式の判定が直感に反する瞬間を data で確認。
 | CALL | 1.9bb | 45.1% |
 | RAISE | 5bb | 22.6% |
 
-**Hero tier 推定**: ?
+**Hero カテゴリ 推定**: ?
 
 **Tier `no_made_hand` の行動分布:**
 

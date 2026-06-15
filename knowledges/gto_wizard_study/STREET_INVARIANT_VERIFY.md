@@ -1,6 +1,6 @@
 # 6-param 公式は "street 不問" で機能する — 検証
 
-MATCHA 公式 `Score = 1×tier + 3×eq + (-1)×bs + 2×pot` を
+MATCHA 公式 `Score = 1×カテゴリ + 3×eq + (-1)×bs + 2×pot` を
 street ごとに評価し、「同じ式・同じ閾値で flop/turn/river を判定可能」
 という主張を data で検証。
 

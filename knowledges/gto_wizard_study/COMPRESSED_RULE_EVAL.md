@@ -6,7 +6,7 @@ PURE 349 cell を圧縮した 75 マクロルールを階層適用、accuracy / 
 
 | level | 識別子 | ルール数 |
 |------|--------|----:|
-| Type 1 (最優先) | (pot, street, tier) → action | 24 |
+| Type 1 (最優先) | (pot, street, カテゴリ) → action | 24 |
 | Type 2 | (pot, street, sub_family) → action | 21 |
 | Type 3 | (pot, street) → action | 5 |
 | Default | call (defender MDF 想定) | 1 |

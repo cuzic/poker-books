@@ -5,8 +5,8 @@ eq_bucket accuracy を経由せず、最終 action の loss (期待 EV 損失) �
 ## 公式構造
 
 ```
-Step 1: eq_score = GridBase[tier][board] + w_dv × DV + w_oc × overcards
-Step 2: action_score = w_tier × tier + eq_score + w_pot × pot - w_bs × bs + intercept
+Step 1: eq_score = GridBase[カテゴリ][board] + w_dv × DV + w_oc × overcards
+Step 2: action_score = w_tier × カテゴリ + eq_score + w_pot × pot - w_bs × bs + intercept
 Step 3: action: >= T_raise raise / >= T_call call / else fold
 ```
 
@@ -17,12 +17,12 @@ Step 3: action: >= T_raise raise / >= T_call call / else fold
 | **Loss-optimized (連続)** | 68.77% | **0.3954 BB** | 1.50% |
 | Acc-optimized (連続) | **70.61%** | 0.4189 BB | 1.78% |
 | Loss-optimized (整数) | 66.49% | 0.4789 BB | 2.28% |
-| (参考) tier+eq 旧式 (eq 真値) | 71.0% | 0.34 BB | 1.22% |
+| (参考) カテゴリ+eq 旧式 (eq 真値) | 71.0% | 0.34 BB | 1.22% |
 | (参考) 既存公式 v9b/v15 | 59.5% | 1.86 BB | 9.65% |
 
 ## Optimal Grid (loss-minimized、連続値)
 
-| tier | dry | paired | connected | monotone |
+| カテゴリ | dry | paired | connected | monotone |
 |------|---:|---:|---:|---:|
 | エア | 1.55 | 8.19 | 0.18 | 1.23 |
 | ミドルペア | 4.10 | 10.00 | 1.96 | 5.29 |

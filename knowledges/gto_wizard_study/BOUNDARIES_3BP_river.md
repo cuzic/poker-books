@@ -1,6 +1,6 @@
 # 境界 spec (3BP, river) — data 駆動の境界条件
 
-フィルタ: pot=3BP, street=river, depth=*, sub=*, tier=*
+フィルタ: pot=3BP, street=river, depth=*, sub=*, カテゴリ=*
 閾値: PURE ≥80% / STRONG 60-80% / MIXED 40-60% / BALANCED <40%
 最小 n: 10
 
@@ -17,7 +17,7 @@
 
 dominant action 頻度 ≥80% の cell。読者は条件確認 → 即アクション。
 
-| pot | street | depth | sub-family | tier | action | freq | n |
+| pot | street | depth | sub-family | カテゴリ | action | freq | n |
 |---|---|---|---|---|---|---:|---:|
 | 3BP | river | Cash100 | Ahigh_spread | エア | **fold** | 95% | 2,016 |
 | 3BP | river | Cash100 | Ahigh_spread | ストロング | **call** | 100% | 206 |
@@ -82,7 +82,7 @@ dominant action 頻度 ≥80% の cell。読者は条件確認 → 即アクシ�
 
 ## ⚪ data 欠落 cell
 
-今フィルタで観測されない (pot, street, depth, sub, tier) の組合せ。
+今フィルタで観測されない (pot, street, depth, sub, カテゴリ) の組合せ。
 新規 probe の対象候補。
 
 観測 cell: 81 / 期待 cell: 132 → 欠落: 51

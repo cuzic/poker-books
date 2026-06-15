@@ -33,6 +33,35 @@ jobs:
       - name: Build all formats for all volumes
         run: bun run build:site
 
+      - name: Upload epub artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: epub-books
+          path: dist/**/*.epub
+          retention-days: 90
+
+      - name: Upload epub to Dropbox
+        env:
+          DROPBOX_APP_KEY:      ${{ secrets.DROPBOX_APP_KEY }}
+          DROPBOX_APP_SECRET:   ${{ secrets.DROPBOX_APP_SECRET }}
+          DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+        run: |
+          ACCESS_TOKEN=$(curl -fsSL -X POST https://api.dropbox.com/oauth2/token \
+            -d grant_type=refresh_token \
+            -d refresh_token="$DROPBOX_REFRESH_TOKEN" \
+            -d client_id="$DROPBOX_APP_KEY" \
+            -d client_secret="$DROPBOX_APP_SECRET" \
+            | python3 -c "import sys,json; print(json.load(sys.stdin)['access_token'])")
+          for epub in $(find dist -name "*.epub"); do
+            name=$(basename "$epub")
+            echo "Uploading $name ..."
+            curl -fsSL -X POST https://content.dropboxapi.com/2/files/upload \
+              --header "Authorization: Bearer $ACCESS_TOKEN" \
+              --header "Dropbox-API-Arg: {\"path\":\"/poker-books/$name\",\"mode\":\"overwrite\"}" \
+              --header "Content-Type: application/octet-stream" \
+              --data-binary @"$epub"
+          done
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 

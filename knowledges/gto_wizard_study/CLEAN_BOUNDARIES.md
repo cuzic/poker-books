@@ -181,7 +181,7 @@ def classify_board(board: list[str]) -> str:
 
 ## 次の境界調査必要トピック
 
-1. **Hand strength tier の境界**: TPTK vs TPGK vs TPMK は cbet 行動が変わるか?
+1. **Hand strength カテゴリ の境界**: TPTK vs TPGK vs TPMK は cbet 行動が変わるか?
 2. **Bet sizing 境界**: 33% (1.9bb) と 100% (6.5bb) の 2 段階に集約? それとも 4 段階維持?
 3. **SPR 境界**: SPR<1, 1-3, 3-7, >7 で実 GTO 行動が不連続変化するか?
 4. **Equity bucket 境界**: best/good/weak/trash の閾値は API per-combo で決まるが、人間判断可能な ranges に divide できるか?

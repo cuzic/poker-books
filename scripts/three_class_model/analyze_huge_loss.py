@@ -15,10 +15,10 @@ MV_TIER_MAP = {
     "set":"ストロング","trips":"ストロング","straight":"ストロング","flush":"ストロング",
     "two_pair":"ツーペア",
     "top_pair":"トップペア以上","overpair":"トップペア以上",
-    "second_pair":"ミドルペア","third_pair":"ミドルペア","underpair":"ミドルペア","low_pair":"ミドルペア",
+    "second_pair":"アンダーペア","third_pair":"アンダーペア","underpair":"アンダーペア","low_pair":"アンダーペア",
     "no_made_hand":"エア","king_high":"エア","ace_high":"エア",
 }
-TIERS = ["エア","ミドルペア","トップペア以上","ツーペア","ストロング","ナッツメイド"]
+TIERS = ["エア","アンダーペア","トップペア以上","ツーペア","ストロング","ナッツメイド"]
 BLS = ["dry","paired","connected","monotone"]
 DV_BASE = {"combo_draw":4,"nut_flush_draw":3,"flush_draw":3,"oesd":3,"gutshot":1,
            "twocards_bdfd":1,"onecard_bdfd":0,"no_draw":0}
@@ -28,7 +28,7 @@ OPP_R = {"SRP":0,"DEF":2,"3BP":2,"4BP":4}
 # 整数公式 grid (loss-opt rounded)
 GRID_INT = {
     ("エア","dry"):2, ("エア","paired"):8, ("エア","connected"):0, ("エア","monotone"):1,
-    ("ミドルペア","dry"):4, ("ミドルペア","paired"):10, ("ミドルペア","connected"):2, ("ミドルペア","monotone"):5,
+    ("アンダーペア","dry"):4, ("アンダーペア","paired"):10, ("アンダーペア","connected"):2, ("アンダーペア","monotone"):5,
     ("トップペア以上","dry"):8, ("トップペア以上","paired"):1, ("トップペア以上","connected"):6, ("トップペア以上","monotone"):4,
     ("ツーペア","dry"):4, ("ツーペア","paired"):9, ("ツーペア","connected"):1, ("ツーペア","monotone"):3,
     ("ストロング","dry"):8, ("ストロング","paired"):5, ("ストロング","connected"):9, ("ストロング","monotone"):9,

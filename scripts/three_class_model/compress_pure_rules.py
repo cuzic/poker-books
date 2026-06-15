@@ -25,10 +25,10 @@ MATCHA_TIER = {
     "set":"ストロング","trips":"ストロング","straight":"ストロング","flush":"ストロング",
     "two_pair":"ツーペア",
     "top_pair":"トップペア以上","overpair":"トップペア以上",
-    "second_pair":"ミドルペア","third_pair":"ミドルペア","underpair":"ミドルペア","low_pair":"ミドルペア",
+    "second_pair":"アンダーペア","third_pair":"アンダーペア","underpair":"アンダーペア","low_pair":"アンダーペア",
     "no_made_hand":"エア","king_high":"エア","ace_high":"エア",
 }
-TIER_ORDER = ["ナッツメイド","ストロング","ツーペア","トップペア以上","ミドルペア","エア"]
+TIER_ORDER = ["ナッツメイド","ストロング","ツーペア","トップペア以上","アンダーペア","エア"]
 
 
 def board_structure(flop: str) -> dict:

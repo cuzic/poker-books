@@ -6,7 +6,7 @@ MATCHA 6 パラメータ式に **street** (flop/turn/river) と **role** (attack
 ## 式
 
 ```
-Score = w_tier × tier + w_eq × eq + w_bs × bs + w_pot × pot + w_street × street + w_role × role
+Score = w_tier × カテゴリ + w_eq × eq + w_bs × bs + w_pot × pot + w_street × street + w_role × role
 
 street: flop=0, turn=1, river=2
 role:   attacker=0, defender=1
@@ -26,9 +26,9 @@ role:   attacker=0, defender=1
 ## 最適 8 パラメータ (バランス、整数版)
 
 ```
-Score = 1 × tier + 5 × eq + (-1) × bs + (2) × pot + (1) × street + (-2) × role
+Score = 1 × カテゴリ + 5 × eq + (-1) × bs + (2) × pot + (1) × street + (-2) × role
 
-tier:   ナッツ=5, ストロング=4, ツーペア=3, TP+=2, MP=1, エア=0
+カテゴリ:   ナッツ=5, ストロング=4, ツーペア=3, TP+=2, MP=1, エア=0
 eq:     best=3, good=2, weak=1, trash=0
 bs:     small=0, 75%=1, 100%=2, over=3, over185=4, allin=5
 pot:    SRP=0, DEF=1, 3BP=1, 4BP=2
@@ -61,5 +61,5 @@ else: fold
 ## 結論
 
 - 8-param 式は accuracy 71.0% で 6-param とほぼ同等
-- → MATCHA の本質は **tier + eq + bs + pot** の 4 軸で十分
+- → MATCHA の本質は **カテゴリ + eq + bs + pot** の 4 軸で十分
 - street/role は副次的、書籍向け公式には不要

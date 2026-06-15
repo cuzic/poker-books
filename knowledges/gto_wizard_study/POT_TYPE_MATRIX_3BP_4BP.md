@@ -1,6 +1,6 @@
-# 3BP / 4BP の sub-family × tier × action 境界 (data 駆動)
+# 3BP / 4BP の sub-family × カテゴリ × action 境界 (data 駆動)
 
-dataset_unified_v2.csv の 176K rows から、3BP/4BP の board × hand tier ごとの
+dataset_unified_v2.csv の 176K rows から、3BP/4BP の board × hand カテゴリ ごとの
 GTO 行動分布 (fold/call/raise) を集計。MATCHA Framework のポット種別補正の根拠。
 
 ## 概要
@@ -14,7 +14,7 @@ GTO 行動分布 (fold/call/raise) を集計。MATCHA Framework のポット種�
 | 4BP | turn | 13,536 | 25 |
 | 4BP | river | 28,106 | 27 |
 
-## 3BP flop: sub-family × tier の raise 頻度
+## 3BP flop: sub-family × カテゴリ の raise 頻度
 
 | sub-family | ナッツメ | ストロン | ツーペア | トップペ | ミドルペ | エア |
 |---|---|---|---|---|---|---|
@@ -34,7 +34,7 @@ GTO 行動分布 (fold/call/raise) を集計。MATCHA Framework のポット種�
 | connected_mid | — | 0% | 0% | 0% | 24% | 66% |
 | monotone | — | 0% | 0% | 0% | 0% | 34% |
 
-## 3BP turn: sub-family × tier の raise 頻度
+## 3BP turn: sub-family × カテゴリ の raise 頻度
 
 | sub-family | ナッツメ | ストロン | ツーペア | トップペ | ミドルペ | エア |
 |---|---|---|---|---|---|---|
@@ -54,7 +54,7 @@ GTO 行動分布 (fold/call/raise) を集計。MATCHA Framework のポット種�
 | connected_mid | — | 0% | 0% | 2% | 64% | 84% |
 | monotone | 0% | 0% | — | 12% | 53% | 88% |
 
-## 3BP river: sub-family × tier の raise 頻度
+## 3BP river: sub-family × カテゴリ の raise 頻度
 
 | sub-family | ナッツメ | ストロン | ツーペア | トップペ | ミドルペ | エア |
 |---|---|---|---|---|---|---|
@@ -86,7 +86,7 @@ GTO 行動分布 (fold/call/raise) を集計。MATCHA Framework のポット種�
 | connected_mid | 0% | 1% | 15% | 37% | 82% | 99% |
 | monotone | 0% | 17% | 0% | 53% | 87% | 99% |
 
-## 4BP flop: sub-family × tier の raise 頻度
+## 4BP flop: sub-family × カテゴリ の raise 頻度
 
 | sub-family | ナッツメ | ストロン | ツーペア | トップペ | ミドルペ | エア |
 |---|---|---|---|---|---|---|
@@ -118,7 +118,7 @@ GTO 行動分布 (fold/call/raise) を集計。MATCHA Framework のポット種�
 | connected_mid | — | 0% | 0% | 0% | 0% | 30% |
 | monotone | — | 0% | 0% | 0% | 0% | 32% |
 
-## 4BP turn: sub-family × tier の raise 頻度
+## 4BP turn: sub-family × カテゴリ の raise 頻度
 
 | sub-family | ナッツメ | ストロン | ツーペア | トップペ | ミドルペ | エア |
 |---|---|---|---|---|---|---|
@@ -138,7 +138,7 @@ GTO 行動分布 (fold/call/raise) を集計。MATCHA Framework のポット種�
 | connected_mid | — | 0% | 0% | 0% | 5% | 67% |
 | monotone | 0% | 0% | — | 0% | 7% | 75% |
 
-## 4BP river: sub-family × tier の raise 頻度
+## 4BP river: sub-family × カテゴリ の raise 頻度
 
 | sub-family | ナッツメ | ストロン | ツーペア | トップペ | ミドルペ | エア |
 |---|---|---|---|---|---|---|
@@ -158,11 +158,11 @@ GTO 行動分布 (fold/call/raise) を集計。MATCHA Framework のポット種�
 | connected_mid | — | 0% | 0% | 11% | 46% | 98% |
 | monotone | 0% | 0% | 0% | 0% | 30% | 89% |
 
-## tier 単独の raise 頻度 (pot type 比較)
+## カテゴリ 単独の raise 頻度 (pot type 比較)
 
 (SRP は別ファイル `HAND_STRENGTH_BOUNDARIES.md` 参照。ここでは 3BP/4BP のみ)
 
-| tier | 3BP flop | 4BP flop | 3BP turn | 4BP turn | 3BP river | 4BP river |
+| カテゴリ | 3BP flop | 4BP flop | 3BP turn | 4BP turn | 3BP river | 4BP river |
 |---|---:|---:|---:|---:|---:|---:|
 | ナッツメイド | 7% | 27% | 5% | 11% | 0% | 0% |
 | ストロング | 31% | 19% | 52% | 21% | 0% | 0% |
@@ -175,7 +175,7 @@ GTO 行動分布 (fold/call/raise) を集計。MATCHA Framework のポット種�
 
 ### 顕著な outlier (3BP/4BP 特有の行動)
 
-| pot×street | sub-family | tier | raise% | n |
+| pot×street | sub-family | カテゴリ | raise% | n |
 |---|---|---|---:|---:|
 | 4BP flop | paired_mid | ミドルペア | 100% | 168 |
 | 4BP flop | connected_low | トップペア以上 | 100% | 312 |

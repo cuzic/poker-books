@@ -1,6 +1,6 @@
 # 境界 spec (4BP, flop) — data 駆動の境界条件
 
-フィルタ: pot=4BP, street=flop, depth=*, sub=*, tier=*
+フィルタ: pot=4BP, street=flop, depth=*, sub=*, カテゴリ=*
 閾値: PURE ≥80% / STRONG 60-80% / MIXED 40-60% / BALANCED <40%
 最小 n: 10
 
@@ -17,7 +17,7 @@
 
 dominant action 頻度 ≥80% の cell。読者は条件確認 → 即アクション。
 
-| pot | street | depth | sub-family | tier | action | freq | n |
+| pot | street | depth | sub-family | カテゴリ | action | freq | n |
 |---|---|---|---|---|---|---:|---:|
 | 4BP | flop | Cash100 | Ahigh_spread | ツーペア | **call** | 97% | 27 |
 | 4BP | flop | Cash100 | Ahigh_spread | トップペア以上 | **raise** | 82% | 120 |
@@ -48,7 +48,7 @@ dominant action 頻度 ≥80% の cell。読者は条件確認 → 即アクシ�
 
 ## ⚪ data 欠落 cell
 
-今フィルタで観測されない (pot, street, depth, sub, tier) の組合せ。
+今フィルタで観測されない (pot, street, depth, sub, カテゴリ) の組合せ。
 新規 probe の対象候補。
 
 観測 cell: 75 / 期待 cell: 132 → 欠落: 57

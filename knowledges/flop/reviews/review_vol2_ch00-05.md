@@ -2,7 +2,7 @@
 
 レビュー実施日：2026-05-13
 レビュアー：Reviewer（Devil's Advocate）
-対象ファイル：00-srp-intro.md / 01-board-score.md / 02-hand-score.md / 03-flop-tier.md / 04-cbet-decision.md / 05-cbet-size.md
+対象ファイル：00-srp-intro.md / 01-board-score.md / 02-hand-score.md / 03-flop-カテゴリ.md / 04-cbet-decision.md / 05-cbet-size.md
 
 ---
 

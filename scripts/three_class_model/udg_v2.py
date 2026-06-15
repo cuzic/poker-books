@@ -254,9 +254,15 @@ def apply_donk_action_modifier(action: Action, action_context: str) -> Action:
 
 
 def apply_opener_shift(matchup: str, opener: str, street: str) -> str:
-    """CO/HJ open river: opp value-heavier → shift matchup down (river only)."""
-    if street == "river" and opener in {"CO", "HJ"}:
+    """CO/HJ open: opp value-heavier (tight range) → shift matchup down."""
+    if opener not in {"CO", "HJ"}:
+        return matchup
+    if street == "river":
+        # River: TIE→BEHIND (AHEAD stays AHEAD; river shove is different)
         return {"AHEAD": "AHEAD", "TIE": "BEHIND", "BEHIND": "BEHIND"}[matchup]
+    if street == "turn":
+        # Turn: AHEAD→TIE, TIE→BEHIND (overpair calls, second_pair folds)
+        return {"AHEAD": "TIE", "TIE": "BEHIND", "BEHIND": "BEHIND"}[matchup]
     return matchup
 
 
@@ -297,10 +303,92 @@ def udg_defense_v2(r, scenario_meta: dict | None = None) -> Action:
     matchup = apply_context_modifier(matchup, action_context)
     matchup = apply_opener_shift(matchup, opener, street)
 
+    # ── 4BP flop: committed pot — entirely different game theory ──
+    # SPR ~1.5: strong hands trap (CALL), pair-level commits (RAISE), air calls wide.
+    # GTO data: top_pair 92%R / set 93%C / trips 99%C / air 51%C / trash 35%F.
+    if pot_type == "4BP" and street == "flop":
+        _SLOWPLAY_MV = {"trips", "set", "straight", "flush", "fullhouse", "quads", "straight_flush"}
+        _COMMIT_MV = {"top_pair", "overpair", "second_pair", "underpair"}
+        if mv in _SLOWPLAY_MV:
+            return "CALL"
+        if mv in _COMMIT_MV:
+            return "RAISE"
+        if hand_tier == "AIR" and eb == "trash_hands":
+            return "FOLD"  # pure air with no equity folds even in committed pot
+        return "CALL"  # third_pair, two_pair, ace_high, king_high (non-trash), low_pair, air (weak/good)
+
+    # ── 4BP turn: near-commit (SPR ~0.7) — set now commits (RAISE), trips still traps (CALL) ──
+    # GTO data: top_pair 80%R / set 64%R / trips 70%C / no_made_hand 81%F.
+    if pot_type == "4BP" and street == "turn":
+        _SLOWPLAY_T = {"trips", "straight", "flush", "fullhouse", "quads", "straight_flush"}
+        _COMMIT_T = {"top_pair", "overpair", "second_pair", "underpair", "set", "two_pair"}
+        if mv in _SLOWPLAY_T:
+            return "CALL"
+        if mv in _COMMIT_T:
+            return "RAISE"
+        if hand_tier == "AIR" and eb in {"trash_hands", "weak_hands"}:
+            return "FOLD"  # air folds on turn (more often than flop)
+        return "CALL"  # third_pair, low_pair, air (good_hands)
+
+    # ── 3BP flop: opponent's 3-bet range is premium → medium hands call, not raise ──
+    # GTO: overbet: weak_hands 80%F (cash), 67%F (MTT); small/med: weak_hands 82-93%C.
+    # air weak_hands float vs MED/SMALL; fold trash always; fold weak vs BIG/ALLIN.
+    if pot_type == "3BP" and street == "flop":
+        _3BP_RAISE = {"overpair", "trips", "quads", "straight", "flush", "straight_flush"}
+        if mv in _3BP_RAISE:
+            return "RAISE"
+        if mv == "low_pair" and eb in {"trash_hands", "weak_hands"}:
+            return "FOLD"  # 92% FOLD in 3BP flop for low_pair
+        if hand_tier == "AIR" and eb == "trash_hands":
+            return "FOLD"  # trash air always folds in 3BP (no equity to realize)
+        if hand_tier == "AIR" and eb == "weak_hands" and bet_tier in {"BIG", "ALLIN"}:
+            return "FOLD"  # weak air folds vs overbet (80-93%F across cash+MTT)
+        return "CALL"  # top_pair(76%C), second_pair(82%C), air weak vs MED/SMALL floats
+
+    # ── 4BP river: SPR ~0.3, committed — almost every made hand calls ──
+    # GTO data: top_pair 99%C / set 100%C / no_made_hand 91%F.
+    if pot_type == "4BP" and street == "river":
+        if mv in {"no_made_hand", "king_high"} and eb in {"trash_hands", "weak_hands"}:
+            return "FOLD"
+        if hand_tier == "AIR" and eb == "trash_hands":
+            return "FOLD"
+        return "CALL"  # everything else calls at SHALLOW SPR river
+
+    # ── 3BP turn: SPR ~2-3, premium opp range — sets/trips raise, TP calls, air folds ──
+    # GTO data: overpair 70%R / set 70%R / trips 71%R / top_pair 82%C / no_made_hand 88%F.
+    if pot_type == "3BP" and street == "turn":
+        _3BP_T_RAISE = {"overpair", "trips", "set"}  # ~70% RAISE each on turn (SPR < flop)
+        if mv in _3BP_T_RAISE:
+            return "RAISE"
+        if hand_tier == "AIR" and eb in {"trash_hands", "weak_hands"}:
+            return "FOLD"
+        if mv == "low_pair" or (mv == "third_pair" and eb in {"trash_hands", "weak_hands"}):
+            return "FOLD"
+        return "CALL"  # top_pair(82%C), second_pair(68%C), flush(96%C), FH(94%C), underpair(68%C)
+
+    # ── River donk defense: nuts RAISE for value, air FOLD, rest CALL ──
+    # GTO data: flush/trips/quads/straight 89-100%R / no_made_hand 88%F / overpair 85%C.
+    if action_context == "vs_donk" and street == "river":
+        _RIVER_DONK_RAISE = {"flush", "trips", "quads", "straight", "set", "two_pair", "straight_flush"}
+        if eb == "best_hands" and mv in _RIVER_DONK_RAISE:
+            return "RAISE"
+        if mv in {"no_made_hand", "king_high"} and eb in {"trash_hands", "weak_hands"}:
+            return "FOLD"
+        return "CALL"  # made hands (top_pair, second_pair, overpair, FH, etc.) call
+
     # Layer 2: universal rule
     action = apply_universal_rule_v2(matchup, spr, bet_tier, street, board_tier, hand_tier, mv, dv)
-    # post-rule context tweak (donk RAISE → CALL)
+    # post-rule context tweak (donk RAISE → CALL, non-river only)
     action = apply_donk_action_modifier(action, action_context)
+
+    # ── Donk defense: weak/trash equity → FOLD (flop/turn only, GTO: 67-96% fold rate) ──
+    # River donk handled separately above. Flop/turn: trash/weak air over-calls.
+    if action_context == "vs_donk" and action == "CALL" and street != "river":
+        if eb == "trash_hands":
+            return "FOLD"
+        if eb == "weak_hands" and hand_tier in {"AIR", "MID_PAIR"}:
+            return "FOLD"
+
     return action
 
 

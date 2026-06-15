@@ -3,11 +3,11 @@
 MATCHA 公式の最大の障壁 = eq_bucket (best/good/weak/trash) の判定。
 以下、人間が暗算で eq_bucket を推定する複数アプローチを提示。
 
-## アプローチ 1: tier 単独で bucket を推定
+## アプローチ 1: カテゴリ 単独で bucket を推定
 
-「自分の hand tier だけで eq_bucket を決められるか」
+「自分の hand カテゴリ だけで eq_bucket を決められるか」
 
-| tier | best | good | weak | trash | modal (代表) |
+| カテゴリ | best | good | weak | trash | modal (代表) |
 |------|---:|---:|---:|---:|---|
 | ナッツメイド | 54% | 10% | 23% | 13% | **best_hands** (54%) |
 | ストロング | 49% | 21% | 21% | 8% | **best_hands** (49%) |
@@ -16,14 +16,14 @@ MATCHA 公式の最大の障壁 = eq_bucket (best/good/weak/trash) の判定。
 | ミドルペア | 1% | 22% | 32% | 46% | **trash_hands** (46%) |
 | エア | 0% | 4% | 27% | 69% | **trash_hands** (69%) |
 
-→ tier 単独では bucket が一意に決まらない。tier × board が必要。
+→ カテゴリ 単独では bucket が一意に決まらない。カテゴリ × board が必要。
 
-## アプローチ 2: tier × board_label の対応表 (推奨)
+## アプローチ 2: カテゴリ × board_label の対応表 (推奨)
 
-board 4 種 (dry / paired / connected / monotone) × tier 6 種 = 24 cells。
+board 4 種 (dry / paired / connected / monotone) × カテゴリ 6 種 = 24 cells。
 **この表 1 枚で eq_bucket を推定可能。**
 
-| tier | board | best% | good% | weak% | trash% | 推定 |
+| カテゴリ | board | best% | good% | weak% | trash% | 推定 |
 |---|---|---:|---:|---:|---:|---|
 | ナッツメイド | dry | 55% | 18% | 26% | 1% | **best_hands** |
 | ナッツメイド | paired | 44% | 5% | 25% | 26% | **best_hands** |
@@ -92,7 +92,7 @@ board 4 種 (dry / paired / connected / monotone) × tier 6 種 = 24 cells。
 
 ### 簡易判定 (暗算用) — 2 段階
 
-1. **tier × board の典型表 (24 cells)** で第一推定
+1. **カテゴリ × board の典型表 (24 cells)** で第一推定
 2. equity を体感で +/− 1 段補正
 
 ### 中級者向け — equity 直接判定
@@ -109,7 +109,7 @@ board 4 種 (dry / paired / connected / monotone) × tier 6 種 = 24 cells。
 
 ## 結論
 
-- tier 単独では bucket 判定 不可
-- **tier × board の 24-cell 対応表** で 大半カバー
+- カテゴリ 単独では bucket 判定 不可
+- **カテゴリ × board の 24-cell 対応表** で 大半カバー
 - 「equity 概算 → 閾値判定」が最も普遍的、accuracy 90%
 - 書籍では (a) 24-cell 表 + (b) equity 閾値 の 2 段階提示が良い

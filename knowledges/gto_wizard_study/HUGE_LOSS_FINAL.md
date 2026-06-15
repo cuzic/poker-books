@@ -19,7 +19,7 @@
 
 ## Top 25 huge loss patterns
 
-| tier | board | pot | pred | best | n | avg_loss |
+| カテゴリ | board | pot | pred | best | n | avg_loss |
 |------|------|-----|------|------|--:|---:|
 | エア | wet | 4BP | fold | call | 341 | 6.84 BB |
 | ミドルペア | paired | 4BP | call | raise | 329 | 5.83 BB |
@@ -56,9 +56,9 @@
 | 3BP | 190 / 27,648 | 0.69% |
 | 4BP | 983 / 48,816 | 2.01% |
 
-## tier × bs (huge spots)
+## カテゴリ × bs (huge spots)
 
-| tier | bs | n |
+| カテゴリ | bs | n |
 |------|-----|--:|
 | エア | overbet | 540 |
 | エア | med_75p | 329 |

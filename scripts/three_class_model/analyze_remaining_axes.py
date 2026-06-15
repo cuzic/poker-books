@@ -12,7 +12,7 @@ MATCHA_TIER = {
     "set":"ストロング","trips":"ストロング","straight":"ストロング","flush":"ストロング",
     "two_pair":"ツーペア",
     "top_pair":"トップペア以上","overpair":"トップペア以上",
-    "second_pair":"ミドルペア","third_pair":"ミドルペア","underpair":"ミドルペア","low_pair":"ミドルペア",
+    "second_pair":"アンダーペア","third_pair":"アンダーペア","underpair":"アンダーペア","low_pair":"アンダーペア",
     "no_made_hand":"エア","king_high":"エア","ace_high":"エア",
 }
 
@@ -43,7 +43,7 @@ def main():
         r = analyze(f)
         by_axis[r["axis"]].append(r)
 
-    tier_order = ["ナッツメイド","ストロング","ツーペア","トップペア以上","ミドルペア","エア"]
+    tier_order = ["ナッツメイド","ストロング","ツーペア","トップペア以上","アンダーペア","エア"]
 
     lines = []
     lines.append("# Bet Sizing / Defense / Turn-River 軸の境界 — 10 spots 実 probe")
@@ -60,12 +60,12 @@ def main():
     for r in by_axis.get("BS", []):
         lines.append(f"### {r['board']} ({r['label']})")
         lines.append("")
-        lines.append("| action | size | freq | エア | ミドルペア | TP+ | ツーペア | ストロング | ナッツメイド |")
+        lines.append("| action | size | freq | エア | アンダーペア | TP+ | ツーペア | ストロング | ナッツメイド |")
         lines.append("|---|---:|---:|---:|---:|---:|---:|---:|---:|")
         for a in r["actions"]:
             sz_str = f"{a['size']}bb" if a["size"] else "-"
             row = f"| {a['type']} | {sz_str} | {a['freq']*100:.0f}% |"
-            for t in ["エア","ミドルペア","トップペア以上","ツーペア","ストロング","ナッツメイド"]:
+            for t in ["エア","アンダーペア","トップペア以上","ツーペア","ストロング","ナッツメイド"]:
                 v = a["tiers"].get(t, 0)
                 tier_sum = sum(a["tiers"].values())
                 if tier_sum > 0:

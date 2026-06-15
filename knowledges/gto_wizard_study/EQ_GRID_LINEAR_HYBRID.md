@@ -1,6 +1,6 @@
 # eq grid + 線形 adjust ハイブリッド公式
 
-Grid (tier × board の非線形相互作用) + 線形 adjust の段階式モデル。
+Grid (カテゴリ × board の非線形相互作用) + 線形 adjust の段階式モデル。
 
 ## 概念
 
@@ -28,9 +28,9 @@ Step 3: Score >= T_best → best / >= T_good → good / >= T_weak → weak / els
 | eq 分解 線形 | 59.5% |
 | 8-feature 線形 | 58.8% |
 
-## GridBase 表 (tier × board → expected eq score)
+## GridBase 表 (カテゴリ × board → expected eq score)
 
-| tier | dry | paired | connected | monotone |
+| カテゴリ | dry | paired | connected | monotone |
 |------|---:|---:|---:|---:|
 | ナッツメイド | 6.81 | 5.00 | 7.38 | 8.82 |
 | ストロング | 7.64 | 7.99 | 5.83 | 5.97 |

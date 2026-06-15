@@ -6,10 +6,10 @@ MATCHA Framework の 5 軸を活用したマクロルール抽出。階層 6 レ
 
 | level | cell key | cells 数 | rules 数 (cov ≥閾値) |
 |-------|---------|---:|---:|
-| A | (pot, street, tier, **eq_bucket**) | 155 | 81 (cov ≥0.8) |
+| A | (pot, street, カテゴリ, **eq_bucket**) | 155 | 81 (cov ≥0.8) |
 | B | (pot, street, sub, **eq_bucket**) | 247 | 102 (cov ≥0.8) |
 | C | (pot, street, **eq_bucket**) | 40 | 23 (cov ≥0.7) |
-| D | (pot, street, tier) | 60 | 15 (cov ≥0.8) |
+| D | (pot, street, カテゴリ) | 60 | 15 (cov ≥0.8) |
 | E | (pot, street, sub) | 62 | 2 (cov ≥0.7) |
 | F | (pot, street) | 10 | 3 (cov ≥0.6) |
 | Default | eq_bucket → action map | — | 4 |
@@ -45,9 +45,9 @@ MATCHA Framework の 5 軸を活用したマクロルール抽出。階層 6 レ
 | 4BP | 48,816 | 71.25% | 0.6405 BB | 3.59% |
 | DEF | 34,092 | 68.82% | 0.2484 BB | 0.56% |
 
-## Type A ルール一覧 (最具体: pot × street × tier × eq_bucket)
+## Type A ルール一覧 (最具体: pot × street × カテゴリ × eq_bucket)
 
-| pot | street | tier | eq_bucket | action | freq | n |
+| pot | street | カテゴリ | eq_bucket | action | freq | n |
 |---|---|---|---|---|---:|---:|
 | 3BP | flop | ナッツメイド | best_hands | **call** | 95% | 20 |
 | 3BP | flop | ミドルペア | good_hands | **call** | 87% | 2,447 |

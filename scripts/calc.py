@@ -62,12 +62,30 @@ def parse_hand_abstract(hand_str: str) -> tuple[int, int, bool, bool]:
 
 def parse_hand_specific(hand_str: str) -> tuple[tuple[int, str], tuple[int, str]]:
     """
-    Parse specific hand: "Ac,Kd" → ((14,'c'), (13,'d')).
+    Parse specific hand: "Ac,Kd" or compact "AcKd" → ((14,'c'), (13,'d')).
     """
-    cards = parse_board(hand_str)
+    s = hand_str.strip().replace(' ', '')
+    # Compact form "AcKd" (4 chars, no comma)
+    if ',' not in s and len(s) == 4:
+        c1 = parse_board(s[:2])
+        c2 = parse_board(s[2:])
+        if len(c1) == 1 and len(c2) == 1:
+            return c1[0], c2[0]
+    cards = parse_board(s)
     if len(cards) < 2:
         raise ValueError(f"Cannot parse hand: {hand_str!r}")
     return cards[0], cards[1]
+
+
+def _is_specific_hand(hand_str: str) -> bool:
+    """True if hand_str uses explicit suits for exactly 2 cards: 'Ac,Kd' or 'AcKd'."""
+    s = hand_str.strip()
+    if len(s) == 4 and ',' not in s and s[1].lower() in 'shdc':
+        return True
+    # comma form: exactly one comma → exactly 2 tokens
+    if s.count(',') == 1 and s[1].lower() in 'shdc':
+        return True
+    return False
 
 
 # ── Preflop formulas ──────────────────────────────────────────────────────────
@@ -237,7 +255,7 @@ def calc_hand_score(hand_str: str, board_str: str) -> int:
     street = "flop" if n_board == 3 else ("turn" if n_board == 4 else "river")
 
     # Parse hand
-    is_specific = (',' in hand_str or (len(hand_str) >= 4 and hand_str[1].lower() in 'shdc'))
+    is_specific = _is_specific_hand(hand_str)
     if is_specific:
         c1, c2 = parse_hand_specific(hand_str)
         h_rank, h_suit = c1
@@ -434,11 +452,11 @@ def _detect_straights(h_rank: int, l_rank: int,
 #
 # T1 ≥ 65: always CBet (strong made hands)
 # T2 ≥ 20: CBet if B ≥ 58 (includes 2OC hands)
-# T3 < 20: CBet if B ≥ 67 (dry boards only, air/weak hands)
+# T3 < 20: CBet if B ≥ 62 (dry boards only, air/weak hands)
 #
 # CBet size (GTO 168board):
 #   paired_high / mono → 50%
-#   others             → 75%
+#   others             → 33%
 
 def calc_flop_tier(hand_score: int) -> Literal["T1", "T2", "T3"]:
     """T1≥65 / T2≥20 / T3<20. T2 lower bound = 20 to include 2OC (+24 bonus)."""
@@ -906,6 +924,258 @@ def board_connectivity(board_str: str) -> Literal["connected", "semi", "dry"]:
     if spread <= 6:
         return "semi"
     return "dry"
+
+
+def classify_board_type7(board_str: str) -> str:
+    """
+    ボード7分類。Returns "型1"〜"型7"。
+
+    型1 ハイドライ:   top≥Q, rainbow, spread>3
+    型2 ハイウェット: top≥Q, (2-tone or spread≤3)
+    型3 ロードライ:   top<Q, rainbow, spread>3
+    型4 ローウェット: top<Q, (2-tone or spread≤3)
+    型5 モノトーン:   全3枚同スーツ
+    型6 ペア高:       ペアrank≥Q (10以上)
+    型7 ペア低:       ペアrank<Q (9以下)
+    """
+    cards = parse_board(board_str)
+    if not cards:
+        raise ValueError(f"Cannot parse board: {board_str!r}")
+    ranks = [r for r, _ in cards]
+    suits = [s for _, s in cards]
+
+    # ペア判定 (優先)
+    rank_ctr = Counter(ranks)
+    pair_ranks = [r for r, cnt in rank_ctr.items() if cnt >= 2]
+    if pair_ranks:
+        top_pair = max(pair_ranks)
+        return "型6" if top_pair >= 10 else "型7"
+
+    # モノトーン
+    if len(set(suits)) == 1:
+        return "型5"
+
+    top = max(ranks)
+    is_high = top >= 12  # Q(12)以上
+    is_wet = len(set(suits)) == 2 or (max(ranks) - min(ranks)) <= 3
+
+    if is_high:
+        return "型2" if is_wet else "型1"
+    else:
+        return "型4" if is_wet else "型3"
+
+
+# ── 5-category hand classification ───────────────────────────────────────────
+#
+# バリュー:          強いメイドハンド（セット/2ペア/オーバーペア/TPTK/TPGK相当）
+# セミブラフ:        強いドロー（FD/OESD/GS）+ 弱いメイドハンド
+# ブラフキャッチャー: 中程度メイド + ドライボード（安定）
+# RIO:              中程度メイド + ウェットボード（逆インプライドオッズ）
+# エアー:            メイドなし + ドローなし
+#
+# ウェットボード判定: flush draw あり (2-tone/mono) または spread ≤ 3 (connected)
+
+_5CAT_VALUE_ROLES = frozenset({
+    'set_plus', 'overpair_high', 'overpair_mid', 'overpair_low',
+    'two_pair', 'tptk', 'tpgk',
+    'underpair_high', 'underpair_mid',  # role_score 60-65
+})
+_5CAT_MEDIUM_ROLES = frozenset({
+    'tpmk', 'tpwk', 'second_pair_strong', 'second_pair_weak',
+    'bottom_pair', 'underpair_low',
+})
+
+
+def calc_hand_category(hand_str: str, board_str: str) -> tuple[str, str]:
+    """
+    5-category classification for cash-postflop framework.
+    Returns (category_jp, detail_code).
+
+    Categories: バリュー / セミブラフ / ブラフキャッチャー / RIO / エアー
+    """
+    board_cards = parse_board(board_str)
+    if not board_cards:
+        raise ValueError(f"Cannot parse board: {board_str!r}")
+    board_ranks = [r for r, _ in board_cards]
+    board_suits = [s for _, s in board_cards]
+    rank_counter = Counter(board_ranks)
+
+    board_type7 = classify_board_type7(board_str)
+    # Wet = flush draw (2-tone/mono) OR spread ≤ 3 — matches classify_board_type7 definition
+    is_wet = board_has_flush_draw(board_str) or (max(board_ranks) - min(board_ranks)) <= 3
+
+    # Parse hand
+    is_specific = _is_specific_hand(hand_str)
+    if is_specific:
+        c1, c2 = parse_hand_specific(hand_str)
+        h_rank, h_suit = c1
+        l_rank, l_suit = c2
+        if h_rank < l_rank:
+            h_rank, h_suit, l_rank, l_suit = l_rank, l_suit, h_rank, h_suit
+        is_pair_hand = (h_rank == l_rank)
+        is_suited_hand = (h_suit == l_suit)
+        hand_suits_list: list[str] | None = [h_suit, l_suit]
+    else:
+        h_rank, l_rank, is_pair_hand, is_suited_hand = parse_hand_abstract(hand_str)
+        if h_rank < l_rank:
+            h_rank, l_rank = l_rank, h_rank
+        h_suit = l_suit = ''
+        hand_suits_list = None
+
+    # Check straight (strong made)
+    all_ranks = sorted({h_rank, l_rank} | set(board_ranks))
+    for combo in combinations(all_ranks, 5):
+        if combo[4] - combo[0] == 4 and len(set(combo)) == 5:
+            if h_rank in combo or l_rank in combo:
+                return "バリュー", "straight"
+
+    # Check flush (strong made)
+    if hand_suits_list:
+        for suit in set(hand_suits_list):
+            total = hand_suits_list.count(suit) + board_suits.count(suit)
+            if total >= 5:
+                return "バリュー", "flush"
+
+    # Role classification
+    role = _classify_role(h_rank, l_rank, is_pair_hand, rank_counter, board_ranks)
+
+    # Draw detection
+    has_fd, _, is_nut_fd = _detect_fd(
+        h_rank, l_rank, h_suit, l_suit, board_suits, hand_suits_list, is_suited_hand)
+    has_oesd, has_gutshot = _detect_straights(h_rank, l_rank, board_ranks)
+    has_strong_draw = has_fd or has_oesd or has_gutshot
+
+    # 1. Value: strong made hand
+    if role in _5CAT_VALUE_ROLES:
+        return "バリュー", role
+
+    # 2. Semi-bluff: strong draw without value-level made hand
+    if has_strong_draw:
+        if has_fd and has_oesd:
+            draw_label = "combo"
+        elif has_fd:
+            draw_label = "NFD" if is_nut_fd else "FD"
+        elif has_oesd:
+            draw_label = "OESD"
+        else:
+            draw_label = "GS"
+        return "セミブラフ", f"{draw_label}+{role}"
+
+    # 3 & 4. Medium made hand: RIO (wet) or Bluff Catcher (dry)
+    if role in _5CAT_MEDIUM_ROLES:
+        if is_wet:
+            return "RIO", f"{role}@{board_type7}"
+        else:
+            return "ブラフキャッチャー", f"{role}@{board_type7}"
+
+    # 5. Air
+    return "エアー", role if role != "air" else "no_made"
+
+
+# ── MTT postflop functions ───────────────────────────────────────────────────
+#
+# vol4『迷わないポーカー MTTポストフロップ』専用関数群。
+# 仕様の出典:
+#   - mtt-postflop/CLAUDE.md（SBR→SPR 変換 / コミットライン）
+#   - mtt-postflop/designs/icm_unified_format.md（ICM 補正テーブル）
+#   - mtt-postflop/designs/F_BTN_vs_BB.md（HS 閾値 / TA フレームワーク）
+
+# SBR → SPR 変換表（BBアンテあり、SRP/3BP 別）
+# SRP: フロップポット ≈ 5.5BB（BTN 2.5BB open + BB 2.5BB call + 1BB アンテ）
+# 3BP: フロップポット ≈ 18BB 前後でスタックは大幅に消費される
+_SBR_SPR_TABLE: list[tuple[float, float, float]] = [
+    # (SBR下限, SRP SPR, 3BP SPR)
+    (40, 12.0, 3.5),
+    (30, 10.0, 3.0),
+    (25,  8.0, 2.7),
+    (20,  6.0, 2.0),
+    (15,  4.5, 1.4),
+    (10,  3.0, 1.0),
+    ( 7,  1.5, 0.0),
+]
+
+
+def calc_spr_from_sbr(sbr: float, situation: str = "srp") -> float:
+    """
+    SBR → SPR 変換（BBアンテあり）。situation: "srp" | "3bp"。
+    補間せず、SBR 階段に最も近い行（下限以下の最大）を返す。
+    """
+    for thr, srp_v, tbp_v in _SBR_SPR_TABLE:
+        if sbr >= thr:
+            return tbp_v if situation == "3bp" else srp_v
+    # SBR<7 は最下行で打ち切り
+    last = _SBR_SPR_TABLE[-1]
+    return last[2] if situation == "3bp" else last[1]
+
+
+def calc_mtt_commit_threshold(spr: float, stage: str = "middle") -> int:
+    """
+    コミット最低 HS（通常／バブル／FT 補正）。
+    SPR ベース表（中盤）+ stage 補正（bubble=+10 / ft=+15、上限80）。
+    SPR<2 は「フロップ着地で即コミット圏」→ TP（HS=50）が下限。
+    """
+    if spr >= 8:
+        base = 65
+    elif spr >= 5:
+        base = 55
+    elif spr >= 3:
+        base = 42
+    elif spr >= 2:
+        base = 30
+    else:
+        base = 50
+    if stage == "bubble":
+        base += 10
+    elif stage == "ft":
+        base += 15
+    return min(base, 80)
+
+
+def calc_mtt_icm_correction(sbr: float, stage: str) -> int:
+    """
+    ICM 補正 HS 加算値。early/middle/bubble/ft の 4 段階。
+    early は SBR≥25 のときのみ採用（それ以外は stage 引数を尊重）。
+    """
+    if stage == "early" or (stage == "middle" and sbr >= 25):
+        return 0 if stage == "early" else 3
+    if stage == "middle":
+        return 3
+    if stage == "bubble":
+        return 12
+    if stage == "ft":
+        return 20
+    return 0
+
+
+def calc_mtt_fold_threshold(
+    bet_pct: float, icm_correction: int = 0
+) -> float:
+    """
+    ターン／リバー守備のフォールド上限（MDF 補完）。
+    必要 equity = bet / (pot + bet)。ICM 補正は equity に直接加算。
+    返り値は 0.0〜1.0 の equity（fold すべき上限）。
+    """
+    required_equity = bet_pct / (100.0 + bet_pct)
+    return required_equity + icm_correction / 100.0
+
+
+def calc_mtt_barrel_decision(
+    hs: int, ta_tag: str, stage: str = "middle"
+) -> tuple[bool, str]:
+    """
+    ターンバレル判断（TA フレームワーク）。
+    TA+ : hs ≥ 35（バブル/FT は 40）→ barrel
+    TA- : 常に check（IP バリュー減で保護優先）
+    blank: hs ≥ 65 → barrel（nut-only）
+    """
+    plus_thr = 40 if stage in ("bubble", "ft") else 35
+    if ta_tag == "TA+":
+        ok = hs >= plus_thr
+        return ok, f"TA+ thr={plus_thr} hs={hs}"
+    if ta_tag == "TA-":
+        return False, "TA- check"
+    # blank
+    return hs >= 65, f"blank thr=65 hs={hs}"
 
 
 # ── Quick test ────────────────────────────────────────────────────────────────

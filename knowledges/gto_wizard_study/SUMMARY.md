@@ -180,7 +180,7 @@ cEV 6m と比較すると **BTN open が 5-10pt 縮小**（cEV ~45-50% → ICM 3
 
 - **3BP HJvBB の cbet-called 後の turn-river** — API 側で打ち切られている。TexasSolver で別途
 - **4BP** — preflop 4bet 確認できず（tree に存在するか不明）
-- **ICM 浅スタック (15bb 等)** — Premium tier では asymmetric depth=28 のみアクセス可
+- **ICM 浅スタック (15bb 等)** — Premium カテゴリ では asymmetric depth=28 のみアクセス可
 - **9-max ICM** — `MTTGeneral_ICM9m200PT*` は permission denied
 - **Cash 100bb** — `Cash6mGeneral_*` は 401 unauthorized
 

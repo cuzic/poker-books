@@ -9,9 +9,9 @@
 - huge loss spots: 3,510 (2.28%)
 - huge spots の avg loss: 9.34 BB
 
-## Top 30 huge loss patterns (tier × board × pot × pred→best)
+## Top 30 huge loss patterns (カテゴリ × board × pot × pred→best)
 
-| tier | board | pot | pred | best | n | avg_loss |
+| カテゴリ | board | pot | pred | best | n | avg_loss |
 |------|-------|-----|------|------|--:|---:|
 | エア | dry | 4BP | call | fold | 384 | 8.06 BB |
 | ミドルペア | paired | 4BP | call | raise | 329 | 5.83 BB |

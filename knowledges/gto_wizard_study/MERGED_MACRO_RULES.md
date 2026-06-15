@@ -8,19 +8,19 @@
 ### Step 1: bet_size を wildcard 化 ("any bs")
 
 - 元 CORE (5-key, n≥200, freq≥0.85): 101 rules
-- bs を drop して unique (pot, st, sub, tier, eq) になる: 91 個
+- bs を drop して unique (pot, st, sub, カテゴリ, eq) になる: 91 個
 - うち bs 違いでも同 action: **9 個**
 
 ### Step 2: sub_family も wildcard 化 ("any sub")
 
-- sub + bs 両方 drop して unique (pot, st, tier, eq): 41 個
+- sub + bs 両方 drop して unique (pot, st, カテゴリ, eq): 41 個
 - うち sub 違いでも同 action: **41 個** (= 本質マクロルール)
 
 ## 真のマクロルール (sub, bs ともに wildcard)
 
 **41 ルール**で、これら CORE 5-key 113 ルールの大半をカバー。
 
-| pot | street | tier | eq_bucket | action | 累計 n | sub 種数 |
+| pot | street | カテゴリ | eq_bucket | action | 累計 n | sub 種数 |
 |---|---|---|---|---|---:|---:|
 | SRP | river | エア | trash_hands | **fold** | 6,963 | 5 |
 | 4BP | flop | エア | weak_hands | **call** | 6,286 | 5 |
@@ -72,7 +72,7 @@
 |  └ MACRO (sub/bs不問) | 41 | | | |
 |  └ SPECIFIC (例外) | 1 | | | |
 |  └ DEFAULT | 4 | | | |
-| 3-tier (前) | 652 | 75.62% | 0.32 BB | 1.47% |
+| 3-カテゴリ (前) | 652 | 75.62% | 0.32 BB | 1.47% |
 
 ## source 別
 

@@ -6,11 +6,11 @@
 ## ルール構築
 
 - 入力: dataset_unified_v2.csv (154,216 rows)
-- cell 定義: (pot_type, street, depth, sub_family, tier)
+- cell 定義: (pot_type, street, depth, sub_family, カテゴリ)
 - 最小 n: 5 rows per cell
 - 構築 cell 数: 642
 - 各 cell の予測アクション = fold/call/raise のうち最頻度
-- cell に data がない場合: tier-based fallback (ナッツ→raise, ペア→call, エア→fold)
+- cell に data がない場合: カテゴリ-based fallback (ナッツ→raise, ペア→call, エア→fold)
 
 ## 全体結果
 

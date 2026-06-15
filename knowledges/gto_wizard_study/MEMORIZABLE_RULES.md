@@ -3,12 +3,12 @@
 349 PURE cells を「人間が暗記できる単位」に集約。
 Sklansky-Malmuth 系譜の "少数 group で広い coverage" アプローチ。
 
-## マクロルール (Type 1): pot × street × tier
+## マクロルール (Type 1): pot × street × カテゴリ
 
 「3BP turn の エア は **常に fold**」のような sub_family 不問のルール。
 coverage ≥ 80% (10 sub-families のうち 8 つ以上が同じ action)
 
-| pot | street | tier | action | coverage | 適用 cell数 | 例外 |
+| pot | street | カテゴリ | action | coverage | 適用 cell数 | 例外 |
 |---|---|---|---|---:|---:|---|
 | 3BP | flop | ストロング | **call** | 80% | 4/5 | paired_high=raise |
 | 3BP | flop | トップペア以上 | **call** | 80% | 4/5 | mid_dry=raise |
@@ -51,7 +51,7 @@ coverage ≥ 80% (10 sub-families のうち 8 つ以上が同じ action)
 
 ## マクロルール (Type 2): pot × street × sub_family
 
-「4BP flop の connected_mid は **常に raise**」のような tier 不問のルール。
+「4BP flop の connected_mid は **常に raise**」のような カテゴリ 不問のルール。
 
 | pot | street | sub_family | action | coverage | 適用 cell数 | 例外 |
 |---|---|---|---|---:|---:|---|
@@ -115,7 +115,7 @@ coverage ≥ 80% (10 sub-families のうち 8 つ以上が同じ action)
 
 - マクロルール **75 個** で 281/406 cells (69%) カバー
 - Chen Formula (4 数値 + 6 修正係数) より rule 数多いが、構造化されているため
-  pot × street × {tier or sub} の 3 軸暗記で済む
+  pot × street × {カテゴリ or sub} の 3 軸暗記で済む
 - 想定暗記時間: 1-2 時間 (Sklansky 8 hand groups と同等)
 
 **結論**: PURE 349 cell の直接暗記は無理だが、マクロルール 75 個に圧縮すれば暗記可能。
